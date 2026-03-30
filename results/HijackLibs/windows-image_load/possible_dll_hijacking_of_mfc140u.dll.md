@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 29-03-2026 02:41:18):
+// Translated content (automatically translated on 30-03-2026 02:44:02):
 event.type="Module Load" and (endpoint.os="windows" and (module.path contains "\\mfc140u.dll" and (not (module.path contains "c:\\program files\\CheckMAL\\AppCheck\\" or module.path contains "c:\\program files (x86)\\CheckMAL\\AppCheck\\"))))
 ```
 
