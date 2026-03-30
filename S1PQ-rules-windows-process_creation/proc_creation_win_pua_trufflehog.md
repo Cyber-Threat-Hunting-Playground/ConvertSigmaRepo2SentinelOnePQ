@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 29-03-2026 03:23:43):
+// Translated content (automatically translated on 30-03-2026 03:27:08):
 event.type="Process Creation" and (endpoint.os="windows" and (tgt.process.image.path contains "\\trufflehog.exe" or ((tgt.process.cmdline contains " docker --image " or tgt.process.cmdline contains " Git " or tgt.process.cmdline contains " GitHub " or tgt.process.cmdline contains " Jira " or tgt.process.cmdline contains " Slack " or tgt.process.cmdline contains " Confluence " or tgt.process.cmdline contains " SharePoint " or tgt.process.cmdline contains " s3 " or tgt.process.cmdline contains " gcs ") and tgt.process.cmdline contains " --results=verified")))
 ```
 
@@ -49,4 +49,5 @@ detection:
 falsepositives:
     - Legitimate use of TruffleHog by security teams or developers.
 level: medium
+regression_tests_path: regression_data/rules/windows/process_creation/proc_creation_win_pua_trufflehog/info.yml
 ```
