@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 31-03-2026 02:29:13):
+// Translated content (automatically translated on 01-04-2026 02:40:11):
 (event.category in ("dns","url","ip")) and (endpoint.os="windows" and ((url.address contains "todesk.com" or url.address contains ".todesk.com" or url.address contains ".todesk.com" or url.address contains "todesktop.com") or (event.dns.request contains "todesk.com" or event.dns.request contains ".todesk.com" or event.dns.request contains ".todesk.com" or event.dns.request contains "todesktop.com")))
 ```
 
