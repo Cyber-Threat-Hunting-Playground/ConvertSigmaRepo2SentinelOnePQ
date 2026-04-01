@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 31-03-2026 03:18:18):
+// Translated content (automatically translated on 01-04-2026 03:31:12):
 event.type="Process Creation" and (endpoint.os="windows" and (tgt.process.cmdline contains "Offline_Winpwn" or tgt.process.cmdline contains "WinPwn " or tgt.process.cmdline contains "WinPwn.exe" or tgt.process.cmdline contains "WinPwn.ps1"))
 ```
 
