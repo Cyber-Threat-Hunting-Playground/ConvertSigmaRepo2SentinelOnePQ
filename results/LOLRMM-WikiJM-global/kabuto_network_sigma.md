@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 01-04-2026 02:40:11):
+// Translated content (automatically translated on 02-04-2026 02:25:40):
 (event.category in ("dns","url","ip")) and (endpoint.os="windows" and ((url.address contains ".kabuto.io" or url.address contains "repairtechsolutions.com/kabuto/") or (event.dns.request contains ".kabuto.io" or event.dns.request contains "repairtechsolutions.com/kabuto/")))
 ```
 

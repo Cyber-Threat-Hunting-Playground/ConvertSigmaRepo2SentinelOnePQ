@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 01-04-2026 02:40:11):
+// Translated content (automatically translated on 02-04-2026 02:25:40):
 (event.category in ("dns","url","ip")) and (endpoint.os="windows" and ((url.address contains "kickidler.com" or url.address contains "my.kickidler.com") or (event.dns.request contains "kickidler.com" or event.dns.request contains "my.kickidler.com")))
 ```
 
