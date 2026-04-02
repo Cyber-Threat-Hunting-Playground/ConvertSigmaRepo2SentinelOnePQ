@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 01-04-2026 01:25:50):
+// Translated content (automatically translated on 02-04-2026 01:16:01):
 event.category="file" and (endpoint.os="windows" and (tgt.file.path contains "C:\\Program Files (x86)\\RemotePC\\RemotePCUIU.exe" or tgt.file.path contains "C:\\Program Files (x86)\\RemotePC\*"))
 ```
 

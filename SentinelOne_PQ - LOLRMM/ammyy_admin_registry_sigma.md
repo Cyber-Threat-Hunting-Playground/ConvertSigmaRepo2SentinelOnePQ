@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 01-04-2026 01:25:50):
+// Translated content (automatically translated on 02-04-2026 01:16:01):
 event.category="registry" and (endpoint.os="windows" and (registry.keyPath contains "HKU\\.DEFAULT\\Software\\Ammyy\\Admin" or registry.keyPath contains "HKLM\\SYSTEM\\ControlSet001\\Control\\SafeBoot\\Network\\AmmyyAdmin"))
 ```
 
