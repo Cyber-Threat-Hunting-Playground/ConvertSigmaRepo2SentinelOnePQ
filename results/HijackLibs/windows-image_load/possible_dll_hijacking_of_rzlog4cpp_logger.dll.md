@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 02-04-2026 02:33:57):
+// Translated content (automatically translated on 03-04-2026 02:35:55):
 event.type="Module Load" and (endpoint.os="windows" and (module.path contains "\\rzlog4cpp_logger.dll" and (not module.path="c:\\users\\*\\appdata\\local\\razer\\InGameEngine\\cache\\RzFpsApplet\\*")))
 ```
 
