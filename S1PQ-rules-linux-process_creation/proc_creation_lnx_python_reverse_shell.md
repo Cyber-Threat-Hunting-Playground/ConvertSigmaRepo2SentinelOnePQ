@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 04-04-2026 01:17:16):
+// Translated content (automatically translated on 05-04-2026 01:26:42):
 event.type="Process Creation" and (endpoint.os="linux" and (tgt.process.image.path contains "python" and (tgt.process.cmdline contains " -c " and tgt.process.cmdline contains "import" and tgt.process.cmdline contains "pty" and tgt.process.cmdline contains "socket" and tgt.process.cmdline contains "spawn" and tgt.process.cmdline contains ".connect")))
 ```
 
