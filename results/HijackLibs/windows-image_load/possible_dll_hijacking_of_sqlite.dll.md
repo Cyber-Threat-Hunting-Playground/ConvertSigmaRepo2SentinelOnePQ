@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 04-04-2026 02:27:27):
+// Translated content (automatically translated on 05-04-2026 02:44:19):
 event.type="Module Load" and (endpoint.os="windows" and (module.path contains "\\sqlite.dll" and (not (module.path contains "c:\\program files\\NetWorx\\" or module.path contains "c:\\program files (x86)\\NetWorx\\"))))
 ```
 
