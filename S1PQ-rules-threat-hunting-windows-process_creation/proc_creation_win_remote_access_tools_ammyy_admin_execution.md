@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 04-04-2026 01:09:08):
+// Translated content (automatically translated on 05-04-2026 01:18:18):
 event.type="Process Creation" and (endpoint.os="windows" and (tgt.process.image.path contains "\\rundll32.exe" and tgt.process.cmdline contains "AMMYY\\aa_nts.dll\",run"))
 ```
 
