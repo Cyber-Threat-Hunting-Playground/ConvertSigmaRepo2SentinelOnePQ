@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 05-04-2026 03:26:13):
+// Translated content (automatically translated on 06-04-2026 03:29:16):
 event.type="Process Creation" and (endpoint.os="windows" and ((tgt.process.cmdline contains "/generic:Microsoft_Windows_Shell_ZipFolder:filename=" and tgt.process.cmdline contains ".zip" and tgt.process.cmdline contains "/pass:" and tgt.process.cmdline contains "/user:") or (tgt.process.cmdline contains "/delete" and tgt.process.cmdline contains "Microsoft_Windows_Shell_ZipFolder:filename=" and tgt.process.cmdline contains ".zip")))
 ```
 
