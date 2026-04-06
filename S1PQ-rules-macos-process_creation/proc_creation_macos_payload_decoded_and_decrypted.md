@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 05-04-2026 02:10:05):
+// Translated content (automatically translated on 06-04-2026 02:11:10):
 event.type="Process Creation" and (endpoint.os="osx" and (tgt.process.image.path contains "/openssl" and (tgt.process.cmdline contains "/Volumes/" and tgt.process.cmdline contains "enc" and tgt.process.cmdline contains "-base64" and tgt.process.cmdline contains " -d ")))
 ```
 
