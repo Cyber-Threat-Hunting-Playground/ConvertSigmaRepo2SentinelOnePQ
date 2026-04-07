@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 06-04-2026 01:21:41):
+// Translated content (automatically translated on 07-04-2026 01:19:37):
 (event.category in ("dns","url","ip")) and (endpoint.os="windows" and (url.address contains "au.pcmag.com/utilities/21470/webex-pcnow" or event.dns.request contains "au.pcmag.com/utilities/21470/webex-pcnow"))
 ```
 

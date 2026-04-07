@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 06-04-2026 01:21:41):
+// Translated content (automatically translated on 07-04-2026 01:19:37):
 event.type="Process Creation" and (endpoint.os="windows" and (src.process.image.path="*dntus*.exe" or src.process.image.path contains "dwrcs.exe"))
 ```
 
