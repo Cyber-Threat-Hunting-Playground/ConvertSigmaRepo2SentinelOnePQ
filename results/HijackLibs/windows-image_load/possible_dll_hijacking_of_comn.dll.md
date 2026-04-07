@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 06-04-2026 02:45:04):
+// Translated content (automatically translated on 07-04-2026 02:38:53):
 event.type="Module Load" and (endpoint.os="windows" and (module.path contains "\\comn.dll" and (not (module.path="c:\\program files\\AOMEI\\AOMEI Backupper\\*\\*" or module.path="c:\\program files (x86)\\AOMEI\\AOMEI Backupper\\*\\*"))))
 ```
 
