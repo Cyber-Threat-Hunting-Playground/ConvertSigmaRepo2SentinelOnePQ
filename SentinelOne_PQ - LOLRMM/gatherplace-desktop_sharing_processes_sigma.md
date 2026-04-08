@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 07-04-2026 01:19:37):
+// Translated content (automatically translated on 08-04-2026 01:20:32):
 event.type="Process Creation" and (endpoint.os="windows" and ((src.process.image.path contains "gp3.exe" or src.process.image.path contains "gp4.exe" or src.process.image.path contains "gp5.exe") or (tgt.process.image.path contains "gp3.exe" or tgt.process.image.path contains "gp4.exe" or tgt.process.image.path contains "gp5.exe")))
 ```
 
