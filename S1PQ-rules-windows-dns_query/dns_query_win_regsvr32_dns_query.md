@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 07-04-2026 03:17:34):
+// Translated content (automatically translated on 08-04-2026 03:19:49):
 event.category="dns" and (endpoint.os="windows" and src.process.image.path contains "\\regsvr32.exe")
 ```
 
