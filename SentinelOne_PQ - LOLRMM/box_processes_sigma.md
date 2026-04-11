@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 10-04-2026 01:21:11):
+// Translated content (automatically translated on 11-04-2026 01:16:07):
 event.type="Process Creation" and (endpoint.os="windows" and src.process.image.path contains "\\Box.exe")
 ```
 
