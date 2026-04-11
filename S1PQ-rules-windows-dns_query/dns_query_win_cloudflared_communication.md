@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 10-04-2026 03:28:06):
+// Translated content (automatically translated on 11-04-2026 02:51:52):
 event.category="dns" and (endpoint.os="windows" and (event.dns.request contains ".v2.argotunnel.com" or event.dns.request contains "protocol-v2.argotunnel.com" or event.dns.request contains "trycloudflare.com" or event.dns.request contains "update.argotunnel.com"))
 ```
 
