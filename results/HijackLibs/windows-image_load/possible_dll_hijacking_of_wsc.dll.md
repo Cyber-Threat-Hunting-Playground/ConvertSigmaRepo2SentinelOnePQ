@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 11-04-2026 02:30:52):
+// Translated content (automatically translated on 12-04-2026 02:50:09):
 event.type="Module Load" and (endpoint.os="windows" and (module.path contains "\\wsc.dll" and (not (module.path contains "c:\\program files\\AVAST Software\\Avast\\" or module.path contains "c:\\program files (x86)\\AVAST Software\\Avast\\" or module.path contains "c:\\program files\\Norton\\Suite\\" or module.path contains "c:\\program files (x86)\\Norton\\Suite\\" or module.path contains "c:\\program files\\AVG\\Antivirus\\" or module.path contains "c:\\program files (x86)\\AVG\\Antivirus\\"))))
 ```
 
