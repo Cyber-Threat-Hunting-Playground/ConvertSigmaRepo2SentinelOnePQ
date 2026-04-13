@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 12-04-2026 02:50:09):
+// Translated content (automatically translated on 13-04-2026 02:54:28):
 event.type="Module Load" and (endpoint.os="windows" and (module.path contains "\\vcruntime140.dll" and (not module.path contains "c:\\windows\\system32\\")))
 ```
 
