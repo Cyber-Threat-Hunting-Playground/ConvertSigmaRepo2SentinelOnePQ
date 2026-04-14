@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 13-04-2026 02:54:28):
+// Translated content (automatically translated on 14-04-2026 02:47:43):
 event.type="Module Load" and (endpoint.os="windows" and (module.path contains "\\qtgui4.dll" and (not (module.path contains "c:\\program files\\Audacity\\" or module.path contains "c:\\program files (x86)\\Audacity\\" or module.path="c:\\program files\\AOMEI\\AOMEI Backupper\\*\\*" or module.path="c:\\program files (x86)\\AOMEI\\AOMEI Backupper\\*\\*"))))
 ```
 
