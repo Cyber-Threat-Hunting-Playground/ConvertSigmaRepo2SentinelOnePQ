@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 14-04-2026 01:22:25):
+// Translated content (automatically translated on 15-04-2026 01:18:56):
 event.type="Process Creation" and (endpoint.os="windows" and ((tgt.process.image.path contains "\\curl.exe" or tgt.process.displayName="The curl executable") and (tgt.process.cmdline contains " -A " or tgt.process.cmdline contains " --user-agent ")))
 ```
 
