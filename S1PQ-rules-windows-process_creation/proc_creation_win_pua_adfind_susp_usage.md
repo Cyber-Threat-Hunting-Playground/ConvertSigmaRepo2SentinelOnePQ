@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 16-04-2026 03:35:25):
+// Translated content (automatically translated on 17-04-2026 03:31:23):
 event.type="Process Creation" and (endpoint.os="windows" and (tgt.process.cmdline contains "domainlist" or tgt.process.cmdline contains "trustdmp" or tgt.process.cmdline contains "dcmodes" or tgt.process.cmdline contains "adinfo" or tgt.process.cmdline contains "-sc dclist" or tgt.process.cmdline contains "computer_pwdnotreqd" or tgt.process.cmdline contains "objectcategory=" or tgt.process.cmdline contains "-subnets -f" or tgt.process.cmdline contains "name=\"Domain Admins\"" or tgt.process.cmdline contains "-sc u:" or tgt.process.cmdline contains "domainncs" or tgt.process.cmdline contains "dompol" or tgt.process.cmdline contains " oudmp " or tgt.process.cmdline contains "subnetdmp" or tgt.process.cmdline contains "gpodmp" or tgt.process.cmdline contains "fspdmp" or tgt.process.cmdline contains "users_noexpire" or tgt.process.cmdline contains "computers_active" or tgt.process.cmdline contains "computers_pwdnotreqd"))
 ```
 

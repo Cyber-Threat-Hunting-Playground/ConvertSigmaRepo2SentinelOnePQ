@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 16-04-2026 03:35:25):
+// Translated content (automatically translated on 17-04-2026 03:31:23):
 event.type="Process Creation" and (endpoint.os="windows" and ((tgt.process.image.path contains "\\nc.exe" or tgt.process.image.path contains "\\ncat.exe" or tgt.process.image.path contains "\\netcat.exe") or (tgt.process.cmdline contains " -lvp " or tgt.process.cmdline contains " -lvnp" or tgt.process.cmdline contains " -l -v -p " or tgt.process.cmdline contains " -lv -p " or tgt.process.cmdline contains " -l --proxy-type http " or tgt.process.cmdline contains " -vnl --exec " or tgt.process.cmdline contains " -vnl -e " or tgt.process.cmdline contains " --lua-exec " or tgt.process.cmdline contains " --sh-exec ")))
 ```
 
