@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 16-04-2026 02:52:26):
+// Translated content (automatically translated on 17-04-2026 02:47:53):
 event.type="Module Load" and (endpoint.os="windows" and (module.path contains "\\symsrv.dll" and (not (module.path="c:\\program files\\Windows Kits\\10\\Debuggers\\*\\*" or module.path="c:\\program files (x86)\\Windows Kits\\10\\Debuggers\\*\\*"))))
 ```
 
