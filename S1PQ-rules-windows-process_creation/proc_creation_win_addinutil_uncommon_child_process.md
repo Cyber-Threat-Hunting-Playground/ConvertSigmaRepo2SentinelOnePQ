@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 18-04-2026 03:18:57):
+// Translated content (automatically translated on 19-04-2026 03:38:07):
 event.type="Process Creation" and (endpoint.os="windows" and (src.process.image.path contains "\\addinutil.exe" and (not (tgt.process.image.path contains ":\\Windows\\System32\\conhost.exe" or tgt.process.image.path contains ":\\Windows\\System32\\werfault.exe" or tgt.process.image.path contains ":\\Windows\\SysWOW64\\werfault.exe"))))
 ```
 
