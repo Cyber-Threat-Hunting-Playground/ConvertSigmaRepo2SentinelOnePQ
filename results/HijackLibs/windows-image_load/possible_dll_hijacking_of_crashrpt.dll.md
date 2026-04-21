@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 20-04-2026 02:55:22):
+// Translated content (automatically translated on 21-04-2026 02:49:01):
 event.type="Module Load" and (endpoint.os="windows" and (module.path contains "\\crashrpt.dll" and (not (module.path contains "c:\\program files\\MPC-HC\\CrashReporter\\" or module.path contains "c:\\program files (x86)\\MPC-HC\\CrashReporter\\"))))
 ```
 
