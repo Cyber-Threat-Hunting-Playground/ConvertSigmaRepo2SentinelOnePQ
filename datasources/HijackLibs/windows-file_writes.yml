@@ -1309,6 +1309,29 @@ falsepositives:
     - False positives are likely. This rule is more suitable for hunting than for generating detections.
 
 ---
+                      | replace: "\*","\\\\*"title: Possible preparation for protobuf.dll DLL Hijacking
+id: 5112682b-2169-48a3-8083-5b9ff8241524
+status: experimental
+description: Detects possible DLL hijacking of protobuf.dll by looking for suspicious file writes of this DLL, to unexpected locations.
+references:
+    - https://hijacklibs.net/entries/3rd_party/irzyxa/protobuf.html
+author: "Austin Worline"
+date: 2026-04-14
+tags:
+    - attack.defense_evasion
+    - attack.T1574.001
+logsource:
+    product: windows
+    category: file_event
+detection:
+    selection:
+        TargetFileName: '*\protobuf.dll'
+
+    condition: selection 
+falsepositives:
+    - False positives are likely. This rule is more suitable for hunting than for generating detections.
+
+---
                       | replace: "\*","\\\\*"title: Possible preparation for rtl120.dll DLL Hijacking
 id: 1106122b-1146-48a3-9461-5b9ff8861492
 status: experimental
@@ -16823,6 +16846,35 @@ detection:
         TargetFileName:
             - 'c:\program files\Common Files\Microsoft Shared\MODI\11.0\\*'
             - 'c:\program files (x86)\Common Files\Microsoft Shared\MODI\11.0\\*'
+
+    condition: selection and not filter
+falsepositives:
+    - False positives are likely. This rule is more suitable for hunting than for generating detections.
+
+---
+                      | replace: "\*","\\\\*"title: Possible preparation for nethost.dll DLL Hijacking
+id: 2114602b-2217-48a3-2635-5b9ff8907340
+status: experimental
+description: Detects possible DLL hijacking of nethost.dll by looking for suspicious file writes of this DLL, to unexpected locations.
+references:
+    - https://hijacklibs.net/entries/microsoft/external/nethost.html
+author: "Josh Allman"
+date: 2026-04-19
+tags:
+    - attack.defense_evasion
+    - attack.T1574.001
+logsource:
+    product: windows
+    category: file_event
+detection:
+    selection:
+        TargetFileName: '*\nethost.dll'
+    filter:
+        TargetFileName:
+            - 'c:\program files\dotnet\packs\Microsoft.NETCore.App.Host.win-x64\\*\runtimes\win-x64\native\\*'
+            - 'c:\program files (x86)\dotnet\packs\Microsoft.NETCore.App.Host.win-x64\\*\runtimes\win-x64\native\\*'
+            - 'c:\program files\dotnet\packs\Microsoft.NETCore.App.Host.win-x86\\*\runtimes\win-x86\native\\*'
+            - 'c:\program files (x86)\dotnet\packs\Microsoft.NETCore.App.Host.win-x86\\*\runtimes\win-x86\native\\*'
 
     condition: selection and not filter
 falsepositives:
