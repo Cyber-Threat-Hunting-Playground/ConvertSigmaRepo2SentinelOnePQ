@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 21-04-2026 01:21:44):
+// Translated content (automatically translated on 22-04-2026 01:20:35):
 event.type="Process Creation" and (endpoint.os="windows" and ((src.process.image.path contains "\\cmd.exe" or src.process.image.path contains "\\powershell.exe" or src.process.image.path contains "\\pwsh.exe") and tgt.process.image.path contains "\\explorer.exe" and tgt.process.cmdline contains "explorer.exe"))
 ```
 
