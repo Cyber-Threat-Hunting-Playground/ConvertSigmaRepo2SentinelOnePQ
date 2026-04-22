@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 21-04-2026 02:49:01):
+// Translated content (automatically translated on 22-04-2026 02:47:51):
 event.type="Module Load" and (endpoint.os="windows" and (module.path contains "\\asus_wmi.dll" and (not (module.path="c:\\program files\\ASUS\\AXSP\\*\\*" or module.path="c:\\program files (x86)\\ASUS\\AXSP\\*\\*"))))
 ```
 
