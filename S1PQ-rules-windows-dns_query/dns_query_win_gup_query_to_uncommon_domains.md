@@ -1,6 +1,6 @@
 ```sql
-// Translated content (automatically translated on 21-04-2026 03:30:33):
-event.category="dns" and (endpoint.os="windows" and (src.process.image.path contains "\\gup.exe" and (not event.dns.request="notepad-plus-plus.org") and (not (event.dns.request contains ".sourceforge.net" or (event.dns.request contains ".githubusercontent.com" or event.dns.request="github.com") or event.dns.request contains ".googleapis.com"))))
+// Translated content (automatically translated on 22-04-2026 03:28:56):
+event.category="dns" and (endpoint.os="windows" and (src.process.image.path contains "\\gup.exe" and (not event.dns.request="notepad-plus-plus.org") and (not (event.dns.request contains ".sourceforge.net" or (event.dns.request contains ".githubusercontent.com" or event.dns.request="github.com") or event.dns.request contains ".googleapis.com" or (event.dns.request contains ".azurewebsites.net" or event.dns.request contains "block.opendns.com" or event.dns.request contains "gateway.zscalerthree.net")))))
 ```
 
 
@@ -20,6 +20,7 @@ references:
     - https://securelist.com/notepad-supply-chain-attack/118708/
 author: Swachchhanda Shrawan Poudel (Nextron Systems)
 date: 2026-02-02
+modified: 2026-03-16
 tags:
     - attack.collection
     - attack.credential-access
@@ -41,6 +42,11 @@ detection:
         - QueryName: 'github.com'
     filter_optional_google_storage_legit_domain:
         QueryName|endswith: '.googleapis.com'
+    filter_optional_uncommon_domains:
+        QueryName|endswith:
+            - '.azurewebsites.net'
+            - 'block.opendns.com'
+            - 'gateway.zscalerthree.net'
     # Add other known legitimate domains if any
     condition: selection and not 1 of filter_main_* and not 1 of filter_optional_*
 falsepositives:
