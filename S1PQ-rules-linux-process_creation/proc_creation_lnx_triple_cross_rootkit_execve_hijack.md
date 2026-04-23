@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 22-04-2026 01:28:45):
+// Translated content (automatically translated on 23-04-2026 01:47:20):
 event.type="Process Creation" and (endpoint.os="linux" and (tgt.process.image.path contains "/sudo" and tgt.process.cmdline contains "execve_hijack"))
 ```
 
