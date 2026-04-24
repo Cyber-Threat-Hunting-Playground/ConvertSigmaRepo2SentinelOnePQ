@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 23-04-2026 02:50:33):
+// Translated content (automatically translated on 24-04-2026 02:51:35):
 event.type="Module Load" and (endpoint.os="windows" and (module.path contains "\\qt5core.dll" and (not (module.path contains "c:\\program files\\Electronic Arts\\EA Desktop\\EA Desktop\\" or module.path contains "c:\\program files (x86)\\Electronic Arts\\EA Desktop\\EA Desktop\\" or module.path="c:\\program files\\Microsoft Onedrive\\*\\*" or module.path="c:\\program files (x86)\\Microsoft Onedrive\\*\\*" or module.path="c:\\users\\*\\appdata\\local\\Microsoft\\Onedrive\\*\\*" or module.path="c:\\program files\\Dropbox\\Client\\*\\*" or module.path="c:\\program files (x86)\\Dropbox\\Client\\*\\*" or module.path contains "c:\\program files\\LogiOptionsPlus\\" or module.path contains "c:\\program files (x86)\\LogiOptionsPlus\\"))))
 ```
 

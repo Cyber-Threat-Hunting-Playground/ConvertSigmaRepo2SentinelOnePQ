@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 23-04-2026 02:50:33):
+// Translated content (automatically translated on 24-04-2026 02:51:35):
 event.type="Module Load" and (endpoint.os="windows" and (module.path contains "\\certcli.dll" and (not (module.path contains "c:\\windows\\system32\\" or module.path contains "c:\\windows\\syswow64\\"))))
 ```
 
