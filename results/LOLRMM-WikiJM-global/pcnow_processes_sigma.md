@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 23-04-2026 02:41:21):
+// Translated content (automatically translated on 24-04-2026 02:41:57):
 event.type="Process Creation" and (endpoint.os="windows" and (src.process.image.path contains "mwcliun.exe" or src.process.image.path contains "pcnmgr.exe" or src.process.image.path contains "webexpcnow.exe"))
 ```
 
