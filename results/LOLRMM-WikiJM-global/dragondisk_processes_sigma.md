@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 25-04-2026 02:30:54):
+// Translated content (automatically translated on 26-04-2026 02:47:20):
 event.type="Process Creation" and (endpoint.os="windows" and src.process.image.path contains "\\DragonDisk.exe")
 ```
 
