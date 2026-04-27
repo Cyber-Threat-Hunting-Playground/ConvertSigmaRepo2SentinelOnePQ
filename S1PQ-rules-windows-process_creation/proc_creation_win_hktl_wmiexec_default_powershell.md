@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 26-04-2026 03:43:35):
+// Translated content (automatically translated on 27-04-2026 03:48:56):
 event.type="Process Creation" and (endpoint.os="windows" and tgt.process.cmdline contains "-NoP -NoL -sta -NonI -W Hidden -Exec Bypass -Enc")
 ```
 
