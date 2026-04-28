@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 27-04-2026 02:50:36):
+// Translated content (automatically translated on 28-04-2026 02:57:26):
 (event.category in ("dns","url","ip")) and (endpoint.os="windows" and ((url.address contains ".connect.backdrop.cloud" or url.address contains ".netop.com") or (event.dns.request contains ".connect.backdrop.cloud" or event.dns.request contains ".netop.com")))
 ```
 
