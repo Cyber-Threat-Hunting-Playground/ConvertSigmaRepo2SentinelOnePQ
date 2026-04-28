@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 27-04-2026 01:45:52):
+// Translated content (automatically translated on 28-04-2026 01:53:18):
 event.type="Process Creation" and (endpoint.os="windows" and ((src.process.image.path contains "OTService.exe" or src.process.image.path contains "OTPowerShell.exe") or (tgt.process.image.path contains "OTService.exe" or tgt.process.image.path contains "OTPowerShell.exe")))
 ```
 
