@@ -1,6 +1,6 @@
 ```sql
-// Translated content (automatically translated on 27-04-2026 03:48:56):
-event.type="Process Creation" and (endpoint.os="windows" and ((tgt.process.image.path contains "\\msiexec.exe" and (tgt.process.cmdline contains " -y" or tgt.process.cmdline contains " /y" or tgt.process.cmdline contains " –y" or tgt.process.cmdline contains " —y" or tgt.process.cmdline contains " ―y")) and (not (tgt.process.cmdline contains "\\MsiExec.exe\" /Y \"C:\\Program Files\\Bonjour\\mdnsNSP.dll" or tgt.process.cmdline contains "\\MsiExec.exe\" /Y \"C:\\Program Files (x86)\\Bonjour\\mdnsNSP.dll" or tgt.process.cmdline contains "\\MsiExec.exe\" /Y \"C:\\Program Files (x86)\\Apple Software Update\\ScriptingObjectModel.dll" or tgt.process.cmdline contains "\\MsiExec.exe\" /Y \"C:\\Program Files (x86)\\Apple Software Update\\SoftwareUpdateAdmin.dll" or tgt.process.cmdline contains "\\MsiExec.exe\" /Y \"C:\\Windows\\CCM\\" or tgt.process.cmdline contains "\\MsiExec.exe\" /Y C:\\Windows\\CCM\\" or tgt.process.cmdline contains "\\MsiExec.exe\" -Y \"C:\\Program Files\\Bonjour\\mdnsNSP.dll" or tgt.process.cmdline contains "\\MsiExec.exe\" -Y \"C:\\Program Files (x86)\\Bonjour\\mdnsNSP.dll" or tgt.process.cmdline contains "\\MsiExec.exe\" -Y \"C:\\Program Files (x86)\\Apple Software Update\\ScriptingObjectModel.dll" or tgt.process.cmdline contains "\\MsiExec.exe\" -Y \"C:\\Program Files (x86)\\Apple Software Update\\SoftwareUpdateAdmin.dll" or tgt.process.cmdline contains "\\MsiExec.exe\" -Y \"C:\\Windows\\CCM\\" or tgt.process.cmdline contains "\\MsiExec.exe\" -Y C:\\Windows\\CCM\\"))))
+// Translated content (automatically translated on 28-04-2026 03:53:04):
+event.type="Process Creation" and (endpoint.os="windows" and ((tgt.process.image.path contains "\\msiexec.exe" and (tgt.process.cmdline contains " -Y" or tgt.process.cmdline contains " /Y" or tgt.process.cmdline contains " –Y" or tgt.process.cmdline contains " —Y" or tgt.process.cmdline contains " ―Y")) and (not (tgt.process.cmdline contains "\\MsiExec.exe\" /Y \"C:\\Program Files\\" or tgt.process.cmdline contains "\\MsiExec.exe\" /Y \"C:\\Program Files (x86)\\" or tgt.process.cmdline contains "\\MsiExec.exe\" /Y \"C:\\Windows\\System32\\" or tgt.process.cmdline contains "\\MsiExec.exe\" /Y \"C:\\Windows\\SysWOW64\\"))))
 ```
 
 
@@ -18,7 +18,7 @@ references:
     - https://twitter.com/_st0pp3r_/status/1583914515996897281
 author: frack113
 date: 2022-01-16
-modified: 2024-03-13
+modified: 2026-01-09
 tags:
     - attack.defense-evasion
     - attack.t1218.007
@@ -28,22 +28,14 @@ logsource:
 detection:
     selection:
         Image|endswith: '\msiexec.exe'
-        CommandLine|contains|windash: ' -y'
-    filter_apple:
+        CommandLine|contains|windash: ' /Y'
+    filter_main_legit_path:
         CommandLine|contains:
-            - '\MsiExec.exe" /Y "C:\Program Files\Bonjour\mdnsNSP.dll'
-            - '\MsiExec.exe" /Y "C:\Program Files (x86)\Bonjour\mdnsNSP.dll'
-            - '\MsiExec.exe" /Y "C:\Program Files (x86)\Apple Software Update\ScriptingObjectModel.dll'
-            - '\MsiExec.exe" /Y "C:\Program Files (x86)\Apple Software Update\SoftwareUpdateAdmin.dll'
-            - '\MsiExec.exe" /Y "C:\Windows\CCM\'
-            - '\MsiExec.exe" /Y C:\Windows\CCM\' # also need non-quoted execution
-            - '\MsiExec.exe" -Y "C:\Program Files\Bonjour\mdnsNSP.dll'
-            - '\MsiExec.exe" -Y "C:\Program Files (x86)\Bonjour\mdnsNSP.dll'
-            - '\MsiExec.exe" -Y "C:\Program Files (x86)\Apple Software Update\ScriptingObjectModel.dll'
-            - '\MsiExec.exe" -Y "C:\Program Files (x86)\Apple Software Update\SoftwareUpdateAdmin.dll'
-            - '\MsiExec.exe" -Y "C:\Windows\CCM\'
-            - '\MsiExec.exe" -Y C:\Windows\CCM\' # also need non-quoted execution
-    condition: selection and not 1 of filter_*
+            - '\MsiExec.exe" /Y "C:\Program Files\'
+            - '\MsiExec.exe" /Y "C:\Program Files (x86)\'
+            - '\MsiExec.exe" /Y "C:\Windows\System32\'
+            - '\MsiExec.exe" /Y "C:\Windows\SysWOW64\'
+    condition: selection and not 1 of filter_main_*
 falsepositives:
     - Legitimate script
 level: medium
