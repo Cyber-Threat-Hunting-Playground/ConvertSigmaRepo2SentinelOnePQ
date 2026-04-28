@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 27-04-2026 01:52:39):
+// Translated content (automatically translated on 28-04-2026 02:00:10):
 event.type="Process Creation" and (endpoint.os="linux" and (tgt.process.image.path contains "/env" and (tgt.process.cmdline contains "/bin/bash" or tgt.process.cmdline contains "/bin/dash" or tgt.process.cmdline contains "/bin/fish" or tgt.process.cmdline contains "/bin/sh" or tgt.process.cmdline contains "/bin/zsh")))
 ```
 
@@ -16,16 +16,17 @@ references:
     - https://www.elastic.co/guide/en/security/current/linux-restricted-shell-breakout-via-linux-binary-s.html
 author: Li Ling, Andy Parkidomo, Robert Rakowski, Blake Hartstein (Bloomberg L.P.)
 date: 2024-09-02
+modified: 2026-01-08
 tags:
     - attack.execution
-    - attack.t1059
+    - attack.t1059.004
 logsource:
     category: process_creation
     product: linux
 detection:
     selection:
         Image|endswith: '/env'
-        CommandLine|endswith:
+        CommandLine|contains:
             - '/bin/bash'
             - '/bin/dash'
             - '/bin/fish'

@@ -1,0 +1,55 @@
+```sql
+// Translated content (automatically translated on 28-04-2026 02:00:10):
+event.type="Process Creation" and (endpoint.os="linux" and ((tgt.process.image.path contains "/chmod" and (tgt.process.cmdline contains "/tmp/" or tgt.process.cmdline contains "/.Library/" or tgt.process.cmdline contains "/etc/" or tgt.process.cmdline contains "/opt/")) and (not ((tgt.process.cmdline contains "chmod --reference=/etc/shells" and src.process.cmdline contains "/update-shells") or (tgt.process.cmdline contains "/etc/" and (src.process.cmdline contains "/var/lib/dpkg/info/" and src.process.cmdline contains ".postinst configure")) or tgt.process.cmdline contains "chmod 700 /tmp/apt-key-gpghome." or tgt.process.cmdline contains "chmod 755 /var/tmp/mkinitramfs" or tgt.process.cmdline="chmod 0775 /etc/landscape/" or tgt.process.cmdline="chmod 644 /etc/apparmor.d/tunables/home.d/ubuntu"))))
+```
+
+
+# Original Sigma Rule:
+```yaml
+title: Chmod Targeting Sensitive Directories
+id: 6419afd1-3742-47a5-a7e6-b50386cd15f8
+status: test
+description: |
+    Detects chmod targeting files in sensitive directory paths on Linux systems.
+    Attackers may use chmod to change permissions of files in these directories to maintain persistence, escalate privileges, or disrupt system operations.
+references:
+    - https://www.intezer.com/blog/malware-analysis/new-backdoor-sysjoker/
+    - https://github.com/redcanaryco/atomic-red-team/blob/f339e7da7d05f6057fdfcdd3742bfcf365fee2a9/atomics/T1222.002/T1222.002.md
+author: 'Christopher Peacock @SecurePeacock, SCYTHE @scythe_io'
+date: 2022-06-03
+modified: 2026-03-18
+tags:
+    - attack.defense-evasion
+    - attack.t1222.002
+logsource:
+    product: linux
+    category: process_creation
+detection:
+    selection:
+        Image|endswith: '/chmod'
+        CommandLine|contains:
+            - '/tmp/'
+            - '/.Library/'
+            - '/etc/'
+            - '/opt/'
+    filter_main_update_shells:
+        CommandLine|contains: 'chmod --reference=/etc/shells'
+        ParentCommandLine|endswith: '/update-shells'
+    filter_main_postinst:
+        CommandLine|contains: '/etc/'
+        ParentCommandLine|contains|all:
+            - '/var/lib/dpkg/info/'
+            - '.postinst configure'
+    filter_main_apt_key:
+        CommandLine|startswith: 'chmod 700 /tmp/apt-key-gpghome.'
+    filter_main_mkinitramfs:
+        CommandLine|startswith: 'chmod 755 /var/tmp/mkinitramfs'
+    filter_main_landscape:
+        CommandLine: 'chmod 0775 /etc/landscape/'
+    filter_main_ubuntu_apparmor:
+        CommandLine: 'chmod 644 /etc/apparmor.d/tunables/home.d/ubuntu'
+    condition: selection and not 1 of filter_main_*
+falsepositives:
+    - Some false positives are to be expected. Apply additional filters as needed before pushing to production.
+level: medium
+```
