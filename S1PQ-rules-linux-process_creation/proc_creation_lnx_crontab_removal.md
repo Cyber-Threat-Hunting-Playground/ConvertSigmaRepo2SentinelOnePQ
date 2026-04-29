@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 28-04-2026 02:00:10):
+// Translated content (automatically translated on 29-04-2026 02:02:11):
 event.type="Process Creation" and (endpoint.os="linux" and (tgt.process.image.path contains "crontab" and tgt.process.cmdline contains " -r"))
 ```
 
@@ -17,7 +17,7 @@ references:
 author: Nasreddine Bencherchali (Nextron Systems)
 date: 2022-09-15
 tags:
-    - attack.defense-evasion
+    - attack.stealth
 logsource:
     category: process_creation
     product: linux

@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 28-04-2026 02:00:10):
+// Translated content (automatically translated on 29-04-2026 02:02:11):
 event.type="Process Creation" and (endpoint.os="linux" and (((tgt.process.image.path contains "/service" or tgt.process.image.path contains "/systemctl" or tgt.process.image.path contains "/chkconfig") and (tgt.process.cmdline contains " stop " or tgt.process.cmdline contains " disable ")) and (not ((tgt.process.image.path contains "/systemctl" and (tgt.process.cmdline contains "--no-reload disable snap-snapd-" or tgt.process.cmdline contains " stop snap-snapd-")) or (tgt.process.image.path contains "/systemctl" and src.process.cmdline contains "tmp.ci/preinst upgrade" and (tgt.process.cmdline contains " stop " and tgt.process.cmdline contains "ssh.")) or (src.process.cmdline contains "/dpkg/info/ubuntu-pro-client.prerm upgrade" and tgt.process.image.path contains "/systemctl"))) and (not (tgt.process.image.path contains "/systemctl" and tgt.process.cmdline contains "snap.amazon-ssm-agent.amazon-ssm-agent.service"))))
 ```
 
@@ -18,8 +18,8 @@ author: Nasreddine Bencherchali (Nextron Systems)
 date: 2022-09-15
 modified: 2025-03-18
 tags:
-    - attack.defense-evasion
-    - attack.t1562
+    - attack.defense-impairment
+    - attack.t1685
     - attack.impact
     - attack.t1489
 logsource:

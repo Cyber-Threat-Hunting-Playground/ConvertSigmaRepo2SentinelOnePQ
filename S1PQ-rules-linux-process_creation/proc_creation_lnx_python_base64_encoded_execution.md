@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 28-04-2026 02:00:10):
+// Translated content (automatically translated on 29-04-2026 02:02:11):
 event.type="Process Creation" and (endpoint.os="linux" and (tgt.process.image.path contains "/python" and ((tgt.process.cmdline contains "import" and tgt.process.cmdline contains "base64" and tgt.process.cmdline contains " -c") and (tgt.process.cmdline contains ".decode" or tgt.process.cmdline contains "b16decode" or tgt.process.cmdline contains "b32decode" or tgt.process.cmdline contains "b32hexdecode" or tgt.process.cmdline contains "b64decode" or tgt.process.cmdline contains "b85decode" or tgt.process.cmdline contains "z85decode"))))
 ```
 
@@ -23,8 +23,8 @@ author: Hugh Ryan (HueCodes), Swachchhanda Shrawan Poudel (Nextron Systems)
 date: 2026-03-09
 tags:
     - attack.execution
+    - attack.stealth
     - attack.t1059.006
-    - attack.defense-evasion
     - attack.t1027.010
 logsource:
     category: process_creation

@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 28-04-2026 02:00:10):
+// Translated content (automatically translated on 29-04-2026 02:02:11):
 event.type="Process Creation" and (endpoint.os="linux" and ((tgt.process.cmdline contains "echo 1 >" and tgt.process.cmdline contains "/sys/kernel/debug/tracing/events/kprobes/") and (tgt.process.cmdline contains "/myprobe/enable" or tgt.process.cmdline contains "/myretprobe/enable")))
 ```
 
@@ -18,7 +18,7 @@ author: Nasreddine Bencherchali (Nextron Systems)
 date: 2023-01-25
 tags:
     - attack.execution
-    - attack.defense-evasion
+    - attack.stealth
 logsource:
     category: process_creation
     product: linux

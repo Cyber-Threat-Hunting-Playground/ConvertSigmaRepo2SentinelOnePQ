@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 28-04-2026 02:00:10):
+// Translated content (automatically translated on 29-04-2026 02:02:11):
 event.type="Process Creation" and (endpoint.os="linux" and ((tgt.process.image.path contains "/service" and (tgt.process.cmdline contains "iptables" and tgt.process.cmdline contains "stop")) or (tgt.process.image.path contains "/service" and (tgt.process.cmdline contains "ip6tables" and tgt.process.cmdline contains "stop")) or (tgt.process.image.path contains "/chkconfig" and (tgt.process.cmdline contains "iptables" and tgt.process.cmdline contains "stop")) or (tgt.process.image.path contains "/chkconfig" and (tgt.process.cmdline contains "ip6tables" and tgt.process.cmdline contains "stop")) or (tgt.process.image.path contains "/systemctl" and (tgt.process.cmdline contains "firewalld" and tgt.process.cmdline contains "stop")) or (tgt.process.image.path contains "/systemctl" and (tgt.process.cmdline contains "firewalld" and tgt.process.cmdline contains "disable")) or (tgt.process.image.path contains "/service" and (tgt.process.cmdline contains "cbdaemon" and tgt.process.cmdline contains "stop")) or (tgt.process.image.path contains "/chkconfig" and (tgt.process.cmdline contains "cbdaemon" and tgt.process.cmdline contains "off")) or (tgt.process.image.path contains "/systemctl" and (tgt.process.cmdline contains "cbdaemon" and tgt.process.cmdline contains "stop")) or (tgt.process.image.path contains "/systemctl" and (tgt.process.cmdline contains "cbdaemon" and tgt.process.cmdline contains "disable")) or (tgt.process.image.path contains "/setenforce" and tgt.process.cmdline contains "0") or (tgt.process.image.path contains "/systemctl" and (tgt.process.cmdline contains "stop" and tgt.process.cmdline contains "falcon-sensor")) or (tgt.process.image.path contains "/systemctl" and (tgt.process.cmdline contains "disable" and tgt.process.cmdline contains "falcon-sensor"))))
 ```
 
@@ -16,8 +16,8 @@ author: Ömer Günal, Alejandro Ortuno, oscd.community
 date: 2020-06-17
 modified: 2022-10-09
 tags:
-    - attack.defense-evasion
-    - attack.t1562.004
+    - attack.defense-impairment
+    - attack.t1686
 logsource:
     category: process_creation
     product: linux

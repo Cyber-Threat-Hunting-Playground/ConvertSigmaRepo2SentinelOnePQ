@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 28-04-2026 02:00:10):
+// Translated content (automatically translated on 29-04-2026 02:02:11):
 event.type="Process Creation" and (endpoint.os="linux" and (((tgt.process.image.path contains "/rm" or tgt.process.image.path contains "/rmdir" or tgt.process.image.path contains "/shred" or tgt.process.image.path contains "/unlink") and (tgt.process.cmdline contains "/var/log" or tgt.process.cmdline contains "/var/spool/mail")) and (not ((tgt.process.image.path contains "/rm" and tgt.process.cmdline contains "rm -f /var/log/sysstat/") or (tgt.process.image.path contains "/rm" and tgt.process.cmdline contains "rm -f -- /var/log//dmesg")))))
 ```
 
@@ -18,8 +18,8 @@ author: Ömer Günal, oscd.community
 date: 2020-10-07
 modified: 2026-03-18
 tags:
-    - attack.defense-evasion
-    - attack.t1070.002
+    - attack.defense-impairment
+    - attack.t1685.006
 logsource:
     product: linux
     category: process_creation

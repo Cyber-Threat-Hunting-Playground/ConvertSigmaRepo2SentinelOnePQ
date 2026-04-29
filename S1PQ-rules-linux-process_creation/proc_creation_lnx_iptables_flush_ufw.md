@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 28-04-2026 02:00:10):
+// Translated content (automatically translated on 29-04-2026 02:02:11):
 event.type="Process Creation" and (endpoint.os="linux" and ((tgt.process.image.path contains "/iptables" or tgt.process.image.path contains "/xtables-legacy-multi" or tgt.process.image.path contains "/iptables-legacy-multi" or tgt.process.image.path contains "/ip6tables" or tgt.process.image.path contains "/ip6tables-legacy-multi") and (tgt.process.cmdline contains "-F" or tgt.process.cmdline contains "-Z" or tgt.process.cmdline contains "-X") and (tgt.process.cmdline contains "ufw-logging-deny" or tgt.process.cmdline contains "ufw-logging-allow" or tgt.process.cmdline contains "ufw6-logging-deny" or tgt.process.cmdline contains "ufw6-logging-allow")))
 ```
 
@@ -17,8 +17,8 @@ references:
 author: Joseliyo Sanchez, @Joseliyo_Jstnk
 date: 2023-01-18
 tags:
-    - attack.defense-evasion
-    - attack.t1562.004
+    - attack.defense-impairment
+    - attack.t1686
 logsource:
     product: linux
     category: process_creation

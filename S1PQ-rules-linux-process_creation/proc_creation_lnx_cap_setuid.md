@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 28-04-2026 02:00:10):
+// Translated content (automatically translated on 29-04-2026 02:02:11):
 event.type="Process Creation" and (endpoint.os="linux" and (tgt.process.image.path contains "/setcap" and tgt.process.cmdline contains "cap_setuid"))
 ```
 
@@ -21,7 +21,6 @@ author: Luc Génaux
 date: 2026-01-24
 tags:
     - attack.privilege-escalation
-    - attack.defense-evasion
     - attack.persistence
     - attack.t1548
     - attack.t1554

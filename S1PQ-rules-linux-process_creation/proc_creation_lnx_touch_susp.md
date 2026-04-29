@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 28-04-2026 02:00:10):
+// Translated content (automatically translated on 29-04-2026 02:02:11):
 event.type="Process Creation" and (endpoint.os="linux" and (tgt.process.image.path contains "/touch" and tgt.process.cmdline contains " -t " and tgt.process.cmdline contains ".service"))
 ```
 
@@ -16,7 +16,7 @@ references:
 author: Joseliyo Sanchez, @Joseliyo_Jstnk
 date: 2023-01-11
 tags:
-    - attack.defense-evasion
+    - attack.stealth
     - attack.t1070.006
 logsource:
     product: linux

@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 28-04-2026 02:00:10):
+// Translated content (automatically translated on 29-04-2026 02:02:11):
 event.type="Process Creation" and (endpoint.os="linux" and (tgt.process.image.path contains "/auditctl" and tgt.process.cmdline matches "-D"))
 ```
 
@@ -19,8 +19,8 @@ references:
 author: Mohamed LAKRI
 date: 2025-10-17
 tags:
-    - attack.defense-evasion
-    - attack.t1562.012
+    - attack.defense-impairment
+    - attack.t1685.004
 logsource:
     product: linux
     category: process_creation

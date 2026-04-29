@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 28-04-2026 02:00:10):
+// Translated content (automatically translated on 29-04-2026 02:02:11):
 event.type="Process Creation" and (endpoint.os="linux" and ((tgt.process.cmdline contains "-ufw-init" and tgt.process.cmdline contains "force-stop") or (tgt.process.cmdline contains "ufw" and tgt.process.cmdline contains "disable")))
 ```
 
@@ -16,8 +16,8 @@ references:
 author: Joseliyo Sanchez, @Joseliyo_Jstnk
 date: 2023-01-18
 tags:
-    - attack.defense-evasion
-    - attack.t1562.004
+    - attack.defense-impairment
+    - attack.t1686
 logsource:
     product: linux
     category: process_creation

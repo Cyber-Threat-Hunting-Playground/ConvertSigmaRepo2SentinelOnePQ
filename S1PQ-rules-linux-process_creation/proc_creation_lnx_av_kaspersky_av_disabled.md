@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 28-04-2026 02:00:10):
+// Translated content (automatically translated on 29-04-2026 02:02:11):
 event.type="Process Creation" and (endpoint.os="linux" and ((tgt.process.image.path contains "/systemctl" or tgt.process.image.path contains "/bash" or tgt.process.image.path contains "/sh") and (tgt.process.cmdline contains "stop" and tgt.process.cmdline contains "kesl")))
 ```
 
@@ -18,8 +18,8 @@ author: Milad Cheraghi
 date: 2025-10-18
 tags:
     - attack.execution
-    - attack.defense-evasion
-    - attack.t1562.001
+    - attack.defense-impairment
+    - attack.t1685
 logsource:
     product: linux
     category: process_creation
