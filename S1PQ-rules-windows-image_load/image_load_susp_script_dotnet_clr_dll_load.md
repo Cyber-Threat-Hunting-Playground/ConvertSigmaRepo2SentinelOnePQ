@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 28-04-2026 02:39:10):
+// Translated content (automatically translated on 29-04-2026 02:38:58):
 event.type="Module Load" and (endpoint.os="windows" and ((src.process.image.path contains "\\cmstp.exe" or src.process.image.path contains "\\cscript.exe" or src.process.image.path contains "\\mshta.exe" or src.process.image.path contains "\\msxsl.exe" or src.process.image.path contains "\\regsvr32.exe" or src.process.image.path contains "\\wmic.exe" or src.process.image.path contains "\\wscript.exe") and (module.path contains "\\clr.dll" or module.path contains "\\mscoree.dll" or module.path contains "\\mscorlib.dll")))
 ```
 
@@ -19,9 +19,9 @@ author: omkar72, oscd.community
 date: 2020-10-14
 modified: 2023-02-23
 tags:
-    - attack.defense-evasion
     - attack.execution
     - attack.privilege-escalation
+    - attack.stealth
     - attack.t1055
 logsource:
     category: image_load

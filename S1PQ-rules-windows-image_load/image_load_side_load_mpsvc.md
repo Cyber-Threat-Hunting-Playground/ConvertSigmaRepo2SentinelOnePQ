@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 28-04-2026 02:39:10):
+// Translated content (automatically translated on 29-04-2026 02:38:58):
 event.type="Module Load" and (endpoint.os="windows" and (module.path contains "\\MpSvc.dll" and (not (module.path contains "C:\\Program Files\\Windows Defender\\" or module.path contains "C:\\ProgramData\\Microsoft\\Windows Defender\\Platform\\" or module.path contains "C:\\Windows\\WinSxS\\"))))
 ```
 
@@ -17,7 +17,8 @@ date: 2024-07-11
 tags:
     - attack.privilege-escalation
     - attack.persistence
-    - attack.defense-evasion
+    - attack.execution
+    - attack.stealth
     - attack.t1574.001
 logsource:
     product: windows

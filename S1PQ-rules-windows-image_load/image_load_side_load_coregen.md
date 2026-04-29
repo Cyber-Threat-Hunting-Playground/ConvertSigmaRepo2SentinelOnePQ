@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 28-04-2026 02:39:10):
+// Translated content (automatically translated on 29-04-2026 02:38:58):
 event.type="Module Load" and (endpoint.os="windows" and (src.process.image.path contains "\\coregen.exe" and (not (module.path contains "C:\\Program Files (x86)\\Microsoft Silverlight\\" or module.path contains "C:\\Program Files\\Microsoft Silverlight\\" or module.path contains "C:\\Windows\\System32\\" or module.path contains "C:\\Windows\\SysWOW64\\"))))
 ```
 
@@ -16,7 +16,7 @@ author: frack113
 date: 2022-12-31
 tags:
     - attack.privilege-escalation
-    - attack.defense-evasion
+    - attack.stealth
     - attack.t1218
     - attack.t1055
 logsource:

@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 28-04-2026 02:39:10):
+// Translated content (automatically translated on 29-04-2026 02:38:58):
 event.type="Module Load" and (endpoint.os="windows" and (src.process.image.path contains "\\wmic.exe" and (module.path contains "\\jscript.dll" or module.path contains "\\vbscript.dll")))
 ```
 
@@ -25,7 +25,7 @@ author: Roberto Rodriguez (Cyb3rWard0g), OTR (Open Threat Research)
 date: 2020-10-17
 modified: 2022-10-13
 tags:
-    - attack.defense-evasion
+    - attack.stealth
     - attack.t1220
 logsource:
     category: image_load

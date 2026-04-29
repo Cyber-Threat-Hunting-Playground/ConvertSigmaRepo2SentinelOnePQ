@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 28-04-2026 02:39:10):
+// Translated content (automatically translated on 29-04-2026 02:38:58):
 event.type="Module Load" and (endpoint.os="windows" and ((module.path contains "\\log.dll" and (not ((module.path contains "C:\\Program Files\\Bitdefender Antivirus Free\\" or module.path contains "C:\\Program Files (x86)\\Bitdefender Antivirus Free\\") or (src.process.image.path="C:\\Program Files\\Dell\\SARemediation\\audit\\TelemetryUtility.exe" and (module.path in ("C:\\Program Files\\Dell\\SARemediation\\plugin\\log.dll","C:\\Program Files\\Dell\\SARemediation\\audit\\log.dll"))) or module.path contains "C:\\Program Files\\Canon\\MyPrinter\\" or (module.path in ("C:\\Program Files\\AVAST Software\\Avast\\log.dll","C:\\Program Files (x86)\\AVAST Software\\Avast\\log.dll")) or (module.path in ("C:\\Program Files\\AVG\\Antivirus\\log.dll","C:\\Program Files (x86)\\AVG\\Antivirus\\log.dll"))))) or (module.path contains "\\qrt.dll" and (not (module.path contains "C:\\Program Files\\F-Secure\\Anti-Virus\\" or module.path contains "C:\\Program Files (x86)\\F-Secure\\Anti-Virus\\"))) or ((module.path contains "\\ashldres.dll" or module.path contains "\\lockdown.dll" or module.path contains "\\vsodscpl.dll") and (not (module.path contains "C:\\Program Files\\McAfee\\" or module.path contains "C:\\Program Files (x86)\\McAfee\\"))) or (module.path contains "\\vftrace.dll" and (not (module.path contains "C:\\Program Files\\CyberArk\\Endpoint Privilege Manager\\Agent\\x32\\" or module.path contains "C:\\Program Files (x86)\\CyberArk\\Endpoint Privilege Manager\\Agent\\x32\\"))) or (module.path contains "\\wsc.dll" and (not ((module.path contains "C:\\program Files\\AVAST Software\\Avast\\" or module.path contains "C:\\program Files (x86)\\AVAST Software\\Avast\\") or (module.path contains "C:\\Program Files\\AVG\\Antivirus\\" or module.path contains "C:\\Program Files (x86)\\AVG\\Antivirus\\")))) or (module.path contains "\\tmdbglog.dll" and (not (module.path contains "C:\\program Files\\Trend Micro\\Titanium\\" or module.path contains "C:\\program Files (x86)\\Trend Micro\\Titanium\\"))) or (module.path contains "\\DLPPREM32.dll" and (not (module.path contains "C:\\program Files\\ESET" or module.path contains "C:\\program Files (x86)\\ESET")))))
 ```
 
@@ -16,9 +16,10 @@ author: Nasreddine Bencherchali (Nextron Systems), Wietze Beukema (project and r
 date: 2022-08-17
 modified: 2025-10-07
 tags:
-    - attack.defense-evasion
     - attack.persistence
     - attack.privilege-escalation
+    - attack.execution
+    - attack.stealth
     - attack.t1574.001
 logsource:
     category: image_load

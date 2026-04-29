@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 28-04-2026 02:39:10):
+// Translated content (automatically translated on 29-04-2026 02:38:58):
 event.type="Module Load" and (endpoint.os="windows" and (src.process.image.path contains "\\msdt.exe" and module.path contains "\\sdiageng.dll"))
 ```
 
@@ -16,7 +16,7 @@ author: Greg (rule)
 date: 2022-06-17
 modified: 2023-02-17
 tags:
-    - attack.defense-evasion
+    - attack.stealth
     - attack.t1202
     - cve.2022-30190
 logsource:

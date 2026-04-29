@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 28-04-2026 02:39:10):
+// Translated content (automatically translated on 29-04-2026 02:38:58):
 event.type="Module Load" and (endpoint.os="windows" and ((module.path contains "\\libwazuhshared.dll" or module.path contains "\\libwinpthread-1.dll") and (not (module.path contains "C:\\Program Files\\" or module.path contains "C:\\Program Files (x86)\\")) and (not ((module.path contains "\\AppData\\Local\\" or module.path contains "\\ProgramData\\") and module.path contains "\\mingw64\\bin\\libwinpthread-1.dll"))))
 ```
 
@@ -16,9 +16,10 @@ author: X__Junior (Nextron Systems)
 date: 2023-03-13
 modified: 2023-05-12
 tags:
-    - attack.defense-evasion
     - attack.persistence
     - attack.privilege-escalation
+    - attack.execution
+    - attack.stealth
     - attack.t1574.001
 logsource:
     category: image_load

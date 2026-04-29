@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 28-04-2026 02:39:10):
+// Translated content (automatically translated on 29-04-2026 02:38:58):
 event.type="Module Load" and (endpoint.os="windows" and ((module.path contains "\\roboform.dll" or module.path contains "\\roboform-x64.dll") and (not ((src.process.image.path contains " C:\\Program Files (x86)\\Siber Systems\\AI RoboForm\\" or src.process.image.path contains " C:\\Program Files\\Siber Systems\\AI RoboForm\\") and (src.process.image.path contains "\\robotaskbaricon.exe" or src.process.image.path contains "\\robotaskbaricon-x64.exe")))))
 ```
 
@@ -18,8 +18,9 @@ author: X__Junior (Nextron Systems), Nasreddine Bencherchali (Nextron Systems)
 date: 2023-05-14
 tags:
     - attack.persistence
-    - attack.defense-evasion
     - attack.privilege-escalation
+    - attack.execution
+    - attack.stealth
     - attack.t1574.001
 logsource:
     category: image_load

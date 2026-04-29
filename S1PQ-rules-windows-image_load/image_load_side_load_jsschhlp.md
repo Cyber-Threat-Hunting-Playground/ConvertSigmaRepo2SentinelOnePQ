@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 28-04-2026 02:39:10):
+// Translated content (automatically translated on 29-04-2026 02:38:58):
 event.type="Module Load" and (endpoint.os="windows" and (module.path contains "\\JSESPR.dll" and (not module.path contains "C:\\Program Files\\Common Files\\Justsystem\\JsSchHlp\\")))
 ```
 
@@ -16,9 +16,10 @@ references:
 author: frack113
 date: 2022-12-14
 tags:
-    - attack.defense-evasion
     - attack.persistence
     - attack.privilege-escalation
+    - attack.execution
+    - attack.stealth
     - attack.t1574.001
 logsource:
     category: image_load

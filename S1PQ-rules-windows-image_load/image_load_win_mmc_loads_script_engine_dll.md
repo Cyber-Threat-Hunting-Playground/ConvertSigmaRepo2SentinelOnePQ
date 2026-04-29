@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 28-04-2026 02:39:10):
+// Translated content (automatically translated on 29-04-2026 02:38:58):
 event.type="Module Load" and (endpoint.os="windows" and (src.process.image.path contains "\\mmc.exe" and (module.path contains "\\vbscript.dll" or module.path contains "\\jscript.dll" or module.path contains "\\jscript9.dll")))
 ```
 
@@ -19,7 +19,7 @@ author: Swachchhanda Shrawan Poudel (Nextron Systems)
 date: 2025-02-05
 tags:
     - attack.execution
-    - attack.defense-evasion
+    - attack.stealth
     - attack.t1059.005
     - attack.t1218.014
 logsource:

@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 28-04-2026 02:39:10):
+// Translated content (automatically translated on 29-04-2026 02:38:58):
 event.type="Module Load" and (endpoint.os="windows" and ((src.process.image.path="C:\\Windows\\SysWOW64\\iscsicpl.exe" and module.path contains "\\iscsiexe.dll") and (not (module.path contains "C:\\Windows\\" and module.path contains "iscsiexe.dll"))))
 ```
 
@@ -17,7 +17,6 @@ author: Nasreddine Bencherchali (Nextron Systems)
 date: 2022-07-17
 modified: 2022-07-25
 tags:
-    - attack.defense-evasion
     - attack.privilege-escalation
     - attack.t1548.002
 logsource:

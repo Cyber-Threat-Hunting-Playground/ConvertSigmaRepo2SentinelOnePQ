@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 28-04-2026 02:39:10):
+// Translated content (automatically translated on 29-04-2026 02:38:58):
 event.type="Module Load" and (endpoint.os="windows" and (module.path contains "\\chrome_frame_helper.dll" and (not (module.path contains "C:\\Program Files\\Google\\Chrome\\Application\\" or module.path contains "C:\\Program Files (x86)\\Google\\Chrome\\Application\\")) and (not module.path contains "\\AppData\\local\\Google\\Chrome\\Application\\")))
 ```
 
@@ -16,9 +16,10 @@ author: Nasreddine Bencherchali (Nextron Systems), Wietze Beukema (project and r
 date: 2022-08-17
 modified: 2023-05-15
 tags:
-    - attack.defense-evasion
     - attack.persistence
     - attack.privilege-escalation
+    - attack.execution
+    - attack.stealth
     - attack.t1574.001
 logsource:
     category: image_load

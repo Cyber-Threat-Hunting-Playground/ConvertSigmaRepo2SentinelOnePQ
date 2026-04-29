@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 28-04-2026 02:39:10):
+// Translated content (automatically translated on 29-04-2026 02:38:58):
 event.type="Module Load" and (endpoint.os="windows" and ((module.path contains "\\appwiz.cpl" or module.path contains "\\bthprops.cpl" or module.path contains "\\hdwwiz.cpl") and (not (module.path contains "C:\\Windows\\Prefetch\\" or module.path contains "C:\\Windows\\System32\\" or module.path contains "C:\\Windows\\SysWOW64\\" or module.path contains "C:\\Windows\\WinSxS\\"))))
 ```
 
@@ -20,9 +20,10 @@ author: Anish Bogati
 date: 2024-01-09
 modified: 2026-02-17
 tags:
-    - attack.defense-evasion
     - attack.persistence
     - attack.privilege-escalation
+    - attack.execution
+    - attack.stealth
     - attack.t1574.001
 logsource:
     product: windows

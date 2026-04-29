@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 28-04-2026 02:39:10):
+// Translated content (automatically translated on 29-04-2026 02:38:58):
 event.type="Module Load" and (endpoint.os="windows" and (Description="Python Core" and (not (src.process.image.path contains "Python" or (src.process.image.path contains "C:\\Program Files\\" or src.process.image.path contains "C:\\Program Files (x86)\\" or src.process.image.path contains "C:\\ProgramData\\Anaconda3\\"))) and (not not (src.process.image.path matches "\.*"))))
 ```
 
@@ -20,7 +20,7 @@ author: Patrick St. John, OTR (Open Threat Research)
 date: 2020-05-03
 modified: 2025-08-18
 tags:
-    - attack.defense-evasion
+    - attack.stealth
     - attack.t1027.002
 logsource:
     product: windows

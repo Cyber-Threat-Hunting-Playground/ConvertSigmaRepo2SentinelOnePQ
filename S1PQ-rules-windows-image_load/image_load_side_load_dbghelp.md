@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 28-04-2026 02:39:10):
+// Translated content (automatically translated on 29-04-2026 02:38:58):
 event.type="Module Load" and (endpoint.os="windows" and (module.path contains "\\dbghelp.dll" and (not (module.path contains "C:\\Program Files (x86)\\" or module.path contains "C:\\Program Files\\" or module.path contains "C:\\Windows\\SoftwareDistribution\\" or module.path contains "C:\\Windows\\System32\\" or module.path contains "C:\\Windows\\SystemTemp\\" or module.path contains "C:\\Windows\\SysWOW64\\" or module.path contains "C:\\Windows\\WinSxS\\")) and (not ((module.path contains "\\Anaconda3\\Lib\\site-packages\\vtrace\\platforms\\windll\\amd64\\dbghelp.dll" or module.path contains "\\Anaconda3\\Lib\\site-packages\\vtrace\\platforms\\windll\\i386\\dbghelp.dll") or (module.path contains "\\Epic Games\\Launcher\\Engine\\Binaries\\ThirdParty\\DbgHelp\\dbghelp.dll" or module.path contains "\\Epic Games\\MagicLegends\\x86\\dbghelp.dll") or (module.path contains "opera\\Opera Installer Temp\\opera_package" and module.path contains "\\assistant\\dbghelp.dll")))))
 ```
 
@@ -16,9 +16,10 @@ author: Nasreddine Bencherchali (Nextron Systems), Wietze Beukema (project and r
 date: 2022-10-25
 modified: 2025-10-07
 tags:
-    - attack.defense-evasion
     - attack.persistence
     - attack.privilege-escalation
+    - attack.execution
+    - attack.stealth
     - attack.t1574.001
 logsource:
     category: image_load

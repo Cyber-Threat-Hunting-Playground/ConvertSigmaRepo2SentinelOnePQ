@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 28-04-2026 02:39:10):
+// Translated content (automatically translated on 29-04-2026 02:38:58):
 event.type="Module Load" and (endpoint.os="windows" and (module.path contains "\\ttdrecord.dll" or module.path contains "\\ttdwriter.dll" or module.path contains "\\ttdloader.dll"))
 ```
 
@@ -18,8 +18,8 @@ author: 'Ensar Şamil, @sblmsrsn, @oscd_initiative'
 date: 2020-10-06
 modified: 2022-12-02
 tags:
-    - attack.defense-evasion
     - attack.credential-access
+    - attack.stealth
     - attack.t1218
     - attack.t1003.001
 logsource:

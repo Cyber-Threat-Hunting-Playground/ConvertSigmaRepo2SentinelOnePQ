@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 28-04-2026 02:39:10):
+// Translated content (automatically translated on 29-04-2026 02:38:58):
 event.type="Module Load" and (endpoint.os="windows" and ((module.path contains "C:\\Windows\\System32\\logonUI.exe.local\\" or module.path contains "C:\\Windows\\System32\\werFault.exe.local\\" or module.path contains "C:\\Windows\\System32\\consent.exe.local\\" or module.path contains "C:\\Windows\\System32\\narrator.exe.local\\" or module.path contains "C:\\windows\\system32\\wermgr.exe.local\\") and module.path contains "\\comctl32.dll"))
 ```
 
@@ -17,9 +17,10 @@ author: Nasreddine Bencherchali (Nextron Systems), Subhash Popuri (@pbssubhash)
 date: 2022-12-16
 modified: 2022-12-19
 tags:
-    - attack.defense-evasion
     - attack.persistence
     - attack.privilege-escalation
+    - attack.execution
+    - attack.stealth
     - attack.t1574.001
 logsource:
     category: image_load

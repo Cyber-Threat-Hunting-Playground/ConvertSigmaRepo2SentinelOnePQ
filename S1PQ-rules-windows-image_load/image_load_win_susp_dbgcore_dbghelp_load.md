@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 28-04-2026 02:39:10):
+// Translated content (automatically translated on 29-04-2026 02:38:58):
 event.type="Module Load" and (endpoint.os="windows" and ((src.process.image.path contains ":\\Perflogs\\" or src.process.image.path contains ":\\Temp\\" or src.process.image.path contains ":\\Users\\Public\\" or src.process.image.path contains "\\$Recycle.Bin\\" or src.process.image.path contains "\\Contacts\\" or src.process.image.path contains "\\Documents\\" or src.process.image.path contains "\\Favorites\\" or src.process.image.path contains "\\Favourites\\" or src.process.image.path contains "\\inetpub\\wwwroot\\" or src.process.image.path contains "\\Music\\" or src.process.image.path contains "\\Pictures\\" or src.process.image.path contains "\\Start Menu\\Programs\\Startup\\" or src.process.image.path contains "\\Users\\Default\\" or src.process.image.path contains "\\Videos\\") and (module.path contains "\\dbgcore.dll" or module.path contains "\\dbghelp.dll")))
 ```
 
@@ -24,9 +24,9 @@ date: 2025-11-27
 modified: 2026-01-09
 tags:
     - attack.credential-access
+    - attack.defense-impairment
     - attack.t1003
-    - attack.defense-evasion
-    - attack.t1562.001
+    - attack.t1685
 logsource:
     category: image_load
     product: windows
