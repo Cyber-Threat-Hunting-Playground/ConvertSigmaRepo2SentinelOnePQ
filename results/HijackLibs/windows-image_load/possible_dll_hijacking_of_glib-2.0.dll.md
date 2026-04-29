@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 28-04-2026 03:28:25):
+// Translated content (automatically translated on 29-04-2026 03:27:00):
 event.type="Module Load" and (endpoint.os="windows" and (module.path contains "\\glib-2.0.dll" and (not (module.path contains "c:\\program files\\VMware\\VMware Tools\\" or module.path contains "c:\\program files (x86)\\VMware\\VMware Tools\\" or module.path contains "c:\\program files\\VMware\\VMware Workstation\\" or module.path contains "c:\\program files (x86)\\VMware\\VMware Workstation\\" or module.path contains "c:\\program files\\VMware\\VMware Player\\" or module.path contains "c:\\program files (x86)\\VMware\\VMware Player\\"))))
 ```
 
