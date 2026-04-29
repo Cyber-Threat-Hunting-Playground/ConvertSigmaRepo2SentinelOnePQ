@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 28-04-2026 01:53:18):
+// Translated content (automatically translated on 29-04-2026 01:56:00):
 (event.category in ("dns","url","ip")) and (endpoint.os="windows" and ((url.address contains ".fleetdeck.io" or url.address contains "cognito-idp.us-west-2.amazonaws.com" or url.address contains "fleetdeck.io") or (event.dns.request contains ".fleetdeck.io" or event.dns.request contains "cognito-idp.us-west-2.amazonaws.com" or event.dns.request contains "fleetdeck.io")))
 ```
 

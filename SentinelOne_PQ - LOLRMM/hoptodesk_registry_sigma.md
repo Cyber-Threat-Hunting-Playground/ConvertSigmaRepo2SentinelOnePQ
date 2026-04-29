@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 28-04-2026 01:53:18):
+// Translated content (automatically translated on 29-04-2026 01:56:00):
 event.category="registry" and (endpoint.os="windows" and registry.keyPath contains "HKEY_USERS\*_Classes\\HopToDesk\*")
 ```
 
