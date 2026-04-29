@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 28-04-2026 01:48:14):
+// Translated content (automatically translated on 29-04-2026 01:51:09):
 event.type="Process Creation" and (endpoint.os="windows" and (src.process.image.path contains "\\svchost.exe" and (tgt.process.image.path contains "\\eqnedt32.exe" or tgt.process.image.path contains "\\excel.exe" or tgt.process.image.path contains "\\msaccess.exe" or tgt.process.image.path contains "\\mspub.exe" or tgt.process.image.path contains "\\powerpnt.exe" or tgt.process.image.path contains "\\visio.exe" or tgt.process.image.path contains "\\winword.exe")))
 ```
 
@@ -20,8 +20,8 @@ date: 2022-10-13
 modified: 2023-12-19
 tags:
     - attack.execution
-    - attack.defense-evasion
     - detection.threat-hunting
+    - attack.stealth
 logsource:
     product: windows
     category: process_creation

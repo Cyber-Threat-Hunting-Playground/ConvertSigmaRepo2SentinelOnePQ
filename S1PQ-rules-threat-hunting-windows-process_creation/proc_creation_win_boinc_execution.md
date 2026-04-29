@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 28-04-2026 01:48:14):
+// Translated content (automatically translated on 29-04-2026 01:51:09):
 event.type="Process Creation" and (endpoint.os="windows" and tgt.process.displayName="University of California, Berkeley")
 ```
 
@@ -19,7 +19,7 @@ author: Matt Anderson (Huntress)
 date: 2024-07-23
 tags:
     - attack.execution
-    - attack.defense-evasion
+    - attack.defense-impairment
     - attack.t1553
     - detection.threat-hunting
 logsource:

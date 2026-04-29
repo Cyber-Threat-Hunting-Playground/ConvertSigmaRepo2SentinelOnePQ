@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 28-04-2026 01:48:14):
+// Translated content (automatically translated on 29-04-2026 01:51:09):
 event.type="Process Creation" and (endpoint.os="windows" and (src.process.image.path contains "\\dfsvc.exe" and tgt.process.image.path contains "\\AppData\\Local\\Apps\\2.0\\"))
 ```
 
@@ -16,8 +16,8 @@ author: Nasreddine Bencherchali (Nextron Systems)
 date: 2023-06-12
 tags:
     - attack.execution
-    - attack.defense-evasion
     - detection.threat-hunting
+    - attack.stealth
 logsource:
     category: process_creation
     product: windows

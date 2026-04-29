@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 28-04-2026 01:48:14):
+// Translated content (automatically translated on 29-04-2026 01:51:09):
 event.type="Process Creation" and (endpoint.os="windows" and (src.process.image.path contains "\\diskshadow.exe" and (not tgt.process.image.path contains ":\\Windows\\System32\\WerFault.exe")))
 ```
 
@@ -27,7 +27,7 @@ references:
 author: Harjot Singh @cyb3rjy0t
 date: 2023-09-15
 tags:
-    - attack.defense-evasion
+    - attack.stealth
     - attack.t1218
     - attack.execution
     - detection.threat-hunting

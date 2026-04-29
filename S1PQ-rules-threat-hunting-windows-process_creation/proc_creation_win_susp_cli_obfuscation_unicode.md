@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 28-04-2026 01:48:14):
+// Translated content (automatically translated on 29-04-2026 01:51:09):
 event.type="Process Creation" and (endpoint.os="windows" and (tgt.process.cmdline contains "ˣ" or tgt.process.cmdline contains "˪" or tgt.process.cmdline contains "ˢ" or tgt.process.cmdline contains "∕" or tgt.process.cmdline contains "⁄" or tgt.process.cmdline contains "―" or tgt.process.cmdline contains "—" or tgt.process.cmdline contains " " or tgt.process.cmdline contains "¯" or tgt.process.cmdline contains "®" or tgt.process.cmdline contains "¶"))
 ```
 
@@ -26,7 +26,7 @@ author: frack113, Florian Roth (Nextron Systems)
 date: 2022-01-15
 modified: 2024-09-05
 tags:
-    - attack.defense-evasion
+    - attack.stealth
     - attack.t1027
     - detection.threat-hunting
 logsource:
