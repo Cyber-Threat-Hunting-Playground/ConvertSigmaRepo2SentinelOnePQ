@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 28-04-2026 03:51:36):
+// Translated content (automatically translated on 29-04-2026 03:48:43):
 event.category="dns" and (endpoint.os="windows" and src.process.image.path contains "\\regsvr32.exe")
 ```
 
@@ -21,8 +21,8 @@ date: 2019-10-25
 modified: 2023-09-18
 tags:
     - attack.execution
+    - attack.stealth
     - attack.t1559.001
-    - attack.defense-evasion
     - attack.t1218.010
 logsource:
     category: dns_query
