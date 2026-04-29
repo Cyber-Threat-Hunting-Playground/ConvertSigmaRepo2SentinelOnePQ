@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 28-04-2026 03:53:04):
+// Translated content (automatically translated on 29-04-2026 03:50:14):
 event.type="Process Creation" and (endpoint.os="windows" and (((tgt.process.cmdline contains "wmic" and tgt.process.cmdline contains "product where " and tgt.process.cmdline contains "call" and tgt.process.cmdline contains "uninstall" and tgt.process.cmdline contains "/nointeractive") or ((tgt.process.cmdline contains "wmic" and tgt.process.cmdline contains "caption like ") and (tgt.process.cmdline contains "call delete" or tgt.process.cmdline contains "call terminate")) or (tgt.process.cmdline contains "process " and tgt.process.cmdline contains "where " and tgt.process.cmdline contains "delete")) and (tgt.process.cmdline contains "%carbon%" or tgt.process.cmdline contains "%cylance%" or tgt.process.cmdline contains "%endpoint%" or tgt.process.cmdline contains "%eset%" or tgt.process.cmdline contains "%malware%" or tgt.process.cmdline contains "%Sophos%" or tgt.process.cmdline contains "%symantec%" or tgt.process.cmdline contains "Antivirus" or tgt.process.cmdline contains "AVG " or tgt.process.cmdline contains "Carbon Black" or tgt.process.cmdline contains "CarbonBlack" or tgt.process.cmdline contains "Cb Defense Sensor 64-bit" or tgt.process.cmdline contains "Crowdstrike Sensor" or tgt.process.cmdline contains "Cylance " or tgt.process.cmdline contains "Dell Threat Defense" or tgt.process.cmdline contains "DLP Endpoint" or tgt.process.cmdline contains "Endpoint Detection" or tgt.process.cmdline contains "Endpoint Protection" or tgt.process.cmdline contains "Endpoint Security" or tgt.process.cmdline contains "Endpoint Sensor" or tgt.process.cmdline contains "ESET File Security" or tgt.process.cmdline contains "LogRhythm System Monitor Service" or tgt.process.cmdline contains "Malwarebytes" or tgt.process.cmdline contains "McAfee Agent" or tgt.process.cmdline contains "Microsoft Security Client" or tgt.process.cmdline contains "Sophos Anti-Virus" or tgt.process.cmdline contains "Sophos AutoUpdate" or tgt.process.cmdline contains "Sophos Credential Store" or tgt.process.cmdline contains "Sophos Management Console" or tgt.process.cmdline contains "Sophos Management Database" or tgt.process.cmdline contains "Sophos Management Server" or tgt.process.cmdline contains "Sophos Remote Management System" or tgt.process.cmdline contains "Sophos Update Manager" or tgt.process.cmdline contains "Threat Protection" or tgt.process.cmdline contains "VirusScan" or tgt.process.cmdline contains "Webroot SecureAnywhere" or tgt.process.cmdline contains "Windows Defender")))
 ```
 
@@ -23,8 +23,8 @@ author: Florian Roth (Nextron Systems), Nasreddine Bencherchali (Nextron Systems
 date: 2021-01-30
 modified: 2023-02-14
 tags:
-    - attack.defense-evasion
-    - attack.t1562.001
+    - attack.defense-impairment
+    - attack.t1685
 logsource:
     category: process_creation
     product: windows

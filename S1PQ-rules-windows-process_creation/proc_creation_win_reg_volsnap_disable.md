@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 28-04-2026 03:53:04):
+// Translated content (automatically translated on 29-04-2026 03:50:14):
 event.type="Process Creation" and (endpoint.os="windows" and (tgt.process.cmdline contains "\\Services\\VSS\\Diag" and tgt.process.cmdline contains "/d Disabled"))
 ```
 
@@ -16,8 +16,8 @@ author: Florian Roth (Nextron Systems)
 date: 2021-01-28
 modified: 2023-12-15
 tags:
-    - attack.defense-evasion
-    - attack.t1562.001
+    - attack.defense-impairment
+    - attack.t1685
 logsource:
     category: process_creation
     product: windows

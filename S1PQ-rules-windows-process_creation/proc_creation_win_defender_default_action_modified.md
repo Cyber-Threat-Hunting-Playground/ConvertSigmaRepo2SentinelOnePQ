@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 28-04-2026 03:53:04):
+// Translated content (automatically translated on 29-04-2026 03:50:14):
 event.type="Process Creation" and (endpoint.os="windows" and (tgt.process.cmdline contains "Set-MpPreference" and (tgt.process.cmdline contains "-LowThreatDefaultAction" or tgt.process.cmdline contains "-ModerateThreatDefaultAction" or tgt.process.cmdline contains "-HighThreatDefaultAction" or tgt.process.cmdline contains "-SevereThreatDefaultAction" or tgt.process.cmdline contains "-ltdefac " or tgt.process.cmdline contains "-mtdefac " or tgt.process.cmdline contains "-htdefac " or tgt.process.cmdline contains "-stdefac ") and (tgt.process.cmdline contains "Allow" or tgt.process.cmdline contains "6" or tgt.process.cmdline contains "NoAction" or tgt.process.cmdline contains "9")))
 ```
 
@@ -25,8 +25,8 @@ references:
 author: 'Matt Anderson (Huntress)'
 date: 2025-07-11
 tags:
-    - attack.defense-evasion
-    - attack.t1562.001
+    - attack.defense-impairment
+    - attack.t1685
 logsource:
     category: process_creation
     product: windows

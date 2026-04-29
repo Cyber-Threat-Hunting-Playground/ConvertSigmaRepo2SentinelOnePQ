@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 28-04-2026 03:53:04):
+// Translated content (automatically translated on 29-04-2026 03:50:14):
 event.type="Process Creation" and (endpoint.os="windows" and (tgt.process.cmdline="RunWizard" and tgt.process.cmdline matches "\\{[a-fA-F0-9]{8}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{12}\\}"))
 ```
 
@@ -20,7 +20,7 @@ author: Ensar Şamil, @sblmsrsn, @oscd_initiative, Nasreddine Bencherchali (Next
 date: 2020-10-07
 modified: 2024-08-15
 tags:
-    - attack.defense-evasion
+    - attack.stealth
     - attack.t1218
 logsource:
     category: process_creation

@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 28-04-2026 03:53:04):
+// Translated content (automatically translated on 29-04-2026 03:50:14):
 event.type="Process Creation" and (endpoint.os="windows" and (tgt.process.cmdline contains " run run-cmd " and (not (src.process.image.path contains "\\cleanapi.exe" or src.process.image.path contains "\\kavremover.exe"))))
 ```
 
@@ -15,7 +15,8 @@ references:
 author: Nasreddine Bencherchali (Nextron Systems)
 date: 2022-11-01
 tags:
-    - attack.defense-evasion
+    - attack.execution
+    - attack.stealth
     - attack.t1127
 logsource:
     product: windows

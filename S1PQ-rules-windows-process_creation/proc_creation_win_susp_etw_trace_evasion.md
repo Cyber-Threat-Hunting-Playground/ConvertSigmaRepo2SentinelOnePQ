@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 28-04-2026 03:53:04):
+// Translated content (automatically translated on 29-04-2026 03:50:14):
 event.type="Process Creation" and (endpoint.os="windows" and ((tgt.process.cmdline contains "cl" and tgt.process.cmdline contains "/Trace") or (tgt.process.cmdline contains "clear-log" and tgt.process.cmdline contains "/Trace") or (tgt.process.cmdline contains "sl" and tgt.process.cmdline contains "/e:false") or (tgt.process.cmdline contains "set-log" and tgt.process.cmdline contains "/e:false") or (tgt.process.cmdline contains "logman" and tgt.process.cmdline contains "update" and tgt.process.cmdline contains "trace" and tgt.process.cmdline contains "--p" and tgt.process.cmdline contains "-ets") or tgt.process.cmdline contains "Remove-EtwTraceProvider" or (tgt.process.cmdline contains "Set-EtwTraceProvider" and tgt.process.cmdline contains "0x11")))
 ```
 
@@ -19,9 +19,10 @@ author: '@neu5ron, Florian Roth (Nextron Systems), Jonhnathan Ribeiro, oscd.comm
 date: 2019-03-22
 modified: 2022-06-28
 tags:
-    - attack.defense-evasion
+    - attack.stealth
+    - attack.defense-impairment
     - attack.t1070
-    - attack.t1562.006
+    - attack.t1685
     - car.2016-04-002
 logsource:
     category: process_creation

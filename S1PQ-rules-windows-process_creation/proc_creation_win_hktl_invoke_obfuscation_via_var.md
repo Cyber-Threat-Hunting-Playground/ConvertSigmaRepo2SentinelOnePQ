@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 28-04-2026 03:53:04):
+// Translated content (automatically translated on 29-04-2026 03:50:14):
 event.type="Process Creation" and (endpoint.os="windows" and ((tgt.process.cmdline contains "&&set" and tgt.process.cmdline contains "cmd" and tgt.process.cmdline contains "/c" and tgt.process.cmdline contains "-f") and (tgt.process.cmdline contains "{0}" or tgt.process.cmdline contains "{1}" or tgt.process.cmdline contains "{2}" or tgt.process.cmdline contains "{3}" or tgt.process.cmdline contains "{4}" or tgt.process.cmdline contains "{5}")))
 ```
 
@@ -16,7 +16,7 @@ author: Timur Zinniatullin, oscd.community
 date: 2020-10-13
 modified: 2022-11-16
 tags:
-    - attack.defense-evasion
+    - attack.stealth
     - attack.t1027
     - attack.execution
     - attack.t1059.001

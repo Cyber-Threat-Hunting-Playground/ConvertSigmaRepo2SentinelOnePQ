@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 28-04-2026 03:53:04):
+// Translated content (automatically translated on 29-04-2026 03:50:14):
 event.type="Process Creation" and (endpoint.os="windows" and (tgt.process.image.path contains "\\procdump.exe" or tgt.process.image.path contains "\\procdump64.exe"))
 ```
 
@@ -16,7 +16,7 @@ author: Florian Roth (Nextron Systems)
 date: 2021-08-16
 modified: 2023-02-28
 tags:
-    - attack.defense-evasion
+    - attack.stealth
     - attack.t1036
     - attack.t1003.001
     - attack.credential-access

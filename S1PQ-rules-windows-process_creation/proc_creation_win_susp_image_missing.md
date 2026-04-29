@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 28-04-2026 03:53:04):
+// Translated content (automatically translated on 29-04-2026 03:50:14):
 event.type="Process Creation" and (endpoint.os="windows" and ((not tgt.process.image.path contains "\\") and (not (not (tgt.process.image.path matches "\.*") or (tgt.process.image.path in ("-","")) or ((tgt.process.image.path in ("System","Registry","MemCompression","vmmem")) or (tgt.process.cmdline in ("Registry","MemCompression","vmmem")))))))
 ```
 
@@ -16,7 +16,7 @@ author: Max Altgelt (Nextron Systems)
 date: 2021-12-09
 modified: 2022-12-14
 tags:
-    - attack.defense-evasion
+    - attack.stealth
 logsource:
     category: process_creation
     product: windows

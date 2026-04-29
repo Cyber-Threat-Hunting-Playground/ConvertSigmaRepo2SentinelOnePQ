@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 28-04-2026 03:53:04):
+// Translated content (automatically translated on 29-04-2026 03:50:14):
 event.type="Process Creation" and (endpoint.os="windows" and (src.process.image.path contains "\\DllHost.exe" and src.process.cmdline contains " /Processid:{12C21EA7-2EB8-4B55-9249-AC243DA8C666}" and (tgt.process.integrityLevel in ("High","System","S-1-16-16384","S-1-16-12288"))))
 ```
 
@@ -17,7 +17,6 @@ date: 2022-07-03
 modified: 2024-12-01
 tags:
     - attack.execution
-    - attack.defense-evasion
     - attack.privilege-escalation
     - attack.t1548.002
 logsource:

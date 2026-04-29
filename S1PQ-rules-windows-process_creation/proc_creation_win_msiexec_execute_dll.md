@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 28-04-2026 03:53:04):
+// Translated content (automatically translated on 29-04-2026 03:50:14):
 event.type="Process Creation" and (endpoint.os="windows" and ((tgt.process.image.path contains "\\msiexec.exe" and (tgt.process.cmdline contains " -Y" or tgt.process.cmdline contains " /Y" or tgt.process.cmdline contains " –Y" or tgt.process.cmdline contains " —Y" or tgt.process.cmdline contains " ―Y")) and (not (tgt.process.cmdline contains "\\MsiExec.exe\" /Y \"C:\\Program Files\\" or tgt.process.cmdline contains "\\MsiExec.exe\" /Y \"C:\\Program Files (x86)\\" or tgt.process.cmdline contains "\\MsiExec.exe\" /Y \"C:\\Windows\\System32\\" or tgt.process.cmdline contains "\\MsiExec.exe\" /Y \"C:\\Windows\\SysWOW64\\"))))
 ```
 
@@ -20,7 +20,7 @@ author: frack113
 date: 2022-01-16
 modified: 2026-01-09
 tags:
-    - attack.defense-evasion
+    - attack.stealth
     - attack.t1218.007
 logsource:
     category: process_creation

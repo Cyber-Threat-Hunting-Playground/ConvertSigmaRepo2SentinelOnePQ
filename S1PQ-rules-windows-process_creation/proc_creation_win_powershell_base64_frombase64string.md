@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 28-04-2026 03:53:04):
+// Translated content (automatically translated on 29-04-2026 03:50:14):
 event.type="Process Creation" and (endpoint.os="windows" and (tgt.process.cmdline contains "OjpGcm9tQmFzZTY0U3RyaW5n" or tgt.process.cmdline contains "o6RnJvbUJhc2U2NFN0cmluZ" or tgt.process.cmdline contains "6OkZyb21CYXNlNjRTdHJpbm" or (tgt.process.cmdline contains "OgA6AEYAcgBvAG0AQgBhAHMAZQA2ADQAUwB0AHIAaQBuAGcA" or tgt.process.cmdline contains "oAOgBGAHIAbwBtAEIAYQBzAGUANgA0AFMAdAByAGkAbgBnA" or tgt.process.cmdline contains "6ADoARgByAG8AbQBCAGEAcwBlADYANABTAHQAcgBpAG4AZw")))
 ```
 
@@ -16,7 +16,7 @@ author: Florian Roth (Nextron Systems)
 date: 2019-08-24
 modified: 2023-04-06
 tags:
-    - attack.defense-evasion
+    - attack.stealth
     - attack.t1140
     - attack.execution
     - attack.t1059.001

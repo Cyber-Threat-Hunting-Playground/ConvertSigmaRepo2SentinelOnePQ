@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 28-04-2026 03:53:04):
+// Translated content (automatically translated on 29-04-2026 03:50:14):
 event.type="Process Creation" and (endpoint.os="windows" and ((tgt.process.image.path contains ":\\RECYCLER\\" or tgt.process.image.path contains ":\\SystemVolumeInformation\\") or (tgt.process.image.path contains "C:\\Windows\\Tasks\\" or tgt.process.image.path contains "C:\\Windows\\debug\\" or tgt.process.image.path contains "C:\\Windows\\fonts\\" or tgt.process.image.path contains "C:\\Windows\\help\\" or tgt.process.image.path contains "C:\\Windows\\drivers\\" or tgt.process.image.path contains "C:\\Windows\\addins\\" or tgt.process.image.path contains "C:\\Windows\\cursors\\" or tgt.process.image.path contains "C:\\Windows\\system32\\tasks\\")))
 ```
 
@@ -16,7 +16,7 @@ author: juju4, Jonhnathan Ribeiro, oscd.community
 date: 2019-01-16
 modified: 2022-01-07
 tags:
-    - attack.defense-evasion
+    - attack.stealth
     - attack.t1036
     - car.2013-05-002
 logsource:

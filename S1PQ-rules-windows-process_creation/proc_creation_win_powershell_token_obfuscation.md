@@ -1,6 +1,6 @@
 ```sql
-// Translated content (automatically translated on 28-04-2026 03:53:04):
-event.type="Process Creation" and (endpoint.os="windows" and ((tgt.process.cmdline matches "\\w+`(\\w+|-|.)`[\\w+|\\s]" or tgt.process.cmdline matches ""(\\{\\d\\})+"\\s*-f" or tgt.process.cmdline matches "(?i)\\$\\{`?e`?n`?v`?:`?p`?a`?t`?h`?\\}") and (not tgt.process.cmdline contains "${env:path}")))
+// Translated content (automatically translated on 29-04-2026 03:50:14):
+event.type="Process Creation" and (endpoint.os="windows" and ((tgt.process.cmdline matches "\\w+`(?:\\w+|-|.)`[\\w+|\\s]" or tgt.process.cmdline matches ""(?:\\{\\d\\})+"\\s*-f" or tgt.process.cmdline matches "(?i)\\$\\{`?e`?n`?v`?:`?p`?a`?t`?h`?\\}") and (not tgt.process.cmdline contains "${env:path}")))
 ```
 
 
@@ -17,9 +17,9 @@ references:
     - https://github.com/danielbohannon/Invoke-Obfuscation
 author: frack113
 date: 2022-12-27
-modified: 2024-08-11
+modified: 2026-03-16
 tags:
-    - attack.defense-evasion
+    - attack.stealth
     - attack.t1027.009
 logsource:
     category: process_creation
@@ -30,9 +30,9 @@ detection:
         #   IN`V`o`Ke-eXp`ResSIOn (Ne`W-ob`ject Net.WebClient).DownloadString
         #   &('In'+'voke-Expressi'+'o'+'n') (.('New-Ob'+'jec'+'t') Net.WebClient).DownloadString
         #   &("{2}{3}{0}{4}{1}"-f 'e','Expression','I','nvok','-') (&("{0}{1}{2}"-f'N','ew-O','bject') Net.WebClient).DownloadString
-        - CommandLine|re: '\w+`(\w+|-|.)`[\w+|\s]'
+        - CommandLine|re: '\w+`(?:\w+|-|.)`[\w+|\s]'
         # - CommandLine|re: '\((\'(\w|-|\.)+\'\+)+\'(\w|-|\.)+\'\)' TODO: fixme
-        - CommandLine|re: '"(\{\d\})+"\s*-f'
+        - CommandLine|re: '"(?:\{\d\})+"\s*-f'
         #   ${e`Nv:pATh}
         - CommandLine|re: '(?i)\$\{`?e`?n`?v`?:`?p`?a`?t`?h`?\}'
     filter_main_envpath:

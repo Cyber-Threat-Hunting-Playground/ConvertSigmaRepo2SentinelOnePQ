@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 28-04-2026 03:53:04):
+// Translated content (automatically translated on 29-04-2026 03:50:14):
 event.type="Process Creation" and (endpoint.os="windows" and ((tgt.process.cmdline contains " -name IEHarden " and tgt.process.cmdline contains " -value 0 ") or (tgt.process.cmdline contains " -name DEPOff " and tgt.process.cmdline contains " -value 1 ") or (tgt.process.cmdline contains " -name DisableFirstRunCustomize " and tgt.process.cmdline contains " -value 2 ")))
 ```
 
@@ -16,8 +16,8 @@ author: Florian Roth (Nextron Systems)
 date: 2020-06-19
 modified: 2021-11-27
 tags:
-    - attack.defense-evasion
-    - attack.t1562.001
+    - attack.defense-impairment
+    - attack.t1685
 logsource:
     category: process_creation
     product: windows

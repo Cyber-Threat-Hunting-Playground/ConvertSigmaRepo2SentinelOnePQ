@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 28-04-2026 03:53:04):
+// Translated content (automatically translated on 29-04-2026 03:50:14):
 event.type="Process Creation" and (endpoint.os="windows" and ((tgt.process.cmdline contains "/generic:Microsoft_Windows_Shell_ZipFolder:filename=" and tgt.process.cmdline contains ".zip" and tgt.process.cmdline contains "/pass:" and tgt.process.cmdline contains "/user:") or (tgt.process.cmdline contains "/delete" and tgt.process.cmdline contains "Microsoft_Windows_Shell_ZipFolder:filename=" and tgt.process.cmdline contains ".zip")))
 ```
 
@@ -18,7 +18,7 @@ date: 2021-11-07
 modified: 2022-12-25
 tags:
     - attack.execution
-    - attack.defense-evasion
+    - attack.stealth
     - attack.t1218
     - attack.t1202
 logsource:

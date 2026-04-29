@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 28-04-2026 03:53:04):
+// Translated content (automatically translated on 29-04-2026 03:50:14):
 event.type="Process Creation" and (endpoint.os="windows" and (tgt.process.cmdline contains "OgA6ACgAIgBMACIAKwAiAG8AYQBkACIAKQ" or tgt.process.cmdline contains "oAOgAoACIATAAiACsAIgBvAGEAZAAiACkA" or tgt.process.cmdline contains "6ADoAKAAiAEwAIgArACIAbwBhAGQAIgApA" or tgt.process.cmdline contains "OgA6ACgAIgBMAG8AIgArACIAYQBkACIAKQ" or tgt.process.cmdline contains "oAOgAoACIATABvACIAKwAiAGEAZAAiACkA" or tgt.process.cmdline contains "6ADoAKAAiAEwAbwAiACsAIgBhAGQAIgApA" or tgt.process.cmdline contains "OgA6ACgAIgBMAG8AYQAiACsAIgBkACIAKQ" or tgt.process.cmdline contains "oAOgAoACIATABvAGEAIgArACIAZAAiACkA" or tgt.process.cmdline contains "6ADoAKAAiAEwAbwBhACIAKwAiAGQAIgApA" or tgt.process.cmdline contains "OgA6ACgAJwBMACcAKwAnAG8AYQBkACcAKQ" or tgt.process.cmdline contains "oAOgAoACcATAAnACsAJwBvAGEAZAAnACkA" or tgt.process.cmdline contains "6ADoAKAAnAEwAJwArACcAbwBhAGQAJwApA" or tgt.process.cmdline contains "OgA6ACgAJwBMAG8AJwArACcAYQBkACcAKQ" or tgt.process.cmdline contains "oAOgAoACcATABvACcAKwAnAGEAZAAnACkA" or tgt.process.cmdline contains "6ADoAKAAnAEwAbwAnACsAJwBhAGQAJwApA" or tgt.process.cmdline contains "OgA6ACgAJwBMAG8AYQAnACsAJwBkACcAKQ" or tgt.process.cmdline contains "oAOgAoACcATABvAGEAJwArACcAZAAnACkA" or tgt.process.cmdline contains "6ADoAKAAnAEwAbwBhACcAKwAnAGQAJwApA"))
 ```
 
@@ -22,7 +22,7 @@ date: 2022-03-01
 modified: 2023-04-06
 tags:
     - attack.execution
-    - attack.defense-evasion
+    - attack.stealth
     - attack.t1059.001
     - attack.t1027
 logsource:

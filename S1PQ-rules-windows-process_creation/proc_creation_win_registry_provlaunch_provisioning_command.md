@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 28-04-2026 03:53:04):
+// Translated content (automatically translated on 29-04-2026 03:50:14):
 event.type="Process Creation" and (endpoint.os="windows" and tgt.process.cmdline contains "SOFTWARE\\Microsoft\\Provisioning\\Commands\\")
 ```
 
@@ -23,7 +23,7 @@ references:
 author: Nasreddine Bencherchali (Nextron Systems), Swachchhanda Shrawan Poudel
 date: 2023-08-08
 tags:
-    - attack.defense-evasion
+    - attack.stealth
     - attack.t1218
 logsource:
     category: process_creation

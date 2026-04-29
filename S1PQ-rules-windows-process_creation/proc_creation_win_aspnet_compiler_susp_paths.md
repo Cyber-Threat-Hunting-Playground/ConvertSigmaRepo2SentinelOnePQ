@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 28-04-2026 03:53:04):
+// Translated content (automatically translated on 29-04-2026 03:50:14):
 event.type="Process Creation" and (endpoint.os="windows" and ((tgt.process.image.path contains ":\\Windows\\Microsoft.NET\\Framework\\" or tgt.process.image.path contains ":\\Windows\\Microsoft.NET\\Framework64\\" or tgt.process.image.path contains ":\\Windows\\Microsoft.NET\\FrameworkArm\\" or tgt.process.image.path contains ":\\Windows\\Microsoft.NET\\FrameworkArm64\\") and tgt.process.image.path contains "\\aspnet_compiler.exe" and (tgt.process.cmdline contains "\\Users\\Public\\" or tgt.process.cmdline contains "\\AppData\\Local\\Temp\\" or tgt.process.cmdline contains "\\AppData\\Local\\Roaming\\" or tgt.process.cmdline contains ":\\Temp\\" or tgt.process.cmdline contains ":\\Windows\\Temp\\" or tgt.process.cmdline contains ":\\Windows\\System32\\Tasks\\" or tgt.process.cmdline contains ":\\Windows\\Tasks\\")))
 ```
 
@@ -24,7 +24,8 @@ author: Nasreddine Bencherchali (Nextron Systems)
 date: 2023-08-14
 modified: 2025-02-24
 tags:
-    - attack.defense-evasion
+    - attack.execution
+    - attack.stealth
     - attack.t1127
 logsource:
     category: process_creation

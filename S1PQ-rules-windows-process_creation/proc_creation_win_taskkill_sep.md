@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 28-04-2026 03:53:04):
+// Translated content (automatically translated on 29-04-2026 03:50:14):
 event.type="Process Creation" and (endpoint.os="windows" and (tgt.process.cmdline contains "taskkill" and tgt.process.cmdline contains " /F " and tgt.process.cmdline contains " /IM " and tgt.process.cmdline contains "ccSvcHst.exe"))
 ```
 
@@ -20,8 +20,8 @@ references:
 author: Ilya Krestinichev, Florian Roth (Nextron Systems)
 date: 2022-09-13
 tags:
-    - attack.defense-evasion
-    - attack.t1562.001
+    - attack.defense-impairment
+    - attack.t1685
 logsource:
     category: process_creation
     product: windows

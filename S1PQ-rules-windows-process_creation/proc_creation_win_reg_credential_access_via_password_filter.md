@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 28-04-2026 03:53:04):
+// Translated content (automatically translated on 29-04-2026 03:50:14):
 event.type="Process Creation" and (endpoint.os="windows" and (tgt.process.cmdline contains "HKLM\\SYSTEM\\CurrentControlSet\\Control\\Lsa" and tgt.process.cmdline contains "scecli\\0" and tgt.process.cmdline contains "reg add"))
 ```
 
@@ -18,8 +18,8 @@ date: 2020-10-29
 modified: 2022-10-09
 tags:
     - attack.persistence
-    - attack.defense-evasion
     - attack.credential-access
+    - attack.defense-impairment
     - attack.t1556.002
 logsource:
     category: process_creation

@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 28-04-2026 03:53:04):
+// Translated content (automatically translated on 29-04-2026 03:50:14):
 event.type="Process Creation" and (endpoint.os="windows" and (tgt.process.cmdline contains "CreateObject" and tgt.process.cmdline contains "Wscript.shell" and tgt.process.cmdline contains ".RegWrite"))
 ```
 
@@ -24,9 +24,9 @@ references:
 date: 2025-08-13
 author: Swachchhanda Shrawan Poudel (Nextron Systems)
 tags:
-    - attack.defense-evasion
     - attack.persistence
     - attack.execution
+    - attack.defense-impairment
     - attack.t1112
     - attack.t1059.005
 logsource:

@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 28-04-2026 03:53:04):
+// Translated content (automatically translated on 29-04-2026 03:50:14):
 event.type="Process Creation" and (endpoint.os="windows" and (tgt.process.cmdline contains "\\System\\CurrentControlSet\\Control" and tgt.process.cmdline contains "Write Protection" and tgt.process.cmdline contains "0" and tgt.process.cmdline contains "storage"))
 ```
 
@@ -18,8 +18,8 @@ author: Sreeman
 date: 2021-06-11
 modified: 2024-01-18
 tags:
-    - attack.defense-evasion
-    - attack.t1562
+    - attack.defense-impairment
+    - attack.t1685
 logsource:
     product: windows
     category: process_creation

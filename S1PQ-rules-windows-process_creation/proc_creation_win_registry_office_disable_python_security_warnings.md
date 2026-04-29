@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 28-04-2026 03:53:04):
+// Translated content (automatically translated on 29-04-2026 03:50:14):
 event.type="Process Creation" and (endpoint.os="windows" and ((tgt.process.cmdline contains "\\Microsoft\\Office\\" and tgt.process.cmdline contains "\\Excel\\Security" and tgt.process.cmdline contains "PythonFunctionWarnings") and tgt.process.cmdline contains " 0"))
 ```
 
@@ -20,8 +20,8 @@ references:
 author: '@Kostastsale'
 date: 2023-08-22
 tags:
-    - attack.defense-evasion
-    - attack.t1562.001
+    - attack.defense-impairment
+    - attack.t1685
 logsource:
     category: process_creation
     product: windows

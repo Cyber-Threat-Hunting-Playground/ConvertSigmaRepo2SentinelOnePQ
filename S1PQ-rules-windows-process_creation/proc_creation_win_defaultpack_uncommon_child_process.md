@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 28-04-2026 03:53:04):
+// Translated content (automatically translated on 29-04-2026 03:50:14):
 event.type="Process Creation" and (endpoint.os="windows" and src.process.image.path contains "\\DefaultPack.exe")
 ```
 
@@ -17,8 +17,8 @@ author: frack113
 date: 2022-12-31
 modified: 2024-04-22
 tags:
+    - attack.stealth
     - attack.t1218
-    - attack.defense-evasion
     - attack.execution
 logsource:
     category: process_creation

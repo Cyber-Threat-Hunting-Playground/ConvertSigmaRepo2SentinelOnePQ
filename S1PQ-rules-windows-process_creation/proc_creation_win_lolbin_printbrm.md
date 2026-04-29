@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 28-04-2026 03:53:04):
+// Translated content (automatically translated on 29-04-2026 03:50:14):
 event.type="Process Creation" and (endpoint.os="windows" and (tgt.process.image.path contains "\\PrintBrm.exe" and (tgt.process.cmdline contains " -f" and tgt.process.cmdline contains ".zip")))
 ```
 
@@ -16,8 +16,8 @@ author: frack113
 date: 2022-05-02
 tags:
     - attack.command-and-control
+    - attack.stealth
     - attack.t1105
-    - attack.defense-evasion
     - attack.t1564.004
 logsource:
     product: windows

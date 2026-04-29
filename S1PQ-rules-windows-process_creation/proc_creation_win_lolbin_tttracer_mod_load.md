@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 28-04-2026 03:53:04):
+// Translated content (automatically translated on 29-04-2026 03:50:14):
 event.type="Process Creation" and (endpoint.os="windows" and src.process.image.path contains "\\tttracer.exe")
 ```
 
@@ -21,8 +21,8 @@ author: 'Ensar Şamil, @sblmsrsn, @oscd_initiative'
 date: 2020-10-06
 modified: 2022-10-09
 tags:
-    - attack.defense-evasion
     - attack.credential-access
+    - attack.stealth
     - attack.t1218
     - attack.t1003.001
 logsource:

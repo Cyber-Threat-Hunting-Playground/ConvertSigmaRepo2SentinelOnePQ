@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 28-04-2026 03:53:04):
+// Translated content (automatically translated on 29-04-2026 03:50:14):
 event.type="Process Creation" and (endpoint.os="windows" and (tgt.process.cmdline contains "\\WindowsSensor.exe" and tgt.process.cmdline contains " /uninstall" and tgt.process.cmdline contains " /quiet"))
 ```
 
@@ -16,8 +16,8 @@ author: frack113
 date: 2021-07-12
 modified: 2023-03-09
 tags:
-    - attack.defense-evasion
-    - attack.t1562.001
+    - attack.defense-impairment
+    - attack.t1685
 logsource:
     category: process_creation
     product: windows

@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 28-04-2026 03:53:04):
+// Translated content (automatically translated on 29-04-2026 03:50:14):
 event.type="Process Creation" and (endpoint.os="windows" and (tgt.process.cmdline contains "rundll32.exe" and (tgt.process.cmdline contains ".sys," or tgt.process.cmdline contains ".sys ")))
 ```
 
@@ -16,7 +16,7 @@ author: Florian Roth (Nextron Systems)
 date: 2021-03-05
 modified: 2022-10-09
 tags:
-    - attack.defense-evasion
+    - attack.stealth
     - attack.t1218.011
 logsource:
     category: process_creation

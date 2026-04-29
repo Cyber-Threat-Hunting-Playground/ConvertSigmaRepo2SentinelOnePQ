@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 28-04-2026 03:53:04):
+// Translated content (automatically translated on 29-04-2026 03:50:14):
 event.type="Process Creation" and (endpoint.os="windows" and (tgt.process.image.path contains "\\InstallUtil.exe" and tgt.process.image.path contains "Microsoft.NET\\Framework" and (tgt.process.cmdline contains "/logfile= " and tgt.process.cmdline contains "/LogToConsole=false")))
 ```
 
@@ -17,7 +17,7 @@ author: frack113
 date: 2022-01-23
 modified: 2022-02-04
 tags:
-    - attack.defense-evasion
+    - attack.stealth
 logsource:
     category: process_creation
     product: windows

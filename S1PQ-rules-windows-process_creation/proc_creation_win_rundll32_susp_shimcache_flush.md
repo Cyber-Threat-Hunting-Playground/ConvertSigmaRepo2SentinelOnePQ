@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 28-04-2026 03:53:04):
+// Translated content (automatically translated on 29-04-2026 03:50:14):
 event.type="Process Creation" and (endpoint.os="windows" and (((tgt.process.cmdline contains "rundll32" and tgt.process.cmdline contains "apphelp.dll") and (tgt.process.cmdline contains "ShimFlushCache" or tgt.process.cmdline contains "#250")) or ((tgt.process.cmdline contains "rundll32" and tgt.process.cmdline contains "kernel32.dll") and (tgt.process.cmdline contains "BaseFlushAppcompatCache" or tgt.process.cmdline contains "#46"))))
 ```
 
@@ -16,7 +16,7 @@ author: Florian Roth (Nextron Systems)
 date: 2021-02-01
 tags:
     - attack.persistence
-    - attack.defense-evasion
+    - attack.defense-impairment
     - attack.t1112
 logsource:
     category: process_creation

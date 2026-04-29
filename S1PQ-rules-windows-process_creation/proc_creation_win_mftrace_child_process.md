@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 28-04-2026 03:53:04):
+// Translated content (automatically translated on 29-04-2026 03:50:14):
 event.type="Process Creation" and (endpoint.os="windows" and src.process.image.path contains "\\mftrace.exe")
 ```
 
@@ -16,7 +16,8 @@ author: Nasreddine Bencherchali (Nextron Systems)
 date: 2022-06-09
 modified: 2023-08-03
 tags:
-    - attack.defense-evasion
+    - attack.execution
+    - attack.stealth
     - attack.t1127
 logsource:
     category: process_creation

@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 28-04-2026 03:53:04):
+// Translated content (automatically translated on 29-04-2026 03:50:14):
 event.type="Process Creation" and (endpoint.os="windows" and (src.process.image.path contains "\\services.exe" and (((tgt.process.cmdline contains "/c" and tgt.process.cmdline contains "echo" and tgt.process.cmdline contains "\\pipe\\") and (tgt.process.cmdline contains "cmd" or tgt.process.cmdline contains "%COMSPEC%")) or (tgt.process.cmdline contains "rundll32" and tgt.process.cmdline contains ".dll,a" and tgt.process.cmdline contains "/p:")) and (not tgt.process.cmdline contains "MpCmdRun")))
 ```
 
@@ -17,8 +17,8 @@ author: Teymur Kheirkhabarov, Ecco, Florian Roth
 date: 2019-10-26
 modified: 2023-02-05
 tags:
-    - attack.defense-evasion
     - attack.privilege-escalation
+    - attack.stealth
     - attack.t1134.001
     - attack.t1134.002
 logsource:

@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 28-04-2026 03:53:04):
+// Translated content (automatically translated on 29-04-2026 03:50:14):
 event.type="Process Creation" and (endpoint.os="windows" and (tgt.process.cmdline contains " /am51" and tgt.process.cmdline contains " /password"))
 ```
 
@@ -17,7 +17,7 @@ date: 2021-12-07
 modified: 2023-02-04
 tags:
     - attack.privilege-escalation
-    - attack.defense-evasion
+    - attack.stealth
     - attack.t1055
 logsource:
     category: process_creation

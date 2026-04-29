@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 28-04-2026 03:53:04):
+// Translated content (automatically translated on 29-04-2026 03:50:14):
 event.type="Process Creation" and (endpoint.os="windows" and (tgt.process.cmdline contains "if(0){{{0}}}' -f $(0 -as [char]) +" or tgt.process.cmdline contains "#<NULL>"))
 ```
 
@@ -19,8 +19,8 @@ author: Nasreddine Bencherchali (Nextron Systems)
 date: 2023-01-04
 modified: 2023-05-09
 tags:
-    - attack.defense-evasion
-    - attack.t1562.001
+    - attack.defense-impairment
+    - attack.t1685
 logsource:
     product: windows
     category: process_creation

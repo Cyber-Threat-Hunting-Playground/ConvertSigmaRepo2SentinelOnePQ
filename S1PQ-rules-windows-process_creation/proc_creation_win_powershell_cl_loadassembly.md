@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 28-04-2026 03:53:04):
+// Translated content (automatically translated on 29-04-2026 03:50:14):
 event.type="Process Creation" and (endpoint.os="windows" and (tgt.process.cmdline contains "LoadAssemblyFromPath " or tgt.process.cmdline contains "LoadAssemblyFromNS "))
 ```
 
@@ -17,7 +17,7 @@ author: frack113, Nasreddine Bencherchali (Nextron Systems)
 date: 2022-05-21
 modified: 2023-08-17
 tags:
-    - attack.defense-evasion
+    - attack.stealth
     - attack.t1216
 logsource:
     category: process_creation

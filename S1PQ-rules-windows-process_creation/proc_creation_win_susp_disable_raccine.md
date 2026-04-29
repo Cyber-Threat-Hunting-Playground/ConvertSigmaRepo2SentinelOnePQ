@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 28-04-2026 03:53:04):
+// Translated content (automatically translated on 29-04-2026 03:50:14):
 event.type="Process Creation" and (endpoint.os="windows" and ((tgt.process.cmdline contains "taskkill " and tgt.process.cmdline contains "RaccineSettings.exe") or (tgt.process.cmdline contains "reg.exe" and tgt.process.cmdline contains "delete" and tgt.process.cmdline contains "Raccine Tray") or (tgt.process.cmdline contains "schtasks" and tgt.process.cmdline contains "/DELETE" and tgt.process.cmdline contains "Raccine Rules Updater")))
 ```
 
@@ -16,8 +16,8 @@ author: Florian Roth (Nextron Systems)
 date: 2021-01-21
 modified: 2022-10-09
 tags:
-    - attack.defense-evasion
-    - attack.t1562.001
+    - attack.defense-impairment
+    - attack.t1685
 logsource:
     category: process_creation
     product: windows

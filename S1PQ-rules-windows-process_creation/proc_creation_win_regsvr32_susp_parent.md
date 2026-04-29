@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 28-04-2026 03:53:04):
+// Translated content (automatically translated on 29-04-2026 03:50:14):
 event.type="Process Creation" and (endpoint.os="windows" and (((src.process.image.path contains "\\cmd.exe" or src.process.image.path contains "\\cscript.exe" or src.process.image.path contains "\\mshta.exe" or src.process.image.path contains "\\powershell_ise.exe" or src.process.image.path contains "\\powershell.exe" or src.process.image.path contains "\\pwsh.exe" or src.process.image.path contains "\\wscript.exe") and tgt.process.image.path contains "\\regsvr32.exe") and (not (src.process.image.path="C:\\Windows\\System32\\cmd.exe" and tgt.process.cmdline contains " /s C:\\Windows\\System32\\RpcProxy\\RpcProxy.dll"))))
 ```
 
@@ -19,7 +19,7 @@ references:
 author: Florian Roth (Nextron Systems), Nasreddine Bencherchali (Nextron Systems)
 date: 2023-05-26
 tags:
-    - attack.defense-evasion
+    - attack.stealth
     - attack.t1218.010
 logsource:
     category: process_creation

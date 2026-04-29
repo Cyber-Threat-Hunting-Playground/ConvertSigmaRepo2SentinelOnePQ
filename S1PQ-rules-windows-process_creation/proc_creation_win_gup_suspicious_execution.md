@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 28-04-2026 03:53:04):
+// Translated content (automatically translated on 29-04-2026 03:50:14):
 event.type="Process Creation" and (endpoint.os="windows" and (tgt.process.image.path contains "\\GUP.exe" and (not ((tgt.process.image.path contains "\\Program Files\\Notepad++\\updater\\GUP.exe" or tgt.process.image.path contains "\\Program Files (x86)\\Notepad++\\updater\\GUP.exe") or (tgt.process.image.path contains "\\Users\\" and (tgt.process.image.path contains "\\AppData\\Local\\Notepad++\\updater\\GUP.exe" or tgt.process.image.path contains "\\AppData\\Roaming\\Notepad++\\updater\\GUP.exe"))))))
 ```
 
@@ -18,7 +18,8 @@ modified: 2022-08-13
 tags:
     - attack.privilege-escalation
     - attack.persistence
-    - attack.defense-evasion
+    - attack.execution
+    - attack.stealth
     - attack.t1574.001
 logsource:
     category: process_creation

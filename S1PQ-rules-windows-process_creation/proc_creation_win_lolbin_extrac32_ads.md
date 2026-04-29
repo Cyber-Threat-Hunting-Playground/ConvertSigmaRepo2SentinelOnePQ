@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 28-04-2026 03:53:04):
+// Translated content (automatically translated on 29-04-2026 03:50:14):
 event.type="Process Creation" and (endpoint.os="windows" and ((tgt.process.cmdline contains "extrac32.exe" and tgt.process.cmdline contains ".cab") and tgt.process.cmdline matches ":[^\\\\]"))
 ```
 
@@ -16,7 +16,7 @@ author: frack113
 date: 2021-11-26
 modified: 2022-12-30
 tags:
-    - attack.defense-evasion
+    - attack.stealth
     - attack.t1564.004
 logsource:
     category: process_creation

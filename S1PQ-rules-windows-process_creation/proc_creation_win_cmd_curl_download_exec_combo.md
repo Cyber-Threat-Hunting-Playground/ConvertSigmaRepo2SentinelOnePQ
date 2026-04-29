@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 28-04-2026 03:53:04):
+// Translated content (automatically translated on 29-04-2026 03:50:14):
 event.type="Process Creation" and (endpoint.os="windows" and ((tgt.process.cmdline contains " -c " or tgt.process.cmdline contains " /c " or tgt.process.cmdline contains " –c " or tgt.process.cmdline contains " —c " or tgt.process.cmdline contains " ―c ") and (tgt.process.cmdline contains "curl " and tgt.process.cmdline contains "http" and tgt.process.cmdline contains "-o" and tgt.process.cmdline contains "&")))
 ```
 
@@ -16,7 +16,7 @@ author: Sreeman, Nasreddine Bencherchali (Nextron Systems)
 date: 2020-01-13
 modified: 2024-03-05
 tags:
-    - attack.defense-evasion
+    - attack.stealth
     - attack.t1218
     - attack.command-and-control
     - attack.t1105

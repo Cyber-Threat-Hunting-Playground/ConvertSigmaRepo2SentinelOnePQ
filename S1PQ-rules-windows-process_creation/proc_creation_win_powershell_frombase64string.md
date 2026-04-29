@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 28-04-2026 03:53:04):
+// Translated content (automatically translated on 29-04-2026 03:50:14):
 event.type="Process Creation" and (endpoint.os="windows" and tgt.process.cmdline contains "::FromBase64String(")
 ```
 
@@ -16,8 +16,8 @@ author: Florian Roth (Nextron Systems)
 date: 2020-01-29
 modified: 2023-01-26
 tags:
+    - attack.stealth
     - attack.t1027
-    - attack.defense-evasion
     - attack.execution
     - attack.t1140
     - attack.t1059.001

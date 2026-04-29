@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 28-04-2026 03:53:04):
+// Translated content (automatically translated on 29-04-2026 03:50:14):
 event.type="Process Creation" and (endpoint.os="windows" and (src.process.image.path contains "\\hh.exe" and (tgt.process.image.path contains "\\CertReq.exe" or tgt.process.image.path contains "\\CertUtil.exe" or tgt.process.image.path contains "\\cmd.exe" or tgt.process.image.path contains "\\cscript.exe" or tgt.process.image.path contains "\\installutil.exe" or tgt.process.image.path contains "\\MSbuild.exe" or tgt.process.image.path contains "\\MSHTA.EXE" or tgt.process.image.path contains "\\msiexec.exe" or tgt.process.image.path contains "\\powershell.exe" or tgt.process.image.path contains "\\pwsh.exe" or tgt.process.image.path contains "\\regsvr32.exe" or tgt.process.image.path contains "\\rundll32.exe" or tgt.process.image.path contains "\\schtasks.exe" or tgt.process.image.path contains "\\wmic.exe" or tgt.process.image.path contains "\\wscript.exe")))
 ```
 
@@ -19,9 +19,9 @@ author: Maxim Pavlunin, Nasreddine Bencherchali (Nextron Systems)
 date: 2020-04-01
 modified: 2023-04-12
 tags:
-    - attack.defense-evasion
     - attack.execution
     - attack.initial-access
+    - attack.stealth
     - attack.t1047
     - attack.t1059.001
     - attack.t1059.003

@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 28-04-2026 03:53:04):
+// Translated content (automatically translated on 29-04-2026 03:50:14):
 event.type="Process Creation" and (endpoint.os="windows" and ((tgt.process.image.path contains "\\wab.exe" or tgt.process.image.path contains "\\wabmig.exe") and (not (tgt.process.image.path contains "C:\\Windows\\WinSxS\\" or tgt.process.image.path contains "C:\\Program Files\\Windows Mail\\" or tgt.process.image.path contains "C:\\Program Files (x86)\\Windows Mail\\"))))
 ```
 
@@ -18,8 +18,8 @@ author: Nasreddine Bencherchali (Nextron Systems)
 date: 2022-08-12
 modified: 2022-09-27
 tags:
-    - attack.defense-evasion
     - attack.execution
+    - attack.stealth
 logsource:
     category: process_creation
     product: windows

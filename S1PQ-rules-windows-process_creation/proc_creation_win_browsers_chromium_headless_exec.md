@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 28-04-2026 03:53:04):
+// Translated content (automatically translated on 29-04-2026 03:50:14):
 event.type="Process Creation" and (endpoint.os="windows" and ((tgt.process.image.path contains "\\brave.exe" or tgt.process.image.path contains "\\chrome.exe" or tgt.process.image.path contains "\\msedge.exe" or tgt.process.image.path contains "\\opera.exe" or tgt.process.image.path contains "\\vivaldi.exe") and tgt.process.cmdline contains "--headless"))
 ```
 
@@ -19,8 +19,8 @@ references:
 author: Nasreddine Bencherchali (Nextron Systems)
 date: 2023-09-12
 tags:
-    - attack.defense-evasion
     - attack.command-and-control
+    - attack.stealth
     - attack.t1105
     - attack.t1564.003
 logsource:

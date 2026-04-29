@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 28-04-2026 03:53:04):
+// Translated content (automatically translated on 29-04-2026 03:50:14):
 event.type="Process Creation" and (endpoint.os="windows" and ((src.process.image.path contains "\\bginfo.exe" or src.process.image.path contains "\\bginfo64.exe") and ((tgt.process.image.path contains "\\calc.exe" or tgt.process.image.path contains "\\cmd.exe" or tgt.process.image.path contains "\\cscript.exe" or tgt.process.image.path contains "\\mshta.exe" or tgt.process.image.path contains "\\notepad.exe" or tgt.process.image.path contains "\\powershell.exe" or tgt.process.image.path contains "\\pwsh.exe" or tgt.process.image.path contains "\\wscript.exe") or (tgt.process.image.path contains "\\AppData\\Local\\" or tgt.process.image.path contains "\\AppData\\Roaming\\" or tgt.process.image.path contains ":\\Users\\Public\\" or tgt.process.image.path contains ":\\Temp\\" or tgt.process.image.path contains ":\\Windows\\Temp\\" or tgt.process.image.path contains ":\\PerfLogs\\"))))
 ```
 
@@ -20,8 +20,8 @@ author: Nasreddine Bencherchali (Nextron Systems)
 date: 2023-08-16
 tags:
     - attack.execution
+    - attack.stealth
     - attack.t1059.005
-    - attack.defense-evasion
     - attack.t1218
     - attack.t1202
 logsource:

@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 28-04-2026 03:53:04):
+// Translated content (automatically translated on 29-04-2026 03:50:14):
 event.type="Process Creation" and (endpoint.os="windows" and (tgt.process.image.path contains "\\reg.exe" and (tgt.process.cmdline contains "SOFTWARE\\Microsoft\\Windows Defender\\Exclusions\\Paths" or tgt.process.cmdline contains "SOFTWARE\\Microsoft\\Microsoft Antimalware\\Exclusions\\Paths") and (tgt.process.cmdline contains "ADD " and tgt.process.cmdline contains "/t " and tgt.process.cmdline contains "REG_DWORD " and tgt.process.cmdline contains "/v " and tgt.process.cmdline contains "/d " and tgt.process.cmdline contains "0")))
 ```
 
@@ -17,8 +17,8 @@ author: frack113
 date: 2022-02-13
 modified: 2023-02-04
 tags:
-    - attack.defense-evasion
-    - attack.t1562.001
+    - attack.defense-impairment
+    - attack.t1685
 logsource:
     category: process_creation
     product: windows

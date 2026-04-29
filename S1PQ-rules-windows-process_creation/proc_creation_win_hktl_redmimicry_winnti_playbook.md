@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 28-04-2026 03:53:04):
+// Translated content (automatically translated on 29-04-2026 03:50:14):
 event.type="Process Creation" and (endpoint.os="windows" and ((tgt.process.image.path contains "\\rundll32.exe" or tgt.process.image.path contains "\\cmd.exe") and (tgt.process.cmdline contains "gthread-3.6.dll" or tgt.process.cmdline contains "\\Windows\\Temp\\tmp.bat" or tgt.process.cmdline contains "sigcmm-2.4.dll")))
 ```
 
@@ -17,7 +17,7 @@ date: 2020-06-24
 modified: 2023-03-01
 tags:
     - attack.execution
-    - attack.defense-evasion
+    - attack.stealth
     - attack.t1106
     - attack.t1059.003
     - attack.t1218.011

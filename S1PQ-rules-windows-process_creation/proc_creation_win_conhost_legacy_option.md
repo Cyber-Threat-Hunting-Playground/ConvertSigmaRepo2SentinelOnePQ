@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 28-04-2026 03:53:04):
+// Translated content (automatically translated on 29-04-2026 03:50:14):
 event.type="Process Creation" and (endpoint.os="windows" and ((tgt.process.integrityLevel in ("High","S-1-16-12288")) and (tgt.process.cmdline contains "conhost.exe" and tgt.process.cmdline contains "0xffffffff" and tgt.process.cmdline contains "-ForceV1")))
 ```
 
@@ -18,7 +18,7 @@ author: frack113
 date: 2022-12-09
 modified: 2024-12-01
 tags:
-    - attack.defense-evasion
+    - attack.stealth
     - attack.t1202
 logsource:
     product: windows

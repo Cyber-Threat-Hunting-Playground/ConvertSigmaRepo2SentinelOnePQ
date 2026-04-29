@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 28-04-2026 03:53:04):
+// Translated content (automatically translated on 29-04-2026 03:50:14):
 event.type="Process Creation" and (endpoint.os="windows" and (tgt.process.image.path contains "\\takeown.exe" and (tgt.process.cmdline contains "/f " and tgt.process.cmdline contains "/r")))
 ```
 
@@ -17,7 +17,7 @@ author: frack113
 date: 2022-01-30
 modified: 2022-11-21
 tags:
-    - attack.defense-evasion
+    - attack.defense-impairment
     - attack.t1222.001
 logsource:
     category: process_creation

@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 28-04-2026 03:53:04):
+// Translated content (automatically translated on 29-04-2026 03:50:14):
 event.type="Process Creation" and (endpoint.os="windows" and (tgt.process.image.path contains "sdclt.exe" and (tgt.process.integrityLevel in ("High","S-1-16-12288"))))
 ```
 
@@ -18,7 +18,6 @@ date: 2020-05-02
 modified: 2024-12-01
 tags:
     - attack.privilege-escalation
-    - attack.defense-evasion
     - attack.t1548.002
 logsource:
     category: process_creation

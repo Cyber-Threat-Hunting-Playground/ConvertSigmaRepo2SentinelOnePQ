@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 28-04-2026 03:53:04):
+// Translated content (automatically translated on 29-04-2026 03:50:14):
 event.type="Process Creation" and (endpoint.os="windows" and (src.process.image.path contains "\\wbem\\WmiPrvSE.exe" and ((tgt.process.image.path contains "\\certutil.exe" or tgt.process.image.path contains "\\cscript.exe" or tgt.process.image.path contains "\\mshta.exe" or tgt.process.image.path contains "\\msiexec.exe" or tgt.process.image.path contains "\\regsvr32.exe" or tgt.process.image.path contains "\\rundll32.exe" or tgt.process.image.path contains "\\verclsid.exe" or tgt.process.image.path contains "\\wscript.exe") or (tgt.process.image.path contains "\\cmd.exe" and (tgt.process.cmdline contains "cscript" or tgt.process.cmdline contains "mshta" or tgt.process.cmdline contains "powershell" or tgt.process.cmdline contains "pwsh" or tgt.process.cmdline contains "regsvr32" or tgt.process.cmdline contains "rundll32" or tgt.process.cmdline contains "wscript"))) and (not (tgt.process.image.path contains "\\WerFault.exe" or tgt.process.image.path contains "\\WmiPrvSE.exe" or (tgt.process.image.path contains "\\msiexec.exe" and tgt.process.cmdline contains "/i ")))))
 ```
 
@@ -27,7 +27,7 @@ date: 2021-08-23
 modified: 2023-11-10
 tags:
     - attack.execution
-    - attack.defense-evasion
+    - attack.stealth
     - attack.t1047
     - attack.t1204.002
     - attack.t1218.010

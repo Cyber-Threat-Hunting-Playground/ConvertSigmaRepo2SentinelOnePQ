@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 28-04-2026 03:53:04):
+// Translated content (automatically translated on 29-04-2026 03:50:14):
 event.type="Process Creation" and (endpoint.os="windows" and (((tgt.process.cmdline contains "sc " and tgt.process.cmdline contains "config " and tgt.process.cmdline contains "binpath=") or (tgt.process.cmdline contains "sc " and tgt.process.cmdline contains "failure" and tgt.process.cmdline contains "command=")) or (((tgt.process.cmdline contains "reg " and tgt.process.cmdline contains "add " and tgt.process.cmdline contains "FailureCommand") or (tgt.process.cmdline contains "reg " and tgt.process.cmdline contains "add " and tgt.process.cmdline contains "ImagePath")) and (tgt.process.cmdline contains ".sh" or tgt.process.cmdline contains ".exe" or tgt.process.cmdline contains ".dll" or tgt.process.cmdline contains ".bin$" or tgt.process.cmdline contains ".bat" or tgt.process.cmdline contains ".cmd" or tgt.process.cmdline contains ".js" or tgt.process.cmdline contains ".msh$" or tgt.process.cmdline contains ".reg$" or tgt.process.cmdline contains ".scr" or tgt.process.cmdline contains ".ps" or tgt.process.cmdline contains ".vb" or tgt.process.cmdline contains ".jar" or tgt.process.cmdline contains ".pl"))))
 ```
 
@@ -17,8 +17,9 @@ date: 2020-09-29
 modified: 2023-02-04
 tags:
     - attack.privilege-escalation
-    - attack.defense-evasion
     - attack.persistence
+    - attack.execution
+    - attack.stealth
     - attack.t1543.003
     - attack.t1574.011
 logsource:

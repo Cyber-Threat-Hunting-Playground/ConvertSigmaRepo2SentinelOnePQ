@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 28-04-2026 03:53:04):
+// Translated content (automatically translated on 29-04-2026 03:50:14):
 event.type="Process Creation" and (endpoint.os="windows" and tgt.process.cmdline contains "::$index_allocation")
 ```
 
@@ -23,7 +23,7 @@ references:
 author: Nasreddine Bencherchali (Nextron Systems), Scoubi (@ScoubiMtl)
 date: 2023-10-09
 tags:
-    - attack.defense-evasion
+    - attack.stealth
     - attack.t1564.004
 logsource:
     product: windows

@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 28-04-2026 03:53:04):
+// Translated content (automatically translated on 29-04-2026 03:50:14):
 event.type="Process Creation" and (endpoint.os="windows" and (tgt.process.cmdline contains " -t msi-install " and tgt.process.cmdline contains " -i http"))
 ```
 
@@ -18,7 +18,7 @@ date: 2022-01-11
 modified: 2023-04-06
 tags:
     - attack.execution
-    - attack.defense-evasion
+    - attack.stealth
     - attack.t1218
 logsource:
     category: process_creation

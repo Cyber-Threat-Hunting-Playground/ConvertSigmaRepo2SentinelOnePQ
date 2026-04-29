@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 28-04-2026 03:53:04):
+// Translated content (automatically translated on 29-04-2026 03:50:14):
 event.type="Process Creation" and (endpoint.os="windows" and (((tgt.process.cmdline contains "reg " and tgt.process.cmdline contains "add") or (tgt.process.cmdline contains "powershell" or tgt.process.cmdline contains "set-itemproperty" or tgt.process.cmdline contains " sp " or tgt.process.cmdline contains "new-itemproperty")) and ((tgt.process.integrityLevel in ("Medium","S-1-16-8192")) and (tgt.process.cmdline contains "ControlSet" and tgt.process.cmdline contains "Services") and (tgt.process.cmdline contains "ImagePath" or tgt.process.cmdline contains "FailureCommand" or tgt.process.cmdline contains "ServiceDLL"))))
 ```
 
@@ -17,7 +17,7 @@ date: 2020-10-05
 modified: 2024-12-01
 tags:
     - attack.persistence
-    - attack.defense-evasion
+    - attack.defense-impairment
     - attack.t1112
 logsource:
     category: process_creation

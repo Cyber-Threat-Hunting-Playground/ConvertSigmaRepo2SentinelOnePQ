@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 28-04-2026 03:53:04):
+// Translated content (automatically translated on 29-04-2026 03:50:14):
 event.type="Process Creation" and (endpoint.os="windows" and (src.process.image.path contains "\\consent.exe" and tgt.process.image.path contains "\\werfault.exe" and (tgt.process.integrityLevel in ("High","System","S-1-16-16384","S-1-16-12288"))))
 ```
 
@@ -16,7 +16,6 @@ author: Christian Burkard (Nextron Systems)
 date: 2021-08-23
 modified: 2024-12-01
 tags:
-    - attack.defense-evasion
     - attack.privilege-escalation
     - attack.t1548.002
 logsource:

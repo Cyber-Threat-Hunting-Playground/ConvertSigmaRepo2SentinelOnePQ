@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 28-04-2026 03:53:04):
+// Translated content (automatically translated on 29-04-2026 03:50:14):
 event.type="Process Creation" and (endpoint.os="windows" and (tgt.process.cmdline contains "h^t^t^p" or tgt.process.cmdline contains "h\"t\"t\"p"))
 ```
 
@@ -20,7 +20,7 @@ author: juju4
 date: 2018-12-11
 modified: 2023-03-03
 tags:
-    - attack.defense-evasion
+    - attack.stealth
     - attack.t1140
 logsource:
     category: process_creation

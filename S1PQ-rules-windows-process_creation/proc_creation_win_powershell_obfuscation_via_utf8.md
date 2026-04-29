@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 28-04-2026 03:53:04):
+// Translated content (automatically translated on 29-04-2026 03:50:14):
 event.type="Process Creation" and (endpoint.os="windows" and (tgt.process.cmdline contains "[char]0x" or tgt.process.cmdline contains "(WCHAR)0x"))
 ```
 
@@ -17,8 +17,8 @@ date: 2020-07-09
 modified: 2025-03-03
 tags:
     - attack.execution
+    - attack.stealth
     - attack.t1059.001
-    - attack.defense-evasion
     - attack.t1027
 logsource:
     category: process_creation

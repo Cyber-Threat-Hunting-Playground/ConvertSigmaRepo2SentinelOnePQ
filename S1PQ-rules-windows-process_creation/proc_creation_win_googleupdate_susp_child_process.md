@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 28-04-2026 03:53:04):
+// Translated content (automatically translated on 29-04-2026 03:50:14):
 event.type="Process Creation" and (endpoint.os="windows" and (src.process.image.path contains "\\GoogleUpdate.exe" and (not ((tgt.process.image.path contains "\\Google" or (tgt.process.image.path contains "\\setup.exe" or tgt.process.image.path contains "chrome_updater.exe" or tgt.process.image.path contains "chrome_installer.exe")) or not (tgt.process.image.path matches "\.*")))))
 ```
 
@@ -19,7 +19,7 @@ author: Nasreddine Bencherchali (Nextron Systems)
 date: 2023-05-15
 modified: 2023-05-22
 tags:
-    - attack.defense-evasion
+    - attack.stealth
 logsource:
     category: process_creation
     product: windows

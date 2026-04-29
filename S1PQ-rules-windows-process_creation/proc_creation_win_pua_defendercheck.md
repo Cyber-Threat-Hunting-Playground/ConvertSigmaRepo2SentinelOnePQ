@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 28-04-2026 03:53:04):
+// Translated content (automatically translated on 29-04-2026 03:50:14):
 event.type="Process Creation" and (endpoint.os="windows" and (tgt.process.image.path contains "\\DefenderCheck.exe" or tgt.process.displayName="DefenderCheck"))
 ```
 
@@ -16,7 +16,7 @@ author: Florian Roth (Nextron Systems)
 date: 2022-08-30
 modified: 2023-02-04
 tags:
-    - attack.defense-evasion
+    - attack.stealth
     - attack.t1027.005
 logsource:
     category: process_creation

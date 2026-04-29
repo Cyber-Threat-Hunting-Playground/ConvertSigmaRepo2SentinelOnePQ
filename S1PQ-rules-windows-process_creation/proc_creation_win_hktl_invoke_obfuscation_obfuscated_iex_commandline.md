@@ -1,6 +1,6 @@
 ```sql
-// Translated content (automatically translated on 28-04-2026 03:53:04):
-event.type="Process Creation" and (endpoint.os="windows" and (tgt.process.cmdline matches "\\$PSHome\\[\\s*\\d{1,3}\\s*\\]\\s*\\+\\s*\\$PSHome\\[" or tgt.process.cmdline matches "\\$ShellId\\[\\s*\\d{1,3}\\s*\\]\\s*\\+\\s*\\$ShellId\\[" or tgt.process.cmdline matches "\\$env:Public\\[\\s*\\d{1,3}\\s*\\]\\s*\\+\\s*\\$env:Public\\[" or tgt.process.cmdline matches "\\$env:ComSpec\\[(\\s*\\d{1,3}\\s*,){2}" or tgt.process.cmdline matches "\\*mdr\\*\\W\\s*\\)\\.Name" or tgt.process.cmdline matches "\\$VerbosePreference\\.ToString\\(" or tgt.process.cmdline matches "\\[String\\]\\s*\\$VerbosePreference"))
+// Translated content (automatically translated on 29-04-2026 03:50:14):
+event.type="Process Creation" and (endpoint.os="windows" and (tgt.process.cmdline matches "\\$PSHome\\[\\s*\\d{1,3}\\s*\\]\\s*\\+\\s*\\$PSHome\\[" or tgt.process.cmdline matches "\\$ShellId\\[\\s*\\d{1,3}\\s*\\]\\s*\\+\\s*\\$ShellId\\[" or tgt.process.cmdline matches "\\$env:Public\\[\\s*\\d{1,3}\\s*\\]\\s*\\+\\s*\\$env:Public\\[" or tgt.process.cmdline matches "\\$env:ComSpec\\[(?:\\s*\\d{1,3}\\s*,){2}" or tgt.process.cmdline matches "\\*mdr\\*\\W\\s*\\)\\.Name" or tgt.process.cmdline matches "\\$VerbosePreference\\.ToString\\(" or tgt.process.cmdline matches "\\[String\\]\\s*\\$VerbosePreference"))
 ```
 
 
@@ -14,9 +14,9 @@ references:
     - https://github.com/danielbohannon/Invoke-Obfuscation/blob/f20e7f843edd0a3a7716736e9eddfa423395dd26/Out-ObfuscatedStringCommand.ps1#L873-L888
 author: 'Daniel Bohannon (@Mandiant/@FireEye), oscd.community'
 date: 2019-11-08
-modified: 2022-12-31
+modified: 2026-03-16
 tags:
-    - attack.defense-evasion
+    - attack.stealth
     - attack.t1027
     - attack.execution
     - attack.t1059.001
@@ -28,7 +28,7 @@ detection:
         - CommandLine|re: '\$PSHome\[\s*\d{1,3}\s*\]\s*\+\s*\$PSHome\['
         - CommandLine|re: '\$ShellId\[\s*\d{1,3}\s*\]\s*\+\s*\$ShellId\['
         - CommandLine|re: '\$env:Public\[\s*\d{1,3}\s*\]\s*\+\s*\$env:Public\['
-        - CommandLine|re: '\$env:ComSpec\[(\s*\d{1,3}\s*,){2}'
+        - CommandLine|re: '\$env:ComSpec\[(?:\s*\d{1,3}\s*,){2}'
         - CommandLine|re: '\*mdr\*\W\s*\)\.Name'
         - CommandLine|re: '\$VerbosePreference\.ToString\('
         - CommandLine|re: '\[String\]\s*\$VerbosePreference'

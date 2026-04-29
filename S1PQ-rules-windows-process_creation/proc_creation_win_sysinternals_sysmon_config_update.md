@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 28-04-2026 03:53:04):
+// Translated content (automatically translated on 29-04-2026 03:50:14):
 event.type="Process Creation" and (endpoint.os="windows" and (((tgt.process.image.path contains "\\Sysmon64.exe" or tgt.process.image.path contains "\\Sysmon.exe") or tgt.process.displayName="System activity monitor") and (tgt.process.cmdline contains "-c" or tgt.process.cmdline contains "/c" or tgt.process.cmdline contains "–c" or tgt.process.cmdline contains "—c" or tgt.process.cmdline contains "―c")))
 ```
 
@@ -16,8 +16,8 @@ author: Nasreddine Bencherchali (Nextron Systems)
 date: 2023-03-09
 modified: 2024-03-13
 tags:
-    - attack.defense-evasion
-    - attack.t1562.001
+    - attack.defense-impairment
+    - attack.t1685
 logsource:
     category: process_creation
     product: windows

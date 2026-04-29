@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 28-04-2026 03:53:04):
+// Translated content (automatically translated on 29-04-2026 03:50:14):
 event.type="Process Creation" and (endpoint.os="windows" and (tgt.process.image.path contains "C:\\Windows \\System32\\" or tgt.process.image.path contains "C:\\Windows \\SysWOW64\\"))
 ```
 
@@ -23,7 +23,6 @@ date: 2021-08-27
 modified: 2025-06-17
 tags:
     - attack.privilege-escalation
-    - attack.defense-evasion
     - attack.t1548.002
 logsource:
     category: process_creation

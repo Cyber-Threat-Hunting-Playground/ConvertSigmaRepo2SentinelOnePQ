@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 28-04-2026 03:53:04):
+// Translated content (automatically translated on 29-04-2026 03:50:14):
 event.type="Process Creation" and (endpoint.os="windows" and (((src.process.image.path contains "\\powershell.exe" or src.process.image.path contains "\\pwsh.exe") and tgt.process.image.path contains "\\powershell.exe" and tgt.process.cmdline contains " -nologo -windowstyle minimized -file ") and (tgt.process.cmdline contains "\\AppData\\Local\\Temp\\" or tgt.process.cmdline contains "\\Windows\\Temp\\")))
 ```
 
@@ -16,7 +16,7 @@ author: Nasreddine Bencherchali (Nextron Systems), oscd.community, Natalia Shorn
 date: 2022-05-21
 modified: 2023-08-17
 tags:
-    - attack.defense-evasion
+    - attack.stealth
     - attack.t1216
 logsource:
     category: process_creation

@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 28-04-2026 03:53:04):
+// Translated content (automatically translated on 29-04-2026 03:50:14):
 event.type="Process Creation" and (endpoint.os="windows" and (tgt.process.image.path contains "\\Adobe Creative Cloud Experience\\libs\\node.exe" and (not tgt.process.cmdline contains "Adobe Creative Cloud Experience\\js")))
 ```
 
@@ -15,8 +15,8 @@ references:
 author: Max Altgelt (Nextron Systems)
 date: 2022-04-06
 tags:
-    - attack.defense-evasion
     - attack.execution
+    - attack.stealth
     - attack.t1127
     - attack.t1059.007
 logsource:

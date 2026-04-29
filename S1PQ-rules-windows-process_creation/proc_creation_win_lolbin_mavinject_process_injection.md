@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 28-04-2026 03:53:04):
+// Translated content (automatically translated on 29-04-2026 03:50:14):
 event.type="Process Creation" and (endpoint.os="windows" and (tgt.process.cmdline contains " /INJECTRUNNING " and (not src.process.image.path="C:\\Windows\\System32\\AppVClient.exe")))
 ```
 
@@ -26,8 +26,8 @@ author: frack113, Florian Roth
 date: 2021-07-12
 modified: 2022-12-05
 tags:
-    - attack.defense-evasion
     - attack.privilege-escalation
+    - attack.stealth
     - attack.t1055.001
     - attack.t1218.013
 logsource:

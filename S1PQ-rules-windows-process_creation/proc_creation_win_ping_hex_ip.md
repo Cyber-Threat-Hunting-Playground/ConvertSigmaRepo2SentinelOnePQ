@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 28-04-2026 03:53:04):
+// Translated content (automatically translated on 29-04-2026 03:50:14):
 event.type="Process Creation" and (endpoint.os="windows" and (tgt.process.image.path contains "\\ping.exe" and tgt.process.cmdline matches "0x[a-fA-F0-9]{8}"))
 ```
 
@@ -17,7 +17,7 @@ author: Florian Roth (Nextron Systems)
 date: 2018-03-23
 modified: 2025-10-17
 tags:
-    - attack.defense-evasion
+    - attack.stealth
     - attack.t1140
     - attack.t1027
 logsource:

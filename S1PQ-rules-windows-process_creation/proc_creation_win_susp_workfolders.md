@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 28-04-2026 03:53:04):
+// Translated content (automatically translated on 29-04-2026 03:50:14):
 event.type="Process Creation" and (endpoint.os="windows" and ((tgt.process.image.path contains "\\control.exe" and src.process.image.path contains "\\WorkFolders.exe") and (not tgt.process.image.path="C:\\Windows\\System32\\control.exe")))
 ```
 
@@ -16,7 +16,7 @@ author: Maxime Thiebaut (@0xThiebaut)
 date: 2021-10-21
 modified: 2022-12-25
 tags:
-    - attack.defense-evasion
+    - attack.stealth
     - attack.t1218
 logsource:
     category: process_creation

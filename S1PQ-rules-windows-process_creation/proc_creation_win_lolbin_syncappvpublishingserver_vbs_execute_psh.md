@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 28-04-2026 03:53:04):
+// Translated content (automatically translated on 29-04-2026 03:50:14):
 event.type="Process Creation" and (endpoint.os="windows" and (tgt.process.cmdline contains "\\SyncAppvPublishingServer.vbs" and tgt.process.cmdline contains ";"))
 ```
 
@@ -17,7 +17,7 @@ author: frack113
 date: 2021-07-16
 modified: 2022-06-22
 tags:
-    - attack.defense-evasion
+    - attack.stealth
     - attack.t1218
     - attack.t1216
 logsource:

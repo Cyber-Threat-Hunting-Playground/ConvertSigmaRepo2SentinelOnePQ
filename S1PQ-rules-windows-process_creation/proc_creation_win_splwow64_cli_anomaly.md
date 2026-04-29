@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 28-04-2026 03:53:04):
+// Translated content (automatically translated on 29-04-2026 03:50:14):
 event.type="Process Creation" and (endpoint.os="windows" and (tgt.process.image.path contains "\\splwow64.exe" and tgt.process.cmdline contains "splwow64.exe"))
 ```
 
@@ -16,7 +16,7 @@ author: Florian Roth (Nextron Systems)
 date: 2021-08-23
 modified: 2022-12-25
 tags:
-    - attack.defense-evasion
+    - attack.stealth
     - attack.t1202
 logsource:
     category: process_creation

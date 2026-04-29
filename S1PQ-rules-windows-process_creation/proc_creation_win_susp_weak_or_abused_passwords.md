@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 28-04-2026 03:53:04):
+// Translated content (automatically translated on 29-04-2026 03:50:14):
 event.type="Process Creation" and (endpoint.os="windows" and (tgt.process.cmdline contains "123456789" or tgt.process.cmdline contains "123123qwE" or tgt.process.cmdline contains "Asd123.aaaa" or tgt.process.cmdline contains "Decryptme" or tgt.process.cmdline contains "P@ssw0rd!" or tgt.process.cmdline contains "Pass8080" or tgt.process.cmdline contains "password123" or tgt.process.cmdline contains "test@202"))
 ```
 
@@ -21,8 +21,8 @@ author: Nasreddine Bencherchali (Nextron Systems)
 date: 2022-09-14
 modified: 2024-02-23
 tags:
-    - attack.defense-evasion
     - attack.execution
+    - attack.stealth
 logsource:
     category: process_creation
     product: windows

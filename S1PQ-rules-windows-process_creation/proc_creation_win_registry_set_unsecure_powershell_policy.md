@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 28-04-2026 03:53:04):
+// Translated content (automatically translated on 29-04-2026 03:50:14):
 event.type="Process Creation" and (endpoint.os="windows" and ((tgt.process.cmdline contains "\\ShellIds\\Microsoft.PowerShell\\ExecutionPolicy" or tgt.process.cmdline contains "\\Policies\\Microsoft\\Windows\\PowerShell\\ExecutionPolicy") and (tgt.process.cmdline contains "Bypass" or tgt.process.cmdline contains "RemoteSigned" or tgt.process.cmdline contains "Unrestricted")))
 ```
 
@@ -22,7 +22,7 @@ references:
 author: Nasreddine Bencherchali (Nextron Systems)
 date: 2023-01-11
 tags:
-    - attack.defense-evasion
+    - attack.defense-impairment
 logsource:
     product: windows
     category: process_creation

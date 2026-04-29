@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 28-04-2026 03:53:04):
+// Translated content (automatically translated on 29-04-2026 03:50:14):
 event.type="Process Creation" and (endpoint.os="windows" and ((tgt.process.image.path contains ":\\Perflogs\\" or tgt.process.image.path contains ":\\Users\\All Users\\" or tgt.process.image.path contains ":\\Users\\Default\\" or tgt.process.image.path contains ":\\Users\\NetworkService\\" or tgt.process.image.path contains ":\\Windows\\addins\\" or tgt.process.image.path contains ":\\Windows\\debug\\" or tgt.process.image.path contains ":\\Windows\\Fonts\\" or tgt.process.image.path contains ":\\Windows\\Help\\" or tgt.process.image.path contains ":\\Windows\\IME\\" or tgt.process.image.path contains ":\\Windows\\Media\\" or tgt.process.image.path contains ":\\Windows\\repair\\" or tgt.process.image.path contains ":\\Windows\\security\\" or tgt.process.image.path contains ":\\Windows\\System32\\Tasks\\" or tgt.process.image.path contains ":\\Windows\\Tasks\\" or tgt.process.image.path contains "$Recycle.bin" or tgt.process.image.path contains "\\config\\systemprofile\\" or tgt.process.image.path contains "\\Intel\\Logs\\" or tgt.process.image.path contains "\\RSA\\MachineKeys\\") and (not (tgt.process.image.path contains "C:\\Users\\Public\\IBM\\ClientSolutions\\Start_Programs\\" or (tgt.process.image.path contains "C:\\Windows\\SysWOW64\\config\\systemprofile\\Citrix\\UpdaterBinaries\\" and tgt.process.image.path contains "\\CitrixReceiverUpdater.exe")))))
 ```
 
@@ -19,7 +19,7 @@ author: Florian Roth (Nextron Systems), Tim Shelton
 date: 2019-01-16
 modified: 2024-07-12
 tags:
-    - attack.defense-evasion
+    - attack.stealth
     - attack.t1036
 logsource:
     category: process_creation

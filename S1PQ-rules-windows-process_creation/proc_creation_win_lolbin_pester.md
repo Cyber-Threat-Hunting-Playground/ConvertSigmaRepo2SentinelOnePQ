@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 28-04-2026 03:53:04):
+// Translated content (automatically translated on 29-04-2026 03:50:14):
 event.type="Process Creation" and (endpoint.os="windows" and (((src.process.image.path contains "\\powershell.exe" or src.process.image.path contains "\\pwsh.exe") and src.process.cmdline contains "\\WindowsPowerShell\\Modules\\Pester\\") and (src.process.cmdline contains "{ Invoke-Pester -EnableExit ;" or src.process.cmdline contains "{ Get-Help \"")))
 ```
 
@@ -20,8 +20,8 @@ author: frack113, Nasreddine Bencherchali
 date: 2022-08-20
 tags:
     - attack.execution
+    - attack.stealth
     - attack.t1059.001
-    - attack.defense-evasion
     - attack.t1216
 logsource:
     category: process_creation

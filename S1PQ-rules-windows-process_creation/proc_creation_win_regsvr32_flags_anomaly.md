@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 28-04-2026 03:53:04):
+// Translated content (automatically translated on 29-04-2026 03:50:14):
 event.type="Process Creation" and (endpoint.os="windows" and ((tgt.process.image.path contains "\\regsvr32.exe" and (tgt.process.cmdline contains " -i:" or tgt.process.cmdline contains " /i:" or tgt.process.cmdline contains " –i:" or tgt.process.cmdline contains " —i:" or tgt.process.cmdline contains " ―i:")) and (not tgt.process.cmdline contains " -n " or tgt.process.cmdline contains " /n " or tgt.process.cmdline contains " –n " or tgt.process.cmdline contains " —n " or tgt.process.cmdline contains " ―n ")))
 ```
 
@@ -16,7 +16,7 @@ author: Florian Roth (Nextron Systems)
 date: 2019-07-13
 modified: 2024-03-13
 tags:
-    - attack.defense-evasion
+    - attack.stealth
     - attack.t1218.010
 logsource:
     category: process_creation

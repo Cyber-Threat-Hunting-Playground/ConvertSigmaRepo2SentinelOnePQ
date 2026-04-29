@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 28-04-2026 03:53:04):
+// Translated content (automatically translated on 29-04-2026 03:50:14):
 event.type="Process Creation" and (endpoint.os="windows" and (tgt.process.image.path contains "\\powershell.exe" and (tgt.process.cmdline contains "http://127.0.0.1" and tgt.process.cmdline contains "%{(IRM $_)}" and tgt.process.cmdline contains "Invoke")))
 ```
 
@@ -17,10 +17,10 @@ author: '@Kostastsale, TheDFIRReport'
 date: 2022-05-09
 modified: 2025-04-16
 tags:
-    - attack.defense-evasion
     - attack.execution
+    - attack.defense-impairment
     - attack.t1059.001
-    - attack.t1562.001
+    - attack.t1685
 logsource:
     product: windows
     category: process_creation

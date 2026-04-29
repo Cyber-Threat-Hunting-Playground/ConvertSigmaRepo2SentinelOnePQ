@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 28-04-2026 03:53:04):
+// Translated content (automatically translated on 29-04-2026 03:50:14):
 event.type="Process Creation" and (endpoint.os="windows" and (((tgt.process.cmdline contains "-Sta" and tgt.process.cmdline contains "-Nop" and tgt.process.cmdline contains "-Window" and tgt.process.cmdline contains "Hidden") and (tgt.process.cmdline contains "-Command" or tgt.process.cmdline contains "-EncodedCommand")) or (tgt.process.cmdline contains "sv o (New-Object IO.MemorySteam);sv d " or tgt.process.cmdline contains "mshta file.hta" or tgt.process.cmdline contains "GruntHTTP" or tgt.process.cmdline contains "-EncodedCommand cwB2ACAAbwAgA")))
 ```
 
@@ -17,7 +17,7 @@ date: 2020-06-04
 modified: 2023-02-21
 tags:
     - attack.execution
-    - attack.defense-evasion
+    - attack.stealth
     - attack.t1059.001
     - attack.t1564.003
 logsource:

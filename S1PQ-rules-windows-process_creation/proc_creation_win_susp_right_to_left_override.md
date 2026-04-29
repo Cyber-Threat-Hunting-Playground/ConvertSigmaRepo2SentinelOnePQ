@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 28-04-2026 03:53:04):
+// Translated content (automatically translated on 29-04-2026 03:50:14):
 event.type="Process Creation" and (endpoint.os="windows" and (tgt.process.cmdline contains "\\u202e" or tgt.process.cmdline contains "[U+202E]" or tgt.process.cmdline contains "‮"))
 ```
 
@@ -27,7 +27,7 @@ author: Micah Babinski, @micahbabinski, Swachchhanda Shrawan Poudel (Nextron Sys
 date: 2023-02-15
 modified: 2026-03-20
 tags:
-    - attack.defense-evasion
+    - attack.stealth
     - attack.t1036.002
 logsource:
     category: process_creation

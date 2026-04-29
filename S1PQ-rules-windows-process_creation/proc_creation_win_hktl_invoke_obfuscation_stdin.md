@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 28-04-2026 03:53:04):
+// Translated content (automatically translated on 29-04-2026 03:50:14):
 event.type="Process Creation" and (endpoint.os="windows" and tgt.process.cmdline matches "cmd.{0,5}(?:/c|/r).+powershell.+(?:\\$\\{?input\\}?|noexit).+\\"")
 ```
 
@@ -16,7 +16,7 @@ author: Jonathan Cheong, oscd.community
 date: 2020-10-15
 modified: 2024-04-15
 tags:
-    - attack.defense-evasion
+    - attack.stealth
     - attack.t1027
     - attack.execution
     - attack.t1059.001

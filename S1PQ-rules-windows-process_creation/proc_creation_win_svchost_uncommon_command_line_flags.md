@@ -1,6 +1,6 @@
 ```sql
-// Translated content (automatically translated on 28-04-2026 03:53:04):
-event.type="Process Creation" and (endpoint.os="windows" and (tgt.process.image.path contains "\\svchost.exe" and (not (tgt.process.cmdline matches "-k\\s\\w{1,64}(\\s?(-p|-s))?" or tgt.process.cmdline="" or not (tgt.process.cmdline matches "\.*"))) and (not ((src.process.image.path contains "\\MsMpEng.exe" and tgt.process.cmdline contains "svchost.exe") or (src.process.image.path contains "\\MRT.exe" and tgt.process.cmdline="svchost.exe")))))
+// Translated content (automatically translated on 29-04-2026 03:50:14):
+event.type="Process Creation" and (endpoint.os="windows" and (tgt.process.image.path contains "\\svchost.exe" and (not (tgt.process.cmdline matches "-k\\s\\w{1,64}(?:\\s?(?:-p|-s))?" or tgt.process.cmdline="" or not (tgt.process.cmdline matches "\.*"))) and (not ((src.process.image.path contains "\\MsMpEng.exe" and tgt.process.cmdline contains "svchost.exe") or (src.process.image.path contains "\\MRT.exe" and tgt.process.cmdline="svchost.exe")))))
 ```
 
 
@@ -19,9 +19,10 @@ references:
     - https://media.kasperskycontenthub.com/wp-content/uploads/sites/43/2018/03/08064518/Carbanak_APT_eng.pdf
 author: Liran Ravich
 date: 2025-11-14
+modified: 2026-03-23
 tags:
-    - attack.defense-evasion
     - attack.privilege-escalation
+    - attack.stealth
     - attack.t1036.005
     - attack.t1055
     - attack.t1055.012
@@ -33,7 +34,7 @@ detection:
         # Example of command to simulate: "C:\Windows\System32\svchost.exe" calc.exe
         Image|endswith: '\svchost.exe'
     filter_main_flags:
-        CommandLine|re: '-k\s\w{1,64}(\s?(-p|-s))?'
+        CommandLine|re: '-k\s\w{1,64}(?:\s?(?:-p|-s))?'
     filter_main_empty:
         CommandLine: ''
     filter_main_null:

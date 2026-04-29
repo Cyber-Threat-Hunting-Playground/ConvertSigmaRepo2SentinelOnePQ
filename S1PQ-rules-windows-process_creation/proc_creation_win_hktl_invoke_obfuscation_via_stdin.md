@@ -1,6 +1,6 @@
 ```sql
-// Translated content (automatically translated on 28-04-2026 03:53:04):
-event.type="Process Creation" and (endpoint.os="windows" and tgt.process.cmdline matches "(?i)(set).*&&\\s?set.*(environment|invoke|\\$\\{?input).*&&.*"")
+// Translated content (automatically translated on 29-04-2026 03:50:14):
+event.type="Process Creation" and (endpoint.os="windows" and tgt.process.cmdline matches "(?i)(?:set).*&&\\s?set.*(?:environment|invoke|\\$\\{?input).*&&.*"")
 ```
 
 
@@ -14,9 +14,9 @@ references:
     - https://github.com/SigmaHQ/sigma/issues/1009 # (Task28)
 author: Nikita Nazarov, oscd.community
 date: 2020-10-12
-modified: 2024-04-16
+modified: 2026-03-16
 tags:
-    - attack.defense-evasion
+    - attack.stealth
     - attack.t1027
     - attack.execution
     - attack.t1059.001
@@ -25,7 +25,7 @@ logsource:
     product: windows
 detection:
     selection:
-        CommandLine|re: '(?i)(set).*&&\s?set.*(environment|invoke|\$\{?input).*&&.*"'
+        CommandLine|re: '(?i)(?:set).*&&\s?set.*(?:environment|invoke|\$\{?input).*&&.*"'
     condition: selection
 falsepositives:
     - Unknown

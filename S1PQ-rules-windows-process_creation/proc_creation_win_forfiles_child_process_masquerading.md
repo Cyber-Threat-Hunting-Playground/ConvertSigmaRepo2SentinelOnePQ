@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 28-04-2026 03:53:04):
+// Translated content (automatically translated on 29-04-2026 03:50:14):
 event.type="Process Creation" and (endpoint.os="windows" and (((src.process.cmdline contains ".exe" or src.process.cmdline contains ".exe\"") and tgt.process.image.path contains "\\cmd.exe" and tgt.process.cmdline contains "/c echo \"") and (not ((src.process.image.path contains ":\\Windows\\System32\\" or src.process.image.path contains ":\\Windows\\SysWOW64\\") and src.process.image.path contains "\\forfiles.exe" and (tgt.process.image.path contains ":\\Windows\\System32\\" or tgt.process.image.path contains ":\\Windows\\SysWOW64\\") and tgt.process.image.path contains "\\cmd.exe"))))
 ```
 
@@ -16,7 +16,7 @@ references:
 author: Nasreddine Bencherchali (Nextron Systems), Anish Bogati
 date: 2024-01-05
 tags:
-    - attack.defense-evasion
+    - attack.stealth
     - attack.t1036
 logsource:
     category: process_creation

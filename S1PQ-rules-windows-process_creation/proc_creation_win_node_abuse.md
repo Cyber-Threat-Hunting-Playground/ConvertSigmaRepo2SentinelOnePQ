@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 28-04-2026 03:53:04):
+// Translated content (automatically translated on 29-04-2026 03:50:14):
 event.type="Process Creation" and (endpoint.os="windows" and ((tgt.process.image.path contains "\\node.exe" and (tgt.process.cmdline contains " -e " or tgt.process.cmdline contains " --eval ")) and (tgt.process.cmdline contains ".exec(" and tgt.process.cmdline contains "net.socket" and tgt.process.cmdline contains ".connect" and tgt.process.cmdline contains "child_process")))
 ```
 
@@ -19,7 +19,8 @@ author: Nasreddine Bencherchali (Nextron Systems)
 date: 2022-09-09
 modified: 2023-02-03
 tags:
-    - attack.defense-evasion
+    - attack.execution
+    - attack.stealth
     - attack.t1127
 logsource:
     category: process_creation

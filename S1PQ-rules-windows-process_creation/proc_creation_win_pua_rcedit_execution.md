@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 28-04-2026 03:53:04):
+// Translated content (automatically translated on 29-04-2026 03:50:14):
 event.type="Process Creation" and (endpoint.os="windows" and (((tgt.process.image.path contains "\\rcedit-x64.exe" or tgt.process.image.path contains "\\rcedit-x86.exe") or tgt.process.displayName="Edit resources of exe" or tgt.process.displayName="rcedit") and tgt.process.cmdline contains "--set-" and (tgt.process.cmdline contains "OriginalFileName" or tgt.process.cmdline contains "CompanyName" or tgt.process.cmdline contains "FileDescription" or tgt.process.cmdline contains "ProductName" or tgt.process.cmdline contains "ProductVersion" or tgt.process.cmdline contains "LegalCopyright")))
 ```
 
@@ -18,7 +18,7 @@ author: Micah Babinski
 date: 2022-12-11
 modified: 2023-03-05
 tags:
-    - attack.defense-evasion
+    - attack.stealth
     - attack.t1036.003
     - attack.t1036
     - attack.t1027.005

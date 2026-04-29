@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 28-04-2026 03:53:04):
+// Translated content (automatically translated on 29-04-2026 03:50:14):
 event.type="Process Creation" and (endpoint.os="windows" and ((tgt.process.cmdline contains "System.Management.Automation.AmsiUtils" and tgt.process.cmdline contains "amsiInitFailed") or (tgt.process.cmdline contains "[Ref].Assembly.GetType" and tgt.process.cmdline contains "SetValue($null,$true)" and tgt.process.cmdline contains "NonPublic,Static")))
 ```
 
@@ -20,8 +20,8 @@ author: Markus Neis, @Kostastsale
 date: 2018-08-17
 modified: 2023-02-03
 tags:
-    - attack.defense-evasion
-    - attack.t1562.001
+    - attack.defense-impairment
+    - attack.t1685
 logsource:
     category: process_creation
     product: windows

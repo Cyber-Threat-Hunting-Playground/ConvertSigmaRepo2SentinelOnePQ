@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 28-04-2026 03:53:04):
+// Translated content (automatically translated on 29-04-2026 03:50:14):
 event.type="Process Creation" and (endpoint.os="windows" and (((tgt.process.image.path contains "\\Windows\\" and (tgt.process.cmdline contains "\\..\\Windows\\" or tgt.process.cmdline contains "\\..\\System32\\" or tgt.process.cmdline contains "\\..\\..\\")) or tgt.process.cmdline contains ".exe\\..\\") and (not (tgt.process.cmdline contains "\\Google\\Drive\\googledrivesync.exe\\..\\" or tgt.process.cmdline contains "\\Citrix\\Virtual Smart Card\\Citrix.Authentication.VirtualSmartcard.Launcher.exe\\..\\"))))
 ```
 
@@ -17,7 +17,7 @@ author: Christian Burkard (Nextron Systems)
 date: 2021-10-26
 modified: 2023-03-29
 tags:
-    - attack.defense-evasion
+    - attack.stealth
     - attack.t1036
 logsource:
     category: process_creation

@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 28-04-2026 03:53:04):
+// Translated content (automatically translated on 29-04-2026 03:50:14):
 event.type="Process Creation" and (endpoint.os="windows" and (tgt.process.image.path contains "\\DumpStack.log" or tgt.process.cmdline contains " -o DumpStack.log"))
 ```
 
@@ -16,7 +16,7 @@ author: Florian Roth (Nextron Systems)
 date: 2022-01-06
 modified: 2022-06-17
 tags:
-    - attack.defense-evasion
+    - attack.defense-impairment
 logsource:
     category: process_creation
     product: windows

@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 28-04-2026 03:53:04):
+// Translated content (automatically translated on 29-04-2026 03:50:14):
 event.type="Process Creation" and (endpoint.os="windows" and ((tgt.process.image.path contains "\\powershell.exe" or tgt.process.image.path contains "\\pwsh.exe") and tgt.process.cmdline matches "\\s-\\s*<"))
 ```
 
@@ -17,7 +17,6 @@ author: Moriarty Meng (idea), Anton Kutepov (rule), oscd.community
 date: 2020-10-17
 modified: 2021-11-27
 tags:
-    - attack.defense-evasion
     - attack.execution
     - attack.t1059
 logsource:

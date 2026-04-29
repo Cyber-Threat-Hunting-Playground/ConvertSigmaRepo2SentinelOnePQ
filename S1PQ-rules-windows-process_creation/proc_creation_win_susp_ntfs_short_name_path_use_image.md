@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 28-04-2026 03:53:04):
+// Translated content (automatically translated on 29-04-2026 03:50:14):
 event.type="Process Creation" and (endpoint.os="windows" and ((tgt.process.image.path contains "~1\\" or tgt.process.image.path contains "~2\\") and (not ((src.process.image.path in ("C:\\Windows\\System32\\Dism.exe","C:\\Windows\\System32\\cleanmgr.exe")) or ((tgt.process.image.path contains "\\AppData\\" and tgt.process.image.path contains "\\Temp\\") or (tgt.process.image.path contains "~1\\unzip.exe" or tgt.process.image.path contains "~1\\7zG.exe")))) and (not (src.process.image.path contains "\\WebEx\\WebexHost.exe" or src.process.image.path contains "\\thor\\thor64.exe" or (tgt.process.displayName="InstallShield (R)" or tgt.process.displayName="InstallShield (R) Setup Engine" or tgt.process.publisher="InstallShield Software Corporation")))))
 ```
 
@@ -21,7 +21,7 @@ author: frack113, Nasreddine Bencherchali
 date: 2022-08-07
 modified: 2025-10-20
 tags:
-    - attack.defense-evasion
+    - attack.stealth
     - attack.t1564.004
 logsource:
     category: process_creation

@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 28-04-2026 03:53:04):
+// Translated content (automatically translated on 29-04-2026 03:50:14):
 event.type="Process Creation" and (endpoint.os="windows" and (src.process.image.path contains "\\sigverif.exe" and (not (tgt.process.image.path in ("C:\\Windows\\System32\\WerFault.exe","C:\\Windows\\SysWOW64\\WerFault.exe")))))
 ```
 
@@ -18,7 +18,7 @@ author: Nasreddine Bencherchali (Nextron Systems)
 date: 2022-08-19
 modified: 2024-08-27
 tags:
-    - attack.defense-evasion
+    - attack.stealth
     - attack.t1216
 logsource:
     category: process_creation

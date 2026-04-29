@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 28-04-2026 03:53:04):
+// Translated content (automatically translated on 29-04-2026 03:50:14):
 event.type="Process Creation" and (endpoint.os="windows" and (tgt.process.cmdline contains "COMPlus_ETWEnabled" or tgt.process.cmdline contains "COMPlus_ETWFlags"))
 ```
 
@@ -27,8 +27,8 @@ author: Roberto Rodriguez (Cyb3rWard0g), OTR (Open Threat Research)
 date: 2020-05-02
 modified: 2022-12-09
 tags:
-    - attack.defense-evasion
-    - attack.t1562
+    - attack.defense-impairment
+    - attack.t1685
 logsource:
     category: process_creation
     product: windows

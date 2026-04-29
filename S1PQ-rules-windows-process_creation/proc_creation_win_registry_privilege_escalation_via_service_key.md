@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 28-04-2026 03:53:04):
+// Translated content (automatically translated on 29-04-2026 03:50:14):
 event.type="Process Creation" and (endpoint.os="windows" and ((tgt.process.integrityLevel in ("Medium","S-1-16-8192")) and (tgt.process.cmdline contains "ControlSet" and tgt.process.cmdline contains "services") and (tgt.process.cmdline contains "\\ImagePath" or tgt.process.cmdline contains "\\FailureCommand" or tgt.process.cmdline contains "\\ServiceDll")))
 ```
 
@@ -18,8 +18,9 @@ date: 2019-10-26
 modified: 2024-12-01
 tags:
     - attack.persistence
-    - attack.defense-evasion
     - attack.privilege-escalation
+    - attack.execution
+    - attack.stealth
     - attack.t1574.011
 logsource:
     product: windows

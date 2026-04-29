@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 28-04-2026 03:53:04):
+// Translated content (automatically translated on 29-04-2026 03:50:14):
 event.type="Process Creation" and (endpoint.os="windows" and ((tgt.process.cmdline contains "reg" and tgt.process.cmdline contains "add") and ((tgt.process.cmdline contains "d 4" and tgt.process.cmdline contains "v Start") and (tgt.process.cmdline contains "\\AppIDSvc" or tgt.process.cmdline contains "\\MsMpSvc" or tgt.process.cmdline contains "\\NisSrv" or tgt.process.cmdline contains "\\SecurityHealthService" or tgt.process.cmdline contains "\\Sense" or tgt.process.cmdline contains "\\UsoSvc" or tgt.process.cmdline contains "\\WdBoot" or tgt.process.cmdline contains "\\WdFilter" or tgt.process.cmdline contains "\\WdNisDrv" or tgt.process.cmdline contains "\\WdNisSvc" or tgt.process.cmdline contains "\\WinDefend" or tgt.process.cmdline contains "\\wscsvc" or tgt.process.cmdline contains "\\wuauserv"))))
 ```
 
@@ -19,8 +19,8 @@ author: Florian Roth (Nextron Systems), John Lambert (idea), elhoim
 date: 2021-07-14
 modified: 2023-06-05
 tags:
-    - attack.defense-evasion
-    - attack.t1562.001
+    - attack.defense-impairment
+    - attack.t1685
 logsource:
     category: process_creation
     product: windows

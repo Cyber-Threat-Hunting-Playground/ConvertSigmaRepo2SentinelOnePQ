@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 28-04-2026 03:53:04):
+// Translated content (automatically translated on 29-04-2026 03:50:14):
 event.type="Process Creation" and (endpoint.os="windows" and ((src.process.image.path contains "\\wsl.exe" or src.process.image.path contains "\\wslhost.exe") and ((tgt.process.image.path contains "\\calc.exe" or tgt.process.image.path contains "\\cmd.exe" or tgt.process.image.path contains "\\cscript.exe" or tgt.process.image.path contains "\\mshta.exe" or tgt.process.image.path contains "\\powershell.exe" or tgt.process.image.path contains "\\pwsh.exe" or tgt.process.image.path contains "\\regsvr32.exe" or tgt.process.image.path contains "\\rundll32.exe" or tgt.process.image.path contains "\\wscript.exe") or (tgt.process.image.path contains "\\AppData\\Local\\Temp\\" or tgt.process.image.path contains "C:\\Users\\Public\\" or tgt.process.image.path contains "C:\\Windows\\Temp\\" or tgt.process.image.path contains "C:\\Temp\\" or tgt.process.image.path contains "\\Downloads\\" or tgt.process.image.path contains "\\Desktop\\"))))
 ```
 
@@ -21,7 +21,7 @@ date: 2023-01-23
 modified: 2023-08-15
 tags:
     - attack.execution
-    - attack.defense-evasion
+    - attack.stealth
     - attack.t1218
     - attack.t1202
 logsource:

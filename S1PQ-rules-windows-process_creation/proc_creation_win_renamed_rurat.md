@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 28-04-2026 03:53:04):
+// Translated content (automatically translated on 29-04-2026 03:50:14):
 event.type="Process Creation" and (endpoint.os="windows" and (tgt.process.displayName="Remote Utilities" and (not (tgt.process.image.path contains "\\rutserv.exe" or tgt.process.image.path contains "\\rfusclient.exe"))))
 ```
 
@@ -16,10 +16,10 @@ author: Nasreddine Bencherchali (Nextron Systems)
 date: 2022-09-19
 modified: 2023-02-03
 tags:
-    - attack.defense-evasion
     - attack.collection
     - attack.command-and-control
     - attack.discovery
+    - attack.stealth
     - attack.s0592
 logsource:
     category: process_creation

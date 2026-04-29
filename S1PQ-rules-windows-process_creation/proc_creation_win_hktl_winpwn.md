@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 28-04-2026 03:53:04):
+// Translated content (automatically translated on 29-04-2026 03:50:14):
 event.type="Process Creation" and (endpoint.os="windows" and (tgt.process.cmdline contains "Offline_Winpwn" or tgt.process.cmdline contains "WinPwn " or tgt.process.cmdline contains "WinPwn.exe" or tgt.process.cmdline contains "WinPwn.ps1"))
 ```
 
@@ -24,7 +24,6 @@ references:
     - https://grep.app/search?q=winpwn&filter[repo][0]=redcanaryco/atomic-red-team
 tags:
     - attack.credential-access
-    - attack.defense-evasion
     - attack.discovery
     - attack.execution
     - attack.privilege-escalation

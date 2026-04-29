@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 28-04-2026 03:53:04):
+// Translated content (automatically translated on 29-04-2026 03:50:14):
 event.type="Process Creation" and (endpoint.os="windows" and ((src.process.image.path="C:\\Windows\\SysWOW64\\setup16.exe" and src.process.cmdline contains " -m ") and (not tgt.process.image.path contains "C:\\~MSSETUP.T\\")))
 ```
 
@@ -20,7 +20,8 @@ date: 2024-12-01
 tags:
     - attack.privilege-escalation
     - attack.persistence
-    - attack.defense-evasion
+    - attack.execution
+    - attack.stealth
     - attack.t1574.005
 logsource:
     category: process_creation

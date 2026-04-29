@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 28-04-2026 03:53:04):
+// Translated content (automatically translated on 29-04-2026 03:50:14):
 event.type="Process Creation" and (endpoint.os="windows" and ((tgt.process.cmdline contains "echo " or tgt.process.cmdline contains "copy " or tgt.process.cmdline contains "type " or tgt.process.cmdline contains "file createnew") and (tgt.process.cmdline contains " C:\\Windows\\System32\\Tasks\\" or tgt.process.cmdline contains " C:\\Windows\\SysWow64\\Tasks\\")))
 ```
 
@@ -21,9 +21,9 @@ date: 2020-01-13
 modified: 2022-12-25
 tags:
     - attack.privilege-escalation
-    - attack.defense-evasion
     - attack.persistence
     - attack.execution
+    - attack.stealth
     - attack.t1574.001
 logsource:
     product: windows

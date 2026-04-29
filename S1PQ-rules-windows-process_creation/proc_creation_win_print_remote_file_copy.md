@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 28-04-2026 03:53:04):
+// Translated content (automatically translated on 29-04-2026 03:50:14):
 event.type="Process Creation" and (endpoint.os="windows" and ((tgt.process.image.path contains "\\print.exe" and tgt.process.cmdline contains "print" and (tgt.process.cmdline contains "/D" and tgt.process.cmdline contains ".exe")) and (not tgt.process.cmdline contains "print.exe")))
 ```
 
@@ -17,7 +17,7 @@ author: 'Furkan CALISKAN, @caliskanfurkan_, @oscd_initiative'
 date: 2020-10-05
 modified: 2022-07-07
 tags:
-    - attack.defense-evasion
+    - attack.stealth
     - attack.t1218
 logsource:
     category: process_creation

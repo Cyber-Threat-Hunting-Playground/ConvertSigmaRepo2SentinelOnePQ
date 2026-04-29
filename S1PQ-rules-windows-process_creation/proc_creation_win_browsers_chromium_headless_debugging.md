@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 28-04-2026 03:53:04):
+// Translated content (automatically translated on 29-04-2026 03:50:14):
 event.type="Process Creation" and (endpoint.os="windows" and (tgt.process.cmdline contains "--remote-debugging-" and tgt.process.cmdline contains "--user-data-dir" and tgt.process.cmdline contains "--headless"))
 ```
 
@@ -21,9 +21,9 @@ references:
 author: Nasreddine Bencherchali (Nextron Systems)
 date: 2022-12-23
 tags:
-    - attack.defense-evasion
     - attack.credential-access
     - attack.collection
+    - attack.stealth
     - attack.t1185
     - attack.t1564.003
 logsource:

@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 28-04-2026 03:53:04):
+// Translated content (automatically translated on 29-04-2026 03:50:14):
 event.type="Process Creation" and (endpoint.os="windows" and (src.process.image.path contains "\\svchost.exe" and tgt.process.image.path contains "\\mshta.exe"))
 ```
 
@@ -16,7 +16,7 @@ author: Markus Neis
 date: 2018-06-07
 modified: 2023-02-07
 tags:
-    - attack.defense-evasion
+    - attack.stealth
     - attack.t1218.005
 logsource:
     category: process_creation

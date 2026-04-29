@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 28-04-2026 03:53:04):
+// Translated content (automatically translated on 29-04-2026 03:50:14):
 event.type="Process Creation" and (endpoint.os="windows" and ((tgt.process.image.path contains "\\sc.exe" and (tgt.process.integrityLevel in ("Medium","S-1-16-8192"))) and ((tgt.process.cmdline contains "config" and tgt.process.cmdline contains "binPath") or (tgt.process.cmdline contains "failure" and tgt.process.cmdline contains "command"))))
 ```
 
@@ -18,8 +18,9 @@ date: 2019-10-26
 modified: 2024-12-01
 tags:
     - attack.persistence
-    - attack.defense-evasion
     - attack.privilege-escalation
+    - attack.execution
+    - attack.stealth
     - attack.t1574.011
 logsource:
     category: process_creation

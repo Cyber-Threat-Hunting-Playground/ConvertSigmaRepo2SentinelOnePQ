@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 28-04-2026 03:53:04):
+// Translated content (automatically translated on 29-04-2026 03:50:14):
 event.type="Process Creation" and (endpoint.os="windows" and ((tgt.process.cmdline contains " -ma " or tgt.process.cmdline contains " /ma " or tgt.process.cmdline contains " –ma " or tgt.process.cmdline contains " —ma " or tgt.process.cmdline contains " ―ma " or tgt.process.cmdline contains " -mm " or tgt.process.cmdline contains " /mm " or tgt.process.cmdline contains " –mm " or tgt.process.cmdline contains " —mm " or tgt.process.cmdline contains " ―mm " or tgt.process.cmdline contains " -mp " or tgt.process.cmdline contains " /mp " or tgt.process.cmdline contains " –mp " or tgt.process.cmdline contains " —mp " or tgt.process.cmdline contains " ―mp ") and (tgt.process.cmdline contains " ls" or tgt.process.cmdline contains " keyiso" or tgt.process.cmdline contains " samss")))
 ```
 
@@ -22,7 +22,7 @@ author: Florian Roth (Nextron Systems)
 date: 2018-10-30
 modified: 2025-10-19
 tags:
-    - attack.defense-evasion
+    - attack.stealth
     - attack.t1036
     - attack.credential-access
     - attack.t1003.001

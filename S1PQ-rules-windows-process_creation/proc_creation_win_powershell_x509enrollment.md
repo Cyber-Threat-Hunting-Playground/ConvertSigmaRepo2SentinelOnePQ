@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 28-04-2026 03:53:04):
+// Translated content (automatically translated on 29-04-2026 03:50:14):
 event.type="Process Creation" and (endpoint.os="windows" and (tgt.process.cmdline contains "X509Enrollment.CBinaryConverter" or tgt.process.cmdline contains "884e2002-217d-11da-b2a4-000e7bbb2b09"))
 ```
 
@@ -20,7 +20,7 @@ references:
 author: frack113
 date: 2022-12-23
 tags:
-    - attack.defense-evasion
+    - attack.defense-impairment
     - attack.t1553.004
 logsource:
     product: windows

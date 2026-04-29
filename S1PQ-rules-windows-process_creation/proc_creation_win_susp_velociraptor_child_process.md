@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 28-04-2026 03:53:04):
+// Translated content (automatically translated on 29-04-2026 03:50:14):
 event.type="Process Creation" and (endpoint.os="windows" and (src.process.image.path contains "\\Velociraptor.exe" and ((tgt.process.cmdline contains "code.exe" and tgt.process.cmdline contains "tunnel" and tgt.process.cmdline contains "--accept-server-license-terms") or (tgt.process.cmdline contains "msiexec" and tgt.process.cmdline contains "/i" and tgt.process.cmdline contains "http") or ((tgt.process.image.path contains "\\powershell.exe" or tgt.process.image.path contains "\\powershell_ise.exe" or tgt.process.image.path contains "\\pwsh.exe") and (tgt.process.cmdline contains "Invoke-WebRequest " or tgt.process.cmdline contains "IWR " or tgt.process.cmdline contains ".DownloadFile" or tgt.process.cmdline contains ".DownloadString")))))
 ```
 
@@ -17,7 +17,6 @@ date: 2025-08-29
 tags:
     - attack.command-and-control
     - attack.persistence
-    - attack.defense-evasion
     - attack.t1219
 logsource:
     category: process_creation

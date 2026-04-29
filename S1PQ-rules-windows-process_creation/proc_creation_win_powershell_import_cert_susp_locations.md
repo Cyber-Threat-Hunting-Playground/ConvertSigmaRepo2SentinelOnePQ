@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 28-04-2026 03:53:04):
+// Translated content (automatically translated on 29-04-2026 03:50:14):
 event.type="Process Creation" and (endpoint.os="windows" and ((tgt.process.cmdline contains "Import-Certificate" and tgt.process.cmdline contains " -FilePath " and tgt.process.cmdline contains "Cert:\\LocalMachine\\Root") and (tgt.process.cmdline contains "\\AppData\\Local\\Temp\\" or tgt.process.cmdline contains ":\\Windows\\TEMP\\" or tgt.process.cmdline contains "\\Desktop\\" or tgt.process.cmdline contains "\\Downloads\\" or tgt.process.cmdline contains "\\Perflogs\\" or tgt.process.cmdline contains ":\\Users\\Public\\")))
 ```
 
@@ -17,7 +17,7 @@ author: Nasreddine Bencherchali (Nextron Systems)
 date: 2022-09-09
 modified: 2023-01-16
 tags:
-    - attack.defense-evasion
+    - attack.defense-impairment
     - attack.t1553.004
 logsource:
     category: process_creation

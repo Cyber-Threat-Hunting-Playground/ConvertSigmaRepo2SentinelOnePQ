@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 28-04-2026 03:53:04):
+// Translated content (automatically translated on 29-04-2026 03:50:14):
 event.type="Process Creation" and (endpoint.os="windows" and (tgt.process.cmdline contains "txt:" and ((tgt.process.cmdline contains "type " and tgt.process.cmdline contains " > ") or (tgt.process.cmdline contains "makecab " and tgt.process.cmdline contains ".cab") or (tgt.process.cmdline contains "reg " and tgt.process.cmdline contains " export ") or (tgt.process.cmdline contains "regedit " and tgt.process.cmdline contains " /E ") or (tgt.process.cmdline contains "esentutl " and tgt.process.cmdline contains " /y " and tgt.process.cmdline contains " /d " and tgt.process.cmdline contains " /o "))))
 ```
 
@@ -16,7 +16,7 @@ author: frack113
 date: 2021-09-01
 modified: 2022-10-09
 tags:
-    - attack.defense-evasion
+    - attack.stealth
     - attack.t1564.004
 logsource:
     category: process_creation

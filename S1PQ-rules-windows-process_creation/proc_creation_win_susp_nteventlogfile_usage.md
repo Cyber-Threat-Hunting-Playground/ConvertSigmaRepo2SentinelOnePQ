@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 28-04-2026 03:53:04):
+// Translated content (automatically translated on 29-04-2026 03:50:14):
 event.type="Process Creation" and (endpoint.os="windows" and (tgt.process.cmdline contains "Win32_NTEventlogFile" and (tgt.process.cmdline contains ".BackupEventlog(" or tgt.process.cmdline contains ".ChangeSecurityPermissions(" or tgt.process.cmdline contains ".ChangeSecurityPermissionsEx(" or tgt.process.cmdline contains ".ClearEventLog(" or tgt.process.cmdline contains ".Delete(" or tgt.process.cmdline contains ".DeleteEx(" or tgt.process.cmdline contains ".Rename(" or tgt.process.cmdline contains ".TakeOwnerShip(" or tgt.process.cmdline contains ".TakeOwnerShipEx(")))
 ```
 
@@ -18,7 +18,7 @@ references:
 author: Nasreddine Bencherchali (Nextron Systems)
 date: 2023-07-13
 tags:
-    - attack.defense-evasion
+    - attack.defense-impairment
 logsource:
     category: process_creation
     product: windows
