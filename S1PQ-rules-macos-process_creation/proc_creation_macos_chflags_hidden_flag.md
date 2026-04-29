@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 28-04-2026 02:39:56):
+// Translated content (automatically translated on 29-04-2026 02:39:41):
 event.type="Process Creation" and (endpoint.os="osx" and (tgt.process.image.path contains "/chflags" and tgt.process.cmdline contains "hidden "))
 ```
 
@@ -20,9 +20,9 @@ references:
 author: Omar Khaled (@beacon_exe)
 date: 2024-08-21
 tags:
-    - attack.defense-evasion
     - attack.credential-access
     - attack.command-and-control
+    - attack.stealth
     - attack.t1218
     - attack.t1564.004
     - attack.t1552.001

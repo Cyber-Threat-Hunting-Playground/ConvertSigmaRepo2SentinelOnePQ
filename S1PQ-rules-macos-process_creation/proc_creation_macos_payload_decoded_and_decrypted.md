@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 28-04-2026 02:39:56):
+// Translated content (automatically translated on 29-04-2026 02:39:41):
 event.type="Process Creation" and (endpoint.os="osx" and (tgt.process.image.path contains "/openssl" and (tgt.process.cmdline contains "/Volumes/" and tgt.process.cmdline contains "enc" and tgt.process.cmdline contains "-base64" and tgt.process.cmdline contains " -d ")))
 ```
 
@@ -15,11 +15,11 @@ references:
 author: Tim Rauch (rule), Elastic (idea)
 date: 2022-10-17
 tags:
+    - attack.stealth
     - attack.t1059
     - attack.t1204
     - attack.execution
     - attack.t1140
-    - attack.defense-evasion
     - attack.s0482
     - attack.s0402
 logsource:

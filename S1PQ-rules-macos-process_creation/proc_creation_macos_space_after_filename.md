@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 28-04-2026 02:39:56):
+// Translated content (automatically translated on 29-04-2026 02:39:41):
 event.type="Process Creation" and (endpoint.os="osx" and (tgt.process.cmdline contains " " or tgt.process.image.path contains " "))
 ```
 
@@ -16,7 +16,7 @@ author: remotephone
 date: 2021-11-20
 modified: 2023-01-04
 tags:
-    - attack.defense-evasion
+    - attack.stealth
     - attack.t1036.006
 logsource:
     product: macos

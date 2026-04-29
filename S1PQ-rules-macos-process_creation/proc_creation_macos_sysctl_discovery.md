@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 28-04-2026 02:39:56):
+// Translated content (automatically translated on 29-04-2026 02:39:41):
 event.type="Process Creation" and (endpoint.os="osx" and ((tgt.process.image.path contains "/sysctl" or tgt.process.cmdline contains "sysctl") and (tgt.process.cmdline contains "hw." or tgt.process.cmdline contains "kern." or tgt.process.cmdline contains "machdep.")))
 ```
 
@@ -23,7 +23,7 @@ references:
 author: Pratinav Chandra
 date: 2024-05-27
 tags:
-    - attack.defense-evasion
+    - attack.stealth
     - attack.t1497.001
     - attack.discovery
     - attack.t1082

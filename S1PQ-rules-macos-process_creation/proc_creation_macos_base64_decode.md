@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 28-04-2026 02:39:56):
+// Translated content (automatically translated on 29-04-2026 02:39:41):
 event.type="Process Creation" and (endpoint.os="osx" and (tgt.process.image.path="/usr/bin/base64" and tgt.process.cmdline contains "-d"))
 ```
 
@@ -16,7 +16,7 @@ author: Daniil Yugoslavskiy, oscd.community
 date: 2020-10-19
 modified: 2022-11-26
 tags:
-    - attack.defense-evasion
+    - attack.stealth
     - attack.t1027
 logsource:
     category: process_creation

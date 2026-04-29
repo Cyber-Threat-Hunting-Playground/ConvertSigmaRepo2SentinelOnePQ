@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 28-04-2026 02:39:56):
+// Translated content (automatically translated on 29-04-2026 02:39:41):
 event.type="Process Creation" and (endpoint.os="osx" and ((tgt.process.image.path contains "/rm" or tgt.process.image.path contains "/unlink" or tgt.process.image.path contains "/shred") and (tgt.process.cmdline contains "/var/log" or (tgt.process.cmdline contains "/Users/" and tgt.process.cmdline contains "/Library/Logs/"))))
 ```
 
@@ -16,8 +16,8 @@ author: remotephone, oscd.community
 date: 2020-10-11
 modified: 2022-09-16
 tags:
-    - attack.defense-evasion
-    - attack.t1070.002
+    - attack.defense-impairment
+    - attack.t1685.006
 logsource:
     product: macos
     category: process_creation

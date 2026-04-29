@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 28-04-2026 02:39:56):
+// Translated content (automatically translated on 29-04-2026 02:39:41):
 event.type="Process Creation" and (endpoint.os="osx" and (tgt.process.image.path contains "/dscl" and (tgt.process.cmdline contains " -append " and tgt.process.cmdline contains " /Groups/admin " and tgt.process.cmdline contains " GroupMembership ")))
 ```
 
@@ -20,9 +20,9 @@ author: Sohan G (D4rkCiph3r)
 date: 2023-03-19
 tags:
     - attack.persistence
-    - attack.defense-evasion
     - attack.initial-access
     - attack.privilege-escalation
+    - attack.stealth
     - attack.t1078.003
 logsource:
     category: process_creation

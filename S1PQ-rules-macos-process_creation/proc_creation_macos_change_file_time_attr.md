@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 28-04-2026 02:39:56):
+// Translated content (automatically translated on 29-04-2026 02:39:41):
 event.type="Process Creation" and (endpoint.os="osx" and (tgt.process.image.path contains "/touch" and (tgt.process.cmdline contains "-t" or tgt.process.cmdline contains "-acmr" or tgt.process.cmdline contains "-d" or tgt.process.cmdline contains "-r")))
 ```
 
@@ -16,7 +16,7 @@ author: Igor Fits, Mikhail Larin, oscd.community
 date: 2020-10-19
 modified: 2022-01-12
 tags:
-    - attack.defense-evasion
+    - attack.stealth
     - attack.t1070.006
 logsource:
     product: macos

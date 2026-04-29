@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 28-04-2026 02:39:56):
+// Translated content (automatically translated on 29-04-2026 02:39:41):
 event.type="Process Creation" and (endpoint.os="osx" and (tgt.process.image.path contains "/nscurl" and (tgt.process.cmdline contains "--download " or tgt.process.cmdline contains "--download-directory " or tgt.process.cmdline contains "--output " or tgt.process.cmdline contains "-dir " or tgt.process.cmdline contains "-dl " or tgt.process.cmdline contains "-ld" or tgt.process.cmdline contains "-o ")))
 ```
 
@@ -17,7 +17,6 @@ references:
 author: Daniel Cortez
 date: 2024-06-04
 tags:
-    - attack.defense-evasion
     - attack.command-and-control
     - attack.t1105
 logsource:

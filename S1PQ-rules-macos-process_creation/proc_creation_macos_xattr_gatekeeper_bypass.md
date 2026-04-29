@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 28-04-2026 02:39:56):
+// Translated content (automatically translated on 29-04-2026 02:39:41):
 event.type="Process Creation" and (endpoint.os="osx" and (tgt.process.image.path contains "/xattr" and (tgt.process.cmdline contains "-d" and tgt.process.cmdline contains "com.apple.quarantine")))
 ```
 
@@ -17,7 +17,7 @@ author: Daniil Yugoslavskiy, oscd.community
 date: 2020-10-19
 modified: 2024-04-18
 tags:
-    - attack.defense-evasion
+    - attack.defense-impairment
     - attack.t1553.001
 logsource:
     category: process_creation

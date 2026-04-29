@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 28-04-2026 02:39:56):
+// Translated content (automatically translated on 29-04-2026 02:39:41):
 event.type="Process Creation" and (endpoint.os="osx" and (tgt.process.image.path contains "/bash" and (tgt.process.cmdline contains "tail" and tgt.process.cmdline contains "-c") and (tgt.process.cmdline contains "base64" and tgt.process.cmdline contains "-d" and tgt.process.cmdline contains ">") and (tgt.process.cmdline contains ".avif" or tgt.process.cmdline contains ".gif" or tgt.process.cmdline contains ".jfif" or tgt.process.cmdline contains ".jpeg" or tgt.process.cmdline contains ".jpg" or tgt.process.cmdline contains ".pjp" or tgt.process.cmdline contains ".pjpeg" or tgt.process.cmdline contains ".png" or tgt.process.cmdline contains ".svg" or tgt.process.cmdline contains ".webp")))
 ```
 
@@ -17,7 +17,7 @@ references:
 author: Joseliyo Sanchez, @Joseliyo_Jstnk
 date: 2023-12-20
 tags:
-    - attack.defense-evasion
+    - attack.stealth
     - attack.t1140
 logsource:
     product: macos

@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 28-04-2026 02:39:56):
+// Translated content (automatically translated on 29-04-2026 02:39:41):
 event.type="Process Creation" and (endpoint.os="osx" and (src.process.image.path contains "/Script Editor" and ((tgt.process.image.path contains "/curl" or tgt.process.image.path contains "/bash" or tgt.process.image.path contains "/sh" or tgt.process.image.path contains "/zsh" or tgt.process.image.path contains "/dash" or tgt.process.image.path contains "/fish" or tgt.process.image.path contains "/osascript" or tgt.process.image.path contains "/mktemp" or tgt.process.image.path contains "/chmod" or tgt.process.image.path contains "/php" or tgt.process.image.path contains "/nohup" or tgt.process.image.path contains "/openssl" or tgt.process.image.path contains "/plutil" or tgt.process.image.path contains "/PlistBuddy" or tgt.process.image.path contains "/xattr" or tgt.process.image.path contains "/sqlite" or tgt.process.image.path contains "/funzip" or tgt.process.image.path contains "/popen") or (tgt.process.image.path contains "python" or tgt.process.image.path contains "perl"))))
 ```
 
@@ -20,6 +20,7 @@ logsource:
     category: process_creation
     product: macos
 tags:
+    - attack.defense-impairment
     - attack.t1566
     - attack.t1566.002
     - attack.initial-access
@@ -30,7 +31,6 @@ tags:
     - attack.execution
     - attack.persistence
     - attack.t1553
-    - attack.defense-evasion
 detection:
     selection_parent:
         ParentImage|endswith: '/Script Editor'

@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 28-04-2026 02:39:56):
+// Translated content (automatically translated on 29-04-2026 02:39:41):
 event.type="Process Creation" and (endpoint.os="osx" and (((tgt.process.image.path contains "/dscl" and tgt.process.cmdline contains "create") and (tgt.process.cmdline contains "UniqueID" and tgt.process.cmdline matches "([0-9]|[1-9][0-9]|[1-4][0-9]{2})")) or ((tgt.process.image.path contains "/dscl" and tgt.process.cmdline contains "create") and (tgt.process.cmdline contains "IsHidden" and (tgt.process.cmdline contains "true" or tgt.process.cmdline contains "yes" or tgt.process.cmdline contains "1")))))
 ```
 
@@ -16,7 +16,7 @@ author: Daniil Yugoslavskiy, oscd.community
 date: 2020-10-10
 modified: 2021-11-27
 tags:
-    - attack.defense-evasion
+    - attack.stealth
     - attack.t1564.002
 logsource:
     category: process_creation

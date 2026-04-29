@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 28-04-2026 02:39:56):
+// Translated content (automatically translated on 29-04-2026 02:39:41):
 event.type="Process Creation" and (endpoint.os="osx" and ((tgt.process.image.path contains "/truncate" and tgt.process.cmdline contains "-s +") or (tgt.process.image.path contains "/dd" and (tgt.process.cmdline contains "if=/dev/zero" or tgt.process.cmdline contains "if=/dev/random" or tgt.process.cmdline contains "if=/dev/urandom"))))
 ```
 
@@ -18,7 +18,7 @@ author: 'Igor Fits, Mikhail Larin, oscd.community'
 date: 2020-10-19
 modified: 2023-02-17
 tags:
-    - attack.defense-evasion
+    - attack.stealth
     - attack.t1027.001
 logsource:
     product: macos
