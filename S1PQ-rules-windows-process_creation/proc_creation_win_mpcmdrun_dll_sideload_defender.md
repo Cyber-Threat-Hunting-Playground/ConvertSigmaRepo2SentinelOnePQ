@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 29-04-2026 03:50:14):
+// Translated content (automatically translated on 30-04-2026 03:51:06):
 event.type="Process Creation" and (endpoint.os="windows" and ((tgt.process.image.path contains "\\MpCmdRun.exe" or tgt.process.image.path contains "\\NisSrv.exe") and (not (tgt.process.image.path contains "C:\\Program Files (x86)\\Windows Defender\\" or tgt.process.image.path contains "C:\\Program Files\\Microsoft Security Client\\" or tgt.process.image.path contains "C:\\Program Files\\Windows Defender\\" or tgt.process.image.path contains "C:\\ProgramData\\Microsoft\\Windows Defender\\Platform\\" or tgt.process.image.path contains "C:\\Windows\\WinSxS\\"))))
 ```
 
