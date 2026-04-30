@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 29-04-2026 02:55:31):
+// Translated content (automatically translated on 30-04-2026 02:56:31):
 event.type="Process Creation" and (endpoint.os="windows" and (src.process.image.path contains "superopsticket.exe" or src.process.image.path contains "superops.exe"))
 ```
 
