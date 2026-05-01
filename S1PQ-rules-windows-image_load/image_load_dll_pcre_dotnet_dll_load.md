@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 30-04-2026 02:40:03):
+// Translated content (automatically translated on 01-05-2026 02:46:30):
 event.type="Module Load" and (endpoint.os="windows" and module.path contains "\\AppData\\Local\\Temp\\ba9ea7344a4a5f591d6e5dc32a13494b\\")
 ```
 
