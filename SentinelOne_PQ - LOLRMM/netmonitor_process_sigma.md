@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 30-04-2026 01:54:59):
+// Translated content (automatically translated on 01-05-2026 01:56:54):
 event.type="Process Creation" and (endpoint.os="windows" and ((src.process.image.path contains "\\nmep_agtconfig.exe" or src.process.image.path contains "\\nmep_ctrlagent.exe" or src.process.image.path contains "\\nmep_ctrlagentsvc.exe" or src.process.image.path contains "\\winpty-agent.exe" or src.process.image.path contains "\\winpty-agent64.exe") or (tgt.process.image.path contains "\\nmep_agtconfig.exe" or tgt.process.image.path contains "\\nmep_ctrlagent.exe" or tgt.process.image.path contains "\\nmep_ctrlagentsvc.exe" or tgt.process.image.path contains "\\winpty-agent.exe" or tgt.process.image.path contains "\\winpty-agent64.exe")))
 ```
 
