@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 30-04-2026 03:28:00):
+// Translated content (automatically translated on 01-05-2026 03:37:33):
 event.type="Module Load" and (endpoint.os="windows" and (module.path contains "\\tpsvc.dll" and (not (module.path contains "c:\\program files\\VMWare\\VMWare Tools\\" or module.path contains "c:\\program files (x86)\\VMWare\\VMWare Tools\\" or module.path contains "c:\\program files\\Common Files\\ThinPrint\\" or module.path contains "c:\\program files (x86)\\Common Files\\ThinPrint\\"))))
 ```
 
