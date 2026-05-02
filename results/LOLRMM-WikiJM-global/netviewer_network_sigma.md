@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 01-05-2026 03:28:27):
+// Translated content (automatically translated on 02-05-2026 02:44:53):
 (event.category in ("dns","url","ip")) and (endpoint.os="windows" and (url.address contains "download.cnet.com/Net-Viewer/3000-2370_4-10034828.html" or event.dns.request contains "download.cnet.com/Net-Viewer/3000-2370_4-10034828.html"))
 ```
 
