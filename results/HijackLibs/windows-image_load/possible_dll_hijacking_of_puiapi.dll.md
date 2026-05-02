@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 01-05-2026 03:37:33):
+// Translated content (automatically translated on 02-05-2026 02:53:54):
 event.type="Module Load" and (endpoint.os="windows" and (module.path contains "\\puiapi.dll" and (not (module.path contains "c:\\windows\\system32\\" or module.path contains "c:\\windows\\syswow64\\"))))
 ```
 
