@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 01-05-2026 01:56:54):
+// Translated content (automatically translated on 02-05-2026 01:46:04):
 event.type="Process Creation" and (endpoint.os="windows" and ((src.process.image.path contains "fastclient.exe" or src.process.image.path contains "fastmaster.exe" or src.process.image.path contains "FastViewer.exe") or (tgt.process.image.path contains "fastclient.exe" or tgt.process.image.path contains "fastmaster.exe" or tgt.process.image.path contains "FastViewer.exe")))
 ```
 

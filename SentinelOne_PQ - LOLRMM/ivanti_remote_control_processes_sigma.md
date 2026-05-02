@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 01-05-2026 01:56:54):
+// Translated content (automatically translated on 02-05-2026 01:46:04):
 event.type="Process Creation" and (endpoint.os="windows" and ((src.process.image.path contains "IvantiRemoteControl.exe" or src.process.image.path contains "ArcUI.exe" or src.process.image.path contains "AgentlessRC.exe") or (tgt.process.image.path contains "IvantiRemoteControl.exe" or tgt.process.image.path contains "ArcUI.exe" or tgt.process.image.path contains "AgentlessRC.exe")))
 ```
 
