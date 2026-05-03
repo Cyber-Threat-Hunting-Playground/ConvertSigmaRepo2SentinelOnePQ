@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 02-05-2026 01:46:04):
+// Translated content (automatically translated on 03-05-2026 01:49:11):
 event.type="Process Creation" and (endpoint.os="windows" and (src.process.image.path contains "YandexDisk2.exe" or tgt.process.image.path contains "YandexDisk2.exe"))
 ```
 
