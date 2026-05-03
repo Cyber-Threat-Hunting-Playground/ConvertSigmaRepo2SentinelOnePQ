@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 02-05-2026 01:52:17):
+// Translated content (automatically translated on 03-05-2026 01:55:19):
 event.type="Process Creation" and (endpoint.os="linux" and (tgt.process.cmdline contains " -name .htpasswd" or tgt.process.cmdline contains " -perm -4000 "))
 ```
 
