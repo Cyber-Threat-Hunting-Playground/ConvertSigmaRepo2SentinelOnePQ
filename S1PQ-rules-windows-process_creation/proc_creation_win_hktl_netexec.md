@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 04-05-2026 03:55:15):
+// Translated content (automatically translated on 05-05-2026 03:35:55):
 event.type="Process Creation" and (endpoint.os="windows" and (tgt.process.image.path contains "\\nxc.exe" and (tgt.process.cmdline contains " ftp " or tgt.process.cmdline contains " ldap " or tgt.process.cmdline contains " mssql " or tgt.process.cmdline contains " nfs " or tgt.process.cmdline contains " rdp " or tgt.process.cmdline contains " smb " or tgt.process.cmdline contains " ssh " or tgt.process.cmdline contains " vnc " or tgt.process.cmdline contains " winrm " or tgt.process.cmdline contains " wmi ")))
 ```
 
