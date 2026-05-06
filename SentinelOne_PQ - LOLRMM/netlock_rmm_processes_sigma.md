@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 05-05-2026 01:50:39):
+// Translated content (automatically translated on 06-05-2026 01:49:40):
 event.type="Process Creation" and (endpoint.os="windows" and ((src.process.image.path contains "NetLock_RMM_Agent_Installer.exe" or src.process.image.path contains "NetLock_RMM_User_Process.exe" or src.process.image.path contains "NetLock_RMM_User_UAC.exe") or (tgt.process.image.path contains "NetLock_RMM_Agent_Installer.exe" or tgt.process.image.path contains "NetLock_RMM_User_Process.exe" or tgt.process.image.path contains "NetLock_RMM_User_UAC.exe")))
 ```
 
