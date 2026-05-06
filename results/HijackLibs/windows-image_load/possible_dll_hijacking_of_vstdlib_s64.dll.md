@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 05-05-2026 02:55:08):
+// Translated content (automatically translated on 06-05-2026 03:25:08):
 event.type="Module Load" and (endpoint.os="windows" and (module.path contains "\\vstdlib_s64.dll" and (not (module.path contains "c:\\program files\\Steam\\" or module.path contains "c:\\program files (x86)\\Steam\\"))))
 ```
 
