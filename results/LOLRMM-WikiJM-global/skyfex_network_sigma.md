@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 06-05-2026 02:53:20):
+// Translated content (automatically translated on 07-05-2026 02:54:08):
 (event.category in ("dns","url","ip")) and (endpoint.os="windows" and ((url.address contains "skyfex.com" or url.address contains "deskroll.com" or url.address contains ".deskroll.com") or (event.dns.request contains "skyfex.com" or event.dns.request contains "deskroll.com" or event.dns.request contains ".deskroll.com")))
 ```
 
