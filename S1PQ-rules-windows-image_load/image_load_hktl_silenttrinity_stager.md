@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 06-05-2026 02:34:26):
+// Translated content (automatically translated on 07-05-2026 02:36:36):
 event.type="Module Load" and (endpoint.os="windows" and Description contains "st2stager")
 ```
 
