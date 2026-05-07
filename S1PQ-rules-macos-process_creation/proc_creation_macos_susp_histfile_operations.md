@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 06-05-2026 02:35:15):
+// Translated content (automatically translated on 07-05-2026 02:37:17):
 event.type="Process Creation" and (endpoint.os="osx" and (tgt.process.cmdline contains ".bash_history" or tgt.process.cmdline contains ".zsh_history" or tgt.process.cmdline contains ".zhistory" or tgt.process.cmdline contains ".history" or tgt.process.cmdline contains ".sh_history" or tgt.process.cmdline contains "fish_history"))
 ```
 
