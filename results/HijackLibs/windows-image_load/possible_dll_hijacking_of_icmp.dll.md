@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 06-05-2026 03:25:08):
+// Translated content (automatically translated on 07-05-2026 03:26:13):
 event.type="Module Load" and (endpoint.os="windows" and (module.path contains "\\icmp.dll" and (not (module.path contains "c:\\windows\\system32\\" or module.path contains "c:\\windows\\syswow64\\"))))
 ```
 
