@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 06-05-2026 01:49:40):
+// Translated content (automatically translated on 07-05-2026 01:53:30):
 event.type="Process Creation" and (endpoint.os="windows" and ((src.process.image.path contains "nhostsvc.exe" or src.process.image.path contains "nhstw32.exe" or src.process.image.path contains "nldrw32.exe" or src.process.image.path contains "rmserverconsolemediator.exe") or (tgt.process.image.path contains "nhostsvc.exe" or tgt.process.image.path contains "nhstw32.exe" or tgt.process.image.path contains "nldrw32.exe" or tgt.process.image.path contains "rmserverconsolemediator.exe")))
 ```
 
