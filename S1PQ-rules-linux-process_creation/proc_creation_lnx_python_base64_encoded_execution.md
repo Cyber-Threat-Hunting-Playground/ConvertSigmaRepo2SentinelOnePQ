@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 06-05-2026 01:55:49):
+// Translated content (automatically translated on 07-05-2026 01:59:32):
 event.type="Process Creation" and (endpoint.os="linux" and (tgt.process.image.path contains "/python" and ((tgt.process.cmdline contains "import" and tgt.process.cmdline contains "base64" and tgt.process.cmdline contains " -c") and (tgt.process.cmdline contains ".decode" or tgt.process.cmdline contains "b16decode" or tgt.process.cmdline contains "b32decode" or tgt.process.cmdline contains "b32hexdecode" or tgt.process.cmdline contains "b64decode" or tgt.process.cmdline contains "b85decode" or tgt.process.cmdline contains "z85decode"))))
 ```
 
