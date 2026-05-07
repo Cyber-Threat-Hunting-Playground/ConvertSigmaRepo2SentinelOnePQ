@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 06-05-2026 03:51:55):
+// Translated content (automatically translated on 07-05-2026 03:50:29):
 event.type="Process Creation" and (endpoint.os="windows" and (tgt.process.cmdline contains "gatherNetworkInfo.vbs" and (not (tgt.process.image.path contains "\\cscript.exe" or tgt.process.image.path contains "\\wscript.exe"))))
 ```
 
