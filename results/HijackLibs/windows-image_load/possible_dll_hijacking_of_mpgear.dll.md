@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 07-05-2026 03:26:13):
+// Translated content (automatically translated on 08-05-2026 03:22:59):
 event.type="Module Load" and (endpoint.os="windows" and (module.path contains "\\mpgear.dll" and (not (module.path contains "c:\\program files\\Windows Defender Advanced Threat Protection\\Classification\\" or module.path contains "c:\\program files (x86)\\Windows Defender Advanced Threat Protection\\Classification\\" or module.path="c:\\windows\\system32\\MRT\\*\\*"))))
 ```
 
