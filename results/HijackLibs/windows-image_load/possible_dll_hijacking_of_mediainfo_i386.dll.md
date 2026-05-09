@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 08-05-2026 03:22:59):
+// Translated content (automatically translated on 09-05-2026 03:21:29):
 event.type="Module Load" and (endpoint.os="windows" and (module.path contains "\\mediainfo_i386.dll" and (not (module.path contains "c:\\program files\\MediaInfo\\" or module.path contains "c:\\program files (x86)\\MediaInfo\\"))))
 ```
 

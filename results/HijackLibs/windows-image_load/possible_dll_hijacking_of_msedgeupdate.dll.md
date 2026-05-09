@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 08-05-2026 03:22:59):
+// Translated content (automatically translated on 09-05-2026 03:21:29):
 event.type="Module Load" and (endpoint.os="windows" and (module.path contains "\\msedgeupdate.dll" and (not (module.path="c:\\program files\\Microsoft\\EdgeUpdate\\*\\*" or module.path="c:\\program files (x86)\\Microsoft\\EdgeUpdate\\*\\*" or module.path="c:\\program files\\Microsoft\\Temp\\*\\*" or module.path="c:\\program files (x86)\\Microsoft\\Temp\\*\\*" or module.path="c:\\users\\*\\appdata\\local\\Microsoft\\EdgeUpdate\\*\\*"))))
 ```
 
