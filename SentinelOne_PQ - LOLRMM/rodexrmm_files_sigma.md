@@ -1,0 +1,28 @@
+```sql
+// Translated content (automatically translated on 09-05-2026 01:52:57):
+event.category="file" and (endpoint.os="windows" and tgt.file.path contains "C:\\Program Files\\Rodex\\RodexAgent.exe")
+```
+
+
+# Original Sigma Rule:
+```yaml
+title: Potential Rodex RMM Tool File Activity
+description: |
+    Detects potential files activity of Rodex RMM tool
+author: johnk3r
+date: 2026-04-03
+tags:
+    - attack.execution
+    - attack.t1219
+logsource:
+    product: windows
+    category: file_event
+detection:
+    selection:
+        TargetFilename|endswith:
+            - C:\Program Files\Rodex\RodexAgent.exe
+    condition: selection
+falsepositives:
+    - Legitimate use of Rodex RMM
+level: medium
+```
