@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 08-05-2026 03:41:02):
+// Translated content (automatically translated on 09-05-2026 03:42:36):
 event.type="Process Creation" and (endpoint.os="windows" and (((src.process.image.path contains "\\WmiPrvSE.exe" or src.process.image.path contains "\\svchost.exe" or src.process.image.path contains "\\dllhost.exe") and (tgt.process.image.path contains "\\wab.exe" or tgt.process.image.path contains "\\wabmig.exe")) or (src.process.image.path contains "\\wab.exe" or src.process.image.path contains "\\wabmig.exe")))
 ```
 
