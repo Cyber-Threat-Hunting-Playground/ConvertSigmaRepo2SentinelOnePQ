@@ -15301,6 +15301,34 @@ falsepositives:
     - False positives are likely. This rule is more suitable for hunting than for generating detections.
 
 ---
+title: Possible DLL Hijacking of dnx.onecore.dll
+id: 4220921b-5855-48a3-4834-5b9ff8951405
+status: experimental
+description: Detects possible DLL hijacking of dnx.onecore.dll by looking for suspicious image loads, loading this DLL from unexpected locations.
+references:
+    - https://hijacklibs.net/entries/microsoft/external/dnx.onecore.html
+author: "Swachchhanda Shrawan Poudel"
+date: 2026-04-23
+tags:
+    - attack.defense_evasion
+    - attack.T1574.001
+logsource:
+    product: windows
+    category: image_load
+detection:
+    selection:
+        ImageLoaded: '*\dnx.onecore.dll'
+    filter:
+        ImageLoaded:
+            - 'c:\program files\Microsoft Web Tools\DNX\\\*'
+            - 'c:\program files (x86)\Microsoft Web Tools\DNX\\\*'
+            - 'C:\Users\\*\.dnx\runtimes\\*\bin\\\*'
+
+    condition: selection and not filter
+falsepositives:
+    - False positives are likely. This rule is more suitable for hunting than for generating detections.
+
+---
 title: Possible DLL Hijacking of formdll.dll
 id: 2943741b-3819-48a3-7381-5b9ff8215555
 status: experimental
@@ -15440,6 +15468,34 @@ detection:
             - 'c:\program files (x86)\Windows Kits\10\bin\\*\arm\\*'
             - 'c:\program files\Windows Kits\10\bin\\*\arm64\\*'
             - 'c:\program files (x86)\Windows Kits\10\bin\\*\arm64\\*'
+
+    condition: selection and not filter
+falsepositives:
+    - False positives are likely. This rule is more suitable for hunting than for generating detections.
+
+---
+title: Possible DLL Hijacking of microsoft.windowsappruntime.bootstrap.dll
+id: 9661121b-5855-48a3-4834-5b9ff8192045
+status: experimental
+description: Detects possible DLL hijacking of microsoft.windowsappruntime.bootstrap.dll by looking for suspicious image loads, loading this DLL from unexpected locations.
+references:
+    - https://hijacklibs.net/entries/microsoft/external/microsoft.windowsappruntime.bootstrap.html
+author: "Swachchhanda Shrawan Poudel"
+date: 2026-04-23
+tags:
+    - attack.defense_evasion
+    - attack.T1574.001
+logsource:
+    product: windows
+    category: image_load
+detection:
+    selection:
+        ImageLoaded: '*\microsoft.windowsappruntime.bootstrap.dll'
+    filter:
+        ImageLoaded:
+            - 'c:\windows\system32\\*'
+            - 'c:\program files\\*'
+            - 'c:\program files (x86)\\*'
 
     condition: selection and not filter
 falsepositives:
