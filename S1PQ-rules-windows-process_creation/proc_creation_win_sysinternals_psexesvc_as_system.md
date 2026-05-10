@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 09-05-2026 03:42:36):
+// Translated content (automatically translated on 10-05-2026 03:59:37):
 event.type="Process Creation" and (endpoint.os="windows" and (src.process.image.path="C:\\Windows\\PSEXESVC.exe" and (tgt.process.user contains "AUTHORI" or tgt.process.user contains "AUTORI")))
 ```
 
