@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 10-05-2026 03:59:37):
+// Translated content (automatically translated on 11-05-2026 04:10:38):
 event.type="Process Creation" and (endpoint.os="windows" and ((tgt.process.cmdline contains "Get-WmiObject" or tgt.process.cmdline contains "gwmi" or tgt.process.cmdline contains "Get-CimInstance" or tgt.process.cmdline contains "gcim") and tgt.process.cmdline contains "Win32_ShadowCopy" and (tgt.process.cmdline contains ".Delete()" or tgt.process.cmdline contains "Remove-WmiObject" or tgt.process.cmdline contains "rwmi" or tgt.process.cmdline contains "Remove-CimInstance" or tgt.process.cmdline contains "rcim")))
 ```
 
