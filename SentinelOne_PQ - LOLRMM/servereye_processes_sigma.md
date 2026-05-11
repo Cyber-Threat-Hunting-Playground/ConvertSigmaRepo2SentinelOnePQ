@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 10-05-2026 01:52:27):
+// Translated content (automatically translated on 11-05-2026 02:01:38):
 event.type="Process Creation" and (endpoint.os="windows" and ((src.process.image.path="*servereye*.exe" or src.process.image.path contains "ServiceProxyLocalSys.exe") or (tgt.process.image.path="*servereye*.exe" or tgt.process.image.path contains "ServiceProxyLocalSys.exe")))
 ```
 
