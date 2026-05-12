@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 11-05-2026 04:10:38):
+// Translated content (automatically translated on 12-05-2026 03:54:15):
 event.type="Process Creation" and (endpoint.os="windows" and (tgt.process.cmdline contains " run run-cmd " and (not (src.process.image.path contains "\\cleanapi.exe" or src.process.image.path contains "\\kavremover.exe"))))
 ```
 

@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 11-05-2026 04:10:38):
+// Translated content (automatically translated on 12-05-2026 03:54:15):
 event.type="Process Creation" and (endpoint.os="windows" and (tgt.process.image.path contains "\\SharpEvtMute.exe" or tgt.process.displayName="SharpEvtMute" or (tgt.process.cmdline contains "--Filter \"rule " or tgt.process.cmdline contains "--Encoded --Filter \\\"")))
 ```
 
