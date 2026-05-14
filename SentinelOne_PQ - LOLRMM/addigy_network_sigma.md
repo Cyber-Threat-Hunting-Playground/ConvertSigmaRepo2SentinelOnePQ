@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 13-05-2026 02:03:30):
+// Translated content (automatically translated on 14-05-2026 02:05:57):
 (event.category in ("dns","url","ip")) and (endpoint.os="windows" and ((url.address contains "prod.addigy.com" or url.address contains "grtmprod.addigy.com" or url.address contains "agents.addigy.com") or (event.dns.request contains "prod.addigy.com" or event.dns.request contains "grtmprod.addigy.com" or event.dns.request contains "agents.addigy.com")))
 ```
 
