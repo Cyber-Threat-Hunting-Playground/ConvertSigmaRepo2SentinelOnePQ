@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 13-05-2026 04:01:13):
+// Translated content (automatically translated on 14-05-2026 04:00:17):
 event.category="dns" and (endpoint.os="windows" and (event.dns.request contains "UWhRCA" and event.dns.request contains "BAAAA"))
 ```
 
