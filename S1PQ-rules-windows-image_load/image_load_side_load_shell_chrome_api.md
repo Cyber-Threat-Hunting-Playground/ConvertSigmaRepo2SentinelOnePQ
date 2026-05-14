@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 13-05-2026 02:48:10):
+// Translated content (automatically translated on 14-05-2026 02:49:48):
 event.type="Module Load" and (endpoint.os="windows" and module.path contains "\\ShellChromeAPI.dll")
 ```
 
