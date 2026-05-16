@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 15-05-2026 04:06:41):
+// Translated content (automatically translated on 16-05-2026 03:49:10):
 event.type="Process Creation" and (endpoint.os="windows" and tgt.process.displayName contains "st2stager")
 ```
 
