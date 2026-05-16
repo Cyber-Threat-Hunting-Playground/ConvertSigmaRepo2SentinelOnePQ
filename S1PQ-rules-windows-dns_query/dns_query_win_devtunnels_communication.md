@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 15-05-2026 04:04:56):
+// Translated content (automatically translated on 16-05-2026 03:48:06):
 event.category="dns" and (endpoint.os="windows" and event.dns.request contains ".devtunnels.ms")
 ```
 
