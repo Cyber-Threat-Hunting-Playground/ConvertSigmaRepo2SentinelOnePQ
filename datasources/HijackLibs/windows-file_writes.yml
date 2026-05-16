@@ -1093,6 +1093,33 @@ falsepositives:
     - False positives are likely. This rule is more suitable for hunting than for generating detections.
 
 ---
+                      | replace: "\*","\\\\*"title: Possible preparation for hpbprndiloc.dll DLL Hijacking
+id: 9654502b-7866-48a3-6831-5b9ff8138138
+status: experimental
+description: Detects possible DLL hijacking of hpbprndiloc.dll by looking for suspicious file writes of this DLL, to unexpected locations.
+references:
+    - https://hijacklibs.net/entries/3rd_party/hp/hpbprndiloc.html
+author: "Swachchhanda Shrawan Poudel"
+date: 2026-05-15
+tags:
+    - attack.defense_evasion
+    - attack.T1574.001
+logsource:
+    product: windows
+    category: file_event
+detection:
+    selection:
+        TargetFileName: '*\hpbprndiloc.dll'
+    filter:
+        TargetFileName:
+            - 'c:\program files\Hewlett-Packard\\*\\*'
+            - 'c:\program files (x86)\Hewlett-Packard\\*\\*'
+
+    condition: selection and not filter
+falsepositives:
+    - False positives are likely. This rule is more suitable for hunting than for generating detections.
+
+---
                       | replace: "\*","\\\\*"title: Possible preparation for hpcustpartui.dll DLL Hijacking
 id: 3589892b-8743-48a3-3543-5b9ff8444314
 status: experimental
@@ -7238,6 +7265,34 @@ detection:
             - 'c:\windows\winsxs\*'
             - 'c:\$windows.~bt\*'
             - 'c:\windows\softwaredistribution\*'
+
+    condition: selection and not filter
+falsepositives:
+    - False positives are likely. This rule is more suitable for hunting than for generating detections.
+
+---
+                      | replace: "\*","\\\\*"title: Possible preparation for endpointdlp.dll DLL Hijacking
+id: 9631882b-4228-48a3-4970-5b9ff8863388
+status: experimental
+description: Detects possible DLL hijacking of endpointdlp.dll by looking for suspicious file writes of this DLL, to unexpected locations.
+references:
+    - https://hijacklibs.net/entries/microsoft/built-in/endpointdlp.html
+author: "Jose Oregon"
+date: 2026-05-11
+tags:
+    - attack.defense_evasion
+    - attack.T1574.001
+logsource:
+    product: windows
+    category: file_event
+detection:
+    selection:
+        TargetFileName: '*\endpointdlp.dll'
+    filter:
+        TargetFileName:
+            - 'c:\programdata\Microsoft\Windows Defender\Platform\\*\\*'
+            - 'c:\program files\Windows Defender\\*\\*'
+            - 'c:\program files (x86)\Windows Defender\\*\\*'
 
     condition: selection and not filter
 falsepositives:
