@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 16-05-2026 01:51:31):
+// Translated content (automatically translated on 17-05-2026 01:54:57):
 event.type="Process Creation" and (endpoint.os="windows" and (src.process.image.path contains "\\conhost.exe" and src.process.cmdline contains "--headless"))
 ```
 
