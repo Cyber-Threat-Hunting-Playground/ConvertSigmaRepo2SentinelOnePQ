@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 16-05-2026 03:49:10):
+// Translated content (automatically translated on 17-05-2026 04:06:58):
 event.type="Process Creation" and (endpoint.os="windows" and ((src.process.image.path contains "\\ArcSOC.exe" and (tgt.process.image.path contains "\\cmd.exe" or tgt.process.image.path contains "\\cscript.exe" or tgt.process.image.path contains "\\mshta.exe" or tgt.process.image.path contains "\\powershell.exe" or tgt.process.image.path contains "\\pwsh.exe" or tgt.process.image.path contains "\\regsvr32.exe" or tgt.process.image.path contains "\\rundll32.exe" or tgt.process.image.path contains "\\wmic.exe" or tgt.process.image.path contains "\\wscript.exe")) and (not (tgt.process.image.path contains "\\cmd.exe" and tgt.process.cmdline="cmd.exe /c \"ver\""))))
 ```
 
