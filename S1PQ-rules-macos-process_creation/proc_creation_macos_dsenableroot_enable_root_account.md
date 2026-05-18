@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 17-05-2026 02:48:42):
+// Translated content (automatically translated on 18-05-2026 02:58:35):
 event.type="Process Creation" and (endpoint.os="osx" and (tgt.process.image.path contains "/dsenableroot" and (not tgt.process.cmdline contains " -d ")))
 ```
 
