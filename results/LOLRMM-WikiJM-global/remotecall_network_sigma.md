@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 17-05-2026 03:30:30):
+// Translated content (automatically translated on 18-05-2026 03:42:55):
 (event.category in ("dns","url","ip")) and (endpoint.os="windows" and ((url.address contains ".remotecall.com" or url.address contains ".startsupport.com" or url.address contains "remotecall.com") or (event.dns.request contains ".remotecall.com" or event.dns.request contains ".startsupport.com" or event.dns.request contains "remotecall.com")))
 ```
 
