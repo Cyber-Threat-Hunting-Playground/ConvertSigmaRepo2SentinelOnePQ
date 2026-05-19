@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 18-05-2026 03:54:48):
+// Translated content (automatically translated on 19-05-2026 03:49:09):
 event.type="Module Load" and (endpoint.os="windows" and (module.path contains "\\rastls.dll" and (not (module.path contains "c:\\program files\\Symantec\\Network Connected Devices Auto Setup\\" or module.path contains "c:\\program files (x86)\\Symantec\\Network Connected Devices Auto Setup\\" or module.path contains "c:\\windows\\system32\\"))))
 ```
 

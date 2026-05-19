@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 18-05-2026 03:54:48):
+// Translated content (automatically translated on 19-05-2026 03:49:09):
 event.type="Module Load" and (endpoint.os="windows" and (module.path contains "\\corefoundation.dll" and (not (module.path contains "c:\\program files\\Common Files\\Apple\\Apple Application Support\\" or module.path contains "c:\\program files (x86)\\Common Files\\Apple\\Apple Application Support\\" or module.path contains "c:\\program files\\iTunes\\" or module.path contains "c:\\program files (x86)\\iTunes\\" or module.path contains "c:\\windows\\system32\\"))))
 ```
 
