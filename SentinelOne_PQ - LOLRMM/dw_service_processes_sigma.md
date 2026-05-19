@@ -1,6 +1,6 @@
 ```sql
-// Translated content (automatically translated on 18-05-2026 02:10:08):
-event.type="Process Creation" and (endpoint.os="windows" and ((src.process.image.path contains "dwagsvc.exe" or src.process.image.path contains "dwagent.exe" or src.process.image.path contains "dwagsvc.exe") or (tgt.process.image.path contains "dwagsvc.exe" or tgt.process.image.path contains "dwagent.exe" or tgt.process.image.path contains "dwagsvc.exe")))
+// Translated content (automatically translated on 19-05-2026 02:10:06):
+event.type="Process Creation" and (endpoint.os="windows" and ((src.process.image.path contains "dwagsvc.exe" or src.process.image.path contains "dwagent.exe" or src.process.image.path contains "dwaglnc.exe") or (tgt.process.image.path contains "dwagsvc.exe" or tgt.process.image.path contains "dwagent.exe" or tgt.process.image.path contains "dwaglnc.exe")))
 ```
 
 
@@ -24,14 +24,14 @@ logsource:
 detection:
     selection_parent:
         ParentImage|endswith:
-            - dwagsvc.exe
-            - dwagent.exe
-            - dwagsvc.exe
+            - 'dwagsvc.exe'
+            - 'dwagent.exe'
+            - 'dwaglnc.exe'
     selection_image:
         Image|endswith:
-            - dwagsvc.exe
-            - dwagent.exe
-            - dwagsvc.exe
+            - 'dwagsvc.exe'
+            - 'dwagent.exe'
+            - 'dwaglnc.exe'
     condition: 1 of selection_*
 falsepositives:
     - Legitimate use of DW Service

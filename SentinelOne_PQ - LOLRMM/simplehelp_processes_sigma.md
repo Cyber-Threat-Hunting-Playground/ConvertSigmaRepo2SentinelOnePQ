@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 18-05-2026 02:10:08):
+// Translated content (automatically translated on 19-05-2026 02:10:06):
 event.type="Process Creation" and (endpoint.os="windows" and ((src.process.image.path contains "simplehelpcustomer.exe" or src.process.image.path contains "simpleservice.exe" or src.process.image.path contains "simplegatewayservice.exe" or src.process.image.path contains "remote access.exe" or src.process.image.path contains "windowslauncher.exe" or src.process.image.path contains "spsrv.exe") or (tgt.process.image.path contains "simplehelpcustomer.exe" or tgt.process.image.path contains "simpleservice.exe" or tgt.process.image.path contains "simplegatewayservice.exe" or tgt.process.image.path contains "remote access.exe" or tgt.process.image.path contains "windowslauncher.exe" or tgt.process.image.path contains "spsrv.exe")))
 ```
 
@@ -24,20 +24,20 @@ logsource:
 detection:
     selection_parent:
         ParentImage|endswith:
-            - simplehelpcustomer.exe
-            - simpleservice.exe
-            - simplegatewayservice.exe
-            - remote access.exe
-            - windowslauncher.exe
-            - spsrv.exe
+            - 'simplehelpcustomer.exe'
+            - 'simpleservice.exe'
+            - 'simplegatewayservice.exe'
+            - 'remote access.exe'
+            - 'windowslauncher.exe'
+            - 'spsrv.exe'
     selection_image:
         Image|endswith:
-            - simplehelpcustomer.exe
-            - simpleservice.exe
-            - simplegatewayservice.exe
-            - remote access.exe
-            - windowslauncher.exe
-            - spsrv.exe
+            - 'simplehelpcustomer.exe'
+            - 'simpleservice.exe'
+            - 'simplegatewayservice.exe'
+            - 'remote access.exe'
+            - 'windowslauncher.exe'
+            - 'spsrv.exe'
     condition: 1 of selection_*
 falsepositives:
     - Legitimate use of SimpleHelp

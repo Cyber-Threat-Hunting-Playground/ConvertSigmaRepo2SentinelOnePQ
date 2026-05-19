@@ -1,6 +1,6 @@
 ```sql
-// Translated content (automatically translated on 18-05-2026 02:10:08):
-event.type="Process Creation" and (endpoint.os="windows" and ((src.process.image.path contains "hsloader.exe" or src.process.image.path contains "ihcserver.exe" or src.process.image.path contains "instanthousecall.exe" or src.process.image.path contains "instanthousecall.exe") or (tgt.process.image.path contains "hsloader.exe" or tgt.process.image.path contains "ihcserver.exe" or tgt.process.image.path contains "instanthousecall.exe" or tgt.process.image.path contains "instanthousecall.exe")))
+// Translated content (automatically translated on 19-05-2026 02:10:06):
+event.type="Process Creation" and (endpoint.os="windows" and ((src.process.image.path contains "hsloader.exe" or src.process.image.path contains "InstantHousecall.exe" or src.process.image.path contains "ihcserver.exe" or src.process.image.path contains "instanthousecall.exe") or (tgt.process.image.path contains "hsloader.exe" or tgt.process.image.path contains "InstantHousecall.exe" or tgt.process.image.path contains "ihcserver.exe" or tgt.process.image.path contains "instanthousecall.exe")))
 ```
 
 
@@ -24,16 +24,16 @@ logsource:
 detection:
     selection_parent:
         ParentImage|endswith:
-            - hsloader.exe
-            - ihcserver.exe
-            - instanthousecall.exe
-            - instanthousecall.exe
+            - 'hsloader.exe'
+            - 'InstantHousecall.exe'
+            - 'ihcserver.exe'
+            - 'instanthousecall.exe'
     selection_image:
         Image|endswith:
-            - hsloader.exe
-            - ihcserver.exe
-            - instanthousecall.exe
-            - instanthousecall.exe
+            - 'hsloader.exe'
+            - 'InstantHousecall.exe'
+            - 'ihcserver.exe'
+            - 'instanthousecall.exe'
     condition: 1 of selection_*
 falsepositives:
     - Legitimate use of Instant Housecall

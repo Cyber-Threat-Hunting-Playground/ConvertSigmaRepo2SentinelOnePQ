@@ -1,0 +1,33 @@
+```sql
+// Translated content (automatically translated on 19-05-2026 02:10:06):
+event.category="registry" and (endpoint.os="windows" and (registry.keyPath contains "HKLM\\SOFTWARE\\Faronics" or registry.keyPath contains "HKLM\\SYSTEM\\CurrentControlSet\\Services\\FIStudentSvc"))
+```
+
+
+# Original Sigma Rule:
+```yaml
+title: Potential Faronics Insight RMM Tool Registry Activity
+id: 8ac70337-deb4-5fb1-9479-b5a38e596d9c
+status: experimental
+description: |
+    Detects potential registry activity of Faronics Insight RMM tool
+references:
+    - https://github.com/magicsword-io/LOLRMM
+author: LOLRMM Project
+date: 2026-05-18
+tags:
+    - attack.execution
+    - attack.t1219
+logsource:
+    product: windows
+    category: registry_event
+detection:
+    selection:
+        TargetObject|contains:
+            - 'HKLM\SOFTWARE\Faronics'
+            - 'HKLM\SYSTEM\CurrentControlSet\Services\FIStudentSvc'
+    condition: selection
+falsepositives:
+    - Legitimate use of Faronics Insight
+level: medium
+```

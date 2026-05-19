@@ -1,6 +1,6 @@
 ```sql
-// Translated content (automatically translated on 18-05-2026 02:10:08):
-event.type="Process Creation" and (endpoint.os="windows" and ((src.process.image.path="*Agent_*_RW.exe" or src.process.image.path contains "BASEClient.exe" or src.process.image.path contains "BASupApp.exe" or src.process.image.path contains "BASupSrvc.exe" or src.process.image.path contains "BASupSrvcCnfg.exe" or src.process.image.path contains "BASupTSHelper.exe") or (tgt.process.image.path="*Agent_*_RW.exe" or tgt.process.image.path contains "BASEClient.exe" or tgt.process.image.path contains "BASupApp.exe" or tgt.process.image.path contains "BASupSrvc.exe" or tgt.process.image.path contains "BASupSrvcCnfg.exe" or tgt.process.image.path contains "BASupTSHelper.exe")))
+// Translated content (automatically translated on 19-05-2026 02:10:06):
+event.type="Process Creation" and (endpoint.os="windows" and ((src.process.image.path contains "BASupSrvc.exe" or src.process.image.path contains "winagent.exe" or src.process.image.path contains "BASupApp.exe" or src.process.image.path contains "BASupTSHelper.exe" or src.process.image.path="*Agent_*_RW.exe" or src.process.image.path contains "BASEClient.exe" or src.process.image.path contains "BASupSrvcCnfg.exe") or (tgt.process.image.path contains "BASupSrvc.exe" or tgt.process.image.path contains "winagent.exe" or tgt.process.image.path contains "BASupApp.exe" or tgt.process.image.path contains "BASupTSHelper.exe" or tgt.process.image.path="*Agent_*_RW.exe" or tgt.process.image.path contains "BASEClient.exe" or tgt.process.image.path contains "BASupSrvcCnfg.exe")))
 ```
 
 
@@ -24,20 +24,22 @@ logsource:
 detection:
     selection_parent:
         ParentImage|endswith:
-            - Agent_*_RW.exe
-            - BASEClient.exe
-            - BASupApp.exe
-            - BASupSrvc.exe
-            - BASupSrvcCnfg.exe
-            - BASupTSHelper.exe
+            - 'BASupSrvc.exe'
+            - 'winagent.exe'
+            - 'BASupApp.exe'
+            - 'BASupTSHelper.exe'
+            - 'Agent_*_RW.exe'
+            - 'BASEClient.exe'
+            - 'BASupSrvcCnfg.exe'
     selection_image:
         Image|endswith:
-            - Agent_*_RW.exe
-            - BASEClient.exe
-            - BASupApp.exe
-            - BASupSrvc.exe
-            - BASupSrvcCnfg.exe
-            - BASupTSHelper.exe
+            - 'BASupSrvc.exe'
+            - 'winagent.exe'
+            - 'BASupApp.exe'
+            - 'BASupTSHelper.exe'
+            - 'Agent_*_RW.exe'
+            - 'BASEClient.exe'
+            - 'BASupSrvcCnfg.exe'
     condition: 1 of selection_*
 falsepositives:
     - Legitimate use of N-Able Advanced Monitoring Agent

@@ -1,0 +1,34 @@
+```sql
+// Translated content (automatically translated on 19-05-2026 02:10:06):
+event.category="file" and (endpoint.os="windows" and (tgt.file.path contains "C:\\Program Files\\Faronics\\Faronics Core\\Workstation Agent\\FaronicsCoreAgent.exe" or tgt.file.path contains "C:\\Program Files\\Faronics\\Faronics Core\\Workstation Agent\\CoreAgentService.exe" or tgt.file.path contains "C:\\ProgramData\\Faronics\\FCAForStartupMonitor.msi"))
+```
+
+
+# Original Sigma Rule:
+```yaml
+title: Potential Faronics Core RMM Tool File Activity
+id: 41f9fa7b-0b8b-5f45-9730-b4887b04733e
+status: experimental
+description: |
+    Detects potential files activity of Faronics Core RMM tool
+references:
+    - https://github.com/magicsword-io/LOLRMM
+author: LOLRMM Project
+date: 2026-05-18
+tags:
+    - attack.execution
+    - attack.t1219
+logsource:
+    product: windows
+    category: file_event
+detection:
+    selection:
+        TargetFilename|endswith:
+            - 'C:\Program Files\Faronics\Faronics Core\Workstation Agent\FaronicsCoreAgent.exe'
+            - 'C:\Program Files\Faronics\Faronics Core\Workstation Agent\CoreAgentService.exe'
+            - 'C:\ProgramData\Faronics\FCAForStartupMonitor.msi'
+    condition: selection
+falsepositives:
+    - Legitimate use of Faronics Core
+level: medium
+```

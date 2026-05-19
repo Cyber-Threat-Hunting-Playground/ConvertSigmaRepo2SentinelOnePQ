@@ -1,0 +1,39 @@
+```sql
+// Translated content (automatically translated on 19-05-2026 02:10:06):
+event.type="Process Creation" and (endpoint.os="windows" and ((src.process.image.path contains "Lunixar.exe" or src.process.image.path contains "LunixarRemote.exe" or src.process.image.path contains "LunixarUpdater.exe") or (tgt.process.image.path contains "Lunixar.exe" or tgt.process.image.path contains "LunixarRemote.exe" or tgt.process.image.path contains "LunixarUpdater.exe")))
+```
+
+
+# Original Sigma Rule:
+```yaml
+title: Potential Lunixar RMM Tool Process Activity
+id: db2a7598-e45d-5651-a9af-9fab41d645c4
+status: experimental
+description: |
+    Detects potential processes activity of Lunixar RMM tool
+references:
+    - https://github.com/magicsword-io/LOLRMM
+author: LOLRMM Project
+date: 2026-05-18
+tags:
+    - attack.execution
+    - attack.t1219
+logsource:
+    product: windows
+    category: process_creation
+detection:
+    selection_parent:
+        ParentImage|endswith:
+            - 'Lunixar.exe'
+            - 'LunixarRemote.exe'
+            - 'LunixarUpdater.exe'
+    selection_image:
+        Image|endswith:
+            - 'Lunixar.exe'
+            - 'LunixarRemote.exe'
+            - 'LunixarUpdater.exe'
+    condition: 1 of selection_*
+falsepositives:
+    - Legitimate use of Lunixar
+level: medium
+```

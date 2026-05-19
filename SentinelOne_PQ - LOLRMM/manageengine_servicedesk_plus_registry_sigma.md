@@ -1,0 +1,31 @@
+```sql
+// Translated content (automatically translated on 19-05-2026 02:10:06):
+event.category="registry" and (endpoint.os="windows" and registry.keyPath="*HKLM\\SOFTWARE\\WOW6432Node\\Microsoft\\Windows\\CurrentVersion\\Uninstall\\{*}*")
+```
+
+
+# Original Sigma Rule:
+```yaml
+title: Potential ManageEngine ServiceDesk Plus RMM Tool Registry Activity
+id: bf3087c5-e5b8-550b-8820-d09b743cd72b
+status: experimental
+description: |
+    Detects potential registry activity of ManageEngine ServiceDesk Plus RMM tool
+references:
+    - https://github.com/magicsword-io/LOLRMM
+author: LOLRMM Project
+date: 2026-05-18
+tags:
+    - attack.execution
+    - attack.t1219
+logsource:
+    product: windows
+    category: registry_event
+detection:
+    selection:
+        TargetObject|contains: 'HKLM\SOFTWARE\WOW6432Node\Microsoft\Windows\CurrentVersion\Uninstall\{*}'
+    condition: selection
+falsepositives:
+    - Legitimate use of ManageEngine ServiceDesk Plus
+level: medium
+```

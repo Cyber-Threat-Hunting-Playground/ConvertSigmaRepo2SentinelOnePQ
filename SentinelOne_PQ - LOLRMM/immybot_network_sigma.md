@@ -1,0 +1,33 @@
+```sql
+// Translated content (automatically translated on 19-05-2026 02:10:06):
+(event.category in ("dns","url","ip")) and (endpoint.os="windows" and ((url.address contains ".immy.bot" or url.address contains "immy.bot") or (event.dns.request contains ".immy.bot" or event.dns.request contains "immy.bot")))
+```
+
+
+# Original Sigma Rule:
+```yaml
+title: Potential ImmyBot RMM Tool Network Activity
+id: 8e1e10d1-5868-562d-93f2-d2a28c29068c
+status: experimental
+description: |
+    Detects potential network activity of ImmyBot RMM tool
+references:
+    - https://github.com/magicsword-io/LOLRMM
+author: LOLRMM Project
+date: 2026-05-18
+tags:
+    - attack.execution
+    - attack.t1219
+logsource:
+    product: windows
+    category: network_connection
+detection:
+    selection:
+        DestinationHostname|endswith:
+            - '*.immy.bot'
+            - 'immy.bot'
+    condition: selection
+falsepositives:
+    - Legitimate use of ImmyBot
+level: medium
+```

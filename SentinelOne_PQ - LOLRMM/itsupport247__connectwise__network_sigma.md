@@ -1,31 +1,31 @@
 ```sql
-// Translated content (automatically translated on 30-11-2025 00:59:06):
-(event.category in ("dns","url","ip")) and (endpoint.os="windows" and ((url.address contains ".itsupport247.net" or url.address contains "itsupport247.net") or (event.dns.request contains ".itsupport247.net" or event.dns.request contains "itsupport247.net")))
+// Translated content (automatically translated on 19-05-2026 02:10:06):
+(event.category in ("dns","url","ip")) and (endpoint.os="windows" and (url.address contains ".itsupport247.net" or event.dns.request contains ".itsupport247.net"))
 ```
 
 
 # Original Sigma Rule:
 ```yaml
 title: Potential ITSupport247 (ConnectWise) RMM Tool Network Activity
-logsource:
-  product: windows
-  category: network_connection
-detection:
-  selection:
-    DestinationHostname|endswith:
-    - '*.itsupport247.net'
-    - itsupport247.net
-  condition: selection
-id: 7c677c95-b608-4705-8573-4cf6f0e2432a
+id: 2966b368-1e5b-4abb-9cde-30a84e747b6f
 status: experimental
-description: Detects potential network activity of ITSupport247 (ConnectWise) RMM
-  tool
+description: |
+    Detects potential network activity of ITSupport247 (ConnectWise) RMM tool
+references:
+    - https://github.com/magicsword-io/LOLRMM
 author: LOLRMM Project
-date: 2024/08/07
+date: 2025-12-01
 tags:
-- attack.execution
-- attack.t1219
+    - attack.execution
+    - attack.t1219
+logsource:
+    product: windows
+    category: network_connection
+detection:
+    selection:
+        DestinationHostname|endswith: '*.itsupport247.net'
+    condition: selection
 falsepositives:
-- Legitimate use of ITSupport247 (ConnectWise)
+    - Legitimate use of ITSupport247 (ConnectWise)
 level: medium
 ```

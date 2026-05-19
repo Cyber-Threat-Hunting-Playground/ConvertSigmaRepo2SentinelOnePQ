@@ -1,0 +1,35 @@
+```sql
+// Translated content (automatically translated on 19-05-2026 02:10:06):
+event.category="file" and (endpoint.os="windows" and (tgt.file.path contains "C:\\Program Files (x86)\\FleetDeck Agent\\fleetdeck_agent_svc.exe" or tgt.file.path contains "C:\\Program Files (x86)\\FleetDeck Agent\*\\fleetdeck_agent.exe" or tgt.file.path contains "C:\\Program Files (x86)\\FleetDeck Agent\*\\fd_agent.dll" or tgt.file.path contains "C:\\Windows\\Temp\\FleetDeck\*"))
+```
+
+
+# Original Sigma Rule:
+```yaml
+title: Potential FleetDeck.io RMM Tool File Activity
+id: 21255c6b-9cfa-5dee-9e24-e56723fdb5b5
+status: experimental
+description: |
+    Detects potential files activity of FleetDeck.io RMM tool
+references:
+    - https://github.com/magicsword-io/LOLRMM
+author: LOLRMM Project
+date: 2026-05-18
+tags:
+    - attack.execution
+    - attack.t1219
+logsource:
+    product: windows
+    category: file_event
+detection:
+    selection:
+        TargetFilename|endswith:
+            - 'C:\Program Files (x86)\FleetDeck Agent\fleetdeck_agent_svc.exe'
+            - 'C:\Program Files (x86)\FleetDeck Agent\*\fleetdeck_agent.exe'
+            - 'C:\Program Files (x86)\FleetDeck Agent\*\fd_agent.dll'
+            - 'C:\Windows\Temp\FleetDeck\*'
+    condition: selection
+falsepositives:
+    - Legitimate use of FleetDeck.io
+level: medium
+```

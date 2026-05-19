@@ -1,0 +1,33 @@
+```sql
+// Translated content (automatically translated on 19-05-2026 02:10:06):
+event.type="Process Creation" and (endpoint.os="windows" and (src.process.image.path contains "ManageEngine_ServiceDesk_Plus.exe" or tgt.process.image.path contains "ManageEngine_ServiceDesk_Plus.exe"))
+```
+
+
+# Original Sigma Rule:
+```yaml
+title: Potential ManageEngine ServiceDesk Plus RMM Tool Process Activity
+id: ae1e12fd-17ee-567b-909e-08b137050836
+status: experimental
+description: |
+    Detects potential processes activity of ManageEngine ServiceDesk Plus RMM tool
+references:
+    - https://github.com/magicsword-io/LOLRMM
+author: LOLRMM Project
+date: 2026-05-18
+tags:
+    - attack.execution
+    - attack.t1219
+logsource:
+    product: windows
+    category: process_creation
+detection:
+    selection_parent:
+        ParentImage|endswith: 'ManageEngine_ServiceDesk_Plus.exe'
+    selection_image:
+        Image|endswith: 'ManageEngine_ServiceDesk_Plus.exe'
+    condition: 1 of selection_*
+falsepositives:
+    - Legitimate use of ManageEngine ServiceDesk Plus
+level: medium
+```

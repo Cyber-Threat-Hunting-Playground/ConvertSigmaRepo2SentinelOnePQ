@@ -1,29 +1,33 @@
 ```sql
-// Translated content (automatically translated on 30-11-2025 00:59:06):
-event.category="file" and (endpoint.os="windows" and tgt.file.path contains "%AppData%\\GoTo\\Logs\\goto.log")
+// Translated content (automatically translated on 19-05-2026 02:10:06):
+event.category="file" and (endpoint.os="windows" and (tgt.file.path contains "%AppData%\\GoTo\\Logs\\goto.log" or tgt.file.path contains "%APPDATA%\\GoToMeeting\\G2M.exe"))
 ```
 
 
 # Original Sigma Rule:
 ```yaml
 title: Potential GoToMyPC RMM Tool File Activity
-logsource:
-  product: windows
-  category: file_event
-detection:
-  selection:
-    TargetFilename|endswith:
-    - '%AppData%\GoTo\Logs\goto.log'
-  condition: selection
-id: 987976ac-6971-4332-894a-916a4a631629
+id: 8feba83b-d300-484f-8341-8dd7d798f754
 status: experimental
-description: Detects potential files activity of GoToMyPC RMM tool
+description: |
+    Detects potential files activity of GoToMyPC RMM tool
+references:
+    - https://github.com/magicsword-io/LOLRMM
 author: LOLRMM Project
-date: 2024/08/07
+date: 2025-12-01
 tags:
-- attack.execution
-- attack.t1219
+    - attack.execution
+    - attack.t1219
+logsource:
+    product: windows
+    category: file_event
+detection:
+    selection:
+        TargetFilename|endswith:
+            - '%AppData%\GoTo\Logs\goto.log'
+            - '%APPDATA%\GoToMeeting\G2M.exe'
+    condition: selection
 falsepositives:
-- Legitimate use of GoToMyPC
+    - Legitimate use of GoToMyPC
 level: medium
 ```

@@ -1,31 +1,37 @@
 ```sql
-// Translated content (automatically translated on 30-11-2025 00:59:06):
-(event.category in ("dns","url","ip")) and (endpoint.os="windows" and ((url.address contains "getscreen.me" or url.address contains "GetScreen.me" or url.address contains ".getscreen.me") or (event.dns.request contains "getscreen.me" or event.dns.request contains "GetScreen.me" or event.dns.request contains ".getscreen.me")))
+// Translated content (automatically translated on 19-05-2026 02:10:06):
+(event.category in ("dns","url","ip")) and (endpoint.os="windows" and ((url.address contains "getscreen.me" or url.address contains "GetScreen.me" or url.address contains ".getscreen.me" or url.address contains "go.getscreen.me" or url.address contains "image.getscreen.me" or url.address="*px-*.getscreen.me") or (event.dns.request contains "getscreen.me" or event.dns.request contains "GetScreen.me" or event.dns.request contains ".getscreen.me" or event.dns.request contains "go.getscreen.me" or event.dns.request contains "image.getscreen.me" or event.dns.request="*px-*.getscreen.me")))
 ```
 
 
 # Original Sigma Rule:
 ```yaml
 title: Potential GetScreen RMM Tool Network Activity
-logsource:
-  product: windows
-  category: network_connection
-detection:
-  selection:
-    DestinationHostname|endswith:
-    - getscreen.me
-    - GetScreen.me
-    - '*.getscreen.me'
-  condition: selection
-id: 6d5045f0-ab0c-49ef-aeb8-0fc087eb8bc3
+id: c428ba60-3aba-4069-b9df-793995564173
 status: experimental
-description: Detects potential network activity of GetScreen RMM tool
+description: |
+    Detects potential network activity of GetScreen RMM tool
+references:
+    - https://github.com/magicsword-io/LOLRMM
 author: LOLRMM Project
-date: 2024/08/07
+date: 2025-12-01
 tags:
-- attack.execution
-- attack.t1219
+    - attack.execution
+    - attack.t1219
+logsource:
+    product: windows
+    category: network_connection
+detection:
+    selection:
+        DestinationHostname|endswith:
+            - 'getscreen.me'
+            - 'GetScreen.me'
+            - '*.getscreen.me'
+            - 'go.getscreen.me'
+            - 'image.getscreen.me'
+            - 'px-*.getscreen.me'
+    condition: selection
 falsepositives:
-- Legitimate use of GetScreen
+    - Legitimate use of GetScreen
 level: medium
 ```

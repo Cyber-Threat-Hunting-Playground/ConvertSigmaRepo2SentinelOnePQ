@@ -1,0 +1,33 @@
+```sql
+// Translated content (automatically translated on 19-05-2026 02:10:06):
+event.category="registry" and (endpoint.os="windows" and (registry.keyPath contains "HKCU\\Software\\Microsoft\\Terminal Server Client\\Default" or registry.keyPath contains "HKCU\\Software\\Microsoft\\Terminal Server Client\\Servers"))
+```
+
+
+# Original Sigma Rule:
+```yaml
+title: Potential mstsc.exe (Microsoft Remote Desktop Connection) RMM Tool Registry Activity
+id: ed5828a3-a2fc-5f19-aa9f-a9f9a174afee
+status: experimental
+description: |
+    Detects potential registry activity of mstsc.exe (Microsoft Remote Desktop Connection) RMM tool
+references:
+    - https://github.com/magicsword-io/LOLRMM
+author: LOLRMM Project
+date: 2026-05-18
+tags:
+    - attack.execution
+    - attack.t1219
+logsource:
+    product: windows
+    category: registry_event
+detection:
+    selection:
+        TargetObject|contains:
+            - 'HKCU\Software\Microsoft\Terminal Server Client\Default'
+            - 'HKCU\Software\Microsoft\Terminal Server Client\Servers'
+    condition: selection
+falsepositives:
+    - Legitimate use of mstsc.exe (Microsoft Remote Desktop Connection)
+level: medium
+```

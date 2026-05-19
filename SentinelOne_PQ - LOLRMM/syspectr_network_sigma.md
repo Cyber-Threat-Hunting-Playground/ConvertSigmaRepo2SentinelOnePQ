@@ -1,6 +1,6 @@
 ```sql
-// Translated content (automatically translated on 18-05-2026 02:10:08):
-(event.category in ("dns","url","ip")) and (endpoint.os="windows" and ((url.address contains "atled.syspectr.com" or url.address contains "app.syspectr.com") or (event.dns.request contains "atled.syspectr.com" or event.dns.request contains "app.syspectr.com")))
+// Translated content (automatically translated on 19-05-2026 02:10:06):
+(event.category in ("dns","url","ip")) and (endpoint.os="windows" and ((url.address contains ".syspectr.com" or url.address contains "syspectr.com") or (event.dns.request contains ".syspectr.com" or event.dns.request contains "syspectr.com")))
 ```
 
 
@@ -24,8 +24,8 @@ logsource:
 detection:
     selection:
         DestinationHostname|endswith:
-            - atled.syspectr.com
-            - app.syspectr.com
+            - '*.syspectr.com'
+            - 'syspectr.com'
     condition: selection
 falsepositives:
     - Legitimate use of Syspectr

@@ -1,0 +1,31 @@
+```sql
+// Translated content (automatically translated on 19-05-2026 02:10:06):
+event.category="registry" and (endpoint.os="windows" and registry.keyPath contains "HKLM\\SOFTWARE\\WOW6432Node\\Microsoft\\Windows\\CurrentVersion\\Uninstall\\SimpleSetup")
+```
+
+
+# Original Sigma Rule:
+```yaml
+title: Potential SimpleHelp RMM Tool Registry Activity
+id: dfc87e92-f7a3-58f4-828c-b38173e8e92c
+status: experimental
+description: |
+    Detects potential registry activity of SimpleHelp RMM tool
+references:
+    - https://github.com/magicsword-io/LOLRMM
+author: LOLRMM Project
+date: 2026-05-18
+tags:
+    - attack.execution
+    - attack.t1219
+logsource:
+    product: windows
+    category: registry_event
+detection:
+    selection:
+        TargetObject|contains: 'HKLM\SOFTWARE\WOW6432Node\Microsoft\Windows\CurrentVersion\Uninstall\SimpleSetup'
+    condition: selection
+falsepositives:
+    - Legitimate use of SimpleHelp
+level: medium
+```

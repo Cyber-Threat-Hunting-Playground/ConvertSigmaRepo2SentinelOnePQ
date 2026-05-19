@@ -1,0 +1,41 @@
+```sql
+// Translated content (automatically translated on 19-05-2026 02:10:06):
+event.type="Process Creation" and (endpoint.os="windows" and ((src.process.image.path contains "TiService.exe" or src.process.image.path contains "TiUpdateService.exe" or src.process.image.path contains "si.exe" or src.process.image.path contains "TiAgent.exe") or (tgt.process.image.path contains "TiService.exe" or tgt.process.image.path contains "TiUpdateService.exe" or tgt.process.image.path contains "si.exe" or tgt.process.image.path contains "TiAgent.exe")))
+```
+
+
+# Original Sigma Rule:
+```yaml
+title: Potential TiFLUX RMM Tool Process Activity
+id: 530b3c67-adef-5cd6-bef4-d3bf2e8368d9
+status: experimental
+description: |
+    Detects potential processes activity of TiFLUX RMM tool
+references:
+    - https://github.com/magicsword-io/LOLRMM
+author: LOLRMM Project
+date: 2026-05-18
+tags:
+    - attack.execution
+    - attack.t1219
+logsource:
+    product: windows
+    category: process_creation
+detection:
+    selection_parent:
+        ParentImage|endswith:
+            - 'TiService.exe'
+            - 'TiUpdateService.exe'
+            - 'si.exe'
+            - 'TiAgent.exe'
+    selection_image:
+        Image|endswith:
+            - 'TiService.exe'
+            - 'TiUpdateService.exe'
+            - 'si.exe'
+            - 'TiAgent.exe'
+    condition: 1 of selection_*
+falsepositives:
+    - Legitimate use of TiFLUX
+level: medium
+```

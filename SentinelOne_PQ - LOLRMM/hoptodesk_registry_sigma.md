@@ -1,6 +1,6 @@
 ```sql
-// Translated content (automatically translated on 18-05-2026 02:10:08):
-event.category="registry" and (endpoint.os="windows" and registry.keyPath contains "HKEY_USERS\*_Classes\\HopToDesk\*")
+// Translated content (automatically translated on 19-05-2026 02:10:06):
+event.category="registry" and (endpoint.os="windows" and (registry.keyPath contains "HKEY_CURRENT_USER\\Software\\Classes\\HopToDesk\\shell\\open\\command" or registry.keyPath contains "HKEY_LOCAL_MACHINE\\Software\\Wow6432Node\\Microsoft\\Windows\\CurrentVersion\\Uninstall\\HopToDesk"))
 ```
 
 
@@ -23,7 +23,9 @@ logsource:
     category: registry_event
 detection:
     selection:
-        TargetObject|contains: HKEY_USERS\*_Classes\HopToDesk\*
+        TargetObject|contains:
+            - 'HKEY_CURRENT_USER\Software\Classes\HopToDesk\shell\open\command'
+            - 'HKEY_LOCAL_MACHINE\Software\Wow6432Node\Microsoft\Windows\CurrentVersion\Uninstall\HopToDesk'
     condition: selection
 falsepositives:
     - Legitimate use of HopToDesk

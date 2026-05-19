@@ -1,0 +1,33 @@
+```sql
+// Translated content (automatically translated on 19-05-2026 02:10:06):
+event.category="file" and (endpoint.os="windows" and (tgt.file.path contains "C:\\Program Files\\ManageEngine\\ServiceDesk\*" or tgt.file.path="*C:\\Users\*\\AppData\\Local\\Temp\\{*}\\ManageEngine_ServiceDesk_Plus.exe"))
+```
+
+
+# Original Sigma Rule:
+```yaml
+title: Potential ManageEngine ServiceDesk Plus RMM Tool File Activity
+id: 658deba9-eee6-57df-a85a-e1df304055e9
+status: experimental
+description: |
+    Detects potential files activity of ManageEngine ServiceDesk Plus RMM tool
+references:
+    - https://github.com/magicsword-io/LOLRMM
+author: LOLRMM Project
+date: 2026-05-18
+tags:
+    - attack.execution
+    - attack.t1219
+logsource:
+    product: windows
+    category: file_event
+detection:
+    selection:
+        TargetFilename|endswith:
+            - 'C:\Program Files\ManageEngine\ServiceDesk\*'
+            - 'C:\Users\*\AppData\Local\Temp\{*}\ManageEngine_ServiceDesk_Plus.exe'
+    condition: selection
+falsepositives:
+    - Legitimate use of ManageEngine ServiceDesk Plus
+level: medium
+```

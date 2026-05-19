@@ -1,6 +1,6 @@
 ```sql
-// Translated content (automatically translated on 18-05-2026 02:10:08):
-(event.category in ("dns","url","ip")) and (endpoint.os="windows" and ((url.address contains "user_managed" or url.address contains "wen.laplink.com/product/laplink-gold") or (event.dns.request contains "user_managed" or event.dns.request contains "wen.laplink.com/product/laplink-gold")))
+// Translated content (automatically translated on 19-05-2026 02:10:06):
+(event.category in ("dns","url","ip")) and (endpoint.os="windows" and ((url.address contains "user_managed" or url.address contains "web.laplink.com/product/laplink-gold") or (event.dns.request contains "user_managed" or event.dns.request contains "web.laplink.com/product/laplink-gold")))
 ```
 
 
@@ -24,8 +24,8 @@ logsource:
 detection:
     selection:
         DestinationHostname|endswith:
-            - user_managed
-            - wen.laplink.com/product/laplink-gold
+            - 'user_managed'
+            - 'web.laplink.com/product/laplink-gold'
     condition: selection
 falsepositives:
     - Legitimate use of Laplink Gold

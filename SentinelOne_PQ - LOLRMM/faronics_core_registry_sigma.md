@@ -1,0 +1,35 @@
+```sql
+// Translated content (automatically translated on 19-05-2026 02:10:06):
+event.category="registry" and (endpoint.os="windows" and (registry.keyPath contains "HKLM\\SYSTEM\\CurrentControlSet\\Services\\FaronicsCoreAgent" or registry.keyPath contains "HKLM\\SOFTWARE\\Faronics\\Faronics Core 3" or registry.keyPath contains "HKLM\\SOFTWARE\\WOW6432Node\\Faronics\\Faronics Core 3" or registry.keyPath contains "HKLM\\SOFTWARE\\Faronics"))
+```
+
+
+# Original Sigma Rule:
+```yaml
+title: Potential Faronics Core RMM Tool Registry Activity
+id: 5f88d79c-0060-5a6d-9f00-40385296c27a
+status: experimental
+description: |
+    Detects potential registry activity of Faronics Core RMM tool
+references:
+    - https://github.com/magicsword-io/LOLRMM
+author: LOLRMM Project
+date: 2026-05-18
+tags:
+    - attack.execution
+    - attack.t1219
+logsource:
+    product: windows
+    category: registry_event
+detection:
+    selection:
+        TargetObject|contains:
+            - 'HKLM\SYSTEM\CurrentControlSet\Services\FaronicsCoreAgent'
+            - 'HKLM\SOFTWARE\Faronics\Faronics Core 3'
+            - 'HKLM\SOFTWARE\WOW6432Node\Faronics\Faronics Core 3'
+            - 'HKLM\SOFTWARE\Faronics'
+    condition: selection
+falsepositives:
+    - Legitimate use of Faronics Core
+level: medium
+```

@@ -1,0 +1,41 @@
+```sql
+// Translated content (automatically translated on 19-05-2026 02:10:06):
+event.type="Process Creation" and (endpoint.os="windows" and ((src.process.image.path contains "RodexAgent.exe" or src.process.image.path contains "rodexagent.exe" or src.process.image.path contains "RodexAgent.exe" or src.process.image.path contains "<random>.exe") or (tgt.process.image.path contains "RodexAgent.exe" or tgt.process.image.path contains "rodexagent.exe" or tgt.process.image.path contains "RodexAgent.exe" or tgt.process.image.path contains "<random>.exe")))
+```
+
+
+# Original Sigma Rule:
+```yaml
+title: Potential Rodex RMM RMM Tool Process Activity
+id: e5d84e56-5aeb-5bdd-acf0-3ffe2eff0cbc
+status: experimental
+description: |
+    Detects potential processes activity of Rodex RMM RMM tool
+references:
+    - https://github.com/magicsword-io/LOLRMM
+author: LOLRMM Project
+date: 2026-05-18
+tags:
+    - attack.execution
+    - attack.t1219
+logsource:
+    product: windows
+    category: process_creation
+detection:
+    selection_parent:
+        ParentImage|endswith:
+            - 'RodexAgent.exe'
+            - 'rodexagent.exe'
+            - 'RodexAgent.exe'
+            - '<random>.exe'
+    selection_image:
+        Image|endswith:
+            - 'RodexAgent.exe'
+            - 'rodexagent.exe'
+            - 'RodexAgent.exe'
+            - '<random>.exe'
+    condition: 1 of selection_*
+falsepositives:
+    - Legitimate use of Rodex RMM
+level: medium
+```

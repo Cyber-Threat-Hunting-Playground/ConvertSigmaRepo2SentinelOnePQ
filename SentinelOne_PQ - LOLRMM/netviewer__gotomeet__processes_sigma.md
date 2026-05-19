@@ -1,6 +1,6 @@
 ```sql
-// Translated content (automatically translated on 18-05-2026 02:10:08):
-event.type="Process Creation" and (endpoint.os="windows" and ((src.process.image.path contains "nvClient.exe" or src.process.image.path contains "netviewer.exe") or (tgt.process.image.path contains "nvClient.exe" or tgt.process.image.path contains "netviewer.exe")))
+// Translated content (automatically translated on 19-05-2026 02:10:06):
+event.type="Process Creation" and (endpoint.os="windows" and ((src.process.image.path contains "NetViewer.exe" or src.process.image.path contains "nvClient.exe" or src.process.image.path contains "nvConsole.exe") or (tgt.process.image.path contains "NetViewer.exe" or tgt.process.image.path contains "nvClient.exe" or tgt.process.image.path contains "nvConsole.exe")))
 ```
 
 
@@ -24,12 +24,14 @@ logsource:
 detection:
     selection_parent:
         ParentImage|endswith:
-            - nvClient.exe
-            - netviewer.exe
+            - 'NetViewer.exe'
+            - 'nvClient.exe'
+            - 'nvConsole.exe'
     selection_image:
         Image|endswith:
-            - nvClient.exe
-            - netviewer.exe
+            - 'NetViewer.exe'
+            - 'nvClient.exe'
+            - 'nvConsole.exe'
     condition: 1 of selection_*
 falsepositives:
     - Legitimate use of Netviewer (GoToMeet)

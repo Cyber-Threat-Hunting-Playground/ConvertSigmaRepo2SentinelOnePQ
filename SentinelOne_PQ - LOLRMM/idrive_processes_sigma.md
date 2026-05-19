@@ -1,0 +1,41 @@
+```sql
+// Translated content (automatically translated on 19-05-2026 02:10:06):
+event.type="Process Creation" and (endpoint.os="windows" and ((src.process.image.path contains "IDriveWinSetup.exe" or src.process.image.path contains "IDriveWinSetup.exe" or src.process.image.path contains "IDriveEClassic.exe" or src.process.image.path contains "id_tray.exe") or (tgt.process.image.path contains "IDriveWinSetup.exe" or tgt.process.image.path contains "IDriveWinSetup.exe" or tgt.process.image.path contains "IDriveEClassic.exe" or tgt.process.image.path contains "id_tray.exe")))
+```
+
+
+# Original Sigma Rule:
+```yaml
+title: Potential iDrive RMM Tool Process Activity
+id: 6bab72dd-8b13-56c0-9c96-5fcbaaed10fb
+status: experimental
+description: |
+    Detects potential processes activity of iDrive RMM tool
+references:
+    - https://github.com/magicsword-io/LOLRMM
+author: LOLRMM Project
+date: 2026-05-18
+tags:
+    - attack.execution
+    - attack.t1219
+logsource:
+    product: windows
+    category: process_creation
+detection:
+    selection_parent:
+        ParentImage|endswith:
+            - 'IDriveWinSetup.exe'
+            - 'IDriveWinSetup.exe'
+            - 'IDriveEClassic.exe'
+            - 'id_tray.exe'
+    selection_image:
+        Image|endswith:
+            - 'IDriveWinSetup.exe'
+            - 'IDriveWinSetup.exe'
+            - 'IDriveEClassic.exe'
+            - 'id_tray.exe'
+    condition: 1 of selection_*
+falsepositives:
+    - Legitimate use of iDrive
+level: medium
+```

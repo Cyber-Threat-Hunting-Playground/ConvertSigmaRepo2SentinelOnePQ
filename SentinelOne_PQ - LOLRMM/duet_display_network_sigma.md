@@ -1,0 +1,36 @@
+```sql
+// Translated content (automatically translated on 19-05-2026 02:10:06):
+(event.category in ("dns","url","ip")) and (endpoint.os="windows" and ((url.address contains ".duetdisplay.com" or url.address contains "rdp.duetdisplay.com" or url.address contains "duetdisplay.com" or url.address contains ".itagent.com" or url.address contains "itagent.com") or (event.dns.request contains ".duetdisplay.com" or event.dns.request contains "rdp.duetdisplay.com" or event.dns.request contains "duetdisplay.com" or event.dns.request contains ".itagent.com" or event.dns.request contains "itagent.com")))
+```
+
+
+# Original Sigma Rule:
+```yaml
+title: Potential Duet Display RMM Tool Network Activity
+id: f35b39c2-45b7-5beb-87f4-9586f5ec4374
+status: experimental
+description: |
+    Detects potential network activity of Duet Display RMM tool
+references:
+    - https://github.com/magicsword-io/LOLRMM
+author: LOLRMM Project
+date: 2026-05-18
+tags:
+    - attack.execution
+    - attack.t1219
+logsource:
+    product: windows
+    category: network_connection
+detection:
+    selection:
+        DestinationHostname|endswith:
+            - '*.duetdisplay.com'
+            - 'rdp.duetdisplay.com'
+            - 'duetdisplay.com'
+            - '*.itagent.com'
+            - 'itagent.com'
+    condition: selection
+falsepositives:
+    - Legitimate use of Duet Display
+level: medium
+```

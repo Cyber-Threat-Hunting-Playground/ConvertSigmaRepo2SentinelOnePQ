@@ -1,0 +1,36 @@
+```sql
+// Translated content (automatically translated on 19-05-2026 02:10:06):
+event.category="registry" and (endpoint.os="windows" and (registry.keyPath contains "HKLM\\SOFTWARE\\Faronics" or registry.keyPath contains "HKLM\\SOFTWARE\\WOW6432Node\\Faronics\\Faronics Core 3\\Storage Spaces\\Spaces\\FWA" or registry.keyPath contains "HKLM\\SOFTWARE\\Classes\\AppID\\FWAService.exe" or registry.keyPath contains "HKLM\\SOFTWARE\\Classes\\{359C24F1-51B5-44CE-8F2D-2FBB1A0FE4EA}\\FWA_GUI_Agent" or registry.keyPath contains "HKLM\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Uninstall\\{581F69E6-A5D1-48C7-9F6F-CC333007F7EB}"))
+```
+
+
+# Original Sigma Rule:
+```yaml
+title: Potential Faronics Deploy RMM Tool Registry Activity
+id: ceb174a4-6a05-5d62-ae56-975a512755d0
+status: experimental
+description: |
+    Detects potential registry activity of Faronics Deploy RMM tool
+references:
+    - https://github.com/magicsword-io/LOLRMM
+author: LOLRMM Project
+date: 2026-05-18
+tags:
+    - attack.execution
+    - attack.t1219
+logsource:
+    product: windows
+    category: registry_event
+detection:
+    selection:
+        TargetObject|contains:
+            - 'HKLM\SOFTWARE\Faronics'
+            - 'HKLM\SOFTWARE\WOW6432Node\Faronics\Faronics Core 3\Storage Spaces\Spaces\FWA'
+            - 'HKLM\SOFTWARE\Classes\AppID\FWAService.exe'
+            - 'HKLM\SOFTWARE\Classes\{359C24F1-51B5-44CE-8F2D-2FBB1A0FE4EA}\FWA_GUI_Agent'
+            - 'HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\Uninstall\{581F69E6-A5D1-48C7-9F6F-CC333007F7EB}'
+    condition: selection
+falsepositives:
+    - Legitimate use of Faronics Deploy
+level: medium
+```

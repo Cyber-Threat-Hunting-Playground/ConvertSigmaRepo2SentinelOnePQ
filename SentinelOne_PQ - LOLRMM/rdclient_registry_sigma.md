@@ -1,0 +1,31 @@
+```sql
+// Translated content (automatically translated on 19-05-2026 02:10:06):
+event.category="registry" and (endpoint.os="windows" and registry.keyPath contains "HKLM\\SOFTWARE\\RdClient")
+```
+
+
+# Original Sigma Rule:
+```yaml
+title: Potential RdClient RMM Tool Registry Activity
+id: 1488606f-9adc-50d0-8b3d-c620b0a64ed9
+status: experimental
+description: |
+    Detects potential registry activity of RdClient RMM tool
+references:
+    - https://github.com/magicsword-io/LOLRMM
+author: LOLRMM Project
+date: 2026-05-18
+tags:
+    - attack.execution
+    - attack.t1219
+logsource:
+    product: windows
+    category: registry_event
+detection:
+    selection:
+        TargetObject|contains: 'HKLM\SOFTWARE\RdClient'
+    condition: selection
+falsepositives:
+    - Legitimate use of RdClient
+level: medium
+```

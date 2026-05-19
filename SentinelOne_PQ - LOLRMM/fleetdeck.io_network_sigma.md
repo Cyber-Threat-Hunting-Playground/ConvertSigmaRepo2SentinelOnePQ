@@ -1,29 +1,35 @@
 ```sql
-// Translated content (automatically translated on 30-11-2025 00:59:06):
-(event.category in ("dns","url","ip")) and (endpoint.os="windows" and (url.address contains "fleetdeck.io" or event.dns.request contains "fleetdeck.io"))
+// Translated content (automatically translated on 19-05-2026 02:10:06):
+(event.category in ("dns","url","ip")) and (endpoint.os="windows" and ((url.address contains ".fleetdeck.io" or url.address contains "fleetdeck.io" or url.address contains "agentmqtt.fleetdeck.io" or url.address contains "checkip.zmazonaws.com") or (event.dns.request contains ".fleetdeck.io" or event.dns.request contains "fleetdeck.io" or event.dns.request contains "agentmqtt.fleetdeck.io" or event.dns.request contains "checkip.zmazonaws.com")))
 ```
 
 
 # Original Sigma Rule:
 ```yaml
 title: Potential FleetDeck.io RMM Tool Network Activity
-logsource:
-  product: windows
-  category: network_connection
-detection:
-  selection:
-    DestinationHostname|endswith:
-    - fleetdeck.io
-  condition: selection
-id: 430ac9bb-c9db-4f8f-85c3-b0db33be9d26
+id: 3a490684-6f45-489b-9941-0848466c09d6
 status: experimental
-description: Detects potential network activity of FleetDeck.io RMM tool
+description: |
+    Detects potential network activity of FleetDeck.io RMM tool
+references:
+    - https://github.com/magicsword-io/LOLRMM
 author: LOLRMM Project
-date: 2024/08/07
+date: 2025-12-01
 tags:
-- attack.execution
-- attack.t1219
+    - attack.execution
+    - attack.t1219
+logsource:
+    product: windows
+    category: network_connection
+detection:
+    selection:
+        DestinationHostname|endswith:
+            - '*.fleetdeck.io'
+            - 'fleetdeck.io'
+            - 'agentmqtt.fleetdeck.io'
+            - 'checkip.zmazonaws.com'
+    condition: selection
 falsepositives:
-- Legitimate use of FleetDeck.io
+    - Legitimate use of FleetDeck.io
 level: medium
 ```

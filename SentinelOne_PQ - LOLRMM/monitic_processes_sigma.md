@@ -1,0 +1,37 @@
+```sql
+// Translated content (automatically translated on 19-05-2026 02:10:06):
+event.type="Process Creation" and (endpoint.os="windows" and ((src.process.image.path contains "agent.exe" or src.process.image.path contains "amon.exe") or (tgt.process.image.path contains "agent.exe" or tgt.process.image.path contains "amon.exe")))
+```
+
+
+# Original Sigma Rule:
+```yaml
+title: Potential Monitic RMM Tool Process Activity
+id: 6a539725-fb6f-53d6-9896-b7f4d49fc347
+status: experimental
+description: |
+    Detects potential processes activity of Monitic RMM tool
+references:
+    - https://github.com/magicsword-io/LOLRMM
+author: LOLRMM Project
+date: 2026-05-18
+tags:
+    - attack.execution
+    - attack.t1219
+logsource:
+    product: windows
+    category: process_creation
+detection:
+    selection_parent:
+        ParentImage|endswith:
+            - 'agent.exe'
+            - 'amon.exe'
+    selection_image:
+        Image|endswith:
+            - 'agent.exe'
+            - 'amon.exe'
+    condition: 1 of selection_*
+falsepositives:
+    - Legitimate use of Monitic
+level: medium
+```

@@ -1,6 +1,6 @@
 ```sql
-// Translated content (automatically translated on 18-05-2026 02:10:08):
-event.type="Process Creation" and (endpoint.os="windows" and (src.process.image.path contains "ehorus standalone.exe" or tgt.process.image.path contains "ehorus standalone.exe"))
+// Translated content (automatically translated on 19-05-2026 02:10:06):
+event.type="Process Creation" and (endpoint.os="windows" and ((src.process.image.path contains "ehorus standalone.exe" or src.process.image.path contains "ehorus_agent.exe" or src.process.image.path contains "ehorus_cmd.exe" or src.process.image.path contains "ehorus_launcher.exe" or src.process.image.path contains "ehorus_uit.exe") or (tgt.process.image.path contains "ehorus standalone.exe" or tgt.process.image.path contains "ehorus_agent.exe" or tgt.process.image.path contains "ehorus_cmd.exe" or tgt.process.image.path contains "ehorus_launcher.exe" or tgt.process.image.path contains "ehorus_uit.exe")))
 ```
 
 
@@ -23,9 +23,19 @@ logsource:
     category: process_creation
 detection:
     selection_parent:
-        ParentImage|endswith: ehorus standalone.exe
+        ParentImage|endswith:
+            - 'ehorus standalone.exe'
+            - 'ehorus_agent.exe'
+            - 'ehorus_cmd.exe'
+            - 'ehorus_launcher.exe'
+            - 'ehorus_uit.exe'
     selection_image:
-        Image|endswith: ehorus standalone.exe
+        Image|endswith:
+            - 'ehorus standalone.exe'
+            - 'ehorus_agent.exe'
+            - 'ehorus_cmd.exe'
+            - 'ehorus_launcher.exe'
+            - 'ehorus_uit.exe'
     condition: 1 of selection_*
 falsepositives:
     - Legitimate use of eHorus

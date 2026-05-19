@@ -1,0 +1,31 @@
+```sql
+// Translated content (automatically translated on 19-05-2026 02:10:06):
+event.category="file" and (endpoint.os="windows" and tgt.file.path contains "C:\\temp_phw")
+```
+
+
+# Original Sigma Rule:
+```yaml
+title: Potential PChelpware RMM Tool File Activity
+id: e281b67b-7e79-5707-98ae-7f9974283302
+status: experimental
+description: |
+    Detects potential files activity of PChelpware RMM tool
+references:
+    - https://github.com/magicsword-io/LOLRMM
+author: LOLRMM Project
+date: 2026-05-18
+tags:
+    - attack.execution
+    - attack.t1219
+logsource:
+    product: windows
+    category: file_event
+detection:
+    selection:
+        TargetFilename|endswith: 'C:\temp_phw'
+    condition: selection
+falsepositives:
+    - Legitimate use of PChelpware
+level: medium
+```

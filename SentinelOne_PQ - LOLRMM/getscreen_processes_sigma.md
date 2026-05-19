@@ -1,6 +1,6 @@
 ```sql
-// Translated content (automatically translated on 18-05-2026 02:10:08):
-event.type="Process Creation" and (endpoint.os="windows" and ((src.process.image.path contains "GetScreen.exe" or src.process.image.path contains "getscreen.exe") or (tgt.process.image.path contains "GetScreen.exe" or tgt.process.image.path contains "getscreen.exe")))
+// Translated content (automatically translated on 19-05-2026 02:10:06):
+event.type="Process Creation" and (endpoint.os="windows" and ((src.process.image.path contains "getscreen-x86.exe" or src.process.image.path contains "getscreen.upd.exe") or (tgt.process.image.path contains "getscreen-x86.exe" or tgt.process.image.path contains "getscreen.upd.exe")))
 ```
 
 
@@ -24,12 +24,12 @@ logsource:
 detection:
     selection_parent:
         ParentImage|endswith:
-            - GetScreen.exe
-            - getscreen.exe
+            - 'getscreen-x86.exe'
+            - 'getscreen.upd.exe'
     selection_image:
         Image|endswith:
-            - GetScreen.exe
-            - getscreen.exe
+            - 'getscreen-x86.exe'
+            - 'getscreen.upd.exe'
     condition: 1 of selection_*
 falsepositives:
     - Legitimate use of GetScreen

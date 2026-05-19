@@ -1,0 +1,33 @@
+```sql
+// Translated content (automatically translated on 19-05-2026 02:10:06):
+(event.category in ("dns","url","ip")) and (endpoint.os="windows" and ((url.address contains "api.remsupp.com" or url.address contains "download.remsupp.com") or (event.dns.request contains "api.remsupp.com" or event.dns.request contains "download.remsupp.com")))
+```
+
+
+# Original Sigma Rule:
+```yaml
+title: Potential RemSupp RMM Tool Network Activity
+id: 1583d33f-5977-5d2f-8f8c-dc8f0e4a2c67
+status: experimental
+description: |
+    Detects potential network activity of RemSupp RMM tool
+references:
+    - https://github.com/magicsword-io/LOLRMM
+author: LOLRMM Project
+date: 2026-05-18
+tags:
+    - attack.execution
+    - attack.t1219
+logsource:
+    product: windows
+    category: network_connection
+detection:
+    selection:
+        DestinationHostname|endswith:
+            - 'api.remsupp.com'
+            - 'download.remsupp.com'
+    condition: selection
+falsepositives:
+    - Legitimate use of RemSupp
+level: medium
+```

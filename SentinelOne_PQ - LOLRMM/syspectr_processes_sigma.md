@@ -1,6 +1,6 @@
 ```sql
-// Translated content (automatically translated on 18-05-2026 02:10:08):
-event.type="Process Creation" and (endpoint.os="windows" and ((src.process.image.path="*oo-syspectr*.exe" or src.process.image.path contains "OOSysAgent.exe") or (tgt.process.image.path="*oo-syspectr*.exe" or tgt.process.image.path contains "OOSysAgent.exe")))
+// Translated content (automatically translated on 19-05-2026 02:10:06):
+event.type="Process Creation" and (endpoint.os="windows" and ((src.process.image.path contains "oolocker.exe" or src.process.image.path contains "oosyspectr.exe" or src.process.image.path contains "syspectr.exe") or (tgt.process.image.path contains "oolocker.exe" or tgt.process.image.path contains "oosyspectr.exe" or tgt.process.image.path contains "syspectr.exe")))
 ```
 
 
@@ -24,12 +24,14 @@ logsource:
 detection:
     selection_parent:
         ParentImage|endswith:
-            - oo-syspectr*.exe
-            - OOSysAgent.exe
+            - 'oolocker.exe'
+            - 'oosyspectr.exe'
+            - 'syspectr.exe'
     selection_image:
         Image|endswith:
-            - oo-syspectr*.exe
-            - OOSysAgent.exe
+            - 'oolocker.exe'
+            - 'oosyspectr.exe'
+            - 'syspectr.exe'
     condition: 1 of selection_*
 falsepositives:
     - Legitimate use of Syspectr

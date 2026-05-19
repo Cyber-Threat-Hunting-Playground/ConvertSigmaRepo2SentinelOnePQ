@@ -1,0 +1,35 @@
+```sql
+// Translated content (automatically translated on 19-05-2026 02:10:06):
+event.category="file" and (endpoint.os="windows" and (tgt.file.path contains "C:\\Program Files\\TrustConnect Agent\\TrustConnectAgent.exe" or tgt.file.path contains "C:\\Program Files\\TrustConnect Agent\\config.json" or tgt.file.path contains "C:\\ProgramData\\TrustConnect\*\\config.json" or tgt.file.path contains "C:\\ProgramData\\TrustConnect\*\\device.id"))
+```
+
+
+# Original Sigma Rule:
+```yaml
+title: Potential TrustConnect RMM Tool File Activity
+id: c6cef02c-662a-562a-99a9-24777d2c4d17
+status: experimental
+description: |
+    Detects potential files activity of TrustConnect RMM tool
+references:
+    - https://github.com/magicsword-io/LOLRMM
+author: LOLRMM Project
+date: 2026-05-18
+tags:
+    - attack.execution
+    - attack.t1219
+logsource:
+    product: windows
+    category: file_event
+detection:
+    selection:
+        TargetFilename|endswith:
+            - 'C:\Program Files\TrustConnect Agent\TrustConnectAgent.exe'
+            - 'C:\Program Files\TrustConnect Agent\config.json'
+            - 'C:\ProgramData\TrustConnect\*\config.json'
+            - 'C:\ProgramData\TrustConnect\*\device.id'
+    condition: selection
+falsepositives:
+    - Legitimate use of TrustConnect
+level: medium
+```

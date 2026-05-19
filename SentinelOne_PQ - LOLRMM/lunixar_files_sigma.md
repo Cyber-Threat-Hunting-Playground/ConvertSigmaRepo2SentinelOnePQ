@@ -1,0 +1,37 @@
+```sql
+// Translated content (automatically translated on 19-05-2026 02:10:06):
+event.category="file" and (endpoint.os="windows" and (tgt.file.path contains "C:\\Program Files\\Lunixar\\Lunixar.dll" or tgt.file.path contains "C:\\Program Files\\Lunixar\\Lunixar.Agent.Core.dll" or tgt.file.path contains "C:\\Program Files\\Lunixar\\LunixarRemote.exe" or tgt.file.path contains "C:\\Program Files\\Lunixar\\LunixarRemote.dll" or tgt.file.path contains "C:\\Program Files\\Lunixar\\LunixarUpdater.exe" or tgt.file.path contains "C:\\Program Files\\Lunixar\\LunixarUpdater.dll"))
+```
+
+
+# Original Sigma Rule:
+```yaml
+title: Potential Lunixar RMM Tool File Activity
+id: 73bf29b6-723e-533a-b270-505c1669ca42
+status: experimental
+description: |
+    Detects potential files activity of Lunixar RMM tool
+references:
+    - https://github.com/magicsword-io/LOLRMM
+author: LOLRMM Project
+date: 2026-05-18
+tags:
+    - attack.execution
+    - attack.t1219
+logsource:
+    product: windows
+    category: file_event
+detection:
+    selection:
+        TargetFilename|endswith:
+            - 'C:\Program Files\Lunixar\Lunixar.dll'
+            - 'C:\Program Files\Lunixar\Lunixar.Agent.Core.dll'
+            - 'C:\Program Files\Lunixar\LunixarRemote.exe'
+            - 'C:\Program Files\Lunixar\LunixarRemote.dll'
+            - 'C:\Program Files\Lunixar\LunixarUpdater.exe'
+            - 'C:\Program Files\Lunixar\LunixarUpdater.dll'
+    condition: selection
+falsepositives:
+    - Legitimate use of Lunixar
+level: medium
+```

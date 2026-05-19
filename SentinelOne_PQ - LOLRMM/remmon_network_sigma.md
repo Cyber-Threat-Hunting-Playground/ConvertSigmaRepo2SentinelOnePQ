@@ -1,0 +1,33 @@
+```sql
+// Translated content (automatically translated on 19-05-2026 02:10:06):
+(event.category in ("dns","url","ip")) and (endpoint.os="windows" and ((url.address contains ".remmon.hu" or url.address contains "remmon.hu") or (event.dns.request contains ".remmon.hu" or event.dns.request contains "remmon.hu")))
+```
+
+
+# Original Sigma Rule:
+```yaml
+title: Potential Remmon RMM Tool Network Activity
+id: fbe2543a-9e2d-55c8-863d-a08555e556f1
+status: experimental
+description: |
+    Detects potential network activity of Remmon RMM tool
+references:
+    - https://github.com/magicsword-io/LOLRMM
+author: LOLRMM Project
+date: 2026-05-18
+tags:
+    - attack.execution
+    - attack.t1219
+logsource:
+    product: windows
+    category: network_connection
+detection:
+    selection:
+        DestinationHostname|endswith:
+            - '*.remmon.hu'
+            - 'remmon.hu'
+    condition: selection
+falsepositives:
+    - Legitimate use of Remmon
+level: medium
+```

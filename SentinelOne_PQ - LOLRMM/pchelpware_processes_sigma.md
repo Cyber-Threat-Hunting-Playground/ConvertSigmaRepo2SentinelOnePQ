@@ -1,0 +1,33 @@
+```sql
+// Translated content (automatically translated on 19-05-2026 02:10:06):
+event.type="Process Creation" and (endpoint.os="windows" and (src.process.image.path contains "PcHelpWare_viewer.exe" or tgt.process.image.path contains "PcHelpWare_viewer.exe"))
+```
+
+
+# Original Sigma Rule:
+```yaml
+title: Potential PChelpware RMM Tool Process Activity
+id: 5f13f547-7d1a-5498-b259-cd11c80edac4
+status: experimental
+description: |
+    Detects potential processes activity of PChelpware RMM tool
+references:
+    - https://github.com/magicsword-io/LOLRMM
+author: LOLRMM Project
+date: 2026-05-18
+tags:
+    - attack.execution
+    - attack.t1219
+logsource:
+    product: windows
+    category: process_creation
+detection:
+    selection_parent:
+        ParentImage|endswith: 'PcHelpWare_viewer.exe'
+    selection_image:
+        Image|endswith: 'PcHelpWare_viewer.exe'
+    condition: 1 of selection_*
+falsepositives:
+    - Legitimate use of PChelpware
+level: medium
+```

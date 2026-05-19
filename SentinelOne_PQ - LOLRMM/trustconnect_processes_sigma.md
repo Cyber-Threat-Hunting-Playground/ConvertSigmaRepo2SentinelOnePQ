@@ -1,0 +1,41 @@
+```sql
+// Translated content (automatically translated on 19-05-2026 02:10:06):
+event.type="Process Creation" and (endpoint.os="windows" and ((src.process.image.path contains "TrustConnectAgent.exe" or src.process.image.path contains "TrustConnectAgent.exe" or src.process.image.path contains "TrustConnectAgent.exe" or src.process.image.path contains "DocConnect.Agent.exe") or (tgt.process.image.path contains "TrustConnectAgent.exe" or tgt.process.image.path contains "TrustConnectAgent.exe" or tgt.process.image.path contains "TrustConnectAgent.exe" or tgt.process.image.path contains "DocConnect.Agent.exe")))
+```
+
+
+# Original Sigma Rule:
+```yaml
+title: Potential TrustConnect RMM Tool Process Activity
+id: fd74ee4c-cace-5708-b0b6-c875cf0c99b3
+status: experimental
+description: |
+    Detects potential processes activity of TrustConnect RMM tool
+references:
+    - https://github.com/magicsword-io/LOLRMM
+author: LOLRMM Project
+date: 2026-05-18
+tags:
+    - attack.execution
+    - attack.t1219
+logsource:
+    product: windows
+    category: process_creation
+detection:
+    selection_parent:
+        ParentImage|endswith:
+            - 'TrustConnectAgent.exe'
+            - 'TrustConnectAgent.exe'
+            - 'TrustConnectAgent.exe'
+            - 'DocConnect.Agent.exe'
+    selection_image:
+        Image|endswith:
+            - 'TrustConnectAgent.exe'
+            - 'TrustConnectAgent.exe'
+            - 'TrustConnectAgent.exe'
+            - 'DocConnect.Agent.exe'
+    condition: 1 of selection_*
+falsepositives:
+    - Legitimate use of TrustConnect
+level: medium
+```

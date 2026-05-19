@@ -1,6 +1,6 @@
 ```sql
-// Translated content (automatically translated on 18-05-2026 02:10:08):
-event.type="Process Creation" and (endpoint.os="windows" and (src.process.image.path contains "hoptodesk.exe" or tgt.process.image.path contains "hoptodesk.exe"))
+// Translated content (automatically translated on 19-05-2026 02:10:06):
+event.type="Process Creation" and (endpoint.os="windows" and ((src.process.image.path contains "HopToDesk.exe" or src.process.image.path contains "HopToDesk.exe" or src.process.image.path contains "HopToDesk-Standalone.exe") or (tgt.process.image.path contains "HopToDesk.exe" or tgt.process.image.path contains "HopToDesk.exe" or tgt.process.image.path contains "HopToDesk-Standalone.exe")))
 ```
 
 
@@ -23,9 +23,15 @@ logsource:
     category: process_creation
 detection:
     selection_parent:
-        ParentImage|endswith: hoptodesk.exe
+        ParentImage|endswith:
+            - 'HopToDesk.exe'
+            - 'HopToDesk.exe'
+            - 'HopToDesk-Standalone.exe'
     selection_image:
-        Image|endswith: hoptodesk.exe
+        Image|endswith:
+            - 'HopToDesk.exe'
+            - 'HopToDesk.exe'
+            - 'HopToDesk-Standalone.exe'
     condition: 1 of selection_*
 falsepositives:
     - Legitimate use of HopToDesk

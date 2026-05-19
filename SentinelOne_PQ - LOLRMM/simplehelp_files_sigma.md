@@ -1,0 +1,33 @@
+```sql
+// Translated content (automatically translated on 19-05-2026 02:10:06):
+event.category="file" and (endpoint.os="windows" and (tgt.file.path contains "C:\\ProgramData\\JWrapper-Remote Access\\" or tgt.file.path contains "%APPDATA%\\JWrapper-SimpleSetup\\"))
+```
+
+
+# Original Sigma Rule:
+```yaml
+title: Potential SimpleHelp RMM Tool File Activity
+id: dcfe4fa2-0f13-51fc-b64b-6ea408c804a3
+status: experimental
+description: |
+    Detects potential files activity of SimpleHelp RMM tool
+references:
+    - https://github.com/magicsword-io/LOLRMM
+author: LOLRMM Project
+date: 2026-05-18
+tags:
+    - attack.execution
+    - attack.t1219
+logsource:
+    product: windows
+    category: file_event
+detection:
+    selection:
+        TargetFilename|endswith:
+            - 'C:\ProgramData\JWrapper-Remote Access\'
+            - '%APPDATA%\JWrapper-SimpleSetup\'
+    condition: selection
+falsepositives:
+    - Legitimate use of SimpleHelp
+level: medium
+```

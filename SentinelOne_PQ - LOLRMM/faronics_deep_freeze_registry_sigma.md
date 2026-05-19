@@ -1,0 +1,34 @@
+```sql
+// Translated content (automatically translated on 19-05-2026 02:10:06):
+event.category="registry" and (endpoint.os="windows" and (registry.keyPath contains "HKLM\\SOFTWARE\\Faronics\\Deep Freeze" or registry.keyPath contains "HKLM\\SOFTWARE\\Faronics" or registry.keyPath contains "HKLM\\SYSTEM\\CurrentControlSet\\Services\\DFServ"))
+```
+
+
+# Original Sigma Rule:
+```yaml
+title: Potential Faronics Deep Freeze RMM Tool Registry Activity
+id: 3bdc272a-57b2-581c-8931-475256ee9ac3
+status: experimental
+description: |
+    Detects potential registry activity of Faronics Deep Freeze RMM tool
+references:
+    - https://github.com/magicsword-io/LOLRMM
+author: LOLRMM Project
+date: 2026-05-18
+tags:
+    - attack.execution
+    - attack.t1219
+logsource:
+    product: windows
+    category: registry_event
+detection:
+    selection:
+        TargetObject|contains:
+            - 'HKLM\SOFTWARE\Faronics\Deep Freeze'
+            - 'HKLM\SOFTWARE\Faronics'
+            - 'HKLM\SYSTEM\CurrentControlSet\Services\DFServ'
+    condition: selection
+falsepositives:
+    - Legitimate use of Faronics Deep Freeze
+level: medium
+```

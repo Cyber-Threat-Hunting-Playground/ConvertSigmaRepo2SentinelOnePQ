@@ -1,0 +1,33 @@
+```sql
+// Translated content (automatically translated on 19-05-2026 02:10:06):
+event.category="registry" and (endpoint.os="windows" and (registry.keyPath contains "HKLM\\SOFTWARE\\Microsoft\\Windows NT\\CurrentVersion\\Winlogon\\SpecialAccounts\\UserList\\user" or registry.keyPath contains "HKLM\\SYSTEM\\CurrentControlSet\\Services\\Netbird"))
+```
+
+
+# Original Sigma Rule:
+```yaml
+title: Potential NetBird RMM Tool Registry Activity
+id: 718f2e5b-c501-523e-bd49-8f4458df3937
+status: experimental
+description: |
+    Detects potential registry activity of NetBird RMM tool
+references:
+    - https://github.com/magicsword-io/LOLRMM
+author: LOLRMM Project
+date: 2026-05-18
+tags:
+    - attack.execution
+    - attack.t1219
+logsource:
+    product: windows
+    category: registry_event
+detection:
+    selection:
+        TargetObject|contains:
+            - 'HKLM\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Winlogon\SpecialAccounts\UserList\user'
+            - 'HKLM\SYSTEM\CurrentControlSet\Services\Netbird'
+    condition: selection
+falsepositives:
+    - Legitimate use of NetBird
+level: medium
+```

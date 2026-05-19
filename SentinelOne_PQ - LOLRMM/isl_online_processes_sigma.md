@@ -1,6 +1,6 @@
 ```sql
-// Translated content (automatically translated on 18-05-2026 02:10:08):
-event.type="Process Creation" and (endpoint.os="windows" and ((src.process.image.path contains "islalwaysonmonitor.exe" or src.process.image.path contains "isllight.exe" or src.process.image.path contains "isllightservice.exe" or src.process.image.path contains "ISLLightClient.exe" or src.process.image.path contains "ISLLight.exe") or (tgt.process.image.path contains "islalwaysonmonitor.exe" or tgt.process.image.path contains "isllight.exe" or tgt.process.image.path contains "isllightservice.exe" or tgt.process.image.path contains "ISLLightClient.exe" or tgt.process.image.path contains "ISLLight.exe")))
+// Translated content (automatically translated on 19-05-2026 02:10:06):
+event.type="Process Creation" and (endpoint.os="windows" and ((src.process.image.path contains "ISLLight.exe" or src.process.image.path contains "isllight.exe" or src.process.image.path contains "ISLLightClient.exe" or src.process.image.path contains "ISLLight.exe" or src.process.image.path contains "isllightservice.exe" or src.process.image.path contains "islalwaysonmonitor.exe") or (tgt.process.image.path contains "ISLLight.exe" or tgt.process.image.path contains "isllight.exe" or tgt.process.image.path contains "ISLLightClient.exe" or tgt.process.image.path contains "ISLLight.exe" or tgt.process.image.path contains "isllightservice.exe" or tgt.process.image.path contains "islalwaysonmonitor.exe")))
 ```
 
 
@@ -24,18 +24,20 @@ logsource:
 detection:
     selection_parent:
         ParentImage|endswith:
-            - islalwaysonmonitor.exe
-            - isllight.exe
-            - isllightservice.exe
-            - ISLLightClient.exe
-            - ISLLight.exe
+            - 'ISLLight.exe'
+            - 'isllight.exe'
+            - 'ISLLightClient.exe'
+            - 'ISLLight.exe'
+            - 'isllightservice.exe'
+            - 'islalwaysonmonitor.exe'
     selection_image:
         Image|endswith:
-            - islalwaysonmonitor.exe
-            - isllight.exe
-            - isllightservice.exe
-            - ISLLightClient.exe
-            - ISLLight.exe
+            - 'ISLLight.exe'
+            - 'isllight.exe'
+            - 'ISLLightClient.exe'
+            - 'ISLLight.exe'
+            - 'isllightservice.exe'
+            - 'islalwaysonmonitor.exe'
     condition: 1 of selection_*
 falsepositives:
     - Legitimate use of ISL Online

@@ -1,0 +1,57 @@
+```sql
+// Translated content (automatically translated on 19-05-2026 02:10:06):
+event.category="file" and (endpoint.os="windows" and (tgt.file.path contains "C:\\Program Files (x86)\\TiFLUX\\TiService.exe" or tgt.file.path contains "C:\\Program Files (x86)\\TiFLUX\\TiUpdateService.exe" or tgt.file.path contains "C:\\Program Files (x86)\\TiFLUX\\TiUpdateService.exe.config" or tgt.file.path contains "C:\\Program Files (x86)\\TiFLUX\\si.exe" or tgt.file.path contains "C:\\Program Files (x86)\\TiFLUX\\si.pdb" or tgt.file.path contains "C:\\Program Files (x86)\\TiFLUX\\TiUpdateService.pdb" or tgt.file.path contains "C:\\Program Files (x86)\\TiFLUX\\desktop\\TiAgent.exe" or tgt.file.path contains "C:\\Program Files (x86)\\TiFLUX\\desktop\\TiAgent.exe.config" or tgt.file.path contains "C:\\Program Files (x86)\\TiFLUX\\desktop\\TiAgent.pdb" or tgt.file.path contains "C:\\Program Files (x86)\\TiFLUX\\desktop\\en\\TiAgent.resources.dll" or tgt.file.path contains "C:\\Program Files (x86)\\TiFLUX\\desktop\\pt-BR\\TiAgent.resources.dll" or tgt.file.path contains "C:\\Program Files (x86)\\TiFLUX\\desktop\\es\\TiAgent.resources.dll" or tgt.file.path contains "C:\\Program Files (x86)\\TiFLUX\\dependencies\\ultravnc\*" or tgt.file.path contains "C:\\Program Files (x86)\\TiFLUX\\dependencies\\ultravnc\\driver\\xp64\\driver\\mv2.dll" or tgt.file.path contains "C:\\Program Files (x86)\\TiFLUX\\dependencies\\7zip\\7z.exe" or tgt.file.path contains "C:\\Program Files (x86)\\TiFLUX\\dependencies\\7zip\\7z.dll" or tgt.file.path contains "C:\\Program Files (x86)\\TiFLUX\\dependencies\\7zip\\7zCon.sfx" or tgt.file.path contains "C:\\Program Files (x86)\\TiFLUX\\dependencies\\tar\\tar.exe" or tgt.file.path contains "C:\\Program Files (x86)\\TiFLUX\\dependencies\\tar\\libiconv-2.dll" or tgt.file.path contains "C:\\Program Files (x86)\\TiFLUX\\dependencies\\tar\\libintl-2.dll" or tgt.file.path contains "C:\\Program Files (x86)\\TiFLUX\\dependencies\\sas_generation.reg" or tgt.file.path contains "C:\\Program Files (x86)\\TiFLUX\\dependencies\\sas_registry.reg" or tgt.file.path contains "C:\\Program Files (x86)\\TiFLUX\\dependencies\\sshHostKey.reg" or tgt.file.path contains "C:\\Program Files (x86)\\TiFLUX\\dependencies\\safemode_reboot.reg" or tgt.file.path contains "C:\\Program Files (x86)\\TiFLUX\\scripts\\README" or tgt.file.path contains "%ProgramData%\\Tiflux\*"))
+```
+
+
+# Original Sigma Rule:
+```yaml
+title: Potential TiFLUX RMM Tool File Activity
+id: 16ef5933-15ed-5727-892e-9ef9b7fddb8a
+status: experimental
+description: |
+    Detects potential files activity of TiFLUX RMM tool
+references:
+    - https://github.com/magicsword-io/LOLRMM
+author: LOLRMM Project
+date: 2026-05-18
+tags:
+    - attack.execution
+    - attack.t1219
+logsource:
+    product: windows
+    category: file_event
+detection:
+    selection:
+        TargetFilename|endswith:
+            - 'C:\Program Files (x86)\TiFLUX\TiService.exe'
+            - 'C:\Program Files (x86)\TiFLUX\TiUpdateService.exe'
+            - 'C:\Program Files (x86)\TiFLUX\TiUpdateService.exe.config'
+            - 'C:\Program Files (x86)\TiFLUX\si.exe'
+            - 'C:\Program Files (x86)\TiFLUX\si.pdb'
+            - 'C:\Program Files (x86)\TiFLUX\TiUpdateService.pdb'
+            - 'C:\Program Files (x86)\TiFLUX\desktop\TiAgent.exe'
+            - 'C:\Program Files (x86)\TiFLUX\desktop\TiAgent.exe.config'
+            - 'C:\Program Files (x86)\TiFLUX\desktop\TiAgent.pdb'
+            - 'C:\Program Files (x86)\TiFLUX\desktop\en\TiAgent.resources.dll'
+            - 'C:\Program Files (x86)\TiFLUX\desktop\pt-BR\TiAgent.resources.dll'
+            - 'C:\Program Files (x86)\TiFLUX\desktop\es\TiAgent.resources.dll'
+            - 'C:\Program Files (x86)\TiFLUX\dependencies\ultravnc\*'
+            - 'C:\Program Files (x86)\TiFLUX\dependencies\ultravnc\driver\xp64\driver\mv2.dll'
+            - 'C:\Program Files (x86)\TiFLUX\dependencies\7zip\7z.exe'
+            - 'C:\Program Files (x86)\TiFLUX\dependencies\7zip\7z.dll'
+            - 'C:\Program Files (x86)\TiFLUX\dependencies\7zip\7zCon.sfx'
+            - 'C:\Program Files (x86)\TiFLUX\dependencies\tar\tar.exe'
+            - 'C:\Program Files (x86)\TiFLUX\dependencies\tar\libiconv-2.dll'
+            - 'C:\Program Files (x86)\TiFLUX\dependencies\tar\libintl-2.dll'
+            - 'C:\Program Files (x86)\TiFLUX\dependencies\sas_generation.reg'
+            - 'C:\Program Files (x86)\TiFLUX\dependencies\sas_registry.reg'
+            - 'C:\Program Files (x86)\TiFLUX\dependencies\sshHostKey.reg'
+            - 'C:\Program Files (x86)\TiFLUX\dependencies\safemode_reboot.reg'
+            - 'C:\Program Files (x86)\TiFLUX\scripts\README'
+            - '%ProgramData%\Tiflux\*'
+    condition: selection
+falsepositives:
+    - Legitimate use of TiFLUX
+level: medium
+```

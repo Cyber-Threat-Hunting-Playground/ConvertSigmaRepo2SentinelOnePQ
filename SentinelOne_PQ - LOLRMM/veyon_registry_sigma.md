@@ -1,0 +1,33 @@
+```sql
+// Translated content (automatically translated on 19-05-2026 02:10:06):
+event.category="registry" and (endpoint.os="windows" and (registry.keyPath contains "HKLM\\SOFTWARE\\Veyon Solutions" or registry.keyPath contains "HKLM\\SYSTEM\\CurrentControlSet\\Services\\VeyonService"))
+```
+
+
+# Original Sigma Rule:
+```yaml
+title: Potential Veyon RMM Tool Registry Activity
+id: 98ca1fe3-5e9c-573e-a2d7-f3551edc1291
+status: experimental
+description: |
+    Detects potential registry activity of Veyon RMM tool
+references:
+    - https://github.com/magicsword-io/LOLRMM
+author: LOLRMM Project
+date: 2026-05-18
+tags:
+    - attack.execution
+    - attack.t1219
+logsource:
+    product: windows
+    category: registry_event
+detection:
+    selection:
+        TargetObject|contains:
+            - 'HKLM\SOFTWARE\Veyon Solutions'
+            - 'HKLM\SYSTEM\CurrentControlSet\Services\VeyonService'
+    condition: selection
+falsepositives:
+    - Legitimate use of Veyon
+level: medium
+```

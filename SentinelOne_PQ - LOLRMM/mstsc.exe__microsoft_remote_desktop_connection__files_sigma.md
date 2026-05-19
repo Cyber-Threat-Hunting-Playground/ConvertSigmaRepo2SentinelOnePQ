@@ -1,0 +1,33 @@
+```sql
+// Translated content (automatically translated on 19-05-2026 02:10:06):
+event.category="file" and (endpoint.os="windows" and (tgt.file.path contains "%USERPROFILE%\\Documents\\Default.rdp" or tgt.file.path contains "%SystemRoot%\\System32\\termsrv.exe"))
+```
+
+
+# Original Sigma Rule:
+```yaml
+title: Potential mstsc.exe (Microsoft Remote Desktop Connection) RMM Tool File Activity
+id: 772aba31-9834-5373-a019-4f51715ab7a2
+status: experimental
+description: |
+    Detects potential files activity of mstsc.exe (Microsoft Remote Desktop Connection) RMM tool
+references:
+    - https://github.com/magicsword-io/LOLRMM
+author: LOLRMM Project
+date: 2026-05-18
+tags:
+    - attack.execution
+    - attack.t1219
+logsource:
+    product: windows
+    category: file_event
+detection:
+    selection:
+        TargetFilename|endswith:
+            - '%USERPROFILE%\Documents\Default.rdp'
+            - '%SystemRoot%\System32\termsrv.exe'
+    condition: selection
+falsepositives:
+    - Legitimate use of mstsc.exe (Microsoft Remote Desktop Connection)
+level: medium
+```
