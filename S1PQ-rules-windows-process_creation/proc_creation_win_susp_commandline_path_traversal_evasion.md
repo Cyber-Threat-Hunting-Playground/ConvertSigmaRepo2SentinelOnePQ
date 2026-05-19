@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 18-05-2026 04:19:28):
+// Translated content (automatically translated on 19-05-2026 04:14:48):
 event.type="Process Creation" and (endpoint.os="windows" and (((tgt.process.image.path contains "\\Windows\\" and (tgt.process.cmdline contains "\\..\\Windows\\" or tgt.process.cmdline contains "\\..\\System32\\" or tgt.process.cmdline contains "\\..\\..\\")) or tgt.process.cmdline contains ".exe\\..\\") and (not (tgt.process.cmdline contains "\\Google\\Drive\\googledrivesync.exe\\..\\" or tgt.process.cmdline contains "\\Citrix\\Virtual Smart Card\\Citrix.Authentication.VirtualSmartcard.Launcher.exe\\..\\"))))
 ```
 
