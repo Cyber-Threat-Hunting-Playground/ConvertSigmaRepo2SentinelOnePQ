@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 19-05-2026 03:49:09):
+// Translated content (automatically translated on 20-05-2026 03:49:10):
 event.type="Module Load" and (endpoint.os="windows" and (module.path contains "\\endpointdlp.dll" and (not (module.path="c:\\programdata\\Microsoft\\Windows Defender\\Platform\\*\\*" or module.path="c:\\program files\\Windows Defender\\*\\*" or module.path="c:\\program files (x86)\\Windows Defender\\*\\*"))))
 ```
 
