@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 20-05-2026 02:08:58):
+// Translated content (automatically translated on 21-05-2026 02:08:02):
 event.type="Process Creation" and (endpoint.os="windows" and ((src.process.image.path contains "agent-installer-any.exe" or src.process.image.path contains "hbrm-x64.exe" or src.process.image.path contains "hbrm-updater-x64.exe") or (tgt.process.image.path contains "agent-installer-any.exe" or tgt.process.image.path contains "hbrm-x64.exe" or tgt.process.image.path contains "hbrm-updater-x64.exe")))
 ```
 
