@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 20-05-2026 04:15:46):
+// Translated content (automatically translated on 21-05-2026 04:23:38):
 event.type="Process Creation" and (endpoint.os="windows" and ((tgt.process.image.path contains "\\powershell.exe" or tgt.process.image.path contains "\\pwsh.exe") and (tgt.process.cmdline contains "Add-PSSnapin" and tgt.process.cmdline contains "Get-Recipient" and tgt.process.cmdline contains "-ExpandProperty" and tgt.process.cmdline contains "EmailAddresses" and tgt.process.cmdline contains "SmtpAddress" and tgt.process.cmdline contains "-hidetableheaders")))
 ```
 
