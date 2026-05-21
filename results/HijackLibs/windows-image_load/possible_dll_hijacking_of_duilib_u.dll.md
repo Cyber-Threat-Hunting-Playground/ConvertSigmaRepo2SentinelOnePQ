@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 20-05-2026 03:49:10):
+// Translated content (automatically translated on 21-05-2026 03:57:50):
 event.type="Module Load" and (endpoint.os="windows" and (module.path contains "\\duilib_u.dll" and (not (module.path contains "c:\\program files\\AnyViewer\\" or module.path contains "c:\\program files (x86)\\AnyViewer\\"))))
 ```
 
