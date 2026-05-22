@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 21-05-2026 04:23:38):
+// Translated content (automatically translated on 22-05-2026 04:18:45):
 event.type="Process Creation" and (endpoint.os="windows" and (tgt.process.image.path contains "\\TacticalAgent\\tacticalrmm.exe" and (tgt.process.cmdline contains "--api" and tgt.process.cmdline contains "--auth" and tgt.process.cmdline contains "--client-id" and tgt.process.cmdline contains "--site-id" and tgt.process.cmdline contains "--agent-type")))
 ```
 
