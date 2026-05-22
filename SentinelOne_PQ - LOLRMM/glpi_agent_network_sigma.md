@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 21-05-2026 02:08:02):
+// Translated content (automatically translated on 22-05-2026 02:10:32):
 (event.category in ("dns","url","ip")) and (endpoint.os="windows" and ((url.address contains "N/A (listens on httpd-ip — default 0.0.0.0 — on the agent host)" or url.address contains "<operator-configured GLPI server>" or url.address contains "glpi-project.org" or url.address contains "www.glpi-project.org" or url.address contains "nightly.glpi-project.org" or url.address contains "forum.glpi-project.org" or url.address contains "glpi-network.com" or url.address contains "services.glpi-network.com" or url.address contains "github.com" or url.address contains "objects.githubusercontent.com") or (event.dns.request contains "N/A (listens on httpd-ip — default 0.0.0.0 — on the agent host)" or event.dns.request contains "<operator-configured GLPI server>" or event.dns.request contains "glpi-project.org" or event.dns.request contains "www.glpi-project.org" or event.dns.request contains "nightly.glpi-project.org" or event.dns.request contains "forum.glpi-project.org" or event.dns.request contains "glpi-network.com" or event.dns.request contains "services.glpi-network.com" or event.dns.request contains "github.com" or event.dns.request contains "objects.githubusercontent.com")))
 ```
 

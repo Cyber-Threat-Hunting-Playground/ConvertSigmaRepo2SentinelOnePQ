@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 21-05-2026 02:08:02):
+// Translated content (automatically translated on 22-05-2026 02:10:32):
 event.category="file" and (endpoint.os="windows" and (tgt.file.path contains "C:\\Program Files (x86)\\Microsoft Garage\\Mouse without Borders\\MouseWithoutBorders.exe" or tgt.file.path contains "C:\\Program Files (x86)\\Microsoft Garage\\Mouse without Borders\\MouseWithoutBordersSvc.exe" or tgt.file.path contains "C:\\Program Files (x86)\\Microsoft Garage\\Mouse without Borders\\MouseWithoutBordersHelper.exe"))
 ```
 

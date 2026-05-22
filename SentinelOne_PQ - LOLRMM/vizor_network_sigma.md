@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 21-05-2026 02:08:02):
+// Translated content (automatically translated on 22-05-2026 02:10:32):
 (event.category in ("dns","url","ip")) and (endpoint.os="windows" and ((url.address contains "<operator-configured Vector Discovery Server URL>" or url.address contains "vizor.cloud" or url.address contains "www.vizor.cloud" or url.address contains "vector-networks.com" or url.address contains "www.vector-networks.com" or url.address contains "metaquest.com" or url.address contains "mail.metaquest.com" or url.address contains "www.metaquest.com" or url.address contains "downloads.vector-networks.com" or url.address contains "www.vector-networks.com") or (event.dns.request contains "<operator-configured Vector Discovery Server URL>" or event.dns.request contains "vizor.cloud" or event.dns.request contains "www.vizor.cloud" or event.dns.request contains "vector-networks.com" or event.dns.request contains "www.vector-networks.com" or event.dns.request contains "metaquest.com" or event.dns.request contains "mail.metaquest.com" or event.dns.request contains "www.metaquest.com" or event.dns.request contains "downloads.vector-networks.com" or event.dns.request contains "www.vector-networks.com")))
 ```
 
