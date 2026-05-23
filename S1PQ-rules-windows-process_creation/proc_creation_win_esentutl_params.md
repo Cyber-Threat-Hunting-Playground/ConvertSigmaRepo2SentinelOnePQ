@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 22-05-2026 04:18:45):
+// Translated content (automatically translated on 23-05-2026 03:57:10):
 event.type="Process Creation" and (endpoint.os="windows" and (tgt.process.cmdline contains "esentutl" and tgt.process.cmdline contains " /p"))
 ```
 
