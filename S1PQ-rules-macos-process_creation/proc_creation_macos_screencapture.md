@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 23-05-2026 02:44:07):
+// Translated content (automatically translated on 24-05-2026 02:56:09):
 event.type="Process Creation" and (endpoint.os="osx" and tgt.process.image.path="/usr/sbin/screencapture")
 ```
 
