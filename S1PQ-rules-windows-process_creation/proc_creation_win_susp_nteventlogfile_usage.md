@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 23-05-2026 03:57:10):
+// Translated content (automatically translated on 24-05-2026 04:17:44):
 event.type="Process Creation" and (endpoint.os="windows" and (tgt.process.cmdline contains "Win32_NTEventlogFile" and (tgt.process.cmdline contains ".BackupEventlog(" or tgt.process.cmdline contains ".ChangeSecurityPermissions(" or tgt.process.cmdline contains ".ChangeSecurityPermissionsEx(" or tgt.process.cmdline contains ".ClearEventLog(" or tgt.process.cmdline contains ".Delete(" or tgt.process.cmdline contains ".DeleteEx(" or tgt.process.cmdline contains ".Rename(" or tgt.process.cmdline contains ".TakeOwnerShip(" or tgt.process.cmdline contains ".TakeOwnerShipEx(")))
 ```
 
