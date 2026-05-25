@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 24-05-2026 03:51:50):
+// Translated content (automatically translated on 25-05-2026 04:03:30):
 event.type="Module Load" and (endpoint.os="windows" and module.path contains "\\wow64log.dll")
 ```
 
