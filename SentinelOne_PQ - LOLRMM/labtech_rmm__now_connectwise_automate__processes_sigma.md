@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 24-05-2026 02:07:00):
+// Translated content (automatically translated on 25-05-2026 02:14:55):
 event.type="Process Creation" and (endpoint.os="windows" and ((src.process.image.path contains "ltsvc.exe" or src.process.image.path contains "ltsvcmon.exe" or src.process.image.path contains "lttray.exe") or (tgt.process.image.path contains "ltsvc.exe" or tgt.process.image.path contains "ltsvcmon.exe" or tgt.process.image.path contains "lttray.exe")))
 ```
 
