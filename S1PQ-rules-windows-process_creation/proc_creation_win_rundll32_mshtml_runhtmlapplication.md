@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 25-05-2026 04:40:00):
+// Translated content (automatically translated on 26-05-2026 04:14:50):
 event.type="Process Creation" and (endpoint.os="windows" and ((tgt.process.cmdline contains "\\..\\" and tgt.process.cmdline contains "mshtml") and (tgt.process.cmdline contains "#135" or tgt.process.cmdline contains "RunHTMLApplication")))
 ```
 
