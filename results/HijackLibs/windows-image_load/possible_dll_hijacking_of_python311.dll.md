@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 25-05-2026 04:03:30):
+// Translated content (automatically translated on 26-05-2026 03:49:13):
 event.type="Module Load" and (endpoint.os="windows" and (module.path contains "\\python311.dll" and (not (module.path contains "c:\\program files\\Python311\\" or module.path contains "c:\\program files (x86)\\Python311\\" or module.path="c:\\users\\*\\appdata\\local\\Programs\\Python\\Python311\\*"))))
 ```
 
