@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 25-05-2026 02:14:55):
+// Translated content (automatically translated on 26-05-2026 02:05:43):
 event.category="file" and (endpoint.os="windows" and tgt.file.path contains "C:\\Program Files\\bsag\\bma\\bma.exe")
 ```
 
