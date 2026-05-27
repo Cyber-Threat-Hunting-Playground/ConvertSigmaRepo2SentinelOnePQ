@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 26-05-2026 04:14:50):
+// Translated content (automatically translated on 27-05-2026 04:37:58):
 event.type="Process Creation" and (endpoint.os="windows" and (tgt.process.image.path contains "\\ditsnap.exe" or tgt.process.cmdline contains "ditsnap.exe"))
 ```
 

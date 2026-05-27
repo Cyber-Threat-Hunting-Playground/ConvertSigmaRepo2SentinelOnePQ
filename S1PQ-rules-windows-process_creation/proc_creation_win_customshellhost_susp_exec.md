@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 26-05-2026 04:14:50):
+// Translated content (automatically translated on 27-05-2026 04:37:58):
 event.type="Process Creation" and (endpoint.os="windows" and (src.process.image.path contains "\\CustomShellHost.exe" and (not tgt.process.image.path="C:\\Windows\\explorer.exe")))
 ```
 
