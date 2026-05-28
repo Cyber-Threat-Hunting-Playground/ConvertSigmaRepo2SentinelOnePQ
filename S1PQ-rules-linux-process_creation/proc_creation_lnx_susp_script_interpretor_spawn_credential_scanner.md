@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 27-05-2026 02:32:30):
+// Translated content (automatically translated on 28-05-2026 02:07:12):
 event.type="Process Creation" and (endpoint.os="linux" and ((src.process.image.path contains "/node" or src.process.image.path contains "/bun") and ((tgt.process.image.path contains "/trufflehog" or tgt.process.image.path contains "/gitleaks") or (tgt.process.cmdline contains "trufflehog" or tgt.process.cmdline contains "gitleaks"))))
 ```
 
