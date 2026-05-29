@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 28-05-2026 04:17:52):
+// Translated content (automatically translated on 29-05-2026 04:20:23):
 event.type="Process Creation" and (endpoint.os="windows" and ((tgt.process.cmdline contains " -ma " or tgt.process.cmdline contains " /ma " or tgt.process.cmdline contains " –ma " or tgt.process.cmdline contains " —ma " or tgt.process.cmdline contains " ―ma " or tgt.process.cmdline contains " -mm " or tgt.process.cmdline contains " /mm " or tgt.process.cmdline contains " –mm " or tgt.process.cmdline contains " —mm " or tgt.process.cmdline contains " ―mm " or tgt.process.cmdline contains " -mp " or tgt.process.cmdline contains " /mp " or tgt.process.cmdline contains " –mp " or tgt.process.cmdline contains " —mp " or tgt.process.cmdline contains " ―mp ") and (tgt.process.cmdline contains " ls" or tgt.process.cmdline contains " keyiso" or tgt.process.cmdline contains " samss")))
 ```
 
