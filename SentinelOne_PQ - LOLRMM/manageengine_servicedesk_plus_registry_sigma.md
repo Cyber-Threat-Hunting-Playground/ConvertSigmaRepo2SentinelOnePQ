@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 30-05-2026 01:59:51):
+// Translated content (automatically translated on 31-05-2026 02:27:14):
 event.category="registry" and (endpoint.os="windows" and registry.keyPath="*HKLM\\SOFTWARE\\WOW6432Node\\Microsoft\\Windows\\CurrentVersion\\Uninstall\\{*}*")
 ```
 
