@@ -17,8 +17,8 @@ detection:
         TargetFileName: '*\webui.dll'
     filter:
         TargetFileName:
-            - 'c:\program files\iTop Screen Recorder\*'
-            - 'c:\program files (x86)\iTop Screen Recorder\*'
+            - 'c:\program files\iTop Screen Recorder\\*'
+            - 'c:\program files (x86)\iTop Screen Recorder\\*'
 
     condition: selection and not filter
 falsepositives:

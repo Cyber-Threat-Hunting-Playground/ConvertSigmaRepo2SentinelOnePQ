@@ -1,0 +1,27 @@
+title: Possible preparation for dnx.onecore.dll DLL Hijacking
+id: 4220922b-5855-48a3-4834-5b9ff8951405
+status: experimental
+description: Detects possible DLL hijacking of dnx.onecore.dll by looking for suspicious file writes of this DLL, to unexpected locations.
+references:
+    - https://hijacklibs.net/entries/microsoft/external/dnx.onecore.html
+author: "Swachchhanda Shrawan Poudel"
+date: 2026-04-23
+tags:
+    - attack.defense_evasion
+    - attack.T1574.001
+logsource:
+    product: windows
+    category: file_event
+detection:
+    selection:
+        TargetFileName: '*\dnx.onecore.dll'
+    filter:
+        TargetFileName:
+            - 'c:\program files\Microsoft Web Tools\DNX\\\*'
+            - 'c:\program files (x86)\Microsoft Web Tools\DNX\\\*'
+            - 'C:\Users\\*\.dnx\runtimes\\*\bin\\\*'
+
+    condition: selection and not filter
+falsepositives:
+    - False positives are likely. This rule is more suitable for hunting than for generating detections.
+

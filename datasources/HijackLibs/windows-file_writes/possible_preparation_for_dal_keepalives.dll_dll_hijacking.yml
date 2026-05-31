@@ -17,8 +17,8 @@ detection:
         TargetFileName: '*\dal_keepalives.dll'
     filter:
         TargetFileName:
-            - 'c:\program files\audinate\shared files\*'
-            - 'c:\program files (x86)\audinate\shared files\*'
+            - 'c:\program files\audinate\shared files\\*'
+            - 'c:\program files (x86)\audinate\shared files\\*'
 
     condition: selection and not filter
 falsepositives:

@@ -17,8 +17,8 @@ detection:
         TargetFileName: '*\hpcustpartui.dll'
     filter:
         TargetFileName:
-            - 'c:\program files\HP\*'
-            - 'c:\program files (x86)\HP\*'
+            - 'c:\program files\HP\\*'
+            - 'c:\program files (x86)\HP\\*'
 
     condition: selection and not filter
 falsepositives:

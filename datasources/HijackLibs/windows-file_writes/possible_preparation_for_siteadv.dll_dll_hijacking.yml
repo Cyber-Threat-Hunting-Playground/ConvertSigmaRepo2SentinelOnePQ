@@ -17,8 +17,8 @@ detection:
         TargetFileName: '*\siteadv.dll'
     filter:
         TargetFileName:
-            - 'c:\program files\SiteAdvisor\*\*'
-            - 'c:\program files (x86)\SiteAdvisor\*\*'
+            - 'c:\program files\SiteAdvisor\\*\\*'
+            - 'c:\program files (x86)\SiteAdvisor\\*\\*'
 
     condition: selection and not filter
 falsepositives:

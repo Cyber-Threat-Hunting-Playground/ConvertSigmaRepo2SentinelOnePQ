@@ -17,8 +17,8 @@ detection:
         TargetFileName: '*\tmdbglog.dll'
     filter:
         TargetFileName:
-            - 'c:\program files\Trend Micro\Titanium\*'
-            - 'c:\program files (x86)\Trend Micro\Titanium\*'
+            - 'c:\program files\Trend Micro\Titanium\\*'
+            - 'c:\program files (x86)\Trend Micro\Titanium\\*'
 
     condition: selection and not filter
 falsepositives:

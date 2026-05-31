@@ -1,0 +1,22 @@
+title: Possible preparation for dsp_bridge_x64.dll DLL Hijacking
+id: 3179262b-3028-48a3-8802-5b9ff8680997
+status: experimental
+description: Detects possible DLL hijacking of dsp_bridge_x64.dll by looking for suspicious file writes of this DLL, to unexpected locations.
+references:
+    - https://hijacklibs.net/entries/3rd_party/kugou/dsp_bridge_x64.html
+author: "Zhangir Ospanov"
+date: 2026-01-06
+tags:
+    - attack.defense_evasion
+    - attack.T1574.001
+logsource:
+    product: windows
+    category: file_event
+detection:
+    selection:
+        TargetFileName: '*\dsp_bridge_x64.dll'
+
+    condition: selection 
+falsepositives:
+    - False positives are likely. This rule is more suitable for hunting than for generating detections.
+

@@ -17,8 +17,8 @@ detection:
         TargetFileName: '*\fnp_act_installer.dll'
     filter:
         TargetFileName:
-            - 'c:\program files\InstallShield\*\System\*'
-            - 'c:\program files (x86)\InstallShield\*\System\*'
+            - 'c:\program files\InstallShield\\*\System\\*'
+            - 'c:\program files (x86)\InstallShield\\*\System\\*'
 
     condition: selection and not filter
 falsepositives:

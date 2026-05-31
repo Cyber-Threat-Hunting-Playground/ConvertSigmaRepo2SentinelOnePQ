@@ -17,9 +17,9 @@ detection:
         TargetFileName: '*\mpclient.dll'
     filter:
         TargetFileName:
-            - 'c:\program files\Windows Defender\*'
-            - 'c:\program files (x86)\Windows Defender\*'
-            - 'c:\programdata\Microsoft\Windows Defender\Platform\*\*'
+            - 'c:\program files\Windows Defender\\*'
+            - 'c:\program files (x86)\Windows Defender\\*'
+            - 'c:\programdata\Microsoft\Windows Defender\Platform\\*\\*'
 
     condition: selection and not filter
 falsepositives:

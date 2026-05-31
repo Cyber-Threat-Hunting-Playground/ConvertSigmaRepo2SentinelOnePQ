@@ -17,7 +17,7 @@ detection:
         TargetFileName: '*\rzlog4cpp_logger.dll'
     filter:
         TargetFileName:
-            - 'c:\users\*\appdata\local\razer\InGameEngine\cache\RzFpsApplet\*'
+            - 'c:\users\\*\appdata\local\razer\InGameEngine\cache\RzFpsApplet\\*'
 
     condition: selection and not filter
 falsepositives:

@@ -17,10 +17,10 @@ detection:
         TargetFileName: '*\windowsperformancerecordercontrol.dll'
     filter:
         TargetFileName:
-            - 'c:\program files\windows kits\10\windows performance toolkit\*'
-            - 'c:\program files (x86)\windows kits\10\windows performance toolkit\*'
-            - 'c:\windows\system32\*'
-            - 'c:\windows\syswow64\*'
+            - 'c:\program files\windows kits\10\windows performance toolkit\\*'
+            - 'c:\program files (x86)\windows kits\10\windows performance toolkit\\*'
+            - 'c:\windows\system32\\*'
+            - 'c:\windows\syswow64\\*'
             - 'c:\windows\winsxs\*'
             - 'c:\$windows.~bt\*'
             - 'c:\windows\softwaredistribution\*'

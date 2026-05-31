@@ -17,8 +17,8 @@ detection:
         TargetFileName: '*\mfcu100u.dll'
     filter:
         TargetFileName:
-            - 'c:\program files\TechSmith\Camtasia Studio 8\*'
-            - 'c:\program files (x86)\TechSmith\Camtasia Studio 8\*'
+            - 'c:\program files\TechSmith\Camtasia Studio 8\\*'
+            - 'c:\program files (x86)\TechSmith\Camtasia Studio 8\\*'
 
     condition: selection and not filter
 falsepositives:

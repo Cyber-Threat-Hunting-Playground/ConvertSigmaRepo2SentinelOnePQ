@@ -17,8 +17,8 @@ detection:
         TargetFileName: '*\vboxrt.dll'
     filter:
         TargetFileName:
-            - 'c:\program files\Oracle\VirtualBox\*'
-            - 'c:\program files (x86)\Oracle\VirtualBox\*'
+            - 'c:\program files\Oracle\VirtualBox\\*'
+            - 'c:\program files (x86)\Oracle\VirtualBox\\*'
 
     condition: selection and not filter
 falsepositives:

@@ -17,8 +17,8 @@ detection:
         TargetFileName: '*\nvsmartmax.dll'
     filter:
         TargetFileName:
-            - 'c:\program files\NVIDIA Corporation\Display\*'
-            - 'c:\program files (x86)\NVIDIA Corporation\Display\*'
+            - 'c:\program files\NVIDIA Corporation\Display\\*'
+            - 'c:\program files (x86)\NVIDIA Corporation\Display\\*'
 
     condition: selection and not filter
 falsepositives:

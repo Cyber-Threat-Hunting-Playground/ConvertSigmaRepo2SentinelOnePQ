@@ -1,0 +1,26 @@
+title: Possible preparation for roboform-x64.dll DLL Hijacking
+id: 2016812b-1497-48a3-1258-5b9ff8516792
+status: experimental
+description: Detects possible DLL hijacking of roboform-x64.dll by looking for suspicious file writes of this DLL, to unexpected locations.
+references:
+    - https://hijacklibs.net/entries/3rd_party/sibersystems/roboform-x64.html
+author: "Rick Gatenby"
+date: 2026-02-03
+tags:
+    - attack.defense_evasion
+    - attack.T1574.001
+logsource:
+    product: windows
+    category: file_event
+detection:
+    selection:
+        TargetFileName: '*\roboform-x64.dll'
+    filter:
+        TargetFileName:
+            - 'c:\program files\Siber Systems\AI RoboForm\\*\\*'
+            - 'c:\program files (x86)\Siber Systems\AI RoboForm\\*\\*'
+
+    condition: selection and not filter
+falsepositives:
+    - False positives are likely. This rule is more suitable for hunting than for generating detections.
+

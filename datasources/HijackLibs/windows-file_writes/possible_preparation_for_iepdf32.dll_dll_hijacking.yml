@@ -17,8 +17,8 @@ detection:
         TargetFileName: '*\iepdf32.dll'
     filter:
         TargetFileName:
-            - 'c:\program files\Handy Viewer\*'
-            - 'c:\program files (x86)\Handy Viewer\*'
+            - 'c:\program files\Handy Viewer\\*'
+            - 'c:\program files (x86)\Handy Viewer\\*'
 
     condition: selection and not filter
 falsepositives:

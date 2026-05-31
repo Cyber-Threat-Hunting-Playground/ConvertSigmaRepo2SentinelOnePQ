@@ -17,9 +17,9 @@ detection:
         TargetFileName: '*\vivaldi_elf.dll'
     filter:
         TargetFileName:
-            - 'c:\users\*\appdata\local\Vivaldi\Application\*'
-            - 'c:\users\*\appdata\local\Vivaldi\Application\*\*'
-            - 'c:\users\*\appdata\local\Programs\Vivaldi\Application\*\*'
+            - 'c:\users\\*\appdata\local\Vivaldi\Application\\*'
+            - 'c:\users\\*\appdata\local\Vivaldi\Application\\*\\*'
+            - 'c:\users\\*\appdata\local\Programs\Vivaldi\Application\\*\\*'
 
     condition: selection and not filter
 falsepositives:

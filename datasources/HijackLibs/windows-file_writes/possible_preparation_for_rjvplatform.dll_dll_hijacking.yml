@@ -17,8 +17,8 @@ detection:
         TargetFileName: '*\rjvplatform.dll'
     filter:
         TargetFileName:
-            - 'c:\windows\system32\SystemResetPlatform\*'
-            - 'c:\windows\syswow64\SystemResetPlatform\*'
+            - 'c:\windows\system32\SystemResetPlatform\\*'
+            - 'c:\windows\syswow64\SystemResetPlatform\\*'
             - 'c:\windows\winsxs\*'
             - 'c:\$windows.~bt\*'
             - 'c:\windows\softwaredistribution\*'

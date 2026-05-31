@@ -17,7 +17,7 @@ detection:
         TargetFileName: '*\iumsdk.dll'
     filter:
         TargetFileName:
-            - 'c:\windows\system32\*'
+            - 'c:\windows\system32\\*'
             - 'c:\windows\winsxs\*'
             - 'c:\$windows.~bt\*'
             - 'c:\windows\softwaredistribution\*'

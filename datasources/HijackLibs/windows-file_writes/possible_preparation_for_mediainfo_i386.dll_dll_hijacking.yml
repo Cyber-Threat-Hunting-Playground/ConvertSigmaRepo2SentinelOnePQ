@@ -17,8 +17,8 @@ detection:
         TargetFileName: '*\mediainfo_i386.dll'
     filter:
         TargetFileName:
-            - 'c:\program files\MediaInfo\*'
-            - 'c:\program files (x86)\MediaInfo\*'
+            - 'c:\program files\MediaInfo\\*'
+            - 'c:\program files (x86)\MediaInfo\\*'
 
     condition: selection and not filter
 falsepositives:

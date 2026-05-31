@@ -17,9 +17,9 @@ detection:
         TargetFileName: '*\rastls.dll'
     filter:
         TargetFileName:
-            - 'c:\program files\Symantec\Network Connected Devices Auto Setup\*'
-            - 'c:\program files (x86)\Symantec\Network Connected Devices Auto Setup\*'
-            - 'c:\windows\system32\*'
+            - 'c:\program files\Symantec\Network Connected Devices Auto Setup\\*'
+            - 'c:\program files (x86)\Symantec\Network Connected Devices Auto Setup\\*'
+            - 'c:\windows\system32\\*'
             - 'c:\windows\winsxs\*'
             - 'c:\$windows.~bt\*'
             - 'c:\windows\softwaredistribution\*'

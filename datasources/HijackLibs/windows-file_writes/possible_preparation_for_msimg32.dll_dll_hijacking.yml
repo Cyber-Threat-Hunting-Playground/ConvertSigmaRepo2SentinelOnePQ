@@ -17,10 +17,10 @@ detection:
         TargetFileName: '*\msimg32.dll'
     filter:
         TargetFileName:
-            - 'c:\program files\Haihaisoft PDF Reader\*'
-            - 'c:\program files (x86)\Haihaisoft PDF Reader\*'
-            - 'c:\windows\system32\*'
-            - 'c:\windows\syswow64\*'
+            - 'c:\program files\Haihaisoft PDF Reader\\*'
+            - 'c:\program files (x86)\Haihaisoft PDF Reader\\*'
+            - 'c:\windows\system32\\*'
+            - 'c:\windows\syswow64\\*'
             - 'c:\windows\winsxs\*'
             - 'c:\$windows.~bt\*'
             - 'c:\windows\softwaredistribution\*'

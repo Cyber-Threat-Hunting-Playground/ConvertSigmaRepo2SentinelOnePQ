@@ -17,10 +17,10 @@ detection:
         TargetFileName: '*\classicexplorer32.dll'
     filter:
         TargetFileName:
-            - 'c:\program files\Classic Shell\*'
-            - 'c:\program files (x86)\Classic Shell\*'
-            - 'c:\program files\Open-Shell\*'
-            - 'c:\program files (x86)\Open-Shell\*'
+            - 'c:\program files\Classic Shell\\*'
+            - 'c:\program files (x86)\Classic Shell\\*'
+            - 'c:\program files\Open-Shell\\*'
+            - 'c:\program files (x86)\Open-Shell\\*'
 
     condition: selection and not filter
 falsepositives:

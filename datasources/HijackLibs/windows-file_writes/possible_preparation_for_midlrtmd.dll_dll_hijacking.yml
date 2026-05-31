@@ -1,0 +1,28 @@
+title: Possible preparation for midlrtmd.dll DLL Hijacking
+id: 4697262b-1497-48a3-1258-5b9ff8380603
+status: experimental
+description: Detects possible DLL hijacking of midlrtmd.dll by looking for suspicious file writes of this DLL, to unexpected locations.
+references:
+    - https://hijacklibs.net/entries/microsoft/external/midlrtmd.html
+author: "Rick Gatenby"
+date: 2026-02-03
+tags:
+    - attack.defense_evasion
+    - attack.T1574.001
+logsource:
+    product: windows
+    category: file_event
+detection:
+    selection:
+        TargetFileName: '*\midlrtmd.dll'
+    filter:
+        TargetFileName:
+            - 'c:\program files\Windows Kits\\*\bin\\*\x64\mdmerge.exe\\*'
+            - 'c:\program files (x86)\Windows Kits\\*\bin\\*\x64\mdmerge.exe\\*'
+            - 'c:\program files\Windows Kits\\*\bin\\*\x86\mdmerge.exe\\*'
+            - 'c:\program files (x86)\Windows Kits\\*\bin\\*\x86\mdmerge.exe\\*'
+
+    condition: selection and not filter
+falsepositives:
+    - False positives are likely. This rule is more suitable for hunting than for generating detections.
+

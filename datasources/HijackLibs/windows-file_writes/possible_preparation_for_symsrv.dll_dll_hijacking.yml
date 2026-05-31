@@ -17,8 +17,8 @@ detection:
         TargetFileName: '*\symsrv.dll'
     filter:
         TargetFileName:
-            - 'c:\program files\Windows Kits\10\Debuggers\*\*'
-            - 'c:\program files (x86)\Windows Kits\10\Debuggers\*\*'
+            - 'c:\program files\Windows Kits\10\Debuggers\\*\\*'
+            - 'c:\program files (x86)\Windows Kits\10\Debuggers\\*\\*'
 
     condition: selection and not filter
 falsepositives:

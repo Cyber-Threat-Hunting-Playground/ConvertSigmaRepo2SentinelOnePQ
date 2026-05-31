@@ -17,8 +17,8 @@ detection:
         TargetFileName: '*\krpt.dll'
     filter:
         TargetFileName:
-            - 'c:\program files\Kingsoft\WPS Office\*\office6\*'
-            - 'c:\program files (x86)\Kingsoft\WPS Office\*\office6\*'
+            - 'c:\program files\Kingsoft\WPS Office\\*\office6\\*'
+            - 'c:\program files (x86)\Kingsoft\WPS Office\\*\office6\\*'
 
     condition: selection and not filter
 falsepositives:

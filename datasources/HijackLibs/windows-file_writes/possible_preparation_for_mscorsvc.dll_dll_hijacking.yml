@@ -18,8 +18,8 @@ detection:
         TargetFileName: '*\mscorsvc.dll'
     filter:
         TargetFileName:
-            - 'c:\windows\Microsoft.NET\Framework\v*\*'
-            - 'c:\windows\Microsoft.NET\Framework64\v*\*'
+            - 'c:\windows\Microsoft.NET\Framework\v*\\*'
+            - 'c:\windows\Microsoft.NET\Framework64\v*\\*'
 
     condition: selection and not filter
 falsepositives:

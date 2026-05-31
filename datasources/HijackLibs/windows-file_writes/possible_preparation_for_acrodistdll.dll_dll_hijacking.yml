@@ -17,8 +17,8 @@ detection:
         TargetFileName: '*\acrodistdll.dll'
     filter:
         TargetFileName:
-            - 'c:\program files\Adobe\Acrobat *\Acrobat\*'
-            - 'c:\program files (x86)\Adobe\Acrobat *\Acrobat\*'
+            - 'c:\program files\Adobe\Acrobat *\Acrobat\\*'
+            - 'c:\program files (x86)\Adobe\Acrobat *\Acrobat\\*'
 
     condition: selection and not filter
 falsepositives:

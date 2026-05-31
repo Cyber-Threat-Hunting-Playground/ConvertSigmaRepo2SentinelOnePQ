@@ -17,9 +17,9 @@ detection:
         TargetFileName: '*\fxsapi.dll'
     filter:
         TargetFileName:
-            - 'c:\windows\system32\*'
-            - 'c:\windows\system32\driverstore\filerepository\prnms002.inf_*\amd64\*'
-            - 'c:\windows\syswow64\*'
+            - 'c:\windows\system32\\*'
+            - 'c:\windows\system32\driverstore\filerepository\prnms002.inf_*\amd64\\*'
+            - 'c:\windows\syswow64\\*'
             - 'c:\windows\winsxs\*'
             - 'c:\$windows.~bt\*'
             - 'c:\windows\softwaredistribution\*'

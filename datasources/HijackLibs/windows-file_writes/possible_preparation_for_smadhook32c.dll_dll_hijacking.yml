@@ -17,8 +17,8 @@ detection:
         TargetFileName: '*\smadhook32c.dll'
     filter:
         TargetFileName:
-            - 'c:\program files\Smadav\*'
-            - 'c:\program files (x86)\Smadav\*'
+            - 'c:\program files\Smadav\\*'
+            - 'c:\program files (x86)\Smadav\\*'
 
     condition: selection and not filter
 falsepositives:

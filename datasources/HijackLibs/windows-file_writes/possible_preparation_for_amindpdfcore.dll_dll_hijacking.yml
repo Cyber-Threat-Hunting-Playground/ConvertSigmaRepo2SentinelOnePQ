@@ -17,8 +17,8 @@ detection:
         TargetFileName: '*\amindpdfcore.dll'
     filter:
         TargetFileName:
-            - 'c:\program files\GeekerPDF\GeekerPDF\*'
-            - 'c:\program files (x86)\GeekerPDF\GeekerPDF\*'
+            - 'c:\program files\GeekerPDF\GeekerPDF\\*'
+            - 'c:\program files (x86)\GeekerPDF\GeekerPDF\\*'
 
     condition: selection and not filter
 falsepositives:

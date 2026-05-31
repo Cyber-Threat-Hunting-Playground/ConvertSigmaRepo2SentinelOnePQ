@@ -17,8 +17,8 @@ detection:
         TargetFileName: '*\atl71.dll'
     filter:
         TargetFileName:
-            - 'c:\program files\Common Files\Thunder Network\TP\*\*'
-            - 'c:\program files (x86)\Common Files\Thunder Network\TP\*\*'
+            - 'c:\program files\Common Files\Thunder Network\TP\\*\\*'
+            - 'c:\program files (x86)\Common Files\Thunder Network\TP\\*\\*'
 
     condition: selection and not filter
 falsepositives:

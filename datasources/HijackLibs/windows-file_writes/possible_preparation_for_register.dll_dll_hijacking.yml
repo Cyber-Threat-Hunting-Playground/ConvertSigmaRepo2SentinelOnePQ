@@ -17,8 +17,8 @@ detection:
         TargetFileName: '*\register.dll'
     filter:
         TargetFileName:
-            - 'c:\program files\IObit\Driver Booster\*\*'
-            - 'c:\program files (x86)\IObit\Driver Booster\*\*'
+            - 'c:\program files\IObit\Driver Booster\\*\\*'
+            - 'c:\program files (x86)\IObit\Driver Booster\\*\\*'
 
     condition: selection and not filter
 falsepositives:

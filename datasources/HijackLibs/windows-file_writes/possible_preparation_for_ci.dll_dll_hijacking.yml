@@ -17,9 +17,9 @@ detection:
         TargetFileName: '*\ci.dll'
     filter:
         TargetFileName:
-            - 'c:\program files\Digiarty\WinX Blu-ray Decrypter\*'
-            - 'c:\program files (x86)\Digiarty\WinX Blu-ray Decrypter\*'
-            - 'c:\windows\system32\*'
+            - 'c:\program files\Digiarty\WinX Blu-ray Decrypter\\*'
+            - 'c:\program files (x86)\Digiarty\WinX Blu-ray Decrypter\\*'
+            - 'c:\windows\system32\\*'
             - 'c:\windows\winsxs\*'
             - 'c:\$windows.~bt\*'
             - 'c:\windows\softwaredistribution\*'

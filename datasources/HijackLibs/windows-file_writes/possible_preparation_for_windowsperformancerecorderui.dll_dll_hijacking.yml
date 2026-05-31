@@ -17,8 +17,8 @@ detection:
         TargetFileName: '*\windowsperformancerecorderui.dll'
     filter:
         TargetFileName:
-            - 'c:\program files\Windows Kits\10\Windows Performance Toolkit\*'
-            - 'c:\program files (x86)\Windows Kits\10\Windows Performance Toolkit\*'
+            - 'c:\program files\Windows Kits\10\Windows Performance Toolkit\\*'
+            - 'c:\program files (x86)\Windows Kits\10\Windows Performance Toolkit\\*'
 
     condition: selection and not filter
 falsepositives:

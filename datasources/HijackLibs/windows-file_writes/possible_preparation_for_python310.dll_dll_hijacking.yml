@@ -17,12 +17,12 @@ detection:
         TargetFileName: '*\python310.dll'
     filter:
         TargetFileName:
-            - 'c:\program files\Python310\*'
-            - 'c:\program files (x86)\Python310\*'
-            - 'c:\users\*\appdata\local\Temp\*\*'
-            - 'c:\program files\DWAgent\runtime\*'
-            - 'c:\program files (x86)\DWAgent\runtime\*'
-            - '%USERPROFILE%\anaconda3\*'
+            - 'c:\program files\Python310\\*'
+            - 'c:\program files (x86)\Python310\\*'
+            - 'c:\users\\*\appdata\local\Temp\\*\\*'
+            - 'c:\program files\DWAgent\runtime\\*'
+            - 'c:\program files (x86)\DWAgent\runtime\\*'
+            - '%USERPROFILE%\anaconda3\\*'
 
     condition: selection and not filter
 falsepositives:

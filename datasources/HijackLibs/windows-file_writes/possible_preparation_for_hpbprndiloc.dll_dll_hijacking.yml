@@ -1,0 +1,26 @@
+title: Possible preparation for hpbprndiloc.dll DLL Hijacking
+id: 9654502b-7866-48a3-6831-5b9ff8138138
+status: experimental
+description: Detects possible DLL hijacking of hpbprndiloc.dll by looking for suspicious file writes of this DLL, to unexpected locations.
+references:
+    - https://hijacklibs.net/entries/3rd_party/hp/hpbprndiloc.html
+author: "Swachchhanda Shrawan Poudel"
+date: 2026-05-15
+tags:
+    - attack.defense_evasion
+    - attack.T1574.001
+logsource:
+    product: windows
+    category: file_event
+detection:
+    selection:
+        TargetFileName: '*\hpbprndiloc.dll'
+    filter:
+        TargetFileName:
+            - 'c:\program files\Hewlett-Packard\\*\\*'
+            - 'c:\program files (x86)\Hewlett-Packard\\*\\*'
+
+    condition: selection and not filter
+falsepositives:
+    - False positives are likely. This rule is more suitable for hunting than for generating detections.
+

@@ -17,9 +17,9 @@ detection:
         TargetFileName: '*\mpsvc.dll'
     filter:
         TargetFileName:
-            - 'c:\programdata\Microsoft\Windows Defender\Platform\*\*'
-            - 'c:\program files\Windows Defender\*\*'
-            - 'c:\program files (x86)\Windows Defender\*\*'
+            - 'c:\programdata\Microsoft\Windows Defender\Platform\\*\\*'
+            - 'c:\program files\Windows Defender\\*\\*'
+            - 'c:\program files (x86)\Windows Defender\\*\\*'
 
     condition: selection and not filter
 falsepositives:

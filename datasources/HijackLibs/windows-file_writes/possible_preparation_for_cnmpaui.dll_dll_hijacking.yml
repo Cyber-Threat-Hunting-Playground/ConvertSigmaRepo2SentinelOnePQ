@@ -17,8 +17,8 @@ detection:
         TargetFileName: '*\cnmpaui.dll'
     filter:
         TargetFileName:
-            - 'c:\program files\Canon\Canon IJ Printer Assistant Tool\\*'
-            - 'c:\program files (x86)\Canon\Canon IJ Printer Assistant Tool\\*'
+            - 'c:\program files\Canon\Canon IJ Printer Assistant Tool\\\*'
+            - 'c:\program files (x86)\Canon\Canon IJ Printer Assistant Tool\\\*'
 
     condition: selection and not filter
 falsepositives:

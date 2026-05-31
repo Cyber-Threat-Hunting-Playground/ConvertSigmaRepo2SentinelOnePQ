@@ -17,8 +17,8 @@ detection:
         TargetFileName: '*\dismcore.dll'
     filter:
         TargetFileName:
-            - 'c:\windows\system32\dism\*'
-            - 'c:\windows\syswow64\dism\*'
+            - 'c:\windows\system32\dism\\*'
+            - 'c:\windows\syswow64\dism\\*'
             - 'c:\windows\winsxs\*'
             - 'c:\$windows.~bt\*'
             - 'c:\windows\softwaredistribution\*'

@@ -17,11 +17,11 @@ detection:
         TargetFileName: '*\corefoundation.dll'
     filter:
         TargetFileName:
-            - 'c:\program files\Common Files\Apple\Apple Application Support\*'
-            - 'c:\program files (x86)\Common Files\Apple\Apple Application Support\*'
-            - 'c:\program files\iTunes\*'
-            - 'c:\program files (x86)\iTunes\*'
-            - 'c:\windows\system32\*'
+            - 'c:\program files\Common Files\Apple\Apple Application Support\\*'
+            - 'c:\program files (x86)\Common Files\Apple\Apple Application Support\\*'
+            - 'c:\program files\iTunes\\*'
+            - 'c:\program files (x86)\iTunes\\*'
+            - 'c:\windows\system32\\*'
             - 'c:\windows\winsxs\*'
             - 'c:\$windows.~bt\*'
             - 'c:\windows\softwaredistribution\*'

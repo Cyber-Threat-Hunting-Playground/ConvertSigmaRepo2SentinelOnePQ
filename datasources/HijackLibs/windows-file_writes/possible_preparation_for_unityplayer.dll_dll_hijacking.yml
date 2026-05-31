@@ -17,7 +17,7 @@ detection:
         TargetFileName: '*\unityplayer.dll'
     filter:
         TargetFileName:
-            - 'c:\users\*\appdata\local\Temp\*\Windows\*'
+            - 'c:\users\\*\appdata\local\Temp\\*\Windows\\*'
 
     condition: selection and not filter
 falsepositives:

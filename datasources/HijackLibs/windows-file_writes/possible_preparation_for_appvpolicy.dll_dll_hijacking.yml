@@ -17,9 +17,9 @@ detection:
         TargetFileName: '*\appvpolicy.dll'
     filter:
         TargetFileName:
-            - 'c:\windows\system32\*'
-            - 'c:\program files\Common Files\Microsoft Shared\ClickToRun\*'
-            - 'c:\program files (x86)\Common Files\Microsoft Shared\ClickToRun\*'
+            - 'c:\windows\system32\\*'
+            - 'c:\program files\Common Files\Microsoft Shared\ClickToRun\\*'
+            - 'c:\program files (x86)\Common Files\Microsoft Shared\ClickToRun\\*'
             - 'c:\windows\winsxs\*'
             - 'c:\$windows.~bt\*'
             - 'c:\windows\softwaredistribution\*'

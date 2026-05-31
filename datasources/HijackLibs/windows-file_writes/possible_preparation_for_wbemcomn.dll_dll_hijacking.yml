@@ -17,8 +17,8 @@ detection:
         TargetFileName: '*\wbemcomn.dll'
     filter:
         TargetFileName:
-            - 'c:\windows\system32\*'
-            - 'c:\windows\syswow64\*'
+            - 'c:\windows\system32\\*'
+            - 'c:\windows\syswow64\\*'
             - 'c:\windows\winsxs\*'
             - 'c:\$windows.~bt\*'
             - 'c:\windows\softwaredistribution\*'

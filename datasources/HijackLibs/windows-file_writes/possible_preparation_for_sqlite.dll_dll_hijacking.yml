@@ -17,8 +17,8 @@ detection:
         TargetFileName: '*\sqlite.dll'
     filter:
         TargetFileName:
-            - 'c:\program files\NetWorx\*'
-            - 'c:\program files (x86)\NetWorx\*'
+            - 'c:\program files\NetWorx\\*'
+            - 'c:\program files (x86)\NetWorx\\*'
 
     condition: selection and not filter
 falsepositives:

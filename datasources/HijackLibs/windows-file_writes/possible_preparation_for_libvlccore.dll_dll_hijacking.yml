@@ -17,8 +17,8 @@ detection:
         TargetFileName: '*\libvlccore.dll'
     filter:
         TargetFileName:
-            - 'c:\program files\VideoLAN\VLC\*'
-            - 'c:\program files (x86)\VideoLAN\VLC\*'
+            - 'c:\program files\VideoLAN\VLC\\*'
+            - 'c:\program files (x86)\VideoLAN\VLC\\*'
 
     condition: selection and not filter
 falsepositives:

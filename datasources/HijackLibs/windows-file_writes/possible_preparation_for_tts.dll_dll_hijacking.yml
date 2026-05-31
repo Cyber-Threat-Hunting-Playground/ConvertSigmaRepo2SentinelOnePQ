@@ -17,8 +17,8 @@ detection:
         TargetFileName: '*\tts.dll'
     filter:
         TargetFileName:
-            - 'c:\program files\Soundpad\*'
-            - 'c:\program files (x86)\Soundpad\*'
+            - 'c:\program files\Soundpad\\*'
+            - 'c:\program files (x86)\Soundpad\\*'
 
     condition: selection and not filter
 falsepositives:

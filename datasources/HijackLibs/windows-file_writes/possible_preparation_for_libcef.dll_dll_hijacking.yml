@@ -17,8 +17,8 @@ detection:
         TargetFileName: '*\libcef.dll'
     filter:
         TargetFileName:
-            - 'c:\program files\NVIDIA Corporation\NVIDIA GeForce Experience\*'
-            - 'c:\program files (x86)\NVIDIA Corporation\NVIDIA GeForce Experience\*'
+            - 'c:\program files\NVIDIA Corporation\NVIDIA GeForce Experience\\*'
+            - 'c:\program files (x86)\NVIDIA Corporation\NVIDIA GeForce Experience\\*'
 
     condition: selection and not filter
 falsepositives:

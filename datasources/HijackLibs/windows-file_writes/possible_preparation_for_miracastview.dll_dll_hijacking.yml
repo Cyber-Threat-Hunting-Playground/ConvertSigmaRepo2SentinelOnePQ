@@ -17,7 +17,7 @@ detection:
         TargetFileName: '*\miracastview.dll'
     filter:
         TargetFileName:
-            - 'c:\windows\Miracast\*'
+            - 'c:\windows\Miracast\\*'
 
     condition: selection and not filter
 falsepositives:

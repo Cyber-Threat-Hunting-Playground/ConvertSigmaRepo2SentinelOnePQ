@@ -17,8 +17,8 @@ detection:
         TargetFileName: '*\vntfxf32.dll'
     filter:
         TargetFileName:
-            - 'c:\program files\Venta\VentaFax & Voice\*'
-            - 'c:\program files (x86)\Venta\VentaFax & Voice\*'
+            - 'c:\program files\Venta\VentaFax & Voice\\*'
+            - 'c:\program files (x86)\Venta\VentaFax & Voice\\*'
 
     condition: selection and not filter
 falsepositives:
