@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 30-05-2026 04:05:36):
+// Translated content (automatically translated on 31-05-2026 04:40:24):
 event.type="Process Creation" and (endpoint.os="windows" and ((tgt.process.user contains "AUTHORI" or tgt.process.user contains "AUTORI") and tgt.process.image.path contains "\\taskmgr.exe"))
 ```
 
