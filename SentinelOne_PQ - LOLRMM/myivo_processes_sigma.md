@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 01-06-2026 02:36:33):
+// Translated content (automatically translated on 02-06-2026 02:35:02):
 event.type="Process Creation" and (endpoint.os="windows" and ((src.process.image.path contains "myivomgr.exe" or src.process.image.path contains "myivomanager.exe") or (tgt.process.image.path contains "myivomgr.exe" or tgt.process.image.path contains "myivomanager.exe")))
 ```
 

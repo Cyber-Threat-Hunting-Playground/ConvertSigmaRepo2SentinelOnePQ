@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 01-06-2026 02:36:33):
+// Translated content (automatically translated on 02-06-2026 02:35:02):
 event.category="file" and (endpoint.os="windows" and (tgt.file.path contains "C:\\Program Files (x86)\\NVDA\\nvda.exe" or tgt.file.path contains "C:\\Program Files\\NVDA\\nvda.exe" or tgt.file.path contains "C:\\Users\*\\AppData\\Roaming\\nvda\\nvda.log" or tgt.file.path contains "C:\\Users\*\\AppData\\Roaming\\nvda\\nvda.ini"))
 ```
 
