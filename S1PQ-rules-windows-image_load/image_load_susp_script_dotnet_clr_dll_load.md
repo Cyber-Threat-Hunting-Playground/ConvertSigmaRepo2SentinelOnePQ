@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 01-06-2026 03:42:06):
+// Translated content (automatically translated on 02-06-2026 03:38:25):
 event.type="Module Load" and (endpoint.os="windows" and ((src.process.image.path contains "\\cmstp.exe" or src.process.image.path contains "\\cscript.exe" or src.process.image.path contains "\\mshta.exe" or src.process.image.path contains "\\msxsl.exe" or src.process.image.path contains "\\regsvr32.exe" or src.process.image.path contains "\\wmic.exe" or src.process.image.path contains "\\wscript.exe") and (module.path contains "\\clr.dll" or module.path contains "\\mscoree.dll" or module.path contains "\\mscorlib.dll")))
 ```
 
