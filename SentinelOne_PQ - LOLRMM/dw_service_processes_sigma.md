@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 02-06-2026 02:35:02):
+// Translated content (automatically translated on 03-06-2026 02:42:45):
 event.type="Process Creation" and (endpoint.os="windows" and ((src.process.image.path contains "dwagsvc.exe" or src.process.image.path contains "dwagent.exe" or src.process.image.path contains "dwaglnc.exe") or (tgt.process.image.path contains "dwagsvc.exe" or tgt.process.image.path contains "dwagent.exe" or tgt.process.image.path contains "dwaglnc.exe")))
 ```
 

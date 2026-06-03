@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 02-06-2026 02:35:02):
+// Translated content (automatically translated on 03-06-2026 02:42:45):
 event.type="Process Creation" and (endpoint.os="windows" and ((src.process.image.path contains "TiService.exe" or src.process.image.path contains "TiUpdateService.exe" or src.process.image.path contains "si.exe" or src.process.image.path contains "TiAgent.exe") or (tgt.process.image.path contains "TiService.exe" or tgt.process.image.path contains "TiUpdateService.exe" or tgt.process.image.path contains "si.exe" or tgt.process.image.path contains "TiAgent.exe")))
 ```
 
