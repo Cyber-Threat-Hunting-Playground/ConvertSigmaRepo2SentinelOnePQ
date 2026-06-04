@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 03-06-2026 03:47:30):
+// Translated content (automatically translated on 04-06-2026 03:41:59):
 event.type="Process Creation" and (endpoint.os="osx" and (((tgt.process.image.path contains "/arp" or tgt.process.image.path contains "/ifconfig" or tgt.process.image.path contains "/netstat" or tgt.process.image.path contains "/networksetup" or tgt.process.image.path contains "/socketfilterfw") or (tgt.process.image.path="/usr/bin/defaults" and (tgt.process.cmdline contains "/Library/Preferences/com.apple.alf" and tgt.process.cmdline contains "read"))) and (not src.process.image.path contains "/wifivelocityd")))
 ```
 
