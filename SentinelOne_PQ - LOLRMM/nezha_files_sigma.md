@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 03-06-2026 02:42:45):
+// Translated content (automatically translated on 04-06-2026 02:37:16):
 event.category="file" and (endpoint.os="windows" and (tgt.file.path contains "C:\\nezha\\nezha-agent.exe" or tgt.file.path contains "C:\\nezha\\config.yml" or tgt.file.path contains "/opt/nezha/agent/nezha-agent" or tgt.file.path contains "/opt/nezha/agent/config.yml" or tgt.file.path contains "/etc/systemd/system/nezha-agent.service" or tgt.file.path contains "/opt/nezha/dashboard/app"))
 ```
 
