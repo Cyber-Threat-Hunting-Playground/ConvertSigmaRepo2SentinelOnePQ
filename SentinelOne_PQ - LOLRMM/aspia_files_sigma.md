@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 04-06-2026 02:37:16):
+// Translated content (automatically translated on 05-06-2026 02:12:35):
 event.category="file" and (endpoint.os="windows" and (tgt.file.path contains "C:\\Users\*\\AppData\\Roaming\\aspia\\client.ini" or tgt.file.path="*C:\\Users\*\\AppData\\Local\\Temp\\aspia\\aspia_client-*.log" or tgt.file.path contains "C:\\Program Files\\Aspia\\Client\\qt.conf"))
 ```
 
