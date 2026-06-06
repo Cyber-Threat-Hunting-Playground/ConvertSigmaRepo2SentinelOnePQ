@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 05-06-2026 04:25:06):
+// Translated content (automatically translated on 06-06-2026 04:07:30):
 event.category="dns" and (endpoint.os="windows" and src.process.image.path contains "\\finger.exe")
 ```
 
