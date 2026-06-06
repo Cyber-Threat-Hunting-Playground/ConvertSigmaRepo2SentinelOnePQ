@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 05-06-2026 03:51:01):
+// Translated content (automatically translated on 06-06-2026 03:33:07):
 (event.category in ("dns","url","ip")) and (endpoint.os="windows" and ((url.address contains "signal.hoptodesk.com" or url.address contains "api.hoptodesk.com" or url.address contains "turn.hoptodesk.com" or url.address contains "hoptodesk.com") or (event.dns.request contains "signal.hoptodesk.com" or event.dns.request contains "api.hoptodesk.com" or event.dns.request contains "turn.hoptodesk.com" or event.dns.request contains "hoptodesk.com")))
 ```
 
