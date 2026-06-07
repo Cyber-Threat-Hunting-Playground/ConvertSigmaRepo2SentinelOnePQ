@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 06-06-2026 02:04:07):
+// Translated content (automatically translated on 07-06-2026 02:30:44):
 event.type="Process Creation" and (endpoint.os="windows" and ((src.process.image.path="*Sorillus-Launcher*.exe" or src.process.image.path contains "Sorillus Launcher.exe") or (tgt.process.image.path="*Sorillus-Launcher*.exe" or tgt.process.image.path contains "Sorillus Launcher.exe")))
 ```
 
