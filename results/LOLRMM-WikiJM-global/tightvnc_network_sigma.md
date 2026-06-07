@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 06-06-2026 03:33:07):
+// Translated content (automatically translated on 07-06-2026 03:59:21):
 (event.category in ("dns","url","ip")) and (endpoint.os="windows" and ((url.address contains "user_managed" or url.address contains "tightvnc.com") or (event.dns.request contains "user_managed" or event.dns.request contains "tightvnc.com")))
 ```
 
