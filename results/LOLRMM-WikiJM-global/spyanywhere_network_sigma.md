@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 07-06-2026 03:59:21):
+// Translated content (automatically translated on 08-06-2026 04:03:51):
 (event.category in ("dns","url","ip")) and (endpoint.os="windows" and ((url.address contains ".spytech-web.com" or url.address contains "spyanywhere.com") or (event.dns.request contains ".spytech-web.com" or event.dns.request contains "spyanywhere.com")))
 ```
 
