@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 08-06-2026 02:35:21):
+// Translated content (automatically translated on 09-06-2026 02:00:32):
 event.type="Process Creation" and (endpoint.os="windows" and (src.process.image.path="*pdq-connect*.exe" or tgt.process.image.path="*pdq-connect*.exe"))
 ```
 
