@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 08-06-2026 04:14:20):
+// Translated content (automatically translated on 09-06-2026 03:42:45):
 event.type="Module Load" and (endpoint.os="windows" and (module.path contains "\\asio.dll" and (not (module.path="c:\\program files\\ASUS\\AXSP\\*\\*" or module.path="c:\\program files (x86)\\ASUS\\AXSP\\*\\*"))))
 ```
 
