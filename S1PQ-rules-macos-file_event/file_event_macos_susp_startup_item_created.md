@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 08-06-2026 03:53:36):
+// Translated content (automatically translated on 09-06-2026 02:57:11):
 event.category="file" and (endpoint.os="osx" and ((tgt.file.path contains "/Library/StartupItems/" or tgt.file.path contains "/System/Library/StartupItems") and tgt.file.path contains ".plist"))
 ```
 
