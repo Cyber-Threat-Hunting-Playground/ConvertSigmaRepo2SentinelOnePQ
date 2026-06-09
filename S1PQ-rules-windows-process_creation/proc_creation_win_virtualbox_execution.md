@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 08-06-2026 04:50:10):
+// Translated content (automatically translated on 09-06-2026 04:12:50):
 event.type="Process Creation" and (endpoint.os="windows" and ((tgt.process.cmdline contains "VBoxRT.dll,RTR3Init" or tgt.process.cmdline contains "VBoxC.dll" or tgt.process.cmdline contains "VBoxDrv.sys") or (tgt.process.cmdline contains "startvm" or tgt.process.cmdline contains "controlvm")))
 ```
 
