@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 09-06-2026 02:00:32):
+// Translated content (automatically translated on 10-06-2026 02:12:31):
 event.type="Process Creation" and (endpoint.os="windows" and ((src.process.image.path="*meshcentral*.exe" or src.process.image.path="*meshagent*.exe") or (tgt.process.image.path="*meshcentral*.exe" or tgt.process.image.path="*meshagent*.exe")))
 ```
 
