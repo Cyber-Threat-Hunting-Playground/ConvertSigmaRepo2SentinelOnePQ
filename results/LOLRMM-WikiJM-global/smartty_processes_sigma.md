@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 09-06-2026 03:33:49):
+// Translated content (automatically translated on 10-06-2026 03:47:07):
 event.type="Process Creation" and (endpoint.os="windows" and src.process.image.path contains "\\SmarTTY.exe")
 ```
 

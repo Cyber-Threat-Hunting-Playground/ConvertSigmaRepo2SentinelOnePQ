@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 09-06-2026 03:33:49):
+// Translated content (automatically translated on 10-06-2026 03:47:07):
 (event.category in ("dns","url","ip")) and (endpoint.os="windows" and ((url.address contains "deploy01.kaseya.com" or url.address contains "managedsupport.kaseya.net" or url.address contains ".kaseya.net" or url.address contains "kaseya.com") or (event.dns.request contains "deploy01.kaseya.com" or event.dns.request contains "managedsupport.kaseya.net" or event.dns.request contains ".kaseya.net" or event.dns.request contains "kaseya.com")))
 ```
 
