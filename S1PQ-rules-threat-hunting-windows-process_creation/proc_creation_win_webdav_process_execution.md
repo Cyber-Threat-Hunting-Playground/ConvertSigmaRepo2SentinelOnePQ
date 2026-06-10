@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 09-06-2026 01:55:50):
+// Translated content (automatically translated on 10-06-2026 02:08:11):
 event.type="Process Creation" and (endpoint.os="windows" and (tgt.process.image.path contains "\\\\" and tgt.process.image.path contains "\\DavWWWRoot\\"))
 ```
 
