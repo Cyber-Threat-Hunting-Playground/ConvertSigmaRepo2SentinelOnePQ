@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 09-06-2026 04:12:50):
+// Translated content (automatically translated on 10-06-2026 04:24:01):
 event.type="Process Creation" and (endpoint.os="windows" and (tgt.process.cmdline contains " msiexec" and tgt.process.cmdline contains "://"))
 ```
 
