@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 10-06-2026 03:47:07):
+// Translated content (automatically translated on 11-06-2026 04:01:16):
 (event.category in ("dns","url","ip")) and (endpoint.os="windows" and ((url.address contains "cloud.acronis.com" or url.address="*agents*-cloud.acronis.com" or url.address contains "gw.remotix.com" or url.address contains "connect.acronis.com") or (event.dns.request contains "cloud.acronis.com" or event.dns.request="*agents*-cloud.acronis.com" or event.dns.request contains "gw.remotix.com" or event.dns.request contains "connect.acronis.com")))
 ```
 
