@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 10-06-2026 02:12:31):
+// Translated content (automatically translated on 11-06-2026 02:35:07):
 event.type="Process Creation" and (endpoint.os="windows" and ((src.process.image.path contains "OrayRemoteShell.exe" or src.process.image.path contains "OrayRemoteService.exe" or src.process.image.path="*sunlogin*.exe") or (tgt.process.image.path contains "OrayRemoteShell.exe" or tgt.process.image.path contains "OrayRemoteService.exe" or tgt.process.image.path="*sunlogin*.exe")))
 ```
 
