@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 11-06-2026 02:35:07):
+// Translated content (automatically translated on 12-06-2026 02:30:19):
 event.category="file" and (endpoint.os="windows" and (tgt.file.path contains "/tmp/tmate" or tgt.file.path contains "~/.tmate.conf" or tgt.file.path contains "tmate.sock" or tgt.file.path contains "tmate-ready" or tgt.file.path contains "tmate.bashrc"))
 ```
 

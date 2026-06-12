@@ -1,6 +1,6 @@
 ```sql
-// Translated content (automatically translated on 11-06-2026 02:35:07):
-(event.category in ("dns","url","ip")) and (endpoint.os="windows" and (url.address contains ".itsupport247.net" or event.dns.request contains ".itsupport247.net"))
+// Translated content (automatically translated on 12-06-2026 02:30:19):
+(event.category in ("dns","url","ip")) and (endpoint.os="windows" and ((url.address contains ".itsupport247.net" or url.address contains "itsupport247.net") or (event.dns.request contains ".itsupport247.net" or event.dns.request contains "itsupport247.net")))
 ```
 
 
@@ -23,7 +23,9 @@ logsource:
     category: network_connection
 detection:
     selection:
-        DestinationHostname|endswith: '*.itsupport247.net'
+        DestinationHostname|endswith:
+            - '*.itsupport247.net'
+            - 'itsupport247.net'
     condition: selection
 falsepositives:
     - Legitimate use of ITSupport247 (ConnectWise)
