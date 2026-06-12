@@ -1,6 +1,6 @@
 ```sql
-// Translated content (automatically translated on 11-06-2026 04:45:59):
-event.type="Process Creation" and (endpoint.os="windows" and (((tgt.process.cmdline contains "cmd.exe/c" or tgt.process.cmdline contains "\\cmd/c" or tgt.process.cmdline contains "\"cmd/c" or tgt.process.cmdline contains "cmd.exe/k" or tgt.process.cmdline contains "\\cmd/k" or tgt.process.cmdline contains "\"cmd/k" or tgt.process.cmdline contains "cmd.exe/r" or tgt.process.cmdline contains "\\cmd/r" or tgt.process.cmdline contains "\"cmd/r") or (tgt.process.cmdline contains "/cwhoami" or tgt.process.cmdline contains "/cpowershell" or tgt.process.cmdline contains "/cschtasks" or tgt.process.cmdline contains "/cbitsadmin" or tgt.process.cmdline contains "/ccertutil" or tgt.process.cmdline contains "/kwhoami" or tgt.process.cmdline contains "/kpowershell" or tgt.process.cmdline contains "/kschtasks" or tgt.process.cmdline contains "/kbitsadmin" or tgt.process.cmdline contains "/kcertutil") or (tgt.process.cmdline contains "cmd.exe /c" or tgt.process.cmdline contains "cmd /c" or tgt.process.cmdline contains "cmd.exe /k" or tgt.process.cmdline contains "cmd /k" or tgt.process.cmdline contains "cmd.exe /r" or tgt.process.cmdline contains "cmd /r")) and (not ((tgt.process.cmdline contains "cmd.exe /c " or tgt.process.cmdline contains "cmd /c " or tgt.process.cmdline contains "cmd.exe /k " or tgt.process.cmdline contains "cmd /k " or tgt.process.cmdline contains "cmd.exe /r " or tgt.process.cmdline contains "cmd /r ") or (tgt.process.cmdline contains "AppData\\Local\\Programs\\Microsoft VS Code\\resources\\app\\node_modules" or tgt.process.cmdline contains "cmd.exe/c ." or tgt.process.cmdline="cmd.exe /c")))))
+// Translated content (automatically translated on 12-06-2026 04:49:01):
+event.type="Process Creation" and (endpoint.os="windows" and (((tgt.process.cmdline contains "cmd.exe/c" or tgt.process.cmdline contains "\\cmd/c" or tgt.process.cmdline contains "\"cmd/c" or tgt.process.cmdline contains "cmd.exe/k" or tgt.process.cmdline contains "\\cmd/k" or tgt.process.cmdline contains "\"cmd/k" or tgt.process.cmdline contains "cmd.exe/r" or tgt.process.cmdline contains "\\cmd/r" or tgt.process.cmdline contains "\"cmd/r") or (tgt.process.cmdline contains "/cwhoami" or tgt.process.cmdline contains "/cpowershell" or tgt.process.cmdline contains "/cschtasks" or tgt.process.cmdline contains "/cbitsadmin" or tgt.process.cmdline contains "/ccertutil" or tgt.process.cmdline contains "/kwhoami" or tgt.process.cmdline contains "/kpowershell" or tgt.process.cmdline contains "/kschtasks" or tgt.process.cmdline contains "/kbitsadmin" or tgt.process.cmdline contains "/kcertutil") or (tgt.process.cmdline contains "cmd.exe /c" or tgt.process.cmdline contains "cmd /c" or tgt.process.cmdline contains "cmd.exe /k" or tgt.process.cmdline contains "cmd /k" or tgt.process.cmdline contains "cmd.exe /r" or tgt.process.cmdline contains "cmd /r")) and (not ((tgt.process.cmdline contains "cmd.exe /c " or tgt.process.cmdline contains "cmd /c " or tgt.process.cmdline contains "cmd.exe /k " or tgt.process.cmdline contains "cmd /k " or tgt.process.cmdline contains "cmd.exe /r " or tgt.process.cmdline contains "cmd /r ") or (tgt.process.cmdline contains "AppData\\Local\\Programs\\Microsoft VS Code\\resources\\app\\node_modules" or tgt.process.cmdline contains "cmd.exe/c ." or tgt.process.cmdline="cmd.exe /c" or tgt.process.cmdline="cmd /c")))))
 ```
 
 
@@ -17,7 +17,7 @@ references:
     - https://ss64.com/nt/cmd.html
 author: Florian Roth (Nextron Systems)
 date: 2022-08-23
-modified: 2023-03-06
+modified: 2026-05-13
 tags:
     - attack.execution
     - attack.t1059.001
@@ -68,8 +68,9 @@ detection:
         - CommandLine|contains: 'AppData\Local\Programs\Microsoft VS Code\resources\app\node_modules'
         - CommandLine|endswith: 'cmd.exe/c .'
         - CommandLine: 'cmd.exe /c'
+        - CommandLine: 'cmd /c'
     condition: 1 of selection* and not 1 of filter_*
 falsepositives:
-    - Unknown
+    - Legitimate use of cmd.exe with no arguments e.g. via system("") in C to enable ANSI escape codes
 level: high
 ```
