@@ -1,6 +1,6 @@
 ```sql
-// Translated content (automatically translated on 11-06-2026 03:37:59):
-event.type="Module Load" and (endpoint.os="windows" and (module.path contains "\\vssapi.dll" and (not (((src.process.image.path in ("C:\\Windows\\explorer.exe","C:\\Windows\\ImmersiveControlPanel\\SystemSettings.exe")) or (src.process.image.path contains "C:\\Windows\\System32\\" or src.process.image.path contains "C:\\Windows\\SysWOW64\\" or src.process.image.path contains "C:\\Windows\\Temp\\{" or src.process.image.path contains "C:\\Windows\\WinSxS\\")) or (src.process.image.path contains "C:\\Program Files\\" or src.process.image.path contains "C:\\Program Files (x86)\\") or not (src.process.image.path matches "\.*"))) and (not (src.process.image.path contains "C:\\ProgramData\\Package Cache\\" or (src.process.image.path contains "\\temp\\is-" and src.process.image.path contains "\\avira_system_speedup.tmp")))))
+// Translated content (automatically translated on 12-06-2026 03:37:31):
+event.type="Module Load" and (endpoint.os="windows" and (module.path contains "\\vssapi.dll" and (not (((src.process.image.path in ("C:\\Windows\\explorer.exe","C:\\Windows\\ImmersiveControlPanel\\SystemSettings.exe")) or (src.process.image.path contains "C:\\Windows\\System32\\" or src.process.image.path contains "C:\\Windows\\SysWOW64\\" or src.process.image.path contains "C:\\Windows\\Temp\\{" or src.process.image.path contains "C:\\Windows\\WinSxS\\" or src.process.image.path contains "C:\\$WinREAgent\\Scratch\\")) or (src.process.image.path contains "C:\\Program Files\\" or src.process.image.path contains "C:\\Program Files (x86)\\") or not (src.process.image.path matches "\.*"))) and (not (src.process.image.path contains "C:\\ProgramData\\Package Cache\\" or (src.process.image.path contains "\\temp\\is-" and src.process.image.path contains "\\avira_system_speedup.tmp")))))
 ```
 
 
@@ -19,7 +19,7 @@ references:
     - https://github.com/ORCx41/DeleteShadowCopies
 author: frack113
 date: 2022-10-31
-modified: 2025-10-17
+modified: 2026-05-18
 tags:
     - attack.impact
     - attack.t1490
@@ -38,6 +38,7 @@ detection:
               - 'C:\Windows\SysWOW64\'
               - 'C:\Windows\Temp\{' # Installers
               - 'C:\Windows\WinSxS\'
+              - 'C:\$WinREAgent\Scratch\'
     filter_main_program_files:
         # When using this rule in your environment replace the "Program Files" folder by the exact applications you know use this. Examples would be software such as backup solutions
         Image|startswith:
