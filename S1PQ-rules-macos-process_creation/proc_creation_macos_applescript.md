@@ -1,6 +1,6 @@
 ```sql
-// Translated content (automatically translated on 11-06-2026 03:38:43):
-event.type="Process Creation" and (endpoint.os="osx" and (tgt.process.image.path contains "/osascript" and (tgt.process.cmdline contains " -e " or tgt.process.cmdline contains ".scpt" or tgt.process.cmdline contains ".js")))
+// Translated content (automatically translated on 12-06-2026 03:38:38):
+event.type="Process Creation" and (endpoint.os="osx" and ((tgt.process.image.path contains "/osascript" and (tgt.process.cmdline contains " -e " or tgt.process.cmdline contains ".scpt" or tgt.process.cmdline contains ".js")) and (not (src.process.image.path contains "opencode" and (tgt.process.cmdline contains "osascript" and tgt.process.cmdline contains " -e " and tgt.process.cmdline contains "set imageData to the clipboard" and tgt.process.cmdline contains "set fileRef")))))
 ```
 
 
@@ -15,7 +15,7 @@ references:
     - https://redcanary.com/blog/applescript/
 author: Alejandro Ortuno, oscd.community
 date: 2020-10-21
-modified: 2023-02-01
+modified: 2026-05-21
 tags:
     - attack.execution
     - attack.t1059.002
@@ -29,7 +29,15 @@ detection:
             - ' -e '
             - '.scpt'
             - '.js'
-    condition: selection
+    filter_optional_opencode:
+        # OpenCode uses osascript to handle copying text from the TUI on MacOS devices. See https://github.com/anomalyco/opencode/blob/ca723f1cbc6fc4244ae57e61e9de8c4e37380ed4/packages/opencode/src/cli/cmd/tui/util/clipboard.ts#L65 for reference.
+        ParentImage|endswith: 'opencode'
+        CommandLine|contains|all:
+            - 'osascript'
+            - ' -e '
+            - 'set imageData to the clipboard'
+            - 'set fileRef'
+    condition: selection and not 1 of filter_optional_*
 falsepositives:
     - Application installers might contain scripts as part of the installation process.
 level: medium
