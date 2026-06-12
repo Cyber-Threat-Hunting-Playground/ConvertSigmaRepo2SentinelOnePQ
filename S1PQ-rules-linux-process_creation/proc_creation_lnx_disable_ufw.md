@@ -1,20 +1,25 @@
 ```sql
-// Translated content (automatically translated on 11-06-2026 02:41:10):
-event.type="Process Creation" and (endpoint.os="linux" and ((tgt.process.cmdline contains "-ufw-init" and tgt.process.cmdline contains "force-stop") or (tgt.process.cmdline contains "ufw" and tgt.process.cmdline contains "disable")))
+// Translated content (automatically translated on 12-06-2026 02:37:01):
+event.type="Process Creation" and (endpoint.os="linux" and ((tgt.process.image.path contains "/ufw-init" and (tgt.process.cmdline contains " force-stop" or tgt.process.cmdline contains " stop" or tgt.process.cmdline contains " flush")) or (tgt.process.cmdline contains "ufw " and tgt.process.cmdline contains "disable")))
 ```
 
 
 # Original Sigma Rule:
 ```yaml
-title: Ufw Force Stop Using Ufw-Init
+title: UFW Disable Attempt
 id: 84c9e83c-599a-458a-a0cb-0ecce44e807a
 status: test
-description: Detects attempts to force stop the ufw using ufw-init
+description: |
+    Detects attempts to disable the Uncomplicated Firewall (UFW) on Linux systems.
+    UFW is a popular firewall management tool that provides an easy-to-use interface for configuring firewall rules.
+    Disabling UFW can leave a system vulnerable to attacks, as it may allow unauthorized access to network services and resources.
 references:
-    - https://blogs.blackberry.com/
     - https://twitter.com/Joseliyo_Jstnk/status/1620131033474822144
+    - https://manpages.debian.org/unstable/ufw/ufw-framework.8.en.html
+    - https://www.cyberciti.biz/faq/linux-disable-firewall-command/
 author: Joseliyo Sanchez, @Joseliyo_Jstnk
 date: 2023-01-18
+modified: 2026-05-04
 tags:
     - attack.defense-impairment
     - attack.t1686
@@ -22,16 +27,21 @@ logsource:
     product: linux
     category: process_creation
 detection:
-    selection_init:
+    selection_ufw_init:
+        Image|endswith: '/ufw-init'
+        CommandLine|contains:
+            - ' force-stop' # same as stop, except does not check if the firewall is already loaded
+            - ' stop' # unloads the firewall
+            - ' flush' # flushes the built-in chains, deletes all non-built-in chains and resets the policy to ACCEPT
+    selection_ufw_disable:
         CommandLine|contains|all:
-            - '-ufw-init'
-            - 'force-stop'
-    selection_ufw:
-        CommandLine|contains|all:
-            - 'ufw'
+            # Covers both ufw disable and systemctl disable ufw
+            # systemctl disable ufw -- prevents UFW starting at boot, but does not stop the currently running instance of UFW
+            # ufw disable -- stops the currently running instance of UFW and prevents it from starting at boot
+            - 'ufw '
             - 'disable'
     condition: 1 of selection_*
 falsepositives:
-    - Network administrators
+    - Legitimate actions by system administrators to disable UFW.
 level: medium
 ```

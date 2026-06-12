@@ -1,6 +1,6 @@
 ```sql
-// Translated content (automatically translated on 11-06-2026 02:41:10):
-event.type="Process Creation" and (endpoint.os="linux" and (((tgt.process.image.path contains "/rvim" or tgt.process.image.path contains "/vim" or tgt.process.image.path contains "/vimdiff") and (tgt.process.cmdline contains " --cmd" or tgt.process.cmdline contains " -c ")) and (tgt.process.cmdline contains ":!/" or tgt.process.cmdline contains ":lua " or tgt.process.cmdline contains ":py " or tgt.process.cmdline contains "/bin/bash" or tgt.process.cmdline contains "/bin/dash" or tgt.process.cmdline contains "/bin/fish" or tgt.process.cmdline contains "/bin/sh" or tgt.process.cmdline contains "/bin/zsh")))
+// Translated content (automatically translated on 12-06-2026 02:37:01):
+event.type="Process Creation" and (endpoint.os="linux" and (((tgt.process.image.path contains "/rvim" or tgt.process.image.path contains "/vi" or tgt.process.image.path contains "/vim" or tgt.process.image.path contains "/vimdiff") and (tgt.process.cmdline contains " --cmd " or tgt.process.cmdline contains " -c")) and (tgt.process.cmdline contains ":!/" or tgt.process.cmdline contains ":!$" or tgt.process.cmdline contains ":!.." or tgt.process.cmdline contains ":lua " or tgt.process.cmdline contains ":py " or tgt.process.cmdline contains ":shell" or tgt.process.cmdline contains "/bin/bash" or tgt.process.cmdline contains "/bin/dash" or tgt.process.cmdline contains "/bin/fish" or tgt.process.cmdline contains "/bin/sh" or tgt.process.cmdline contains "/bin/csh" or tgt.process.cmdline contains "/bin/ksh" or tgt.process.cmdline contains "/bin/zsh" or tgt.process.cmdline contains "/bin/tmux")))
 ```
 
 
@@ -13,14 +13,17 @@ description: |
     Detects the use of "vim" and it's siblings commands to execute a shell or proxy commands.
     Such behavior may be associated with privilege escalation, unauthorized command execution, or to break out from restricted environments.
 references:
+    - https://gtfobins.github.io/gtfobins/vi/
     - https://gtfobins.github.io/gtfobins/vim/
     - https://gtfobins.github.io/gtfobins/rvim/
     - https://gtfobins.github.io/gtfobins/vimdiff/
-author: Nasreddine Bencherchali (Nextron Systems)
+author: Nasreddine Bencherchali (Nextron Systems), Luc Génaux
 date: 2022-12-28
-modified: 2024-09-02
+modified: 2026-06-05
 tags:
+    - attack.execution
     - attack.discovery
+    - attack.t1059
     - attack.t1083
 logsource:
     category: process_creation
@@ -29,21 +32,28 @@ detection:
     selection_img:
         Image|endswith:
             - '/rvim'
+            - '/vi'
             - '/vim'
             - '/vimdiff'
         CommandLine|contains:
-            - ' --cmd'
-            - ' -c '
+            - ' --cmd '
+            - ' -c'
     selection_cli:
         CommandLine|contains:
             - ':!/'
+            - ':!$'
+            - ':!..'
             - ':lua '
             - ':py '
+            - ':shell'
             - '/bin/bash'
             - '/bin/dash'
             - '/bin/fish'
             - '/bin/sh'
+            - '/bin/csh'
+            - '/bin/ksh'
             - '/bin/zsh'
+            - '/bin/tmux'
     condition: all of selection_*
 falsepositives:
     - Unknown
