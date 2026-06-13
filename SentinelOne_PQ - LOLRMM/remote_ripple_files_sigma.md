@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 12-06-2026 02:30:19):
+// Translated content (automatically translated on 13-06-2026 02:11:16):
 event.category="file" and (endpoint.os="windows" and (tgt.file.path contains "%APPDATA%\\GlavSoft\\RemoteRipple\*" or tgt.file.path contains "%TEMP%\\Remote_Ripple_"))
 ```
 
