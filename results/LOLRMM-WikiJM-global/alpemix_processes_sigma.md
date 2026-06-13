@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 12-06-2026 04:01:21):
+// Translated content (automatically translated on 13-06-2026 03:49:26):
 event.type="Process Creation" and (endpoint.os="windows" and src.process.image.path contains "C:\\AlpemixService.exe")
 ```
 
