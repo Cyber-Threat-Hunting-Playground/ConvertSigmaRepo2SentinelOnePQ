@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 13-06-2026 02:11:16):
+// Translated content (automatically translated on 14-06-2026 02:34:46):
 event.category="file" and (endpoint.os="windows" and (tgt.file.path contains "C:\\Program Files\\Faronics\\Faronics Core\\Workstation Agent\\FaronicsCoreAgent.exe" or tgt.file.path contains "C:\\Program Files\\Faronics\\Faronics Core\\Workstation Agent\\CoreAgentService.exe" or tgt.file.path contains "C:\\ProgramData\\Faronics\\FCAForStartupMonitor.msi"))
 ```
 
