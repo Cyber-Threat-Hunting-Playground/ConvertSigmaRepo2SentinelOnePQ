@@ -2089,6 +2089,60 @@ falsepositives:
     - False positives are likely. This rule is more suitable for hunting than for generating detections.
 
 ---
+title: Possible DLL Hijacking of dtlcrashcatch.dll
+id: 1846861b-8154-48a3-4104-5b9ff8331317
+status: experimental
+description: Detects possible DLL hijacking of dtlcrashcatch.dll by looking for suspicious image loads, loading this DLL from unexpected locations.
+references:
+    - https://hijacklibs.net/entries/3rd_party/ostoto/dtlcrashcatch.html
+author: "Wietze Beukema"
+date: 2026-06-14
+tags:
+    - attack.defense_evasion
+    - attack.T1574.001
+logsource:
+    product: windows
+    category: image_load
+detection:
+    selection:
+        ImageLoaded: '*\dtlcrashcatch.dll'
+    filter:
+        ImageLoaded:
+            - 'c:\program files\dtlsoft\drivethelife\\*'
+            - 'c:\program files (x86)\dtlsoft\drivethelife\\*'
+
+    condition: selection and not filter
+falsepositives:
+    - False positives are likely. This rule is more suitable for hunting than for generating detections.
+
+---
+title: Possible DLL Hijacking of teamspeak_control.dll
+id: 2800401b-8154-48a3-4104-5b9ff8248697
+status: experimental
+description: Detects possible DLL hijacking of teamspeak_control.dll by looking for suspicious image loads, loading this DLL from unexpected locations.
+references:
+    - https://hijacklibs.net/entries/3rd_party/overwolf/teamspeak_control.html
+author: "Wietze Beukema"
+date: 2026-06-14
+tags:
+    - attack.defense_evasion
+    - attack.T1574.001
+logsource:
+    product: windows
+    category: image_load
+detection:
+    selection:
+        ImageLoaded: '*\teamspeak_control.dll'
+    filter:
+        ImageLoaded:
+            - 'c:\program files\Common Files\Overwolf\Teamspeak\\*'
+            - 'c:\program files (x86)\Common Files\Overwolf\Teamspeak\\*'
+
+    condition: selection and not filter
+falsepositives:
+    - False positives are likely. This rule is more suitable for hunting than for generating detections.
+
+---
 title: Possible DLL Hijacking of winutils.dll
 id: 8665401b-4150-48a3-8413-5b9ff8744995
 status: experimental
@@ -2634,6 +2688,33 @@ detection:
         ImageLoaded:
             - 'c:\program files\NetWorx\\*'
             - 'c:\program files (x86)\NetWorx\\*'
+
+    condition: selection and not filter
+falsepositives:
+    - False positives are likely. This rule is more suitable for hunting than for generating detections.
+
+---
+title: Possible DLL Hijacking of browser_host.dll
+id: 4792391b-8154-48a3-4104-5b9ff8919147
+status: experimental
+description: Detects possible DLL hijacking of browser_host.dll by looking for suspicious image loads, loading this DLL from unexpected locations.
+references:
+    - https://hijacklibs.net/entries/3rd_party/sohu/browser_host.html
+author: "Wietze Beukema"
+date: 2026-06-14
+tags:
+    - attack.defense_evasion
+    - attack.T1574.001
+logsource:
+    product: windows
+    category: image_load
+detection:
+    selection:
+        ImageLoaded: '*\browser_host.dll'
+    filter:
+        ImageLoaded:
+            - 'c:\program files\SogouInput\\*'
+            - 'c:\program files (x86)\SogouInput\\*'
 
     condition: selection and not filter
 falsepositives:
@@ -7649,6 +7730,33 @@ falsepositives:
     - False positives are likely. This rule is more suitable for hunting than for generating detections.
 
 ---
+title: Possible DLL Hijacking of hostfxr.dll
+id: 1267681b-6191-48a3-2740-5b9ff8121560
+status: experimental
+description: Detects possible DLL hijacking of hostfxr.dll by looking for suspicious image loads, loading this DLL from unexpected locations.
+references:
+    - https://hijacklibs.net/entries/microsoft/built-in/hostfxr.html
+author: "Jose Oregon"
+date: 2026-05-28
+tags:
+    - attack.defense_evasion
+    - attack.T1574.001
+logsource:
+    product: windows
+    category: image_load
+detection:
+    selection:
+        ImageLoaded: '*\hostfxr.dll'
+    filter:
+        ImageLoaded:
+            - 'c:\program files\dotnet\host\fxr\\*\\*'
+            - 'c:\program files (x86)\dotnet\host\fxr\\*\\*'
+
+    condition: selection and not filter
+falsepositives:
+    - False positives are likely. This rule is more suitable for hunting than for generating detections.
+
+---
 title: Possible DLL Hijacking of httpapi.dll
 id: 6146261b-9395-48a3-4833-5b9ff8117686
 status: experimental
@@ -7912,6 +8020,33 @@ detection:
     filter:
         ImageLoaded:
             - 'c:\windows\system32\\*'
+
+    condition: selection and not filter
+falsepositives:
+    - False positives are likely. This rule is more suitable for hunting than for generating detections.
+
+---
+title: Possible DLL Hijacking of input.dll
+id: 6964661b-8154-48a3-4104-5b9ff8990073
+status: experimental
+description: Detects possible DLL hijacking of input.dll by looking for suspicious image loads, loading this DLL from unexpected locations.
+references:
+    - https://hijacklibs.net/entries/microsoft/built-in/input.html
+author: "Wietze Beukema"
+date: 2026-06-14
+tags:
+    - attack.defense_evasion
+    - attack.T1574.001
+logsource:
+    product: windows
+    category: image_load
+detection:
+    selection:
+        ImageLoaded: '*\input.dll'
+    filter:
+        ImageLoaded:
+            - 'c:\windows\system32\\*'
+            - 'c:\windows\syswow64\\*'
 
     condition: selection and not filter
 falsepositives:
@@ -15270,6 +15405,29 @@ detection:
             - 'c:\program files (x86)\Microsoft Visual Studio 11.0\Common7\Tools\\*'
 
     condition: selection and not filter
+falsepositives:
+    - False positives are likely. This rule is more suitable for hunting than for generating detections.
+
+---
+title: Possible DLL Hijacking of autorun.dll
+id: 3025161b-8154-48a3-4104-5b9ff8818204
+status: experimental
+description: Detects possible DLL hijacking of autorun.dll by looking for suspicious image loads, loading this DLL from unexpected locations.
+references:
+    - https://hijacklibs.net/entries/microsoft/external/autorun.html
+author: "Wietze Beukema"
+date: 2026-06-14
+tags:
+    - attack.defense_evasion
+    - attack.T1574.001
+logsource:
+    product: windows
+    category: image_load
+detection:
+    selection:
+        ImageLoaded: '*\autorun.dll'
+
+    condition: selection 
 falsepositives:
     - False positives are likely. This rule is more suitable for hunting than for generating detections.
 

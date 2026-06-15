@@ -1,0 +1,35 @@
+```sql
+// Translated content (automatically translated on 15-06-2026 04:41:46):
+event.type="Module Load" and (endpoint.os="windows" and (module.path contains "\\input.dll" and (not (module.path contains "c:\\windows\\system32\\" or module.path contains "c:\\windows\\syswow64\\"))))
+```
+
+
+# Original Sigma Rule:
+```yaml
+title: Possible DLL Hijacking of input.dll
+id: 6964661b-8154-48a3-4104-5b9ff8990073
+status: experimental
+description: Detects possible DLL hijacking of input.dll by looking for suspicious image loads, loading this DLL from unexpected locations.
+references:
+    - https://hijacklibs.net/entries/microsoft/built-in/input.html
+author: "Wietze Beukema"
+date: 2026-06-14
+tags:
+    - attack.defense_evasion
+    - attack.T1574.001
+logsource:
+    product: windows
+    category: image_load
+detection:
+    selection:
+        ImageLoaded: '*\input.dll'
+    filter:
+        ImageLoaded:
+            - 'c:\windows\system32\\*'
+            - 'c:\windows\syswow64\\*'
+
+    condition: selection and not filter
+falsepositives:
+    - False positives are likely. This rule is more suitable for hunting than for generating detections.
+
+```

@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 14-06-2026 04:18:57):
+// Translated content (automatically translated on 15-06-2026 04:41:46):
 event.type="Module Load" and (endpoint.os="windows" and (module.path contains "\\cnmpaui.dll" and (not (module.path in ("c:\\program files\\Canon\\Canon IJ Printer Assistant Tool\\\*","c:\\program files (x86)\\Canon\\Canon IJ Printer Assistant Tool\\\*")))))
 ```
 

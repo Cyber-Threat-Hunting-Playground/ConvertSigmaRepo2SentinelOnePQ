@@ -1,0 +1,35 @@
+```sql
+// Translated content (automatically translated on 15-06-2026 04:41:46):
+event.type="Module Load" and (endpoint.os="windows" and (module.path contains "\\browser_host.dll" and (not (module.path contains "c:\\program files\\SogouInput\\" or module.path contains "c:\\program files (x86)\\SogouInput\\"))))
+```
+
+
+# Original Sigma Rule:
+```yaml
+title: Possible DLL Hijacking of browser_host.dll
+id: 4792391b-8154-48a3-4104-5b9ff8919147
+status: experimental
+description: Detects possible DLL hijacking of browser_host.dll by looking for suspicious image loads, loading this DLL from unexpected locations.
+references:
+    - https://hijacklibs.net/entries/3rd_party/sohu/browser_host.html
+author: "Wietze Beukema"
+date: 2026-06-14
+tags:
+    - attack.defense_evasion
+    - attack.T1574.001
+logsource:
+    product: windows
+    category: image_load
+detection:
+    selection:
+        ImageLoaded: '*\browser_host.dll'
+    filter:
+        ImageLoaded:
+            - 'c:\program files\SogouInput\\*'
+            - 'c:\program files (x86)\SogouInput\\*'
+
+    condition: selection and not filter
+falsepositives:
+    - False positives are likely. This rule is more suitable for hunting than for generating detections.
+
+```
