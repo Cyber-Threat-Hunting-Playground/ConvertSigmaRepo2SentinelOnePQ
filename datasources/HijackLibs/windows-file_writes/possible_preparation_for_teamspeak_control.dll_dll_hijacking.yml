@@ -1,0 +1,26 @@
+title: Possible preparation for teamspeak_control.dll DLL Hijacking
+id: 2800402b-8154-48a3-4104-5b9ff8248697
+status: experimental
+description: Detects possible DLL hijacking of teamspeak_control.dll by looking for suspicious file writes of this DLL, to unexpected locations.
+references:
+    - https://hijacklibs.net/entries/3rd_party/overwolf/teamspeak_control.html
+author: "Wietze Beukema"
+date: 2026-06-14
+tags:
+    - attack.defense_evasion
+    - attack.T1574.001
+logsource:
+    product: windows
+    category: file_event
+detection:
+    selection:
+        TargetFileName: '*\teamspeak_control.dll'
+    filter:
+        TargetFileName:
+            - 'c:\program files\Common Files\Overwolf\Teamspeak\\*'
+            - 'c:\program files (x86)\Common Files\Overwolf\Teamspeak\\*'
+
+    condition: selection and not filter
+falsepositives:
+    - False positives are likely. This rule is more suitable for hunting than for generating detections.
+

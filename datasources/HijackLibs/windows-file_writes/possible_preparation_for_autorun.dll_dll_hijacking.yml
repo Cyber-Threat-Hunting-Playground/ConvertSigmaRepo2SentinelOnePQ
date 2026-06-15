@@ -1,0 +1,22 @@
+title: Possible preparation for autorun.dll DLL Hijacking
+id: 3025162b-8154-48a3-4104-5b9ff8818204
+status: experimental
+description: Detects possible DLL hijacking of autorun.dll by looking for suspicious file writes of this DLL, to unexpected locations.
+references:
+    - https://hijacklibs.net/entries/microsoft/external/autorun.html
+author: "Wietze Beukema"
+date: 2026-06-14
+tags:
+    - attack.defense_evasion
+    - attack.T1574.001
+logsource:
+    product: windows
+    category: file_event
+detection:
+    selection:
+        TargetFileName: '*\autorun.dll'
+
+    condition: selection 
+falsepositives:
+    - False positives are likely. This rule is more suitable for hunting than for generating detections.
+

@@ -1,0 +1,26 @@
+title: Possible preparation for hostfxr.dll DLL Hijacking
+id: 1267682b-6191-48a3-2740-5b9ff8121560
+status: experimental
+description: Detects possible DLL hijacking of hostfxr.dll by looking for suspicious file writes of this DLL, to unexpected locations.
+references:
+    - https://hijacklibs.net/entries/microsoft/built-in/hostfxr.html
+author: "Jose Oregon"
+date: 2026-05-28
+tags:
+    - attack.defense_evasion
+    - attack.T1574.001
+logsource:
+    product: windows
+    category: file_event
+detection:
+    selection:
+        TargetFileName: '*\hostfxr.dll'
+    filter:
+        TargetFileName:
+            - 'c:\program files\dotnet\host\fxr\\*\\*'
+            - 'c:\program files (x86)\dotnet\host\fxr\\*\\*'
+
+    condition: selection and not filter
+falsepositives:
+    - False positives are likely. This rule is more suitable for hunting than for generating detections.
+

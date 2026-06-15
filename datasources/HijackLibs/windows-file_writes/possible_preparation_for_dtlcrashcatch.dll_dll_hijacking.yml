@@ -1,0 +1,26 @@
+title: Possible preparation for dtlcrashcatch.dll DLL Hijacking
+id: 1846862b-8154-48a3-4104-5b9ff8331317
+status: experimental
+description: Detects possible DLL hijacking of dtlcrashcatch.dll by looking for suspicious file writes of this DLL, to unexpected locations.
+references:
+    - https://hijacklibs.net/entries/3rd_party/ostoto/dtlcrashcatch.html
+author: "Wietze Beukema"
+date: 2026-06-14
+tags:
+    - attack.defense_evasion
+    - attack.T1574.001
+logsource:
+    product: windows
+    category: file_event
+detection:
+    selection:
+        TargetFileName: '*\dtlcrashcatch.dll'
+    filter:
+        TargetFileName:
+            - 'c:\program files\dtlsoft\drivethelife\\*'
+            - 'c:\program files (x86)\dtlsoft\drivethelife\\*'
+
+    condition: selection and not filter
+falsepositives:
+    - False positives are likely. This rule is more suitable for hunting than for generating detections.
+

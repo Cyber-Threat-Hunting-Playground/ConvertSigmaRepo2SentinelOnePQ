@@ -2095,6 +2095,60 @@ falsepositives:
     - False positives are likely. This rule is more suitable for hunting than for generating detections.
 
 ---
+title: Possible preparation for dtlcrashcatch.dll DLL Hijacking
+id: 1846862b-8154-48a3-4104-5b9ff8331317
+status: experimental
+description: Detects possible DLL hijacking of dtlcrashcatch.dll by looking for suspicious file writes of this DLL, to unexpected locations.
+references:
+    - https://hijacklibs.net/entries/3rd_party/ostoto/dtlcrashcatch.html
+author: "Wietze Beukema"
+date: 2026-06-14
+tags:
+    - attack.defense_evasion
+    - attack.T1574.001
+logsource:
+    product: windows
+    category: file_event
+detection:
+    selection:
+        TargetFileName: '*\dtlcrashcatch.dll'
+    filter:
+        TargetFileName:
+            - 'c:\program files\dtlsoft\drivethelife\\*'
+            - 'c:\program files (x86)\dtlsoft\drivethelife\\*'
+
+    condition: selection and not filter
+falsepositives:
+    - False positives are likely. This rule is more suitable for hunting than for generating detections.
+
+---
+title: Possible preparation for teamspeak_control.dll DLL Hijacking
+id: 2800402b-8154-48a3-4104-5b9ff8248697
+status: experimental
+description: Detects possible DLL hijacking of teamspeak_control.dll by looking for suspicious file writes of this DLL, to unexpected locations.
+references:
+    - https://hijacklibs.net/entries/3rd_party/overwolf/teamspeak_control.html
+author: "Wietze Beukema"
+date: 2026-06-14
+tags:
+    - attack.defense_evasion
+    - attack.T1574.001
+logsource:
+    product: windows
+    category: file_event
+detection:
+    selection:
+        TargetFileName: '*\teamspeak_control.dll'
+    filter:
+        TargetFileName:
+            - 'c:\program files\Common Files\Overwolf\Teamspeak\\*'
+            - 'c:\program files (x86)\Common Files\Overwolf\Teamspeak\\*'
+
+    condition: selection and not filter
+falsepositives:
+    - False positives are likely. This rule is more suitable for hunting than for generating detections.
+
+---
 title: Possible preparation for winutils.dll DLL Hijacking
 id: 8665402b-4150-48a3-8413-5b9ff8744995
 status: experimental
@@ -2640,6 +2694,33 @@ detection:
         TargetFileName:
             - 'c:\program files\NetWorx\\*'
             - 'c:\program files (x86)\NetWorx\\*'
+
+    condition: selection and not filter
+falsepositives:
+    - False positives are likely. This rule is more suitable for hunting than for generating detections.
+
+---
+title: Possible preparation for browser_host.dll DLL Hijacking
+id: 4792392b-8154-48a3-4104-5b9ff8919147
+status: experimental
+description: Detects possible DLL hijacking of browser_host.dll by looking for suspicious file writes of this DLL, to unexpected locations.
+references:
+    - https://hijacklibs.net/entries/3rd_party/sohu/browser_host.html
+author: "Wietze Beukema"
+date: 2026-06-14
+tags:
+    - attack.defense_evasion
+    - attack.T1574.001
+logsource:
+    product: windows
+    category: file_event
+detection:
+    selection:
+        TargetFileName: '*\browser_host.dll'
+    filter:
+        TargetFileName:
+            - 'c:\program files\SogouInput\\*'
+            - 'c:\program files (x86)\SogouInput\\*'
 
     condition: selection and not filter
 falsepositives:
@@ -8108,6 +8189,33 @@ falsepositives:
     - False positives are likely. This rule is more suitable for hunting than for generating detections.
 
 ---
+title: Possible preparation for hostfxr.dll DLL Hijacking
+id: 1267682b-6191-48a3-2740-5b9ff8121560
+status: experimental
+description: Detects possible DLL hijacking of hostfxr.dll by looking for suspicious file writes of this DLL, to unexpected locations.
+references:
+    - https://hijacklibs.net/entries/microsoft/built-in/hostfxr.html
+author: "Jose Oregon"
+date: 2026-05-28
+tags:
+    - attack.defense_evasion
+    - attack.T1574.001
+logsource:
+    product: windows
+    category: file_event
+detection:
+    selection:
+        TargetFileName: '*\hostfxr.dll'
+    filter:
+        TargetFileName:
+            - 'c:\program files\dotnet\host\fxr\\*\\*'
+            - 'c:\program files (x86)\dotnet\host\fxr\\*\\*'
+
+    condition: selection and not filter
+falsepositives:
+    - False positives are likely. This rule is more suitable for hunting than for generating detections.
+
+---
 title: Possible preparation for httpapi.dll DLL Hijacking
 id: 6146262b-9395-48a3-4833-5b9ff8117686
 status: experimental
@@ -8398,6 +8506,36 @@ detection:
     filter:
         TargetFileName:
             - 'c:\windows\system32\\*'
+            - 'c:\windows\winsxs\*'
+            - 'c:\$windows.~bt\*'
+            - 'c:\windows\softwaredistribution\*'
+
+    condition: selection and not filter
+falsepositives:
+    - False positives are likely. This rule is more suitable for hunting than for generating detections.
+
+---
+title: Possible preparation for input.dll DLL Hijacking
+id: 6964662b-8154-48a3-4104-5b9ff8990073
+status: experimental
+description: Detects possible DLL hijacking of input.dll by looking for suspicious file writes of this DLL, to unexpected locations.
+references:
+    - https://hijacklibs.net/entries/microsoft/built-in/input.html
+author: "Wietze Beukema"
+date: 2026-06-14
+tags:
+    - attack.defense_evasion
+    - attack.T1574.001
+logsource:
+    product: windows
+    category: file_event
+detection:
+    selection:
+        TargetFileName: '*\input.dll'
+    filter:
+        TargetFileName:
+            - 'c:\windows\system32\\*'
+            - 'c:\windows\syswow64\\*'
             - 'c:\windows\winsxs\*'
             - 'c:\$windows.~bt\*'
             - 'c:\windows\softwaredistribution\*'
@@ -16518,6 +16656,29 @@ detection:
             - 'c:\program files (x86)\Microsoft Visual Studio 11.0\Common7\Tools\\*'
 
     condition: selection and not filter
+falsepositives:
+    - False positives are likely. This rule is more suitable for hunting than for generating detections.
+
+---
+title: Possible preparation for autorun.dll DLL Hijacking
+id: 3025162b-8154-48a3-4104-5b9ff8818204
+status: experimental
+description: Detects possible DLL hijacking of autorun.dll by looking for suspicious file writes of this DLL, to unexpected locations.
+references:
+    - https://hijacklibs.net/entries/microsoft/external/autorun.html
+author: "Wietze Beukema"
+date: 2026-06-14
+tags:
+    - attack.defense_evasion
+    - attack.T1574.001
+logsource:
+    product: windows
+    category: file_event
+detection:
+    selection:
+        TargetFileName: '*\autorun.dll'
+
+    condition: selection 
 falsepositives:
     - False positives are likely. This rule is more suitable for hunting than for generating detections.
 
