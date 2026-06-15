@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 14-06-2026 02:34:46):
+// Translated content (automatically translated on 15-06-2026 02:39:25):
 event.type="Process Creation" and (endpoint.os="windows" and ((src.process.image.path contains "remotepass-access.exe" or src.process.image.path contains "rpaccess.exe" or src.process.image.path contains "rpwhostscr.exe") or (tgt.process.image.path contains "remotepass-access.exe" or tgt.process.image.path contains "rpaccess.exe" or tgt.process.image.path contains "rpwhostscr.exe")))
 ```
 
