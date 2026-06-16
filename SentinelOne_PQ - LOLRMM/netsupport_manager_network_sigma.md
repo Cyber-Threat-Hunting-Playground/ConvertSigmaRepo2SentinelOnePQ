@@ -1,6 +1,6 @@
 ```sql
-// Translated content (automatically translated on 15-06-2026 02:39:25):
-(event.category in ("dns","url","ip")) and (endpoint.os="windows" and ((url.address contains ".netsupportmanager.com" or url.address contains "netsupportmanager.com") or (event.dns.request contains ".netsupportmanager.com" or event.dns.request contains "netsupportmanager.com")))
+// Translated content (automatically translated on 16-06-2026 02:42:19):
+(event.category in ("dns","url","ip")) and (endpoint.os="windows" and ((url.address contains "geo.netsupportsoftware.com" or url.address contains ".netsupportmanager.com" or url.address contains "netsupportmanager.com") or (event.dns.request contains "geo.netsupportsoftware.com" or event.dns.request contains ".netsupportmanager.com" or event.dns.request contains "netsupportmanager.com")))
 ```
 
 
@@ -24,6 +24,7 @@ logsource:
 detection:
     selection:
         DestinationHostname|endswith:
+            - 'geo.netsupportsoftware.com'
             - '*.netsupportmanager.com'
             - 'netsupportmanager.com'
     condition: selection

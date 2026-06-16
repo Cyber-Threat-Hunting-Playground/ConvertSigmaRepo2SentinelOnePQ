@@ -1,29 +1,33 @@
 ```sql
-// Translated content (automatically translated on 30-11-2025 00:59:06):
-(event.category in ("dns","url","ip")) and (endpoint.os="windows" and (url.address contains "mygreenpc.com" or event.dns.request contains "mygreenpc.com"))
+// Translated content (automatically translated on 16-06-2026 02:42:19):
+(event.category in ("dns","url","ip")) and (endpoint.os="windows" and ((url.address contains "mygreenpc.com" or url.address contains ".mygreenpc.com") or (event.dns.request contains "mygreenpc.com" or event.dns.request contains ".mygreenpc.com")))
 ```
 
 
 # Original Sigma Rule:
 ```yaml
 title: Potential MyGreenPC RMM Tool Network Activity
-logsource:
-  product: windows
-  category: network_connection
-detection:
-  selection:
-    DestinationHostname|endswith:
-    - '*mygreenpc.com'
-  condition: selection
-id: 2aa2b1ef-3d1f-40f0-b530-431ea2bea222
+id: 4a0e9fb7-f29b-42bc-922b-c0ca30a4550b
 status: experimental
-description: Detects potential network activity of MyGreenPC RMM tool
+description: |
+    Detects potential network activity of MyGreenPC RMM tool
+references:
+    - https://github.com/magicsword-io/LOLRMM
 author: LOLRMM Project
-date: 2024/08/07
+date: 2025-12-01
 tags:
-- attack.execution
-- attack.t1219
+    - attack.execution
+    - attack.t1219
+logsource:
+    product: windows
+    category: network_connection
+detection:
+    selection:
+        DestinationHostname|endswith:
+            - 'mygreenpc.com'
+            - '*.mygreenpc.com'
+    condition: selection
 falsepositives:
-- Legitimate use of MyGreenPC
+    - Legitimate use of MyGreenPC
 level: medium
 ```

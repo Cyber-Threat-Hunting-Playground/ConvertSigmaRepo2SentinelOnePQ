@@ -1,0 +1,37 @@
+```sql
+// Translated content (automatically translated on 16-06-2026 02:42:19):
+event.type="Process Creation" and (endpoint.os="windows" and ((src.process.image.path contains "Remotely_Agent.exe" or src.process.image.path contains "Remotely_Desktop.exe") or (tgt.process.image.path contains "Remotely_Agent.exe" or tgt.process.image.path contains "Remotely_Desktop.exe")))
+```
+
+
+# Original Sigma Rule:
+```yaml
+title: Potential Remotely RMM Tool Process Activity
+id: 4abafe26-db05-5ea2-b0f1-2137f8e6d7ce
+status: experimental
+description: |
+    Detects potential processes activity of Remotely RMM tool
+references:
+    - https://github.com/magicsword-io/LOLRMM
+author: LOLRMM Project
+date: 2026-06-15
+tags:
+    - attack.execution
+    - attack.t1219
+logsource:
+    product: windows
+    category: process_creation
+detection:
+    selection_parent:
+        ParentImage|endswith:
+            - 'Remotely_Agent.exe'
+            - 'Remotely_Desktop.exe'
+    selection_image:
+        Image|endswith:
+            - 'Remotely_Agent.exe'
+            - 'Remotely_Desktop.exe'
+    condition: 1 of selection_*
+falsepositives:
+    - Legitimate use of Remotely
+level: medium
+```

@@ -1,6 +1,6 @@
 ```sql
-// Translated content (automatically translated on 15-06-2026 02:39:25):
-event.type="Process Creation" and (endpoint.os="windows" and ((src.process.image.path contains "paexec.exe" or src.process.image.path="*PAExec-*.exe" or src.process.image.path contains "remcom.exe" or src.process.image.path contains "remcomsvc.exe" or src.process.image.path contains "xcmd.exe" or src.process.image.path contains "xcmdsvc.exe") or (tgt.process.image.path contains "paexec.exe" or tgt.process.image.path="*PAExec-*.exe" or tgt.process.image.path contains "remcom.exe" or tgt.process.image.path contains "remcomsvc.exe" or tgt.process.image.path contains "xcmd.exe" or tgt.process.image.path contains "xcmdsvc.exe")))
+// Translated content (automatically translated on 16-06-2026 02:42:19):
+event.type="Process Creation" and (endpoint.os="windows" and ((src.process.image.path contains "paexec.exe" or src.process.image.path="*PAExec-*.exe" or src.process.image.path contains "csexec.exe" or src.process.image.path contains "remcom.exe" or src.process.image.path contains "remcomsvc.exe" or src.process.image.path contains "xcmd.exe" or src.process.image.path contains "xcmdsvc.exe") or (tgt.process.image.path contains "paexec.exe" or tgt.process.image.path="*PAExec-*.exe" or tgt.process.image.path contains "csexec.exe" or tgt.process.image.path contains "remcom.exe" or tgt.process.image.path contains "remcomsvc.exe" or tgt.process.image.path contains "xcmd.exe" or tgt.process.image.path contains "xcmdsvc.exe")))
 ```
 
 
@@ -24,20 +24,22 @@ logsource:
 detection:
     selection_parent:
         ParentImage|endswith:
-            - paexec.exe
-            - PAExec-*.exe
-            - remcom.exe
-            - remcomsvc.exe
-            - xcmd.exe
-            - xcmdsvc.exe
+            - 'paexec.exe'
+            - 'PAExec-*.exe'
+            - 'csexec.exe'
+            - 'remcom.exe'
+            - 'remcomsvc.exe'
+            - 'xcmd.exe'
+            - 'xcmdsvc.exe'
     selection_image:
         Image|endswith:
-            - paexec.exe
-            - PAExec-*.exe
-            - remcom.exe
-            - remcomsvc.exe
-            - xcmd.exe
-            - xcmdsvc.exe
+            - 'paexec.exe'
+            - 'PAExec-*.exe'
+            - 'csexec.exe'
+            - 'remcom.exe'
+            - 'remcomsvc.exe'
+            - 'xcmd.exe'
+            - 'xcmdsvc.exe'
     condition: 1 of selection_*
 falsepositives:
     - Legitimate use of PSEXEC (Clone)

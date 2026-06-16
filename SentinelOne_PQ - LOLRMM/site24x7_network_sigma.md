@@ -1,6 +1,6 @@
 ```sql
-// Translated content (automatically translated on 15-06-2026 02:39:25):
-(event.category in ("dns","url","ip")) and (endpoint.os="windows" and ((url.address="*plus*.site24x7.com" or url.address="*plus*.site24x7.eu" or url.address="*plus*.site24x7.in" or url.address="*plus*.site24x7.cn" or url.address="*plus*.site24x7.net.au" or url.address contains "site24x7.com/msp") or (event.dns.request="*plus*.site24x7.com" or event.dns.request="*plus*.site24x7.eu" or event.dns.request="*plus*.site24x7.in" or event.dns.request="*plus*.site24x7.cn" or event.dns.request="*plus*.site24x7.net.au" or event.dns.request contains "site24x7.com/msp")))
+// Translated content (automatically translated on 16-06-2026 02:42:19):
+(event.category in ("dns","url","ip")) and (endpoint.os="windows" and ((url.address="*plus*.site24x7.com" or url.address="*plus*.site24x7.eu" or url.address="*plus*.site24x7.in" or url.address="*plus*.site24x7.cn" or url.address="*plus*.site24x7.net.au") or (event.dns.request="*plus*.site24x7.com" or event.dns.request="*plus*.site24x7.eu" or event.dns.request="*plus*.site24x7.in" or event.dns.request="*plus*.site24x7.cn" or event.dns.request="*plus*.site24x7.net.au")))
 ```
 
 
@@ -24,12 +24,11 @@ logsource:
 detection:
     selection:
         DestinationHostname|endswith:
-            - plus*.site24x7.com
-            - plus*.site24x7.eu
-            - plus*.site24x7.in
-            - plus*.site24x7.cn
-            - plus*.site24x7.net.au
-            - site24x7.com/msp
+            - 'plus*.site24x7.com'
+            - 'plus*.site24x7.eu'
+            - 'plus*.site24x7.in'
+            - 'plus*.site24x7.cn'
+            - 'plus*.site24x7.net.au'
     condition: selection
 falsepositives:
     - Legitimate use of Site24x7

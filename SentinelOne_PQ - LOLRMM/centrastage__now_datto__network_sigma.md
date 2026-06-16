@@ -1,31 +1,34 @@
 ```sql
-// Translated content (automatically translated on 30-11-2025 00:59:06):
-(event.category in ("dns","url","ip")) and (endpoint.os="windows" and ((url.address contains ".rmm.datto.com" or url.address contains "cc.centrastage.net" or url.address contains "datto.com/au/products/rmm/") or (event.dns.request contains ".rmm.datto.com" or event.dns.request contains "cc.centrastage.net" or event.dns.request contains "datto.com/au/products/rmm/")))
+// Translated content (automatically translated on 16-06-2026 02:42:19):
+(event.category in ("dns","url","ip")) and (endpoint.os="windows" and ((url.address contains ".rmm.datto.com" or url.address contains "cc.centrastage.net" or url.address contains ".cc.centrastage.net") or (event.dns.request contains ".rmm.datto.com" or event.dns.request contains "cc.centrastage.net" or event.dns.request contains ".cc.centrastage.net")))
 ```
 
 
 # Original Sigma Rule:
 ```yaml
 title: Potential CentraStage (Now Datto) RMM Tool Network Activity
-logsource:
-  product: windows
-  category: network_connection
-detection:
-  selection:
-    DestinationHostname|endswith:
-    - '*.rmm.datto.com'
-    - '*cc.centrastage.net'
-    - datto.com/au/products/rmm/
-  condition: selection
-id: 3a88e2fc-5a18-462a-ae8d-4b397d11db5d
+id: dc92ed7e-9e42-4533-b244-f6d424efab0f
 status: experimental
-description: Detects potential network activity of CentraStage (Now Datto) RMM tool
+description: |
+    Detects potential network activity of CentraStage (Now Datto) RMM tool
+references:
+    - https://github.com/magicsword-io/LOLRMM
 author: LOLRMM Project
-date: 2024/08/07
+date: 2025-12-01
 tags:
-- attack.execution
-- attack.t1219
+    - attack.execution
+    - attack.t1219
+logsource:
+    product: windows
+    category: network_connection
+detection:
+    selection:
+        DestinationHostname|endswith:
+            - '*.rmm.datto.com'
+            - 'cc.centrastage.net'
+            - '*.cc.centrastage.net'
+    condition: selection
 falsepositives:
-- Legitimate use of CentraStage (Now Datto)
+    - Legitimate use of CentraStage (Now Datto)
 level: medium
 ```

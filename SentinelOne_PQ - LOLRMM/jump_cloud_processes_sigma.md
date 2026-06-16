@@ -1,0 +1,33 @@
+```sql
+// Translated content (automatically translated on 16-06-2026 02:42:19):
+event.type="Process Creation" and (endpoint.os="windows" and (src.process.image.path="*JumpCloud*.exe" or tgt.process.image.path="*JumpCloud*.exe"))
+```
+
+
+# Original Sigma Rule:
+```yaml
+title: Potential Jump Cloud RMM Tool Process Activity
+id: ca05e54b-e199-586c-b5e9-8478743c416b
+status: experimental
+description: |
+    Detects potential processes activity of Jump Cloud RMM tool
+references:
+    - https://github.com/magicsword-io/LOLRMM
+author: LOLRMM Project
+date: 2026-06-15
+tags:
+    - attack.execution
+    - attack.t1219
+logsource:
+    product: windows
+    category: process_creation
+detection:
+    selection_parent:
+        ParentImage|endswith: 'JumpCloud*.exe'
+    selection_image:
+        Image|endswith: 'JumpCloud*.exe'
+    condition: 1 of selection_*
+falsepositives:
+    - Legitimate use of Jump Cloud
+level: medium
+```

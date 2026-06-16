@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 15-06-2026 02:39:25):
+// Translated content (automatically translated on 16-06-2026 02:42:19):
 event.category="registry" and (endpoint.os="windows" and (registry.keyPath contains "HKLM\\SYSTEM\\CurrentControlSet\\Services\\FaronicsCoreAgent" or registry.keyPath contains "HKLM\\SOFTWARE\\Faronics\\Faronics Core 3" or registry.keyPath contains "HKLM\\SOFTWARE\\WOW6432Node\\Faronics\\Faronics Core 3" or registry.keyPath contains "HKLM\\SOFTWARE\\Faronics"))
 ```
 

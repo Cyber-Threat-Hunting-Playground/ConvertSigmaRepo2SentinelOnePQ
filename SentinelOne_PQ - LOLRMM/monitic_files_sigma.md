@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 15-06-2026 02:39:25):
+// Translated content (automatically translated on 16-06-2026 02:42:19):
 event.category="file" and (endpoint.os="windows" and (tgt.file.path contains "C:\\Program Files\\Monitic\\agent.exe" or tgt.file.path contains "C:\\Program Files\\Monitic\\amon.exe" or tgt.file.path contains "C:\\Program Files\\Monitic\\conf.json" or tgt.file.path contains "C:\\Program Files\\Monitic\*" or tgt.file.path contains "%USERPROFILE%\\Desktop\\MoniticInstaller.exe" or tgt.file.path contains "%TEMP%\*\\agent_installer.bat" or tgt.file.path contains "%TEMP%\*\\amon.exe" or tgt.file.path contains "%TEMP%\*\\agent.exe" or tgt.file.path contains "%CD%\\installer.zip" or tgt.file.path contains "%CD%\\conf.json"))
 ```
 

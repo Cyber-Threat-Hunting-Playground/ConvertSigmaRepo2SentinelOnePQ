@@ -1,6 +1,6 @@
 ```sql
-// Translated content (automatically translated on 15-06-2026 02:39:25):
-(event.category in ("dns","url","ip")) and (endpoint.os="windows" and ((url.address contains ".beanywhere.com " or url.address contains "systemmonitor.co.uk" or url.address contains "system-monitor.com" or url.address contains "cloudbackup.management" or url.address contains "systemmonitor.co.uk" or url.address contains "n-able.com" or url.address contains "systemmonitor.us" or url.address contains "systemmonitor.eu.com" or url.address contains ".logicnow.com" or url.address contains ".swi-tc.com" or url.address contains "remote.management" or url.address contains "systemmonitor.us.cdn.cloudflare.net" or url.address contains "cloudbackup.management" or url.address contains "remote.management" or url.address contains "logicnow.com" or url.address contains "system-monitor.com" or url.address contains "systemmonitor.us" or url.address contains "systemmonitor.eu.com" or url.address contains ".n-able.com") or (event.dns.request contains ".beanywhere.com " or event.dns.request contains "systemmonitor.co.uk" or event.dns.request contains "system-monitor.com" or event.dns.request contains "cloudbackup.management" or event.dns.request contains "systemmonitor.co.uk" or event.dns.request contains "n-able.com" or event.dns.request contains "systemmonitor.us" or event.dns.request contains "systemmonitor.eu.com" or event.dns.request contains ".logicnow.com" or event.dns.request contains ".swi-tc.com" or event.dns.request contains "remote.management" or event.dns.request contains "systemmonitor.us.cdn.cloudflare.net" or event.dns.request contains "cloudbackup.management" or event.dns.request contains "remote.management" or event.dns.request contains "logicnow.com" or event.dns.request contains "system-monitor.com" or event.dns.request contains "systemmonitor.us" or event.dns.request contains "systemmonitor.eu.com" or event.dns.request contains ".n-able.com")))
+// Translated content (automatically translated on 16-06-2026 02:42:19):
+(event.category in ("dns","url","ip")) and (endpoint.os="windows" and ((url.address contains "beanywhere.com" or url.address contains ".beanywhere.com" or url.address contains "systemmonitor.co.uk" or url.address contains ".system-monitor.com" or url.address contains "cloudbackup.management" or url.address contains ".systemmonitor.co.uk" or url.address contains "n-able.com" or url.address contains "systemmonitor.us" or url.address contains ".systemmonitor.eu.com" or url.address contains ".logicnow.com" or url.address contains ".swi-tc.com" or url.address contains ".remote.management" or url.address contains "systemmonitor.us.cdn.cloudflare.net" or url.address contains ".cloudbackup.management" or url.address contains "remote.management" or url.address contains "logicnow.com" or url.address contains "system-monitor.com" or url.address contains ".systemmonitor.us" or url.address contains "systemmonitor.eu.com" or url.address contains ".n-able.com") or (event.dns.request contains "beanywhere.com" or event.dns.request contains ".beanywhere.com" or event.dns.request contains "systemmonitor.co.uk" or event.dns.request contains ".system-monitor.com" or event.dns.request contains "cloudbackup.management" or event.dns.request contains ".systemmonitor.co.uk" or event.dns.request contains "n-able.com" or event.dns.request contains "systemmonitor.us" or event.dns.request contains ".systemmonitor.eu.com" or event.dns.request contains ".logicnow.com" or event.dns.request contains ".swi-tc.com" or event.dns.request contains ".remote.management" or event.dns.request contains "systemmonitor.us.cdn.cloudflare.net" or event.dns.request contains ".cloudbackup.management" or event.dns.request contains "remote.management" or event.dns.request contains "logicnow.com" or event.dns.request contains "system-monitor.com" or event.dns.request contains ".systemmonitor.us" or event.dns.request contains "systemmonitor.eu.com" or event.dns.request contains ".n-able.com")))
 ```
 
 
@@ -24,23 +24,24 @@ logsource:
 detection:
     selection:
         DestinationHostname|endswith:
-            - '*.beanywhere.com '
+            - 'beanywhere.com'
+            - '*.beanywhere.com'
             - 'systemmonitor.co.uk'
-            - '*system-monitor.com'
+            - '*.system-monitor.com'
             - 'cloudbackup.management'
-            - '*systemmonitor.co.uk'
+            - '*.systemmonitor.co.uk'
             - 'n-able.com'
             - 'systemmonitor.us'
-            - '*systemmonitor.eu.com'
+            - '*.systemmonitor.eu.com'
             - '*.logicnow.com'
             - '*.swi-tc.com'
-            - '*remote.management'
+            - '*.remote.management'
             - 'systemmonitor.us.cdn.cloudflare.net'
-            - '*cloudbackup.management'
+            - '*.cloudbackup.management'
             - 'remote.management'
             - 'logicnow.com'
             - 'system-monitor.com'
-            - '*systemmonitor.us'
+            - '*.systemmonitor.us'
             - 'systemmonitor.eu.com'
             - '*.n-able.com'
     condition: selection

@@ -1,6 +1,6 @@
 ```sql
-// Translated content (automatically translated on 15-06-2026 02:39:25):
-(event.category in ("dns","url","ip")) and (endpoint.os="windows" and ((url.address contains "user_managed" or url.address contains "systemmanager.ru/dntu.en/rdp_view.htm") or (event.dns.request contains "user_managed" or event.dns.request contains "systemmanager.ru/dntu.en/rdp_view.htm")))
+// Translated content (automatically translated on 16-06-2026 02:42:19):
+(event.category in ("dns","url","ip")) and (endpoint.os="windows" and (url.address contains "user_managed" or event.dns.request contains "user_managed"))
 ```
 
 
@@ -23,9 +23,7 @@ logsource:
     category: network_connection
 detection:
     selection:
-        DestinationHostname|endswith:
-            - 'user_managed'
-            - 'systemmanager.ru/dntu.en/rdp_view.htm'
+        DestinationHostname|endswith: 'user_managed'
     condition: selection
 falsepositives:
     - Legitimate use of RDPView

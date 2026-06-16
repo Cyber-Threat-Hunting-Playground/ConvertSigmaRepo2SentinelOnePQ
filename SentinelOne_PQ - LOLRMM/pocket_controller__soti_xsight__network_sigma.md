@@ -1,30 +1,33 @@
 ```sql
-// Translated content (automatically translated on 30-11-2025 00:59:06):
-(event.category in ("dns","url","ip")) and (endpoint.os="windows" and (url.address contains "soti.net" or event.dns.request contains "soti.net"))
+// Translated content (automatically translated on 16-06-2026 02:42:19):
+(event.category in ("dns","url","ip")) and (endpoint.os="windows" and ((url.address contains "soti.net" or url.address contains ".soti.net") or (event.dns.request contains "soti.net" or event.dns.request contains ".soti.net")))
 ```
 
 
 # Original Sigma Rule:
 ```yaml
 title: Potential Pocket Controller (Soti Xsight) RMM Tool Network Activity
-logsource:
-  product: windows
-  category: network_connection
-detection:
-  selection:
-    DestinationHostname|endswith:
-    - '*soti.net'
-  condition: selection
-id: e49aea52-4057-4ebf-9c22-3424e1c52632
+id: 2a266096-16af-486b-8f6b-3ba7a3fa636e
 status: experimental
-description: Detects potential network activity of Pocket Controller (Soti Xsight)
-  RMM tool
+description: |
+    Detects potential network activity of Pocket Controller (Soti Xsight) RMM tool
+references:
+    - https://github.com/magicsword-io/LOLRMM
 author: LOLRMM Project
-date: 2024/08/07
+date: 2025-12-01
 tags:
-- attack.execution
-- attack.t1219
+    - attack.execution
+    - attack.t1219
+logsource:
+    product: windows
+    category: network_connection
+detection:
+    selection:
+        DestinationHostname|endswith:
+            - 'soti.net'
+            - '*.soti.net'
+    condition: selection
 falsepositives:
-- Legitimate use of Pocket Controller (Soti Xsight)
+    - Legitimate use of Pocket Controller (Soti Xsight)
 level: medium
 ```

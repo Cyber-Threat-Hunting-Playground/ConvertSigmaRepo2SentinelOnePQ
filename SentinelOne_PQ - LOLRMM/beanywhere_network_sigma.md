@@ -1,6 +1,6 @@
 ```sql
-// Translated content (automatically translated on 15-06-2026 02:39:25):
-(event.category in ("dns","url","ip")) and (endpoint.os="windows" and ((url.address contains "beanywhere.en.uptodown.com/windows" or url.address contains "beanywhere.com") or (event.dns.request contains "beanywhere.en.uptodown.com/windows" or event.dns.request contains "beanywhere.com")))
+// Translated content (automatically translated on 16-06-2026 02:42:19):
+(event.category in ("dns","url","ip")) and (endpoint.os="windows" and (url.address contains "beanywhere.com" or event.dns.request contains "beanywhere.com"))
 ```
 
 
@@ -23,9 +23,7 @@ logsource:
     category: network_connection
 detection:
     selection:
-        DestinationHostname|endswith:
-            - beanywhere.en.uptodown.com/windows
-            - beanywhere.com
+        DestinationHostname|endswith: 'beanywhere.com'
     condition: selection
 falsepositives:
     - Legitimate use of BeAnyWhere

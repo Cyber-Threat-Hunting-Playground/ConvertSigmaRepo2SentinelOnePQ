@@ -1,30 +1,34 @@
 ```sql
-// Translated content (automatically translated on 30-11-2025 00:59:06):
-(event.category in ("dns","url","ip")) and (endpoint.os="windows" and ((url.address contains ".distantdesktop.com" or url.address contains "signalserver.xyz") or (event.dns.request contains ".distantdesktop.com" or event.dns.request contains "signalserver.xyz")))
+// Translated content (automatically translated on 16-06-2026 02:42:19):
+(event.category in ("dns","url","ip")) and (endpoint.os="windows" and ((url.address contains ".distantdesktop.com" or url.address contains "signalserver.xyz" or url.address contains ".signalserver.xyz") or (event.dns.request contains ".distantdesktop.com" or event.dns.request contains "signalserver.xyz" or event.dns.request contains ".signalserver.xyz")))
 ```
 
 
 # Original Sigma Rule:
 ```yaml
 title: Potential Distant Desktop RMM Tool Network Activity
-logsource:
-  product: windows
-  category: network_connection
-detection:
-  selection:
-    DestinationHostname|endswith:
-    - '*.distantdesktop.com'
-    - '*signalserver.xyz'
-  condition: selection
-id: 05201a97-1e4e-42d8-9dca-3a2af6c53fce
+id: 2f291701-fbc4-40b9-8c4b-447e1d64ab37
 status: experimental
-description: Detects potential network activity of Distant Desktop RMM tool
+description: |
+    Detects potential network activity of Distant Desktop RMM tool
+references:
+    - https://github.com/magicsword-io/LOLRMM
 author: LOLRMM Project
-date: 2024/08/07
+date: 2025-12-01
 tags:
-- attack.execution
-- attack.t1219
+    - attack.execution
+    - attack.t1219
+logsource:
+    product: windows
+    category: network_connection
+detection:
+    selection:
+        DestinationHostname|endswith:
+            - '*.distantdesktop.com'
+            - 'signalserver.xyz'
+            - '*.signalserver.xyz'
+    condition: selection
 falsepositives:
-- Legitimate use of Distant Desktop
+    - Legitimate use of Distant Desktop
 level: medium
 ```

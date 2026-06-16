@@ -1,30 +1,31 @@
 ```sql
-// Translated content (automatically translated on 30-11-2025 00:59:06):
-(event.category in ("dns","url","ip")) and (endpoint.os="windows" and ((url.address contains ".01com.com" or url.address contains "01com.com/imintouch-remote-pc-desktop") or (event.dns.request contains ".01com.com" or event.dns.request contains "01com.com/imintouch-remote-pc-desktop")))
+// Translated content (automatically translated on 16-06-2026 02:42:19):
+(event.category in ("dns","url","ip")) and (endpoint.os="windows" and (url.address contains ".01com.com" or event.dns.request contains ".01com.com"))
 ```
 
 
 # Original Sigma Rule:
 ```yaml
 title: Potential I'm InTouch RMM Tool Network Activity
-logsource:
-  product: windows
-  category: network_connection
-detection:
-  selection:
-    DestinationHostname|endswith:
-    - '*.01com.com'
-    - 01com.com/imintouch-remote-pc-desktop
-  condition: selection
-id: e9c4aa64-be23-4708-a1dd-e8c3661d74e6
+id: 62eafab4-705e-4fe8-af20-975cf9ef229b
 status: experimental
-description: Detects potential network activity of I'm InTouch RMM tool
+description: |
+    Detects potential network activity of I'm InTouch RMM tool
+references:
+    - https://github.com/magicsword-io/LOLRMM
 author: LOLRMM Project
-date: 2024/08/07
+date: 2025-12-01
 tags:
-- attack.execution
-- attack.t1219
+    - attack.execution
+    - attack.t1219
+logsource:
+    product: windows
+    category: network_connection
+detection:
+    selection:
+        DestinationHostname|endswith: '*.01com.com'
+    condition: selection
 falsepositives:
-- Legitimate use of I'm InTouch
+    - Legitimate use of I'm InTouch
 level: medium
 ```

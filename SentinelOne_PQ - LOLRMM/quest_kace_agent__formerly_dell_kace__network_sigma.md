@@ -1,31 +1,31 @@
 ```sql
-// Translated content (automatically translated on 30-11-2025 00:59:06):
-(event.category in ("dns","url","ip")) and (endpoint.os="windows" and ((url.address contains ".kace.com" or url.address contains "www.quest.com/kace/") or (event.dns.request contains ".kace.com" or event.dns.request contains "www.quest.com/kace/")))
+// Translated content (automatically translated on 16-06-2026 02:42:19):
+(event.category in ("dns","url","ip")) and (endpoint.os="windows" and (url.address contains ".kace.com" or event.dns.request contains ".kace.com"))
 ```
 
 
 # Original Sigma Rule:
 ```yaml
 title: Potential Quest KACE Agent (formerly Dell KACE) RMM Tool Network Activity
-logsource:
-  product: windows
-  category: network_connection
-detection:
-  selection:
-    DestinationHostname|endswith:
-    - '*.kace.com'
-    - www.quest.com/kace/
-  condition: selection
-id: 41765104-e0bb-4caf-9d80-f0b76da82722
+id: 81230670-0030-48a1-a02f-cba632fae825
 status: experimental
-description: Detects potential network activity of Quest KACE Agent (formerly Dell
-  KACE) RMM tool
+description: |
+    Detects potential network activity of Quest KACE Agent (formerly Dell KACE) RMM tool
+references:
+    - https://github.com/magicsword-io/LOLRMM
 author: LOLRMM Project
-date: 2024/08/07
+date: 2025-12-01
 tags:
-- attack.execution
-- attack.t1219
+    - attack.execution
+    - attack.t1219
+logsource:
+    product: windows
+    category: network_connection
+detection:
+    selection:
+        DestinationHostname|endswith: '*.kace.com'
+    condition: selection
 falsepositives:
-- Legitimate use of Quest KACE Agent (formerly Dell KACE)
+    - Legitimate use of Quest KACE Agent (formerly Dell KACE)
 level: medium
 ```

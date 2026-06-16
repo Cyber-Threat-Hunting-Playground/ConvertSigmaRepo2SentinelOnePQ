@@ -1,30 +1,31 @@
 ```sql
-// Translated content (automatically translated on 30-11-2025 00:59:06):
-(event.category in ("dns","url","ip")) and (endpoint.os="windows" and ((url.address contains ".kabuto.io" or url.address contains "repairtechsolutions.com/kabuto/") or (event.dns.request contains ".kabuto.io" or event.dns.request contains "repairtechsolutions.com/kabuto/")))
+// Translated content (automatically translated on 16-06-2026 02:42:19):
+(event.category in ("dns","url","ip")) and (endpoint.os="windows" and (url.address contains ".kabuto.io" or event.dns.request contains ".kabuto.io"))
 ```
 
 
 # Original Sigma Rule:
 ```yaml
 title: Potential Kabuto RMM Tool Network Activity
-logsource:
-  product: windows
-  category: network_connection
-detection:
-  selection:
-    DestinationHostname|endswith:
-    - '*.kabuto.io'
-    - repairtechsolutions.com/kabuto/
-  condition: selection
-id: 7748836e-1d1a-4c37-8d82-b9ef3f50764c
+id: 2e94d749-2e6d-4044-9982-58edf224ecdf
 status: experimental
-description: Detects potential network activity of Kabuto RMM tool
+description: |
+    Detects potential network activity of Kabuto RMM tool
+references:
+    - https://github.com/magicsword-io/LOLRMM
 author: LOLRMM Project
-date: 2024/08/07
+date: 2025-12-01
 tags:
-- attack.execution
-- attack.t1219
+    - attack.execution
+    - attack.t1219
+logsource:
+    product: windows
+    category: network_connection
+detection:
+    selection:
+        DestinationHostname|endswith: '*.kabuto.io'
+    condition: selection
 falsepositives:
-- Legitimate use of Kabuto
+    - Legitimate use of Kabuto
 level: medium
 ```

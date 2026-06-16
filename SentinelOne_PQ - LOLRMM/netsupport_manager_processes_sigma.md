@@ -1,6 +1,6 @@
 ```sql
-// Translated content (automatically translated on 15-06-2026 02:39:25):
-event.type="Process Creation" and (endpoint.os="windows" and ((src.process.image.path contains "pcictlui.exe" or src.process.image.path contains "pcicfgui.exe" or src.process.image.path contains "client32.exe") or (tgt.process.image.path contains "pcictlui.exe" or tgt.process.image.path contains "pcicfgui.exe" or tgt.process.image.path contains "client32.exe")))
+// Translated content (automatically translated on 16-06-2026 02:42:19):
+event.type="Process Creation" and (endpoint.os="windows" and ((src.process.image.path contains "pcictlui.exe" or src.process.image.path contains "pcicfgui.exe" or src.process.image.path contains "client32.exe" or src.process.image.path contains "remcmdstub.exe") or (tgt.process.image.path contains "pcictlui.exe" or tgt.process.image.path contains "pcicfgui.exe" or tgt.process.image.path contains "client32.exe" or tgt.process.image.path contains "remcmdstub.exe")))
 ```
 
 
@@ -27,11 +27,13 @@ detection:
             - 'pcictlui.exe'
             - 'pcicfgui.exe'
             - 'client32.exe'
+            - 'remcmdstub.exe'
     selection_image:
         Image|endswith:
             - 'pcictlui.exe'
             - 'pcicfgui.exe'
             - 'client32.exe'
+            - 'remcmdstub.exe'
     condition: 1 of selection_*
 falsepositives:
     - Legitimate use of NetSupport Manager

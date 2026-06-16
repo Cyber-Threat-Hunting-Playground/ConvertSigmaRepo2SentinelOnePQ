@@ -1,6 +1,6 @@
 ```sql
-// Translated content (automatically translated on 15-06-2026 02:39:25):
-(event.category in ("dns","url","ip")) and (endpoint.os="windows" and ((url.address contains "user_managed" or url.address contains "ivanti.com/") or (event.dns.request contains "user_managed" or event.dns.request contains "ivanti.com/")))
+// Translated content (automatically translated on 16-06-2026 02:42:19):
+(event.category in ("dns","url","ip")) and (endpoint.os="windows" and ((url.address contains "user_managed" or url.address contains "ivanti.com") or (event.dns.request contains "user_managed" or event.dns.request contains "ivanti.com")))
 ```
 
 
@@ -24,8 +24,8 @@ logsource:
 detection:
     selection:
         DestinationHostname|endswith:
-            - user_managed
-            - ivanti.com/
+            - 'user_managed'
+            - 'ivanti.com'
     condition: selection
 falsepositives:
     - Legitimate use of RES Automation Manager

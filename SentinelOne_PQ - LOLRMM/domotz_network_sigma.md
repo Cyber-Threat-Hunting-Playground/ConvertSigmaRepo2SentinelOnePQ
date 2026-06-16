@@ -1,31 +1,35 @@
 ```sql
-// Translated content (automatically translated on 30-11-2025 00:59:06):
-(event.category in ("dns","url","ip")) and (endpoint.os="windows" and ((url.address contains ".domotz.co" or url.address contains "domotz.com" or url.address contains "cell-1.domotz.com") or (event.dns.request contains ".domotz.co" or event.dns.request contains "domotz.com" or event.dns.request contains "cell-1.domotz.com")))
+// Translated content (automatically translated on 16-06-2026 02:42:19):
+(event.category in ("dns","url","ip")) and (endpoint.os="windows" and ((url.address contains ".domotz.co" or url.address contains "domotz.com" or url.address contains "cell-1.domotz.com" or url.address contains ".cell-1.domotz.com") or (event.dns.request contains ".domotz.co" or event.dns.request contains "domotz.com" or event.dns.request contains "cell-1.domotz.com" or event.dns.request contains ".cell-1.domotz.com")))
 ```
 
 
 # Original Sigma Rule:
 ```yaml
 title: Potential Domotz RMM Tool Network Activity
-logsource:
-  product: windows
-  category: network_connection
-detection:
-  selection:
-    DestinationHostname|endswith:
-    - '*.domotz.co'
-    - domotz.com
-    - '*cell-1.domotz.com'
-  condition: selection
-id: 3e2c6509-b097-4847-9162-be651728e793
+id: 441ff6b0-0c7d-4378-9b90-11bcb0959a73
 status: experimental
-description: Detects potential network activity of Domotz RMM tool
+description: |
+    Detects potential network activity of Domotz RMM tool
+references:
+    - https://github.com/magicsword-io/LOLRMM
 author: LOLRMM Project
-date: 2024/08/07
+date: 2025-12-01
 tags:
-- attack.execution
-- attack.t1219
+    - attack.execution
+    - attack.t1219
+logsource:
+    product: windows
+    category: network_connection
+detection:
+    selection:
+        DestinationHostname|endswith:
+            - '*.domotz.co'
+            - 'domotz.com'
+            - 'cell-1.domotz.com'
+            - '*.cell-1.domotz.com'
+    condition: selection
 falsepositives:
-- Legitimate use of Domotz
+    - Legitimate use of Domotz
 level: medium
 ```
