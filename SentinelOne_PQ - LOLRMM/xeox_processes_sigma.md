@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 17-06-2026 02:38:58):
+// Translated content (automatically translated on 18-06-2026 02:36:04):
 event.type="Process Creation" and (endpoint.os="windows" and ((src.process.image.path contains "xeox-agent_x64.exe" or src.process.image.path contains "xeox_service_windows.exe" or src.process.image.path="*xeox-agent_*.exe" or src.process.image.path contains "xeox-agent_x86.exe") or (tgt.process.image.path contains "xeox-agent_x64.exe" or tgt.process.image.path contains "xeox_service_windows.exe" or tgt.process.image.path="*xeox-agent_*.exe" or tgt.process.image.path contains "xeox-agent_x86.exe")))
 ```
 

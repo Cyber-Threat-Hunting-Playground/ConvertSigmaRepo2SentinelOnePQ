@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 17-06-2026 02:38:58):
+// Translated content (automatically translated on 18-06-2026 02:36:04):
 event.category="file" and (endpoint.os="windows" and (tgt.file.path contains "weClipboardListener.exe" or tgt.file.path contains "bbl.exe" or tgt.file.path contains "weprtct.exe" or tgt.file.path contains "wemonc.exe" or tgt.file.path contains "wesvc.exe" or tgt.file.path contains "libeay32.dll" or tgt.file.path contains "ssleay32.dll" or tgt.file.path="*wec_launcher_[a-Z0-9]*_.exe" or tgt.file.path="*wec_launcher_[a-Z0-9]*_.pkg" or tgt.file.path contains "weInstSvc.exe" or tgt.file.path contains "C:\\ProgramData\\{E0E95C6C-F194-4846-928D-E5538022226D}\\"))
 ```
 
