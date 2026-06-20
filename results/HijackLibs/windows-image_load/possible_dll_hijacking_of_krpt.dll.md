@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 19-06-2026 04:40:58):
+// Translated content (automatically translated on 20-06-2026 03:54:42):
 event.type="Module Load" and (endpoint.os="windows" and (module.path contains "\\krpt.dll" and (not (module.path="c:\\program files\\Kingsoft\\WPS Office\\*\\office6\\*" or module.path="c:\\program files (x86)\\Kingsoft\\WPS Office\\*\\office6\\*"))))
 ```
 

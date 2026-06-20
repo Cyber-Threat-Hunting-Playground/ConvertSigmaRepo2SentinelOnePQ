@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 19-06-2026 04:40:58):
+// Translated content (automatically translated on 20-06-2026 03:54:42):
 event.type="Module Load" and (endpoint.os="windows" and (module.path contains "\\epnsm.dll" and (not (module.path contains "c:\\program files\\Epson Software\\Document Capture Server\\" or module.path contains "c:\\program files (x86)\\Epson Software\\Document Capture Server\\" or module.path contains "c:\\program files\\Epson Software\\Event Manager\\" or module.path contains "c:\\program files (x86)\\Epson Software\\Event Manager\\"))))
 ```
 
