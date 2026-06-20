@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 19-06-2026 02:51:58):
+// Translated content (automatically translated on 20-06-2026 02:13:23):
 (event.category in ("dns","url","ip")) and (endpoint.os="windows" and ((url.address contains ".remotedesktop.google.com" or url.address contains "remotedesktop-pa.googleapis.com" or url.address contains ".remotedesktop-pa.googleapis.com" or url.address contains "remotedesktop.google.com" or url.address contains "chromoting-client.talkgadget.google.com" or url.address contains "chromoting-host.talkgadget.google.com" or url.address contains "chromoting-oauth.talkgadget.google.com") or (event.dns.request contains ".remotedesktop.google.com" or event.dns.request contains "remotedesktop-pa.googleapis.com" or event.dns.request contains ".remotedesktop-pa.googleapis.com" or event.dns.request contains "remotedesktop.google.com" or event.dns.request contains "chromoting-client.talkgadget.google.com" or event.dns.request contains "chromoting-host.talkgadget.google.com" or event.dns.request contains "chromoting-oauth.talkgadget.google.com")))
 ```
 
