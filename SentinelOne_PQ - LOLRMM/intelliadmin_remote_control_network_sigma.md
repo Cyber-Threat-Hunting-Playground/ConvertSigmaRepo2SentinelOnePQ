@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 20-06-2026 02:13:23):
+// Translated content (automatically translated on 21-06-2026 02:38:00):
 (event.category in ("dns","url","ip")) and (endpoint.os="windows" and ((url.address contains "user_managed" or url.address contains ".intelliadmin.com") or (event.dns.request contains "user_managed" or event.dns.request contains ".intelliadmin.com")))
 ```
 
