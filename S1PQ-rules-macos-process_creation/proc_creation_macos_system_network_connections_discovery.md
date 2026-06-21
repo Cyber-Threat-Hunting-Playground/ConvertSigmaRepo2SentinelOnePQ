@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 20-06-2026 03:23:55):
+// Translated content (automatically translated on 21-06-2026 03:53:22):
 event.type="Process Creation" and (endpoint.os="osx" and (tgt.process.image.path contains "/who" or tgt.process.image.path contains "/w" or tgt.process.image.path contains "/last" or tgt.process.image.path contains "/lsof" or tgt.process.image.path contains "/netstat"))
 ```
 
