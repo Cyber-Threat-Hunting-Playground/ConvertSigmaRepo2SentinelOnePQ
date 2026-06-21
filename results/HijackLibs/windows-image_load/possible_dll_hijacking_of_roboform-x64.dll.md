@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 20-06-2026 03:54:42):
+// Translated content (automatically translated on 21-06-2026 04:25:11):
 event.type="Module Load" and (endpoint.os="windows" and (module.path contains "\\roboform-x64.dll" and (not (module.path="c:\\program files\\Siber Systems\\AI RoboForm\\*\\*" or module.path="c:\\program files (x86)\\Siber Systems\\AI RoboForm\\*\\*"))))
 ```
 
