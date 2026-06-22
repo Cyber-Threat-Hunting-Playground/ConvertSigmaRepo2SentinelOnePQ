@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 21-06-2026 04:25:11):
+// Translated content (automatically translated on 22-06-2026 04:41:16):
 event.type="Module Load" and (endpoint.os="windows" and (module.path contains "\\ldvpocx.ocx" and (not (module.path contains "c:\\program files\\Symantec_Client_Security\\Symantec AntiVirus\\" or module.path contains "c:\\program files (x86)\\Symantec_Client_Security\\Symantec AntiVirus\\" or module.path contains "c:\\program files\\Symantec AntiVirus\\" or module.path contains "c:\\program files (x86)\\Symantec AntiVirus\\"))))
 ```
 
