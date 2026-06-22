@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 21-06-2026 05:04:19):
+// Translated content (automatically translated on 22-06-2026 05:14:09):
 event.type="Process Creation" and (endpoint.os="windows" and (src.process.image.path="C:\\WINDOWS\\System32\\svchost.exe" and (src.process.cmdline contains "-k netsvcs" and src.process.cmdline contains "-s Schedule") and (tgt.process.cmdline contains " -windowstyle hidden" or tgt.process.cmdline contains " -w hidden" or tgt.process.cmdline contains " -ep bypass" or tgt.process.cmdline contains " -noni")))
 ```
 
