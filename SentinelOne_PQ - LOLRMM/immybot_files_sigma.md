@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 22-06-2026 02:41:19):
+// Translated content (automatically translated on 23-06-2026 02:07:43):
 event.category="file" and (endpoint.os="windows" and (tgt.file.path contains "C:\\Program Files\\ImmyBot\*" or tgt.file.path contains "C:\\Program Files (x86)\\ImmyBot\*" or tgt.file.path contains "C:\\ProgramData\\ImmyBot\\Logs\*" or tgt.file.path contains "C:\\ProgramData\\ImmyBot\\Scripts\*" or tgt.file.path contains "C:\\ProgramData\\ImmyBotAgentService\\config.json" or tgt.file.path contains "C:\\Windows\\Temp\\ImmyBot\*"))
 ```
 

@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 22-06-2026 02:41:19):
+// Translated content (automatically translated on 23-06-2026 02:07:43):
 (event.category in ("dns","url","ip")) and (endpoint.os="windows" and ((url.address contains "user_managed" or url.address contains "github.com" or url.address contains "raw.githubusercontent.com" or url.address contains "nezha.wiki" or url.address contains "nezhahq.github.io" or url.address contains "c.mid.al" or url.address contains "gd.bj2.xyz" or url.address contains "rism.pages.dev") or (event.dns.request contains "user_managed" or event.dns.request contains "github.com" or event.dns.request contains "raw.githubusercontent.com" or event.dns.request contains "nezha.wiki" or event.dns.request contains "nezhahq.github.io" or event.dns.request contains "c.mid.al" or event.dns.request contains "gd.bj2.xyz" or event.dns.request contains "rism.pages.dev")))
 ```
 
