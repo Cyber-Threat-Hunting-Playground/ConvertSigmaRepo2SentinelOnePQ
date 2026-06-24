@@ -1,6 +1,6 @@
 ```sql
-// Translated content (automatically translated on 23-06-2026 02:07:43):
-(event.category in ("dns","url","ip")) and (endpoint.os="windows" and ((url.address contains "login.tailscale.com" or url.address contains "login.tailscale.com" or url.address contains "docs.tacticalrmm.com") or (event.dns.request contains "login.tailscale.com" or event.dns.request contains "login.tailscale.com" or event.dns.request contains "docs.tacticalrmm.com")))
+// Translated content (automatically translated on 24-06-2026 02:09:18):
+(event.category in ("dns","url","ip")) and (endpoint.os="windows" and ((url.address contains "login.tailscale.com" or url.address contains "docs.tacticalrmm.com") or (event.dns.request contains "login.tailscale.com" or event.dns.request contains "docs.tacticalrmm.com")))
 ```
 
 
@@ -24,9 +24,8 @@ logsource:
 detection:
     selection:
         DestinationHostname|endswith:
-            - login.tailscale.com
-            - login.tailscale.com
-            - docs.tacticalrmm.com
+            - 'login.tailscale.com'
+            - 'docs.tacticalrmm.com'
     condition: selection
 falsepositives:
     - Legitimate use of Tactical RMM

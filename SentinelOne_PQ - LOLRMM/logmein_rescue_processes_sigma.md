@@ -1,6 +1,6 @@
 ```sql
-// Translated content (automatically translated on 23-06-2026 02:07:43):
-event.type="Process Creation" and (endpoint.os="windows" and ((src.process.image.path="*support-logmeinrescue*.exe" or src.process.image.path contains "support-logmeinrescue.exe" or src.process.image.path contains "lmi_rescue.exe" or src.process.image.path contains "lmi_rescue.exe" or src.process.image.path contains "lmi_rescue_srv.exe" or src.process.image.path contains "lmi_rescue.exe") or (tgt.process.image.path="*support-logmeinrescue*.exe" or tgt.process.image.path contains "support-logmeinrescue.exe" or tgt.process.image.path contains "lmi_rescue.exe" or tgt.process.image.path contains "lmi_rescue.exe" or tgt.process.image.path contains "lmi_rescue_srv.exe" or tgt.process.image.path contains "lmi_rescue.exe")))
+// Translated content (automatically translated on 24-06-2026 02:09:18):
+event.type="Process Creation" and (endpoint.os="windows" and ((src.process.image.path="*support-logmeinrescue*.exe" or src.process.image.path contains "support-logmeinrescue.exe" or src.process.image.path contains "lmi_rescue.exe" or src.process.image.path contains "lmi_rescue.exe" or src.process.image.path contains "lmi_rescue_srv.exe") or (tgt.process.image.path="*support-logmeinrescue*.exe" or tgt.process.image.path contains "support-logmeinrescue.exe" or tgt.process.image.path contains "lmi_rescue.exe" or tgt.process.image.path contains "lmi_rescue.exe" or tgt.process.image.path contains "lmi_rescue_srv.exe")))
 ```
 
 
@@ -24,20 +24,18 @@ logsource:
 detection:
     selection_parent:
         ParentImage|endswith:
-            - support-logmeinrescue*.exe
-            - support-logmeinrescue.exe
-            - lmi_rescue.exe
-            - lmi_rescue.exe
-            - lmi_rescue_srv.exe
-            - lmi_rescue.exe
+            - 'support-logmeinrescue*.exe'
+            - 'support-logmeinrescue.exe'
+            - 'lmi_rescue.exe'
+            - 'lmi_rescue.exe'
+            - 'lmi_rescue_srv.exe'
     selection_image:
         Image|endswith:
-            - support-logmeinrescue*.exe
-            - support-logmeinrescue.exe
-            - lmi_rescue.exe
-            - lmi_rescue.exe
-            - lmi_rescue_srv.exe
-            - lmi_rescue.exe
+            - 'support-logmeinrescue*.exe'
+            - 'support-logmeinrescue.exe'
+            - 'lmi_rescue.exe'
+            - 'lmi_rescue.exe'
+            - 'lmi_rescue_srv.exe'
     condition: 1 of selection_*
 falsepositives:
     - Legitimate use of LogMeIn rescue

@@ -1,6 +1,6 @@
 ```sql
-// Translated content (automatically translated on 23-06-2026 02:07:43):
-event.type="Process Creation" and (endpoint.os="windows" and ((src.process.image.path contains "UltraViewer_Service.exe" or src.process.image.path contains "UltraViewer_Desktop.exe" or src.process.image.path contains "ultraviewer.exe" or src.process.image.path contains "UltraViewer_Desktop.exe" or src.process.image.path contains "UltraViewer_Desktop.exe" or src.process.image.path contains "ultraviewer_desktop.exe" or src.process.image.path contains "ultraviewer_service.exe" or src.process.image.path contains "UltraViewer_Desktop.exe" or src.process.image.path contains "UltraViewer_Service.exe") or (tgt.process.image.path contains "UltraViewer_Service.exe" or tgt.process.image.path contains "UltraViewer_Desktop.exe" or tgt.process.image.path contains "ultraviewer.exe" or tgt.process.image.path contains "UltraViewer_Desktop.exe" or tgt.process.image.path contains "UltraViewer_Desktop.exe" or tgt.process.image.path contains "ultraviewer_desktop.exe" or tgt.process.image.path contains "ultraviewer_service.exe" or tgt.process.image.path contains "UltraViewer_Desktop.exe" or tgt.process.image.path contains "UltraViewer_Service.exe")))
+// Translated content (automatically translated on 24-06-2026 02:09:18):
+event.type="Process Creation" and (endpoint.os="windows" and ((src.process.image.path contains "UltraViewer_Service.exe" or src.process.image.path contains "UltraViewer_Desktop.exe" or src.process.image.path contains "ultraviewer.exe" or src.process.image.path contains "UltraViewer_Desktop.exe" or src.process.image.path contains "UltraViewer_Desktop.exe" or src.process.image.path contains "ultraviewer_desktop.exe" or src.process.image.path contains "ultraviewer_service.exe") or (tgt.process.image.path contains "UltraViewer_Service.exe" or tgt.process.image.path contains "UltraViewer_Desktop.exe" or tgt.process.image.path contains "ultraviewer.exe" or tgt.process.image.path contains "UltraViewer_Desktop.exe" or tgt.process.image.path contains "UltraViewer_Desktop.exe" or tgt.process.image.path contains "ultraviewer_desktop.exe" or tgt.process.image.path contains "ultraviewer_service.exe")))
 ```
 
 
@@ -24,26 +24,22 @@ logsource:
 detection:
     selection_parent:
         ParentImage|endswith:
-            - UltraViewer_Service.exe
-            - UltraViewer_Desktop.exe
-            - ultraviewer.exe
-            - UltraViewer_Desktop.exe
-            - UltraViewer_Desktop.exe
-            - ultraviewer_desktop.exe
-            - ultraviewer_service.exe
-            - UltraViewer_Desktop.exe
-            - UltraViewer_Service.exe
+            - 'UltraViewer_Service.exe'
+            - 'UltraViewer_Desktop.exe'
+            - 'ultraviewer.exe'
+            - 'UltraViewer_Desktop.exe'
+            - 'UltraViewer_Desktop.exe'
+            - 'ultraviewer_desktop.exe'
+            - 'ultraviewer_service.exe'
     selection_image:
         Image|endswith:
-            - UltraViewer_Service.exe
-            - UltraViewer_Desktop.exe
-            - ultraviewer.exe
-            - UltraViewer_Desktop.exe
-            - UltraViewer_Desktop.exe
-            - ultraviewer_desktop.exe
-            - ultraviewer_service.exe
-            - UltraViewer_Desktop.exe
-            - UltraViewer_Service.exe
+            - 'UltraViewer_Service.exe'
+            - 'UltraViewer_Desktop.exe'
+            - 'ultraviewer.exe'
+            - 'UltraViewer_Desktop.exe'
+            - 'UltraViewer_Desktop.exe'
+            - 'ultraviewer_desktop.exe'
+            - 'ultraviewer_service.exe'
     condition: 1 of selection_*
 falsepositives:
     - Legitimate use of UltraViewer

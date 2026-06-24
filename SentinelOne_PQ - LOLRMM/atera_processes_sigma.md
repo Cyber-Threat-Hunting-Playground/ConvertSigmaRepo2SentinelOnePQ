@@ -1,6 +1,6 @@
 ```sql
-// Translated content (automatically translated on 23-06-2026 02:07:43):
-event.type="Process Creation" and (endpoint.os="windows" and ((src.process.image.path contains "AgentPackageNetworkDiscovery.exe" or src.process.image.path contains "AgentPackageTaskScheduler.exe" or src.process.image.path contains "AteraAgent.exe" or src.process.image.path contains "atera_agent.exe" or src.process.image.path contains "atera_agent.exe" or src.process.image.path contains "ateraagent.exe" or src.process.image.path contains "syncrosetup.exe") or (tgt.process.image.path contains "AgentPackageNetworkDiscovery.exe" or tgt.process.image.path contains "AgentPackageTaskScheduler.exe" or tgt.process.image.path contains "AteraAgent.exe" or tgt.process.image.path contains "atera_agent.exe" or tgt.process.image.path contains "atera_agent.exe" or tgt.process.image.path contains "ateraagent.exe" or tgt.process.image.path contains "syncrosetup.exe")))
+// Translated content (automatically translated on 24-06-2026 02:09:18):
+event.type="Process Creation" and (endpoint.os="windows" and ((src.process.image.path contains "AgentPackageNetworkDiscovery.exe" or src.process.image.path contains "AgentPackageTaskScheduler.exe" or src.process.image.path contains "AteraAgent.exe" or src.process.image.path contains "atera_agent.exe" or src.process.image.path contains "ateraagent.exe" or src.process.image.path contains "syncrosetup.exe") or (tgt.process.image.path contains "AgentPackageNetworkDiscovery.exe" or tgt.process.image.path contains "AgentPackageTaskScheduler.exe" or tgt.process.image.path contains "AteraAgent.exe" or tgt.process.image.path contains "atera_agent.exe" or tgt.process.image.path contains "ateraagent.exe" or tgt.process.image.path contains "syncrosetup.exe")))
 ```
 
 
@@ -24,22 +24,20 @@ logsource:
 detection:
     selection_parent:
         ParentImage|endswith:
-            - AgentPackageNetworkDiscovery.exe
-            - AgentPackageTaskScheduler.exe
-            - AteraAgent.exe
-            - atera_agent.exe
-            - atera_agent.exe
-            - ateraagent.exe
-            - syncrosetup.exe
+            - 'AgentPackageNetworkDiscovery.exe'
+            - 'AgentPackageTaskScheduler.exe'
+            - 'AteraAgent.exe'
+            - 'atera_agent.exe'
+            - 'ateraagent.exe'
+            - 'syncrosetup.exe'
     selection_image:
         Image|endswith:
-            - AgentPackageNetworkDiscovery.exe
-            - AgentPackageTaskScheduler.exe
-            - AteraAgent.exe
-            - atera_agent.exe
-            - atera_agent.exe
-            - ateraagent.exe
-            - syncrosetup.exe
+            - 'AgentPackageNetworkDiscovery.exe'
+            - 'AgentPackageTaskScheduler.exe'
+            - 'AteraAgent.exe'
+            - 'atera_agent.exe'
+            - 'ateraagent.exe'
+            - 'syncrosetup.exe'
     condition: 1 of selection_*
 falsepositives:
     - Legitimate use of Atera

@@ -1,6 +1,6 @@
 ```sql
-// Translated content (automatically translated on 23-06-2026 02:07:43):
-event.type="Process Creation" and (endpoint.os="windows" and ((src.process.image.path contains "ScreenConnect.ClientService.exe" or src.process.image.path contains "Remote Workforce Client.exe" or src.process.image.path contains "ScreenConnect.ClientService.exe" or src.process.image.path contains "ScreenConnect.WindowsClient.exe" or src.process.image.path="*screenconnect*.exe" or src.process.image.path contains "screenconnect.windowsclient.exe" or src.process.image.path contains "Remote Workforce Client.exe" or src.process.image.path="*screenconnect*.exe" or src.process.image.path="*ConnectWiseControl*.exe" or src.process.image.path="*connectwise*.exe" or src.process.image.path contains "screenconnect.windowsclient.exe" or src.process.image.path contains "screenconnect.clientservice.exe") or (tgt.process.image.path contains "ScreenConnect.ClientService.exe" or tgt.process.image.path contains "Remote Workforce Client.exe" or tgt.process.image.path contains "ScreenConnect.ClientService.exe" or tgt.process.image.path contains "ScreenConnect.WindowsClient.exe" or tgt.process.image.path="*screenconnect*.exe" or tgt.process.image.path contains "screenconnect.windowsclient.exe" or tgt.process.image.path contains "Remote Workforce Client.exe" or tgt.process.image.path="*screenconnect*.exe" or tgt.process.image.path="*ConnectWiseControl*.exe" or tgt.process.image.path="*connectwise*.exe" or tgt.process.image.path contains "screenconnect.windowsclient.exe" or tgt.process.image.path contains "screenconnect.clientservice.exe")))
+// Translated content (automatically translated on 24-06-2026 02:09:18):
+event.type="Process Creation" and (endpoint.os="windows" and ((src.process.image.path contains "ScreenConnect.ClientService.exe" or src.process.image.path contains "Remote Workforce Client.exe" or src.process.image.path contains "ScreenConnect.ClientService.exe" or src.process.image.path contains "ScreenConnect.WindowsClient.exe" or src.process.image.path="*screenconnect*.exe" or src.process.image.path contains "screenconnect.windowsclient.exe" or src.process.image.path="*ConnectWiseControl*.exe" or src.process.image.path="*connectwise*.exe" or src.process.image.path contains "screenconnect.clientservice.exe") or (tgt.process.image.path contains "ScreenConnect.ClientService.exe" or tgt.process.image.path contains "Remote Workforce Client.exe" or tgt.process.image.path contains "ScreenConnect.ClientService.exe" or tgt.process.image.path contains "ScreenConnect.WindowsClient.exe" or tgt.process.image.path="*screenconnect*.exe" or tgt.process.image.path contains "screenconnect.windowsclient.exe" or tgt.process.image.path="*ConnectWiseControl*.exe" or tgt.process.image.path="*connectwise*.exe" or tgt.process.image.path contains "screenconnect.clientservice.exe")))
 ```
 
 
@@ -24,32 +24,26 @@ logsource:
 detection:
     selection_parent:
         ParentImage|endswith:
-            - ScreenConnect.ClientService.exe
-            - Remote Workforce Client.exe
-            - ScreenConnect.ClientService.exe
-            - ScreenConnect.WindowsClient.exe
-            - screenconnect*.exe
-            - screenconnect.windowsclient.exe
-            - Remote Workforce Client.exe
-            - screenconnect*.exe
-            - ConnectWiseControl*.exe
-            - connectwise*.exe
-            - screenconnect.windowsclient.exe
-            - screenconnect.clientservice.exe
+            - 'ScreenConnect.ClientService.exe'
+            - 'Remote Workforce Client.exe'
+            - 'ScreenConnect.ClientService.exe'
+            - 'ScreenConnect.WindowsClient.exe'
+            - 'screenconnect*.exe'
+            - 'screenconnect.windowsclient.exe'
+            - 'ConnectWiseControl*.exe'
+            - 'connectwise*.exe'
+            - 'screenconnect.clientservice.exe'
     selection_image:
         Image|endswith:
-            - ScreenConnect.ClientService.exe
-            - Remote Workforce Client.exe
-            - ScreenConnect.ClientService.exe
-            - ScreenConnect.WindowsClient.exe
-            - screenconnect*.exe
-            - screenconnect.windowsclient.exe
-            - Remote Workforce Client.exe
-            - screenconnect*.exe
-            - ConnectWiseControl*.exe
-            - connectwise*.exe
-            - screenconnect.windowsclient.exe
-            - screenconnect.clientservice.exe
+            - 'ScreenConnect.ClientService.exe'
+            - 'Remote Workforce Client.exe'
+            - 'ScreenConnect.ClientService.exe'
+            - 'ScreenConnect.WindowsClient.exe'
+            - 'screenconnect*.exe'
+            - 'screenconnect.windowsclient.exe'
+            - 'ConnectWiseControl*.exe'
+            - 'connectwise*.exe'
+            - 'screenconnect.clientservice.exe'
     condition: 1 of selection_*
 falsepositives:
     - Legitimate use of ScreenConnect

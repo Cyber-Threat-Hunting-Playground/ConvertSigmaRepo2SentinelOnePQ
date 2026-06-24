@@ -1,6 +1,6 @@
 ```sql
-// Translated content (automatically translated on 23-06-2026 02:07:43):
-event.type="Process Creation" and (endpoint.os="windows" and ((src.process.image.path contains "mRemoteNG.exe" or src.process.image.path contains "mRemoteNG.exe" or src.process.image.path contains "mRemoteNG.exe") or (tgt.process.image.path contains "mRemoteNG.exe" or tgt.process.image.path contains "mRemoteNG.exe" or tgt.process.image.path contains "mRemoteNG.exe")))
+// Translated content (automatically translated on 24-06-2026 02:09:18):
+event.type="Process Creation" and (endpoint.os="windows" and ((src.process.image.path contains "mRemoteNG.exe" or src.process.image.path contains "mRemoteNG.exe") or (tgt.process.image.path contains "mRemoteNG.exe" or tgt.process.image.path contains "mRemoteNG.exe")))
 ```
 
 
@@ -24,14 +24,12 @@ logsource:
 detection:
     selection_parent:
         ParentImage|endswith:
-            - mRemoteNG.exe
-            - mRemoteNG.exe
-            - mRemoteNG.exe
+            - 'mRemoteNG.exe'
+            - 'mRemoteNG.exe'
     selection_image:
         Image|endswith:
-            - mRemoteNG.exe
-            - mRemoteNG.exe
-            - mRemoteNG.exe
+            - 'mRemoteNG.exe'
+            - 'mRemoteNG.exe'
     condition: 1 of selection_*
 falsepositives:
     - Legitimate use of mRemoteNG

@@ -1,6 +1,6 @@
 ```sql
-// Translated content (automatically translated on 23-06-2026 02:07:43):
-event.type="Process Creation" and (endpoint.os="windows" and ((src.process.image.path contains "hsloader.exe" or src.process.image.path contains "ihcserver.exe" or src.process.image.path contains "instanthousecall.exe" or src.process.image.path contains "instanthousecall.exe") or (tgt.process.image.path contains "hsloader.exe" or tgt.process.image.path contains "ihcserver.exe" or tgt.process.image.path contains "instanthousecall.exe" or tgt.process.image.path contains "instanthousecall.exe")))
+// Translated content (automatically translated on 24-06-2026 02:09:18):
+event.type="Process Creation" and (endpoint.os="windows" and ((src.process.image.path contains "hsloader.exe" or src.process.image.path contains "ihcserver.exe" or src.process.image.path contains "instanthousecall.exe") or (tgt.process.image.path contains "hsloader.exe" or tgt.process.image.path contains "ihcserver.exe" or tgt.process.image.path contains "instanthousecall.exe")))
 ```
 
 
@@ -27,12 +27,10 @@ detection:
             - 'hsloader.exe'
             - 'ihcserver.exe'
             - 'instanthousecall.exe'
-            - 'instanthousecall.exe'
     selection_image:
         Image|endswith:
             - 'hsloader.exe'
             - 'ihcserver.exe'
-            - 'instanthousecall.exe'
             - 'instanthousecall.exe'
     condition: 1 of selection_*
 falsepositives:

@@ -1,6 +1,6 @@
 ```sql
-// Translated content (automatically translated on 23-06-2026 02:07:43):
-event.type="Process Creation" and (endpoint.os="windows" and ((src.process.image.path contains "tacticalrmm.exe" or src.process.image.path contains "tacticalrmm.exe") or (tgt.process.image.path contains "tacticalrmm.exe" or tgt.process.image.path contains "tacticalrmm.exe")))
+// Translated content (automatically translated on 24-06-2026 02:09:18):
+event.type="Process Creation" and (endpoint.os="windows" and (src.process.image.path contains "tacticalrmm.exe" or tgt.process.image.path contains "tacticalrmm.exe"))
 ```
 
 
@@ -23,13 +23,9 @@ logsource:
     category: process_creation
 detection:
     selection_parent:
-        ParentImage|endswith:
-            - tacticalrmm.exe
-            - tacticalrmm.exe
+        ParentImage|endswith: 'tacticalrmm.exe'
     selection_image:
-        Image|endswith:
-            - tacticalrmm.exe
-            - tacticalrmm.exe
+        Image|endswith: 'tacticalrmm.exe'
     condition: 1 of selection_*
 falsepositives:
     - Legitimate use of Tactical RMM
