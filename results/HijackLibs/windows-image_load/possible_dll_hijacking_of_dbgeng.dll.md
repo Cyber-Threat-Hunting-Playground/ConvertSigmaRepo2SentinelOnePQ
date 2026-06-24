@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 23-06-2026 03:46:30):
+// Translated content (automatically translated on 24-06-2026 03:49:02):
 event.type="Module Load" and (endpoint.os="windows" and (module.path contains "\\dbgeng.dll" and (not (module.path="c:\\program files\\Windows Kits\\*\\Debuggers\\x86\\*" or module.path="c:\\program files (x86)\\Windows Kits\\*\\Debuggers\\x86\\*" or module.path="c:\\program files\\Windows Kits\\*\\Debuggers\\x64\\*" or module.path="c:\\program files (x86)\\Windows Kits\\*\\Debuggers\\x64\\*" or module.path="c:\\program files\\Windows Kits\\*\\Debuggers\\arm\\*" or module.path="c:\\program files (x86)\\Windows Kits\\*\\Debuggers\\arm\\*" or module.path="c:\\program files\\Windows Kits\\*\\Debuggers\\arm64\\*" or module.path="c:\\program files (x86)\\Windows Kits\\*\\Debuggers\\arm64\\*" or module.path contains "c:\\windows\\system32\\" or module.path contains "c:\\windows\\syswow64\\"))))
 ```
 
