@@ -1,6 +1,6 @@
 ```sql
-// Translated content (automatically translated on 24-06-2026 04:13:12):
-event.type="Process Creation" and (endpoint.os="windows" and (((tgt.process.cmdline contains "wmic" and tgt.process.cmdline contains "product where " and tgt.process.cmdline contains "call" and tgt.process.cmdline contains "uninstall" and tgt.process.cmdline contains "/nointeractive") or ((tgt.process.cmdline contains "wmic" and tgt.process.cmdline contains "caption like ") and (tgt.process.cmdline contains "call delete" or tgt.process.cmdline contains "call terminate")) or (tgt.process.cmdline contains "process " and tgt.process.cmdline contains "where " and tgt.process.cmdline contains "delete")) and (tgt.process.cmdline contains "%carbon%" or tgt.process.cmdline contains "%cylance%" or tgt.process.cmdline contains "%endpoint%" or tgt.process.cmdline contains "%eset%" or tgt.process.cmdline contains "%malware%" or tgt.process.cmdline contains "%Sophos%" or tgt.process.cmdline contains "%symantec%" or tgt.process.cmdline contains "Antivirus" or tgt.process.cmdline contains "AVG " or tgt.process.cmdline contains "Carbon Black" or tgt.process.cmdline contains "CarbonBlack" or tgt.process.cmdline contains "Cb Defense Sensor 64-bit" or tgt.process.cmdline contains "Crowdstrike Sensor" or tgt.process.cmdline contains "Cylance " or tgt.process.cmdline contains "Dell Threat Defense" or tgt.process.cmdline contains "DLP Endpoint" or tgt.process.cmdline contains "Endpoint Detection" or tgt.process.cmdline contains "Endpoint Protection" or tgt.process.cmdline contains "Endpoint Security" or tgt.process.cmdline contains "Endpoint Sensor" or tgt.process.cmdline contains "ESET File Security" or tgt.process.cmdline contains "LogRhythm System Monitor Service" or tgt.process.cmdline contains "Malwarebytes" or tgt.process.cmdline contains "McAfee Agent" or tgt.process.cmdline contains "Microsoft Security Client" or tgt.process.cmdline contains "Sophos Anti-Virus" or tgt.process.cmdline contains "Sophos AutoUpdate" or tgt.process.cmdline contains "Sophos Credential Store" or tgt.process.cmdline contains "Sophos Management Console" or tgt.process.cmdline contains "Sophos Management Database" or tgt.process.cmdline contains "Sophos Management Server" or tgt.process.cmdline contains "Sophos Remote Management System" or tgt.process.cmdline contains "Sophos Update Manager" or tgt.process.cmdline contains "Threat Protection" or tgt.process.cmdline contains "VirusScan" or tgt.process.cmdline contains "Webroot SecureAnywhere" or tgt.process.cmdline contains "Windows Defender")))
+// Translated content (automatically translated on 25-06-2026 04:13:22):
+event.type="Process Creation" and (endpoint.os="windows" and ((((tgt.process.cmdline contains "wmic" and tgt.process.cmdline contains "product " and tgt.process.cmdline contains "uninstall") and (tgt.process.cmdline contains "-nointeractive" or tgt.process.cmdline contains "/nointeractive" or tgt.process.cmdline contains "–nointeractive" or tgt.process.cmdline contains "—nointeractive" or tgt.process.cmdline contains "―nointeractive")) or ((tgt.process.cmdline contains "wmic" and tgt.process.cmdline contains "caption like ") and (tgt.process.cmdline contains "call delete" or tgt.process.cmdline contains "call terminate")) or (tgt.process.cmdline contains "process " and tgt.process.cmdline contains "where " and tgt.process.cmdline contains "delete")) and (tgt.process.cmdline contains "%carbon%" or tgt.process.cmdline contains "%cylance%" or tgt.process.cmdline contains "%endpoint%" or tgt.process.cmdline contains "%eset%" or tgt.process.cmdline contains "%malware%" or tgt.process.cmdline contains "%Sophos%" or tgt.process.cmdline contains "%symantec%" or tgt.process.cmdline contains "Antivirus" or tgt.process.cmdline contains "AVG " or tgt.process.cmdline contains "Carbon Black" or tgt.process.cmdline contains "CarbonBlack" or tgt.process.cmdline contains "Cb Defense Sensor 64-bit" or tgt.process.cmdline contains "Crowdstrike Sensor" or tgt.process.cmdline contains "Cylance " or tgt.process.cmdline contains "Dell Threat Defense" or tgt.process.cmdline contains "DLP Endpoint" or tgt.process.cmdline contains "Endpoint Detection" or tgt.process.cmdline contains "Endpoint Protection" or tgt.process.cmdline contains "Endpoint Security" or tgt.process.cmdline contains "Endpoint Sensor" or tgt.process.cmdline contains "ESET File Security" or tgt.process.cmdline contains "LogRhythm System Monitor Service" or tgt.process.cmdline contains "Malwarebytes" or tgt.process.cmdline contains "McAfee Agent" or tgt.process.cmdline contains "Microsoft Security Client" or tgt.process.cmdline contains "Sophos Anti-Virus" or tgt.process.cmdline contains "Sophos AutoUpdate" or tgt.process.cmdline contains "Sophos Credential Store" or tgt.process.cmdline contains "Sophos Management Console" or tgt.process.cmdline contains "Sophos Management Database" or tgt.process.cmdline contains "Sophos Management Server" or tgt.process.cmdline contains "Sophos Remote Management System" or tgt.process.cmdline contains "Sophos Update Manager" or tgt.process.cmdline contains "Threat Protection" or tgt.process.cmdline contains "VirusScan" or tgt.process.cmdline contains "Webroot SecureAnywhere" or tgt.process.cmdline contains "Windows Defender")))
 ```
 
 
@@ -21,7 +21,7 @@ references:
     - https://www.trendmicro.com/en_us/research/23/a/vice-society-ransomware-group-targets-manufacturing-companies.html
 author: Florian Roth (Nextron Systems), Nasreddine Bencherchali (Nextron Systems)
 date: 2021-01-30
-modified: 2023-02-14
+modified: 2025-12-15
 tags:
     - attack.defense-impairment
     - attack.t1685
@@ -32,10 +32,9 @@ detection:
     selection_cli_1:
         CommandLine|contains|all:
             - 'wmic'
-            - 'product where '
-            - 'call'
+            - 'product '
             - 'uninstall'
-            - '/nointeractive'
+        CommandLine|contains|windash: '/nointeractive'
     selection_cli_2:
         CommandLine|contains|all:
             - 'wmic'
@@ -91,4 +90,5 @@ detection:
 falsepositives:
     - Legitimate administration
 level: high
+regression_tests_path: regression_data/rules/windows/process_creation/proc_creation_win_wmic_uninstall_security_products/info.yml
 ```
