@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 24-06-2026 02:14:29):
+// Translated content (automatically translated on 25-06-2026 02:26:33):
 event.type="Process Creation" and (endpoint.os="linux" and (((tgt.process.image.path contains "/rm" or tgt.process.image.path contains "/rmdir" or tgt.process.image.path contains "/shred" or tgt.process.image.path contains "/unlink") and (tgt.process.cmdline contains "/var/log" or tgt.process.cmdline contains "/var/spool/mail")) and (not ((tgt.process.image.path contains "/rm" and tgt.process.cmdline contains "rm -f /var/log/sysstat/") or (tgt.process.image.path contains "/rm" and tgt.process.cmdline contains "rm -f -- /var/log//dmesg")))))
 ```
 
