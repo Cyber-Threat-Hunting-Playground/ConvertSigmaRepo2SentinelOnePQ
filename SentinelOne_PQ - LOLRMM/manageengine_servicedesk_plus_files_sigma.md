@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 24-06-2026 02:09:18):
+// Translated content (automatically translated on 25-06-2026 02:09:10):
 event.category="file" and (endpoint.os="windows" and (tgt.file.path contains "C:\\Program Files\\ManageEngine\\ServiceDesk\*" or tgt.file.path="*C:\\Users\*\\AppData\\Local\\Temp\\{*}\\ManageEngine_ServiceDesk_Plus.exe"))
 ```
 
