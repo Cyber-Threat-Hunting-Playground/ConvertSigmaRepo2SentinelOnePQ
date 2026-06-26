@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 25-06-2026 04:13:22):
+// Translated content (automatically translated on 26-06-2026 04:19:56):
 event.type="Process Creation" and (endpoint.os="windows" and (tgt.process.cmdline="*Compress-Archive -Path*-DestinationPath $env:TEMP*" or tgt.process.cmdline="*Compress-Archive -Path*-DestinationPath*\\AppData\\Local\\Temp\\*" or tgt.process.cmdline="*Compress-Archive -Path*-DestinationPath*:\\Windows\\Temp\\*"))
 ```
 

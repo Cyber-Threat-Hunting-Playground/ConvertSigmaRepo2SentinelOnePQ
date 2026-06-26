@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 25-06-2026 04:13:22):
+// Translated content (automatically translated on 26-06-2026 04:19:56):
 event.type="Process Creation" and (endpoint.os="windows" and ((src.process.image.path contains "\\ITSMService.exe" and tgt.process.image.path contains "\\ssh-shellhost.exe" and tgt.process.cmdline contains "--pty") and (tgt.process.cmdline contains "bash" or tgt.process.cmdline contains "cmd" or tgt.process.cmdline contains "powershell" or tgt.process.cmdline contains "pwsh")))
 ```
 
