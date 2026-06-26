@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 25-06-2026 03:36:25):
+// Translated content (automatically translated on 26-06-2026 03:44:21):
 event.type="Process Creation" and (endpoint.os="windows" and src.process.image.path="*p9agent*.exe")
 ```
 
