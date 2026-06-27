@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 26-06-2026 04:19:56):
+// Translated content (automatically translated on 27-06-2026 04:06:27):
 event.type="Process Creation" and (endpoint.os="windows" and (tgt.process.image.path contains "\\wsreset.exe" and (tgt.process.integrityLevel in ("High","System","S-1-16-16384","S-1-16-12288"))))
 ```
 
