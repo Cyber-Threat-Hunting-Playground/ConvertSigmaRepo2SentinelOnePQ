@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 28-06-2026 02:34:08):
+// Translated content (automatically translated on 29-06-2026 02:34:09):
 event.type="Process Creation" and (endpoint.os="linux" and ((tgt.process.image.path contains "/systemctl" and tgt.process.cmdline contains " mask") and (tgt.process.cmdline contains "suspend.target" or tgt.process.cmdline contains "hibernate.target" or tgt.process.cmdline contains "hybrid-sleep.target")))
 ```
 
