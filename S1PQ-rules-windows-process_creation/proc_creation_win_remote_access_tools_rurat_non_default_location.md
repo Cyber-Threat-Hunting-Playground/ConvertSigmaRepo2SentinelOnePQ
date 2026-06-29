@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 28-06-2026 04:39:20):
+// Translated content (automatically translated on 29-06-2026 04:47:48):
 event.type="Process Creation" and (endpoint.os="windows" and (((tgt.process.image.path contains "\\rutserv.exe" or tgt.process.image.path contains "\\rfusclient.exe") or tgt.process.displayName="Remote Utilities") and (not (tgt.process.image.path contains "C:\\Program Files\\Remote Utilities" or tgt.process.image.path contains "C:\\Program Files (x86)\\Remote Utilities"))))
 ```
 
