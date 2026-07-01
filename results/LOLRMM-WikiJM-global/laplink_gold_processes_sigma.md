@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 30-06-2026 03:41:00):
+// Translated content (automatically translated on 01-07-2026 03:56:49):
 event.type="Process Creation" and (endpoint.os="windows" and (src.process.image.path contains "tsircusr.exe" or src.process.image.path contains "laplink.exe"))
 ```
 
