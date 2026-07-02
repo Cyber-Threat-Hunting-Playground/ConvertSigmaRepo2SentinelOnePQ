@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 01-07-2026 02:28:53):
+// Translated content (automatically translated on 02-07-2026 02:08:17):
 event.type="Process Creation" and (endpoint.os="windows" and ((src.process.image.path contains "iit.exe" or src.process.image.path contains "intouch.exe" or src.process.image.path contains "I'm InTouch Go Installer.exe") or (tgt.process.image.path contains "iit.exe" or tgt.process.image.path contains "intouch.exe" or tgt.process.image.path contains "I'm InTouch Go Installer.exe")))
 ```
 

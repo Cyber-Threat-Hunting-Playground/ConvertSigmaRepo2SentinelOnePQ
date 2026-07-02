@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 01-07-2026 02:28:53):
+// Translated content (automatically translated on 02-07-2026 02:08:17):
 (event.category in ("dns","url","ip")) and (endpoint.os="windows" and ((url.address contains "trustconnectsoftware.com" or url.address contains "trustconnectsoftware.com" or url.address contains "trustconnectsoftware.com" or url.address contains "trustconnectsoftware.com" or url.address contains "networkservice.cyou") or (event.dns.request contains "trustconnectsoftware.com" or event.dns.request contains "trustconnectsoftware.com" or event.dns.request contains "trustconnectsoftware.com" or event.dns.request contains "trustconnectsoftware.com" or event.dns.request contains "networkservice.cyou")))
 ```
 
