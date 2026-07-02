@@ -1,6 +1,6 @@
 ```sql
-// Translated content (automatically translated on 01-07-2026 04:43:00):
-event.type="Process Creation" and (endpoint.os="windows" and (((tgt.process.image.path contains "\\Sysmon64.exe" or tgt.process.image.path contains "\\Sysmon.exe") or tgt.process.displayName="System activity monitor") and (tgt.process.cmdline contains "-c" or tgt.process.cmdline contains "/c" or tgt.process.cmdline contains "–c" or tgt.process.cmdline contains "—c" or tgt.process.cmdline contains "―c")))
+// Translated content (automatically translated on 02-07-2026 04:09:57):
+event.type="Process Creation" and (endpoint.os="windows" and (((tgt.process.image.path contains "\\Sysmon64.exe" or tgt.process.image.path contains "\\Sysmon64a.exe" or tgt.process.image.path contains "\\Sysmon.exe") or tgt.process.displayName="System activity monitor") and (tgt.process.cmdline contains "-c" or tgt.process.cmdline contains "/c" or tgt.process.cmdline contains "–c" or tgt.process.cmdline contains "—c" or tgt.process.cmdline contains "―c")))
 ```
 
 
@@ -14,7 +14,7 @@ references:
     - https://learn.microsoft.com/en-us/sysinternals/downloads/sysmon
 author: Nasreddine Bencherchali (Nextron Systems)
 date: 2023-03-09
-modified: 2024-03-13
+modified: 2026-06-29
 tags:
     - attack.defense-impairment
     - attack.t1685
@@ -25,6 +25,7 @@ detection:
     selection_pe:
         - Image|endswith:
               - \Sysmon64.exe
+              - \Sysmon64a.exe
               - \Sysmon.exe
         - Description: 'System activity monitor'
     selection_cli:

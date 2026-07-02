@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 01-07-2026 04:43:00):
+// Translated content (automatically translated on 02-07-2026 04:09:57):
 event.type="Process Creation" and (endpoint.os="windows" and (src.process.image.path contains "\\Velociraptor.exe" and ((tgt.process.cmdline contains "code.exe" and tgt.process.cmdline contains "tunnel" and tgt.process.cmdline contains "--accept-server-license-terms") or (tgt.process.cmdline contains "msiexec" and tgt.process.cmdline contains "/i" and tgt.process.cmdline contains "http") or ((tgt.process.image.path contains "\\powershell.exe" or tgt.process.image.path contains "\\powershell_ise.exe" or tgt.process.image.path contains "\\pwsh.exe") and (tgt.process.cmdline contains "Invoke-WebRequest " or tgt.process.cmdline contains "IWR " or tgt.process.cmdline contains ".DownloadFile" or tgt.process.cmdline contains ".DownloadString")))))
 ```
 

@@ -1,6 +1,6 @@
 ```sql
-// Translated content (automatically translated on 01-07-2026 04:43:00):
-event.type="Process Creation" and (endpoint.os="windows" and (tgt.process.image.path contains "\\procdump.exe" or tgt.process.image.path contains "\\procdump64.exe"))
+// Translated content (automatically translated on 02-07-2026 04:09:57):
+event.type="Process Creation" and (endpoint.os="windows" and (tgt.process.image.path contains "\\procdump.exe" or tgt.process.image.path contains "\\procdump64.exe" or tgt.process.image.path contains "\\procdump64a.exe"))
 ```
 
 
@@ -14,7 +14,7 @@ references:
     - https://learn.microsoft.com/en-us/sysinternals/downloads/procdump
 author: Florian Roth (Nextron Systems)
 date: 2021-08-16
-modified: 2023-02-28
+modified: 2026-06-29
 tags:
     - attack.stealth
     - attack.t1036
@@ -28,6 +28,7 @@ detection:
         Image|endswith:
             - '\procdump.exe'
             - '\procdump64.exe'
+            - '\procdump64a.exe'
     condition: selection
 falsepositives:
     - Legitimate use of procdump by a developer or administrator
