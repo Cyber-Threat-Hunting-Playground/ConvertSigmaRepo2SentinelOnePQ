@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 02-07-2026 02:08:17):
+// Translated content (automatically translated on 03-07-2026 01:52:12):
 event.category="file" and (endpoint.os="windows" and (tgt.file.path contains "loclx.exe" or tgt.file.path contains "%APPDATA%\\loclx\\config.yaml" or tgt.file.path contains "~/.loclx/config.yaml"))
 ```
 
