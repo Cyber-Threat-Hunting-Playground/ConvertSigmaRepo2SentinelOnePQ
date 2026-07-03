@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 02-07-2026 04:09:57):
+// Translated content (automatically translated on 03-07-2026 03:56:33):
 event.type="Process Creation" and (endpoint.os="windows" and ((tgt.process.image.path contains "\\w3wp.exe" or src.process.image.path contains "\\w3wp.exe") and (tgt.process.cmdline contains "&ipconfig&echo" or tgt.process.cmdline contains "&quser&echo" or tgt.process.cmdline contains "&whoami&echo" or tgt.process.cmdline contains "&c:&echo" or tgt.process.cmdline contains "&cd&echo" or tgt.process.cmdline contains "&dir&echo" or tgt.process.cmdline contains "&echo [E]" or tgt.process.cmdline contains "&echo [S]")))
 ```
 
