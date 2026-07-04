@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 03-07-2026 03:56:33):
+// Translated content (automatically translated on 04-07-2026 03:50:13):
 event.type="Process Creation" and (endpoint.os="windows" and (src.process.image.path contains "\\explorer.exe" and tgt.process.image.path contains "\\notepad.exe" and (tgt.process.cmdline="*password*.txt" or tgt.process.cmdline="*password*.csv" or tgt.process.cmdline="*password*.doc" or tgt.process.cmdline="*password*.xls")))
 ```
 
