@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 03-07-2026 01:52:12):
+// Translated content (automatically translated on 04-07-2026 01:51:37):
 event.category="registry" and (endpoint.os="windows" and (registry.keyPath contains "HKLM\\SYSTEM\\CurrentControlSet\\Services\\TrustConnect Agent" or registry.keyPath contains "HKLM\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Uninstall\\TrustConnect Agent" or registry.keyPath contains "HKLM\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Run\\TrustConnectAgent_" or registry.keyPath contains "HKLM\\SOFTWARE\\Classes\\AppID\\TrustConnectAgent.exe"))
 ```
 

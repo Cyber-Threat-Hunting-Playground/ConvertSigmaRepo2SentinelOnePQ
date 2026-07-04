@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 03-07-2026 01:52:12):
+// Translated content (automatically translated on 04-07-2026 01:51:37):
 event.category="file" and (endpoint.os="windows" and (tgt.file.path contains "C:\\Program Files\\Faronics\\Insight Student\\FIStudentSvc.exe" or tgt.file.path contains "C:\\Program Files\\Faronics\\Insight Student\\FIStudentAgent.exe" or tgt.file.path contains "C:\\Program Files\\Faronics\\Insight Student\\FIStudentUI.exe" or tgt.file.path contains "C:\\Program Files\\Faronics\\Insight Student\\STAHelper.exe" or tgt.file.path contains "C:\\Program Files\\Faronics\\Insight Teacher\\STAHelper.exe"))
 ```
 
