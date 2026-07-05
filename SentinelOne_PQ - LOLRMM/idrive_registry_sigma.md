@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 04-07-2026 01:51:37):
+// Translated content (automatically translated on 05-07-2026 01:58:43):
 event.category="registry" and (endpoint.os="windows" and (registry.keyPath contains "HKEY_LOCAL_MACHINE\\SOFTWARE\\IDrive\*" or registry.keyPath contains "HKEY_CURRENT_USER\\SOFTWARE\\IDrive\*"))
 ```
 
