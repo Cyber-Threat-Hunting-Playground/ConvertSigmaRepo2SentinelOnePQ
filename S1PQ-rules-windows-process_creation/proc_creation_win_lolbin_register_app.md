@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 04-07-2026 03:50:13):
+// Translated content (automatically translated on 05-07-2026 04:08:46):
 event.type="Process Creation" and (endpoint.os="windows" and (tgt.process.cmdline contains "\\register_app.vbs" and tgt.process.cmdline contains "-register"))
 ```
 

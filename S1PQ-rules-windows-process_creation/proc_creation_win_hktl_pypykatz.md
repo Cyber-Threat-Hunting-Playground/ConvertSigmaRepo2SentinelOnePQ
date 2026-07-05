@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 04-07-2026 03:50:13):
+// Translated content (automatically translated on 05-07-2026 04:08:46):
 event.type="Process Creation" and (endpoint.os="windows" and ((tgt.process.image.path contains "\\pypykatz.exe" or tgt.process.image.path contains "\\python.exe") and (tgt.process.cmdline contains "live" and tgt.process.cmdline contains "registry")))
 ```
 
