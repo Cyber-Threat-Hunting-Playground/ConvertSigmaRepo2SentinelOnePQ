@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 04-07-2026 03:21:35):
+// Translated content (automatically translated on 05-07-2026 03:38:04):
 event.type="Module Load" and (endpoint.os="windows" and (module.path contains "\\clipc.dll" and (not (module.path contains "c:\\windows\\system32\\" or module.path contains "c:\\windows\\syswow64\\"))))
 ```
 
