@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 04-07-2026 02:56:40):
+// Translated content (automatically translated on 05-07-2026 03:27:01):
 event.type="Process Creation" and (endpoint.os="windows" and src.process.image.path contains "\\airexplorer.exe")
 ```
 
