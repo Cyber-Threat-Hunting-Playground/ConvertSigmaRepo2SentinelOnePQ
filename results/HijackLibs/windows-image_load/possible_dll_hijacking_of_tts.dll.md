@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 05-07-2026 03:38:04):
+// Translated content (automatically translated on 06-07-2026 03:46:13):
 event.type="Module Load" and (endpoint.os="windows" and (module.path contains "\\tts.dll" and (not (module.path contains "c:\\program files\\Soundpad\\" or module.path contains "c:\\program files (x86)\\Soundpad\\"))))
 ```
 
