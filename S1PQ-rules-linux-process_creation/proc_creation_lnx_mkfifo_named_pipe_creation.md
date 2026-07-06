@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 05-07-2026 02:05:19):
+// Translated content (automatically translated on 06-07-2026 02:10:26):
 event.type="Process Creation" and (endpoint.os="linux" and tgt.process.image.path contains "/mkfifo")
 ```
 
