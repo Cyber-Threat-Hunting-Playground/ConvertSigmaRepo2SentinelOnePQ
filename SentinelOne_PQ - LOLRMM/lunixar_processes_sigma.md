@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 05-07-2026 01:58:43):
+// Translated content (automatically translated on 06-07-2026 02:04:44):
 event.type="Process Creation" and (endpoint.os="windows" and ((src.process.image.path contains "Lunixar.exe" or src.process.image.path contains "LunixarRemote.exe" or src.process.image.path contains "LunixarUpdater.exe") or (tgt.process.image.path contains "Lunixar.exe" or tgt.process.image.path contains "LunixarRemote.exe" or tgt.process.image.path contains "LunixarUpdater.exe")))
 ```
 
