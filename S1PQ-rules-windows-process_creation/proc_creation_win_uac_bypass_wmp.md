@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 05-07-2026 04:08:46):
+// Translated content (automatically translated on 06-07-2026 04:15:44):
 event.type="Process Creation" and (endpoint.os="windows" and ((tgt.process.image.path="C:\\Program Files\\Windows Media Player\\osk.exe" or (tgt.process.image.path="C:\\Windows\\System32\\cmd.exe" and src.process.cmdline="\"C:\\Windows\\system32\\mmc.exe\" \"C:\\Windows\\system32\\eventvwr.msc\" /s")) and (tgt.process.integrityLevel in ("High","System","S-1-16-16384","S-1-16-12288"))))
 ```
 

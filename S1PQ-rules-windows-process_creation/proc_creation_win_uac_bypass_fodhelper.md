@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 05-07-2026 04:08:46):
+// Translated content (automatically translated on 06-07-2026 04:15:44):
 event.type="Process Creation" and (endpoint.os="windows" and src.process.image.path contains "\\fodhelper.exe")
 ```
 
