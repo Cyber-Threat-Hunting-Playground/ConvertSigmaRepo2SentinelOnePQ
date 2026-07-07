@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 06-07-2026 03:46:13):
+// Translated content (automatically translated on 07-07-2026 03:36:51):
 event.type="Module Load" and (endpoint.os="windows" and (module.path contains "\\libcares-2.dll" and (not module.path="c:\\users\\*\\appdata\\local\\GitKraken\\app-*\\*")))
 ```
 

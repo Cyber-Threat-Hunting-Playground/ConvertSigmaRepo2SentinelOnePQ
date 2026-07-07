@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 06-07-2026 03:46:13):
+// Translated content (automatically translated on 07-07-2026 03:36:51):
 event.type="Module Load" and (endpoint.os="windows" and (module.path contains "\\nvsmartmax.dll" and (not (module.path contains "c:\\program files\\NVIDIA Corporation\\Display\\" or module.path contains "c:\\program files (x86)\\NVIDIA Corporation\\Display\\"))))
 ```
 
