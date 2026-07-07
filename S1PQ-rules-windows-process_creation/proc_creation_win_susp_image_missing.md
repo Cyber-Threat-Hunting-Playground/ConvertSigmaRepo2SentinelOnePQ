@@ -1,6 +1,6 @@
 ```sql
-// Translated content (automatically translated on 06-07-2026 04:15:44):
-event.type="Process Creation" and (endpoint.os="windows" and ((not tgt.process.image.path contains "\\") and (not (not (tgt.process.image.path matches "\.*") or (tgt.process.image.path in ("-","")) or ((tgt.process.image.path in ("System","Registry","MemCompression","vmmem")) or (tgt.process.cmdline in ("Registry","MemCompression","vmmem")))))))
+// Translated content (automatically translated on 07-07-2026 04:05:29):
+event.type="Process Creation" and (endpoint.os="windows" and ((not tgt.process.image.path contains "\\") and (not (not (tgt.process.image.path matches "\.*") or (tgt.process.image.path in ("-","")) or ((tgt.process.image.path in ("MemCompression","Registry","System","vmmem","vmmemWSL")) or (tgt.process.cmdline in ("MemCompression","Registry","vmmem","vmmemWSL")))))))
 ```
 
 
@@ -9,37 +9,45 @@ event.type="Process Creation" and (endpoint.os="windows" and ((not tgt.process.i
 title: Execution Of Non-Existing File
 id: 71158e3f-df67-472b-930e-7d287acaa3e1
 status: test
-description: Checks whether the image specified in a process creation event is not a full, absolute path (caused by process ghosting or other unorthodox methods to start a process)
+description: |
+    Detects process creation events where the Image field lacks an absolute path,
+    which occurs when the backing file no longer exists on disk at the time of
+    logging - commonly caused by Process Ghosting or other unorthodox process creation techniques.
 references:
     - https://pentestlaboratories.com/2021/12/08/process-ghosting/
+    - https://www.elastic.co/blog/process-ghosting-a-new-executable-image-tampering-attack
 author: Max Altgelt (Nextron Systems)
 date: 2021-12-09
-modified: 2022-12-14
+modified: 2026-07-05
 tags:
     - attack.stealth
+    - attack.privilege-escalation
+    - attack.t1055
 logsource:
     category: process_creation
     product: windows
 detection:
-    image_absolute_path:
+    filter_main_image_absolute_path:
         Image|contains: '\'
-    filter_null:
+    filter_optional_null:
         Image: null
-    filter_empty:
+    filter_optional_empty:
         Image:
             - '-'
             - ''
-    filter_4688:
+    filter_optional_4688:
         - Image:
+              - 'MemCompression'
+              - 'Registry'
               - 'System'
-              - 'Registry'
-              - 'MemCompression'
               - 'vmmem'
+              - 'vmmemWSL'
         - CommandLine:
-              - 'Registry'
               - 'MemCompression'
+              - 'Registry'
               - 'vmmem'
-    condition: not image_absolute_path and not 1 of filter*
+              - 'vmmemWSL'
+    condition: not 1 of filter_main_* and not 1 of filter_optional_*
 falsepositives:
     - Unknown
 level: high
