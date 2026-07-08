@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 07-07-2026 03:25:38):
+// Translated content (automatically translated on 08-07-2026 02:42:49):
 event.type="Process Creation" and (endpoint.os="windows" and (src.process.image.path contains "C:\\Program Files (x86)\\Radmin Viewer 3\\Radmin.exe" or src.process.image.path contains "C:\\Windows\\SysWOW64\\rserver30\\rserver3.exe"))
 ```
 
