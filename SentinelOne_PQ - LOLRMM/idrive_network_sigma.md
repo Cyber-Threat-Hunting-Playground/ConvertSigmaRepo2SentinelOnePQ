@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 07-07-2026 02:00:01):
+// Translated content (automatically translated on 08-07-2026 01:29:41):
 (event.category in ("dns","url","ip")) and (endpoint.os="windows" and ((url.address contains "idrive.com" or url.address contains ".idrive.com" or url.address contains "api.idrive.com") or (event.dns.request contains "idrive.com" or event.dns.request contains ".idrive.com" or event.dns.request contains "api.idrive.com")))
 ```
 

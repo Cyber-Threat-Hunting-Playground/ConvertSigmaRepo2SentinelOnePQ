@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 07-07-2026 02:00:01):
+// Translated content (automatically translated on 08-07-2026 01:29:41):
 event.category="file" and (endpoint.os="windows" and tgt.file.path contains "C:\\temp_phw")
 ```
 
