@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 08-07-2026 02:25:29):
+// Translated content (automatically translated on 09-07-2026 02:39:50):
 event.type="Process Creation" and (endpoint.os="osx" and ((tgt.process.image.path contains "/osascript" and (tgt.process.cmdline contains " -e " and tgt.process.cmdline contains "clipboard")) and (not (src.process.image.path contains "opencode" and (tgt.process.cmdline contains "osascript" and tgt.process.cmdline contains " -e " and tgt.process.cmdline contains "set imageData to the clipboard" and tgt.process.cmdline contains "set fileRef")))))
 ```
 
