@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 08-07-2026 02:51:51):
+// Translated content (automatically translated on 09-07-2026 03:30:10):
 event.type="Module Load" and (endpoint.os="windows" and (module.path contains "\\hpbprndiloc.dll" and (not (module.path="c:\\program files\\Hewlett-Packard\\*\\*" or module.path="c:\\program files (x86)\\Hewlett-Packard\\*\\*"))))
 ```
 
