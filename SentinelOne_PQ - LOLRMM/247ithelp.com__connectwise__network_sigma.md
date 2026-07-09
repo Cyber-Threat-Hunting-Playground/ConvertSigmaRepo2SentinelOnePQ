@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 30-11-2025 00:59:06):
+// Translated content (automatically translated on 09-07-2026 01:51:47):
 (event.category in ("dns","url","ip")) and (endpoint.os="windows" and (url.address contains ".247ithelp.com" or event.dns.request contains ".247ithelp.com"))
 ```
 
@@ -7,24 +7,25 @@
 # Original Sigma Rule:
 ```yaml
 title: Potential 247ithelp.com (ConnectWise) RMM Tool Network Activity
-logsource:
-  product: windows
-  category: network_connection
-detection:
-  selection:
-    DestinationHostname|endswith:
-    - '*.247ithelp.com'
-  condition: selection
-id: 8248627a-264d-423c-b684-f96a5792a332
+id: 43e31a0e-0682-4a5b-9031-2c36d6cf829b
 status: experimental
-description: Detects potential network activity of 247ithelp.com (ConnectWise) RMM
-  tool
+description: |
+    Detects potential network activity of 247ithelp.com (ConnectWise) RMM tool
+references:
+    - https://github.com/magicsword-io/LOLRMM
 author: LOLRMM Project
-date: 2024/08/07
+date: 2025-12-01
 tags:
-- attack.execution
-- attack.t1219
+    - attack.execution
+    - attack.t1219
+logsource:
+    product: windows
+    category: network_connection
+detection:
+    selection:
+        DestinationHostname|endswith: '*.247ithelp.com'
+    condition: selection
 falsepositives:
-- Legitimate use of 247ithelp.com (ConnectWise)
+    - Legitimate use of 247ithelp.com (ConnectWise)
 level: medium
 ```

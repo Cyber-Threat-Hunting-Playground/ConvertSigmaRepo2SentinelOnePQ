@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 30-11-2025 00:59:06):
+// Translated content (automatically translated on 09-07-2026 01:51:47):
 (event.category in ("dns","url","ip")) and (endpoint.os="windows" and ((url.address contains ".real-time-collaboration.com" or url.address contains ".mikogo4.com" or url.address contains ".mikogo.com" or url.address contains "mikogo.com") or (event.dns.request contains ".real-time-collaboration.com" or event.dns.request contains ".mikogo4.com" or event.dns.request contains ".mikogo.com" or event.dns.request contains "mikogo.com")))
 ```
 
@@ -7,26 +7,29 @@
 # Original Sigma Rule:
 ```yaml
 title: Potential Mikogo RMM Tool Network Activity
-logsource:
-  product: windows
-  category: network_connection
-detection:
-  selection:
-    DestinationHostname|endswith:
-    - '*.real-time-collaboration.com'
-    - '*.mikogo4.com'
-    - '*.mikogo.com'
-    - mikogo.com
-  condition: selection
-id: 5c555745-beff-4d2b-97ec-56d195946030
+id: 8a8e4fac-2c46-4833-b0ef-aa845317ffc6
 status: experimental
-description: Detects potential network activity of Mikogo RMM tool
+description: |
+    Detects potential network activity of Mikogo RMM tool
+references:
+    - https://github.com/magicsword-io/LOLRMM
 author: LOLRMM Project
-date: 2024/08/07
+date: 2025-12-01
 tags:
-- attack.execution
-- attack.t1219
+    - attack.execution
+    - attack.t1219
+logsource:
+    product: windows
+    category: network_connection
+detection:
+    selection:
+        DestinationHostname|endswith:
+            - '*.real-time-collaboration.com'
+            - '*.mikogo4.com'
+            - '*.mikogo.com'
+            - 'mikogo.com'
+    condition: selection
 falsepositives:
-- Legitimate use of Mikogo
+    - Legitimate use of Mikogo
 level: medium
 ```

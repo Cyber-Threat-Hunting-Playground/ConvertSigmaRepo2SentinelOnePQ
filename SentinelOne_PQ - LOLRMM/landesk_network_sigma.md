@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 30-11-2025 00:59:06):
+// Translated content (automatically translated on 09-07-2026 01:51:47):
 (event.category in ("dns","url","ip")) and (endpoint.os="windows" and ((url.address contains ".ivanticloud.com" or url.address contains ".ivanti.com" or url.address contains "ivanti.com") or (event.dns.request contains ".ivanticloud.com" or event.dns.request contains ".ivanti.com" or event.dns.request contains "ivanti.com")))
 ```
 
@@ -7,25 +7,28 @@
 # Original Sigma Rule:
 ```yaml
 title: Potential LANDesk RMM Tool Network Activity
-logsource:
-  product: windows
-  category: network_connection
-detection:
-  selection:
-    DestinationHostname|endswith:
-    - '*.ivanticloud.com'
-    - '*.ivanti.com'
-    - ivanti.com
-  condition: selection
-id: 4733dea8-ac1b-475a-a9f4-cb502e80699e
+id: 6f8b6b90-e98a-4915-a977-f4e829e9bef6
 status: experimental
-description: Detects potential network activity of LANDesk RMM tool
+description: |
+    Detects potential network activity of LANDesk RMM tool
+references:
+    - https://github.com/magicsword-io/LOLRMM
 author: LOLRMM Project
-date: 2024/08/07
+date: 2025-12-01
 tags:
-- attack.execution
-- attack.t1219
+    - attack.execution
+    - attack.t1219
+logsource:
+    product: windows
+    category: network_connection
+detection:
+    selection:
+        DestinationHostname|endswith:
+            - '*.ivanticloud.com'
+            - '*.ivanti.com'
+            - 'ivanti.com'
+    condition: selection
 falsepositives:
-- Legitimate use of LANDesk
+    - Legitimate use of LANDesk
 level: medium
 ```

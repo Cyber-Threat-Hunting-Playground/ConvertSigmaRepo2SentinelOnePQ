@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 30-11-2025 00:59:06):
+// Translated content (automatically translated on 09-07-2026 01:51:47):
 (event.category in ("dns","url","ip")) and (endpoint.os="windows" and ((url.address contains ".beyondtrustcloud.com" or url.address contains ".bomgarcloud.com" or url.address contains "bomgarcloud.com") or (event.dns.request contains ".beyondtrustcloud.com" or event.dns.request contains ".bomgarcloud.com" or event.dns.request contains "bomgarcloud.com")))
 ```
 
@@ -7,25 +7,28 @@
 # Original Sigma Rule:
 ```yaml
 title: Potential BeyondTrust (Bomgar) RMM Tool Network Activity
-logsource:
-  product: windows
-  category: network_connection
-detection:
-  selection:
-    DestinationHostname|endswith:
-    - '*.beyondtrustcloud.com'
-    - '*.bomgarcloud.com'
-    - bomgarcloud.com
-  condition: selection
-id: 6238e5fb-4629-4c45-b828-c09d66b398d4
+id: 694d14f2-df79-4aaa-b59f-ee94278977fc
 status: experimental
-description: Detects potential network activity of BeyondTrust (Bomgar) RMM tool
+description: |
+    Detects potential network activity of BeyondTrust (Bomgar) RMM tool
+references:
+    - https://github.com/magicsword-io/LOLRMM
 author: LOLRMM Project
-date: 2024/08/07
+date: 2025-12-01
 tags:
-- attack.execution
-- attack.t1219
+    - attack.execution
+    - attack.t1219
+logsource:
+    product: windows
+    category: network_connection
+detection:
+    selection:
+        DestinationHostname|endswith:
+            - '*.beyondtrustcloud.com'
+            - '*.bomgarcloud.com'
+            - 'bomgarcloud.com'
+    condition: selection
 falsepositives:
-- Legitimate use of BeyondTrust (Bomgar)
+    - Legitimate use of BeyondTrust (Bomgar)
 level: medium
 ```

@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 08-07-2026 01:29:41):
+// Translated content (automatically translated on 09-07-2026 01:51:47):
 event.category="registry" and (endpoint.os="windows" and registry.keyPath contains "HKLM\\System\\CurrentControlSet\\Services\\LunixarRMM")
 ```
 

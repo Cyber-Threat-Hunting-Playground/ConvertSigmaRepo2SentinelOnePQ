@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 30-11-2025 00:59:06):
+// Translated content (automatically translated on 09-07-2026 01:51:47):
 (event.category in ("dns","url","ip")) and (endpoint.os="windows" and ((url.address contains ".pcvisit.de" or url.address contains "pcvisit.de") or (event.dns.request contains ".pcvisit.de" or event.dns.request contains "pcvisit.de")))
 ```
 
@@ -7,24 +7,27 @@
 # Original Sigma Rule:
 ```yaml
 title: Potential Pcvisit RMM Tool Network Activity
-logsource:
-  product: windows
-  category: network_connection
-detection:
-  selection:
-    DestinationHostname|endswith:
-    - '*.pcvisit.de'
-    - pcvisit.de
-  condition: selection
-id: 75e41cc0-eaa9-4795-b240-8b679fb9862e
+id: e6f75735-db2c-4b13-8b60-1b103989925a
 status: experimental
-description: Detects potential network activity of Pcvisit RMM tool
+description: |
+    Detects potential network activity of Pcvisit RMM tool
+references:
+    - https://github.com/magicsword-io/LOLRMM
 author: LOLRMM Project
-date: 2024/08/07
+date: 2025-12-01
 tags:
-- attack.execution
-- attack.t1219
+    - attack.execution
+    - attack.t1219
+logsource:
+    product: windows
+    category: network_connection
+detection:
+    selection:
+        DestinationHostname|endswith:
+            - '*.pcvisit.de'
+            - 'pcvisit.de'
+    condition: selection
 falsepositives:
-- Legitimate use of Pcvisit
+    - Legitimate use of Pcvisit
 level: medium
 ```

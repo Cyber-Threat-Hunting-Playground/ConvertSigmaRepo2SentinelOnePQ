@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 30-11-2025 00:59:06):
+// Translated content (automatically translated on 09-07-2026 01:51:47):
 (event.category in ("dns","url","ip")) and (endpoint.os="windows" and ((url.address contains ".ezhelp.co.kr" or url.address contains "ezhelp.co.kr") or (event.dns.request contains ".ezhelp.co.kr" or event.dns.request contains "ezhelp.co.kr")))
 ```
 
@@ -7,24 +7,27 @@
 # Original Sigma Rule:
 ```yaml
 title: Potential ezHelp RMM Tool Network Activity
-logsource:
-  product: windows
-  category: network_connection
-detection:
-  selection:
-    DestinationHostname|endswith:
-    - '*.ezhelp.co.kr'
-    - ezhelp.co.kr
-  condition: selection
-id: 1c9349b6-941a-4c1f-9ba0-ab78e16f06fa
+id: c2b0145b-04ca-4d20-9601-782f90628b95
 status: experimental
-description: Detects potential network activity of ezHelp RMM tool
+description: |
+    Detects potential network activity of ezHelp RMM tool
+references:
+    - https://github.com/magicsword-io/LOLRMM
 author: LOLRMM Project
-date: 2024/08/07
+date: 2025-12-01
 tags:
-- attack.execution
-- attack.t1219
+    - attack.execution
+    - attack.t1219
+logsource:
+    product: windows
+    category: network_connection
+detection:
+    selection:
+        DestinationHostname|endswith:
+            - '*.ezhelp.co.kr'
+            - 'ezhelp.co.kr'
+    condition: selection
 falsepositives:
-- Legitimate use of ezHelp
+    - Legitimate use of ezHelp
 level: medium
 ```

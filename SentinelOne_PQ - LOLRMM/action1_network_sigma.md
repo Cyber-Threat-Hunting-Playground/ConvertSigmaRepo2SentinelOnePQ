@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 30-11-2025 00:59:06):
+// Translated content (automatically translated on 09-07-2026 01:51:47):
 (event.category in ("dns","url","ip")) and (endpoint.os="windows" and ((url.address contains ".action1.com" or url.address contains "a1-backend-packages.s3.amazonaws.com") or (event.dns.request contains ".action1.com" or event.dns.request contains "a1-backend-packages.s3.amazonaws.com")))
 ```
 
@@ -7,24 +7,27 @@
 # Original Sigma Rule:
 ```yaml
 title: Potential Action1 RMM Tool Network Activity
-logsource:
-  product: windows
-  category: network_connection
-detection:
-  selection:
-    DestinationHostname|endswith:
-    - '*.action1.com'
-    - a1-backend-packages.s3.amazonaws.com
-  condition: selection
-id: 5a513b93-4825-4b09-b50a-e073e390bc96
+id: 22015403-2881-4c36-ba1b-aff8da000ae6
 status: experimental
-description: Detects potential network activity of Action1 RMM tool
+description: |
+    Detects potential network activity of Action1 RMM tool
+references:
+    - https://github.com/magicsword-io/LOLRMM
 author: LOLRMM Project
-date: 2024/08/07
+date: 2025-12-01
 tags:
-- attack.execution
-- attack.t1219
+    - attack.execution
+    - attack.t1219
+logsource:
+    product: windows
+    category: network_connection
+detection:
+    selection:
+        DestinationHostname|endswith:
+            - '*.action1.com'
+            - 'a1-backend-packages.s3.amazonaws.com'
+    condition: selection
 falsepositives:
-- Legitimate use of Action1
+    - Legitimate use of Action1
 level: medium
 ```

@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 30-11-2025 00:59:06):
+// Translated content (automatically translated on 09-07-2026 01:51:47):
 (event.category in ("dns","url","ip")) and (endpoint.os="windows" and ((url.address contains ".remotedesktop.com" or url.address contains ".remotepc.com" or url.address contains "www.remotepc.com" or url.address contains "remotepc.com") or (event.dns.request contains ".remotedesktop.com" or event.dns.request contains ".remotepc.com" or event.dns.request contains "www.remotepc.com" or event.dns.request contains "remotepc.com")))
 ```
 
@@ -7,26 +7,29 @@
 # Original Sigma Rule:
 ```yaml
 title: Potential RemotePC RMM Tool Network Activity
-logsource:
-  product: windows
-  category: network_connection
-detection:
-  selection:
-    DestinationHostname|endswith:
-    - '*.remotedesktop.com'
-    - '*.remotepc.com'
-    - www.remotepc.com
-    - remotepc.com
-  condition: selection
-id: fa8e726b-d853-4ac5-9d88-905be2962b0b
+id: e86ca73e-3392-4338-901e-03cd1fc5c2e2
 status: experimental
-description: Detects potential network activity of RemotePC RMM tool
+description: |
+    Detects potential network activity of RemotePC RMM tool
+references:
+    - https://github.com/magicsword-io/LOLRMM
 author: LOLRMM Project
-date: 2024/08/07
+date: 2025-12-01
 tags:
-- attack.execution
-- attack.t1219
+    - attack.execution
+    - attack.t1219
+logsource:
+    product: windows
+    category: network_connection
+detection:
+    selection:
+        DestinationHostname|endswith:
+            - '*.remotedesktop.com'
+            - '*.remotepc.com'
+            - 'www.remotepc.com'
+            - 'remotepc.com'
+    condition: selection
 falsepositives:
-- Legitimate use of RemotePC
+    - Legitimate use of RemotePC
 level: medium
 ```

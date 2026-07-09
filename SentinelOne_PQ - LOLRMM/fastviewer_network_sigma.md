@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 30-11-2025 00:59:06):
+// Translated content (automatically translated on 09-07-2026 01:51:47):
 (event.category in ("dns","url","ip")) and (endpoint.os="windows" and ((url.address contains ".fastviewer.com" or url.address contains "fastviewer.com") or (event.dns.request contains ".fastviewer.com" or event.dns.request contains "fastviewer.com")))
 ```
 
@@ -7,24 +7,27 @@
 # Original Sigma Rule:
 ```yaml
 title: Potential FastViewer RMM Tool Network Activity
-logsource:
-  product: windows
-  category: network_connection
-detection:
-  selection:
-    DestinationHostname|endswith:
-    - '*.fastviewer.com'
-    - fastviewer.com
-  condition: selection
-id: 2bd1088d-19c5-4d3d-a22b-bf56245c9cc8
+id: ef6971eb-c3e3-4b4c-9187-aff39b218339
 status: experimental
-description: Detects potential network activity of FastViewer RMM tool
+description: |
+    Detects potential network activity of FastViewer RMM tool
+references:
+    - https://github.com/magicsword-io/LOLRMM
 author: LOLRMM Project
-date: 2024/08/07
+date: 2025-12-01
 tags:
-- attack.execution
-- attack.t1219
+    - attack.execution
+    - attack.t1219
+logsource:
+    product: windows
+    category: network_connection
+detection:
+    selection:
+        DestinationHostname|endswith:
+            - '*.fastviewer.com'
+            - 'fastviewer.com'
+    condition: selection
 falsepositives:
-- Legitimate use of FastViewer
+    - Legitimate use of FastViewer
 level: medium
 ```

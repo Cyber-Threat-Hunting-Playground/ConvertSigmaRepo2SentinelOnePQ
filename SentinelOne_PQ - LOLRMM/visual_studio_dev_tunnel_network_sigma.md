@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 30-11-2025 00:59:06):
+// Translated content (automatically translated on 09-07-2026 01:51:47):
 (event.category in ("dns","url","ip")) and (endpoint.os="windows" and ((url.address contains "global.rel.tunnels.api.visualstudio.com" or url.address contains ".rel.tunnels.api.visualstudio.com" or url.address contains ".devtunnels.ms") or (event.dns.request contains "global.rel.tunnels.api.visualstudio.com" or event.dns.request contains ".rel.tunnels.api.visualstudio.com" or event.dns.request contains ".devtunnels.ms")))
 ```
 
@@ -7,25 +7,28 @@
 # Original Sigma Rule:
 ```yaml
 title: Potential Visual Studio Dev Tunnel RMM Tool Network Activity
-logsource:
-  product: windows
-  category: network_connection
-detection:
-  selection:
-    DestinationHostname|endswith:
-    - global.rel.tunnels.api.visualstudio.com
-    - '*.rel.tunnels.api.visualstudio.com'
-    - '*.devtunnels.ms'
-  condition: selection
-id: 96ab593b-1829-4d12-b5e3-ec7b8d36ce31
+id: e6eb8f0f-6307-498d-87d1-4f008c6c92f5
 status: experimental
-description: Detects potential network activity of Visual Studio Dev Tunnel RMM tool
+description: |
+    Detects potential network activity of Visual Studio Dev Tunnel RMM tool
+references:
+    - https://github.com/magicsword-io/LOLRMM
 author: LOLRMM Project
-date: 2024/08/07
+date: 2025-12-01
 tags:
-- attack.execution
-- attack.t1219
+    - attack.execution
+    - attack.t1219
+logsource:
+    product: windows
+    category: network_connection
+detection:
+    selection:
+        DestinationHostname|endswith:
+            - 'global.rel.tunnels.api.visualstudio.com'
+            - '*.rel.tunnels.api.visualstudio.com'
+            - '*.devtunnels.ms'
+    condition: selection
 falsepositives:
-- Legitimate use of Visual Studio Dev Tunnel
+    - Legitimate use of Visual Studio Dev Tunnel
 level: medium
 ```

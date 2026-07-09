@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 30-11-2025 00:59:06):
+// Translated content (automatically translated on 09-07-2026 01:51:47):
 (event.category in ("dns","url","ip")) and (endpoint.os="windows" and ((url.address contains ".analytics.insight.rapid7.com" or url.address contains ".endpoint.ingress.rapid7.com") or (event.dns.request contains ".analytics.insight.rapid7.com" or event.dns.request contains ".endpoint.ingress.rapid7.com")))
 ```
 
@@ -7,24 +7,27 @@
 # Original Sigma Rule:
 ```yaml
 title: Potential Rapid7 RMM Tool Network Activity
-logsource:
-  product: windows
-  category: network_connection
-detection:
-  selection:
-    DestinationHostname|endswith:
-    - '*.analytics.insight.rapid7.com'
-    - '*.endpoint.ingress.rapid7.com'
-  condition: selection
-id: 7f04155f-dc7e-4ed7-ad64-716130f1352e
+id: 4df2f4fe-07ea-4b8e-a942-dae22b02f59f
 status: experimental
-description: Detects potential network activity of Rapid7 RMM tool
+description: |
+    Detects potential network activity of Rapid7 RMM tool
+references:
+    - https://github.com/magicsword-io/LOLRMM
 author: LOLRMM Project
-date: 2024/08/07
+date: 2025-12-01
 tags:
-- attack.execution
-- attack.t1219
+    - attack.execution
+    - attack.t1219
+logsource:
+    product: windows
+    category: network_connection
+detection:
+    selection:
+        DestinationHostname|endswith:
+            - '*.analytics.insight.rapid7.com'
+            - '*.endpoint.ingress.rapid7.com'
+    condition: selection
 falsepositives:
-- Legitimate use of Rapid7
+    - Legitimate use of Rapid7
 level: medium
 ```

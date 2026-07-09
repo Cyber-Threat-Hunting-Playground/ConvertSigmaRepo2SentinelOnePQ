@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 30-11-2025 00:59:06):
+// Translated content (automatically translated on 09-07-2026 01:51:47):
 (event.category in ("dns","url","ip")) and (endpoint.os="windows" and ((url.address contains ".screenmeet.com" or url.address contains ".scrn.mt") or (event.dns.request contains ".screenmeet.com" or event.dns.request contains ".scrn.mt")))
 ```
 
@@ -7,24 +7,27 @@
 # Original Sigma Rule:
 ```yaml
 title: Potential ScreenMeet RMM Tool Network Activity
-logsource:
-  product: windows
-  category: network_connection
-detection:
-  selection:
-    DestinationHostname|endswith:
-    - '*.screenmeet.com'
-    - '*.scrn.mt'
-  condition: selection
-id: 8a5e7ba1-65ff-4f55-a524-62411a667b65
+id: 7c429563-cd6e-499e-9256-e3ef9fd65ebc
 status: experimental
-description: Detects potential network activity of ScreenMeet RMM tool
+description: |
+    Detects potential network activity of ScreenMeet RMM tool
+references:
+    - https://github.com/magicsword-io/LOLRMM
 author: LOLRMM Project
-date: 2024/08/07
+date: 2025-12-01
 tags:
-- attack.execution
-- attack.t1219
+    - attack.execution
+    - attack.t1219
+logsource:
+    product: windows
+    category: network_connection
+detection:
+    selection:
+        DestinationHostname|endswith:
+            - '*.screenmeet.com'
+            - '*.scrn.mt'
+    condition: selection
 falsepositives:
-- Legitimate use of ScreenMeet
+    - Legitimate use of ScreenMeet
 level: medium
 ```

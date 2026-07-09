@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 30-11-2025 00:59:06):
+// Translated content (automatically translated on 09-07-2026 01:51:47):
 (event.category in ("dns","url","ip")) and (endpoint.os="windows" and ((url.address contains "boot.net.anydesk.com" or url.address contains "relay-[a-f0-9]{8}.net.anydesk.com:443" or url.address contains ".anydesk.com") or (event.dns.request contains "boot.net.anydesk.com" or event.dns.request contains "relay-[a-f0-9]{8}.net.anydesk.com:443" or event.dns.request contains ".anydesk.com")))
 ```
 
@@ -7,25 +7,28 @@
 # Original Sigma Rule:
 ```yaml
 title: Potential AnyDesk RMM Tool Network Activity
-logsource:
-  product: windows
-  category: network_connection
-detection:
-  selection:
-    DestinationHostname|endswith:
-    - boot.net.anydesk.com
-    - relay-[a-f0-9]{8}.net.anydesk.com:443
-    - '*.anydesk.com'
-  condition: selection
-id: bf3b1c02-8383-40df-8f5b-14e4a1e4fafe
+id: 191aeb11-f0cc-4876-841c-009bf39bdf19
 status: experimental
-description: Detects potential network activity of AnyDesk RMM tool
+description: |
+    Detects potential network activity of AnyDesk RMM tool
+references:
+    - https://github.com/magicsword-io/LOLRMM
 author: LOLRMM Project
-date: 2024/08/07
+date: 2025-12-01
 tags:
-- attack.execution
-- attack.t1219
+    - attack.execution
+    - attack.t1219
+logsource:
+    product: windows
+    category: network_connection
+detection:
+    selection:
+        DestinationHostname|endswith:
+            - 'boot.net.anydesk.com'
+            - 'relay-[a-f0-9]{8}.net.anydesk.com:443'
+            - '*.anydesk.com'
+    condition: selection
 falsepositives:
-- Legitimate use of AnyDesk
+    - Legitimate use of AnyDesk
 level: medium
 ```

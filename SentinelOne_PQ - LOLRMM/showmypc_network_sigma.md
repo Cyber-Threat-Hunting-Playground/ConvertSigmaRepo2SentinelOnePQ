@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 30-11-2025 00:59:06):
+// Translated content (automatically translated on 09-07-2026 01:51:47):
 (event.category in ("dns","url","ip")) and (endpoint.os="windows" and ((url.address contains ".showmypc.com" or url.address contains "showmypc.com") or (event.dns.request contains ".showmypc.com" or event.dns.request contains "showmypc.com")))
 ```
 
@@ -7,24 +7,27 @@
 # Original Sigma Rule:
 ```yaml
 title: Potential ShowMyPC RMM Tool Network Activity
-logsource:
-  product: windows
-  category: network_connection
-detection:
-  selection:
-    DestinationHostname|endswith:
-    - '*.showmypc.com'
-    - showmypc.com
-  condition: selection
-id: b5e51b9f-67b9-4e77-8dea-93de4f367a8d
+id: eb3a9193-fd54-4d1e-a1c0-f36ee26c651c
 status: experimental
-description: Detects potential network activity of ShowMyPC RMM tool
+description: |
+    Detects potential network activity of ShowMyPC RMM tool
+references:
+    - https://github.com/magicsword-io/LOLRMM
 author: LOLRMM Project
-date: 2024/08/07
+date: 2025-12-01
 tags:
-- attack.execution
-- attack.t1219
+    - attack.execution
+    - attack.t1219
+logsource:
+    product: windows
+    category: network_connection
+detection:
+    selection:
+        DestinationHostname|endswith:
+            - '*.showmypc.com'
+            - 'showmypc.com'
+    condition: selection
 falsepositives:
-- Legitimate use of ShowMyPC
+    - Legitimate use of ShowMyPC
 level: medium
 ```

@@ -1,31 +1,36 @@
 ```sql
-// Translated content (automatically translated on 30-11-2025 00:59:06):
-(event.category in ("dns","url","ip")) and (endpoint.os="windows" and ((url.address contains ".logmeinrescue.com" or url.address contains ".logmeinrescue.eu" or url.address contains "logmeinrescue.com") or (event.dns.request contains ".logmeinrescue.com" or event.dns.request contains ".logmeinrescue.eu" or event.dns.request contains "logmeinrescue.com")))
+// Translated content (automatically translated on 09-07-2026 01:51:47):
+(event.category in ("dns","url","ip")) and (endpoint.os="windows" and ((url.address contains ".logmeinrescue.com" or url.address contains ".logmeinrescue.eu" or url.address contains "logmeinrescue.com" or url.address="*rescue-list.*.logmein-gateway.com" or url.address contains "rescue-data-cetner.logmein-gateway.com") or (event.dns.request contains ".logmeinrescue.com" or event.dns.request contains ".logmeinrescue.eu" or event.dns.request contains "logmeinrescue.com" or event.dns.request="*rescue-list.*.logmein-gateway.com" or event.dns.request contains "rescue-data-cetner.logmein-gateway.com")))
 ```
 
 
 # Original Sigma Rule:
 ```yaml
 title: Potential LogMeIn rescue RMM Tool Network Activity
-logsource:
-  product: windows
-  category: network_connection
-detection:
-  selection:
-    DestinationHostname|endswith:
-    - '*.logmeinrescue.com'
-    - '*.logmeinrescue.eu'
-    - logmeinrescue.com
-  condition: selection
-id: eadfb2f5-ad74-4729-ace0-3fc1131880b9
+id: 4eaa85dd-e3db-4410-bd7f-89c855f69d39
 status: experimental
-description: Detects potential network activity of LogMeIn rescue RMM tool
+description: |
+    Detects potential network activity of LogMeIn rescue RMM tool
+references:
+    - https://github.com/magicsword-io/LOLRMM
 author: LOLRMM Project
-date: 2024/08/07
+date: 2025-12-01
 tags:
-- attack.execution
-- attack.t1219
+    - attack.execution
+    - attack.t1219
+logsource:
+    product: windows
+    category: network_connection
+detection:
+    selection:
+        DestinationHostname|endswith:
+            - '*.logmeinrescue.com'
+            - '*.logmeinrescue.eu'
+            - 'logmeinrescue.com'
+            - 'rescue-list.*.logmein-gateway.com'
+            - 'rescue-data-cetner.logmein-gateway.com'
+    condition: selection
 falsepositives:
-- Legitimate use of LogMeIn rescue
+    - Legitimate use of LogMeIn rescue
 level: medium
 ```

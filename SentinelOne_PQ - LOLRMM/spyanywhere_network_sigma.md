@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 30-11-2025 00:59:06):
+// Translated content (automatically translated on 09-07-2026 01:51:47):
 (event.category in ("dns","url","ip")) and (endpoint.os="windows" and ((url.address contains ".spytech-web.com" or url.address contains "spyanywhere.com") or (event.dns.request contains ".spytech-web.com" or event.dns.request contains "spyanywhere.com")))
 ```
 
@@ -7,24 +7,27 @@
 # Original Sigma Rule:
 ```yaml
 title: Potential SpyAnywhere RMM Tool Network Activity
-logsource:
-  product: windows
-  category: network_connection
-detection:
-  selection:
-    DestinationHostname|endswith:
-    - '*.spytech-web.com'
-    - spyanywhere.com
-  condition: selection
-id: 1e8c6d41-cfc1-4912-92eb-5eb4a55f8b85
+id: 45151543-012c-4875-b809-cd3878b63def
 status: experimental
-description: Detects potential network activity of SpyAnywhere RMM tool
+description: |
+    Detects potential network activity of SpyAnywhere RMM tool
+references:
+    - https://github.com/magicsword-io/LOLRMM
 author: LOLRMM Project
-date: 2024/08/07
+date: 2025-12-01
 tags:
-- attack.execution
-- attack.t1219
+    - attack.execution
+    - attack.t1219
+logsource:
+    product: windows
+    category: network_connection
+detection:
+    selection:
+        DestinationHostname|endswith:
+            - '*.spytech-web.com'
+            - 'spyanywhere.com'
+    condition: selection
 falsepositives:
-- Legitimate use of SpyAnywhere
+    - Legitimate use of SpyAnywhere
 level: medium
 ```

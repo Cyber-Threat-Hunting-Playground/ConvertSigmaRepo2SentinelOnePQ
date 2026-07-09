@@ -1,29 +1,33 @@
 ```sql
-// Translated content (automatically translated on 30-11-2025 00:59:06):
-(event.category in ("dns","url","ip")) and (endpoint.os="windows" and (url.address contains "user_managed" or event.dns.request contains "user_managed"))
+// Translated content (automatically translated on 09-07-2026 01:51:47):
+(event.category in ("dns","url","ip")) and (endpoint.os="windows" and ((url.address contains "user_managed" or url.address contains ".support.services.microsoft.com") or (event.dns.request contains "user_managed" or event.dns.request contains ".support.services.microsoft.com")))
 ```
 
 
 # Original Sigma Rule:
 ```yaml
 title: Potential Microsoft Quick Assist RMM Tool Network Activity
-logsource:
-  product: windows
-  category: network_connection
-detection:
-  selection:
-    DestinationHostname|endswith:
-    - user_managed
-  condition: selection
-id: 9a0fc403-4c77-4519-85e8-84c36bd6456b
+id: c6c92332-f901-4f45-a739-abc59797025f
 status: experimental
-description: Detects potential network activity of Microsoft Quick Assist RMM tool
+description: |
+    Detects potential network activity of Microsoft Quick Assist RMM tool
+references:
+    - https://github.com/magicsword-io/LOLRMM
 author: LOLRMM Project
-date: 2024/08/07
+date: 2025-12-01
 tags:
-- attack.execution
-- attack.t1219
+    - attack.execution
+    - attack.t1219
+logsource:
+    product: windows
+    category: network_connection
+detection:
+    selection:
+        DestinationHostname|endswith:
+            - 'user_managed'
+            - '*.support.services.microsoft.com'
+    condition: selection
 falsepositives:
-- Legitimate use of Microsoft Quick Assist
+    - Legitimate use of Microsoft Quick Assist
 level: medium
 ```

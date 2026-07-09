@@ -1,0 +1,33 @@
+```sql
+// Translated content (automatically translated on 09-07-2026 01:51:47):
+(event.category in ("dns","url","ip")) and (endpoint.os="windows" and ((url.address contains "ninite.com" or url.address contains ".ninite.com") or (event.dns.request contains "ninite.com" or event.dns.request contains ".ninite.com")))
+```
+
+
+# Original Sigma Rule:
+```yaml
+title: Potential Ninite Pro (Ninite Agent) RMM Tool Network Activity
+id: d6be5ad5-ae66-59e9-9f03-d1abc3186bc3
+status: experimental
+description: |
+    Detects potential network activity of Ninite Pro (Ninite Agent) RMM tool
+references:
+    - https://github.com/magicsword-io/LOLRMM
+author: LOLRMM Project
+date: 2026-07-08
+tags:
+    - attack.execution
+    - attack.t1219
+logsource:
+    product: windows
+    category: network_connection
+detection:
+    selection:
+        DestinationHostname|endswith:
+            - 'ninite.com'
+            - '*.ninite.com'
+    condition: selection
+falsepositives:
+    - Legitimate use of Ninite Pro (Ninite Agent)
+level: medium
+```

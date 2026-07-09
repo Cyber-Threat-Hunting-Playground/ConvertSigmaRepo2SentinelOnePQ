@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 30-11-2025 00:59:06):
+// Translated content (automatically translated on 09-07-2026 01:51:47):
 (event.category in ("dns","url","ip")) and (endpoint.os="windows" and ((url.address contains ".connect.backdrop.cloud" or url.address contains ".netop.com") or (event.dns.request contains ".connect.backdrop.cloud" or event.dns.request contains ".netop.com")))
 ```
 
@@ -7,25 +7,27 @@
 # Original Sigma Rule:
 ```yaml
 title: Potential Netop Remote Control (Impero Connect) RMM Tool Network Activity
-logsource:
-  product: windows
-  category: network_connection
-detection:
-  selection:
-    DestinationHostname|endswith:
-    - '*.connect.backdrop.cloud'
-    - '*.netop.com'
-  condition: selection
-id: 5501bcd1-7a4f-4dc4-b85f-d7071e5f7f00
+id: 42ac0f05-030b-4df0-b818-6980374579ab
 status: experimental
-description: Detects potential network activity of Netop Remote Control (Impero Connect)
-  RMM tool
+description: |
+    Detects potential network activity of Netop Remote Control (Impero Connect) RMM tool
+references:
+    - https://github.com/magicsword-io/LOLRMM
 author: LOLRMM Project
-date: 2024/08/07
+date: 2025-12-01
 tags:
-- attack.execution
-- attack.t1219
+    - attack.execution
+    - attack.t1219
+logsource:
+    product: windows
+    category: network_connection
+detection:
+    selection:
+        DestinationHostname|endswith:
+            - '*.connect.backdrop.cloud'
+            - '*.netop.com'
+    condition: selection
 falsepositives:
-- Legitimate use of Netop Remote Control (Impero Connect)
+    - Legitimate use of Netop Remote Control (Impero Connect)
 level: medium
 ```

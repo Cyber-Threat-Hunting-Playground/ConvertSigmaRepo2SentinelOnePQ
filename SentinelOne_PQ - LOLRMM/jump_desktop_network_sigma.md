@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 30-11-2025 00:59:06):
+// Translated content (automatically translated on 09-07-2026 01:51:47):
 (event.category in ("dns","url","ip")) and (endpoint.os="windows" and ((url.address contains ".jumpdesktop.com" or url.address contains "jumpdesktop.com" or url.address contains "jumpto.me" or url.address contains ".jumpto.me") or (event.dns.request contains ".jumpdesktop.com" or event.dns.request contains "jumpdesktop.com" or event.dns.request contains "jumpto.me" or event.dns.request contains ".jumpto.me")))
 ```
 
@@ -7,26 +7,29 @@
 # Original Sigma Rule:
 ```yaml
 title: Potential Jump Desktop RMM Tool Network Activity
-logsource:
-  product: windows
-  category: network_connection
-detection:
-  selection:
-    DestinationHostname|endswith:
-    - '*.jumpdesktop.com'
-    - jumpdesktop.com
-    - jumpto.me
-    - '*.jumpto.me'
-  condition: selection
-id: 5e78e6b3-b646-460b-8407-7135a837bd9f
+id: dece7c90-f789-4724-a787-e65445e232b2
 status: experimental
-description: Detects potential network activity of Jump Desktop RMM tool
+description: |
+    Detects potential network activity of Jump Desktop RMM tool
+references:
+    - https://github.com/magicsword-io/LOLRMM
 author: LOLRMM Project
-date: 2024/08/07
+date: 2025-12-01
 tags:
-- attack.execution
-- attack.t1219
+    - attack.execution
+    - attack.t1219
+logsource:
+    product: windows
+    category: network_connection
+detection:
+    selection:
+        DestinationHostname|endswith:
+            - '*.jumpdesktop.com'
+            - 'jumpdesktop.com'
+            - 'jumpto.me'
+            - '*.jumpto.me'
+    condition: selection
 falsepositives:
-- Legitimate use of Jump Desktop
+    - Legitimate use of Jump Desktop
 level: medium
 ```

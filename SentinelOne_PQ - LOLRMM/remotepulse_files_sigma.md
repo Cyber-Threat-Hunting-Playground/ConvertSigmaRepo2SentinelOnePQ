@@ -1,0 +1,36 @@
+```sql
+// Translated content (automatically translated on 09-07-2026 01:51:47):
+event.category="file" and (endpoint.os="windows" and (tgt.file.path contains "C:\\Program Files (x86)\\RemotePulseAgent\\InstallCore.exe" or tgt.file.path contains "C:\\Program Files (x86)\\RemotePulseAgent\\agent.ps1" or tgt.file.path contains "C:\\Program Files (x86)\\RemotePulseAgent\\defender-exclude.ps1" or tgt.file.path contains "C:\\Program Files (x86)\\RemotePulseAgent\\install.ps1" or tgt.file.path contains "C:\\Program Files (x86)\\RemotePulseAgent\\install.cmd"))
+```
+
+
+# Original Sigma Rule:
+```yaml
+title: Potential RemotePulse RMM Tool File Activity
+id: 1ca7dc9e-072f-5182-aee9-6a7bee759980
+status: experimental
+description: |
+    Detects potential files activity of RemotePulse RMM tool
+references:
+    - https://github.com/magicsword-io/LOLRMM
+author: LOLRMM Project
+date: 2026-07-08
+tags:
+    - attack.execution
+    - attack.t1219
+logsource:
+    product: windows
+    category: file_event
+detection:
+    selection:
+        TargetFilename|endswith:
+            - 'C:\Program Files (x86)\RemotePulseAgent\InstallCore.exe'
+            - 'C:\Program Files (x86)\RemotePulseAgent\agent.ps1'
+            - 'C:\Program Files (x86)\RemotePulseAgent\defender-exclude.ps1'
+            - 'C:\Program Files (x86)\RemotePulseAgent\install.ps1'
+            - 'C:\Program Files (x86)\RemotePulseAgent\install.cmd'
+    condition: selection
+falsepositives:
+    - Legitimate use of RemotePulse
+level: medium
+```

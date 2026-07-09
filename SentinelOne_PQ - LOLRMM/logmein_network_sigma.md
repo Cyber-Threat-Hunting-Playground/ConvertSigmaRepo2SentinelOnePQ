@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 30-11-2025 00:59:06):
+// Translated content (automatically translated on 09-07-2026 01:51:47):
 (event.category in ("dns","url","ip")) and (endpoint.os="windows" and ((url.address contains "logmein-gateway.com" or url.address contains ".logmein.com" or url.address contains ".logmein.eu" or url.address contains "logmeinrescue.com" or url.address contains ".logmeininc.com") or (event.dns.request contains "logmein-gateway.com" or event.dns.request contains ".logmein.com" or event.dns.request contains ".logmein.eu" or event.dns.request contains "logmeinrescue.com" or event.dns.request contains ".logmeininc.com")))
 ```
 
@@ -7,27 +7,30 @@
 # Original Sigma Rule:
 ```yaml
 title: Potential LogMeIn RMM Tool Network Activity
-logsource:
-  product: windows
-  category: network_connection
-detection:
-  selection:
-    DestinationHostname|endswith:
-    - logmein-gateway.com
-    - '*.logmein.com'
-    - '*.logmein.eu'
-    - logmeinrescue.com
-    - '*.logmeininc.com'
-  condition: selection
-id: 566b2839-f874-48c5-a378-72f82083aa35
+id: 7aeba9ce-5883-4ea6-bc0c-394af2774b49
 status: experimental
-description: Detects potential network activity of LogMeIn RMM tool
+description: |
+    Detects potential network activity of LogMeIn RMM tool
+references:
+    - https://github.com/magicsword-io/LOLRMM
 author: LOLRMM Project
-date: 2024/08/07
+date: 2025-12-01
 tags:
-- attack.execution
-- attack.t1219
+    - attack.execution
+    - attack.t1219
+logsource:
+    product: windows
+    category: network_connection
+detection:
+    selection:
+        DestinationHostname|endswith:
+            - 'logmein-gateway.com'
+            - '*.logmein.com'
+            - '*.logmein.eu'
+            - 'logmeinrescue.com'
+            - '*.logmeininc.com'
+    condition: selection
 falsepositives:
-- Legitimate use of LogMeIn
+    - Legitimate use of LogMeIn
 level: medium
 ```

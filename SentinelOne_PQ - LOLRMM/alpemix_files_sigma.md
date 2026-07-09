@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 30-11-2025 00:59:06):
+// Translated content (automatically translated on 09-07-2026 01:51:47):
 event.category="file" and (endpoint.os="windows" and tgt.file.path contains "%localappdata%\\Alpemix\\Alpemix.ini")
 ```
 
@@ -7,23 +7,25 @@ event.category="file" and (endpoint.os="windows" and tgt.file.path contains "%lo
 # Original Sigma Rule:
 ```yaml
 title: Potential Alpemix RMM Tool File Activity
-logsource:
-  product: windows
-  category: file_event
-detection:
-  selection:
-    TargetFilename|endswith:
-    - '%localappdata%\Alpemix\Alpemix.ini'
-  condition: selection
-id: 6737b828-5c7c-4341-b016-0f6b56c24dd5
+id: 48635891-4740-4323-9654-0c950f7129a0
 status: experimental
-description: Detects potential files activity of Alpemix RMM tool
+description: |
+    Detects potential files activity of Alpemix RMM tool
+references:
+    - https://github.com/magicsword-io/LOLRMM
 author: LOLRMM Project
-date: 2024/08/07
+date: 2025-12-01
 tags:
-- attack.execution
-- attack.t1219
+    - attack.execution
+    - attack.t1219
+logsource:
+    product: windows
+    category: file_event
+detection:
+    selection:
+        TargetFilename|endswith: '%localappdata%\Alpemix\Alpemix.ini'
+    condition: selection
 falsepositives:
-- Legitimate use of Alpemix
+    - Legitimate use of Alpemix
 level: medium
 ```

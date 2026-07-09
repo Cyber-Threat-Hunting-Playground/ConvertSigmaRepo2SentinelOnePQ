@@ -1,36 +1,40 @@
 ```sql
-// Translated content (automatically translated on 30-11-2025 00:59:06):
-(event.category in ("dns","url","ip")) and (endpoint.os="windows" and ((url.address contains "goto.com" or url.address contains ".getgo.com" or url.address contains ".fastsupport.com" or url.address contains ".gotoassist.com" or url.address contains "helpme.net" or url.address contains ".gotoassist.me" or url.address contains ".gotoassist.at" or url.address contains ".desktopstreaming.com") or (event.dns.request contains "goto.com" or event.dns.request contains ".getgo.com" or event.dns.request contains ".fastsupport.com" or event.dns.request contains ".gotoassist.com" or event.dns.request contains "helpme.net" or event.dns.request contains ".gotoassist.me" or event.dns.request contains ".gotoassist.at" or event.dns.request contains ".desktopstreaming.com")))
+// Translated content (automatically translated on 09-07-2026 01:51:47):
+(event.category in ("dns","url","ip")) and (endpoint.os="windows" and ((url.address contains "goto.com" or url.address contains ".getgo.com" or url.address contains ".fastsupport.com" or url.address contains ".gotoassist.com" or url.address contains "helpme.net" or url.address contains ".gotoassist.me" or url.address contains ".gotoassist.at" or url.address contains ".desktopstreaming.com" or url.address contains ".cdn.getgo.com") or (event.dns.request contains "goto.com" or event.dns.request contains ".getgo.com" or event.dns.request contains ".fastsupport.com" or event.dns.request contains ".gotoassist.com" or event.dns.request contains "helpme.net" or event.dns.request contains ".gotoassist.me" or event.dns.request contains ".gotoassist.at" or event.dns.request contains ".desktopstreaming.com" or event.dns.request contains ".cdn.getgo.com")))
 ```
 
 
 # Original Sigma Rule:
 ```yaml
 title: Potential GoToAssist RMM Tool Network Activity
-logsource:
-  product: windows
-  category: network_connection
-detection:
-  selection:
-    DestinationHostname|endswith:
-    - goto.com
-    - '*.getgo.com'
-    - '*.fastsupport.com'
-    - '*.gotoassist.com'
-    - helpme.net
-    - '*.gotoassist.me'
-    - '*.gotoassist.at'
-    - '*.desktopstreaming.com'
-  condition: selection
-id: 35baa228-9b56-416d-9652-d696f35ca87b
+id: db374856-a793-461e-a33a-648ee4468d7e
 status: experimental
-description: Detects potential network activity of GoToAssist RMM tool
+description: |
+    Detects potential network activity of GoToAssist RMM tool
+references:
+    - https://github.com/magicsword-io/LOLRMM
 author: LOLRMM Project
-date: 2024/08/07
+date: 2025-12-01
 tags:
-- attack.execution
-- attack.t1219
+    - attack.execution
+    - attack.t1219
+logsource:
+    product: windows
+    category: network_connection
+detection:
+    selection:
+        DestinationHostname|endswith:
+            - 'goto.com'
+            - '*.getgo.com'
+            - '*.fastsupport.com'
+            - '*.gotoassist.com'
+            - 'helpme.net'
+            - '*.gotoassist.me'
+            - '*.gotoassist.at'
+            - '*.desktopstreaming.com'
+            - '*.cdn.getgo.com'
+    condition: selection
 falsepositives:
-- Legitimate use of GoToAssist
+    - Legitimate use of GoToAssist
 level: medium
 ```

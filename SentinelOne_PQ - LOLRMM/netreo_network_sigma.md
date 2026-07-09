@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 30-11-2025 00:59:06):
+// Translated content (automatically translated on 09-07-2026 01:51:47):
 (event.category in ("dns","url","ip")) and (endpoint.os="windows" and ((url.address contains "charon.netreo.net" or url.address contains "activation.netreo.net" or url.address contains ".api.netreo.com" or url.address contains "netreo.com") or (event.dns.request contains "charon.netreo.net" or event.dns.request contains "activation.netreo.net" or event.dns.request contains ".api.netreo.com" or event.dns.request contains "netreo.com")))
 ```
 
@@ -7,26 +7,29 @@
 # Original Sigma Rule:
 ```yaml
 title: Potential Netreo RMM Tool Network Activity
-logsource:
-  product: windows
-  category: network_connection
-detection:
-  selection:
-    DestinationHostname|endswith:
-    - charon.netreo.net
-    - activation.netreo.net
-    - '*.api.netreo.com'
-    - netreo.com
-  condition: selection
-id: bce122a6-0821-4d9a-953a-2b1e9d5b218b
+id: cad3922b-33f7-4510-a4ea-5fd1c8915154
 status: experimental
-description: Detects potential network activity of Netreo RMM tool
+description: |
+    Detects potential network activity of Netreo RMM tool
+references:
+    - https://github.com/magicsword-io/LOLRMM
 author: LOLRMM Project
-date: 2024/08/07
+date: 2025-12-01
 tags:
-- attack.execution
-- attack.t1219
+    - attack.execution
+    - attack.t1219
+logsource:
+    product: windows
+    category: network_connection
+detection:
+    selection:
+        DestinationHostname|endswith:
+            - 'charon.netreo.net'
+            - 'activation.netreo.net'
+            - '*.api.netreo.com'
+            - 'netreo.com'
+    condition: selection
 falsepositives:
-- Legitimate use of Netreo
+    - Legitimate use of Netreo
 level: medium
 ```

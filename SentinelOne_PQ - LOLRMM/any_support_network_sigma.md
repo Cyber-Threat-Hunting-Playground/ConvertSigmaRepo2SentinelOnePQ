@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 30-11-2025 00:59:06):
+// Translated content (automatically translated on 09-07-2026 01:51:47):
 (event.category in ("dns","url","ip")) and (endpoint.os="windows" and (url.address contains ".anysupport.net" or event.dns.request contains ".anysupport.net"))
 ```
 
@@ -7,23 +7,25 @@
 # Original Sigma Rule:
 ```yaml
 title: Potential Any Support RMM Tool Network Activity
-logsource:
-  product: windows
-  category: network_connection
-detection:
-  selection:
-    DestinationHostname|endswith:
-    - '*.anysupport.net'
-  condition: selection
-id: 734b4e22-2195-4355-8a09-d6a2ef3ea908
+id: 2266db74-38c4-40ab-b8b2-c3bf041ae11f
 status: experimental
-description: Detects potential network activity of Any Support RMM tool
+description: |
+    Detects potential network activity of Any Support RMM tool
+references:
+    - https://github.com/magicsword-io/LOLRMM
 author: LOLRMM Project
-date: 2024/08/07
+date: 2025-12-01
 tags:
-- attack.execution
-- attack.t1219
+    - attack.execution
+    - attack.t1219
+logsource:
+    product: windows
+    category: network_connection
+detection:
+    selection:
+        DestinationHostname|endswith: '*.anysupport.net'
+    condition: selection
 falsepositives:
-- Legitimate use of Any Support
+    - Legitimate use of Any Support
 level: medium
 ```

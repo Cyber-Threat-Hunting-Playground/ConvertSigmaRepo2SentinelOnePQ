@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 30-11-2025 00:59:06):
+// Translated content (automatically translated on 09-07-2026 01:51:47):
 (event.category in ("dns","url","ip")) and (endpoint.os="windows" and ((url.address contains "skyfex.com" or url.address contains "deskroll.com" or url.address contains ".deskroll.com") or (event.dns.request contains "skyfex.com" or event.dns.request contains "deskroll.com" or event.dns.request contains ".deskroll.com")))
 ```
 
@@ -7,25 +7,28 @@
 # Original Sigma Rule:
 ```yaml
 title: Potential SkyFex RMM Tool Network Activity
-logsource:
-  product: windows
-  category: network_connection
-detection:
-  selection:
-    DestinationHostname|endswith:
-    - skyfex.com
-    - deskroll.com
-    - '*.deskroll.com'
-  condition: selection
-id: 9576d699-5443-4d7b-b464-e2443de129b3
+id: c7d7cb02-e36f-4f83-8927-acacbc54db0a
 status: experimental
-description: Detects potential network activity of SkyFex RMM tool
+description: |
+    Detects potential network activity of SkyFex RMM tool
+references:
+    - https://github.com/magicsword-io/LOLRMM
 author: LOLRMM Project
-date: 2024/08/07
+date: 2025-12-01
 tags:
-- attack.execution
-- attack.t1219
+    - attack.execution
+    - attack.t1219
+logsource:
+    product: windows
+    category: network_connection
+detection:
+    selection:
+        DestinationHostname|endswith:
+            - 'skyfex.com'
+            - 'deskroll.com'
+            - '*.deskroll.com'
+    condition: selection
 falsepositives:
-- Legitimate use of SkyFex
+    - Legitimate use of SkyFex
 level: medium
 ```

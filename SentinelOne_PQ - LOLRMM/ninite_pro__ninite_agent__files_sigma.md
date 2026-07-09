@@ -1,0 +1,33 @@
+```sql
+// Translated content (automatically translated on 09-07-2026 01:51:47):
+event.category="file" and (endpoint.os="windows" and (tgt.file.path contains "%TEMP%\\NiniteDownloads\*" or tgt.file.path contains "NiniteUpdateSummary.log"))
+```
+
+
+# Original Sigma Rule:
+```yaml
+title: Potential Ninite Pro (Ninite Agent) RMM Tool File Activity
+id: d65794aa-6316-5b64-bc2e-013628788195
+status: experimental
+description: |
+    Detects potential files activity of Ninite Pro (Ninite Agent) RMM tool
+references:
+    - https://github.com/magicsword-io/LOLRMM
+author: LOLRMM Project
+date: 2026-07-08
+tags:
+    - attack.execution
+    - attack.t1219
+logsource:
+    product: windows
+    category: file_event
+detection:
+    selection:
+        TargetFilename|endswith:
+            - '%TEMP%\NiniteDownloads\*'
+            - 'NiniteUpdateSummary.log'
+    condition: selection
+falsepositives:
+    - Legitimate use of Ninite Pro (Ninite Agent)
+level: medium
+```

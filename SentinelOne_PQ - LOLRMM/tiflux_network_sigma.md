@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 08-07-2026 01:29:41):
+// Translated content (automatically translated on 09-07-2026 01:51:47):
 (event.category in ("dns","url","ip")) and (endpoint.os="windows" and ((url.address contains "agent.tiflux.com" or url.address contains "app.tiflux.com" or url.address contains "tiflux.com" or url.address contains "www.tiflux.com" or url.address contains "tiflux.com.br" or url.address contains "www.tiflux.com.br" or url.address contains ".tiflux.com" or url.address contains "my.splashtop.com") or (event.dns.request contains "agent.tiflux.com" or event.dns.request contains "app.tiflux.com" or event.dns.request contains "tiflux.com" or event.dns.request contains "www.tiflux.com" or event.dns.request contains "tiflux.com.br" or event.dns.request contains "www.tiflux.com.br" or event.dns.request contains ".tiflux.com" or event.dns.request contains "my.splashtop.com")))
 ```
 

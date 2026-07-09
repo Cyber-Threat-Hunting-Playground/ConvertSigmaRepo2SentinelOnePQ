@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 30-11-2025 00:59:06):
+// Translated content (automatically translated on 09-07-2026 01:51:47):
 (event.category in ("dns","url","ip")) and (endpoint.os="windows" and ((url.address contains ".gotohttp.com" or url.address contains "gotohttp.com") or (event.dns.request contains ".gotohttp.com" or event.dns.request contains "gotohttp.com")))
 ```
 
@@ -7,24 +7,27 @@
 # Original Sigma Rule:
 ```yaml
 title: Potential GotoHTTP RMM Tool Network Activity
-logsource:
-  product: windows
-  category: network_connection
-detection:
-  selection:
-    DestinationHostname|endswith:
-    - '*.gotohttp.com'
-    - gotohttp.com
-  condition: selection
-id: 0ab632b8-05a4-4272-a55d-b53bf94ed676
+id: 1b6aea94-3773-4566-9ad5-073e438c94a8
 status: experimental
-description: Detects potential network activity of GotoHTTP RMM tool
+description: |
+    Detects potential network activity of GotoHTTP RMM tool
+references:
+    - https://github.com/magicsword-io/LOLRMM
 author: LOLRMM Project
-date: 2024/08/07
+date: 2025-12-01
 tags:
-- attack.execution
-- attack.t1219
+    - attack.execution
+    - attack.t1219
+logsource:
+    product: windows
+    category: network_connection
+detection:
+    selection:
+        DestinationHostname|endswith:
+            - '*.gotohttp.com'
+            - 'gotohttp.com'
+    condition: selection
 falsepositives:
-- Legitimate use of GotoHTTP
+    - Legitimate use of GotoHTTP
 level: medium
 ```

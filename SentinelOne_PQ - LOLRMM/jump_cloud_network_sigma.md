@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 30-11-2025 00:59:06):
+// Translated content (automatically translated on 09-07-2026 01:51:47):
 (event.category in ("dns","url","ip")) and (endpoint.os="windows" and ((url.address contains ".api.jumpcloud.com" or url.address contains ".assist.jumpcloud.com") or (event.dns.request contains ".api.jumpcloud.com" or event.dns.request contains ".assist.jumpcloud.com")))
 ```
 
@@ -7,24 +7,27 @@
 # Original Sigma Rule:
 ```yaml
 title: Potential Jump Cloud RMM Tool Network Activity
-logsource:
-  product: windows
-  category: network_connection
-detection:
-  selection:
-    DestinationHostname|endswith:
-    - '*.api.jumpcloud.com'
-    - '*.assist.jumpcloud.com'
-  condition: selection
-id: c1e37014-daab-4e69-8224-a2d59eecc118
+id: 16b4a42b-f942-4593-bb05-442d1cce60ef
 status: experimental
-description: Detects potential network activity of Jump Cloud RMM tool
+description: |
+    Detects potential network activity of Jump Cloud RMM tool
+references:
+    - https://github.com/magicsword-io/LOLRMM
 author: LOLRMM Project
-date: 2024/08/07
+date: 2025-12-01
 tags:
-- attack.execution
-- attack.t1219
+    - attack.execution
+    - attack.t1219
+logsource:
+    product: windows
+    category: network_connection
+detection:
+    selection:
+        DestinationHostname|endswith:
+            - '*.api.jumpcloud.com'
+            - '*.assist.jumpcloud.com'
+    condition: selection
 falsepositives:
-- Legitimate use of Jump Cloud
+    - Legitimate use of Jump Cloud
 level: medium
 ```

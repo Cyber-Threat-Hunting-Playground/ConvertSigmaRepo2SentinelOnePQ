@@ -1,0 +1,33 @@
+```sql
+// Translated content (automatically translated on 09-07-2026 01:51:47):
+(event.category in ("dns","url","ip")) and (endpoint.os="windows" and ((url.address contains "bluetrait.io" or url.address contains ".bluetrait.io") or (event.dns.request contains "bluetrait.io" or event.dns.request contains ".bluetrait.io")))
+```
+
+
+# Original Sigma Rule:
+```yaml
+title: Potential Bluetrait RMM Tool Network Activity
+id: 93108072-c01a-49c7-ae19-bf3730ac5f86
+status: experimental
+description: |
+    Detects potential network activity of Bluetrait RMM tool
+references:
+    - https://github.com/magicsword-io/LOLRMM
+author: LOLRMM Project
+date: 2025-12-01
+tags:
+    - attack.execution
+    - attack.t1219
+logsource:
+    product: windows
+    category: network_connection
+detection:
+    selection:
+        DestinationHostname|endswith:
+            - 'bluetrait.io'
+            - '*.bluetrait.io'
+    condition: selection
+falsepositives:
+    - Legitimate use of Bluetrait
+level: medium
+```

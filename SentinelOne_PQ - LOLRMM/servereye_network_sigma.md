@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 30-11-2025 00:59:06):
+// Translated content (automatically translated on 09-07-2026 01:51:47):
 (event.category in ("dns","url","ip")) and (endpoint.os="windows" and (url.address contains ".server-eye.de" or event.dns.request contains ".server-eye.de"))
 ```
 
@@ -7,23 +7,25 @@
 # Original Sigma Rule:
 ```yaml
 title: Potential ServerEye RMM Tool Network Activity
-logsource:
-  product: windows
-  category: network_connection
-detection:
-  selection:
-    DestinationHostname|endswith:
-    - '*.server-eye.de'
-  condition: selection
-id: cb61655a-fb52-45a6-97a7-8de1f1320c2a
+id: 595143f2-0bc4-4e43-be6b-ed77c6d60afc
 status: experimental
-description: Detects potential network activity of ServerEye RMM tool
+description: |
+    Detects potential network activity of ServerEye RMM tool
+references:
+    - https://github.com/magicsword-io/LOLRMM
 author: LOLRMM Project
-date: 2024/08/07
+date: 2025-12-01
 tags:
-- attack.execution
-- attack.t1219
+    - attack.execution
+    - attack.t1219
+logsource:
+    product: windows
+    category: network_connection
+detection:
+    selection:
+        DestinationHostname|endswith: '*.server-eye.de'
+    condition: selection
 falsepositives:
-- Legitimate use of ServerEye
+    - Legitimate use of ServerEye
 level: medium
 ```

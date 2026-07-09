@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 30-11-2025 00:59:06):
+// Translated content (automatically translated on 09-07-2026 01:51:47):
 (event.category in ("dns","url","ip")) and (endpoint.os="windows" and ((url.address contains ".mdt.qq.com" or url.address contains ".desktop.qq.com" or url.address contains "upload_data.qq.com" or url.address contains "qq-messenger.en.softonic.com") or (event.dns.request contains ".mdt.qq.com" or event.dns.request contains ".desktop.qq.com" or event.dns.request contains "upload_data.qq.com" or event.dns.request contains "qq-messenger.en.softonic.com")))
 ```
 
@@ -7,26 +7,29 @@
 # Original Sigma Rule:
 ```yaml
 title: Potential QQ IM-remote assistance RMM Tool Network Activity
-logsource:
-  product: windows
-  category: network_connection
-detection:
-  selection:
-    DestinationHostname|endswith:
-    - '*.mdt.qq.com'
-    - '*.desktop.qq.com'
-    - upload_data.qq.com
-    - qq-messenger.en.softonic.com
-  condition: selection
-id: a433daa3-deae-474a-9958-36cb9b287bb4
+id: f146fa65-ccd8-44e5-b3b0-d2250b042f1e
 status: experimental
-description: Detects potential network activity of QQ IM-remote assistance RMM tool
+description: |
+    Detects potential network activity of QQ IM-remote assistance RMM tool
+references:
+    - https://github.com/magicsword-io/LOLRMM
 author: LOLRMM Project
-date: 2024/08/07
+date: 2025-12-01
 tags:
-- attack.execution
-- attack.t1219
+    - attack.execution
+    - attack.t1219
+logsource:
+    product: windows
+    category: network_connection
+detection:
+    selection:
+        DestinationHostname|endswith:
+            - '*.mdt.qq.com'
+            - '*.desktop.qq.com'
+            - 'upload_data.qq.com'
+            - 'qq-messenger.en.softonic.com'
+    condition: selection
 falsepositives:
-- Legitimate use of QQ IM-remote assistance
+    - Legitimate use of QQ IM-remote assistance
 level: medium
 ```

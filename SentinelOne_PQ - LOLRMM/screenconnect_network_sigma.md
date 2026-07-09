@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 30-11-2025 00:59:06):
+// Translated content (automatically translated on 09-07-2026 01:51:47):
 (event.category in ("dns","url","ip")) and (endpoint.os="windows" and ((url.address contains "control.connectwise.com" or url.address contains ".connectwise.com" or url.address contains ".screenconnect.com") or (event.dns.request contains "control.connectwise.com" or event.dns.request contains ".connectwise.com" or event.dns.request contains ".screenconnect.com")))
 ```
 
@@ -7,25 +7,28 @@
 # Original Sigma Rule:
 ```yaml
 title: Potential ScreenConnect RMM Tool Network Activity
-logsource:
-  product: windows
-  category: network_connection
-detection:
-  selection:
-    DestinationHostname|endswith:
-    - control.connectwise.com
-    - '*.connectwise.com'
-    - '*.screenconnect.com'
-  condition: selection
-id: 745f1940-e16c-42f5-87bb-66f342e0dba8
+id: 74f512be-1adb-411e-962f-9f759996e8fe
 status: experimental
-description: Detects potential network activity of ScreenConnect RMM tool
+description: |
+    Detects potential network activity of ScreenConnect RMM tool
+references:
+    - https://github.com/magicsword-io/LOLRMM
 author: LOLRMM Project
-date: 2024/08/07
+date: 2025-12-01
 tags:
-- attack.execution
-- attack.t1219
+    - attack.execution
+    - attack.t1219
+logsource:
+    product: windows
+    category: network_connection
+detection:
+    selection:
+        DestinationHostname|endswith:
+            - 'control.connectwise.com'
+            - '*.connectwise.com'
+            - '*.screenconnect.com'
+    condition: selection
 falsepositives:
-- Legitimate use of ScreenConnect
+    - Legitimate use of ScreenConnect
 level: medium
 ```

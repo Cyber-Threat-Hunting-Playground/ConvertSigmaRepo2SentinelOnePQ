@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 30-11-2025 00:59:06):
+// Translated content (automatically translated on 09-07-2026 01:51:47):
 (event.category in ("dns","url","ip")) and (endpoint.os="windows" and ((url.address contains ".tailscale.com" or url.address contains ".tailscale.io" or url.address contains "tailscale.com") or (event.dns.request contains ".tailscale.com" or event.dns.request contains ".tailscale.io" or event.dns.request contains "tailscale.com")))
 ```
 
@@ -7,25 +7,28 @@
 # Original Sigma Rule:
 ```yaml
 title: Potential Tailscale RMM Tool Network Activity
-logsource:
-  product: windows
-  category: network_connection
-detection:
-  selection:
-    DestinationHostname|endswith:
-    - '*.tailscale.com'
-    - '*.tailscale.io'
-    - tailscale.com
-  condition: selection
-id: a4f61da1-8b97-46ff-8814-00d492e00b18
+id: 6998cd3a-3c73-4211-9215-55a53ece55b6
 status: experimental
-description: Detects potential network activity of Tailscale RMM tool
+description: |
+    Detects potential network activity of Tailscale RMM tool
+references:
+    - https://github.com/magicsword-io/LOLRMM
 author: LOLRMM Project
-date: 2024/08/07
+date: 2025-12-01
 tags:
-- attack.execution
-- attack.t1219
+    - attack.execution
+    - attack.t1219
+logsource:
+    product: windows
+    category: network_connection
+detection:
+    selection:
+        DestinationHostname|endswith:
+            - '*.tailscale.com'
+            - '*.tailscale.io'
+            - 'tailscale.com'
+    condition: selection
 falsepositives:
-- Legitimate use of Tailscale
+    - Legitimate use of Tailscale
 level: medium
 ```

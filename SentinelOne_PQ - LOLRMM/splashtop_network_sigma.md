@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 30-11-2025 00:59:06):
+// Translated content (automatically translated on 09-07-2026 01:51:47):
 (event.category in ("dns","url","ip")) and (endpoint.os="windows" and (url.address contains ".splashtop.com" or event.dns.request contains ".splashtop.com"))
 ```
 
@@ -7,23 +7,25 @@
 # Original Sigma Rule:
 ```yaml
 title: Potential Splashtop RMM Tool Network Activity
-logsource:
-  product: windows
-  category: network_connection
-detection:
-  selection:
-    DestinationHostname|endswith:
-    - '*.splashtop.com'
-  condition: selection
-id: 435cfa08-9ab6-4ddf-b68c-580819dbe116
+id: 8ab5acdc-33d7-4a78-b75e-4be4f25972b9
 status: experimental
-description: Detects potential network activity of Splashtop RMM tool
+description: |
+    Detects potential network activity of Splashtop RMM tool
+references:
+    - https://github.com/magicsword-io/LOLRMM
 author: LOLRMM Project
-date: 2024/08/07
+date: 2025-12-01
 tags:
-- attack.execution
-- attack.t1219
+    - attack.execution
+    - attack.t1219
+logsource:
+    product: windows
+    category: network_connection
+detection:
+    selection:
+        DestinationHostname|endswith: '*.splashtop.com'
+    condition: selection
 falsepositives:
-- Legitimate use of Splashtop
+    - Legitimate use of Splashtop
 level: medium
 ```

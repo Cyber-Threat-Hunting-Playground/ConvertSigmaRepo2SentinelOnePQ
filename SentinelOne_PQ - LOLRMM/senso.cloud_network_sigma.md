@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 30-11-2025 00:59:06):
+// Translated content (automatically translated on 09-07-2026 01:51:47):
 (event.category in ("dns","url","ip")) and (endpoint.os="windows" and ((url.address contains ".senso.cloud" or url.address contains "senso.cloud") or (event.dns.request contains ".senso.cloud" or event.dns.request contains "senso.cloud")))
 ```
 
@@ -7,24 +7,27 @@
 # Original Sigma Rule:
 ```yaml
 title: Potential Senso.cloud RMM Tool Network Activity
-logsource:
-  product: windows
-  category: network_connection
-detection:
-  selection:
-    DestinationHostname|endswith:
-    - '*.senso.cloud'
-    - senso.cloud
-  condition: selection
-id: 442fed01-60ef-4b36-996a-9dcaca32fe48
+id: f24b4c8f-3a80-42f7-b171-dafa5cf50360
 status: experimental
-description: Detects potential network activity of Senso.cloud RMM tool
+description: |
+    Detects potential network activity of Senso.cloud RMM tool
+references:
+    - https://github.com/magicsword-io/LOLRMM
 author: LOLRMM Project
-date: 2024/08/07
+date: 2025-12-01
 tags:
-- attack.execution
-- attack.t1219
+    - attack.execution
+    - attack.t1219
+logsource:
+    product: windows
+    category: network_connection
+detection:
+    selection:
+        DestinationHostname|endswith:
+            - '*.senso.cloud'
+            - 'senso.cloud'
+    condition: selection
 falsepositives:
-- Legitimate use of Senso.cloud
+    - Legitimate use of Senso.cloud
 level: medium
 ```

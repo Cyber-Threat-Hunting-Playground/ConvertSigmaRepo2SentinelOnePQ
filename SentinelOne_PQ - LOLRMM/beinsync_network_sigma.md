@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 30-11-2025 00:59:06):
+// Translated content (automatically translated on 09-07-2026 01:51:47):
 (event.category in ("dns","url","ip")) and (endpoint.os="windows" and ((url.address contains ".beinsync.net" or url.address contains ".beinsync.com") or (event.dns.request contains ".beinsync.net" or event.dns.request contains ".beinsync.com")))
 ```
 
@@ -7,24 +7,27 @@
 # Original Sigma Rule:
 ```yaml
 title: Potential BeInSync RMM Tool Network Activity
-logsource:
-  product: windows
-  category: network_connection
-detection:
-  selection:
-    DestinationHostname|endswith:
-    - '*.beinsync.net'
-    - '*.beinsync.com'
-  condition: selection
-id: 50cf7c20-63d2-4739-8c9e-4e0028962b49
+id: 815a3008-1333-4d9d-a475-99dab884d493
 status: experimental
-description: Detects potential network activity of BeInSync RMM tool
+description: |
+    Detects potential network activity of BeInSync RMM tool
+references:
+    - https://github.com/magicsword-io/LOLRMM
 author: LOLRMM Project
-date: 2024/08/07
+date: 2025-12-01
 tags:
-- attack.execution
-- attack.t1219
+    - attack.execution
+    - attack.t1219
+logsource:
+    product: windows
+    category: network_connection
+detection:
+    selection:
+        DestinationHostname|endswith:
+            - '*.beinsync.net'
+            - '*.beinsync.com'
+    condition: selection
 falsepositives:
-- Legitimate use of BeInSync
+    - Legitimate use of BeInSync
 level: medium
 ```

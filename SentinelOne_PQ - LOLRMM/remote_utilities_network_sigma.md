@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 30-11-2025 00:59:06):
+// Translated content (automatically translated on 09-07-2026 01:51:47):
 (event.category in ("dns","url","ip")) and (endpoint.os="windows" and (url.address contains ".internetid.ru" or event.dns.request contains ".internetid.ru"))
 ```
 
@@ -7,23 +7,25 @@
 # Original Sigma Rule:
 ```yaml
 title: Potential Remote Utilities RMM Tool Network Activity
-logsource:
-  product: windows
-  category: network_connection
-detection:
-  selection:
-    DestinationHostname|endswith:
-    - '*.internetid.ru'
-  condition: selection
-id: 99a2b4e7-a1ee-40ff-8133-088df4428c1b
+id: 568aba5a-6ff8-4af5-8e07-6397a91dae8e
 status: experimental
-description: Detects potential network activity of Remote Utilities RMM tool
+description: |
+    Detects potential network activity of Remote Utilities RMM tool
+references:
+    - https://github.com/magicsword-io/LOLRMM
 author: LOLRMM Project
-date: 2024/08/07
+date: 2025-12-01
 tags:
-- attack.execution
-- attack.t1219
+    - attack.execution
+    - attack.t1219
+logsource:
+    product: windows
+    category: network_connection
+detection:
+    selection:
+        DestinationHostname|endswith: '*.internetid.ru'
+    condition: selection
 falsepositives:
-- Legitimate use of Remote Utilities
+    - Legitimate use of Remote Utilities
 level: medium
 ```

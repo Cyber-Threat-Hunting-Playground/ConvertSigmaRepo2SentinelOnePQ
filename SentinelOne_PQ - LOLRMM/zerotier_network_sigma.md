@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 30-11-2025 00:59:06):
+// Translated content (automatically translated on 09-07-2026 01:51:47):
 (event.category in ("dns","url","ip")) and (endpoint.os="windows" and ((url.address contains "zerotier.com" or url.address contains ".zerotier.com") or (event.dns.request contains "zerotier.com" or event.dns.request contains ".zerotier.com")))
 ```
 
@@ -7,24 +7,27 @@
 # Original Sigma Rule:
 ```yaml
 title: Potential ZeroTier RMM Tool Network Activity
-logsource:
-  product: windows
-  category: network_connection
-detection:
-  selection:
-    DestinationHostname|endswith:
-    - zerotier.com
-    - '*.zerotier.com'
-  condition: selection
-id: cfc057e5-e86c-46c8-b261-d459149305f7
+id: 13a878f9-2674-401d-9b1b-f2028c440910
 status: experimental
-description: Detects potential network activity of ZeroTier RMM tool
+description: |
+    Detects potential network activity of ZeroTier RMM tool
+references:
+    - https://github.com/magicsword-io/LOLRMM
 author: LOLRMM Project
-date: 2024/08/07
+date: 2025-12-01
 tags:
-- attack.execution
-- attack.t1219
+    - attack.execution
+    - attack.t1219
+logsource:
+    product: windows
+    category: network_connection
+detection:
+    selection:
+        DestinationHostname|endswith:
+            - 'zerotier.com'
+            - '*.zerotier.com'
+    condition: selection
 falsepositives:
-- Legitimate use of ZeroTier
+    - Legitimate use of ZeroTier
 level: medium
 ```

@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 30-11-2025 00:59:06):
+// Translated content (automatically translated on 09-07-2026 01:51:47):
 (event.category in ("dns","url","ip")) and (endpoint.os="windows" and ((url.address contains ".iperiusremote.com" or url.address contains ".iperius.com" or url.address contains ".iperius-rs.com" or url.address contains "iperiusremote.com") or (event.dns.request contains ".iperiusremote.com" or event.dns.request contains ".iperius.com" or event.dns.request contains ".iperius-rs.com" or event.dns.request contains "iperiusremote.com")))
 ```
 
@@ -7,26 +7,29 @@
 # Original Sigma Rule:
 ```yaml
 title: Potential Iperius Remote RMM Tool Network Activity
-logsource:
-  product: windows
-  category: network_connection
-detection:
-  selection:
-    DestinationHostname|endswith:
-    - '*.iperiusremote.com'
-    - '*.iperius.com'
-    - '*.iperius-rs.com'
-    - iperiusremote.com
-  condition: selection
-id: a0b1f500-b4b2-40c3-9f7e-6ab5bbacf0e9
+id: ae72a6f3-4916-4519-89e7-f372c5626a87
 status: experimental
-description: Detects potential network activity of Iperius Remote RMM tool
+description: |
+    Detects potential network activity of Iperius Remote RMM tool
+references:
+    - https://github.com/magicsword-io/LOLRMM
 author: LOLRMM Project
-date: 2024/08/07
+date: 2025-12-01
 tags:
-- attack.execution
-- attack.t1219
+    - attack.execution
+    - attack.t1219
+logsource:
+    product: windows
+    category: network_connection
+detection:
+    selection:
+        DestinationHostname|endswith:
+            - '*.iperiusremote.com'
+            - '*.iperius.com'
+            - '*.iperius-rs.com'
+            - 'iperiusremote.com'
+    condition: selection
 falsepositives:
-- Legitimate use of Iperius Remote
+    - Legitimate use of Iperius Remote
 level: medium
 ```

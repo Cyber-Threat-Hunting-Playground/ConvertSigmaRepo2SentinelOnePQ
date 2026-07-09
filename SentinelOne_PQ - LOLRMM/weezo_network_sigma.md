@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 30-11-2025 00:59:06):
+// Translated content (automatically translated on 09-07-2026 01:51:47):
 (event.category in ("dns","url","ip")) and (endpoint.os="windows" and ((url.address contains ".weezo.me" or url.address contains "weezo.net" or url.address contains ".weezo.net" or url.address contains "weezo.en.softonic.com") or (event.dns.request contains ".weezo.me" or event.dns.request contains "weezo.net" or event.dns.request contains ".weezo.net" or event.dns.request contains "weezo.en.softonic.com")))
 ```
 
@@ -7,26 +7,29 @@
 # Original Sigma Rule:
 ```yaml
 title: Potential Weezo RMM Tool Network Activity
-logsource:
-  product: windows
-  category: network_connection
-detection:
-  selection:
-    DestinationHostname|endswith:
-    - '*.weezo.me'
-    - weezo.net
-    - '*.weezo.net'
-    - weezo.en.softonic.com
-  condition: selection
-id: 4ccf2652-03ea-4740-aa03-8f7c57f904e1
+id: e7a74923-a27d-4ac5-a165-c0a11b4ca4dc
 status: experimental
-description: Detects potential network activity of Weezo RMM tool
+description: |
+    Detects potential network activity of Weezo RMM tool
+references:
+    - https://github.com/magicsword-io/LOLRMM
 author: LOLRMM Project
-date: 2024/08/07
+date: 2025-12-01
 tags:
-- attack.execution
-- attack.t1219
+    - attack.execution
+    - attack.t1219
+logsource:
+    product: windows
+    category: network_connection
+detection:
+    selection:
+        DestinationHostname|endswith:
+            - '*.weezo.me'
+            - 'weezo.net'
+            - '*.weezo.net'
+            - 'weezo.en.softonic.com'
+    condition: selection
 falsepositives:
-- Legitimate use of Weezo
+    - Legitimate use of Weezo
 level: medium
 ```
