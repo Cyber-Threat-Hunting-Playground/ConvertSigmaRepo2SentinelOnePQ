@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 08-07-2026 03:31:01):
+// Translated content (automatically translated on 09-07-2026 03:59:35):
 event.type="Process Creation" and (endpoint.os="windows" and (tgt.process.cmdline contains "noconsentprompt" and tgt.process.cmdline contains "shadow:"))
 ```
 
