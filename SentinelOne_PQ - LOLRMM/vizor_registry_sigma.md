@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 10-07-2026 01:50:42):
+// Translated content (automatically translated on 11-07-2026 01:29:21):
 event.category="registry" and (endpoint.os="windows" and (registry.keyPath contains "HKLM\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Uninstall\\{04821777-1FD1-4C1A-AC4D-BF5D4D53C34C}" or registry.keyPath contains "HKLM\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Uninstall\\{A40A237D-C090-4C05-8580-9DBECFE3602B}" or registry.keyPath contains "HKLM\\SOFTWARE\\WOW6432Node\\Microsoft\\Windows\\CurrentVersion\\Uninstall\\{04821777-1FD1-4C1A-AC4D-BF5D4D53C34C}" or registry.keyPath contains "HKLM\\SOFTWARE\\Metaquest"))
 ```
 
