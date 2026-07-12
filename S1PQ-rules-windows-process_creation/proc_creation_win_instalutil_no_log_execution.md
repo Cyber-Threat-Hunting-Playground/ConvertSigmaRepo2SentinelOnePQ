@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 11-07-2026 03:26:34):
+// Translated content (automatically translated on 12-07-2026 03:38:10):
 event.type="Process Creation" and (endpoint.os="windows" and (tgt.process.image.path contains "\\InstallUtil.exe" and tgt.process.image.path contains "Microsoft.NET\\Framework" and (tgt.process.cmdline contains "/logfile= " and tgt.process.cmdline contains "/LogToConsole=false")))
 ```
 
