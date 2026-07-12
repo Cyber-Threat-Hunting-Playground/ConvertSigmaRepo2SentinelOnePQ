@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 11-07-2026 01:29:21):
+// Translated content (automatically translated on 12-07-2026 01:41:57):
 event.category="registry" and (endpoint.os="windows" and (registry.keyPath contains "HKLM\\SYSTEM\\CurrentControlSet\\Services\\TiService" or registry.keyPath contains "HKLM\\SYSTEM\\CurrentControlSet\\Services\\TiService\\ImagePath" or registry.keyPath contains "HKLM\\SYSTEM\\CurrentControlSet\\Services\\TiService\\Start" or registry.keyPath contains "HKLM\\SOFTWARE\\TiFLUX\*" or registry.keyPath contains "HKLM\\SOFTWARE\\WOW6432Node\\TiFLUX\*" or registry.keyPath contains "HKLM\\SOFTWARE\\WOW6432Node\\TiFLUX\\org_id" or registry.keyPath contains "HKLM\\SOFTWARE\\WOW6432Node\\Microsoft\\Windows\\CurrentVersion\\Run\\TiAgent" or registry.keyPath contains "HKCU\\SOFTWARE\\TiFlux"))
 ```
 
