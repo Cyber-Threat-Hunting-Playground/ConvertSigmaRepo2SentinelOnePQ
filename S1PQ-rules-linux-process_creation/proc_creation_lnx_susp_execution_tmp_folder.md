@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 13-07-2026 01:50:40):
+// Translated content (automatically translated on 14-07-2026 01:27:20):
 event.type="Process Creation" and (endpoint.os="linux" and (tgt.process.image.path contains "/tmp/" and (not tgt.process.image.path contains "/usr/bin/nextcloud")))
 ```
 
