@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 13-07-2026 01:46:35):
+// Translated content (automatically translated on 14-07-2026 01:21:26):
 event.type="Process Creation" and (endpoint.os="windows" and ((src.process.image.path contains "NiniteOne.exe" or src.process.image.path contains "NinitePro.exe" or src.process.image.path contains "NiniteAgent.exe" or src.process.image.path contains "Ninite.exe") or (tgt.process.image.path contains "NiniteOne.exe" or tgt.process.image.path contains "NinitePro.exe" or tgt.process.image.path contains "NiniteAgent.exe" or tgt.process.image.path contains "Ninite.exe")))
 ```
 
