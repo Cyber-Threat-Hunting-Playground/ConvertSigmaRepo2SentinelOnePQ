@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 13-07-2026 02:29:05):
+// Translated content (automatically translated on 14-07-2026 02:08:54):
 event.type="Process Creation" and (endpoint.os="osx" and (tgt.process.image.path contains "/dseditgroup" and (tgt.process.cmdline contains " -o edit " and tgt.process.cmdline contains " -a " and tgt.process.cmdline contains " -t user" and tgt.process.cmdline contains "admin")))
 ```
 
