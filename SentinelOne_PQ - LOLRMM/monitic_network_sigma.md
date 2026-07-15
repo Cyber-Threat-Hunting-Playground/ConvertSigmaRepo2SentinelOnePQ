@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 14-07-2026 01:21:26):
+// Translated content (automatically translated on 15-07-2026 01:18:00):
 (event.category in ("dns","url","ip")) and (endpoint.os="windows" and ((url.address contains "api.monitic.com" or url.address contains "app.monitic.com" or url.address contains "devapi.monitic.com" or url.address contains "turn.monitic.com" or url.address contains "monitic.com" or url.address contains "www.monitic.com") or (event.dns.request contains "api.monitic.com" or event.dns.request contains "app.monitic.com" or event.dns.request contains "devapi.monitic.com" or event.dns.request contains "turn.monitic.com" or event.dns.request contains "monitic.com" or event.dns.request contains "www.monitic.com")))
 ```
 

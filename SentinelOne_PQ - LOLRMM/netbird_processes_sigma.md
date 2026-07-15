@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 14-07-2026 01:21:26):
+// Translated content (automatically translated on 15-07-2026 01:18:00):
 event.type="Process Creation" and (endpoint.os="windows" and ((src.process.image.path contains "netbird.exe" or src.process.image.path contains "netbird-ui.exe" or src.process.image.path contains "netbird.exe" or src.process.image.path contains "netbird-ui.exe") or (tgt.process.image.path contains "netbird.exe" or tgt.process.image.path contains "netbird-ui.exe" or tgt.process.image.path contains "netbird.exe" or tgt.process.image.path contains "netbird-ui.exe")))
 ```
 
