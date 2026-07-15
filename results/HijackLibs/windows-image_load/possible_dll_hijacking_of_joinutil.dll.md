@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 14-07-2026 02:39:24):
+// Translated content (automatically translated on 15-07-2026 02:37:16):
 event.type="Module Load" and (endpoint.os="windows" and (module.path contains "\\joinutil.dll" and (not (module.path contains "c:\\windows\\system32\\" or module.path contains "c:\\windows\\syswow64\\"))))
 ```
 
