@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 14-07-2026 02:30:15):
+// Translated content (automatically translated on 15-07-2026 02:28:30):
 (event.category in ("dns","url","ip")) and (endpoint.os="windows" and (url.address contains "fortra.com" or event.dns.request contains "fortra.com"))
 ```
 
