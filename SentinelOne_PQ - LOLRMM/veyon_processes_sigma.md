@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 15-07-2026 01:18:00):
+// Translated content (automatically translated on 16-07-2026 01:28:11):
 event.type="Process Creation" and (endpoint.os="windows" and ((src.process.image.path contains "veyon-wcli.exe" or src.process.image.path contains "veyon-worker.exe" or src.process.image.path contains "veyon-server.exe" or src.process.image.path contains "veyon-service.exe" or src.process.image.path contains "veyon-master.exe") or (tgt.process.image.path contains "veyon-wcli.exe" or tgt.process.image.path contains "veyon-worker.exe" or tgt.process.image.path contains "veyon-server.exe" or tgt.process.image.path contains "veyon-service.exe" or tgt.process.image.path contains "veyon-master.exe")))
 ```
 
