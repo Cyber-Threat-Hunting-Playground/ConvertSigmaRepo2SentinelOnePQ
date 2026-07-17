@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 16-07-2026 03:21:41):
+// Translated content (automatically translated on 17-07-2026 03:24:47):
 event.type="Process Creation" and (endpoint.os="windows" and ((tgt.process.image.path contains "\\msiexec.exe" and (tgt.process.cmdline contains " -Y" or tgt.process.cmdline contains " /Y" or tgt.process.cmdline contains " –Y" or tgt.process.cmdline contains " —Y" or tgt.process.cmdline contains " ―Y")) and (not (tgt.process.cmdline contains "\\MsiExec.exe\" /Y \"C:\\Program Files\\" or tgt.process.cmdline contains "\\MsiExec.exe\" /Y \"C:\\Program Files (x86)\\" or tgt.process.cmdline contains "\\MsiExec.exe\" /Y \"C:\\Windows\\System32\\" or tgt.process.cmdline contains "\\MsiExec.exe\" /Y \"C:\\Windows\\SysWOW64\\"))))
 ```
 
