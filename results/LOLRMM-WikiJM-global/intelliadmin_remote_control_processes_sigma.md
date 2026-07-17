@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 16-07-2026 02:36:44):
+// Translated content (automatically translated on 17-07-2026 02:39:22):
 event.type="Process Creation" and (endpoint.os="windows" and (src.process.image.path contains "iadmin.exe" or src.process.image.path contains "intelliadmin.exe" or src.process.image.path contains "agent32.exe" or src.process.image.path contains "agent64.exe" or src.process.image.path contains "agent_setup_5.exe"))
 ```
 
