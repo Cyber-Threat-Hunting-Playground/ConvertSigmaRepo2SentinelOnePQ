@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 17-07-2026 03:24:47):
+// Translated content (automatically translated on 18-07-2026 03:14:05):
 event.type="Process Creation" and (endpoint.os="windows" and (tgt.process.image.path contains "RECYCLERS.BIN\\" or tgt.process.image.path contains "RECYCLER.BIN\\"))
 ```
 
