@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 17-07-2026 01:42:11):
+// Translated content (automatically translated on 18-07-2026 01:22:39):
 event.category="registry" and (endpoint.os="windows" and (registry.keyPath contains "HKLM\\SOFTWARE\\Microsoft\\Windows NT\\CurrentVersion\\Winlogon\\SpecialAccounts\\UserList\\user" or registry.keyPath contains "HKLM\\SYSTEM\\CurrentControlSet\\Services\\Netbird"))
 ```
 

@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 17-07-2026 01:42:11):
+// Translated content (automatically translated on 18-07-2026 01:22:39):
 event.category="file" and (endpoint.os="windows" and (tgt.file.path contains "C:\\ProgramData\\JWrapper-Remote Access\\" or tgt.file.path contains "%APPDATA%\\JWrapper-SimpleSetup\\"))
 ```
 
