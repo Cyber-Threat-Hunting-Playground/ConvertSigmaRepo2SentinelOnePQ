@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 17-07-2026 02:47:36):
+// Translated content (automatically translated on 18-07-2026 02:39:04):
 event.type="Module Load" and (endpoint.os="windows" and (module.path contains "\\ntdsapi.dll" and (not (module.path contains "c:\\windows\\system32\\" or module.path contains "c:\\windows\\syswow64\\"))))
 ```
 
