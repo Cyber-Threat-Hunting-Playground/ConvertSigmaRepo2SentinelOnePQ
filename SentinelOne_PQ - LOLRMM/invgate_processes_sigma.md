@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 19-07-2026 01:28:51):
+// Translated content (automatically translated on 20-07-2026 01:54:50):
 event.type="Process Creation" and (endpoint.os="windows" and ((src.process.image.path contains "InvGate-ED.exe" or src.process.image.path contains "DepHlp.exe" or src.process.image.path contains "InvGateAssetsRD.exe" or src.process.image.path contains "InvGateRD.exe") or (tgt.process.image.path contains "InvGate-ED.exe" or tgt.process.image.path contains "DepHlp.exe" or tgt.process.image.path contains "InvGateAssetsRD.exe" or tgt.process.image.path contains "InvGateRD.exe")))
 ```
 

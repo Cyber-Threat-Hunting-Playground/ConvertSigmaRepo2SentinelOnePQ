@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 19-07-2026 01:28:51):
+// Translated content (automatically translated on 20-07-2026 01:54:50):
 event.category="file" and (endpoint.os="windows" and (tgt.file.path contains "%localappdata%\\Devolutions\\RemoteDesktopManager\\Connections.log" or tgt.file.path contains "%localappdata%\\Devolutions\\RemoteDesktopManager[GUID]\\Mru.xml" or tgt.file.path contains "%localappdata%\\Devolutions\\RemoteDesktopManager\\Connections.db"))
 ```
 
