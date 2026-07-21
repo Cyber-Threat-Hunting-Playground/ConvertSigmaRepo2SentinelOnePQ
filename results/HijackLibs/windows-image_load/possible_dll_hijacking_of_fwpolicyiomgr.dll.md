@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 20-07-2026 03:45:33):
+// Translated content (automatically translated on 21-07-2026 02:50:24):
 event.type="Module Load" and (endpoint.os="windows" and (module.path contains "\\fwpolicyiomgr.dll" and (not (module.path contains "c:\\windows\\system32\\" or module.path contains "c:\\windows\\syswow64\\"))))
 ```
 
