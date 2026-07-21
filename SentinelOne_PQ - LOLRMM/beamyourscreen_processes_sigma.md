@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 20-07-2026 01:54:50):
+// Translated content (automatically translated on 21-07-2026 01:28:29):
 event.type="Process Creation" and (endpoint.os="windows" and ((src.process.image.path contains "beamyourscreen.exe" or src.process.image.path contains "beamyourscreen-host.exe") or (tgt.process.image.path contains "beamyourscreen.exe" or tgt.process.image.path contains "beamyourscreen-host.exe")))
 ```
 
