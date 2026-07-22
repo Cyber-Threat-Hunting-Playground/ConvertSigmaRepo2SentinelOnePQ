@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 21-07-2026 03:28:06):
+// Translated content (automatically translated on 22-07-2026 03:27:07):
 event.type="Process Creation" and (endpoint.os="windows" and (tgt.process.image.path contains "\\sftp.exe" and (tgt.process.cmdline contains " -D .." or tgt.process.cmdline contains " -D C:\\")))
 ```
 
