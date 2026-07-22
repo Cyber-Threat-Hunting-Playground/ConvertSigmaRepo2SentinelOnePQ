@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 21-07-2026 01:28:29):
+// Translated content (automatically translated on 22-07-2026 01:27:43):
 event.category="registry" and (endpoint.os="windows" and registry.keyPath contains "HKLM\\SOFTWARE\\WOW6432Node\\Microsoft\\Windows\\CurrentVersion\\Uninstall\\SimpleSetup")
 ```
 
