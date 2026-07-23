@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 22-07-2026 01:27:43):
+// Translated content (automatically translated on 23-07-2026 01:46:47):
 event.category="file" and (endpoint.os="windows" and (tgt.file.path contains "C:\\Program Files\\Netbird\\netbird.exe" or tgt.file.path contains "C:\\ProgramData\\Netbird\\config.json" or tgt.file.path contains "/etc/netbird/config.json" or tgt.file.path contains "/var/log/netbird/" or tgt.file.path contains "/etc/netbird/install.conf" or tgt.file.path contains "/Applications/NetBird UI.app" or tgt.file.path contains "C:\\bin\\netbird.msi" or tgt.file.path contains "C:\\bin\\OpenSSH.msi" or tgt.file.path contains "C:\\bin\\cis.vbs" or tgt.file.path contains "C:\\bin\\trm.zip" or tgt.file.path contains "C:\\temper\\trm"))
 ```
 

@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 22-07-2026 01:27:43):
+// Translated content (automatically translated on 23-07-2026 01:46:47):
 event.category="file" and (endpoint.os="windows" and (tgt.file.path contains "C:\\ProgramData\\IDrive\*" or tgt.file.path contains "C:\\Program Files\\IDrive\*" or tgt.file.path contains "C:\\Program Files (x86)\\IDrive\*" or tgt.file.path contains "C:\\Users\*\\AppData\\Local\\IDrive\*"))
 ```
 

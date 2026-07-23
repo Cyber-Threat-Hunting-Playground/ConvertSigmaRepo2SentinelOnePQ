@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 22-07-2026 01:27:43):
+// Translated content (automatically translated on 23-07-2026 01:46:47):
 (event.category in ("dns","url","ip")) and (endpoint.os="windows" and ((url.address contains "user_managed" or url.address contains "simple-help.com" or url.address contains "51.255.19.178" or url.address contains "51.255.19.179" or url.address contains "dronemaker.org" or url.address contains "telesupportgroup.com" or url.address contains "microuptime.com" or url.address contains "192.144.34.42" or url.address contains "160.191.182.41") or (event.dns.request contains "user_managed" or event.dns.request contains "simple-help.com" or event.dns.request contains "51.255.19.178" or event.dns.request contains "51.255.19.179" or event.dns.request contains "dronemaker.org" or event.dns.request contains "telesupportgroup.com" or event.dns.request contains "microuptime.com" or event.dns.request contains "192.144.34.42" or event.dns.request contains "160.191.182.41")))
 ```
 

@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 22-07-2026 01:27:43):
+// Translated content (automatically translated on 23-07-2026 01:46:47):
 event.type="Process Creation" and (endpoint.os="windows" and ((src.process.image.path contains "IDriveWinSetup.exe" or src.process.image.path contains "IDriveWinSetup.exe" or src.process.image.path contains "IDriveEClassic.exe" or src.process.image.path contains "id_tray.exe") or (tgt.process.image.path contains "IDriveWinSetup.exe" or tgt.process.image.path contains "IDriveWinSetup.exe" or tgt.process.image.path contains "IDriveEClassic.exe" or tgt.process.image.path contains "id_tray.exe")))
 ```
 
