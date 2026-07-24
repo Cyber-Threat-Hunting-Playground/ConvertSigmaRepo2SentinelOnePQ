@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 23-07-2026 01:46:47):
+// Translated content (automatically translated on 24-07-2026 01:42:41):
 (event.category in ("dns","url","ip")) and (endpoint.os="windows" and ((url.address contains ".lunixar.com" or url.address contains "lunixar.com" or url.address contains "app.lunixar.com" or url.address contains "socket.lunixar.com" or url.address contains "downloads.lunixar.com" or url.address contains "devrmm.lunixar.com" or url.address contains "mymeetinggoogle.com") or (event.dns.request contains ".lunixar.com" or event.dns.request contains "lunixar.com" or event.dns.request contains "app.lunixar.com" or event.dns.request contains "socket.lunixar.com" or event.dns.request contains "downloads.lunixar.com" or event.dns.request contains "devrmm.lunixar.com" or event.dns.request contains "mymeetinggoogle.com")))
 ```
 

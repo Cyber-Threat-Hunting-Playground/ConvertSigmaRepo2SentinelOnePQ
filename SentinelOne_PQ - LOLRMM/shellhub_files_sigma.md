@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 23-07-2026 01:46:47):
+// Translated content (automatically translated on 24-07-2026 01:42:41):
 event.category="file" and (endpoint.os="windows" and (tgt.file.path contains "/usr/local/bin/shellhub-agent" or tgt.file.path contains "/etc/shellhub-agent/agent.env" or tgt.file.path contains "/etc/systemd/system/shellhub-agent.service"))
 ```
 
