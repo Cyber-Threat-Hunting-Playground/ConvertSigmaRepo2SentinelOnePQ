@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 23-07-2026 03:32:19):
+// Translated content (automatically translated on 24-07-2026 03:28:17):
 event.type="Process Creation" and (endpoint.os="windows" and (((tgt.process.image.path contains "\\rar.exe" or tgt.process.image.path contains "\\winrar.exe") or (tgt.process.displayName in ("Command line RAR","WinRAR"))) and (not (tgt.process.image.path contains "\\UnRAR.exe" or (tgt.process.image.path contains ":\\Program Files (x86)\\WinRAR\\" or tgt.process.image.path contains ":\\Program Files\\WinRAR\\"))) and (not tgt.process.image.path contains ":\\Windows\\Temp\\")))
 ```
 

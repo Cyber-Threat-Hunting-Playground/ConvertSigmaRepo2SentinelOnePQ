@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 23-07-2026 03:32:19):
+// Translated content (automatically translated on 24-07-2026 03:28:17):
 event.type="Process Creation" and (endpoint.os="windows" and ((tgt.process.cmdline contains " /lockscreenurl:" and (not (tgt.process.cmdline contains ".jpg" or tgt.process.cmdline contains ".jpeg" or tgt.process.cmdline contains ".png"))) or (tgt.process.cmdline contains "reg delete" and tgt.process.cmdline contains "\\PersonalizationCSP")))
 ```
 
