@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 23-07-2026 02:54:14):
+// Translated content (automatically translated on 24-07-2026 02:48:45):
 event.type="Module Load" and (endpoint.os="windows" and (module.path contains "\\ntlanman.dll" and (not (module.path contains "c:\\windows\\system32\\" or module.path contains "c:\\windows\\syswow64\\"))))
 ```
 
