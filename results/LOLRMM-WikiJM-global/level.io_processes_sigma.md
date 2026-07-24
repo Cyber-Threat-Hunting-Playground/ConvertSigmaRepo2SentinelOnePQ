@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 23-07-2026 02:45:01):
+// Translated content (automatically translated on 24-07-2026 02:40:39):
 event.type="Process Creation" and (endpoint.os="windows" and (src.process.image.path contains "level-windows-amd64.exe" or src.process.image.path contains "level.exe" or src.process.image.path contains "level-remote-control-ffmpeg.exe"))
 ```
 
