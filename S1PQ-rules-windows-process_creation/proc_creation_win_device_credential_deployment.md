@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 24-07-2026 03:28:17):
+// Translated content (automatically translated on 25-07-2026 03:26:08):
 event.type="Process Creation" and (endpoint.os="windows" and tgt.process.image.path contains "\\DeviceCredentialDeployment.exe")
 ```
 
