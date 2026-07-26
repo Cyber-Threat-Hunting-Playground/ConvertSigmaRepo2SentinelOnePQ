@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 25-07-2026 03:26:08):
+// Translated content (automatically translated on 26-07-2026 03:39:18):
 event.type="Process Creation" and (endpoint.os="windows" and (tgt.process.image.path contains "\\svchost.exe" and (not ((src.process.image.path contains "\\Mrt.exe" or src.process.image.path contains "\\MsMpEng.exe" or src.process.image.path contains "\\ngen.exe" or src.process.image.path contains "\\rpcnet.exe" or src.process.image.path contains "\\services.exe" or src.process.image.path contains "\\TiWorker.exe") or not (src.process.image.path matches "\.*") or (src.process.image.path in ("-",""))))))
 ```
 

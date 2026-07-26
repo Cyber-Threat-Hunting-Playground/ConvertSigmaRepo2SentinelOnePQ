@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 25-07-2026 03:26:08):
+// Translated content (automatically translated on 26-07-2026 03:39:18):
 event.type="Process Creation" and (endpoint.os="windows" and ((src.process.image.path contains "\\Winrar.exe" or src.process.image.path contains "\\7zFM.exe" or src.process.image.path contains "\\peazip.exe") and (tgt.process.image.path contains "\\isoburn.exe" or tgt.process.image.path contains "\\PowerISO.exe" or tgt.process.image.path contains "\\ImgBurn.exe")))
 ```
 

@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 25-07-2026 03:26:08):
+// Translated content (automatically translated on 26-07-2026 03:39:18):
 event.type="Process Creation" and (endpoint.os="windows" and ((tgt.process.image.path contains "\\squirrel.exe" or tgt.process.image.path contains "\\update.exe") and (tgt.process.cmdline contains " --download " or tgt.process.cmdline contains " --update " or tgt.process.cmdline contains " --updateRollback=") and tgt.process.cmdline contains "http"))
 ```
 
