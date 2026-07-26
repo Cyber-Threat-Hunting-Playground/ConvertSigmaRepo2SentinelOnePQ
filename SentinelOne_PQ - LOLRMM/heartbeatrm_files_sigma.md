@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 25-07-2026 01:42:47):
+// Translated content (automatically translated on 26-07-2026 01:45:11):
 event.category="file" and (endpoint.os="windows" and (tgt.file.path contains "C:\\Program Files (x86)\\HeartbeatRM\*" or tgt.file.path contains "C:\\Program Files\\HeartbeatRM\*" or tgt.file.path contains "\\agent-installer-any.exe"))
 ```
 
