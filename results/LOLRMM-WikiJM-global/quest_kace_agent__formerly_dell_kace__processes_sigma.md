@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 26-07-2026 02:47:55):
+// Translated content (automatically translated on 27-07-2026 02:55:42):
 event.type="Process Creation" and (endpoint.os="windows" and src.process.image.path contains "konea.exe")
 ```
 
