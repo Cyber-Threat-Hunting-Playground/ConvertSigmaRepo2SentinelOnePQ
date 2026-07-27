@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 26-07-2026 01:45:11):
+// Translated content (automatically translated on 27-07-2026 01:52:09):
 event.category="registry" and (endpoint.os="windows" and (registry.keyPath contains "HKEY_CURRENT_USER\\Software\\Classes\\HopToDesk\\shell\\open\\command" or registry.keyPath contains "HKEY_LOCAL_MACHINE\\Software\\Wow6432Node\\Microsoft\\Windows\\CurrentVersion\\Uninstall\\HopToDesk"))
 ```
 
