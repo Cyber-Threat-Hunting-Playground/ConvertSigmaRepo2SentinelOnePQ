@@ -1,0 +1,28 @@
+title: Possible preparation for libcrypto-3-x64.dll DLL Hijacking
+id: 6753982b-4852-48a3-1520-5b9ff8234737
+status: experimental
+description: Detects possible DLL hijacking of libcrypto-3-x64.dll by looking for suspicious file writes of this DLL, to unexpected locations.
+references:
+    - https://hijacklibs.net/entries/3rd_party/vmware/libcrypto-3-x64.html
+author: "Harry Godridge - HuntressLabs"
+date: 2026-07-15
+tags:
+    - attack.defense_evasion
+    - attack.T1574.001
+logsource:
+    product: windows
+    category: file_event
+detection:
+    selection:
+        TargetFileName: '*\libcrypto-3-x64.dll'
+    filter:
+        TargetFileName:
+            - 'c:\program files\VMware\VMware Workstation\x64\\*'
+            - 'c:\program files (x86)\VMware\VMware Workstation\x64\\*'
+            - 'c:\program files\VMware\VMware Workstation\\*'
+            - 'c:\program files (x86)\VMware\VMware Workstation\\*'
+
+    condition: selection and not filter
+falsepositives:
+    - False positives are likely. This rule is more suitable for hunting than for generating detections.
+

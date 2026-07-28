@@ -1,0 +1,29 @@
+title: Possible preparation for vcruntime140_1.dll DLL Hijacking
+id: 6825432b-8442-48a3-5283-5b9ff8334408
+status: experimental
+description: Detects possible DLL hijacking of vcruntime140_1.dll by looking for suspicious file writes of this DLL, to unexpected locations.
+references:
+    - https://hijacklibs.net/entries/microsoft/built-in/vcruntime140_1.html
+author: "connar"
+date: 2026-07-14
+tags:
+    - attack.defense_evasion
+    - attack.T1574.001
+logsource:
+    product: windows
+    category: file_event
+detection:
+    selection:
+        TargetFileName: '*\vcruntime140_1.dll'
+    filter:
+        TargetFileName:
+            - 'c:\windows\system32\\*'
+            - 'c:\windows\syswow64\\*'
+            - 'c:\windows\winsxs\*'
+            - 'c:\$windows.~bt\*'
+            - 'c:\windows\softwaredistribution\*'
+
+    condition: selection and not filter
+falsepositives:
+    - False positives are likely. This rule is more suitable for hunting than for generating detections.
+

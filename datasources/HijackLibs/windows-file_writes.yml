@@ -930,6 +930,32 @@ falsepositives:
     - False positives are likely. This rule is more suitable for hunting than for generating detections.
 
 ---
+title: Possible preparation for phc.dll DLL Hijacking
+id: 5119042b-1310-48a3-7290-5b9ff8194985
+status: experimental
+description: Detects possible DLL hijacking of phc.dll by looking for suspicious file writes of this DLL, to unexpected locations.
+references:
+    - https://hijacklibs.net/entries/3rd_party/foxit/phc.html
+author: "Still Hsu"
+date: 2026-07-21
+tags:
+    - attack.defense_evasion
+    - attack.T1574.001
+logsource:
+    product: windows
+    category: file_event
+detection:
+    selection:
+        TargetFileName: '*\phc.dll'
+    filter:
+        TargetFileName:
+            - 'c:\users\\*\appdata\roaming\Foxit Software\Classic\Addon\Foxit PDF Editor\plugins\\*'
+
+    condition: selection and not filter
+falsepositives:
+    - False positives are likely. This rule is more suitable for hunting than for generating detections.
+
+---
 title: Possible preparation for avkkid.dll DLL Hijacking
 id: 2869202b-8907-48a3-9464-5b9ff8599279
 status: experimental
@@ -3318,6 +3344,35 @@ detection:
             - 'c:\program files (x86)\VMware\VMware Workstation\\*'
             - 'c:\program files\VMware\VMware Player\\*'
             - 'c:\program files (x86)\VMware\VMware Player\\*'
+
+    condition: selection and not filter
+falsepositives:
+    - False positives are likely. This rule is more suitable for hunting than for generating detections.
+
+---
+title: Possible preparation for libcrypto-3-x64.dll DLL Hijacking
+id: 6753982b-4852-48a3-1520-5b9ff8234737
+status: experimental
+description: Detects possible DLL hijacking of libcrypto-3-x64.dll by looking for suspicious file writes of this DLL, to unexpected locations.
+references:
+    - https://hijacklibs.net/entries/3rd_party/vmware/libcrypto-3-x64.html
+author: "Harry Godridge - HuntressLabs"
+date: 2026-07-15
+tags:
+    - attack.defense_evasion
+    - attack.T1574.001
+logsource:
+    product: windows
+    category: file_event
+detection:
+    selection:
+        TargetFileName: '*\libcrypto-3-x64.dll'
+    filter:
+        TargetFileName:
+            - 'c:\program files\VMware\VMware Workstation\x64\\*'
+            - 'c:\program files (x86)\VMware\VMware Workstation\x64\\*'
+            - 'c:\program files\VMware\VMware Workstation\\*'
+            - 'c:\program files (x86)\VMware\VMware Workstation\\*'
 
     condition: selection and not filter
 falsepositives:
@@ -14660,6 +14715,36 @@ falsepositives:
     - False positives are likely. This rule is more suitable for hunting than for generating detections.
 
 ---
+title: Possible preparation for vcruntime140_1.dll DLL Hijacking
+id: 6825432b-8442-48a3-5283-5b9ff8334408
+status: experimental
+description: Detects possible DLL hijacking of vcruntime140_1.dll by looking for suspicious file writes of this DLL, to unexpected locations.
+references:
+    - https://hijacklibs.net/entries/microsoft/built-in/vcruntime140_1.html
+author: "connar"
+date: 2026-07-14
+tags:
+    - attack.defense_evasion
+    - attack.T1574.001
+logsource:
+    product: windows
+    category: file_event
+detection:
+    selection:
+        TargetFileName: '*\vcruntime140_1.dll'
+    filter:
+        TargetFileName:
+            - 'c:\windows\system32\\*'
+            - 'c:\windows\syswow64\\*'
+            - 'c:\windows\winsxs\*'
+            - 'c:\$windows.~bt\*'
+            - 'c:\windows\softwaredistribution\*'
+
+    condition: selection and not filter
+falsepositives:
+    - False positives are likely. This rule is more suitable for hunting than for generating detections.
+
+---
 title: Possible preparation for vdsutil.dll DLL Hijacking
 id: 6376582b-7437-48a3-2115-5b9ff8267815
 status: experimental
@@ -16710,6 +16795,33 @@ falsepositives:
     - False positives are likely. This rule is more suitable for hunting than for generating detections.
 
 ---
+title: Possible preparation for cdlmso.dll DLL Hijacking
+id: 8613932b-8442-48a3-5283-5b9ff8887785
+status: experimental
+description: Detects possible DLL hijacking of cdlmso.dll by looking for suspicious file writes of this DLL, to unexpected locations.
+references:
+    - https://hijacklibs.net/entries/microsoft/external/cdlmso.html
+author: "Adam Mooney - HuntressLabs"
+date: 2026-07-14
+tags:
+    - attack.defense_evasion
+    - attack.T1574.001
+logsource:
+    product: windows
+    category: file_event
+detection:
+    selection:
+        TargetFileName: '*\cdlmso.dll'
+    filter:
+        TargetFileName:
+            - 'c:\program files\Microsoft Office\Office14\\*'
+            - 'c:\program files (x86)\Microsoft Office\Office14\\*'
+
+    condition: selection and not filter
+falsepositives:
+    - False positives are likely. This rule is more suitable for hunting than for generating detections.
+
+---
 title: Possible preparation for concrt140.dll DLL Hijacking
 id: 8484042b-9387-48a3-7560-5b9ff8877196
 status: experimental
@@ -17121,6 +17233,33 @@ detection:
             - 'c:\windows\winsxs\*'
             - 'c:\$windows.~bt\*'
             - 'c:\windows\softwaredistribution\*'
+
+    condition: selection and not filter
+falsepositives:
+    - False positives are likely. This rule is more suitable for hunting than for generating detections.
+
+---
+title: Possible preparation for msocf.dll DLL Hijacking
+id: 8388172b-8442-48a3-5283-5b9ff8200982
+status: experimental
+description: Detects possible DLL hijacking of msocf.dll by looking for suspicious file writes of this DLL, to unexpected locations.
+references:
+    - https://hijacklibs.net/entries/microsoft/external/msocf.html
+author: "Adam Mooney - HuntressLabs"
+date: 2026-07-14
+tags:
+    - attack.defense_evasion
+    - attack.T1574.001
+logsource:
+    product: windows
+    category: file_event
+detection:
+    selection:
+        TargetFileName: '*\msocf.dll'
+    filter:
+        TargetFileName:
+            - 'c:\program files\Microsoft Office\Office14\\*'
+            - 'c:\program files (x86)\Microsoft Office\Office14\\*'
 
     condition: selection and not filter
 falsepositives:

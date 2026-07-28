@@ -1,0 +1,25 @@
+title: Possible preparation for phc.dll DLL Hijacking
+id: 5119042b-1310-48a3-7290-5b9ff8194985
+status: experimental
+description: Detects possible DLL hijacking of phc.dll by looking for suspicious file writes of this DLL, to unexpected locations.
+references:
+    - https://hijacklibs.net/entries/3rd_party/foxit/phc.html
+author: "Still Hsu"
+date: 2026-07-21
+tags:
+    - attack.defense_evasion
+    - attack.T1574.001
+logsource:
+    product: windows
+    category: file_event
+detection:
+    selection:
+        TargetFileName: '*\phc.dll'
+    filter:
+        TargetFileName:
+            - 'c:\users\\*\appdata\roaming\Foxit Software\Classic\Addon\Foxit PDF Editor\plugins\\*'
+
+    condition: selection and not filter
+falsepositives:
+    - False positives are likely. This rule is more suitable for hunting than for generating detections.
+
