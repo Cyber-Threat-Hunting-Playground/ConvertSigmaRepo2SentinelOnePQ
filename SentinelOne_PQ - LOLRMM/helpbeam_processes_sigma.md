@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 27-07-2026 01:52:09):
+// Translated content (automatically translated on 28-07-2026 01:27:03):
 event.type="Process Creation" and (endpoint.os="windows" and (src.process.image.path="*helpbeam*.exe" or tgt.process.image.path="*helpbeam*.exe"))
 ```
 

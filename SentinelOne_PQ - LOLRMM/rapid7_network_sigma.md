@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 27-07-2026 01:52:09):
+// Translated content (automatically translated on 28-07-2026 01:27:03):
 (event.category in ("dns","url","ip")) and (endpoint.os="windows" and ((url.address contains ".analytics.insight.rapid7.com" or url.address contains ".endpoint.ingress.rapid7.com") or (event.dns.request contains ".analytics.insight.rapid7.com" or event.dns.request contains ".endpoint.ingress.rapid7.com")))
 ```
 
