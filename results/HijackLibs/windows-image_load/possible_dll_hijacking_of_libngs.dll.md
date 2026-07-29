@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 28-07-2026 02:40:25):
+// Translated content (automatically translated on 29-07-2026 02:47:30):
 event.type="Module Load" and (endpoint.os="windows" and (module.path contains "\\libngs.dll" and (not (module.path in ("c:\\program files\\Sangfor\\SSL\\RemoteAppClient\\\*","c:\\program files (x86)\\Sangfor\\SSL\\RemoteAppClient\\\*")))))
 ```
 
