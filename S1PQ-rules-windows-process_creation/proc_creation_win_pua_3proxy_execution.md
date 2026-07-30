@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 29-07-2026 03:21:22):
+// Translated content (automatically translated on 30-07-2026 02:54:37):
 event.type="Process Creation" and (endpoint.os="windows" and (tgt.process.image.path contains "\\3proxy.exe" or tgt.process.displayName="3proxy - tiny proxy server" or tgt.process.cmdline contains ".exe -i127.0.0.1 -p"))
 ```
 
