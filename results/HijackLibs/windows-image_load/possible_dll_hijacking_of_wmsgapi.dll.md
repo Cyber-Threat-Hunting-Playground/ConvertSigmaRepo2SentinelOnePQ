@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 29-07-2026 02:47:30):
+// Translated content (automatically translated on 30-07-2026 02:32:09):
 event.type="Module Load" and (endpoint.os="windows" and (module.path contains "\\wmsgapi.dll" and (not (module.path contains "c:\\windows\\system32\\" or module.path contains "c:\\windows\\syswow64\\"))))
 ```
 
