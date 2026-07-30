@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 29-07-2026 01:27:36):
+// Translated content (automatically translated on 30-07-2026 01:20:22):
 event.type="Process Creation" and (endpoint.os="windows" and ((src.process.image.path contains "TrustConnectAgent.exe" or src.process.image.path contains "TrustConnectAgent.exe" or src.process.image.path contains "TrustConnectAgent.exe" or src.process.image.path contains "DocConnect.Agent.exe") or (tgt.process.image.path contains "TrustConnectAgent.exe" or tgt.process.image.path contains "TrustConnectAgent.exe" or tgt.process.image.path contains "TrustConnectAgent.exe" or tgt.process.image.path contains "DocConnect.Agent.exe")))
 ```
 
