@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 30-07-2026 02:32:09):
+// Translated content (automatically translated on 31-07-2026 02:57:37):
 event.type="Module Load" and (endpoint.os="windows" and module.path contains "\\tmtap.dll")
 ```
 
