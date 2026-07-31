@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 30-07-2026 01:25:52):
+// Translated content (automatically translated on 31-07-2026 01:52:42):
 event.type="Process Creation" and (endpoint.os="linux" and (tgt.process.image.path contains "/setcap" and tgt.process.cmdline contains "cap_setgid"))
 ```
 
