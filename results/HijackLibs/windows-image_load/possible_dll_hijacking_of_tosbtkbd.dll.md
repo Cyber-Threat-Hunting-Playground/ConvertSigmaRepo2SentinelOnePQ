@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 31-07-2026 02:57:37):
+// Translated content (automatically translated on 01-08-2026 02:57:17):
 event.type="Module Load" and (endpoint.os="windows" and (module.path contains "\\tosbtkbd.dll" and (not (module.path contains "c:\\program files\\Toshiba\\Bluetooth Toshiba Stack\\" or module.path contains "c:\\program files (x86)\\Toshiba\\Bluetooth Toshiba Stack\\"))))
 ```
 
