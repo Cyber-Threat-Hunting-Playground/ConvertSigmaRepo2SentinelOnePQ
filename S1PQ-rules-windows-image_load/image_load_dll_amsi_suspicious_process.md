@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 31-07-2026 02:29:29):
+// Translated content (automatically translated on 01-08-2026 02:29:36):
 event.type="Module Load" and (endpoint.os="windows" and (module.path contains "\\amsi.dll" and (src.process.image.path contains "\\ExtExport.exe" or src.process.image.path contains "\\odbcconf.exe" or src.process.image.path contains "\\rundll32.exe")))
 ```
 
