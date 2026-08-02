@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 01-08-2026 02:57:17):
+// Translated content (automatically translated on 02-08-2026 02:56:02):
 event.type="Module Load" and (endpoint.os="windows" and (module.path contains "\\configmanager2.dll" and (not module.path contains "c:\\windows\\system32\\")))
 ```
 
