@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 01-08-2026 02:29:36):
+// Translated content (automatically translated on 02-08-2026 02:27:33):
 event.type="Module Load" and (endpoint.os="windows" and (module.path contains "\\7za.dll" and (not ((src.process.image.path contains "C:\\Program Files (x86)\\" or src.process.image.path contains "C:\\Program Files\\") and (module.path contains "C:\\Program Files (x86)\\" or module.path contains "C:\\Program Files\\")))))
 ```
 
