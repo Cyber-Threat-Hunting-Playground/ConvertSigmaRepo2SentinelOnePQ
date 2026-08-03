@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 02-08-2026 01:44:38):
+// Translated content (automatically translated on 03-08-2026 01:47:16):
 (event.category in ("dns","url","ip")) and (endpoint.os="windows" and ((url.address contains "localxpose.io" or url.address contains ".localxpose.io" or url.address contains "api.localxpose.io") or (event.dns.request contains "localxpose.io" or event.dns.request contains ".localxpose.io" or event.dns.request contains "api.localxpose.io")))
 ```
 
