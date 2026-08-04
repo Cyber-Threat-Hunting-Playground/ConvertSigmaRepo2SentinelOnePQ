@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 03-08-2026 02:57:16):
+// Translated content (automatically translated on 04-08-2026 02:42:10):
 event.type="Module Load" and (endpoint.os="windows" and (module.path contains "\\timesync.dll" and (not module.path contains "c:\\windows\\system32\\")))
 ```
 
