@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 04-08-2026 03:23:04):
+// Translated content (automatically translated on 05-08-2026 03:18:19):
 event.type="Process Creation" and (endpoint.os="windows" and (tgt.process.displayName="Tor Browser" or tgt.process.displayName="Tor Browser" or (tgt.process.image.path contains "\\tor.exe" or tgt.process.image.path contains "\\Tor Browser\\Browser\\firefox.exe")))
 ```
 
