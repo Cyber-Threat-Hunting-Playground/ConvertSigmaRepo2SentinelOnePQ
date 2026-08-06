@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 05-08-2026 03:16:25):
+// Translated content (automatically translated on 06-08-2026 03:19:11):
 event.category="dns" and (endpoint.os="windows" and event.dns.request contains ".anonfiles.com")
 ```
 
