@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 05-08-2026 02:40:06):
+// Translated content (automatically translated on 06-08-2026 02:42:45):
 event.type="Module Load" and (endpoint.os="windows" and module.path contains "\\wptsextensions.dll")
 ```
 
