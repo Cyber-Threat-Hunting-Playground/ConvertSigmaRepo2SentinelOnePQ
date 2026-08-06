@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 05-08-2026 01:28:03):
+// Translated content (automatically translated on 06-08-2026 01:25:03):
 event.category="registry" and (endpoint.os="windows" and registry.keyPath contains "HKLM\\SOFTWARE\\RdClient")
 ```
 

@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 05-08-2026 01:28:03):
+// Translated content (automatically translated on 06-08-2026 01:25:03):
 (event.category in ("dns","url","ip")) and (endpoint.os="windows" and ((url.address contains "api.remsupp.com" or url.address contains "download.remsupp.com") or (event.dns.request contains "api.remsupp.com" or event.dns.request contains "download.remsupp.com")))
 ```
 
