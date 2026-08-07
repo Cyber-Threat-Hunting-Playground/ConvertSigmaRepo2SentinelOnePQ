@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 06-08-2026 02:42:45):
+// Translated content (automatically translated on 07-08-2026 02:44:29):
 event.type="Module Load" and (endpoint.os="windows" and (module.path contains "\\scecli.dll" and (not (module.path contains "c:\\windows\\system32\\" or module.path contains "c:\\windows\\syswow64\\"))))
 ```
 

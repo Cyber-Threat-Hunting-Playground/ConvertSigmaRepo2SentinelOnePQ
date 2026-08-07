@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 06-08-2026 02:42:45):
+// Translated content (automatically translated on 07-08-2026 02:44:29):
 event.type="Module Load" and (endpoint.os="windows" and (module.path contains "\\siteadv.dll" and (not (module.path="c:\\program files\\SiteAdvisor\\*\\*" or module.path="c:\\program files (x86)\\SiteAdvisor\\*\\*"))))
 ```
 
