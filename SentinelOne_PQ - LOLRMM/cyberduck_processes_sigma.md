@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 07-08-2026 02:03:51):
+// Translated content (automatically translated on 08-08-2026 00:47:50):
 event.type="Process Creation" and (endpoint.os="windows" and src.process.image.path contains "\\Cyberduck.exe")
 ```
 
