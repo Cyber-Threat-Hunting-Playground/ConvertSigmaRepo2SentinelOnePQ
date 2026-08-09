@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 08-08-2026 00:47:50):
+// Translated content (automatically translated on 09-08-2026 00:51:17):
 event.type="Process Creation" and (endpoint.os="windows" and ((src.process.image.path contains "supremosystem.exe" or src.process.image.path contains "supremo.exe" or src.process.image.path contains "supremohelper.exe" or src.process.image.path contains "supremoservice.exe" or src.process.image.path contains "SupremoSystem.exe") or (tgt.process.image.path contains "supremosystem.exe" or tgt.process.image.path contains "supremo.exe" or tgt.process.image.path contains "supremohelper.exe" or tgt.process.image.path contains "supremoservice.exe" or tgt.process.image.path contains "SupremoSystem.exe")))
 ```
 
