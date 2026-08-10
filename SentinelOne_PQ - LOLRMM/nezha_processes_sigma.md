@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 09-08-2026 00:51:17):
+// Translated content (automatically translated on 10-08-2026 00:53:36):
 event.type="Process Creation" and (endpoint.os="windows" and ((src.process.image.path contains "nezha-agent.exe" or src.process.image.path contains "nezha-agent.exe" or src.process.image.path contains "dashboard-windows-amd64.exe") or (tgt.process.image.path contains "nezha-agent.exe" or tgt.process.image.path contains "nezha-agent.exe" or tgt.process.image.path contains "dashboard-windows-amd64.exe")))
 ```
 
