@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 10-08-2026 01:25:05):
+// Translated content (automatically translated on 11-08-2026 01:22:57):
 event.type="Process Creation" and (endpoint.os="osx" and (tgt.process.image.path contains "/chflags" and tgt.process.cmdline contains "hidden "))
 ```
 
