@@ -1,0 +1,25 @@
+title: Possible preparation for datastate.dll DLL Hijacking
+id: 4672432b-1502-48a3-7254-5b9ff8799765
+status: experimental
+description: Detects possible DLL hijacking of datastate.dll by looking for suspicious file writes of this DLL, to unexpected locations.
+references:
+    - https://hijacklibs.net/entries/3rd_party/iobit/datastate.html
+author: "Cristian Poenaru - HuntressLabs"
+date: 2026-08-10
+tags:
+    - attack.defense_evasion
+    - attack.T1574.001
+logsource:
+    product: windows
+    category: file_event
+detection:
+    selection:
+        TargetFileName: '*\datastate.dll'
+    filter:
+        TargetFileName:
+            - 'C:\Program Files (x86)\IObit\AdvancedSystemCare\\\*'
+
+    condition: selection and not filter
+falsepositives:
+    - False positives are likely. This rule is more suitable for hunting than for generating detections.
+
