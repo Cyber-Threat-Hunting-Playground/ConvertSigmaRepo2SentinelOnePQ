@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 11-08-2026 02:12:19):
+// Translated content (automatically translated on 12-08-2026 02:30:01):
 event.type="Process Creation" and (endpoint.os="windows" and (tgt.process.cmdline contains " /INJECTRUNNING " and (not src.process.image.path="C:\\Windows\\System32\\AppVClient.exe")))
 ```
 
