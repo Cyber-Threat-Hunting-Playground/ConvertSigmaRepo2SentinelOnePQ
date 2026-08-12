@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 11-08-2026 00:53:06):
+// Translated content (automatically translated on 12-08-2026 00:59:28):
 (event.category in ("dns","url","ip")) and (endpoint.os="windows" and ((url.address contains "github.com" or url.address contains "raw.githubusercontent.com" or url.address contains "ghcr.io" or url.address contains "komari-document.pages.dev" or url.address contains "www.komari.wiki" or url.address contains "raw.githubusercontent.com") or (event.dns.request contains "github.com" or event.dns.request contains "raw.githubusercontent.com" or event.dns.request contains "ghcr.io" or event.dns.request contains "komari-document.pages.dev" or event.dns.request contains "www.komari.wiki" or event.dns.request contains "raw.githubusercontent.com")))
 ```
 

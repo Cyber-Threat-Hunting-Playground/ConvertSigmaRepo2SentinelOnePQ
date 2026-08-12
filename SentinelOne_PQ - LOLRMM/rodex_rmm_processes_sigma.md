@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 11-08-2026 00:53:06):
+// Translated content (automatically translated on 12-08-2026 00:59:28):
 event.type="Process Creation" and (endpoint.os="windows" and ((src.process.image.path contains "RodexAgent.exe" or src.process.image.path contains "rodexagent.exe" or src.process.image.path contains "RodexAgent.exe" or src.process.image.path contains "<random>.exe") or (tgt.process.image.path contains "RodexAgent.exe" or tgt.process.image.path contains "rodexagent.exe" or tgt.process.image.path contains "RodexAgent.exe" or tgt.process.image.path contains "<random>.exe")))
 ```
 
