@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 11-08-2026 01:51:56):
+// Translated content (automatically translated on 12-08-2026 02:04:55):
 event.type="Module Load" and (endpoint.os="windows" and (module.path contains "\\wxmsw313u_aui_vc_custom.dll" and (not (module.path contains "c:\\program files\\Audacity\\" or module.path contains "c:\\program files (x86)\\Audacity\\"))))
 ```
 
