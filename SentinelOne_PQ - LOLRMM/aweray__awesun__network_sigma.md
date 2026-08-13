@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 12-08-2026 00:59:28):
+// Translated content (automatically translated on 13-08-2026 01:00:55):
 (event.category in ("dns","url","ip")) and (endpoint.os="windows" and ((url.address contains "asapi-us.aweray.net" or url.address contains "asapi.aweray.net") or (event.dns.request contains "asapi-us.aweray.net" or event.dns.request contains "asapi.aweray.net")))
 ```
 
