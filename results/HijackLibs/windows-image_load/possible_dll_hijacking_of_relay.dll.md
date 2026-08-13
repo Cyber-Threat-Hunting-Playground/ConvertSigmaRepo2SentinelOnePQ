@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 12-08-2026 02:04:55):
+// Translated content (automatically translated on 13-08-2026 02:06:40):
 event.type="Module Load" and (endpoint.os="windows" and module.path contains "\\relay.dll")
 ```
 
