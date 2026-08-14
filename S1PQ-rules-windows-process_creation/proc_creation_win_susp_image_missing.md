@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 13-08-2026 02:31:34):
+// Translated content (automatically translated on 14-08-2026 02:30:00):
 event.type="Process Creation" and (endpoint.os="windows" and ((not tgt.process.image.path contains "\\") and (not (not (tgt.process.image.path matches "\.*") or (tgt.process.image.path in ("-","")) or ((tgt.process.image.path in ("MemCompression","Registry","System","vmmem","vmmemWSL")) or (tgt.process.cmdline in ("MemCompression","Registry","vmmem","vmmemWSL")))))))
 ```
 
