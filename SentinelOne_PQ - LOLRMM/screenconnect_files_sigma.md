@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 13-08-2026 01:00:55):
+// Translated content (automatically translated on 14-08-2026 01:00:24):
 event.category="file" and (endpoint.os="windows" and (tgt.file.path="*C:\\Program Files*\\ScreenConnect\\App_Data\\Session.db" or tgt.file.path="*C:\\Program Files*\\ScreenConnect\\App_Data\\User.xml" or tgt.file.path="*C:\\ProgramData\\ScreenConnect Client*\\user.config"))
 ```
 

@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 13-08-2026 01:00:55):
+// Translated content (automatically translated on 14-08-2026 01:00:24):
 event.category="registry" and (endpoint.os="windows" and (registry.keyPath contains "HKLM\\System\\CurrentControlSet\\Services\\komari-agent" or registry.keyPath contains "HKLM\\System\\CurrentControlSet\\Services\\Windows Update Service"))
 ```
 
