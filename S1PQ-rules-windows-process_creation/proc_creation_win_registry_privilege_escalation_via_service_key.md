@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 14-08-2026 02:30:00):
+// Translated content (automatically translated on 15-08-2026 01:40:10):
 event.type="Process Creation" and (endpoint.os="windows" and ((tgt.process.integrityLevel in ("Medium","S-1-16-8192")) and (tgt.process.cmdline contains "ControlSet" and tgt.process.cmdline contains "services") and (tgt.process.cmdline contains "\\ImagePath" or tgt.process.cmdline contains "\\FailureCommand" or tgt.process.cmdline contains "\\ServiceDll")))
 ```
 
