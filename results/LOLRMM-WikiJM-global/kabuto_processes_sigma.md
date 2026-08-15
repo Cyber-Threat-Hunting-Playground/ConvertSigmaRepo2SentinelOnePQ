@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 14-08-2026 01:56:05):
+// Translated content (automatically translated on 15-08-2026 01:12:56):
 event.type="Process Creation" and (endpoint.os="windows" and src.process.image.path contains "Kabuto.App.Runner.exe")
 ```
 
