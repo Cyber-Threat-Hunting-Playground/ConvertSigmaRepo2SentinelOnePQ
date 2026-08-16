@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 15-08-2026 01:01:10):
+// Translated content (automatically translated on 16-08-2026 01:04:47):
 event.type="Module Load" and (endpoint.os="windows" and (src.process.image.path contains "\\rundll32.exe" and module.path contains "\\\\"))
 ```
 
