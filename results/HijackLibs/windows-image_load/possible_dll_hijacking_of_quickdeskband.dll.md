@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 15-08-2026 01:19:18):
+// Translated content (automatically translated on 16-08-2026 01:23:58):
 event.type="Module Load" and (endpoint.os="windows" and module.path contains "\\quickdeskband.dll")
 ```
 
