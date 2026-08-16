@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 15-08-2026 00:35:37):
+// Translated content (automatically translated on 16-08-2026 00:37:21):
 event.type="Process Creation" and (endpoint.os="windows" and ((src.process.image.path contains "ImmyAgent.exe" or src.process.image.path contains "ImmyUpdater.exe" or src.process.image.path contains "ImmyAgent.exe" or src.process.image.path contains "ImmyUpdater.exe" or src.process.image.path contains "ImmyAgent.exe" or src.process.image.path contains "ImmyUpdater.exe" or src.process.image.path contains "ImmyBot.Agent.Ephemeral.exe") or (tgt.process.image.path contains "ImmyAgent.exe" or tgt.process.image.path contains "ImmyUpdater.exe" or tgt.process.image.path contains "ImmyAgent.exe" or tgt.process.image.path contains "ImmyUpdater.exe" or tgt.process.image.path contains "ImmyAgent.exe" or tgt.process.image.path contains "ImmyUpdater.exe" or tgt.process.image.path contains "ImmyBot.Agent.Ephemeral.exe")))
 ```
 
