@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 16-08-2026 00:37:21):
+// Translated content (automatically translated on 17-08-2026 00:35:46):
 event.category="file" and (endpoint.os="windows" and (tgt.file.path contains "C:\\Program Files (x86)\\Faronics\\Faronics Deploy Agent\\FaronicsDeployAgent.exe" or tgt.file.path contains "C:\\Program Files (x86)\\Faronics\\Faronics Deploy Agent\\FWAService.exe" or tgt.file.path contains "C:\\Program Files (x86)\\Faronics\\Faronics Deploy Agent\\FWA_UI_Agent.exe" or tgt.file.path contains "C:\\Program Files (x86)\\Faronics\\Faronics Deploy Agent\\FRCServer.exe" or tgt.file.path contains "C:\\ProgramData\\Faronics\\StorageSpace\\FWA\\CloudAgentLogs.LOG" or tgt.file.path contains "C:\\ProgramData\\Faronics\\StorageSpace\\FWA\\Logs\\FWASvc.log"))
 ```
 

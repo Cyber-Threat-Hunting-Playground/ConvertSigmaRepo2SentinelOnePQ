@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 16-08-2026 00:37:21):
+// Translated content (automatically translated on 17-08-2026 00:35:46):
 event.category="file" and (endpoint.os="windows" and (tgt.file.path contains "%TEMP%\\NiniteDownloads\*" or tgt.file.path contains "NiniteUpdateSummary.log"))
 ```
 

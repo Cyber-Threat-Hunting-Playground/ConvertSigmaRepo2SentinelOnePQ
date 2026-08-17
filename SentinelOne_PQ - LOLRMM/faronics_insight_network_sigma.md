@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 16-08-2026 00:37:21):
+// Translated content (automatically translated on 17-08-2026 00:35:46):
 (event.category in ("dns","url","ip")) and (endpoint.os="windows" and ((url.address contains "faronics.com" or url.address contains "www.faronics.com" or url.address contains "support.faronics.com" or url.address contains "docs.faronics.com" or url.address contains "user_managed") or (event.dns.request contains "faronics.com" or event.dns.request contains "www.faronics.com" or event.dns.request contains "support.faronics.com" or event.dns.request contains "docs.faronics.com" or event.dns.request contains "user_managed")))
 ```
 

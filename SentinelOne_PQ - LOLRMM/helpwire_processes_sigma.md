@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 16-08-2026 00:37:21):
+// Translated content (automatically translated on 17-08-2026 00:35:46):
 event.type="Process Creation" and (endpoint.os="windows" and ((src.process.image.path contains "helpwire.exe" or src.process.image.path contains "HelpWire Quick.exe") or (tgt.process.image.path contains "helpwire.exe" or tgt.process.image.path contains "HelpWire Quick.exe")))
 ```
 
