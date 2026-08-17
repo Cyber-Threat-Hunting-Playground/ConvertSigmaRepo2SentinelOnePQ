@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 16-08-2026 01:04:47):
+// Translated content (automatically translated on 17-08-2026 01:02:09):
 event.type="Module Load" and (endpoint.os="windows" and (src.process.image.path contains "C:\\Windows\\" and (module.path contains "C:\\Users\\Public\\" or module.path contains "C:\\PerfLogs\\")))
 ```
 
