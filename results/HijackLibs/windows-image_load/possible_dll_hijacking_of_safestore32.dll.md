@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 17-08-2026 01:20:49):
+// Translated content (automatically translated on 18-08-2026 01:18:02):
 event.type="Module Load" and (endpoint.os="windows" and (module.path contains "\\safestore32.dll" and (not (module.path contains "c:\\program files\\Sophos\\Sophos Anti-Virus\\" or module.path contains "c:\\program files (x86)\\Sophos\\Sophos Anti-Virus\\"))))
 ```
 
