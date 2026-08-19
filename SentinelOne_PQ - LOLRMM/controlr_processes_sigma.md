@@ -1,0 +1,37 @@
+```sql
+// Translated content (automatically translated on 19-08-2026 00:35:35):
+event.type="Process Creation" and (endpoint.os="windows" and ((src.process.image.path contains "ControlR.Agent.exe" or src.process.image.path contains "ControlR.DesktopClient.exe") or (tgt.process.image.path contains "ControlR.Agent.exe" or tgt.process.image.path contains "ControlR.DesktopClient.exe")))
+```
+
+
+# Original Sigma Rule:
+```yaml
+title: Potential ControlR RMM Tool Process Activity
+id: d3bc9cbd-0f66-596c-865d-a2f3f34bdb92
+status: experimental
+description: |
+    Detects potential processes activity of ControlR RMM tool
+references:
+    - https://github.com/magicsword-io/LOLRMM
+author: LOLRMM Project
+date: 2026-08-18
+tags:
+    - attack.execution
+    - attack.t1219
+logsource:
+    product: windows
+    category: process_creation
+detection:
+    selection_parent:
+        ParentImage|endswith:
+            - 'ControlR.Agent.exe'
+            - 'ControlR.DesktopClient.exe'
+    selection_image:
+        Image|endswith:
+            - 'ControlR.Agent.exe'
+            - 'ControlR.DesktopClient.exe'
+    condition: 1 of selection_*
+falsepositives:
+    - Legitimate use of ControlR
+level: medium
+```

@@ -1,6 +1,6 @@
 ```sql
-// Translated content (automatically translated on 18-08-2026 00:35:15):
-(event.category in ("dns","url","ip")) and (endpoint.os="windows" and ((url.address contains ".instanthousecall.com" or url.address contains ".instanthousecall.net" or url.address contains "instanthousecall.com" or url.address contains "secure.instanthousecall.com") or (event.dns.request contains ".instanthousecall.com" or event.dns.request contains ".instanthousecall.net" or event.dns.request contains "instanthousecall.com" or event.dns.request contains "secure.instanthousecall.com")))
+// Translated content (automatically translated on 19-08-2026 00:35:35):
+(event.category in ("dns","url","ip")) and (endpoint.os="windows" and ((url.address contains ".instanthousecall.com" or url.address contains "secure.instanthousecall.com" or url.address contains ".instanthousecall.net" or url.address contains "instanthousecall.com") or (event.dns.request contains ".instanthousecall.com" or event.dns.request contains "secure.instanthousecall.com" or event.dns.request contains ".instanthousecall.net" or event.dns.request contains "instanthousecall.com")))
 ```
 
 
@@ -25,9 +25,9 @@ detection:
     selection:
         DestinationHostname|endswith:
             - '*.instanthousecall.com'
+            - 'secure.instanthousecall.com'
             - '*.instanthousecall.net'
             - 'instanthousecall.com'
-            - 'secure.instanthousecall.com'
     condition: selection
 falsepositives:
     - Legitimate use of Instant Housecall

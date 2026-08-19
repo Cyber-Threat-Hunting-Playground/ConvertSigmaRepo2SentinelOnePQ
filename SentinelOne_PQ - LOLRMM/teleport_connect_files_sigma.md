@@ -1,0 +1,55 @@
+```sql
+// Translated content (automatically translated on 19-08-2026 00:35:35):
+event.category="file" and (endpoint.os="windows" and (tgt.file.path contains "C:\\Program Files\\Teleport Connect\\Teleport Connect.exe" or tgt.file.path contains "C:\\Program Files\\Teleport Connect\\resources\\bin\\tsh.exe" or tgt.file.path contains "C:\\Users\*\\AppData\\Local\\Programs\\Teleport Connect\\Teleport Connect.exe" or tgt.file.path contains "C:\\Users\*\\AppData\\Local\\Programs\\Teleport Connect\\resources\\bin\\tsh.exe" or tgt.file.path contains "C:\\Users\*\\AppData\\Roaming\\Teleport Connect\\app_state.json" or tgt.file.path contains "C:\\Users\*\\AppData\\Roaming\\Teleport Connect\\app_config.json" or tgt.file.path contains "C:\\Users\*\\AppData\\Roaming\\Teleport Connect\\certs\\tshd.crt" or tgt.file.path contains "C:\\Users\*\\AppData\\Roaming\\Teleport Connect\\logs\*" or tgt.file.path contains "C:\\ProgramData\\TeleportConnectUpdater\*" or tgt.file.path contains "/Applications/Teleport Connect.app/Contents/MacOS/Teleport Connect" or tgt.file.path contains "/Applications/Teleport Connect.app/Contents/MacOS/tsh.app/Contents/MacOS/tsh" or tgt.file.path="*/Users/*/Library/Application Support/Teleport Connect/app_state.json" or tgt.file.path="*/Users/*/Library/Application Support/Teleport Connect/app_config.json" or tgt.file.path="*/Users/*/Library/Application Support/Teleport Connect/certs/tshd.crt" or tgt.file.path="*/Users/*/Library/Application Support/Teleport Connect/logs/*" or tgt.file.path contains "/opt/Teleport Connect/teleport-connect" or tgt.file.path contains "/opt/Teleport Connect/resources/bin/tsh" or tgt.file.path contains "/usr/share/applications/teleport-connect.desktop" or tgt.file.path="*/home/*/.config/Teleport Connect/app_state.json" or tgt.file.path="*/home/*/.config/Teleport Connect/app_config.json" or tgt.file.path="*/home/*/.config/Teleport Connect/certs/tshd.crt" or tgt.file.path="*/home/*/.config/Teleport Connect/logs/*" or tgt.file.path="*/home/*/.cache/Teleport Connect/teleport/teleport" or tgt.file.path contains "/usr/local/bin/tsh"))
+```
+
+
+# Original Sigma Rule:
+```yaml
+title: Potential Teleport Connect RMM Tool File Activity
+id: 7f203064-9b16-528f-9846-0775f78d988a
+status: experimental
+description: |
+    Detects potential files activity of Teleport Connect RMM tool
+references:
+    - https://github.com/magicsword-io/LOLRMM
+author: LOLRMM Project
+date: 2026-08-18
+tags:
+    - attack.execution
+    - attack.t1219
+logsource:
+    product: windows
+    category: file_event
+detection:
+    selection:
+        TargetFilename|endswith:
+            - 'C:\Program Files\Teleport Connect\Teleport Connect.exe'
+            - 'C:\Program Files\Teleport Connect\resources\bin\tsh.exe'
+            - 'C:\Users\*\AppData\Local\Programs\Teleport Connect\Teleport Connect.exe'
+            - 'C:\Users\*\AppData\Local\Programs\Teleport Connect\resources\bin\tsh.exe'
+            - 'C:\Users\*\AppData\Roaming\Teleport Connect\app_state.json'
+            - 'C:\Users\*\AppData\Roaming\Teleport Connect\app_config.json'
+            - 'C:\Users\*\AppData\Roaming\Teleport Connect\certs\tshd.crt'
+            - 'C:\Users\*\AppData\Roaming\Teleport Connect\logs\*'
+            - 'C:\ProgramData\TeleportConnectUpdater\*'
+            - '/Applications/Teleport Connect.app/Contents/MacOS/Teleport Connect'
+            - '/Applications/Teleport Connect.app/Contents/MacOS/tsh.app/Contents/MacOS/tsh'
+            - '/Users/*/Library/Application Support/Teleport Connect/app_state.json'
+            - '/Users/*/Library/Application Support/Teleport Connect/app_config.json'
+            - '/Users/*/Library/Application Support/Teleport Connect/certs/tshd.crt'
+            - '/Users/*/Library/Application Support/Teleport Connect/logs/*'
+            - '/opt/Teleport Connect/teleport-connect'
+            - '/opt/Teleport Connect/resources/bin/tsh'
+            - '/usr/share/applications/teleport-connect.desktop'
+            - '/home/*/.config/Teleport Connect/app_state.json'
+            - '/home/*/.config/Teleport Connect/app_config.json'
+            - '/home/*/.config/Teleport Connect/certs/tshd.crt'
+            - '/home/*/.config/Teleport Connect/logs/*'
+            - '/home/*/.cache/Teleport Connect/teleport/teleport'
+            - '/usr/local/bin/tsh'
+    condition: selection
+falsepositives:
+    - Legitimate use of Teleport Connect
+level: medium
+```
