@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 18-08-2026 01:40:20):
+// Translated content (automatically translated on 19-08-2026 01:42:26):
 event.type="Process Creation" and (endpoint.os="windows" and (tgt.process.image.path contains "\\amazon-ssm-agent.exe" and (tgt.process.cmdline contains "-register " and tgt.process.cmdline contains "-code " and tgt.process.cmdline contains "-id " and tgt.process.cmdline contains "-region ")))
 ```
 
