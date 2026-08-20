@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 19-08-2026 00:35:35):
+// Translated content (automatically translated on 20-08-2026 00:35:27):
 event.type="Process Creation" and (endpoint.os="windows" and (src.process.image.path contains "alitask.exe" or tgt.process.image.path contains "alitask.exe"))
 ```
 

@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 19-08-2026 00:35:35):
+// Translated content (automatically translated on 20-08-2026 00:35:27):
 event.category="registry" and (endpoint.os="windows" and registry.keyPath contains "HKLM\\SYSTEM\\CurrentControlSet\\Services\\FleetDeck Agent Service")
 ```
 
