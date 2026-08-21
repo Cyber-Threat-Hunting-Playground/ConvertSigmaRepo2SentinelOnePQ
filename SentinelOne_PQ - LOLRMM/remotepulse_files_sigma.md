@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 20-08-2026 00:35:27):
+// Translated content (automatically translated on 21-08-2026 00:37:52):
 event.category="file" and (endpoint.os="windows" and (tgt.file.path contains "C:\\Program Files (x86)\\RemotePulseAgent\\InstallCore.exe" or tgt.file.path contains "C:\\Program Files (x86)\\RemotePulseAgent\\agent.ps1" or tgt.file.path contains "C:\\Program Files (x86)\\RemotePulseAgent\\defender-exclude.ps1" or tgt.file.path contains "C:\\Program Files (x86)\\RemotePulseAgent\\install.ps1" or tgt.file.path contains "C:\\Program Files (x86)\\RemotePulseAgent\\install.cmd"))
 ```
 
