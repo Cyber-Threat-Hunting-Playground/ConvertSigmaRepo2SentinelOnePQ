@@ -17599,6 +17599,29 @@ falsepositives:
     - False positives are likely. This rule is more suitable for hunting than for generating detections.
 
 ---
+title: Possible preparation for vsdbg.dll DLL Hijacking
+id: 4601662b-8730-48a3-1369-5b9ff8653643
+status: experimental
+description: Detects possible DLL hijacking of vsdbg.dll by looking for suspicious file writes of this DLL, to unexpected locations.
+references:
+    - https://hijacklibs.net/entries/microsoft/external/vsdbg.html
+author: "Kostas"
+date: 2026-08-13
+tags:
+    - attack.defense_evasion
+    - attack.T1574.001
+logsource:
+    product: windows
+    category: file_event
+detection:
+    selection:
+        TargetFileName: '*\vsdbg.dll'
+
+    condition: selection 
+falsepositives:
+    - False positives are likely. This rule is more suitable for hunting than for generating detections.
+
+---
 title: Possible preparation for windowsperformancerecorderui.dll DLL Hijacking
 id: 1067752b-2811-48a3-1599-5b9ff8544858
 status: experimental
