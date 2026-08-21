@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 20-08-2026 01:19:11):
+// Translated content (automatically translated on 21-08-2026 01:22:57):
 event.type="Module Load" and (endpoint.os="windows" and (module.path contains "\\msocf.dll" and (not (module.path contains "c:\\program files\\Microsoft Office\\Office14\\" or module.path contains "c:\\program files (x86)\\Microsoft Office\\Office14\\"))))
 ```
 
