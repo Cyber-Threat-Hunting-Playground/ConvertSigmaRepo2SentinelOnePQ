@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 21-08-2026 01:22:57):
+// Translated content (automatically translated on 22-08-2026 01:18:30):
 event.type="Module Load" and (endpoint.os="windows" and (module.path contains "\\wtsapi32.dll" and (not (module.path contains "c:\\windows\\system32\\" or module.path contains "c:\\windows\\syswow64\\"))))
 ```
 
@@ -16,6 +16,7 @@ author: "Wietze Beukema"
 date: 2021-02-27
 tags:
     - attack.defense_evasion
+    - attack.T1574.001
     - attack.T1574.001
 logsource:
     product: windows
