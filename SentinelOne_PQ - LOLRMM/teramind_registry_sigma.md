@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 21-08-2026 00:37:52):
+// Translated content (automatically translated on 22-08-2026 00:35:19):
 event.category="registry" and (endpoint.os="windows" and (registry.keyPath contains "HKLM\\SYSTEM\\CurrentControlSet\\Services\\tsvchst" or registry.keyPath contains "HKLM\\SYSTEM\\CurrentControlSet\\Services\\tsvchst\\ImagePath" or registry.keyPath contains "HKLM\\SYSTEM\\CurrentControlSet\\Services\\tsvchst\\Start"))
 ```
 
