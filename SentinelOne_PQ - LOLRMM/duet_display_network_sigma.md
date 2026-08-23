@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 22-08-2026 00:35:19):
+// Translated content (automatically translated on 23-08-2026 00:38:11):
 (event.category in ("dns","url","ip")) and (endpoint.os="windows" and ((url.address contains ".duetdisplay.com" or url.address contains "rdp.duetdisplay.com" or url.address contains "duetdisplay.com" or url.address contains ".itagent.com" or url.address contains "itagent.com") or (event.dns.request contains ".duetdisplay.com" or event.dns.request contains "rdp.duetdisplay.com" or event.dns.request contains "duetdisplay.com" or event.dns.request contains ".itagent.com" or event.dns.request contains "itagent.com")))
 ```
 
