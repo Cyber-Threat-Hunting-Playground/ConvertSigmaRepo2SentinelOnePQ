@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 23-08-2026 00:42:11):
+// Translated content (automatically translated on 24-08-2026 00:41:01):
 event.type="Process Creation" and (endpoint.os="linux" and ((tgt.process.cmdline contains "/curl" or tgt.process.cmdline contains "/wget") and (tgt.process.cmdline contains "/tmp/" or tgt.process.cmdline contains "/dev/shm/") and tgt.process.cmdline contains "sh -c"))
 ```
 
