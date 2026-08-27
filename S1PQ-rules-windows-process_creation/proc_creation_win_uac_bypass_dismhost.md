@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 26-08-2026 01:46:40):
+// Translated content (automatically translated on 27-08-2026 08:51:58):
 event.type="Process Creation" and (endpoint.os="windows" and ((src.process.image.path contains "C:\\Users\\" and src.process.image.path contains "\\AppData\\Local\\Temp\\" and src.process.image.path contains "\\DismHost.exe") and (tgt.process.integrityLevel in ("High","System","S-1-16-16384","S-1-16-12288"))))
 ```
 
