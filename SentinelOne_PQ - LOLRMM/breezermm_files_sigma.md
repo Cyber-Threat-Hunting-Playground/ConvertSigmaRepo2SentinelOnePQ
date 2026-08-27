@@ -1,0 +1,39 @@
+```sql
+// Translated content (automatically translated on 27-08-2026 05:37:34):
+event.category="file" and (endpoint.os="windows" and (tgt.file.path contains "C:\\Program Files\\Breeze\\breeze-agent.exe" or tgt.file.path contains "C:\\Program Files\\Breeze\\breeze-watchdog.exe" or tgt.file.path contains "C:\\Program Files\\Breeze\\breeze-user-helper.exe" or tgt.file.path contains "C:\\Program Files\\Breeze\\breeze-backup.exe" or tgt.file.path contains "C:\\Program Files\\Breeze\\scripts\\install\\install-windows.ps1" or tgt.file.path contains "C:\\ProgramData\\Breeze\\agent.env" or tgt.file.path contains "C:\\ProgramData\\Breeze\\secrets.yaml" or tgt.file.path contains "C:\\ProgramData\\Breeze\\logs\\agent.log"))
+```
+
+
+# Original Sigma Rule:
+```yaml
+title: Potential BreezeRMM RMM Tool File Activity
+id: e3588505-8ae6-59ad-92f4-33b9db8a87e8
+status: experimental
+description: |
+    Detects potential files activity of BreezeRMM RMM tool
+references:
+    - https://github.com/magicsword-io/LOLRMM
+author: LOLRMM Project
+date: 2026-08-26
+tags:
+    - attack.execution
+    - attack.t1219
+logsource:
+    product: windows
+    category: file_event
+detection:
+    selection:
+        TargetFilename|endswith:
+            - 'C:\Program Files\Breeze\breeze-agent.exe'
+            - 'C:\Program Files\Breeze\breeze-watchdog.exe'
+            - 'C:\Program Files\Breeze\breeze-user-helper.exe'
+            - 'C:\Program Files\Breeze\breeze-backup.exe'
+            - 'C:\Program Files\Breeze\scripts\install\install-windows.ps1'
+            - 'C:\ProgramData\Breeze\agent.env'
+            - 'C:\ProgramData\Breeze\secrets.yaml'
+            - 'C:\ProgramData\Breeze\logs\agent.log'
+    condition: selection
+falsepositives:
+    - Legitimate use of BreezeRMM
+level: medium
+```
