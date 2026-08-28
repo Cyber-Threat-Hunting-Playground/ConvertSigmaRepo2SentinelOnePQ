@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 27-08-2026 07:08:24):
+// Translated content (automatically translated on 28-08-2026 08:55:52):
 event.type="Process Creation" and (endpoint.os="osx" and ((tgt.process.image.path="/usr/bin/file" and tgt.process.cmdline matches "(.){200,}") or (tgt.process.image.path="/bin/ls" and tgt.process.cmdline contains "-R") or tgt.process.image.path="/usr/bin/find" or tgt.process.image.path="/usr/bin/mdfind" or tgt.process.image.path="/tree"))
 ```
 
