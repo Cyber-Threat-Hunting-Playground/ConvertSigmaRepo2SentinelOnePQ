@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 27-08-2026 05:37:34):
+// Translated content (automatically translated on 28-08-2026 07:45:50):
 event.category="registry" and (endpoint.os="windows" and (registry.keyPath contains "HKLM\\SOFTWARE\\Faronics\\Deep Freeze" or registry.keyPath contains "HKLM\\SOFTWARE\\Faronics" or registry.keyPath contains "HKLM\\SYSTEM\\CurrentControlSet\\Services\\DFServ"))
 ```
 

@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 27-08-2026 05:37:34):
+// Translated content (automatically translated on 28-08-2026 07:45:50):
 event.type="Process Creation" and (endpoint.os="windows" and (src.process.image.path contains "zoc.exe" or tgt.process.image.path contains "zoc.exe"))
 ```
 
