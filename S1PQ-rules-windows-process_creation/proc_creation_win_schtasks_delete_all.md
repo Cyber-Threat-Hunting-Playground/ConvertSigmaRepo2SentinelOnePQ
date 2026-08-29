@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 28-08-2026 11:04:48):
+// Translated content (automatically translated on 29-08-2026 06:49:35):
 event.type="Process Creation" and (endpoint.os="windows" and (tgt.process.image.path contains "\\schtasks.exe" and (tgt.process.cmdline contains " /delete " and tgt.process.cmdline contains "/tn \*" and tgt.process.cmdline contains " /f")))
 ```
 
