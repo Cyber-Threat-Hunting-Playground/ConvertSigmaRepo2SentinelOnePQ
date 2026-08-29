@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 28-08-2026 07:45:50):
+// Translated content (automatically translated on 29-08-2026 04:41:37):
 event.type="Process Creation" and (endpoint.os="windows" and ((src.process.image.path contains "psexec.exe" or src.process.image.path contains "psexec64.exe" or src.process.image.path contains "psexecsvc.exe") or (tgt.process.image.path contains "psexec.exe" or tgt.process.image.path contains "psexec64.exe" or tgt.process.image.path contains "psexecsvc.exe")))
 ```
 

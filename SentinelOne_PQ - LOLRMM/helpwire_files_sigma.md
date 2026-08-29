@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 28-08-2026 07:45:50):
+// Translated content (automatically translated on 29-08-2026 04:41:37):
 event.category="file" and (endpoint.os="windows" and (tgt.file.path contains "helpwire.exe" or tgt.file.path contains "HelpWire Quick.exe" or tgt.file.path contains "HelpWire.lnk" or tgt.file.path contains "HelpWire Unattended Access.lnk" or tgt.file.path contains "/Applications/HelpWire Operator.app" or tgt.file.path contains "helpwire-operator/bin/helpwire-operator" or tgt.file.path contains "/lib/systemd/system/helpwire-unattended.service"))
 ```
 
