@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 28-08-2026 07:57:17):
+// Translated content (automatically translated on 29-08-2026 04:48:18):
 event.type="Process Creation" and (endpoint.os="linux" and (src.process.cmdline="bash -i" and ((tgt.process.cmdline contains "-c import " or tgt.process.cmdline contains "base64" or tgt.process.cmdline contains "pty.spawn") or (tgt.process.image.path contains "whoami" or tgt.process.image.path contains "iptables" or tgt.process.image.path contains "/ncat" or tgt.process.image.path contains "/nc" or tgt.process.image.path contains "/netcat"))))
 ```
 
