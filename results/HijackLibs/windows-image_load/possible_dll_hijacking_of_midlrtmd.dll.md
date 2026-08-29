@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 28-08-2026 10:10:45):
+// Translated content (automatically translated on 29-08-2026 06:09:42):
 event.type="Module Load" and (endpoint.os="windows" and (module.path contains "\\midlrtmd.dll" and (not (module.path="c:\\program files\\Windows Kits\\*\\bin\\*\\x64\\mdmerge.exe\\*" or module.path="c:\\program files (x86)\\Windows Kits\\*\\bin\\*\\x64\\mdmerge.exe\\*" or module.path="c:\\program files\\Windows Kits\\*\\bin\\*\\x86\\mdmerge.exe\\*" or module.path="c:\\program files (x86)\\Windows Kits\\*\\bin\\*\\x86\\mdmerge.exe\\*"))))
 ```
 
