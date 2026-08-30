@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 29-08-2026 04:41:37):
+// Translated content (automatically translated on 30-08-2026 02:15:53):
 (event.category in ("dns","url","ip")) and (endpoint.os="windows" and ((url.address contains "zerotier.com" or url.address contains ".zerotier.com") or (event.dns.request contains "zerotier.com" or event.dns.request contains ".zerotier.com")))
 ```
 
