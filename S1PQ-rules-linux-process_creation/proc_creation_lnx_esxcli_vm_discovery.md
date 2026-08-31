@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 30-08-2026 02:27:26):
+// Translated content (automatically translated on 31-08-2026 02:21:37):
 event.type="Process Creation" and (endpoint.os="linux" and (tgt.process.image.path contains "/esxcli" and tgt.process.cmdline contains "vm process" and tgt.process.cmdline contains " list"))
 ```
 
