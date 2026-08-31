@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 30-08-2026 02:15:53):
+// Translated content (automatically translated on 31-08-2026 02:11:09):
 event.category="file" and (endpoint.os="windows" and (tgt.file.path contains "C:\\ProgramData\\Getscreen.me\\<date>.log" or tgt.file.path contains "C:\\ProgramData\\Getscreen.me\\<date>.gui.log" or tgt.file.path contains "C:\\ProgramData\\Getscreen.me\\session.inf" or tgt.file.path contains "C:\\Users\*\\AppData\\Local\\Getscreen.me"))
 ```
 

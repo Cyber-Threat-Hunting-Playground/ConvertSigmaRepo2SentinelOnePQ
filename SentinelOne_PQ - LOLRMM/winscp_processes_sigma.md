@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 30-08-2026 02:15:53):
+// Translated content (automatically translated on 31-08-2026 02:11:09):
 event.type="Process Creation" and (endpoint.os="windows" and (src.process.image.path contains "WinSCP.exe" or tgt.process.image.path contains "WinSCP.exe"))
 ```
 
