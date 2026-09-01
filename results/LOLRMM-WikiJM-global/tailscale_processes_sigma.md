@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 31-08-2026 04:03:49):
+// Translated content (automatically translated on 01-09-2026 03:53:07):
 event.type="Process Creation" and (endpoint.os="windows" and (src.process.image.path="*tailscale-*.exe" or src.process.image.path contains "tailscaled.exe" or src.process.image.path contains "tailscale-ipn.exe"))
 ```
 
