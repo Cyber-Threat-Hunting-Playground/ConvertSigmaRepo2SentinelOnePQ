@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 31-08-2026 02:11:09):
+// Translated content (automatically translated on 01-09-2026 02:30:33):
 event.category="file" and (endpoint.os="windows" and (tgt.file.path contains "C:\\Program Files (x86)\\Bluetrait Agent\\Bluetrait MSP Agent.exe" or tgt.file.path contains "C:\\Program Files (x86)\\Bluetrait Agent\\BluetraitUserAgent.exe" or tgt.file.path contains "C:\\Program Files (x86)\\Bluetrait Agent\\config.db" or tgt.file.path contains "C:\\Program Files (x86)\\Bluetrait Agent\\config.json" or tgt.file.path contains "C:\\Program Files (x86)\\Bluetrait Agent\\libraries\\paexec.exe"))
 ```
 

@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 31-08-2026 02:11:09):
+// Translated content (automatically translated on 01-09-2026 02:30:33):
 event.category="registry" and (endpoint.os="windows" and registry.keyPath contains "HKLM\\SOFTWARE\\GoTo Resolve Unattended\\")
 ```
 
