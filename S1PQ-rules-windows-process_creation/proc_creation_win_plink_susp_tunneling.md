@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 31-08-2026 05:10:15):
+// Translated content (automatically translated on 01-09-2026 04:46:07):
 event.type="Process Creation" and (endpoint.os="windows" and ((tgt.process.image.path contains "\\plink.exe" and tgt.process.cmdline contains ":127.0.0.1:3389") or ((tgt.process.image.path contains "\\plink.exe" and tgt.process.cmdline contains ":3389") and (tgt.process.cmdline contains " -P 443" or tgt.process.cmdline contains " -P 22"))))
 ```
 
