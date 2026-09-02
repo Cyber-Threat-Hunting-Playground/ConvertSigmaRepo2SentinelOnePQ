@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 01-09-2026 04:46:07):
+// Translated content (automatically translated on 02-09-2026 04:07:52):
 event.type="Process Creation" and (endpoint.os="windows" and (tgt.process.image.path contains "\\xordump.exe" or (tgt.process.cmdline contains " -process lsass.exe " or tgt.process.cmdline contains " -m comsvcs " or tgt.process.cmdline contains " -m dbghelp " or tgt.process.cmdline contains " -m dbgcore ")))
 ```
 
@@ -35,4 +35,5 @@ detection:
 falsepositives:
     - Another tool that uses the command line switches of XORdump
 level: high
+regression_tests_path: regression_data/rules/windows/process_creation/proc_creation_win_hktl_xordump/info.yml
 ```

@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 01-09-2026 04:46:07):
+// Translated content (automatically translated on 02-09-2026 04:07:52):
 event.type="Process Creation" and (endpoint.os="windows" and (tgt.process.image.path contains "\\procdump.exe" or tgt.process.image.path contains "\\procdump64.exe" or tgt.process.image.path contains "\\procdump64a.exe"))
 ```
 
@@ -33,4 +33,5 @@ detection:
 falsepositives:
     - Legitimate use of procdump by a developer or administrator
 level: medium
+regression_tests_path: regression_data/rules/windows/process_creation/proc_creation_win_sysinternals_procdump/info.yml
 ```

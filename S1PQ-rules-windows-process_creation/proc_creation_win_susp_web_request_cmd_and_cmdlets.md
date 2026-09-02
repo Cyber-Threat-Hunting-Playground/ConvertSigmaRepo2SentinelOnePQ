@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 01-09-2026 04:46:07):
+// Translated content (automatically translated on 02-09-2026 04:07:52):
 event.type="Process Creation" and (endpoint.os="windows" and (tgt.process.cmdline contains "[System.Net.WebRequest]::create" or tgt.process.cmdline contains "curl " or tgt.process.cmdline contains "Invoke-RestMethod" or tgt.process.cmdline contains "Invoke-WebRequest" or tgt.process.cmdline contains " irm " or tgt.process.cmdline contains "iwr " or tgt.process.cmdline contains "Resume-BitsTransfer" or tgt.process.cmdline contains "Start-BitsTransfer" or tgt.process.cmdline contains "wget " or tgt.process.cmdline contains "WinHttp.WinHttpRequest"))
 ```
 
@@ -50,4 +50,5 @@ detection:
 falsepositives:
     - Use of Get-Command and Get-Help modules to reference Invoke-WebRequest and Start-BitsTransfer.
 level: medium
+regression_tests_path: regression_data/rules/windows/process_creation/proc_creation_win_susp_web_request_cmd_and_cmdlets/info.yml
 ```

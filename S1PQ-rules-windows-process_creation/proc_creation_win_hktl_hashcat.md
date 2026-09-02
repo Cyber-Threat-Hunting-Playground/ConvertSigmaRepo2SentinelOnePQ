@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 01-09-2026 04:46:07):
+// Translated content (automatically translated on 02-09-2026 04:07:52):
 event.type="Process Creation" and (endpoint.os="windows" and (tgt.process.image.path contains "\\hashcat.exe" or (tgt.process.cmdline contains "-a " and tgt.process.cmdline contains "-m 1000 " and tgt.process.cmdline contains "-r ")))
 ```
 
@@ -34,4 +34,5 @@ detection:
 falsepositives:
     - Tools that use similar command line flags and values
 level: high
+regression_tests_path: regression_data/rules/windows/process_creation/proc_creation_win_hktl_hashcat/info.yml
 ```

@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 01-09-2026 04:46:07):
+// Translated content (automatically translated on 02-09-2026 04:07:52):
 event.type="Process Creation" and (endpoint.os="windows" and (((tgt.process.image.path contains "\\powershell.exe" or tgt.process.image.path contains "\\pwsh.exe") and (tgt.process.cmdline contains "\\Windows\\Temp" or tgt.process.cmdline contains "\\Temporary Internet" or tgt.process.cmdline contains "\\AppData\\Local\\Temp" or tgt.process.cmdline contains "\\AppData\\Roaming\\Temp" or tgt.process.cmdline contains "%TEMP%" or tgt.process.cmdline contains "%TMP%" or tgt.process.cmdline contains "%LocalAppData%\\Temp")) and (not (tgt.process.cmdline contains "-WindowStyle hidden -Verb runAs" or tgt.process.cmdline contains "\\Windows\\system32\\config\\systemprofile\\AppData\\Local\\Temp\\Amazon\\EC2-Windows\\" or (tgt.process.cmdline contains " >" or tgt.process.cmdline contains "Out-File" or tgt.process.cmdline contains "ConvertTo-Json") or ((src.process.image.path in ("C:\\Windows\\System32\\Msiexec.exe","C:\\Windows\\SysWOW64\\Msiexec.exe")) and tgt.process.image.path contains "\\powershell.exe" and (tgt.process.cmdline contains "-NoProfile -ExecutionPolicy Bypass -Command" and tgt.process.cmdline contains "AppData\\Local\\Temp\\" and tgt.process.cmdline contains "Install-Chocolatey.ps1"))))))
 ```
 
@@ -56,4 +56,5 @@ detection:
 falsepositives:
     - Administrative scripts
 level: medium
+regression_tests_path: regression_data/rules/windows/process_creation/proc_creation_win_powershell_script_exec_from_temp_folder/info.yml
 ```

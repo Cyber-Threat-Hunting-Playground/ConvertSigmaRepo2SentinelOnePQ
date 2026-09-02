@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 01-09-2026 04:46:07):
+// Translated content (automatically translated on 02-09-2026 04:07:52):
 event.type="Process Creation" and (endpoint.os="windows" and ((tgt.process.cmdline contains "REG" and tgt.process.cmdline contains "ADD" and tgt.process.cmdline contains "\\SOFTWARE\\Policies\\Microsoft\\FVE" and tgt.process.cmdline contains "/v" and tgt.process.cmdline contains "/f") and (tgt.process.cmdline contains "EnableBDEWithNoTPM" or tgt.process.cmdline contains "UseAdvancedStartup" or tgt.process.cmdline contains "UseTPM" or tgt.process.cmdline contains "UseTPMKey" or tgt.process.cmdline contains "UseTPMKeyPIN" or tgt.process.cmdline contains "RecoveryKeyMessageSource" or tgt.process.cmdline contains "UseTPMPIN" or tgt.process.cmdline contains "RecoveryKeyMessage")))
 ```
 
@@ -42,4 +42,5 @@ detection:
 falsepositives:
     - Unlikely
 level: high
+regression_tests_path: regression_data/rules/windows/process_creation/proc_creation_win_reg_bitlocker/info.yml
 ```
