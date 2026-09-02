@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 01-09-2026 02:30:33):
+// Translated content (automatically translated on 02-09-2026 01:51:41):
 event.type="Process Creation" and (endpoint.os="windows" and ((src.process.image.path contains "rdclient.exe" or src.process.image.path contains "RdClientInstaller.exe" or src.process.image.path contains "SupportTool.exe") or (tgt.process.image.path contains "rdclient.exe" or tgt.process.image.path contains "RdClientInstaller.exe" or tgt.process.image.path contains "SupportTool.exe")))
 ```
 
