@@ -17,9 +17,9 @@ detection:
         TargetFileName: '*\dnx.onecore.dll'
     filter:
         TargetFileName:
-            - 'c:\program files\Microsoft Web Tools\DNX\\\*'
-            - 'c:\program files (x86)\Microsoft Web Tools\DNX\\\*'
-            - 'C:\Users\\*\.dnx\runtimes\\*\bin\\\*'
+            - 'c:\program files\Microsoft Web Tools\DNX\\*'
+            - 'c:\program files (x86)\Microsoft Web Tools\DNX\\*'
+            - 'C:\Users\\*\.dnx\runtimes\\*\bin\\*'
 
     condition: selection and not filter
 falsepositives:

@@ -17,7 +17,7 @@ detection:
         TargetFileName: '*\datastate.dll'
     filter:
         TargetFileName:
-            - 'C:\Program Files (x86)\IObit\AdvancedSystemCare\\\*'
+            - 'C:\Program Files (x86)\IObit\AdvancedSystemCare\\*'
 
     condition: selection and not filter
 falsepositives:
