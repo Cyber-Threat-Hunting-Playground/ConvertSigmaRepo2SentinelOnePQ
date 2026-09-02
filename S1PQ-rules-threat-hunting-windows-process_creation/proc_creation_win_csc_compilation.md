@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 01-09-2026 02:24:34):
+// Translated content (automatically translated on 02-09-2026 01:46:18):
 event.type="Process Creation" and (endpoint.os="windows" and (tgt.process.image.path contains "\\csc.exe" and tgt.process.cmdline contains "/noconfig /fullpaths @"))
 ```
 
@@ -35,4 +35,5 @@ detection:
 falsepositives:
     - Many legitimate applications make use of dynamic compilation. Use this rule to hunt for anomalies
 level: medium
+regression_tests_path: regression_data/rules-threat-hunting/windows/process_creation/proc_creation_win_csc_compilation/info.yml
 ```

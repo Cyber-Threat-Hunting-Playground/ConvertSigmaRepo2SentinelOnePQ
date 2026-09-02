@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 01-09-2026 02:24:34):
+// Translated content (automatically translated on 02-09-2026 01:46:18):
 event.type="Process Creation" and (endpoint.os="windows" and (((src.process.image.path contains "\\powershell_ise.exe" or src.process.image.path contains "\\powershell.exe" or src.process.image.path contains "\\pwsh.exe") and (tgt.process.image.path contains "\\bash.exe" or tgt.process.image.path contains "\\bitsadmin.exe" or tgt.process.image.path contains "\\certutil.exe" or tgt.process.image.path contains "\\cscript.exe" or tgt.process.image.path contains "\\forfiles.exe" or tgt.process.image.path contains "\\hh.exe" or tgt.process.image.path contains "\\mshta.exe" or tgt.process.image.path contains "\\regsvr32.exe" or tgt.process.image.path contains "\\rundll32.exe" or tgt.process.image.path contains "\\schtasks.exe" or tgt.process.image.path contains "\\scrcons.exe" or tgt.process.image.path contains "\\scriptrunner.exe" or tgt.process.image.path contains "\\sh.exe" or tgt.process.image.path contains "\\wmic.exe" or tgt.process.image.path contains "\\wscript.exe")) and (not ((tgt.process.image.path contains "\\certutil.exe" and tgt.process.cmdline contains "-verifystore ") or (tgt.process.image.path contains "\\wmic.exe" and (tgt.process.cmdline contains "qfe list" or tgt.process.cmdline contains "diskdrive " or tgt.process.cmdline contains "csproduct " or tgt.process.cmdline contains "computersystem " or tgt.process.cmdline contains " os " or tgt.process.cmdline contains "")))) and (not (src.process.cmdline contains "\\Program Files\\Amazon\\WorkspacesConfig\\Scripts\\" and tgt.process.cmdline contains "\\Program Files\\Amazon\\WorkspacesConfig\\Scripts\\"))))
 ```
 
@@ -65,4 +65,5 @@ detection:
 falsepositives:
     - False positives are to be expected from PowerShell scripts that might make use of additional binaries such as "mshta", "bitsadmin", etc. Apply additional filters for those scripts.
 level: medium
+regression_tests_path: regression_data/rules-threat-hunting/windows/process_creation/proc_creation_win_powershell_susp_child_processes/info.yml
 ```
