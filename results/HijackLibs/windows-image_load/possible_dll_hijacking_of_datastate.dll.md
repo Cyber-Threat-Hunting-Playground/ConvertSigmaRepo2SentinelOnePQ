@@ -1,6 +1,6 @@
 ```sql
-// Translated content (automatically translated on 01-09-2026 04:06:46):
-event.type="Module Load" and (endpoint.os="windows" and (module.path contains "\\datastate.dll" and (not module.path="C:\\Program Files (x86)\\IObit\\AdvancedSystemCare\\\*")))
+// Translated content (automatically translated on 02-09-2026 03:28:53):
+event.type="Module Load" and (endpoint.os="windows" and (module.path contains "\\datastate.dll" and (not module.path contains "C:\\Program Files (x86)\\IObit\\AdvancedSystemCare\\")))
 ```
 
 
@@ -25,7 +25,7 @@ detection:
         ImageLoaded: '*\datastate.dll'
     filter:
         ImageLoaded:
-            - 'C:\Program Files (x86)\IObit\AdvancedSystemCare\\\*'
+            - 'C:\Program Files (x86)\IObit\AdvancedSystemCare\\*'
 
     condition: selection and not filter
 falsepositives:

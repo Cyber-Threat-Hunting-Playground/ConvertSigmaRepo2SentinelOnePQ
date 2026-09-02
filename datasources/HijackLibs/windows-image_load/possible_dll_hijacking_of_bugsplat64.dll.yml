@@ -17,8 +17,8 @@ detection:
         ImageLoaded: '*\bugsplat64.dll'
     filter:
         ImageLoaded:
-            - 'c:\program files\Nitro\PDF Pro\\\*'
-            - 'c:\program files (x86)\Nitro\PDF Pro\\\*'
+            - 'c:\program files\Nitro\PDF Pro\\*'
+            - 'c:\program files (x86)\Nitro\PDF Pro\\*'
             - 'c:\program files\Nitro\Pro\\*'
             - 'c:\program files (x86)\Nitro\Pro\\*'
 

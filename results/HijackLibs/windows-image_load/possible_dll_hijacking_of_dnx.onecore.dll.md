@@ -1,6 +1,6 @@
 ```sql
-// Translated content (automatically translated on 01-09-2026 04:06:46):
-event.type="Module Load" and (endpoint.os="windows" and (module.path contains "\\dnx.onecore.dll" and (not (module.path="c:\\program files\\Microsoft Web Tools\\DNX\\\*" or module.path="c:\\program files (x86)\\Microsoft Web Tools\\DNX\\\*" or module.path="C:\\Users\\*\\.dnx\\runtimes\\*\\bin\\\*"))))
+// Translated content (automatically translated on 02-09-2026 03:28:53):
+event.type="Module Load" and (endpoint.os="windows" and (module.path contains "\\dnx.onecore.dll" and (not (module.path contains "c:\\program files\\Microsoft Web Tools\\DNX\\" or module.path contains "c:\\program files (x86)\\Microsoft Web Tools\\DNX\\" or module.path="C:\\Users\\*\\.dnx\\runtimes\\*\\bin\\*"))))
 ```
 
 
@@ -25,9 +25,9 @@ detection:
         ImageLoaded: '*\dnx.onecore.dll'
     filter:
         ImageLoaded:
-            - 'c:\program files\Microsoft Web Tools\DNX\\\*'
-            - 'c:\program files (x86)\Microsoft Web Tools\DNX\\\*'
-            - 'C:\Users\\*\.dnx\runtimes\\*\bin\\\*'
+            - 'c:\program files\Microsoft Web Tools\DNX\\*'
+            - 'c:\program files (x86)\Microsoft Web Tools\DNX\\*'
+            - 'C:\Users\\*\.dnx\runtimes\\*\bin\\*'
 
     condition: selection and not filter
 falsepositives:
