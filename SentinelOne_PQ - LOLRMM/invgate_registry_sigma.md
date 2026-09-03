@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 02-09-2026 01:51:41):
+// Translated content (automatically translated on 03-09-2026 01:57:27):
 event.category="registry" and (endpoint.os="windows" and (registry.keyPath contains "HKLM\\SYSTEM\\CurrentControlSet\\Services\\InvClient" or registry.keyPath contains "HKLM\\SYSTEM\\CurrentControlSet\\Services\\InvClient\\ImagePath" or registry.keyPath contains "HKLM\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Uninstall\\{41F5BB80-6416-4AF4-B67B-FA36C29DB4C4}" or registry.keyPath contains "HKLM\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Uninstall\\{F0076285-D0E2-4B49-92BD-25E0B7B27DF6}" or registry.keyPath contains "HKLM\\SOFTWARE\\Classes\\Installer\\Products\\08BB5F1461464FA46BB7AF632CD94B4C" or registry.keyPath contains "HKLM\\SOFTWARE\\WOW6432Node\\Microsoft\\Windows\\CurrentVersion\\Uninstall\\{41F5BB80-6416-4AF4-B67B-FA36C29DB4C4}"))
 ```
 
@@ -15,8 +15,9 @@ references:
     - https://github.com/magicsword-io/LOLRMM
 author: LOLRMM Project
 date: 2026-05-18
+modified: 2026-09-02
 tags:
-    - attack.execution
+    - attack.command-and-control
     - attack.t1219
 logsource:
     product: windows

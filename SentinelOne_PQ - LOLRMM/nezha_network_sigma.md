@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 02-09-2026 01:51:41):
+// Translated content (automatically translated on 03-09-2026 01:57:27):
 (event.category in ("dns","url","ip")) and (endpoint.os="windows" and ((url.address contains "user_managed" or url.address contains "github.com" or url.address contains "raw.githubusercontent.com" or url.address contains "nezha.wiki" or url.address contains "nezhahq.github.io" or url.address contains "c.mid.al" or url.address contains "gd.bj2.xyz" or url.address contains "rism.pages.dev") or (event.dns.request contains "user_managed" or event.dns.request contains "github.com" or event.dns.request contains "raw.githubusercontent.com" or event.dns.request contains "nezha.wiki" or event.dns.request contains "nezhahq.github.io" or event.dns.request contains "c.mid.al" or event.dns.request contains "gd.bj2.xyz" or event.dns.request contains "rism.pages.dev")))
 ```
 
@@ -15,8 +15,9 @@ references:
     - https://github.com/magicsword-io/LOLRMM
 author: LOLRMM Project
 date: 2026-05-18
+modified: 2026-09-02
 tags:
-    - attack.execution
+    - attack.command-and-control
     - attack.t1219
 logsource:
     product: windows

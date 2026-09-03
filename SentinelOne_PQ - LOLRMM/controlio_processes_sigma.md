@@ -1,6 +1,6 @@
 ```sql
-// Translated content (automatically translated on 02-09-2026 01:51:41):
-event.type="Process Creation" and (endpoint.os="windows" and ((src.process.image.path contains "weCliboardListener.exe" or src.process.image.path contains "bbl.exe" or src.process.image.path contains "weprtct.exe" or src.process.image.path contains "wemonc.exe" or src.process.image.path contains "wesvc.exe" or src.process.image.path="*wec_launcher_[a-Z0-9]*_.exe" or src.process.image.path contains "weInstSvc.exe") or (tgt.process.image.path contains "weCliboardListener.exe" or tgt.process.image.path contains "bbl.exe" or tgt.process.image.path contains "weprtct.exe" or tgt.process.image.path contains "wemonc.exe" or tgt.process.image.path contains "wesvc.exe" or tgt.process.image.path="*wec_launcher_[a-Z0-9]*_.exe" or tgt.process.image.path contains "weInstSvc.exe")))
+// Translated content (automatically translated on 03-09-2026 01:57:27):
+event.type="Process Creation" and (endpoint.os="windows" and ((src.process.image.path contains "\\weCliboardListener.exe" or src.process.image.path contains "\\bbl.exe" or src.process.image.path contains "\\weprtct.exe" or src.process.image.path contains "\\wemonc.exe" or src.process.image.path contains "\\wesvc.exe" or src.process.image.path="*\\wec_launcher_[a-Z0-9]*_.exe" or src.process.image.path contains "\\weInstSvc.exe") or (tgt.process.image.path contains "\\weCliboardListener.exe" or tgt.process.image.path contains "\\bbl.exe" or tgt.process.image.path contains "\\weprtct.exe" or tgt.process.image.path contains "\\wemonc.exe" or tgt.process.image.path contains "\\wesvc.exe" or tgt.process.image.path="*\\wec_launcher_[a-Z0-9]*_.exe" or tgt.process.image.path contains "\\weInstSvc.exe")))
 ```
 
 
@@ -15,8 +15,9 @@ references:
     - https://github.com/magicsword-io/LOLRMM
 author: LOLRMM Project
 date: 2026-05-18
+modified: 2026-09-02
 tags:
-    - attack.execution
+    - attack.command-and-control
     - attack.t1219
 logsource:
     product: windows
@@ -24,22 +25,22 @@ logsource:
 detection:
     selection_parent:
         ParentImage|endswith:
-            - 'weCliboardListener.exe'
-            - 'bbl.exe'
-            - 'weprtct.exe'
-            - 'wemonc.exe'
-            - 'wesvc.exe'
-            - 'wec_launcher_[a-Z0-9]*_.exe'
-            - 'weInstSvc.exe'
+            - '\\weCliboardListener.exe'
+            - '\\bbl.exe'
+            - '\\weprtct.exe'
+            - '\\wemonc.exe'
+            - '\\wesvc.exe'
+            - '\\wec_launcher_[a-Z0-9]*_.exe'
+            - '\\weInstSvc.exe'
     selection_image:
         Image|endswith:
-            - 'weCliboardListener.exe'
-            - 'bbl.exe'
-            - 'weprtct.exe'
-            - 'wemonc.exe'
-            - 'wesvc.exe'
-            - 'wec_launcher_[a-Z0-9]*_.exe'
-            - 'weInstSvc.exe'
+            - '\\weCliboardListener.exe'
+            - '\\bbl.exe'
+            - '\\weprtct.exe'
+            - '\\wemonc.exe'
+            - '\\wesvc.exe'
+            - '\\wec_launcher_[a-Z0-9]*_.exe'
+            - '\\weInstSvc.exe'
     condition: 1 of selection_*
 falsepositives:
     - Legitimate use of Controlio

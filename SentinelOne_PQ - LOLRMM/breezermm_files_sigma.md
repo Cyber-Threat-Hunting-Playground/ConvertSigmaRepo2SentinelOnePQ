@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 02-09-2026 01:51:41):
+// Translated content (automatically translated on 03-09-2026 01:57:27):
 event.category="file" and (endpoint.os="windows" and (tgt.file.path contains "C:\\Program Files\\Breeze\\breeze-agent.exe" or tgt.file.path contains "C:\\Program Files\\Breeze\\breeze-watchdog.exe" or tgt.file.path contains "C:\\Program Files\\Breeze\\breeze-user-helper.exe" or tgt.file.path contains "C:\\Program Files\\Breeze\\breeze-backup.exe" or tgt.file.path contains "C:\\Program Files\\Breeze\\scripts\\install\\install-windows.ps1" or tgt.file.path contains "C:\\ProgramData\\Breeze\\agent.env" or tgt.file.path contains "C:\\ProgramData\\Breeze\\secrets.yaml" or tgt.file.path contains "C:\\ProgramData\\Breeze\\logs\\agent.log"))
 ```
 
@@ -15,8 +15,9 @@ references:
     - https://github.com/magicsword-io/LOLRMM
 author: LOLRMM Project
 date: 2026-08-26
+modified: 2026-09-02
 tags:
-    - attack.execution
+    - attack.command-and-control
     - attack.t1219
 logsource:
     product: windows

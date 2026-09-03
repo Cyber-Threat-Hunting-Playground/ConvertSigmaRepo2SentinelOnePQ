@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 02-09-2026 01:51:41):
+// Translated content (automatically translated on 03-09-2026 01:57:27):
 (event.category in ("dns","url","ip")) and (endpoint.os="windows" and ((url.address contains "desktopcentral.manageengine.com" or url.address contains "desktopcentral.manageengine.com.eu" or url.address contains "desktopcentral.manageengine.cn" or url.address contains ".dms.zoho.com" or url.address contains ".dms.zoho.com.eu" or url.address contains ".-dms.zoho.com.cn") or (event.dns.request contains "desktopcentral.manageengine.com" or event.dns.request contains "desktopcentral.manageengine.com.eu" or event.dns.request contains "desktopcentral.manageengine.cn" or event.dns.request contains ".dms.zoho.com" or event.dns.request contains ".dms.zoho.com.eu" or event.dns.request contains ".-dms.zoho.com.cn")))
 ```
 
@@ -15,8 +15,9 @@ references:
     - https://github.com/magicsword-io/LOLRMM
 author: LOLRMM Project
 date: 2025-12-01
+modified: 2026-09-02
 tags:
-    - attack.execution
+    - attack.command-and-control
     - attack.t1219
 logsource:
     product: windows

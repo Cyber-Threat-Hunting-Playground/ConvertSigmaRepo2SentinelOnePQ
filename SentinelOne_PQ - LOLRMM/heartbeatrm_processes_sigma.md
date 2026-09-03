@@ -1,6 +1,6 @@
 ```sql
-// Translated content (automatically translated on 02-09-2026 01:51:41):
-event.type="Process Creation" and (endpoint.os="windows" and ((src.process.image.path contains "agent-installer-any.exe" or src.process.image.path contains "hbrm-x64.exe" or src.process.image.path contains "hbrm-updater-x64.exe") or (tgt.process.image.path contains "agent-installer-any.exe" or tgt.process.image.path contains "hbrm-x64.exe" or tgt.process.image.path contains "hbrm-updater-x64.exe")))
+// Translated content (automatically translated on 03-09-2026 01:57:27):
+event.type="Process Creation" and (endpoint.os="windows" and ((src.process.image.path contains "\\agent-installer-any.exe" or src.process.image.path contains "\\hbrm-x64.exe" or src.process.image.path contains "\\hbrm-updater-x64.exe") or (tgt.process.image.path contains "\\agent-installer-any.exe" or tgt.process.image.path contains "\\hbrm-x64.exe" or tgt.process.image.path contains "\\hbrm-updater-x64.exe")))
 ```
 
 
@@ -15,8 +15,9 @@ references:
     - https://github.com/magicsword-io/LOLRMM
 author: LOLRMM Project
 date: 2026-05-18
+modified: 2026-09-02
 tags:
-    - attack.execution
+    - attack.command-and-control
     - attack.t1219
 logsource:
     product: windows
@@ -24,14 +25,14 @@ logsource:
 detection:
     selection_parent:
         ParentImage|endswith:
-            - 'agent-installer-any.exe'
-            - 'hbrm-x64.exe'
-            - 'hbrm-updater-x64.exe'
+            - '\\agent-installer-any.exe'
+            - '\\hbrm-x64.exe'
+            - '\\hbrm-updater-x64.exe'
     selection_image:
         Image|endswith:
-            - 'agent-installer-any.exe'
-            - 'hbrm-x64.exe'
-            - 'hbrm-updater-x64.exe'
+            - '\\agent-installer-any.exe'
+            - '\\hbrm-x64.exe'
+            - '\\hbrm-updater-x64.exe'
     condition: 1 of selection_*
 falsepositives:
     - Legitimate use of HeartbeatRM

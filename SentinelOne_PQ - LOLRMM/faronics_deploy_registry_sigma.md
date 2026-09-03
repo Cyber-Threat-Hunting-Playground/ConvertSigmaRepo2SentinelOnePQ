@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 02-09-2026 01:51:41):
+// Translated content (automatically translated on 03-09-2026 01:57:27):
 event.category="registry" and (endpoint.os="windows" and (registry.keyPath contains "HKLM\\SOFTWARE\\Faronics" or registry.keyPath contains "HKLM\\SOFTWARE\\WOW6432Node\\Faronics\\Faronics Core 3\\Storage Spaces\\Spaces\\FWA" or registry.keyPath contains "HKLM\\SOFTWARE\\Classes\\AppID\\FWAService.exe" or registry.keyPath contains "HKLM\\SOFTWARE\\Classes\\{359C24F1-51B5-44CE-8F2D-2FBB1A0FE4EA}\\FWA_GUI_Agent" or registry.keyPath contains "HKLM\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Uninstall\\{581F69E6-A5D1-48C7-9F6F-CC333007F7EB}"))
 ```
 
@@ -15,8 +15,9 @@ references:
     - https://github.com/magicsword-io/LOLRMM
 author: LOLRMM Project
 date: 2026-05-18
+modified: 2026-09-02
 tags:
-    - attack.execution
+    - attack.command-and-control
     - attack.t1219
 logsource:
     product: windows

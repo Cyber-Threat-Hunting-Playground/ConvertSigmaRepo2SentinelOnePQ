@@ -1,0 +1,40 @@
+```sql
+// Translated content (automatically translated on 03-09-2026 01:57:27):
+event.category="file" and (endpoint.os="windows" and (tgt.file.path contains "C:\\Program Files\\OpsBridge\\OpsBridgeAgent.exe" or tgt.file.path contains "C:\\Program Files\\OpsBridge\*.exe" or tgt.file.path contains "C:\\ProgramData\\OpsBridge\\agent_state.json" or tgt.file.path contains "C:\\ProgramData\\OpsBridge\\agent.log" or tgt.file.path contains "C:\\ProgramData\\OpsBridge\\install.log" or tgt.file.path contains "C:\\ProgramData\\OpsBridge\\.persisted_v4" or tgt.file.path="*C:\\ProgramData\\OpsBridge\\task_*.json" or tgt.file.path contains "C:\\Windows\\System32\\Tasks\\OpsBridge Agent"))
+```
+
+
+# Original Sigma Rule:
+```yaml
+title: Potential OpsBridge Agent RMM Tool File Activity
+id: f5668a55-cd5d-5ecd-9685-d15306d4ef7e
+status: experimental
+description: |
+    Detects potential files activity of OpsBridge Agent RMM tool
+references:
+    - https://github.com/magicsword-io/LOLRMM
+author: LOLRMM Project
+date: 2026-09-02
+modified: 2026-09-02
+tags:
+    - attack.command-and-control
+    - attack.t1219
+logsource:
+    product: windows
+    category: file_event
+detection:
+    selection:
+        TargetFilename|endswith:
+            - 'C:\Program Files\OpsBridge\OpsBridgeAgent.exe'
+            - 'C:\Program Files\OpsBridge\*.exe'
+            - 'C:\ProgramData\OpsBridge\agent_state.json'
+            - 'C:\ProgramData\OpsBridge\agent.log'
+            - 'C:\ProgramData\OpsBridge\install.log'
+            - 'C:\ProgramData\OpsBridge\.persisted_v4'
+            - 'C:\ProgramData\OpsBridge\task_*.json'
+            - 'C:\Windows\System32\Tasks\OpsBridge Agent'
+    condition: selection
+falsepositives:
+    - Legitimate use of OpsBridge Agent
+level: medium
+```

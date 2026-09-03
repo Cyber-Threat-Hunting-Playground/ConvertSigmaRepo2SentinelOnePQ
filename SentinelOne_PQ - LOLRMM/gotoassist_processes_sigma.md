@@ -1,6 +1,6 @@
 ```sql
-// Translated content (automatically translated on 02-09-2026 01:51:41):
-event.type="Process Creation" and (endpoint.os="windows" and ((src.process.image.path contains "gotoassist.exe" or src.process.image.path="*g2a*.exe" or src.process.image.path contains "GoTo Assist Opener.exe" or src.process.image.path contains "g2mcomm.exe" or src.process.image.path contains "goto opener.exe" or src.process.image.path contains "g2ax_comm_customer.exe") or (tgt.process.image.path contains "gotoassist.exe" or tgt.process.image.path="*g2a*.exe" or tgt.process.image.path contains "GoTo Assist Opener.exe" or tgt.process.image.path contains "g2mcomm.exe" or tgt.process.image.path contains "goto opener.exe" or tgt.process.image.path contains "g2ax_comm_customer.exe")))
+// Translated content (automatically translated on 03-09-2026 01:57:27):
+event.type="Process Creation" and (endpoint.os="windows" and ((src.process.image.path contains "\\gotoassist.exe" or src.process.image.path="*\\g2a*.exe" or src.process.image.path contains "\\GoTo Assist Opener.exe" or src.process.image.path contains "\\g2mcomm.exe" or src.process.image.path contains "\\goto opener.exe" or src.process.image.path contains "\\g2ax_comm_customer.exe") or (tgt.process.image.path contains "\\gotoassist.exe" or tgt.process.image.path="*\\g2a*.exe" or tgt.process.image.path contains "\\GoTo Assist Opener.exe" or tgt.process.image.path contains "\\g2mcomm.exe" or tgt.process.image.path contains "\\goto opener.exe" or tgt.process.image.path contains "\\g2ax_comm_customer.exe")))
 ```
 
 
@@ -15,8 +15,9 @@ references:
     - https://github.com/magicsword-io/LOLRMM
 author: LOLRMM Project
 date: 2025-12-01
+modified: 2026-09-02
 tags:
-    - attack.execution
+    - attack.command-and-control
     - attack.t1219
 logsource:
     product: windows
@@ -24,20 +25,20 @@ logsource:
 detection:
     selection_parent:
         ParentImage|endswith:
-            - gotoassist.exe
-            - g2a*.exe
-            - GoTo Assist Opener.exe
-            - g2mcomm.exe
-            - goto opener.exe
-            - g2ax_comm_customer.exe
+            - '\\gotoassist.exe'
+            - '\\g2a*.exe'
+            - '\\GoTo Assist Opener.exe'
+            - '\\g2mcomm.exe'
+            - '\\goto opener.exe'
+            - '\\g2ax_comm_customer.exe'
     selection_image:
         Image|endswith:
-            - gotoassist.exe
-            - g2a*.exe
-            - GoTo Assist Opener.exe
-            - g2mcomm.exe
-            - goto opener.exe
-            - g2ax_comm_customer.exe
+            - '\\gotoassist.exe'
+            - '\\g2a*.exe'
+            - '\\GoTo Assist Opener.exe'
+            - '\\g2mcomm.exe'
+            - '\\goto opener.exe'
+            - '\\g2ax_comm_customer.exe'
     condition: 1 of selection_*
 falsepositives:
     - Legitimate use of GoToAssist

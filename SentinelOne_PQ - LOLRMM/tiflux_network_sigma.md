@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 02-09-2026 01:51:41):
+// Translated content (automatically translated on 03-09-2026 01:57:27):
 (event.category in ("dns","url","ip")) and (endpoint.os="windows" and ((url.address contains "agent.tiflux.com" or url.address contains "app.tiflux.com" or url.address contains "tiflux.com" or url.address contains "www.tiflux.com" or url.address contains "tiflux.com.br" or url.address contains "www.tiflux.com.br" or url.address contains ".tiflux.com" or url.address contains "my.splashtop.com") or (event.dns.request contains "agent.tiflux.com" or event.dns.request contains "app.tiflux.com" or event.dns.request contains "tiflux.com" or event.dns.request contains "www.tiflux.com" or event.dns.request contains "tiflux.com.br" or event.dns.request contains "www.tiflux.com.br" or event.dns.request contains ".tiflux.com" or event.dns.request contains "my.splashtop.com")))
 ```
 
@@ -15,8 +15,9 @@ references:
     - https://github.com/magicsword-io/LOLRMM
 author: LOLRMM Project
 date: 2026-05-18
+modified: 2026-09-02
 tags:
-    - attack.execution
+    - attack.command-and-control
     - attack.t1219
 logsource:
     product: windows

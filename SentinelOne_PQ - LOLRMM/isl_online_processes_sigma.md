@@ -1,6 +1,6 @@
 ```sql
-// Translated content (automatically translated on 02-09-2026 01:51:41):
-event.type="Process Creation" and (endpoint.os="windows" and ((src.process.image.path contains "ISLLight.exe" or src.process.image.path contains "isllight.exe" or src.process.image.path contains "ISLLightClient.exe" or src.process.image.path contains "ISLLight.exe" or src.process.image.path contains "isllightservice.exe" or src.process.image.path contains "islalwaysonmonitor.exe") or (tgt.process.image.path contains "ISLLight.exe" or tgt.process.image.path contains "isllight.exe" or tgt.process.image.path contains "ISLLightClient.exe" or tgt.process.image.path contains "ISLLight.exe" or tgt.process.image.path contains "isllightservice.exe" or tgt.process.image.path contains "islalwaysonmonitor.exe")))
+// Translated content (automatically translated on 03-09-2026 01:57:27):
+event.type="Process Creation" and (endpoint.os="windows" and ((src.process.image.path contains "\\ISLLight.exe" or src.process.image.path contains "\\ISLLightClient.exe" or src.process.image.path contains "\\isllightservice.exe" or src.process.image.path contains "\\islalwaysonmonitor.exe") or (tgt.process.image.path contains "\\ISLLight.exe" or tgt.process.image.path contains "\\ISLLightClient.exe" or tgt.process.image.path contains "\\isllightservice.exe" or tgt.process.image.path contains "\\islalwaysonmonitor.exe")))
 ```
 
 
@@ -15,8 +15,9 @@ references:
     - https://github.com/magicsword-io/LOLRMM
 author: LOLRMM Project
 date: 2025-12-01
+modified: 2026-09-02
 tags:
-    - attack.execution
+    - attack.command-and-control
     - attack.t1219
 logsource:
     product: windows
@@ -24,20 +25,16 @@ logsource:
 detection:
     selection_parent:
         ParentImage|endswith:
-            - 'ISLLight.exe'
-            - 'isllight.exe'
-            - 'ISLLightClient.exe'
-            - 'ISLLight.exe'
-            - 'isllightservice.exe'
-            - 'islalwaysonmonitor.exe'
+            - '\\ISLLight.exe'
+            - '\\ISLLightClient.exe'
+            - '\\isllightservice.exe'
+            - '\\islalwaysonmonitor.exe'
     selection_image:
         Image|endswith:
-            - 'ISLLight.exe'
-            - 'isllight.exe'
-            - 'ISLLightClient.exe'
-            - 'ISLLight.exe'
-            - 'isllightservice.exe'
-            - 'islalwaysonmonitor.exe'
+            - '\\ISLLight.exe'
+            - '\\ISLLightClient.exe'
+            - '\\isllightservice.exe'
+            - '\\islalwaysonmonitor.exe'
     condition: 1 of selection_*
 falsepositives:
     - Legitimate use of ISL Online

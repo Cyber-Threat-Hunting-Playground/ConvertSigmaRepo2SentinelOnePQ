@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 02-09-2026 01:51:41):
+// Translated content (automatically translated on 03-09-2026 01:57:27):
 event.category="file" and (endpoint.os="windows" and (tgt.file.path contains "C:\\Program Files\\ATERA Networks\\AteraAgent\\Packages\\AgentPackageRunCommandInteractive\\log.txt" or tgt.file.path contains "C:\\Program Files\\ATERA Networks\\AteraAgent\\Packages\*" or tgt.file.path contains "C:\\Program Files\\ATERA Networks\\AteraAgent\\AteraAgent.exe" or tgt.file.path contains "C:\\Program Files\\Atera Networks\\AlphaAgent.exe" or tgt.file.path contains "C:\\Program Files\\ATERA Networks\\AteraAgent\\Packages\\AgentPackageSTRemote\\AgentPackageSTRemote.exe" or tgt.file.path contains "C:\\Program Files\\ATERA Networks\\AteraAgent\\Packages\\AgentPackageMonitoring\\AgentPackageMonitoring.exe" or tgt.file.path contains "C:\\Program Files\\ATERA Networks\\AteraAgent\\Packages\\AgentPackageHeartbeat\\AgentPackageHeartbeat.exe" or tgt.file.path contains "C:\\Program Files\\ATERA Networks\\AteraAgent\\Packages\\AgentPackageFileExplorer\\AgentPackageFileExplorer.exe" or tgt.file.path contains "C:\\Program Files\\ATERA Networks\\AteraAgent\\Packages\\AgentPackageRunCommandInteractive\\AgentPackageRunCommandInteractive.exe"))
 ```
 
@@ -15,8 +15,9 @@ references:
     - https://github.com/magicsword-io/LOLRMM
 author: LOLRMM Project
 date: 2025-12-01
+modified: 2026-09-02
 tags:
-    - attack.execution
+    - attack.command-and-control
     - attack.t1219
 logsource:
     product: windows
@@ -24,15 +25,15 @@ logsource:
 detection:
     selection:
         TargetFilename|endswith:
-            - C:\Program Files\ATERA Networks\AteraAgent\Packages\AgentPackageRunCommandInteractive\log.txt
-            - C:\Program Files\ATERA Networks\AteraAgent\Packages\*
-            - C:\Program Files\ATERA Networks\AteraAgent\AteraAgent.exe
-            - C:\Program Files\Atera Networks\AlphaAgent.exe
-            - C:\Program Files\ATERA Networks\AteraAgent\Packages\AgentPackageSTRemote\AgentPackageSTRemote.exe
-            - C:\Program Files\ATERA Networks\AteraAgent\Packages\AgentPackageMonitoring\AgentPackageMonitoring.exe
-            - C:\Program Files\ATERA Networks\AteraAgent\Packages\AgentPackageHeartbeat\AgentPackageHeartbeat.exe
-            - C:\Program Files\ATERA Networks\AteraAgent\Packages\AgentPackageFileExplorer\AgentPackageFileExplorer.exe
-            - C:\Program Files\ATERA Networks\AteraAgent\Packages\AgentPackageRunCommandInteractive\AgentPackageRunCommandInteractive.exe
+            - 'C:\Program Files\ATERA Networks\AteraAgent\Packages\AgentPackageRunCommandInteractive\log.txt'
+            - 'C:\Program Files\ATERA Networks\AteraAgent\Packages\*'
+            - 'C:\Program Files\ATERA Networks\AteraAgent\AteraAgent.exe'
+            - 'C:\Program Files\Atera Networks\AlphaAgent.exe'
+            - 'C:\Program Files\ATERA Networks\AteraAgent\Packages\AgentPackageSTRemote\AgentPackageSTRemote.exe'
+            - 'C:\Program Files\ATERA Networks\AteraAgent\Packages\AgentPackageMonitoring\AgentPackageMonitoring.exe'
+            - 'C:\Program Files\ATERA Networks\AteraAgent\Packages\AgentPackageHeartbeat\AgentPackageHeartbeat.exe'
+            - 'C:\Program Files\ATERA Networks\AteraAgent\Packages\AgentPackageFileExplorer\AgentPackageFileExplorer.exe'
+            - 'C:\Program Files\ATERA Networks\AteraAgent\Packages\AgentPackageRunCommandInteractive\AgentPackageRunCommandInteractive.exe'
     condition: selection
 falsepositives:
     - Legitimate use of Atera

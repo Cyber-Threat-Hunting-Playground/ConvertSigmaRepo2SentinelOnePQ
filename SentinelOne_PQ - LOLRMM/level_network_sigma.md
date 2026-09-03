@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 02-09-2026 01:51:41):
+// Translated content (automatically translated on 03-09-2026 01:57:27):
 (event.category in ("dns","url","ip")) and (endpoint.os="windows" and ((url.address contains "level.io" or url.address contains "builds.level.io" or url.address contains "agents.level.io" or url.address contains "online.level.io" or url.address contains "downloads.io") or (event.dns.request contains "level.io" or event.dns.request contains "builds.level.io" or event.dns.request contains "agents.level.io" or event.dns.request contains "online.level.io" or event.dns.request contains "downloads.io")))
 ```
 
@@ -15,8 +15,9 @@ references:
     - https://github.com/magicsword-io/LOLRMM
 author: LOLRMM Project
 date: 2025-12-01
+modified: 2026-09-02
 tags:
-    - attack.execution
+    - attack.command-and-control
     - attack.t1219
 logsource:
     product: windows
@@ -24,11 +25,11 @@ logsource:
 detection:
     selection:
         DestinationHostname|endswith:
-            - level.io
-            - builds.level.io
-            - agents.level.io
-            - online.level.io
-            - downloads.io
+            - 'level.io'
+            - 'builds.level.io'
+            - 'agents.level.io'
+            - 'online.level.io'
+            - 'downloads.io'
     condition: selection
 falsepositives:
     - Legitimate use of Level

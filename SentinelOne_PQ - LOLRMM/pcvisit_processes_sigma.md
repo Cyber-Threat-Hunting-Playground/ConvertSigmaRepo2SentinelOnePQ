@@ -1,6 +1,6 @@
 ```sql
-// Translated content (automatically translated on 02-09-2026 01:51:41):
-event.type="Process Creation" and (endpoint.os="windows" and ((src.process.image.path contains "pcvisit.exe" or src.process.image.path contains "pcvisit_client.exe" or src.process.image.path contains "pcvisit-easysupport.exe" or src.process.image.path contains "pcvisit_service_client.exe") or (tgt.process.image.path contains "pcvisit.exe" or tgt.process.image.path contains "pcvisit_client.exe" or tgt.process.image.path contains "pcvisit-easysupport.exe" or tgt.process.image.path contains "pcvisit_service_client.exe")))
+// Translated content (automatically translated on 03-09-2026 01:57:27):
+event.type="Process Creation" and (endpoint.os="windows" and ((src.process.image.path contains "\\pcvisit.exe" or src.process.image.path contains "\\pcvisit_client.exe" or src.process.image.path contains "\\pcvisit-easysupport.exe" or src.process.image.path contains "\\pcvisit_service_client.exe") or (tgt.process.image.path contains "\\pcvisit.exe" or tgt.process.image.path contains "\\pcvisit_client.exe" or tgt.process.image.path contains "\\pcvisit-easysupport.exe" or tgt.process.image.path contains "\\pcvisit_service_client.exe")))
 ```
 
 
@@ -15,8 +15,9 @@ references:
     - https://github.com/magicsword-io/LOLRMM
 author: LOLRMM Project
 date: 2025-12-01
+modified: 2026-09-02
 tags:
-    - attack.execution
+    - attack.command-and-control
     - attack.t1219
 logsource:
     product: windows
@@ -24,16 +25,16 @@ logsource:
 detection:
     selection_parent:
         ParentImage|endswith:
-            - pcvisit.exe
-            - pcvisit_client.exe
-            - pcvisit-easysupport.exe
-            - pcvisit_service_client.exe
+            - '\\pcvisit.exe'
+            - '\\pcvisit_client.exe'
+            - '\\pcvisit-easysupport.exe'
+            - '\\pcvisit_service_client.exe'
     selection_image:
         Image|endswith:
-            - pcvisit.exe
-            - pcvisit_client.exe
-            - pcvisit-easysupport.exe
-            - pcvisit_service_client.exe
+            - '\\pcvisit.exe'
+            - '\\pcvisit_client.exe'
+            - '\\pcvisit-easysupport.exe'
+            - '\\pcvisit_service_client.exe'
     condition: 1 of selection_*
 falsepositives:
     - Legitimate use of Pcvisit

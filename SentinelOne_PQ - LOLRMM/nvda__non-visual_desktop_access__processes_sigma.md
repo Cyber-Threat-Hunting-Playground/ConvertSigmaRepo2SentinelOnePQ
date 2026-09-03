@@ -1,6 +1,6 @@
 ```sql
-// Translated content (automatically translated on 02-09-2026 01:51:41):
-event.type="Process Creation" and (endpoint.os="windows" and ((src.process.image.path contains "nvda.exe" or src.process.image.path contains "nvda.exe" or src.process.image.path contains "nvda.exe" or src.process.image.path contains "nvda_service.exe" or src.process.image.path="*nvda_*.exe") or (tgt.process.image.path contains "nvda.exe" or tgt.process.image.path contains "nvda.exe" or tgt.process.image.path contains "nvda.exe" or tgt.process.image.path contains "nvda_service.exe" or tgt.process.image.path="*nvda_*.exe")))
+// Translated content (automatically translated on 03-09-2026 01:57:27):
+event.type="Process Creation" and (endpoint.os="windows" and ((src.process.image.path contains "\\nvda.exe" or src.process.image.path contains "\\nvda_service.exe" or src.process.image.path="*\\nvda_*.exe") or (tgt.process.image.path contains "\\nvda.exe" or tgt.process.image.path contains "\\nvda_service.exe" or tgt.process.image.path="*\\nvda_*.exe")))
 ```
 
 
@@ -15,8 +15,9 @@ references:
     - https://github.com/magicsword-io/LOLRMM
 author: LOLRMM Project
 date: 2026-05-18
+modified: 2026-09-02
 tags:
-    - attack.execution
+    - attack.command-and-control
     - attack.t1219
 logsource:
     product: windows
@@ -24,18 +25,14 @@ logsource:
 detection:
     selection_parent:
         ParentImage|endswith:
-            - 'nvda.exe'
-            - 'nvda.exe'
-            - 'nvda.exe'
-            - 'nvda_service.exe'
-            - 'nvda_*.exe'
+            - '\\nvda.exe'
+            - '\\nvda_service.exe'
+            - '\\nvda_*.exe'
     selection_image:
         Image|endswith:
-            - 'nvda.exe'
-            - 'nvda.exe'
-            - 'nvda.exe'
-            - 'nvda_service.exe'
-            - 'nvda_*.exe'
+            - '\\nvda.exe'
+            - '\\nvda_service.exe'
+            - '\\nvda_*.exe'
     condition: 1 of selection_*
 falsepositives:
     - Legitimate use of NVDA (Non-Visual Desktop Access)

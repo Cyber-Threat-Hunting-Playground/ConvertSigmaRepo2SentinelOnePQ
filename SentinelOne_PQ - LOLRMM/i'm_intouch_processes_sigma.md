@@ -1,6 +1,6 @@
 ```sql
-// Translated content (automatically translated on 02-09-2026 01:51:41):
-event.type="Process Creation" and (endpoint.os="windows" and ((src.process.image.path contains "iit.exe" or src.process.image.path contains "intouch.exe" or src.process.image.path contains "I'm InTouch Go Installer.exe") or (tgt.process.image.path contains "iit.exe" or tgt.process.image.path contains "intouch.exe" or tgt.process.image.path contains "I'm InTouch Go Installer.exe")))
+// Translated content (automatically translated on 03-09-2026 01:57:27):
+event.type="Process Creation" and (endpoint.os="windows" and ((src.process.image.path contains "\\iit.exe" or src.process.image.path contains "\\intouch.exe" or src.process.image.path contains "\\I'm InTouch Go Installer.exe") or (tgt.process.image.path contains "\\iit.exe" or tgt.process.image.path contains "\\intouch.exe" or tgt.process.image.path contains "\\I'm InTouch Go Installer.exe")))
 ```
 
 
@@ -15,8 +15,9 @@ references:
     - https://github.com/magicsword-io/LOLRMM
 author: LOLRMM Project
 date: 2025-12-01
+modified: 2026-09-02
 tags:
-    - attack.execution
+    - attack.command-and-control
     - attack.t1219
 logsource:
     product: windows
@@ -24,14 +25,14 @@ logsource:
 detection:
     selection_parent:
         ParentImage|endswith:
-            - iit.exe
-            - intouch.exe
-            - I'm InTouch Go Installer.exe
+            - '\\iit.exe'
+            - '\\intouch.exe'
+            - '\\I''m InTouch Go Installer.exe'
     selection_image:
         Image|endswith:
-            - iit.exe
-            - intouch.exe
-            - I'm InTouch Go Installer.exe
+            - '\\iit.exe'
+            - '\\intouch.exe'
+            - '\\I''m InTouch Go Installer.exe'
     condition: 1 of selection_*
 falsepositives:
     - Legitimate use of I'm InTouch

@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 02-09-2026 01:51:41):
+// Translated content (automatically translated on 03-09-2026 01:57:27):
 event.category="file" and (endpoint.os="windows" and (tgt.file.path contains "C:\\Program Files\\Level\\level.exe" or tgt.file.path contains "C:\\Program Files\\Level\\osqueryi.exe" or tgt.file.path contains "C:\\Program Files\\Level\\level.log"))
 ```
 
@@ -15,8 +15,9 @@ references:
     - https://github.com/magicsword-io/LOLRMM
 author: LOLRMM Project
 date: 2025-12-01
+modified: 2026-09-02
 tags:
-    - attack.execution
+    - attack.command-and-control
     - attack.t1219
 logsource:
     product: windows
@@ -24,9 +25,9 @@ logsource:
 detection:
     selection:
         TargetFilename|endswith:
-            - C:\Program Files\Level\level.exe
-            - C:\Program Files\Level\osqueryi.exe
-            - C:\Program Files\Level\level.log
+            - 'C:\Program Files\Level\level.exe'
+            - 'C:\Program Files\Level\osqueryi.exe'
+            - 'C:\Program Files\Level\level.log'
     condition: selection
 falsepositives:
     - Legitimate use of Level.io

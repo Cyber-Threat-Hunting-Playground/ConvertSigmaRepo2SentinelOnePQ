@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 02-09-2026 01:51:41):
+// Translated content (automatically translated on 03-09-2026 01:57:27):
 (event.category in ("dns","url","ip")) and (endpoint.os="windows" and ((url.address="*plus*.site24x7.com" or url.address="*plus*.site24x7.eu" or url.address="*plus*.site24x7.in" or url.address="*plus*.site24x7.cn" or url.address="*plus*.site24x7.net.au") or (event.dns.request="*plus*.site24x7.com" or event.dns.request="*plus*.site24x7.eu" or event.dns.request="*plus*.site24x7.in" or event.dns.request="*plus*.site24x7.cn" or event.dns.request="*plus*.site24x7.net.au")))
 ```
 
@@ -15,8 +15,9 @@ references:
     - https://github.com/magicsword-io/LOLRMM
 author: LOLRMM Project
 date: 2025-12-01
+modified: 2026-09-02
 tags:
-    - attack.execution
+    - attack.command-and-control
     - attack.t1219
 logsource:
     product: windows

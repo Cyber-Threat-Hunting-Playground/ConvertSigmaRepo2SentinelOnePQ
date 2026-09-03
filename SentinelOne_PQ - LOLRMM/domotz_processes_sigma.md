@@ -1,6 +1,6 @@
 ```sql
-// Translated content (automatically translated on 02-09-2026 01:51:41):
-event.type="Process Creation" and (endpoint.os="windows" and ((src.process.image.path contains "domotz.exe" or src.process.image.path contains "Domotz Pro Desktop App.exe" or src.process.image.path contains "domotz_bash.exe" or src.process.image.path="*domotz*.exe" or src.process.image.path="*Domotz Pro Desktop App Setup*.exe" or src.process.image.path="*domotz-windows*.exe") or (tgt.process.image.path contains "domotz.exe" or tgt.process.image.path contains "Domotz Pro Desktop App.exe" or tgt.process.image.path contains "domotz_bash.exe" or tgt.process.image.path="*domotz*.exe" or tgt.process.image.path="*Domotz Pro Desktop App Setup*.exe" or tgt.process.image.path="*domotz-windows*.exe")))
+// Translated content (automatically translated on 03-09-2026 01:57:27):
+event.type="Process Creation" and (endpoint.os="windows" and ((src.process.image.path contains "\\domotz.exe" or src.process.image.path contains "\\Domotz Pro Desktop App.exe" or src.process.image.path contains "\\domotz_bash.exe" or src.process.image.path="*\\domotz*.exe" or src.process.image.path="*\\Domotz Pro Desktop App Setup*.exe" or src.process.image.path="*\\domotz-windows*.exe") or (tgt.process.image.path contains "\\domotz.exe" or tgt.process.image.path contains "\\Domotz Pro Desktop App.exe" or tgt.process.image.path contains "\\domotz_bash.exe" or tgt.process.image.path="*\\domotz*.exe" or tgt.process.image.path="*\\Domotz Pro Desktop App Setup*.exe" or tgt.process.image.path="*\\domotz-windows*.exe")))
 ```
 
 
@@ -15,8 +15,9 @@ references:
     - https://github.com/magicsword-io/LOLRMM
 author: LOLRMM Project
 date: 2025-12-01
+modified: 2026-09-02
 tags:
-    - attack.execution
+    - attack.command-and-control
     - attack.t1219
 logsource:
     product: windows
@@ -24,20 +25,20 @@ logsource:
 detection:
     selection_parent:
         ParentImage|endswith:
-            - domotz.exe
-            - Domotz Pro Desktop App.exe
-            - domotz_bash.exe
-            - domotz*.exe
-            - Domotz Pro Desktop App Setup*.exe
-            - domotz-windows*.exe
+            - '\\domotz.exe'
+            - '\\Domotz Pro Desktop App.exe'
+            - '\\domotz_bash.exe'
+            - '\\domotz*.exe'
+            - '\\Domotz Pro Desktop App Setup*.exe'
+            - '\\domotz-windows*.exe'
     selection_image:
         Image|endswith:
-            - domotz.exe
-            - Domotz Pro Desktop App.exe
-            - domotz_bash.exe
-            - domotz*.exe
-            - Domotz Pro Desktop App Setup*.exe
-            - domotz-windows*.exe
+            - '\\domotz.exe'
+            - '\\Domotz Pro Desktop App.exe'
+            - '\\domotz_bash.exe'
+            - '\\domotz*.exe'
+            - '\\Domotz Pro Desktop App Setup*.exe'
+            - '\\domotz-windows*.exe'
     condition: 1 of selection_*
 falsepositives:
     - Legitimate use of Domotz

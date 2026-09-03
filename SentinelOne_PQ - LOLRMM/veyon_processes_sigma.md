@@ -1,6 +1,6 @@
 ```sql
-// Translated content (automatically translated on 02-09-2026 01:51:41):
-event.type="Process Creation" and (endpoint.os="windows" and ((src.process.image.path contains "veyon-wcli.exe" or src.process.image.path contains "veyon-worker.exe" or src.process.image.path contains "veyon-server.exe" or src.process.image.path contains "veyon-service.exe" or src.process.image.path contains "veyon-master.exe") or (tgt.process.image.path contains "veyon-wcli.exe" or tgt.process.image.path contains "veyon-worker.exe" or tgt.process.image.path contains "veyon-server.exe" or tgt.process.image.path contains "veyon-service.exe" or tgt.process.image.path contains "veyon-master.exe")))
+// Translated content (automatically translated on 03-09-2026 01:57:27):
+event.type="Process Creation" and (endpoint.os="windows" and ((src.process.image.path contains "\\veyon-wcli.exe" or src.process.image.path contains "\\veyon-worker.exe" or src.process.image.path contains "\\veyon-server.exe" or src.process.image.path contains "\\veyon-service.exe" or src.process.image.path contains "\\veyon-master.exe") or (tgt.process.image.path contains "\\veyon-wcli.exe" or tgt.process.image.path contains "\\veyon-worker.exe" or tgt.process.image.path contains "\\veyon-server.exe" or tgt.process.image.path contains "\\veyon-service.exe" or tgt.process.image.path contains "\\veyon-master.exe")))
 ```
 
 
@@ -15,8 +15,9 @@ references:
     - https://github.com/magicsword-io/LOLRMM
 author: LOLRMM Project
 date: 2026-05-18
+modified: 2026-09-02
 tags:
-    - attack.execution
+    - attack.command-and-control
     - attack.t1219
 logsource:
     product: windows
@@ -24,18 +25,18 @@ logsource:
 detection:
     selection_parent:
         ParentImage|endswith:
-            - 'veyon-wcli.exe'
-            - 'veyon-worker.exe'
-            - 'veyon-server.exe'
-            - 'veyon-service.exe'
-            - 'veyon-master.exe'
+            - '\\veyon-wcli.exe'
+            - '\\veyon-worker.exe'
+            - '\\veyon-server.exe'
+            - '\\veyon-service.exe'
+            - '\\veyon-master.exe'
     selection_image:
         Image|endswith:
-            - 'veyon-wcli.exe'
-            - 'veyon-worker.exe'
-            - 'veyon-server.exe'
-            - 'veyon-service.exe'
-            - 'veyon-master.exe'
+            - '\\veyon-wcli.exe'
+            - '\\veyon-worker.exe'
+            - '\\veyon-server.exe'
+            - '\\veyon-service.exe'
+            - '\\veyon-master.exe'
     condition: 1 of selection_*
 falsepositives:
     - Legitimate use of Veyon

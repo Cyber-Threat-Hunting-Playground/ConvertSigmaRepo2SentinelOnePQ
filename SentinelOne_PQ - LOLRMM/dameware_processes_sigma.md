@@ -1,6 +1,6 @@
 ```sql
-// Translated content (automatically translated on 02-09-2026 01:51:41):
-event.type="Process Creation" and (endpoint.os="windows" and ((src.process.image.path="*SolarWinds-Dameware-DRS*.exe" or src.process.image.path="*DameWare Mini Remote Control*.exe" or src.process.image.path="*dntus*.exe" or src.process.image.path contains "dwrcs.exe" or src.process.image.path contains "dwrcst.exe" or src.process.image.path contains "DameWare Remote Support.exe" or src.process.image.path="*SolarWinds-Dameware-MRC*.exe") or (tgt.process.image.path="*SolarWinds-Dameware-DRS*.exe" or tgt.process.image.path="*DameWare Mini Remote Control*.exe" or tgt.process.image.path="*dntus*.exe" or tgt.process.image.path contains "dwrcs.exe" or tgt.process.image.path contains "dwrcst.exe" or tgt.process.image.path contains "DameWare Remote Support.exe" or tgt.process.image.path="*SolarWinds-Dameware-MRC*.exe")))
+// Translated content (automatically translated on 03-09-2026 01:57:27):
+event.type="Process Creation" and (endpoint.os="windows" and ((src.process.image.path="*\\SolarWinds-Dameware-DRS*.exe" or src.process.image.path="*\\DameWare Mini Remote Control*.exe" or src.process.image.path="*\\dntus*.exe" or src.process.image.path contains "\\dwrcs.exe" or src.process.image.path contains "\\dwrcst.exe" or src.process.image.path contains "\\DameWare Remote Support.exe" or src.process.image.path="*\\SolarWinds-Dameware-MRC*.exe") or (tgt.process.image.path="*\\SolarWinds-Dameware-DRS*.exe" or tgt.process.image.path="*\\DameWare Mini Remote Control*.exe" or tgt.process.image.path="*\\dntus*.exe" or tgt.process.image.path contains "\\dwrcs.exe" or tgt.process.image.path contains "\\dwrcst.exe" or tgt.process.image.path contains "\\DameWare Remote Support.exe" or tgt.process.image.path="*\\SolarWinds-Dameware-MRC*.exe")))
 ```
 
 
@@ -15,8 +15,9 @@ references:
     - https://github.com/magicsword-io/LOLRMM
 author: LOLRMM Project
 date: 2025-12-01
+modified: 2026-09-02
 tags:
-    - attack.execution
+    - attack.command-and-control
     - attack.t1219
 logsource:
     product: windows
@@ -24,22 +25,22 @@ logsource:
 detection:
     selection_parent:
         ParentImage|endswith:
-            - SolarWinds-Dameware-DRS*.exe
-            - DameWare Mini Remote Control*.exe
-            - dntus*.exe
-            - dwrcs.exe
-            - dwrcst.exe
-            - DameWare Remote Support.exe
-            - SolarWinds-Dameware-MRC*.exe
+            - '\\SolarWinds-Dameware-DRS*.exe'
+            - '\\DameWare Mini Remote Control*.exe'
+            - '\\dntus*.exe'
+            - '\\dwrcs.exe'
+            - '\\dwrcst.exe'
+            - '\\DameWare Remote Support.exe'
+            - '\\SolarWinds-Dameware-MRC*.exe'
     selection_image:
         Image|endswith:
-            - SolarWinds-Dameware-DRS*.exe
-            - DameWare Mini Remote Control*.exe
-            - dntus*.exe
-            - dwrcs.exe
-            - dwrcst.exe
-            - DameWare Remote Support.exe
-            - SolarWinds-Dameware-MRC*.exe
+            - '\\SolarWinds-Dameware-DRS*.exe'
+            - '\\DameWare Mini Remote Control*.exe'
+            - '\\dntus*.exe'
+            - '\\dwrcs.exe'
+            - '\\dwrcst.exe'
+            - '\\DameWare Remote Support.exe'
+            - '\\SolarWinds-Dameware-MRC*.exe'
     condition: 1 of selection_*
 falsepositives:
     - Legitimate use of DameWare

@@ -1,6 +1,6 @@
 ```sql
-// Translated content (automatically translated on 02-09-2026 01:51:41):
-event.category="registry" and (endpoint.os="windows" and (registry.keyPath contains "HKLM\\SOFTWARE\\TeamViewer\*" or registry.keyPath contains "HKU\\<SID>\\SOFTWARE\\TeamViewer\*" or registry.keyPath contains "HKLM\\SYSTEM\\CurrentControlSet\\Services\\TeamViewer\*" or registry.keyPath contains "HKLM\\SOFTWARE\\TeamViewer\\ConnectionHistory" or registry.keyPath contains "HKLM\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Uninstall\\TeamViewer\*" or registry.keyPath contains "HKU\\SID\\SOFTWARE\\TeamViewer\\MainWindowHandle" or registry.keyPath contains "HKU\\SID\\SOFTWARE\\TeamViewer\\DesktopWallpaperSingleImage" or registry.keyPath contains "HKU\\SID\\SOFTWARE\\TeamViewer\\DesktopWallpaperSingleImagePath" or registry.keyPath contains "HKU\\SID\\SOFTWARE\\TeamViewer\\DesktopWallpaperSingleImagePosition" or registry.keyPath contains "HKU\\SID\\SOFTWARE\\TeamViewer\\MinimizeToTray" or registry.keyPath contains "HKU\\SID\\SOFTWARE\\TeamViewer\\MultiMedia\\AudioUserSelectedCapturingEndpoint" or registry.keyPath contains "HKU\\SID\\SOFTWARE\\TeamViewer\\MultiMedia\\AudioSendingVolumeV2" or registry.keyPath contains "HKU\\SID\\SOFTWARE\\TeamViewer\\MultiMedia\\AudioUserSelectedRenderingEndpoint" or registry.keyPath contains "HKLM\\SOFTWARE\\TeamViewer\\ConnectionHistory" or registry.keyPath contains "HKU\\SID\\SOFTWARE\\TeamViewer\\ClientWindow_Mode" or registry.keyPath contains "HKU\\SID\\SOFTWARE\\TeamViewer\\ClientWindowPositions"))
+// Translated content (automatically translated on 03-09-2026 01:57:27):
+event.category="registry" and (endpoint.os="windows" and (registry.keyPath contains "HKLM\\SOFTWARE\\TeamViewer\*" or registry.keyPath contains "HKU\\<SID>\\SOFTWARE\\TeamViewer\*" or registry.keyPath contains "HKLM\\SYSTEM\\CurrentControlSet\\Services\\TeamViewer\*" or registry.keyPath contains "HKLM\\SOFTWARE\\TeamViewer\\ConnectionHistory" or registry.keyPath contains "HKLM\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Uninstall\\TeamViewer\*" or registry.keyPath contains "HKU\\SID\\SOFTWARE\\TeamViewer\\MainWindowHandle" or registry.keyPath contains "HKU\\SID\\SOFTWARE\\TeamViewer\\DesktopWallpaperSingleImage" or registry.keyPath contains "HKU\\SID\\SOFTWARE\\TeamViewer\\DesktopWallpaperSingleImagePath" or registry.keyPath contains "HKU\\SID\\SOFTWARE\\TeamViewer\\DesktopWallpaperSingleImagePosition" or registry.keyPath contains "HKU\\SID\\SOFTWARE\\TeamViewer\\MinimizeToTray" or registry.keyPath contains "HKU\\SID\\SOFTWARE\\TeamViewer\\MultiMedia\\AudioUserSelectedCapturingEndpoint" or registry.keyPath contains "HKU\\SID\\SOFTWARE\\TeamViewer\\MultiMedia\\AudioSendingVolumeV2" or registry.keyPath contains "HKU\\SID\\SOFTWARE\\TeamViewer\\MultiMedia\\AudioUserSelectedRenderingEndpoint" or registry.keyPath contains "HKU\\SID\\SOFTWARE\\TeamViewer\\ClientWindow_Mode" or registry.keyPath contains "HKU\\SID\\SOFTWARE\\TeamViewer\\ClientWindowPositions"))
 ```
 
 
@@ -15,8 +15,9 @@ references:
     - https://github.com/magicsword-io/LOLRMM
 author: LOLRMM Project
 date: 2025-12-01
+modified: 2026-09-02
 tags:
-    - attack.execution
+    - attack.command-and-control
     - attack.t1219
 logsource:
     product: windows
@@ -24,22 +25,21 @@ logsource:
 detection:
     selection:
         TargetObject|contains:
-            - HKLM\SOFTWARE\TeamViewer\*
-            - HKU\<SID>\SOFTWARE\TeamViewer\*
-            - HKLM\SYSTEM\CurrentControlSet\Services\TeamViewer\*
-            - HKLM\SOFTWARE\TeamViewer\ConnectionHistory
-            - HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\Uninstall\TeamViewer\*
-            - HKU\SID\SOFTWARE\TeamViewer\MainWindowHandle
-            - HKU\SID\SOFTWARE\TeamViewer\DesktopWallpaperSingleImage
-            - HKU\SID\SOFTWARE\TeamViewer\DesktopWallpaperSingleImagePath
-            - HKU\SID\SOFTWARE\TeamViewer\DesktopWallpaperSingleImagePosition
-            - HKU\SID\SOFTWARE\TeamViewer\MinimizeToTray
-            - HKU\SID\SOFTWARE\TeamViewer\MultiMedia\AudioUserSelectedCapturingEndpoint
-            - HKU\SID\SOFTWARE\TeamViewer\MultiMedia\AudioSendingVolumeV2
-            - HKU\SID\SOFTWARE\TeamViewer\MultiMedia\AudioUserSelectedRenderingEndpoint
-            - HKLM\SOFTWARE\TeamViewer\ConnectionHistory
-            - HKU\SID\SOFTWARE\TeamViewer\ClientWindow_Mode
-            - HKU\SID\SOFTWARE\TeamViewer\ClientWindowPositions
+            - 'HKLM\SOFTWARE\TeamViewer\*'
+            - 'HKU\<SID>\SOFTWARE\TeamViewer\*'
+            - 'HKLM\SYSTEM\CurrentControlSet\Services\TeamViewer\*'
+            - 'HKLM\SOFTWARE\TeamViewer\ConnectionHistory'
+            - 'HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\Uninstall\TeamViewer\*'
+            - 'HKU\SID\SOFTWARE\TeamViewer\MainWindowHandle'
+            - 'HKU\SID\SOFTWARE\TeamViewer\DesktopWallpaperSingleImage'
+            - 'HKU\SID\SOFTWARE\TeamViewer\DesktopWallpaperSingleImagePath'
+            - 'HKU\SID\SOFTWARE\TeamViewer\DesktopWallpaperSingleImagePosition'
+            - 'HKU\SID\SOFTWARE\TeamViewer\MinimizeToTray'
+            - 'HKU\SID\SOFTWARE\TeamViewer\MultiMedia\AudioUserSelectedCapturingEndpoint'
+            - 'HKU\SID\SOFTWARE\TeamViewer\MultiMedia\AudioSendingVolumeV2'
+            - 'HKU\SID\SOFTWARE\TeamViewer\MultiMedia\AudioUserSelectedRenderingEndpoint'
+            - 'HKU\SID\SOFTWARE\TeamViewer\ClientWindow_Mode'
+            - 'HKU\SID\SOFTWARE\TeamViewer\ClientWindowPositions'
     condition: selection
 falsepositives:
     - Legitimate use of TeamViewer

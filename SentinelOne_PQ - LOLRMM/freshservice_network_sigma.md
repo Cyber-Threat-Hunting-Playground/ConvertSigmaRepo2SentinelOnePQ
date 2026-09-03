@@ -1,6 +1,6 @@
 ```sql
-// Translated content (automatically translated on 02-09-2026 01:51:41):
-(event.category in ("dns","url","ip")) and (endpoint.os="windows" and ((url.address contains "fstools.freshservice.com" or url.address contains ".freshservice.com" or url.address contains "freshservice.com" or url.address contains "www.freshservice.com" or url.address contains "fstools.freshasset.com" or url.address contains "freshasset.com" or url.address contains ".myfreshworks.com" or url.address contains ".freshworksapi.com" or url.address contains ".freshworks.com" or url.address contains ".freshconnect.io" or url.address contains "api.fdcollab.com" or url.address contains ".fdcollab.com" or url.address contains ".freshchat.com" or url.address contains ".webpush.freshchat.com" or url.address contains "apicdn-wchat.freshchat.com" or url.address contains ".rtschannel.com" or url.address contains ".freshdev.io" or url.address contains "static.freshdev.io" or url.address contains ".freshcloud.io" or url.address contains ".in-freshbots.ai" or url.address contains "<internal-customer-ranges>" or url.address contains "<internal-customer-ranges>") or (event.dns.request contains "fstools.freshservice.com" or event.dns.request contains ".freshservice.com" or event.dns.request contains "freshservice.com" or event.dns.request contains "www.freshservice.com" or event.dns.request contains "fstools.freshasset.com" or event.dns.request contains "freshasset.com" or event.dns.request contains ".myfreshworks.com" or event.dns.request contains ".freshworksapi.com" or event.dns.request contains ".freshworks.com" or event.dns.request contains ".freshconnect.io" or event.dns.request contains "api.fdcollab.com" or event.dns.request contains ".fdcollab.com" or event.dns.request contains ".freshchat.com" or event.dns.request contains ".webpush.freshchat.com" or event.dns.request contains "apicdn-wchat.freshchat.com" or event.dns.request contains ".rtschannel.com" or event.dns.request contains ".freshdev.io" or event.dns.request contains "static.freshdev.io" or event.dns.request contains ".freshcloud.io" or event.dns.request contains ".in-freshbots.ai" or event.dns.request contains "<internal-customer-ranges>" or event.dns.request contains "<internal-customer-ranges>")))
+// Translated content (automatically translated on 03-09-2026 01:57:27):
+(event.category in ("dns","url","ip")) and (endpoint.os="windows" and ((url.address contains "fstools.freshservice.com" or url.address contains ".freshservice.com" or url.address contains "freshservice.com" or url.address contains "www.freshservice.com" or url.address contains "fstools.freshasset.com" or url.address contains "freshasset.com" or url.address contains ".myfreshworks.com" or url.address contains ".freshworksapi.com" or url.address contains ".freshworks.com" or url.address contains ".freshconnect.io" or url.address contains "api.fdcollab.com" or url.address contains ".fdcollab.com" or url.address contains ".freshchat.com" or url.address contains ".webpush.freshchat.com" or url.address contains "apicdn-wchat.freshchat.com" or url.address contains ".rtschannel.com" or url.address contains ".freshdev.io" or url.address contains "static.freshdev.io" or url.address contains ".freshcloud.io" or url.address contains ".in-freshbots.ai" or url.address contains "<internal-customer-ranges>") or (event.dns.request contains "fstools.freshservice.com" or event.dns.request contains ".freshservice.com" or event.dns.request contains "freshservice.com" or event.dns.request contains "www.freshservice.com" or event.dns.request contains "fstools.freshasset.com" or event.dns.request contains "freshasset.com" or event.dns.request contains ".myfreshworks.com" or event.dns.request contains ".freshworksapi.com" or event.dns.request contains ".freshworks.com" or event.dns.request contains ".freshconnect.io" or event.dns.request contains "api.fdcollab.com" or event.dns.request contains ".fdcollab.com" or event.dns.request contains ".freshchat.com" or event.dns.request contains ".webpush.freshchat.com" or event.dns.request contains "apicdn-wchat.freshchat.com" or event.dns.request contains ".rtschannel.com" or event.dns.request contains ".freshdev.io" or event.dns.request contains "static.freshdev.io" or event.dns.request contains ".freshcloud.io" or event.dns.request contains ".in-freshbots.ai" or event.dns.request contains "<internal-customer-ranges>")))
 ```
 
 
@@ -15,8 +15,9 @@ references:
     - https://github.com/magicsword-io/LOLRMM
 author: LOLRMM Project
 date: 2026-05-18
+modified: 2026-09-02
 tags:
-    - attack.execution
+    - attack.command-and-control
     - attack.t1219
 logsource:
     product: windows
@@ -44,7 +45,6 @@ detection:
             - 'static.freshdev.io'
             - '*.freshcloud.io'
             - '*.in-freshbots.ai'
-            - '<internal-customer-ranges>'
             - '<internal-customer-ranges>'
     condition: selection
 falsepositives:

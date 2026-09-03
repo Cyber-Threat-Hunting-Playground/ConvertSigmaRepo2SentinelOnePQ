@@ -1,6 +1,6 @@
 ```sql
-// Translated content (automatically translated on 02-09-2026 01:51:41):
-event.type="Process Creation" and (endpoint.os="windows" and ((src.process.image.path contains "ScreenConnect.ClientService.exe" or src.process.image.path contains "Remote Workforce Client.exe" or src.process.image.path contains "ScreenConnect.ClientService.exe" or src.process.image.path contains "ScreenConnect.WindowsClient.exe" or src.process.image.path="*screenconnect*.exe" or src.process.image.path contains "screenconnect.windowsclient.exe" or src.process.image.path="*ConnectWiseControl*.exe" or src.process.image.path="*connectwise*.exe" or src.process.image.path contains "screenconnect.clientservice.exe") or (tgt.process.image.path contains "ScreenConnect.ClientService.exe" or tgt.process.image.path contains "Remote Workforce Client.exe" or tgt.process.image.path contains "ScreenConnect.ClientService.exe" or tgt.process.image.path contains "ScreenConnect.WindowsClient.exe" or tgt.process.image.path="*screenconnect*.exe" or tgt.process.image.path contains "screenconnect.windowsclient.exe" or tgt.process.image.path="*ConnectWiseControl*.exe" or tgt.process.image.path="*connectwise*.exe" or tgt.process.image.path contains "screenconnect.clientservice.exe")))
+// Translated content (automatically translated on 03-09-2026 01:57:27):
+event.type="Process Creation" and (endpoint.os="windows" and ((src.process.image.path contains "\\ScreenConnect.ClientService.exe" or src.process.image.path contains "\\Remote Workforce Client.exe" or src.process.image.path contains "\\ScreenConnect.WindowsClient.exe" or src.process.image.path="*\\screenconnect*.exe" or src.process.image.path="*\\ConnectWiseControl*.exe" or src.process.image.path="*\\connectwise*.exe") or (tgt.process.image.path contains "\\ScreenConnect.ClientService.exe" or tgt.process.image.path contains "\\Remote Workforce Client.exe" or tgt.process.image.path contains "\\ScreenConnect.WindowsClient.exe" or tgt.process.image.path="*\\screenconnect*.exe" or tgt.process.image.path="*\\ConnectWiseControl*.exe" or tgt.process.image.path="*\\connectwise*.exe")))
 ```
 
 
@@ -15,8 +15,9 @@ references:
     - https://github.com/magicsword-io/LOLRMM
 author: LOLRMM Project
 date: 2025-12-01
+modified: 2026-09-02
 tags:
-    - attack.execution
+    - attack.command-and-control
     - attack.t1219
 logsource:
     product: windows
@@ -24,26 +25,20 @@ logsource:
 detection:
     selection_parent:
         ParentImage|endswith:
-            - 'ScreenConnect.ClientService.exe'
-            - 'Remote Workforce Client.exe'
-            - 'ScreenConnect.ClientService.exe'
-            - 'ScreenConnect.WindowsClient.exe'
-            - 'screenconnect*.exe'
-            - 'screenconnect.windowsclient.exe'
-            - 'ConnectWiseControl*.exe'
-            - 'connectwise*.exe'
-            - 'screenconnect.clientservice.exe'
+            - '\\ScreenConnect.ClientService.exe'
+            - '\\Remote Workforce Client.exe'
+            - '\\ScreenConnect.WindowsClient.exe'
+            - '\\screenconnect*.exe'
+            - '\\ConnectWiseControl*.exe'
+            - '\\connectwise*.exe'
     selection_image:
         Image|endswith:
-            - 'ScreenConnect.ClientService.exe'
-            - 'Remote Workforce Client.exe'
-            - 'ScreenConnect.ClientService.exe'
-            - 'ScreenConnect.WindowsClient.exe'
-            - 'screenconnect*.exe'
-            - 'screenconnect.windowsclient.exe'
-            - 'ConnectWiseControl*.exe'
-            - 'connectwise*.exe'
-            - 'screenconnect.clientservice.exe'
+            - '\\ScreenConnect.ClientService.exe'
+            - '\\Remote Workforce Client.exe'
+            - '\\ScreenConnect.WindowsClient.exe'
+            - '\\screenconnect*.exe'
+            - '\\ConnectWiseControl*.exe'
+            - '\\connectwise*.exe'
     condition: 1 of selection_*
 falsepositives:
     - Legitimate use of ScreenConnect

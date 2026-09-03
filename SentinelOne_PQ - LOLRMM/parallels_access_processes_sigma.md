@@ -1,6 +1,6 @@
 ```sql
-// Translated content (automatically translated on 02-09-2026 01:51:41):
-event.type="Process Creation" and (endpoint.os="windows" and ((src.process.image.path="*parallelsaccess-*.exe" or src.process.image.path contains "TSClient.exe" or src.process.image.path contains "prl_deskctl_agent.exe" or src.process.image.path contains "prl_deskctl_wizard.exe" or src.process.image.path contains "prl_pm_service.exe") or (tgt.process.image.path="*parallelsaccess-*.exe" or tgt.process.image.path contains "TSClient.exe" or tgt.process.image.path contains "prl_deskctl_agent.exe" or tgt.process.image.path contains "prl_deskctl_wizard.exe" or tgt.process.image.path contains "prl_pm_service.exe")))
+// Translated content (automatically translated on 03-09-2026 01:57:27):
+event.type="Process Creation" and (endpoint.os="windows" and ((src.process.image.path="*\\parallelsaccess-*.exe" or src.process.image.path contains "\\TSClient.exe" or src.process.image.path contains "\\prl_deskctl_agent.exe" or src.process.image.path contains "\\prl_deskctl_wizard.exe" or src.process.image.path contains "\\prl_pm_service.exe") or (tgt.process.image.path="*\\parallelsaccess-*.exe" or tgt.process.image.path contains "\\TSClient.exe" or tgt.process.image.path contains "\\prl_deskctl_agent.exe" or tgt.process.image.path contains "\\prl_deskctl_wizard.exe" or tgt.process.image.path contains "\\prl_pm_service.exe")))
 ```
 
 
@@ -15,8 +15,9 @@ references:
     - https://github.com/magicsword-io/LOLRMM
 author: LOLRMM Project
 date: 2025-12-01
+modified: 2026-09-02
 tags:
-    - attack.execution
+    - attack.command-and-control
     - attack.t1219
 logsource:
     product: windows
@@ -24,18 +25,18 @@ logsource:
 detection:
     selection_parent:
         ParentImage|endswith:
-            - parallelsaccess-*.exe
-            - TSClient.exe
-            - prl_deskctl_agent.exe
-            - prl_deskctl_wizard.exe
-            - prl_pm_service.exe
+            - '\\parallelsaccess-*.exe'
+            - '\\TSClient.exe'
+            - '\\prl_deskctl_agent.exe'
+            - '\\prl_deskctl_wizard.exe'
+            - '\\prl_pm_service.exe'
     selection_image:
         Image|endswith:
-            - parallelsaccess-*.exe
-            - TSClient.exe
-            - prl_deskctl_agent.exe
-            - prl_deskctl_wizard.exe
-            - prl_pm_service.exe
+            - '\\parallelsaccess-*.exe'
+            - '\\TSClient.exe'
+            - '\\prl_deskctl_agent.exe'
+            - '\\prl_deskctl_wizard.exe'
+            - '\\prl_pm_service.exe'
     condition: 1 of selection_*
 falsepositives:
     - Legitimate use of Parallels Access

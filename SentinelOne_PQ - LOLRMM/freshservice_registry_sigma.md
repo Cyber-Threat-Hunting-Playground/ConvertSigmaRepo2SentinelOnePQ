@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 02-09-2026 01:51:41):
+// Translated content (automatically translated on 03-09-2026 01:57:27):
 event.category="registry" and (endpoint.os="windows" and (registry.keyPath contains "HKLM\\SYSTEM\\CurrentControlSet\\Services\\FSAgentService" or registry.keyPath contains "HKLM\\SYSTEM\\CurrentControlSet\\Services\\FreshServiceScan" or registry.keyPath contains "HKLM\\SOFTWARE\\Freshdesk\\FSAgent" or registry.keyPath contains "HKLM\\SOFTWARE\\WOW6432Node\\Freshdesk\\FSAgent" or registry.keyPath contains "HKLM\\SOFTWARE\\Freshworks\\FreshServiceProbe" or registry.keyPath contains "HKLM\\SOFTWARE\\WOW6432Node\\Freshworks\\FreshServiceProbe" or registry.keyPath contains "HKLM\\SOFTWARE\\Microsoft\\FreshService Probe" or registry.keyPath contains "HKLM\\SOFTWARE\\FreshService Probe" or registry.keyPath contains "HKLM\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Uninstall\\{8BE075F9-36C7-4145-8BC0-35D420223576}" or registry.keyPath contains "HKLM\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Uninstall\\{892D2C60-AFC1-48C0-8C5D-A2DC856A3605}"))
 ```
 
@@ -15,8 +15,9 @@ references:
     - https://github.com/magicsword-io/LOLRMM
 author: LOLRMM Project
 date: 2026-05-18
+modified: 2026-09-02
 tags:
-    - attack.execution
+    - attack.command-and-control
     - attack.t1219
 logsource:
     product: windows

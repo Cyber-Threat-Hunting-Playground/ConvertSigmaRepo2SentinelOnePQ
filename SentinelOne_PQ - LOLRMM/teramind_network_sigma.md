@@ -1,6 +1,6 @@
 ```sql
-// Translated content (automatically translated on 02-09-2026 01:51:41):
-(event.category in ("dns","url","ip")) and (endpoint.os="windows" and ((url.address contains ".teramind.co" or url.address contains "teramind.co" or url.address contains "www.teramind.co" or url.address contains "rt.teramind.co" or url.address contains "www.teramind.co" or url.address contains "sentry.dev.teramind.co" or url.address contains "<on-prem-master-server-host>" or url.address contains "<on-prem-app-server-host>" or url.address contains ".teramind.co" or url.address contains "www.teramind.co") or (event.dns.request contains ".teramind.co" or event.dns.request contains "teramind.co" or event.dns.request contains "www.teramind.co" or event.dns.request contains "rt.teramind.co" or event.dns.request contains "www.teramind.co" or event.dns.request contains "sentry.dev.teramind.co" or event.dns.request contains "<on-prem-master-server-host>" or event.dns.request contains "<on-prem-app-server-host>" or event.dns.request contains ".teramind.co" or event.dns.request contains "www.teramind.co")))
+// Translated content (automatically translated on 03-09-2026 01:57:27):
+(event.category in ("dns","url","ip")) and (endpoint.os="windows" and ((url.address contains ".teramind.co" or url.address contains "teramind.co" or url.address contains "www.teramind.co" or url.address contains "rt.teramind.co" or url.address contains "sentry.dev.teramind.co" or url.address contains "<on-prem-master-server-host>" or url.address contains "<on-prem-app-server-host>") or (event.dns.request contains ".teramind.co" or event.dns.request contains "teramind.co" or event.dns.request contains "www.teramind.co" or event.dns.request contains "rt.teramind.co" or event.dns.request contains "sentry.dev.teramind.co" or event.dns.request contains "<on-prem-master-server-host>" or event.dns.request contains "<on-prem-app-server-host>")))
 ```
 
 
@@ -15,8 +15,9 @@ references:
     - https://github.com/magicsword-io/LOLRMM
 author: LOLRMM Project
 date: 2026-05-18
+modified: 2026-09-02
 tags:
-    - attack.execution
+    - attack.command-and-control
     - attack.t1219
 logsource:
     product: windows
@@ -28,12 +29,9 @@ detection:
             - 'teramind.co'
             - 'www.teramind.co'
             - 'rt.teramind.co'
-            - 'www.teramind.co'
             - 'sentry.dev.teramind.co'
             - '<on-prem-master-server-host>'
             - '<on-prem-app-server-host>'
-            - '*.teramind.co'
-            - 'www.teramind.co'
     condition: selection
 falsepositives:
     - Legitimate use of Teramind

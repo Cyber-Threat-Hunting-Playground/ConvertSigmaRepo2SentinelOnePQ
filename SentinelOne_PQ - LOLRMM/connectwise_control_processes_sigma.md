@@ -1,6 +1,6 @@
 ```sql
-// Translated content (automatically translated on 02-09-2026 01:51:41):
-event.type="Process Creation" and (endpoint.os="windows" and ((src.process.image.path contains "connectwisechat-customer.exe" or src.process.image.path contains "connectwisecontrol.client.exe" or src.process.image.path contains "screenconnect.windowsclient.exe") or (tgt.process.image.path contains "connectwisechat-customer.exe" or tgt.process.image.path contains "connectwisecontrol.client.exe" or tgt.process.image.path contains "screenconnect.windowsclient.exe")))
+// Translated content (automatically translated on 03-09-2026 01:57:27):
+event.type="Process Creation" and (endpoint.os="windows" and ((src.process.image.path contains "\\connectwisechat-customer.exe" or src.process.image.path contains "\\connectwisecontrol.client.exe" or src.process.image.path contains "\\screenconnect.windowsclient.exe") or (tgt.process.image.path contains "\\connectwisechat-customer.exe" or tgt.process.image.path contains "\\connectwisecontrol.client.exe" or tgt.process.image.path contains "\\screenconnect.windowsclient.exe")))
 ```
 
 
@@ -15,8 +15,9 @@ references:
     - https://github.com/magicsword-io/LOLRMM
 author: LOLRMM Project
 date: 2025-12-01
+modified: 2026-09-02
 tags:
-    - attack.execution
+    - attack.command-and-control
     - attack.t1219
 logsource:
     product: windows
@@ -24,14 +25,14 @@ logsource:
 detection:
     selection_parent:
         ParentImage|endswith:
-            - connectwisechat-customer.exe
-            - connectwisecontrol.client.exe
-            - screenconnect.windowsclient.exe
+            - '\\connectwisechat-customer.exe'
+            - '\\connectwisecontrol.client.exe'
+            - '\\screenconnect.windowsclient.exe'
     selection_image:
         Image|endswith:
-            - connectwisechat-customer.exe
-            - connectwisecontrol.client.exe
-            - screenconnect.windowsclient.exe
+            - '\\connectwisechat-customer.exe'
+            - '\\connectwisecontrol.client.exe'
+            - '\\screenconnect.windowsclient.exe'
     condition: 1 of selection_*
 falsepositives:
     - Legitimate use of ConnectWise Control

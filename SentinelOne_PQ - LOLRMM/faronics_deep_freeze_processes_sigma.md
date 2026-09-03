@@ -1,6 +1,6 @@
 ```sql
-// Translated content (automatically translated on 02-09-2026 01:51:41):
-event.type="Process Creation" and (endpoint.os="windows" and ((src.process.image.path contains "DFServ.exe" or src.process.image.path contains "DFServEx.exe" or src.process.image.path contains "DFWks.exe" or src.process.image.path contains "DFC.exe" or src.process.image.path contains "DFServ.exe" or src.process.image.path contains "DFServEx.exe" or src.process.image.path contains "DFWks.exe" or src.process.image.path contains "DFStd.exe" or src.process.image.path contains "DFStdInstall.exe" or src.process.image.path contains "DFC.exe" or src.process.image.path contains "CloudWksInstall.exe" or src.process.image.path contains "DFInst.exe") or (tgt.process.image.path contains "DFServ.exe" or tgt.process.image.path contains "DFServEx.exe" or tgt.process.image.path contains "DFWks.exe" or tgt.process.image.path contains "DFC.exe" or tgt.process.image.path contains "DFServ.exe" or tgt.process.image.path contains "DFServEx.exe" or tgt.process.image.path contains "DFWks.exe" or tgt.process.image.path contains "DFStd.exe" or tgt.process.image.path contains "DFStdInstall.exe" or tgt.process.image.path contains "DFC.exe" or tgt.process.image.path contains "CloudWksInstall.exe" or tgt.process.image.path contains "DFInst.exe")))
+// Translated content (automatically translated on 03-09-2026 01:57:27):
+event.type="Process Creation" and (endpoint.os="windows" and ((src.process.image.path contains "\\DFServ.exe" or src.process.image.path contains "\\DFServEx.exe" or src.process.image.path contains "\\DFWks.exe" or src.process.image.path contains "\\DFC.exe" or src.process.image.path contains "\\DFStd.exe" or src.process.image.path contains "\\DFStdInstall.exe" or src.process.image.path contains "\\CloudWksInstall.exe" or src.process.image.path contains "\\DFInst.exe") or (tgt.process.image.path contains "\\DFServ.exe" or tgt.process.image.path contains "\\DFServEx.exe" or tgt.process.image.path contains "\\DFWks.exe" or tgt.process.image.path contains "\\DFC.exe" or tgt.process.image.path contains "\\DFStd.exe" or tgt.process.image.path contains "\\DFStdInstall.exe" or tgt.process.image.path contains "\\CloudWksInstall.exe" or tgt.process.image.path contains "\\DFInst.exe")))
 ```
 
 
@@ -15,8 +15,9 @@ references:
     - https://github.com/magicsword-io/LOLRMM
 author: LOLRMM Project
 date: 2026-05-18
+modified: 2026-09-02
 tags:
-    - attack.execution
+    - attack.command-and-control
     - attack.t1219
 logsource:
     product: windows
@@ -24,32 +25,24 @@ logsource:
 detection:
     selection_parent:
         ParentImage|endswith:
-            - 'DFServ.exe'
-            - 'DFServEx.exe'
-            - 'DFWks.exe'
-            - 'DFC.exe'
-            - 'DFServ.exe'
-            - 'DFServEx.exe'
-            - 'DFWks.exe'
-            - 'DFStd.exe'
-            - 'DFStdInstall.exe'
-            - 'DFC.exe'
-            - 'CloudWksInstall.exe'
-            - 'DFInst.exe'
+            - '\\DFServ.exe'
+            - '\\DFServEx.exe'
+            - '\\DFWks.exe'
+            - '\\DFC.exe'
+            - '\\DFStd.exe'
+            - '\\DFStdInstall.exe'
+            - '\\CloudWksInstall.exe'
+            - '\\DFInst.exe'
     selection_image:
         Image|endswith:
-            - 'DFServ.exe'
-            - 'DFServEx.exe'
-            - 'DFWks.exe'
-            - 'DFC.exe'
-            - 'DFServ.exe'
-            - 'DFServEx.exe'
-            - 'DFWks.exe'
-            - 'DFStd.exe'
-            - 'DFStdInstall.exe'
-            - 'DFC.exe'
-            - 'CloudWksInstall.exe'
-            - 'DFInst.exe'
+            - '\\DFServ.exe'
+            - '\\DFServEx.exe'
+            - '\\DFWks.exe'
+            - '\\DFC.exe'
+            - '\\DFStd.exe'
+            - '\\DFStdInstall.exe'
+            - '\\CloudWksInstall.exe'
+            - '\\DFInst.exe'
     condition: 1 of selection_*
 falsepositives:
     - Legitimate use of Faronics Deep Freeze

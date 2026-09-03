@@ -1,6 +1,6 @@
 ```sql
-// Translated content (automatically translated on 02-09-2026 01:51:41):
-event.type="Process Creation" and (endpoint.os="windows" and ((src.process.image.path contains "remotepcservice.exe" or src.process.image.path contains "RemotePC.exe" or src.process.image.path contains "remotepchost.exe" or src.process.image.path contains "rpcsuite.exe" or src.process.image.path contains "RemotePCService.exe" or src.process.image.path contains "RemotePCService.exe") or (tgt.process.image.path contains "remotepcservice.exe" or tgt.process.image.path contains "RemotePC.exe" or tgt.process.image.path contains "remotepchost.exe" or tgt.process.image.path contains "rpcsuite.exe" or tgt.process.image.path contains "RemotePCService.exe" or tgt.process.image.path contains "RemotePCService.exe")))
+// Translated content (automatically translated on 03-09-2026 01:57:27):
+event.type="Process Creation" and (endpoint.os="windows" and ((src.process.image.path contains "\\remotepcservice.exe" or src.process.image.path contains "\\RemotePC.exe" or src.process.image.path contains "\\remotepchost.exe" or src.process.image.path contains "\\rpcsuite.exe") or (tgt.process.image.path contains "\\remotepcservice.exe" or tgt.process.image.path contains "\\RemotePC.exe" or tgt.process.image.path contains "\\remotepchost.exe" or tgt.process.image.path contains "\\rpcsuite.exe")))
 ```
 
 
@@ -15,8 +15,9 @@ references:
     - https://github.com/magicsword-io/LOLRMM
 author: LOLRMM Project
 date: 2025-12-01
+modified: 2026-09-02
 tags:
-    - attack.execution
+    - attack.command-and-control
     - attack.t1219
 logsource:
     product: windows
@@ -24,20 +25,16 @@ logsource:
 detection:
     selection_parent:
         ParentImage|endswith:
-            - remotepcservice.exe
-            - RemotePC.exe
-            - remotepchost.exe
-            - rpcsuite.exe
-            - RemotePCService.exe
-            - RemotePCService.exe
+            - '\\remotepcservice.exe'
+            - '\\RemotePC.exe'
+            - '\\remotepchost.exe'
+            - '\\rpcsuite.exe'
     selection_image:
         Image|endswith:
-            - remotepcservice.exe
-            - RemotePC.exe
-            - remotepchost.exe
-            - rpcsuite.exe
-            - RemotePCService.exe
-            - RemotePCService.exe
+            - '\\remotepcservice.exe'
+            - '\\RemotePC.exe'
+            - '\\remotepchost.exe'
+            - '\\rpcsuite.exe'
     condition: 1 of selection_*
 falsepositives:
     - Legitimate use of RemotePC

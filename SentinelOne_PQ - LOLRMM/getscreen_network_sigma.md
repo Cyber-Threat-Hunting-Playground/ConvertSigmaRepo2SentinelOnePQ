@@ -1,6 +1,6 @@
 ```sql
-// Translated content (automatically translated on 02-09-2026 01:51:41):
-(event.category in ("dns","url","ip")) and (endpoint.os="windows" and ((url.address contains "getscreen.me" or url.address contains "GetScreen.me" or url.address contains ".getscreen.me" or url.address contains "go.getscreen.me" or url.address contains "image.getscreen.me" or url.address="*px-*.getscreen.me") or (event.dns.request contains "getscreen.me" or event.dns.request contains "GetScreen.me" or event.dns.request contains ".getscreen.me" or event.dns.request contains "go.getscreen.me" or event.dns.request contains "image.getscreen.me" or event.dns.request="*px-*.getscreen.me")))
+// Translated content (automatically translated on 03-09-2026 01:57:27):
+(event.category in ("dns","url","ip")) and (endpoint.os="windows" and ((url.address contains "getscreen.me" or url.address contains ".getscreen.me" or url.address contains "go.getscreen.me" or url.address contains "image.getscreen.me" or url.address="*px-*.getscreen.me") or (event.dns.request contains "getscreen.me" or event.dns.request contains ".getscreen.me" or event.dns.request contains "go.getscreen.me" or event.dns.request contains "image.getscreen.me" or event.dns.request="*px-*.getscreen.me")))
 ```
 
 
@@ -15,8 +15,9 @@ references:
     - https://github.com/magicsword-io/LOLRMM
 author: LOLRMM Project
 date: 2025-12-01
+modified: 2026-09-02
 tags:
-    - attack.execution
+    - attack.command-and-control
     - attack.t1219
 logsource:
     product: windows
@@ -25,7 +26,6 @@ detection:
     selection:
         DestinationHostname|endswith:
             - 'getscreen.me'
-            - 'GetScreen.me'
             - '*.getscreen.me'
             - 'go.getscreen.me'
             - 'image.getscreen.me'

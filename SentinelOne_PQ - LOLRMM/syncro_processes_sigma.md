@@ -1,6 +1,6 @@
 ```sql
-// Translated content (automatically translated on 02-09-2026 01:51:41):
-event.type="Process Creation" and (endpoint.os="windows" and ((src.process.image.path contains "Syncro.Installer.exe" or src.process.image.path contains "Kabuto.App.Runner.exe" or src.process.image.path contains "Syncro.Overmind.Service.exe" or src.process.image.path contains "Kabuto.Installer.exe" or src.process.image.path contains "KabutoSetup.exe" or src.process.image.path contains "Syncro.Service.exe" or src.process.image.path contains "Kabuto.Service.Runner.exe" or src.process.image.path contains "Syncro.App.Runner.exe" or src.process.image.path contains "SyncroLive.Service.exe" or src.process.image.path contains "SyncroLive.Agent.exe") or (tgt.process.image.path contains "Syncro.Installer.exe" or tgt.process.image.path contains "Kabuto.App.Runner.exe" or tgt.process.image.path contains "Syncro.Overmind.Service.exe" or tgt.process.image.path contains "Kabuto.Installer.exe" or tgt.process.image.path contains "KabutoSetup.exe" or tgt.process.image.path contains "Syncro.Service.exe" or tgt.process.image.path contains "Kabuto.Service.Runner.exe" or tgt.process.image.path contains "Syncro.App.Runner.exe" or tgt.process.image.path contains "SyncroLive.Service.exe" or tgt.process.image.path contains "SyncroLive.Agent.exe")))
+// Translated content (automatically translated on 03-09-2026 01:57:27):
+event.type="Process Creation" and (endpoint.os="windows" and ((src.process.image.path contains "\\Syncro.Installer.exe" or src.process.image.path contains "\\Kabuto.App.Runner.exe" or src.process.image.path contains "\\Syncro.Overmind.Service.exe" or src.process.image.path contains "\\Kabuto.Installer.exe" or src.process.image.path contains "\\KabutoSetup.exe" or src.process.image.path contains "\\Syncro.Service.exe" or src.process.image.path contains "\\Kabuto.Service.Runner.exe" or src.process.image.path contains "\\Syncro.App.Runner.exe" or src.process.image.path contains "\\SyncroLive.Service.exe" or src.process.image.path contains "\\SyncroLive.Agent.exe") or (tgt.process.image.path contains "\\Syncro.Installer.exe" or tgt.process.image.path contains "\\Kabuto.App.Runner.exe" or tgt.process.image.path contains "\\Syncro.Overmind.Service.exe" or tgt.process.image.path contains "\\Kabuto.Installer.exe" or tgt.process.image.path contains "\\KabutoSetup.exe" or tgt.process.image.path contains "\\Syncro.Service.exe" or tgt.process.image.path contains "\\Kabuto.Service.Runner.exe" or tgt.process.image.path contains "\\Syncro.App.Runner.exe" or tgt.process.image.path contains "\\SyncroLive.Service.exe" or tgt.process.image.path contains "\\SyncroLive.Agent.exe")))
 ```
 
 
@@ -15,8 +15,9 @@ references:
     - https://github.com/magicsword-io/LOLRMM
 author: LOLRMM Project
 date: 2025-12-01
+modified: 2026-09-02
 tags:
-    - attack.execution
+    - attack.command-and-control
     - attack.t1219
 logsource:
     product: windows
@@ -24,28 +25,28 @@ logsource:
 detection:
     selection_parent:
         ParentImage|endswith:
-            - Syncro.Installer.exe
-            - Kabuto.App.Runner.exe
-            - Syncro.Overmind.Service.exe
-            - Kabuto.Installer.exe
-            - KabutoSetup.exe
-            - Syncro.Service.exe
-            - Kabuto.Service.Runner.exe
-            - Syncro.App.Runner.exe
-            - SyncroLive.Service.exe
-            - SyncroLive.Agent.exe
+            - '\\Syncro.Installer.exe'
+            - '\\Kabuto.App.Runner.exe'
+            - '\\Syncro.Overmind.Service.exe'
+            - '\\Kabuto.Installer.exe'
+            - '\\KabutoSetup.exe'
+            - '\\Syncro.Service.exe'
+            - '\\Kabuto.Service.Runner.exe'
+            - '\\Syncro.App.Runner.exe'
+            - '\\SyncroLive.Service.exe'
+            - '\\SyncroLive.Agent.exe'
     selection_image:
         Image|endswith:
-            - Syncro.Installer.exe
-            - Kabuto.App.Runner.exe
-            - Syncro.Overmind.Service.exe
-            - Kabuto.Installer.exe
-            - KabutoSetup.exe
-            - Syncro.Service.exe
-            - Kabuto.Service.Runner.exe
-            - Syncro.App.Runner.exe
-            - SyncroLive.Service.exe
-            - SyncroLive.Agent.exe
+            - '\\Syncro.Installer.exe'
+            - '\\Kabuto.App.Runner.exe'
+            - '\\Syncro.Overmind.Service.exe'
+            - '\\Kabuto.Installer.exe'
+            - '\\KabutoSetup.exe'
+            - '\\Syncro.Service.exe'
+            - '\\Kabuto.Service.Runner.exe'
+            - '\\Syncro.App.Runner.exe'
+            - '\\SyncroLive.Service.exe'
+            - '\\SyncroLive.Agent.exe'
     condition: 1 of selection_*
 falsepositives:
     - Legitimate use of Syncro

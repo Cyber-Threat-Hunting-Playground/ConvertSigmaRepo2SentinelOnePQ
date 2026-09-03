@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 02-09-2026 01:51:41):
+// Translated content (automatically translated on 03-09-2026 01:57:27):
 (event.category in ("dns","url","ip")) and (endpoint.os="windows" and ((url.address contains "cdn.teleport.dev" or url.address contains "reporting-connect.teleportinfra.sh" or url.address contains "usage.teleport.dev" or url.address contains ".teleport.sh" or url.address contains "user_managed") or (event.dns.request contains "cdn.teleport.dev" or event.dns.request contains "reporting-connect.teleportinfra.sh" or event.dns.request contains "usage.teleport.dev" or event.dns.request contains ".teleport.sh" or event.dns.request contains "user_managed")))
 ```
 
@@ -15,8 +15,9 @@ references:
     - https://github.com/magicsword-io/LOLRMM
 author: LOLRMM Project
 date: 2026-08-18
+modified: 2026-09-02
 tags:
-    - attack.execution
+    - attack.command-and-control
     - attack.t1219
 logsource:
     product: windows

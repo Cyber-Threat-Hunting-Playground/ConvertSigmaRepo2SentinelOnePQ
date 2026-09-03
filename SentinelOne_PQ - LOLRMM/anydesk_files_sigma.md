@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 02-09-2026 01:51:41):
+// Translated content (automatically translated on 03-09-2026 01:57:27):
 event.category="file" and (endpoint.os="windows" and (tgt.file.path contains "%programdata%\\AnyDesk\\ad_svc.trace" or tgt.file.path contains "%programdata%\\AnyDesk\\connection_trace.txt" or tgt.file.path contains "%APPDATA%\\AnyDesk\\connection_trace.txt" or tgt.file.path contains "%APPDATA%\\AnyDesk\\ad.trace" or tgt.file.path contains "%APPDATA%\\AnyDesk\\chat\*.txt" or tgt.file.path contains "%APPDATA%\\AnyDesk\\user.conf" or tgt.file.path contains "%PROGRAMDATA%\\AnyDesk\\service.conf" or tgt.file.path contains "%APPDATA%\\AnyDesk\\service.conf" or tgt.file.path contains "%APPDATA%\\AnyDesk\\system.conf" or tgt.file.path contains "%PROGRAMDATA%\\AnyDesk\\system.conf" or tgt.file.path contains "%PROGRAMDATA%\\Microsoft\\Windows\\Start Menu\\Programs\\StartUp\\AnyDesk.lnk" or tgt.file.path contains "%PROGRAMDATA%\\Microsoft\\Windows\\Start Menu\\Programs\\AnyDesk\\Uninstall AnyDesk.lnk" or tgt.file.path contains "C:\\Users\*\\Videos\\AnyDesk\*.anydesk" or tgt.file.path contains "C:\\Windows\\SysWOW64\\config\\systemprofile\\AppData\\Roaming\\AnyDesk\*" or tgt.file.path contains "~/Library/Application Support/AnyDesk/Logs/" or tgt.file.path contains "~/.config/AnyDesk/Logs/"))
 ```
 
@@ -15,8 +15,9 @@ references:
     - https://github.com/magicsword-io/LOLRMM
 author: LOLRMM Project
 date: 2025-12-01
+modified: 2026-09-02
 tags:
-    - attack.execution
+    - attack.command-and-control
     - attack.t1219
 logsource:
     product: windows

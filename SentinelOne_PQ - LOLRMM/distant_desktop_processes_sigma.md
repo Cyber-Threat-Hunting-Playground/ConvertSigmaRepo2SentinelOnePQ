@@ -1,6 +1,6 @@
 ```sql
-// Translated content (automatically translated on 02-09-2026 01:51:41):
-event.type="Process Creation" and (endpoint.os="windows" and ((src.process.image.path contains "ddsystem.exe" or src.process.image.path contains "dd.exe" or src.process.image.path contains "distant-desktop.exe") or (tgt.process.image.path contains "ddsystem.exe" or tgt.process.image.path contains "dd.exe" or tgt.process.image.path contains "distant-desktop.exe")))
+// Translated content (automatically translated on 03-09-2026 01:57:27):
+event.type="Process Creation" and (endpoint.os="windows" and ((src.process.image.path contains "\\ddsystem.exe" or src.process.image.path contains "\\dd.exe" or src.process.image.path contains "\\distant-desktop.exe") or (tgt.process.image.path contains "\\ddsystem.exe" or tgt.process.image.path contains "\\dd.exe" or tgt.process.image.path contains "\\distant-desktop.exe")))
 ```
 
 
@@ -15,8 +15,9 @@ references:
     - https://github.com/magicsword-io/LOLRMM
 author: LOLRMM Project
 date: 2025-12-01
+modified: 2026-09-02
 tags:
-    - attack.execution
+    - attack.command-and-control
     - attack.t1219
 logsource:
     product: windows
@@ -24,14 +25,14 @@ logsource:
 detection:
     selection_parent:
         ParentImage|endswith:
-            - ddsystem.exe
-            - dd.exe
-            - distant-desktop.exe
+            - '\\ddsystem.exe'
+            - '\\dd.exe'
+            - '\\distant-desktop.exe'
     selection_image:
         Image|endswith:
-            - ddsystem.exe
-            - dd.exe
-            - distant-desktop.exe
+            - '\\ddsystem.exe'
+            - '\\dd.exe'
+            - '\\distant-desktop.exe'
     condition: 1 of selection_*
 falsepositives:
     - Legitimate use of Distant Desktop

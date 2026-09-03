@@ -1,6 +1,6 @@
 ```sql
-// Translated content (automatically translated on 02-09-2026 01:51:41):
-event.type="Process Creation" and (endpoint.os="windows" and ((src.process.image.path contains "ControlR.Agent.exe" or src.process.image.path contains "ControlR.DesktopClient.exe") or (tgt.process.image.path contains "ControlR.Agent.exe" or tgt.process.image.path contains "ControlR.DesktopClient.exe")))
+// Translated content (automatically translated on 03-09-2026 01:57:27):
+event.type="Process Creation" and (endpoint.os="windows" and ((src.process.image.path contains "\\ControlR.Agent.exe" or src.process.image.path contains "\\ControlR.DesktopClient.exe") or (tgt.process.image.path contains "\\ControlR.Agent.exe" or tgt.process.image.path contains "\\ControlR.DesktopClient.exe")))
 ```
 
 
@@ -15,8 +15,9 @@ references:
     - https://github.com/magicsword-io/LOLRMM
 author: LOLRMM Project
 date: 2026-08-18
+modified: 2026-09-02
 tags:
-    - attack.execution
+    - attack.command-and-control
     - attack.t1219
 logsource:
     product: windows
@@ -24,12 +25,12 @@ logsource:
 detection:
     selection_parent:
         ParentImage|endswith:
-            - 'ControlR.Agent.exe'
-            - 'ControlR.DesktopClient.exe'
+            - '\\ControlR.Agent.exe'
+            - '\\ControlR.DesktopClient.exe'
     selection_image:
         Image|endswith:
-            - 'ControlR.Agent.exe'
-            - 'ControlR.DesktopClient.exe'
+            - '\\ControlR.Agent.exe'
+            - '\\ControlR.DesktopClient.exe'
     condition: 1 of selection_*
 falsepositives:
     - Legitimate use of ControlR

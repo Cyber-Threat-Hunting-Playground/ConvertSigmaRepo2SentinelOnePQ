@@ -1,6 +1,6 @@
 ```sql
-// Translated content (automatically translated on 02-09-2026 01:51:41):
-event.type="Process Creation" and (endpoint.os="windows" and ((src.process.image.path contains "rcengmgru.exe" or src.process.image.path contains "rcmgrsvc.exe" or src.process.image.path contains "rxstartsupport.exe" or src.process.image.path contains "rcstartsupport.exe" or src.process.image.path contains "raautoup.exe" or src.process.image.path contains "agentu.exe" or src.process.image.path contains "remotesupportplayeru.exe") or (tgt.process.image.path contains "rcengmgru.exe" or tgt.process.image.path contains "rcmgrsvc.exe" or tgt.process.image.path contains "rxstartsupport.exe" or tgt.process.image.path contains "rcstartsupport.exe" or tgt.process.image.path contains "raautoup.exe" or tgt.process.image.path contains "agentu.exe" or tgt.process.image.path contains "remotesupportplayeru.exe")))
+// Translated content (automatically translated on 03-09-2026 01:57:27):
+event.type="Process Creation" and (endpoint.os="windows" and ((src.process.image.path contains "\\rcengmgru.exe" or src.process.image.path contains "\\rcmgrsvc.exe" or src.process.image.path contains "\\rxstartsupport.exe" or src.process.image.path contains "\\rcstartsupport.exe" or src.process.image.path contains "\\raautoup.exe" or src.process.image.path contains "\\agentu.exe" or src.process.image.path contains "\\remotesupportplayeru.exe") or (tgt.process.image.path contains "\\rcengmgru.exe" or tgt.process.image.path contains "\\rcmgrsvc.exe" or tgt.process.image.path contains "\\rxstartsupport.exe" or tgt.process.image.path contains "\\rcstartsupport.exe" or tgt.process.image.path contains "\\raautoup.exe" or tgt.process.image.path contains "\\agentu.exe" or tgt.process.image.path contains "\\remotesupportplayeru.exe")))
 ```
 
 
@@ -15,8 +15,9 @@ references:
     - https://github.com/magicsword-io/LOLRMM
 author: LOLRMM Project
 date: 2025-12-01
+modified: 2026-09-02
 tags:
-    - attack.execution
+    - attack.command-and-control
     - attack.t1219
 logsource:
     product: windows
@@ -24,22 +25,22 @@ logsource:
 detection:
     selection_parent:
         ParentImage|endswith:
-            - rcengmgru.exe
-            - rcmgrsvc.exe
-            - rxstartsupport.exe
-            - rcstartsupport.exe
-            - raautoup.exe
-            - agentu.exe
-            - remotesupportplayeru.exe
+            - '\\rcengmgru.exe'
+            - '\\rcmgrsvc.exe'
+            - '\\rxstartsupport.exe'
+            - '\\rcstartsupport.exe'
+            - '\\raautoup.exe'
+            - '\\agentu.exe'
+            - '\\remotesupportplayeru.exe'
     selection_image:
         Image|endswith:
-            - rcengmgru.exe
-            - rcmgrsvc.exe
-            - rxstartsupport.exe
-            - rcstartsupport.exe
-            - raautoup.exe
-            - agentu.exe
-            - remotesupportplayeru.exe
+            - '\\rcengmgru.exe'
+            - '\\rcmgrsvc.exe'
+            - '\\rxstartsupport.exe'
+            - '\\rcstartsupport.exe'
+            - '\\raautoup.exe'
+            - '\\agentu.exe'
+            - '\\remotesupportplayeru.exe'
     condition: 1 of selection_*
 falsepositives:
     - Legitimate use of RemoteCall

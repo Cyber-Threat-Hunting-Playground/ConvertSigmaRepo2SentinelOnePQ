@@ -1,6 +1,6 @@
 ```sql
-// Translated content (automatically translated on 02-09-2026 01:51:41):
-event.type="Process Creation" and (endpoint.os="windows" and ((src.process.image.path contains "mikogo.exe" or src.process.image.path contains "mikogo-starter.exe" or src.process.image.path contains "mikogo-service.exe" or src.process.image.path contains "mikogolauncher.exe" or src.process.image.path contains "Mikogo-Service.exe" or src.process.image.path contains "Mikogo-Screen-Service.exe") or (tgt.process.image.path contains "mikogo.exe" or tgt.process.image.path contains "mikogo-starter.exe" or tgt.process.image.path contains "mikogo-service.exe" or tgt.process.image.path contains "mikogolauncher.exe" or tgt.process.image.path contains "Mikogo-Service.exe" or tgt.process.image.path contains "Mikogo-Screen-Service.exe")))
+// Translated content (automatically translated on 03-09-2026 01:57:27):
+event.type="Process Creation" and (endpoint.os="windows" and ((src.process.image.path contains "\\mikogo.exe" or src.process.image.path contains "\\mikogo-starter.exe" or src.process.image.path contains "\\mikogo-service.exe" or src.process.image.path contains "\\mikogolauncher.exe" or src.process.image.path contains "\\Mikogo-Screen-Service.exe") or (tgt.process.image.path contains "\\mikogo.exe" or tgt.process.image.path contains "\\mikogo-starter.exe" or tgt.process.image.path contains "\\mikogo-service.exe" or tgt.process.image.path contains "\\mikogolauncher.exe" or tgt.process.image.path contains "\\Mikogo-Screen-Service.exe")))
 ```
 
 
@@ -15,8 +15,9 @@ references:
     - https://github.com/magicsword-io/LOLRMM
 author: LOLRMM Project
 date: 2025-12-01
+modified: 2026-09-02
 tags:
-    - attack.execution
+    - attack.command-and-control
     - attack.t1219
 logsource:
     product: windows
@@ -24,20 +25,18 @@ logsource:
 detection:
     selection_parent:
         ParentImage|endswith:
-            - mikogo.exe
-            - mikogo-starter.exe
-            - mikogo-service.exe
-            - mikogolauncher.exe
-            - Mikogo-Service.exe
-            - Mikogo-Screen-Service.exe
+            - '\\mikogo.exe'
+            - '\\mikogo-starter.exe'
+            - '\\mikogo-service.exe'
+            - '\\mikogolauncher.exe'
+            - '\\Mikogo-Screen-Service.exe'
     selection_image:
         Image|endswith:
-            - mikogo.exe
-            - mikogo-starter.exe
-            - mikogo-service.exe
-            - mikogolauncher.exe
-            - Mikogo-Service.exe
-            - Mikogo-Screen-Service.exe
+            - '\\mikogo.exe'
+            - '\\mikogo-starter.exe'
+            - '\\mikogo-service.exe'
+            - '\\mikogolauncher.exe'
+            - '\\Mikogo-Screen-Service.exe'
     condition: 1 of selection_*
 falsepositives:
     - Legitimate use of Mikogo

@@ -1,6 +1,6 @@
 ```sql
-// Translated content (automatically translated on 02-09-2026 01:51:41):
-event.type="Process Creation" and (endpoint.os="windows" and ((src.process.image.path contains "FixMeit Client.exe" or src.process.image.path contains "TiExpertStandalone.exe" or src.process.image.path="*FixMeitClient*.exe" or src.process.image.path contains "TiExpertCore.exe" or src.process.image.path contains "FixMeit Unattended Access Setup.exe" or src.process.image.path contains "FixMeit Expert Setup.exe" or src.process.image.path contains "fixmeitclient.exe" or src.process.image.path contains "TiClientCore.exe" or src.process.image.path="*TiClientHelper*.exe") or (tgt.process.image.path contains "FixMeit Client.exe" or tgt.process.image.path contains "TiExpertStandalone.exe" or tgt.process.image.path="*FixMeitClient*.exe" or tgt.process.image.path contains "TiExpertCore.exe" or tgt.process.image.path contains "FixMeit Unattended Access Setup.exe" or tgt.process.image.path contains "FixMeit Expert Setup.exe" or tgt.process.image.path contains "fixmeitclient.exe" or tgt.process.image.path contains "TiClientCore.exe" or tgt.process.image.path="*TiClientHelper*.exe")))
+// Translated content (automatically translated on 03-09-2026 01:57:27):
+event.type="Process Creation" and (endpoint.os="windows" and ((src.process.image.path contains "\\FixMeit Client.exe" or src.process.image.path contains "\\TiExpertStandalone.exe" or src.process.image.path="*\\FixMeitClient*.exe" or src.process.image.path contains "\\TiExpertCore.exe" or src.process.image.path contains "\\FixMeit Unattended Access Setup.exe" or src.process.image.path contains "\\FixMeit Expert Setup.exe" or src.process.image.path contains "\\fixmeitclient.exe" or src.process.image.path contains "\\TiClientCore.exe" or src.process.image.path="*\\TiClientHelper*.exe") or (tgt.process.image.path contains "\\FixMeit Client.exe" or tgt.process.image.path contains "\\TiExpertStandalone.exe" or tgt.process.image.path="*\\FixMeitClient*.exe" or tgt.process.image.path contains "\\TiExpertCore.exe" or tgt.process.image.path contains "\\FixMeit Unattended Access Setup.exe" or tgt.process.image.path contains "\\FixMeit Expert Setup.exe" or tgt.process.image.path contains "\\fixmeitclient.exe" or tgt.process.image.path contains "\\TiClientCore.exe" or tgt.process.image.path="*\\TiClientHelper*.exe")))
 ```
 
 
@@ -15,8 +15,9 @@ references:
     - https://github.com/magicsword-io/LOLRMM
 author: LOLRMM Project
 date: 2025-12-01
+modified: 2026-09-02
 tags:
-    - attack.execution
+    - attack.command-and-control
     - attack.t1219
 logsource:
     product: windows
@@ -24,26 +25,26 @@ logsource:
 detection:
     selection_parent:
         ParentImage|endswith:
-            - 'FixMeit Client.exe'
-            - 'TiExpertStandalone.exe'
-            - 'FixMeitClient*.exe'
-            - 'TiExpertCore.exe'
-            - 'FixMeit Unattended Access Setup.exe'
-            - 'FixMeit Expert Setup.exe'
-            - 'fixmeitclient.exe'
-            - 'TiClientCore.exe'
-            - 'TiClientHelper*.exe'
+            - '\\FixMeit Client.exe'
+            - '\\TiExpertStandalone.exe'
+            - '\\FixMeitClient*.exe'
+            - '\\TiExpertCore.exe'
+            - '\\FixMeit Unattended Access Setup.exe'
+            - '\\FixMeit Expert Setup.exe'
+            - '\\fixmeitclient.exe'
+            - '\\TiClientCore.exe'
+            - '\\TiClientHelper*.exe'
     selection_image:
         Image|endswith:
-            - 'FixMeit Client.exe'
-            - 'TiExpertStandalone.exe'
-            - 'FixMeitClient*.exe'
-            - 'TiExpertCore.exe'
-            - 'FixMeit Unattended Access Setup.exe'
-            - 'FixMeit Expert Setup.exe'
-            - 'fixmeitclient.exe'
-            - 'TiClientCore.exe'
-            - 'TiClientHelper*.exe'
+            - '\\FixMeit Client.exe'
+            - '\\TiExpertStandalone.exe'
+            - '\\FixMeitClient*.exe'
+            - '\\TiExpertCore.exe'
+            - '\\FixMeit Unattended Access Setup.exe'
+            - '\\FixMeit Expert Setup.exe'
+            - '\\fixmeitclient.exe'
+            - '\\TiClientCore.exe'
+            - '\\TiClientHelper*.exe'
     condition: 1 of selection_*
 falsepositives:
     - Legitimate use of FixMe.it

@@ -1,0 +1,34 @@
+```sql
+// Translated content (automatically translated on 03-09-2026 01:57:27):
+(event.category in ("dns","url","ip")) and (endpoint.os="windows" and ((url.address contains "set.me" or url.address contains ".set.me") or (event.dns.request contains "set.me" or event.dns.request contains ".set.me")))
+```
+
+
+# Original Sigma Rule:
+```yaml
+title: Potential SetMe PRO RMM Tool Network Activity
+id: 002fb12c-8c33-5a75-b5af-76ea3e2b227f
+status: experimental
+description: |
+    Detects potential network activity of SetMe PRO RMM tool
+references:
+    - https://github.com/magicsword-io/LOLRMM
+author: LOLRMM Project
+date: 2026-09-02
+modified: 2026-09-02
+tags:
+    - attack.command-and-control
+    - attack.t1219
+logsource:
+    product: windows
+    category: network_connection
+detection:
+    selection:
+        DestinationHostname|endswith:
+            - 'set.me'
+            - '*.set.me'
+    condition: selection
+falsepositives:
+    - Legitimate use of SetMe PRO
+level: medium
+```

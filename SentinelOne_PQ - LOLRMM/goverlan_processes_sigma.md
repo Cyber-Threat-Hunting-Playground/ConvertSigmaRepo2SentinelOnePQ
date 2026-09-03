@@ -1,6 +1,6 @@
 ```sql
-// Translated content (automatically translated on 02-09-2026 01:51:41):
-event.type="Process Creation" and (endpoint.os="windows" and ((src.process.image.path contains "goverrmc.exe" or src.process.image.path="*govsrv*.exe" or src.process.image.path contains "GovAgentInstallHelper.exe" or src.process.image.path contains "GovAgentx64.exe" or src.process.image.path contains "GovReachClient.exe" or src.process.image.path contains "GovSrv.exe") or (tgt.process.image.path contains "goverrmc.exe" or tgt.process.image.path="*govsrv*.exe" or tgt.process.image.path contains "GovAgentInstallHelper.exe" or tgt.process.image.path contains "GovAgentx64.exe" or tgt.process.image.path contains "GovReachClient.exe" or tgt.process.image.path contains "GovSrv.exe")))
+// Translated content (automatically translated on 03-09-2026 01:57:27):
+event.type="Process Creation" and (endpoint.os="windows" and ((src.process.image.path contains "\\goverrmc.exe" or src.process.image.path="*\\govsrv*.exe" or src.process.image.path contains "\\GovAgentInstallHelper.exe" or src.process.image.path contains "\\GovAgentx64.exe" or src.process.image.path contains "\\GovReachClient.exe" or src.process.image.path contains "\\GovSrv.exe") or (tgt.process.image.path contains "\\goverrmc.exe" or tgt.process.image.path="*\\govsrv*.exe" or tgt.process.image.path contains "\\GovAgentInstallHelper.exe" or tgt.process.image.path contains "\\GovAgentx64.exe" or tgt.process.image.path contains "\\GovReachClient.exe" or tgt.process.image.path contains "\\GovSrv.exe")))
 ```
 
 
@@ -15,8 +15,9 @@ references:
     - https://github.com/magicsword-io/LOLRMM
 author: LOLRMM Project
 date: 2025-12-01
+modified: 2026-09-02
 tags:
-    - attack.execution
+    - attack.command-and-control
     - attack.t1219
 logsource:
     product: windows
@@ -24,20 +25,20 @@ logsource:
 detection:
     selection_parent:
         ParentImage|endswith:
-            - goverrmc.exe
-            - govsrv*.exe
-            - GovAgentInstallHelper.exe
-            - GovAgentx64.exe
-            - GovReachClient.exe
-            - GovSrv.exe
+            - '\\goverrmc.exe'
+            - '\\govsrv*.exe'
+            - '\\GovAgentInstallHelper.exe'
+            - '\\GovAgentx64.exe'
+            - '\\GovReachClient.exe'
+            - '\\GovSrv.exe'
     selection_image:
         Image|endswith:
-            - goverrmc.exe
-            - govsrv*.exe
-            - GovAgentInstallHelper.exe
-            - GovAgentx64.exe
-            - GovReachClient.exe
-            - GovSrv.exe
+            - '\\goverrmc.exe'
+            - '\\govsrv*.exe'
+            - '\\GovAgentInstallHelper.exe'
+            - '\\GovAgentx64.exe'
+            - '\\GovReachClient.exe'
+            - '\\GovSrv.exe'
     condition: 1 of selection_*
 falsepositives:
     - Legitimate use of Goverlan

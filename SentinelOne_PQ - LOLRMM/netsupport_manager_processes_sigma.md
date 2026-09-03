@@ -1,6 +1,6 @@
 ```sql
-// Translated content (automatically translated on 02-09-2026 01:51:41):
-event.type="Process Creation" and (endpoint.os="windows" and ((src.process.image.path contains "pcictlui.exe" or src.process.image.path contains "pcicfgui.exe" or src.process.image.path contains "client32.exe" or src.process.image.path contains "remcmdstub.exe") or (tgt.process.image.path contains "pcictlui.exe" or tgt.process.image.path contains "pcicfgui.exe" or tgt.process.image.path contains "client32.exe" or tgt.process.image.path contains "remcmdstub.exe")))
+// Translated content (automatically translated on 03-09-2026 01:57:27):
+event.type="Process Creation" and (endpoint.os="windows" and ((src.process.image.path contains "\\pcictlui.exe" or src.process.image.path contains "\\pcicfgui.exe" or src.process.image.path contains "\\client32.exe" or src.process.image.path contains "\\remcmdstub.exe") or (tgt.process.image.path contains "\\pcictlui.exe" or tgt.process.image.path contains "\\pcicfgui.exe" or tgt.process.image.path contains "\\client32.exe" or tgt.process.image.path contains "\\remcmdstub.exe")))
 ```
 
 
@@ -15,8 +15,9 @@ references:
     - https://github.com/magicsword-io/LOLRMM
 author: LOLRMM Project
 date: 2025-12-01
+modified: 2026-09-02
 tags:
-    - attack.execution
+    - attack.command-and-control
     - attack.t1219
 logsource:
     product: windows
@@ -24,16 +25,16 @@ logsource:
 detection:
     selection_parent:
         ParentImage|endswith:
-            - 'pcictlui.exe'
-            - 'pcicfgui.exe'
-            - 'client32.exe'
-            - 'remcmdstub.exe'
+            - '\\pcictlui.exe'
+            - '\\pcicfgui.exe'
+            - '\\client32.exe'
+            - '\\remcmdstub.exe'
     selection_image:
         Image|endswith:
-            - 'pcictlui.exe'
-            - 'pcicfgui.exe'
-            - 'client32.exe'
-            - 'remcmdstub.exe'
+            - '\\pcictlui.exe'
+            - '\\pcicfgui.exe'
+            - '\\client32.exe'
+            - '\\remcmdstub.exe'
     condition: 1 of selection_*
 falsepositives:
     - Legitimate use of NetSupport Manager

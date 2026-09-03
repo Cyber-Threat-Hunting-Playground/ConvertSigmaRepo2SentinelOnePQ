@@ -1,6 +1,6 @@
 ```sql
-// Translated content (automatically translated on 02-09-2026 01:51:41):
-event.type="Process Creation" and (endpoint.os="windows" and ((src.process.image.path contains "Duplicati.Server.exe" or src.process.image.path contains "Duplicati.Server.exe") or (tgt.process.image.path contains "Duplicati.Server.exe" or tgt.process.image.path contains "Duplicati.Server.exe")))
+// Translated content (automatically translated on 03-09-2026 01:57:27):
+event.type="Process Creation" and (endpoint.os="windows" and (src.process.image.path contains "\\Duplicati.Server.exe" or tgt.process.image.path contains "\\Duplicati.Server.exe"))
 ```
 
 
@@ -15,21 +15,18 @@ references:
     - https://github.com/magicsword-io/LOLRMM
 author: LOLRMM Project
 date: 2025-12-01
+modified: 2026-09-02
 tags:
-    - attack.execution
+    - attack.command-and-control
     - attack.t1219
 logsource:
     product: windows
     category: process_creation
 detection:
     selection_parent:
-        ParentImage|endswith:
-            - Duplicati.Server.exe
-            - Duplicati.Server.exe
+        ParentImage|endswith: '\\Duplicati.Server.exe'
     selection_image:
-        Image|endswith:
-            - Duplicati.Server.exe
-            - Duplicati.Server.exe
+        Image|endswith: '\\Duplicati.Server.exe'
     condition: 1 of selection_*
 falsepositives:
     - Legitimate use of Duplicati

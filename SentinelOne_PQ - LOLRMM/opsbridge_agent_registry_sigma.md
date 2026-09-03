@@ -1,0 +1,34 @@
+```sql
+// Translated content (automatically translated on 03-09-2026 01:57:27):
+event.category="registry" and (endpoint.os="windows" and (registry.keyPath contains "HKLM\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Uninstall\\OpsBridgeAgent" or registry.keyPath contains "HKLM\\SOFTWARE\\Microsoft\\Windows NT\\CurrentVersion\\Schedule\\TaskCache\\Tree\\OpsBridge Agent"))
+```
+
+
+# Original Sigma Rule:
+```yaml
+title: Potential OpsBridge Agent RMM Tool Registry Activity
+id: 643ca855-3518-554b-a85b-92beb25fe8c2
+status: experimental
+description: |
+    Detects potential registry activity of OpsBridge Agent RMM tool
+references:
+    - https://github.com/magicsword-io/LOLRMM
+author: LOLRMM Project
+date: 2026-09-02
+modified: 2026-09-02
+tags:
+    - attack.command-and-control
+    - attack.t1219
+logsource:
+    product: windows
+    category: registry_event
+detection:
+    selection:
+        TargetObject|contains:
+            - 'HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\Uninstall\OpsBridgeAgent'
+            - 'HKLM\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Schedule\TaskCache\Tree\OpsBridge Agent'
+    condition: selection
+falsepositives:
+    - Legitimate use of OpsBridge Agent
+level: medium
+```

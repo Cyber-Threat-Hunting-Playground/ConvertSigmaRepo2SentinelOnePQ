@@ -1,6 +1,6 @@
 ```sql
-// Translated content (automatically translated on 02-09-2026 01:51:41):
-event.type="Process Creation" and (endpoint.os="windows" and ((src.process.image.path contains "nmep_agtconfig.exe" or src.process.image.path contains "nmep_ctrlagent.exe" or src.process.image.path contains "nmep_ctrlagentsvc.exe" or src.process.image.path contains "winpty-agent.exe" or src.process.image.path contains "winpty-agent64.exe") or (tgt.process.image.path contains "nmep_agtconfig.exe" or tgt.process.image.path contains "nmep_ctrlagent.exe" or tgt.process.image.path contains "nmep_ctrlagentsvc.exe" or tgt.process.image.path contains "winpty-agent.exe" or tgt.process.image.path contains "winpty-agent64.exe")))
+// Translated content (automatically translated on 03-09-2026 01:57:27):
+event.type="Process Creation" and (endpoint.os="windows" and ((src.process.image.path contains "\\nmep_agtconfig.exe" or src.process.image.path contains "\\nmep_ctrlagent.exe" or src.process.image.path contains "\\nmep_ctrlagentsvc.exe" or src.process.image.path contains "\\winpty-agent.exe" or src.process.image.path contains "\\winpty-agent64.exe") or (tgt.process.image.path contains "\\nmep_agtconfig.exe" or tgt.process.image.path contains "\\nmep_ctrlagent.exe" or tgt.process.image.path contains "\\nmep_ctrlagentsvc.exe" or tgt.process.image.path contains "\\winpty-agent.exe" or tgt.process.image.path contains "\\winpty-agent64.exe")))
 ```
 
 
@@ -15,8 +15,9 @@ references:
     - https://github.com/magicsword-io/LOLRMM
 author: LOLRMM Project
 date: 2026-05-18
+modified: 2026-09-02
 tags:
-    - attack.execution
+    - attack.command-and-control
     - attack.t1219
 logsource:
     product: windows
@@ -24,18 +25,18 @@ logsource:
 detection:
     selection_parent:
         ParentImage|endswith:
-            - 'nmep_agtconfig.exe'
-            - 'nmep_ctrlagent.exe'
-            - 'nmep_ctrlagentsvc.exe'
-            - 'winpty-agent.exe'
-            - 'winpty-agent64.exe'
+            - '\\nmep_agtconfig.exe'
+            - '\\nmep_ctrlagent.exe'
+            - '\\nmep_ctrlagentsvc.exe'
+            - '\\winpty-agent.exe'
+            - '\\winpty-agent64.exe'
     selection_image:
         Image|endswith:
-            - 'nmep_agtconfig.exe'
-            - 'nmep_ctrlagent.exe'
-            - 'nmep_ctrlagentsvc.exe'
-            - 'winpty-agent.exe'
-            - 'winpty-agent64.exe'
+            - '\\nmep_agtconfig.exe'
+            - '\\nmep_ctrlagent.exe'
+            - '\\nmep_ctrlagentsvc.exe'
+            - '\\winpty-agent.exe'
+            - '\\winpty-agent64.exe'
     condition: 1 of selection_*
 falsepositives:
     - Legitimate use of Net Monitor for Employees

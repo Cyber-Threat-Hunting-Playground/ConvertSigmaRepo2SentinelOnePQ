@@ -1,6 +1,6 @@
 ```sql
-// Translated content (automatically translated on 02-09-2026 01:51:41):
-event.type="Process Creation" and (endpoint.os="windows" and ((src.process.image.path contains "jumpclient.exe" or src.process.image.path contains "jumpdesktop.exe" or src.process.image.path contains "jumpservice.exe" or src.process.image.path contains "jumpconnect.exe" or src.process.image.path contains "jumpupdater.exe") or (tgt.process.image.path contains "jumpclient.exe" or tgt.process.image.path contains "jumpdesktop.exe" or tgt.process.image.path contains "jumpservice.exe" or tgt.process.image.path contains "jumpconnect.exe" or tgt.process.image.path contains "jumpupdater.exe")))
+// Translated content (automatically translated on 03-09-2026 01:57:27):
+event.type="Process Creation" and (endpoint.os="windows" and ((src.process.image.path contains "\\jumpclient.exe" or src.process.image.path contains "\\jumpdesktop.exe" or src.process.image.path contains "\\jumpservice.exe" or src.process.image.path contains "\\jumpconnect.exe" or src.process.image.path contains "\\jumpupdater.exe") or (tgt.process.image.path contains "\\jumpclient.exe" or tgt.process.image.path contains "\\jumpdesktop.exe" or tgt.process.image.path contains "\\jumpservice.exe" or tgt.process.image.path contains "\\jumpconnect.exe" or tgt.process.image.path contains "\\jumpupdater.exe")))
 ```
 
 
@@ -15,8 +15,9 @@ references:
     - https://github.com/magicsword-io/LOLRMM
 author: LOLRMM Project
 date: 2025-12-01
+modified: 2026-09-02
 tags:
-    - attack.execution
+    - attack.command-and-control
     - attack.t1219
 logsource:
     product: windows
@@ -24,18 +25,18 @@ logsource:
 detection:
     selection_parent:
         ParentImage|endswith:
-            - jumpclient.exe
-            - jumpdesktop.exe
-            - jumpservice.exe
-            - jumpconnect.exe
-            - jumpupdater.exe
+            - '\\jumpclient.exe'
+            - '\\jumpdesktop.exe'
+            - '\\jumpservice.exe'
+            - '\\jumpconnect.exe'
+            - '\\jumpupdater.exe'
     selection_image:
         Image|endswith:
-            - jumpclient.exe
-            - jumpdesktop.exe
-            - jumpservice.exe
-            - jumpconnect.exe
-            - jumpupdater.exe
+            - '\\jumpclient.exe'
+            - '\\jumpdesktop.exe'
+            - '\\jumpservice.exe'
+            - '\\jumpconnect.exe'
+            - '\\jumpupdater.exe'
     condition: 1 of selection_*
 falsepositives:
     - Legitimate use of Jump Desktop

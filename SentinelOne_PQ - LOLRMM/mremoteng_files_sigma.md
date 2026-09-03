@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 02-09-2026 01:51:41):
+// Translated content (automatically translated on 03-09-2026 01:57:27):
 event.category="file" and (endpoint.os="windows" and (tgt.file.path contains "C:\\Users\*\\AppData\\Roaming\\mRemoteNG\\mRemoteNG.log" or tgt.file.path contains "C:\\Users\*\\AppData\\Roaming\\mRemoteNG\\confCons.xml" or tgt.file.path="*C:\\Users\*\\AppData\*\\mRemoteNG\**10\\user.config"))
 ```
 
@@ -15,8 +15,9 @@ references:
     - https://github.com/magicsword-io/LOLRMM
 author: LOLRMM Project
 date: 2025-12-01
+modified: 2026-09-02
 tags:
-    - attack.execution
+    - attack.command-and-control
     - attack.t1219
 logsource:
     product: windows
@@ -24,9 +25,9 @@ logsource:
 detection:
     selection:
         TargetFilename|endswith:
-            - C:\Users\*\AppData\Roaming\mRemoteNG\mRemoteNG.log
-            - C:\Users\*\AppData\Roaming\mRemoteNG\confCons.xml
-            - C:\Users\*\AppData\*\mRemoteNG\**10\user.config
+            - 'C:\Users\*\AppData\Roaming\mRemoteNG\mRemoteNG.log'
+            - 'C:\Users\*\AppData\Roaming\mRemoteNG\confCons.xml'
+            - 'C:\Users\*\AppData\*\mRemoteNG\**10\user.config'
     condition: selection
 falsepositives:
     - Legitimate use of mRemoteNG

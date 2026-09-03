@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 02-09-2026 01:51:41):
+// Translated content (automatically translated on 03-09-2026 01:57:27):
 (event.category in ("dns","url","ip")) and (endpoint.os="windows" and ((url.address contains ".ninjarmm.com" or url.address contains ".ninjaone.com" or url.address contains "resources.ninjarmm.com" or url.address contains "ninjaone.com" or url.address contains "ninjarmm.net" or url.address contains ".ninjarmm.net" or url.address contains "rmmservice.eu" or url.address contains ".rmmservice.eu" or url.address contains "rmmservice.com.au" or url.address contains ".rmmservice.com.au" or url.address contains "rmmservice.ca" or url.address contains ".rmmservice.ca" or url.address contains "ninja-backup.com" or url.address contains ".ninja-backup.com") or (event.dns.request contains ".ninjarmm.com" or event.dns.request contains ".ninjaone.com" or event.dns.request contains "resources.ninjarmm.com" or event.dns.request contains "ninjaone.com" or event.dns.request contains "ninjarmm.net" or event.dns.request contains ".ninjarmm.net" or event.dns.request contains "rmmservice.eu" or event.dns.request contains ".rmmservice.eu" or event.dns.request contains "rmmservice.com.au" or event.dns.request contains ".rmmservice.com.au" or event.dns.request contains "rmmservice.ca" or event.dns.request contains ".rmmservice.ca" or event.dns.request contains "ninja-backup.com" or event.dns.request contains ".ninja-backup.com")))
 ```
 
@@ -15,8 +15,9 @@ references:
     - https://github.com/magicsword-io/LOLRMM
 author: LOLRMM Project
 date: 2025-12-01
+modified: 2026-09-02
 tags:
-    - attack.execution
+    - attack.command-and-control
     - attack.t1219
 logsource:
     product: windows

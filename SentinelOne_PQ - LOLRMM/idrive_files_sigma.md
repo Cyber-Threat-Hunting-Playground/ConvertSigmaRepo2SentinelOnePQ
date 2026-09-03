@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 02-09-2026 01:51:41):
+// Translated content (automatically translated on 03-09-2026 01:57:27):
 event.category="file" and (endpoint.os="windows" and (tgt.file.path contains "C:\\ProgramData\\IDrive\*" or tgt.file.path contains "C:\\Program Files\\IDrive\*" or tgt.file.path contains "C:\\Program Files (x86)\\IDrive\*" or tgt.file.path contains "C:\\Users\*\\AppData\\Local\\IDrive\*"))
 ```
 
@@ -15,8 +15,9 @@ references:
     - https://github.com/magicsword-io/LOLRMM
 author: LOLRMM Project
 date: 2026-05-18
+modified: 2026-09-02
 tags:
-    - attack.execution
+    - attack.command-and-control
     - attack.t1219
 logsource:
     product: windows

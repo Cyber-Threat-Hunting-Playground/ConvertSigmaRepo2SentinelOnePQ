@@ -1,6 +1,6 @@
 ```sql
-// Translated content (automatically translated on 02-09-2026 01:51:41):
-event.type="Process Creation" and (endpoint.os="windows" and ((src.process.image.path contains "toolsiq.exe" or src.process.image.path contains "zaservice.exe" or src.process.image.path contains "ZMAgent.exe" or src.process.image.path contains "ZohoMeeting.exe" or src.process.image.path contains "Zohours.exe" or src.process.image.path contains "zohotray.exe" or src.process.image.path contains "ZohoURSService.exe" or src.process.image.path contains "ZA_Access.exe" or src.process.image.path contains "za_connect.exe" or src.process.image.path contains "connect.exe") or (tgt.process.image.path contains "toolsiq.exe" or tgt.process.image.path contains "zaservice.exe" or tgt.process.image.path contains "ZMAgent.exe" or tgt.process.image.path contains "ZohoMeeting.exe" or tgt.process.image.path contains "Zohours.exe" or tgt.process.image.path contains "zohotray.exe" or tgt.process.image.path contains "ZohoURSService.exe" or tgt.process.image.path contains "ZA_Access.exe" or tgt.process.image.path contains "za_connect.exe" or tgt.process.image.path contains "connect.exe")))
+// Translated content (automatically translated on 03-09-2026 01:57:27):
+event.type="Process Creation" and (endpoint.os="windows" and ((src.process.image.path contains "\\toolsiq.exe" or src.process.image.path contains "\\zaservice.exe" or src.process.image.path contains "\\ZMAgent.exe" or src.process.image.path contains "\\ZohoMeeting.exe" or src.process.image.path contains "\\Zohours.exe" or src.process.image.path contains "\\zohotray.exe" or src.process.image.path contains "\\ZohoURSService.exe" or src.process.image.path contains "\\ZA_Access.exe" or src.process.image.path contains "\\za_connect.exe" or src.process.image.path contains "\\connect.exe") or (tgt.process.image.path contains "\\toolsiq.exe" or tgt.process.image.path contains "\\zaservice.exe" or tgt.process.image.path contains "\\ZMAgent.exe" or tgt.process.image.path contains "\\ZohoMeeting.exe" or tgt.process.image.path contains "\\Zohours.exe" or tgt.process.image.path contains "\\zohotray.exe" or tgt.process.image.path contains "\\ZohoURSService.exe" or tgt.process.image.path contains "\\ZA_Access.exe" or tgt.process.image.path contains "\\za_connect.exe" or tgt.process.image.path contains "\\connect.exe")))
 ```
 
 
@@ -15,8 +15,9 @@ references:
     - https://github.com/magicsword-io/LOLRMM
 author: LOLRMM Project
 date: 2025-12-01
+modified: 2026-09-02
 tags:
-    - attack.execution
+    - attack.command-and-control
     - attack.t1219
 logsource:
     product: windows
@@ -24,28 +25,28 @@ logsource:
 detection:
     selection_parent:
         ParentImage|endswith:
-            - 'toolsiq.exe'
-            - 'zaservice.exe'
-            - 'ZMAgent.exe'
-            - 'ZohoMeeting.exe'
-            - 'Zohours.exe'
-            - 'zohotray.exe'
-            - 'ZohoURSService.exe'
-            - 'ZA_Access.exe'
-            - 'za_connect.exe'
-            - 'connect.exe'
+            - '\\toolsiq.exe'
+            - '\\zaservice.exe'
+            - '\\ZMAgent.exe'
+            - '\\ZohoMeeting.exe'
+            - '\\Zohours.exe'
+            - '\\zohotray.exe'
+            - '\\ZohoURSService.exe'
+            - '\\ZA_Access.exe'
+            - '\\za_connect.exe'
+            - '\\connect.exe'
     selection_image:
         Image|endswith:
-            - 'toolsiq.exe'
-            - 'zaservice.exe'
-            - 'ZMAgent.exe'
-            - 'ZohoMeeting.exe'
-            - 'Zohours.exe'
-            - 'zohotray.exe'
-            - 'ZohoURSService.exe'
-            - 'ZA_Access.exe'
-            - 'za_connect.exe'
-            - 'connect.exe'
+            - '\\toolsiq.exe'
+            - '\\zaservice.exe'
+            - '\\ZMAgent.exe'
+            - '\\ZohoMeeting.exe'
+            - '\\Zohours.exe'
+            - '\\zohotray.exe'
+            - '\\ZohoURSService.exe'
+            - '\\ZA_Access.exe'
+            - '\\za_connect.exe'
+            - '\\connect.exe'
     condition: 1 of selection_*
 falsepositives:
     - Legitimate use of Zoho Assist

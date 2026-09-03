@@ -1,6 +1,6 @@
 ```sql
-// Translated content (automatically translated on 02-09-2026 01:51:41):
-event.type="Process Creation" and (endpoint.os="windows" and (src.process.image.path contains "ManageEngine_ServiceDesk_Plus.exe" or tgt.process.image.path contains "ManageEngine_ServiceDesk_Plus.exe"))
+// Translated content (automatically translated on 03-09-2026 01:57:27):
+event.type="Process Creation" and (endpoint.os="windows" and (src.process.image.path contains "\\ManageEngine_ServiceDesk_Plus.exe" or tgt.process.image.path contains "\\ManageEngine_ServiceDesk_Plus.exe"))
 ```
 
 
@@ -15,17 +15,18 @@ references:
     - https://github.com/magicsword-io/LOLRMM
 author: LOLRMM Project
 date: 2026-05-18
+modified: 2026-09-02
 tags:
-    - attack.execution
+    - attack.command-and-control
     - attack.t1219
 logsource:
     product: windows
     category: process_creation
 detection:
     selection_parent:
-        ParentImage|endswith: 'ManageEngine_ServiceDesk_Plus.exe'
+        ParentImage|endswith: '\\ManageEngine_ServiceDesk_Plus.exe'
     selection_image:
-        Image|endswith: 'ManageEngine_ServiceDesk_Plus.exe'
+        Image|endswith: '\\ManageEngine_ServiceDesk_Plus.exe'
     condition: 1 of selection_*
 falsepositives:
     - Legitimate use of ManageEngine ServiceDesk Plus

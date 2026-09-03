@@ -1,6 +1,6 @@
 ```sql
-// Translated content (automatically translated on 02-09-2026 01:51:41):
-event.type="Process Creation" and (endpoint.os="windows" and ((src.process.image.path contains "pocketcontroller.exe" or src.process.image.path contains "pocketcloudservice.exe" or src.process.image.path contains "wysebrowser.exe") or (tgt.process.image.path contains "pocketcontroller.exe" or tgt.process.image.path contains "pocketcloudservice.exe" or tgt.process.image.path contains "wysebrowser.exe")))
+// Translated content (automatically translated on 03-09-2026 01:57:27):
+event.type="Process Creation" and (endpoint.os="windows" and ((src.process.image.path contains "\\pocketcontroller.exe" or src.process.image.path contains "\\pocketcloudservice.exe" or src.process.image.path contains "\\wysebrowser.exe") or (tgt.process.image.path contains "\\pocketcontroller.exe" or tgt.process.image.path contains "\\pocketcloudservice.exe" or tgt.process.image.path contains "\\wysebrowser.exe")))
 ```
 
 
@@ -15,8 +15,9 @@ references:
     - https://github.com/magicsword-io/LOLRMM
 author: LOLRMM Project
 date: 2025-12-01
+modified: 2026-09-02
 tags:
-    - attack.execution
+    - attack.command-and-control
     - attack.t1219
 logsource:
     product: windows
@@ -24,14 +25,14 @@ logsource:
 detection:
     selection_parent:
         ParentImage|endswith:
-            - pocketcontroller.exe
-            - pocketcloudservice.exe
-            - wysebrowser.exe
+            - '\\pocketcontroller.exe'
+            - '\\pocketcloudservice.exe'
+            - '\\wysebrowser.exe'
     selection_image:
         Image|endswith:
-            - pocketcontroller.exe
-            - pocketcloudservice.exe
-            - wysebrowser.exe
+            - '\\pocketcontroller.exe'
+            - '\\pocketcloudservice.exe'
+            - '\\wysebrowser.exe'
     condition: 1 of selection_*
 falsepositives:
     - Legitimate use of Pocket Controller

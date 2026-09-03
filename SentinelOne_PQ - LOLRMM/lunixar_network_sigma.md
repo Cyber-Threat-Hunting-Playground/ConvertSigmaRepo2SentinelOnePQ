@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 02-09-2026 01:51:41):
+// Translated content (automatically translated on 03-09-2026 01:57:27):
 (event.category in ("dns","url","ip")) and (endpoint.os="windows" and ((url.address contains ".lunixar.com" or url.address contains "lunixar.com" or url.address contains "app.lunixar.com" or url.address contains "socket.lunixar.com" or url.address contains "downloads.lunixar.com" or url.address contains "devrmm.lunixar.com" or url.address contains "mymeetinggoogle.com") or (event.dns.request contains ".lunixar.com" or event.dns.request contains "lunixar.com" or event.dns.request contains "app.lunixar.com" or event.dns.request contains "socket.lunixar.com" or event.dns.request contains "downloads.lunixar.com" or event.dns.request contains "devrmm.lunixar.com" or event.dns.request contains "mymeetinggoogle.com")))
 ```
 
@@ -15,8 +15,9 @@ references:
     - https://github.com/magicsword-io/LOLRMM
 author: LOLRMM Project
 date: 2026-05-18
+modified: 2026-09-02
 tags:
-    - attack.execution
+    - attack.command-and-control
     - attack.t1219
 logsource:
     product: windows

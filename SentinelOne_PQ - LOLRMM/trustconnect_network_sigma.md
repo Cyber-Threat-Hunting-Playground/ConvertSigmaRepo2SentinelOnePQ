@@ -1,6 +1,6 @@
 ```sql
-// Translated content (automatically translated on 02-09-2026 01:51:41):
-(event.category in ("dns","url","ip")) and (endpoint.os="windows" and ((url.address contains "trustconnectsoftware.com" or url.address contains "trustconnectsoftware.com" or url.address contains "trustconnectsoftware.com" or url.address contains "trustconnectsoftware.com" or url.address contains "networkservice.cyou") or (event.dns.request contains "trustconnectsoftware.com" or event.dns.request contains "trustconnectsoftware.com" or event.dns.request contains "trustconnectsoftware.com" or event.dns.request contains "trustconnectsoftware.com" or event.dns.request contains "networkservice.cyou")))
+// Translated content (automatically translated on 03-09-2026 01:57:27):
+(event.category in ("dns","url","ip")) and (endpoint.os="windows" and ((url.address contains "trustconnectsoftware.com" or url.address contains "networkservice.cyou") or (event.dns.request contains "trustconnectsoftware.com" or event.dns.request contains "networkservice.cyou")))
 ```
 
 
@@ -15,8 +15,9 @@ references:
     - https://github.com/magicsword-io/LOLRMM
 author: LOLRMM Project
 date: 2026-05-18
+modified: 2026-09-02
 tags:
-    - attack.execution
+    - attack.command-and-control
     - attack.t1219
 logsource:
     product: windows
@@ -24,9 +25,6 @@ logsource:
 detection:
     selection:
         DestinationHostname|endswith:
-            - 'trustconnectsoftware.com'
-            - 'trustconnectsoftware.com'
-            - 'trustconnectsoftware.com'
             - 'trustconnectsoftware.com'
             - 'networkservice.cyou'
     condition: selection

@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 02-09-2026 01:51:41):
+// Translated content (automatically translated on 03-09-2026 01:57:27):
 event.category="file" and (endpoint.os="windows" and (tgt.file.path contains "C:\\Program Files\\Komari\\komari-agent.exe" or tgt.file.path contains "C:\\Program Files\\Komari\\nssm.exe" or tgt.file.path contains "C:\\komari\\agent" or tgt.file.path contains "/opt/komari/komari" or tgt.file.path contains "/opt/komari/agent" or tgt.file.path contains "/usr/local/komari/agent" or tgt.file.path contains "/etc/systemd/system/komari.service" or tgt.file.path contains "/etc/systemd/system/komari-agent.service"))
 ```
 
@@ -15,8 +15,9 @@ references:
     - https://github.com/magicsword-io/LOLRMM
 author: LOLRMM Project
 date: 2026-05-18
+modified: 2026-09-02
 tags:
-    - attack.execution
+    - attack.command-and-control
     - attack.t1219
 logsource:
     product: windows

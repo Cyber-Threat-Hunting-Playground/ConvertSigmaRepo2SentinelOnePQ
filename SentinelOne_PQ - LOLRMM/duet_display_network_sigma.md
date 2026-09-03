@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 02-09-2026 01:51:41):
+// Translated content (automatically translated on 03-09-2026 01:57:27):
 (event.category in ("dns","url","ip")) and (endpoint.os="windows" and ((url.address contains ".duetdisplay.com" or url.address contains "rdp.duetdisplay.com" or url.address contains "duetdisplay.com" or url.address contains ".itagent.com" or url.address contains "itagent.com") or (event.dns.request contains ".duetdisplay.com" or event.dns.request contains "rdp.duetdisplay.com" or event.dns.request contains "duetdisplay.com" or event.dns.request contains ".itagent.com" or event.dns.request contains "itagent.com")))
 ```
 
@@ -15,8 +15,9 @@ references:
     - https://github.com/magicsword-io/LOLRMM
 author: LOLRMM Project
 date: 2026-05-18
+modified: 2026-09-02
 tags:
-    - attack.execution
+    - attack.command-and-control
     - attack.t1219
 logsource:
     product: windows

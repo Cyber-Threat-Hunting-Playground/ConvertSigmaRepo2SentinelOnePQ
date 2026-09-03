@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 02-09-2026 01:51:41):
+// Translated content (automatically translated on 03-09-2026 01:57:27):
 event.type="Process Creation" and (endpoint.os="windows" and src.process.image.path contains "\\AmazonCloudDrive.exe")
 ```
 

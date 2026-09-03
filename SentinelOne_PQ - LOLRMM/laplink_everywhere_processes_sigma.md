@@ -1,6 +1,6 @@
 ```sql
-// Translated content (automatically translated on 02-09-2026 01:51:41):
-event.type="Process Creation" and (endpoint.os="windows" and ((src.process.image.path contains "laplink.exe" or src.process.image.path="*laplink-everywhere-setup*.exe" or src.process.image.path contains "laplinkeverywhere.exe" or src.process.image.path contains "llrcservice.exe" or src.process.image.path contains "serverproxyservice.exe" or src.process.image.path contains "OOSysAgent.exe") or (tgt.process.image.path contains "laplink.exe" or tgt.process.image.path="*laplink-everywhere-setup*.exe" or tgt.process.image.path contains "laplinkeverywhere.exe" or tgt.process.image.path contains "llrcservice.exe" or tgt.process.image.path contains "serverproxyservice.exe" or tgt.process.image.path contains "OOSysAgent.exe")))
+// Translated content (automatically translated on 03-09-2026 01:57:27):
+event.type="Process Creation" and (endpoint.os="windows" and ((src.process.image.path contains "\\laplink.exe" or src.process.image.path="*\\laplink-everywhere-setup*.exe" or src.process.image.path contains "\\laplinkeverywhere.exe" or src.process.image.path contains "\\llrcservice.exe" or src.process.image.path contains "\\serverproxyservice.exe" or src.process.image.path contains "\\OOSysAgent.exe") or (tgt.process.image.path contains "\\laplink.exe" or tgt.process.image.path="*\\laplink-everywhere-setup*.exe" or tgt.process.image.path contains "\\laplinkeverywhere.exe" or tgt.process.image.path contains "\\llrcservice.exe" or tgt.process.image.path contains "\\serverproxyservice.exe" or tgt.process.image.path contains "\\OOSysAgent.exe")))
 ```
 
 
@@ -15,8 +15,9 @@ references:
     - https://github.com/magicsword-io/LOLRMM
 author: LOLRMM Project
 date: 2025-12-01
+modified: 2026-09-02
 tags:
-    - attack.execution
+    - attack.command-and-control
     - attack.t1219
 logsource:
     product: windows
@@ -24,20 +25,20 @@ logsource:
 detection:
     selection_parent:
         ParentImage|endswith:
-            - laplink.exe
-            - laplink-everywhere-setup*.exe
-            - laplinkeverywhere.exe
-            - llrcservice.exe
-            - serverproxyservice.exe
-            - OOSysAgent.exe
+            - '\\laplink.exe'
+            - '\\laplink-everywhere-setup*.exe'
+            - '\\laplinkeverywhere.exe'
+            - '\\llrcservice.exe'
+            - '\\serverproxyservice.exe'
+            - '\\OOSysAgent.exe'
     selection_image:
         Image|endswith:
-            - laplink.exe
-            - laplink-everywhere-setup*.exe
-            - laplinkeverywhere.exe
-            - llrcservice.exe
-            - serverproxyservice.exe
-            - OOSysAgent.exe
+            - '\\laplink.exe'
+            - '\\laplink-everywhere-setup*.exe'
+            - '\\laplinkeverywhere.exe'
+            - '\\llrcservice.exe'
+            - '\\serverproxyservice.exe'
+            - '\\OOSysAgent.exe'
     condition: 1 of selection_*
 falsepositives:
     - Legitimate use of Laplink Everywhere

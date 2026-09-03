@@ -1,6 +1,6 @@
 ```sql
-// Translated content (automatically translated on 02-09-2026 01:51:41):
-event.type="Process Creation" and (endpoint.os="windows" and ((src.process.image.path contains "TiService.exe" or src.process.image.path contains "TiUpdateService.exe" or src.process.image.path contains "si.exe" or src.process.image.path contains "TiAgent.exe") or (tgt.process.image.path contains "TiService.exe" or tgt.process.image.path contains "TiUpdateService.exe" or tgt.process.image.path contains "si.exe" or tgt.process.image.path contains "TiAgent.exe")))
+// Translated content (automatically translated on 03-09-2026 01:57:27):
+event.type="Process Creation" and (endpoint.os="windows" and ((src.process.image.path contains "\\TiService.exe" or src.process.image.path contains "\\TiUpdateService.exe" or src.process.image.path contains "\\si.exe" or src.process.image.path contains "\\TiAgent.exe") or (tgt.process.image.path contains "\\TiService.exe" or tgt.process.image.path contains "\\TiUpdateService.exe" or tgt.process.image.path contains "\\si.exe" or tgt.process.image.path contains "\\TiAgent.exe")))
 ```
 
 
@@ -15,8 +15,9 @@ references:
     - https://github.com/magicsword-io/LOLRMM
 author: LOLRMM Project
 date: 2026-05-18
+modified: 2026-09-02
 tags:
-    - attack.execution
+    - attack.command-and-control
     - attack.t1219
 logsource:
     product: windows
@@ -24,16 +25,16 @@ logsource:
 detection:
     selection_parent:
         ParentImage|endswith:
-            - 'TiService.exe'
-            - 'TiUpdateService.exe'
-            - 'si.exe'
-            - 'TiAgent.exe'
+            - '\\TiService.exe'
+            - '\\TiUpdateService.exe'
+            - '\\si.exe'
+            - '\\TiAgent.exe'
     selection_image:
         Image|endswith:
-            - 'TiService.exe'
-            - 'TiUpdateService.exe'
-            - 'si.exe'
-            - 'TiAgent.exe'
+            - '\\TiService.exe'
+            - '\\TiUpdateService.exe'
+            - '\\si.exe'
+            - '\\TiAgent.exe'
     condition: 1 of selection_*
 falsepositives:
     - Legitimate use of TiFLUX
