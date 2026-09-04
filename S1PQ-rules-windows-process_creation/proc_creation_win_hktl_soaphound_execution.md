@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 03-09-2026 04:04:56):
+// Translated content (automatically translated on 04-09-2026 04:09:40):
 event.type="Process Creation" and (endpoint.os="windows" and ((tgt.process.cmdline contains " --buildcache " or tgt.process.cmdline contains " --bhdump " or tgt.process.cmdline contains " --certdump " or tgt.process.cmdline contains " --dnsdump ") and (tgt.process.cmdline contains " -c " or tgt.process.cmdline contains " --cachefilename " or tgt.process.cmdline contains " -o " or tgt.process.cmdline contains " --outputdirectory")))
 ```
 
@@ -39,4 +39,5 @@ detection:
 falsepositives:
     - Unknown
 level: high
+regression_tests_path: regression_data/rules/windows/process_creation/proc_creation_win_hktl_soaphound_execution/info.yml
 ```

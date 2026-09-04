@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 03-09-2026 04:04:56):
+// Translated content (automatically translated on 04-09-2026 04:09:40):
 event.type="Process Creation" and (endpoint.os="windows" and (tgt.process.cmdline contains "nslookup" and tgt.process.cmdline contains "_ldap._tcp.dc._msdcs."))
 ```
 
@@ -31,4 +31,5 @@ detection:
 falsepositives:
     - False positives depend on scripts and administrative tools used in the monitored environment
 level: high
+regression_tests_path: regression_data/rules/windows/process_creation/proc_creation_win_nslookup_domain_discovery/info.yml
 ```

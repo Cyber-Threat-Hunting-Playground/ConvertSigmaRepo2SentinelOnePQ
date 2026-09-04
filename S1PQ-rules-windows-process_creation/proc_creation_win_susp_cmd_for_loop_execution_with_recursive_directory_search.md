@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 03-09-2026 04:04:56):
+// Translated content (automatically translated on 04-09-2026 04:09:40):
 event.type="Process Creation" and (endpoint.os="windows" and ((tgt.process.cmdline contains "for /f" and tgt.process.cmdline contains "tokens=" and tgt.process.cmdline contains "in (" and tgt.process.cmdline contains "dir") or (src.process.cmdline contains "for /f" and src.process.cmdline contains "tokens=" and src.process.cmdline contains "in (" and src.process.cmdline contains "dir")))
 ```
 

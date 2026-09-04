@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 03-09-2026 04:04:56):
+// Translated content (automatically translated on 04-09-2026 04:09:40):
 event.type="Process Creation" and (endpoint.os="windows" and ((src.process.image.path contains "\\powershell.exe" or src.process.image.path contains "\\pwsh.exe") and (tgt.process.image.path contains "\\powershell.exe" or tgt.process.image.path contains "\\pwsh.exe") and (tgt.process.cmdline contains "Get-Content" and tgt.process.cmdline contains "-Stream")))
 ```
 
@@ -36,4 +36,5 @@ detection:
 falsepositives:
     - Unknown
 level: high
+regression_tests_path: regression_data/rules/windows/process_creation/proc_creation_win_powershell_run_script_from_ads/info.yml
 ```

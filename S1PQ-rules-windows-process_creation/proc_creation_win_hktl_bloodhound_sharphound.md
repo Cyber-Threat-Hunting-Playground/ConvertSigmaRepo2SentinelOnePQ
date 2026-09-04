@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 03-09-2026 04:04:56):
+// Translated content (automatically translated on 04-09-2026 04:09:40):
 event.type="Process Creation" and (endpoint.os="windows" and ((tgt.process.displayName contains "SharpHound" or tgt.process.displayName contains "SharpHound" or (tgt.process.publisher contains "SpecterOps" or tgt.process.publisher contains "evil corp") or (tgt.process.image.path contains "\\Bloodhound.exe" or tgt.process.image.path contains "\\SharpHound.exe")) or (tgt.process.cmdline contains " -CollectionMethod All " or tgt.process.cmdline contains " --CollectionMethods Session " or tgt.process.cmdline contains " --Loop --Loopduration " or tgt.process.cmdline contains " --PortScanTimeout " or tgt.process.cmdline contains ".exe -c All -d " or tgt.process.cmdline contains "Invoke-Bloodhound" or tgt.process.cmdline contains "Get-BloodHoundData") or (tgt.process.cmdline contains " -JsonFolder " and tgt.process.cmdline contains " -ZipFileName ") or (tgt.process.cmdline contains " DCOnly " and tgt.process.cmdline contains " --NoSaveCache ")))
 ```
 
@@ -59,4 +59,5 @@ detection:
 falsepositives:
     - Other programs that use these command line option and accepts an 'All' parameter
 level: high
+regression_tests_path: regression_data/rules/windows/process_creation/proc_creation_win_hktl_bloodhound_sharphound/info.yml
 ```

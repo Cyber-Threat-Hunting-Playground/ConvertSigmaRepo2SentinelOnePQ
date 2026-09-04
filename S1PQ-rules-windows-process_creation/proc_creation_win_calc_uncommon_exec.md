@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 03-09-2026 04:04:56):
+// Translated content (automatically translated on 04-09-2026 04:09:40):
 event.type="Process Creation" and (endpoint.os="windows" and (tgt.process.cmdline contains "\\calc.exe " or (tgt.process.image.path contains "\\calc.exe" and (not (tgt.process.image.path contains ":\\Windows\\System32\\" or tgt.process.image.path contains ":\\Windows\\SysWOW64\\" or tgt.process.image.path contains ":\\Windows\\WinSxS\\")))))
 ```
 
@@ -36,4 +36,5 @@ detection:
 falsepositives:
     - Unknown
 level: high
+regression_tests_path: regression_data/rules/windows/process_creation/proc_creation_win_calc_uncommon_exec/info.yml
 ```

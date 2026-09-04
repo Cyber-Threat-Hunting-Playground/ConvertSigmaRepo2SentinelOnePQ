@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 03-09-2026 04:04:56):
+// Translated content (automatically translated on 04-09-2026 04:09:40):
 event.type="Process Creation" and (endpoint.os="windows" and ((tgt.process.cmdline contains "\\HarddiskVolumeShadowCopy" and tgt.process.cmdline contains "System32\\config\\sam") and (tgt.process.cmdline contains "Copy-Item" or tgt.process.cmdline contains "cp $_." or tgt.process.cmdline contains "cpi $_." or tgt.process.cmdline contains "copy $_." or tgt.process.cmdline contains ".File]::Copy(")))
 ```
 
@@ -38,4 +38,5 @@ falsepositives:
     - Some rare backup scenarios
     - PowerShell scripts fixing HiveNightmare / SeriousSAM ACLs
 level: high
+regression_tests_path: regression_data/rules/windows/process_creation/proc_creation_win_powershell_sam_access/info.yml
 ```

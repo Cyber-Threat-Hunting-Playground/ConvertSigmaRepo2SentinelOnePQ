@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 03-09-2026 04:04:56):
+// Translated content (automatically translated on 04-09-2026 04:09:40):
 event.type="Process Creation" and (endpoint.os="windows" and (tgt.process.image.path contains "\\svchost.exe" and (not (tgt.process.cmdline matches "-k\\s\\w{1,64}(?:\\s?(?:-p|-s))?" or tgt.process.cmdline="" or not (tgt.process.cmdline matches "\.*"))) and (not ((src.process.image.path contains "\\MsMpEng.exe" and tgt.process.cmdline contains "svchost.exe") or (src.process.image.path contains "\\MRT.exe" and tgt.process.cmdline="svchost.exe")))))
 ```
 
@@ -49,4 +49,5 @@ detection:
 falsepositives:
     - Unlikely
 level: high
+regression_tests_path: regression_data/rules/windows/process_creation/proc_creation_win_svchost_uncommon_command_line_flags/info.yml
 ```

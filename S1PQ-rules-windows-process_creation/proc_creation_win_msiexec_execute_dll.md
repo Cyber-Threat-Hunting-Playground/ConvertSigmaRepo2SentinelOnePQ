@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 03-09-2026 04:04:56):
+// Translated content (automatically translated on 04-09-2026 04:09:40):
 event.type="Process Creation" and (endpoint.os="windows" and ((tgt.process.image.path contains "\\msiexec.exe" and (tgt.process.cmdline contains " -Y" or tgt.process.cmdline contains " /Y" or tgt.process.cmdline contains " –Y" or tgt.process.cmdline contains " —Y" or tgt.process.cmdline contains " ―Y")) and (not (tgt.process.cmdline contains "\\MsiExec.exe\" /Y \"C:\\Program Files\\" or tgt.process.cmdline contains "\\MsiExec.exe\" /Y \"C:\\Program Files (x86)\\" or tgt.process.cmdline contains "\\MsiExec.exe\" /Y \"C:\\Windows\\System32\\" or tgt.process.cmdline contains "\\MsiExec.exe\" /Y \"C:\\Windows\\SysWOW64\\"))))
 ```
 
@@ -39,4 +39,5 @@ detection:
 falsepositives:
     - Legitimate script
 level: medium
+regression_tests_path: regression_data/rules/windows/process_creation/proc_creation_win_msiexec_execute_dll/info.yml
 ```

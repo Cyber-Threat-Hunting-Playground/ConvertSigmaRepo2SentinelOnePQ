@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 03-09-2026 04:04:56):
+// Translated content (automatically translated on 04-09-2026 04:09:40):
 event.type="Process Creation" and (endpoint.os="windows" and ((tgt.process.cmdline contains "for " or tgt.process.cmdline contains "foreach ") and (tgt.process.cmdline contains "nslookup" or tgt.process.cmdline contains "ping")))
 ```
 
@@ -37,4 +37,5 @@ detection:
 falsepositives:
     - Legitimate script
 level: medium
+regression_tests_path: regression_data/rules/windows/process_creation/proc_creation_win_susp_network_scan_loop/info.yml
 ```

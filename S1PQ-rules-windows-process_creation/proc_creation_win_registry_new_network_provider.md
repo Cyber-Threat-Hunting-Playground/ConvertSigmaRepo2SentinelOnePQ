@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 03-09-2026 04:04:56):
+// Translated content (automatically translated on 04-09-2026 04:09:40):
 event.type="Process Creation" and (endpoint.os="windows" and (tgt.process.cmdline contains "\\System\\CurrentControlSet\\Services\\" and tgt.process.cmdline contains "\\NetworkProvider"))
 ```
 
@@ -40,4 +40,5 @@ detection:
 falsepositives:
     - Other legitimate network providers used and not filtred in this rule
 level: high
+regression_tests_path: regression_data/rules/windows/process_creation/proc_creation_win_registry_new_network_provider/info.yml
 ```

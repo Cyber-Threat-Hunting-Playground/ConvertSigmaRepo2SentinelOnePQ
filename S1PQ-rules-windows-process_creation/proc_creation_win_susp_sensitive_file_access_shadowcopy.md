@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 03-09-2026 04:04:56):
+// Translated content (automatically translated on 04-09-2026 04:09:40):
 event.type="Process Creation" and (endpoint.os="windows" and (tgt.process.cmdline contains "\\\\?\\GLOBALROOT\\Device\\HarddiskVolumeShadowCopy" and (tgt.process.cmdline contains "\\NTDS.dit" or tgt.process.cmdline contains "\\SYSTEM" or tgt.process.cmdline contains "\\SECURITY")))
 ```
 
@@ -38,4 +38,5 @@ detection:
 falsepositives:
     - Unlikely
 level: high
+regression_tests_path: regression_data/rules/windows/process_creation/proc_creation_win_susp_sensitive_file_access_shadowcopy/info.yml
 ```

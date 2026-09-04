@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 03-09-2026 04:04:56):
+// Translated content (automatically translated on 04-09-2026 04:09:40):
 event.type="Process Creation" and (endpoint.os="windows" and (tgt.process.image.path contains "\\at.exe" and tgt.process.cmdline contains "interactive"))
 ```
 
@@ -37,4 +37,5 @@ simulation:
       name: At.exe Scheduled task
       technique: T1053.002
       atomic_guid: 4a6c0dc4-0f2a-4203-9298-a5a9bdc21ed8
+regression_tests_path: regression_data/rules/windows/process_creation/proc_creation_win_at_interactive_execution/info.yml
 ```

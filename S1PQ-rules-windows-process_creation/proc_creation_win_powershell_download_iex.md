@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 03-09-2026 04:04:56):
+// Translated content (automatically translated on 04-09-2026 04:09:40):
 event.type="Process Creation" and (endpoint.os="windows" and ((tgt.process.cmdline contains ".DownloadString(" or tgt.process.cmdline contains ".DownloadFile(" or tgt.process.cmdline contains "Invoke-WebRequest " or tgt.process.cmdline contains "iwr " or tgt.process.cmdline contains "Invoke-RestMethod " or tgt.process.cmdline contains "irm ") and (tgt.process.cmdline contains ";iex $" or tgt.process.cmdline contains "| IEX" or tgt.process.cmdline contains "|IEX " or tgt.process.cmdline contains "I`E`X" or tgt.process.cmdline contains "I`EX" or tgt.process.cmdline contains "IE`X" or tgt.process.cmdline contains "iex " or tgt.process.cmdline contains "IEX (" or tgt.process.cmdline contains "IEX(" or tgt.process.cmdline contains "Invoke-Expression")))
 ```
 
@@ -47,4 +47,5 @@ detection:
 falsepositives:
     - Some PowerShell installers were seen using similar combinations. Apply filters accordingly
 level: high
+regression_tests_path: regression_data/rules/windows/process_creation/proc_creation_win_powershell_download_iex/info.yml
 ```

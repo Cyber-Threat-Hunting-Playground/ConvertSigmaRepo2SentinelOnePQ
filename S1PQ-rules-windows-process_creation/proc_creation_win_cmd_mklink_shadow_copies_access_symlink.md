@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 03-09-2026 04:04:56):
+// Translated content (automatically translated on 04-09-2026 04:09:40):
 event.type="Process Creation" and (endpoint.os="windows" and (tgt.process.cmdline contains "mklink" and tgt.process.cmdline contains "HarddiskVolumeShadowCopy"))
 ```
 
@@ -31,4 +31,5 @@ detection:
 falsepositives:
     - Legitimate administrator working with shadow copies, access for backup purposes
 level: high
+regression_tests_path: regression_data/rules/windows/process_creation/proc_creation_win_cmd_mklink_shadow_copies_access_symlink/info.yml
 ```

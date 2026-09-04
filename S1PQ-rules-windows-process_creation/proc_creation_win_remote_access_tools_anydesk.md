@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 03-09-2026 04:04:56):
+// Translated content (automatically translated on 04-09-2026 04:09:40):
 event.type="Process Creation" and (endpoint.os="windows" and ((tgt.process.image.path contains "\\AnyDesk.exe" or tgt.process.image.path contains "\\AnyDeskMSI.exe") or tgt.process.displayName="AnyDesk" or tgt.process.displayName="AnyDesk" or tgt.process.publisher="AnyDesk Software GmbH"))
 ```
 
@@ -40,4 +40,5 @@ detection:
 falsepositives:
     - Legitimate use
 level: medium
+regression_tests_path: regression_data/rules/windows/process_creation/proc_creation_win_remote_access_tools_anydesk/info.yml
 ```
