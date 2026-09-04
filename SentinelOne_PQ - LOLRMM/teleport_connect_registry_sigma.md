@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 03-09-2026 01:57:27):
+// Translated content (automatically translated on 04-09-2026 01:52:22):
 event.category="registry" and (endpoint.os="windows" and (registry.keyPath contains "HKLM\\SOFTWARE\\Policies\\Teleport\\TeleportConnect" or registry.keyPath contains "HKCU\\SOFTWARE\\Policies\\Teleport\\TeleportConnect"))
 ```
 
