@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 03-09-2026 01:51:35):
+// Translated content (automatically translated on 04-09-2026 01:45:55):
 event.type="Process Creation" and (endpoint.os="windows" and ((tgt.process.image.path contains "\\curl.exe" or tgt.process.displayName="The curl executable") and (tgt.process.cmdline contains " -A " or tgt.process.cmdline contains " --user-agent ")))
 ```
 
@@ -36,4 +36,5 @@ falsepositives:
     - Scripts created by developers and admins
     - Administrative activity
 level: medium
+regression_tests_path: regression_data/rules-threat-hunting/windows/process_creation/proc_creation_win_curl_useragent/info.yml
 ```
