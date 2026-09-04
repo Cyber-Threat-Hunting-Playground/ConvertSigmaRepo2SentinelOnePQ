@@ -1,6 +1,6 @@
 ```sql
-// Translated content (automatically translated on 03-09-2026 02:48:22):
-event.type="Module Load" and (endpoint.os="windows" and (module.path contains "\\vsstrace.dll" and (not (((src.process.image.path in ("C:\\Windows\\explorer.exe","C:\\Windows\\ImmersiveControlPanel\\SystemSettings.exe")) or (src.process.image.path contains "C:\\Windows\\System32\\" or src.process.image.path contains "C:\\Windows\\SysWOW64\\" or src.process.image.path contains "C:\\Windows\\Temp\\{" or src.process.image.path contains "C:\\Windows\\WinSxS\\" or src.process.image.path contains "C:\\ProgramData\\Package Cache\\{")) or (src.process.image.path contains "C:\\Program Files\\" or src.process.image.path contains "C:\\Program Files (x86)\\") or not (src.process.image.path matches "\.*"))) and (not (src.process.image.path contains "C:\\$WinREAgent\\Scratch\\" or (src.process.image.path contains "\\temp\\is-" and src.process.image.path contains "\\avira_system_speedup.tmp")))))
+// Translated content (automatically translated on 04-09-2026 02:46:24):
+event.type="Module Load" and (endpoint.os="windows" and (module.path contains "\\vsstrace.dll" and (not (((src.process.image.path in ("C:\\Windows\\explorer.exe","C:\\Windows\\ImmersiveControlPanel\\SystemSettings.exe","C:\\Windows\\servicing\\TrustedInstaller.exe")) or (src.process.image.path contains "C:\\Windows\\System32\\" or src.process.image.path contains "C:\\Windows\\SysWOW64\\" or src.process.image.path contains "C:\\Windows\\Temp\\{" or src.process.image.path contains "C:\\Windows\\WinSxS\\" or src.process.image.path contains "C:\\ProgramData\\Package Cache\\{")) or (src.process.image.path contains "C:\\Program Files\\" or src.process.image.path contains "C:\\Program Files (x86)\\") or not (src.process.image.path matches "\.*"))) and (not (src.process.image.path contains "C:\\$WinREAgent\\Scratch\\" or (src.process.image.path contains "\\temp\\is-" and src.process.image.path contains "\\avira_system_speedup.tmp")))))
 ```
 
 
@@ -19,7 +19,7 @@ references:
     - https://github.com/ORCx41/DeleteShadowCopies
 author: frack113
 date: 2023-02-17
-modified: 2025-12-03
+modified: 2026-08-27
 tags:
     - attack.impact
     - attack.t1490
@@ -33,6 +33,7 @@ detection:
         - Image:
               - 'C:\Windows\explorer.exe'
               - 'C:\Windows\ImmersiveControlPanel\SystemSettings.exe'
+              - 'C:\Windows\servicing\TrustedInstaller.exe'
         - Image|startswith:
               - 'C:\Windows\System32\'
               - 'C:\Windows\SysWOW64\'
