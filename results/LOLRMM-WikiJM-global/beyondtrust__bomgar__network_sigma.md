@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 04-09-2026 03:13:13):
+// Translated content (automatically translated on 05-09-2026 03:16:17):
 (event.category in ("dns","url","ip")) and (endpoint.os="windows" and ((url.address contains ".beyondtrustcloud.com" or url.address contains ".bomgarcloud.com" or url.address contains "bomgarcloud.com") or (event.dns.request contains ".beyondtrustcloud.com" or event.dns.request contains ".bomgarcloud.com" or event.dns.request contains "bomgarcloud.com")))
 ```
 

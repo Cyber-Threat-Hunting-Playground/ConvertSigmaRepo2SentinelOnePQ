@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 04-09-2026 03:13:13):
+// Translated content (automatically translated on 05-09-2026 03:16:17):
 (event.category in ("dns","url","ip")) and (endpoint.os="windows" and ((url.address contains ".weezo.me" or url.address contains "weezo.net" or url.address contains ".weezo.net" or url.address contains "weezo.en.softonic.com") or (event.dns.request contains ".weezo.me" or event.dns.request contains "weezo.net" or event.dns.request contains ".weezo.net" or event.dns.request contains "weezo.en.softonic.com")))
 ```
 
