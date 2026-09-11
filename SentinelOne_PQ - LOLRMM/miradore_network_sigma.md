@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 10-09-2026 01:58:18):
+// Translated content (automatically translated on 11-09-2026 01:56:44):
 (event.category in ("dns","url","ip")) and (endpoint.os="windows" and ((url.address contains "gateway.miradore.com" or url.address contains ".miradore.com" or url.address contains "miradore.com" or url.address contains "gerwconline.blob.core.windows.net") or (event.dns.request contains "gateway.miradore.com" or event.dns.request contains ".miradore.com" or event.dns.request contains "miradore.com" or event.dns.request contains "gerwconline.blob.core.windows.net")))
 ```
 

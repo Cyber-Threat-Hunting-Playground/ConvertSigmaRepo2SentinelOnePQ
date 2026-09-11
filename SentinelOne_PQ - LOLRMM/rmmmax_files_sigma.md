@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 10-09-2026 01:58:18):
+// Translated content (automatically translated on 11-09-2026 01:56:44):
 event.category="file" and (endpoint.os="windows" and (tgt.file.path contains "%ProgramData%\\rmmmax\\AgentService\\RMMmaxAgentService.exe" or tgt.file.path contains "%ProgramData%\\RMMmax\\AgentService\\activity.log" or tgt.file.path="*%SystemRoot%\\Temp\\rmmmax_*.ps1" or tgt.file.path contains "/var/rmmmax/agentservice/rmmmax_agent.py" or tgt.file.path contains "/usr/local/bin/rmmmax-agent" or tgt.file.path contains "/etc/systemd/system/rmmmax-agent.service" or tgt.file.path contains "/var/rmmmax/agentservice/config.json" or tgt.file.path contains "/var/rmmmax/agentservice/activity.log" or tgt.file.path contains "/Applications/RMMmax Agent.app/Contents/MacOS/RMMmax Agent" or tgt.file.path contains "/Library/LaunchDaemons/com.rmmmax.agentservice.plist" or tgt.file.path contains "/Library/LaunchAgents/com.rmmmax.agentui.plist" or tgt.file.path contains "/var/rmmmax/agentservice/state.json"))
 ```
 
