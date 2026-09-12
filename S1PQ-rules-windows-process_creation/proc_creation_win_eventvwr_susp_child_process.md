@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 11-09-2026 04:17:01):
+// Translated content (automatically translated on 12-09-2026 04:15:32):
 event.type="Process Creation" and (endpoint.os="windows" and (src.process.image.path contains "\\eventvwr.exe" and (not (tgt.process.image.path contains ":\\Windows\\System32\\mmc.exe" or tgt.process.image.path contains ":\\Windows\\System32\\WerFault.exe" or tgt.process.image.path contains ":\\Windows\\SysWOW64\\WerFault.exe"))))
 ```
 
