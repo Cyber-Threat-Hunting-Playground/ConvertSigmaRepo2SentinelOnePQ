@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 11-09-2026 02:52:57):
+// Translated content (automatically translated on 12-09-2026 02:59:54):
 event.type="Process Creation" and (endpoint.os="osx" and (tgt.process.image.path contains "/jamf" and (tgt.process.cmdline contains "createAccount" or tgt.process.cmdline contains "manage" or tgt.process.cmdline contains "removeFramework" or tgt.process.cmdline contains "removeMdmProfile" or tgt.process.cmdline contains "resetPassword" or tgt.process.cmdline contains "setComputerName")))
 ```
 
