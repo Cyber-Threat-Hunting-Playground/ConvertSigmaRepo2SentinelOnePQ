@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 12-09-2026 02:01:04):
+// Translated content (automatically translated on 13-09-2026 01:56:01):
 event.category="file" and (endpoint.os="windows" and tgt.file.path contains "%APPDATA%\\RdClient\*")
 ```
 
