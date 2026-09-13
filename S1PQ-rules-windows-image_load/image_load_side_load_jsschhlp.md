@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 12-09-2026 02:58:59):
+// Translated content (automatically translated on 13-09-2026 02:59:00):
 event.type="Module Load" and (endpoint.os="windows" and (module.path contains "\\JSESPR.dll" and (not module.path contains "C:\\Program Files\\Common Files\\Justsystem\\JsSchHlp\\")))
 ```
 
