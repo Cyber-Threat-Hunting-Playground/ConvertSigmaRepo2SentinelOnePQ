@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 12-09-2026 01:56:04):
+// Translated content (automatically translated on 13-09-2026 01:49:14):
 event.type="Process Creation" and (endpoint.os="windows" and tgt.process.displayName="University of California, Berkeley")
 ```
 
