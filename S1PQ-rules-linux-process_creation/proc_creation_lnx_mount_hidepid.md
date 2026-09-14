@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 13-09-2026 02:05:42):
+// Translated content (automatically translated on 14-09-2026 02:23:46):
 event.type="Process Creation" and (endpoint.os="linux" and (tgt.process.image.path contains "/mount" and (tgt.process.cmdline contains "hidepid=2" and tgt.process.cmdline contains " -o ")))
 ```
 
