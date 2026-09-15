@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 14-09-2026 03:55:50):
+// Translated content (automatically translated on 15-09-2026 03:55:37):
 event.type="Module Load" and (endpoint.os="windows" and (module.path contains "\\jrtools.dll" and (not (module.path="c:\\program files\\J River\\Media Center *\\*" or module.path="c:\\program files (x86)\\J River\\Media Center *\\*"))))
 ```
 
