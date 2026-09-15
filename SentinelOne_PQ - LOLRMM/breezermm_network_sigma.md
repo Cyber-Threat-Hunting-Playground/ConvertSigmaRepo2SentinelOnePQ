@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 14-09-2026 02:13:43):
+// Translated content (automatically translated on 15-09-2026 02:19:49):
 (event.category in ("dns","url","ip")) and (endpoint.os="windows" and ((url.address contains "breezermm.com" or url.address contains "breeze.app" or url.address contains "us.2breeze.app" or url.address contains "eu.2breeze.app" or url.address contains "user_managed") or (event.dns.request contains "breezermm.com" or event.dns.request contains "breeze.app" or event.dns.request contains "us.2breeze.app" or event.dns.request contains "eu.2breeze.app" or event.dns.request contains "user_managed")))
 ```
 
