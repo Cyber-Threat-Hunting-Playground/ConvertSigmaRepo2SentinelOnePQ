@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 15-09-2026 03:16:20):
+// Translated content (automatically translated on 16-09-2026 03:12:40):
 event.type="Process Creation" and (endpoint.os="osx" and ((tgt.process.image.path contains "/tmutil" or tgt.process.cmdline contains "tmutil") and tgt.process.cmdline contains "disable"))
 ```
 
