@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 15-09-2026 03:55:37):
+// Translated content (automatically translated on 16-09-2026 03:52:45):
 event.type="Module Load" and (endpoint.os="windows" and (module.path contains "\\qtcorevbox4.dll" and (not (module.path contains "c:\\program files\\Oracle\\VirtualBox\\" or module.path contains "c:\\program files (x86)\\Oracle\\VirtualBox\\"))))
 ```
 
