@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 15-09-2026 03:42:45):
+// Translated content (automatically translated on 16-09-2026 03:39:24):
 (event.category in ("dns","url","ip")) and (endpoint.os="windows" and (url.address contains "datto.com" or event.dns.request contains "datto.com"))
 ```
 
