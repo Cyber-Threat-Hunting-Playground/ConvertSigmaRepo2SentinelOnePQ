@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 16-09-2026 02:22:40):
+// Translated content (automatically translated on 17-09-2026 02:26:43):
 event.type="Process Creation" and (endpoint.os="linux" and tgt.process.image.path contains "/groupdel")
 ```
 
