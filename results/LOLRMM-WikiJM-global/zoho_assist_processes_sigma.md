@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 17-09-2026 03:44:28):
+// Translated content (automatically translated on 18-09-2026 03:30:48):
 event.type="Process Creation" and (endpoint.os="windows" and (src.process.image.path contains "zaservice.exe" or src.process.image.path contains "ZMAgent.exe" or src.process.image.path contains "C:\*\\ZA_Access.exe" or src.process.image.path contains "ZohoMeeting.exe" or src.process.image.path contains "Zohours.exe" or src.process.image.path contains "zohotray.exe" or src.process.image.path contains "ZohoURSService.exe" or src.process.image.path contains "\\ZA_Access.exe" or src.process.image.path contains "Zaservice.exe" or src.process.image.path contains "za_connect.exe"))
 ```
 
