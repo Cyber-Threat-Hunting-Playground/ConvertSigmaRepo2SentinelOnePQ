@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 17-09-2026 02:16:55):
+// Translated content (automatically translated on 18-09-2026 02:03:04):
 event.category="registry" and (endpoint.os="windows" and (registry.keyPath contains "HKLM\\SYSTEM\\CurrentControlSet\\Services\\tinClientSessionManager-" or registry.keyPath contains "HKLM\\SYSTEM\\CurrentControlSet\\Control\\SafeBoot\\Network\\tinClientSessionManager-"))
 ```
 
