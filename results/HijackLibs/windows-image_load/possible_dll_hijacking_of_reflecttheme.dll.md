@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 17-09-2026 03:57:53):
+// Translated content (automatically translated on 18-09-2026 03:44:57):
 event.type="Module Load" and (endpoint.os="windows" and module.path contains "\\reflecttheme.dll")
 ```
 
