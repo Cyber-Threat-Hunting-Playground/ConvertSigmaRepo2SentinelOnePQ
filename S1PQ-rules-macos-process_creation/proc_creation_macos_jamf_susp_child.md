@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 18-09-2026 03:03:51):
+// Translated content (automatically translated on 19-09-2026 03:00:25):
 event.type="Process Creation" and (endpoint.os="osx" and (src.process.image.path contains "/jamf" and (tgt.process.image.path contains "/bash" or tgt.process.image.path contains "/sh")))
 ```
 
