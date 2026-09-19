@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 18-09-2026 02:03:04):
+// Translated content (automatically translated on 19-09-2026 02:07:30):
 (event.category in ("dns","url","ip")) and (endpoint.os="windows" and ((url.address contains ".fastviewer.com" or url.address contains "fastviewer.com") or (event.dns.request contains ".fastviewer.com" or event.dns.request contains "fastviewer.com")))
 ```
 
