@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 19-09-2026 03:41:53):
+// Translated content (automatically translated on 20-09-2026 03:57:48):
 event.type="Module Load" and (endpoint.os="windows" and (module.path contains "\\vboxrt.dll" and (not (module.path contains "c:\\program files\\Oracle\\VirtualBox\\" or module.path contains "c:\\program files (x86)\\Oracle\\VirtualBox\\"))))
 ```
 
