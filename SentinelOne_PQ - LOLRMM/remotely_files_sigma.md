@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 19-09-2026 02:07:30):
+// Translated content (automatically translated on 20-09-2026 02:13:21):
 event.category="file" and (endpoint.os="windows" and (tgt.file.path contains "C:\\Program Files\\Remotely\\Remotely_Agent.exe" or tgt.file.path contains "C:\\Program Files\\Remotely\\Desktop\\Remotely_Desktop.exe" or tgt.file.path contains "C:\\Program Files\\Remotely\\ConnectionInfo.json" or tgt.file.path contains "C:\\Program Files\\Remotely\\etag.txt" or tgt.file.path contains "%TEMP%\\Remotely_Install.txt" or tgt.file.path contains "/usr/local/bin/Remotely/Remotely_Agent" or tgt.file.path contains "/usr/local/bin/Remotely/Desktop/Remotely_Desktop" or tgt.file.path contains "/usr/local/bin/Remotely/ConnectionInfo.json" or tgt.file.path contains "/var/log/remotely/Agent_Install.log" or tgt.file.path contains "/etc/systemd/system/remotely-agent.service" or tgt.file.path contains "/Library/LaunchDaemons/remotely-agent.plist"))
 ```
 
