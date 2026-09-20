@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 19-09-2026 04:18:08):
+// Translated content (automatically translated on 20-09-2026 04:37:01):
 event.type="Process Creation" and (endpoint.os="windows" and (tgt.process.cmdline contains "WindowsAudioDevice-Powershell-Cmdlet" or tgt.process.cmdline contains "Toggle-AudioDevice" or tgt.process.cmdline contains "Get-AudioDevice " or tgt.process.cmdline contains "Set-AudioDevice " or tgt.process.cmdline contains "Write-AudioDevice "))
 ```
 
