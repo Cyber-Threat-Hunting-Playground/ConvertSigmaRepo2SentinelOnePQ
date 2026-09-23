@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 22-09-2026 02:26:05):
+// Translated content (automatically translated on 23-09-2026 02:26:03):
 event.type="Process Creation" and (endpoint.os="linux" and tgt.process.image.path contains "/dev/shm/")
 ```
 
