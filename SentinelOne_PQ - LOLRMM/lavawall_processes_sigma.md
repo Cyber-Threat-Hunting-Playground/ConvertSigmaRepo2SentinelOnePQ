@@ -1,0 +1,33 @@
+```sql
+// Translated content (automatically translated on 23-09-2026 02:18:07):
+event.type="Process Creation" and (endpoint.os="windows" and (src.process.image.path contains "\\LavawallWin.exe" or tgt.process.image.path contains "\\LavawallWin.exe"))
+```
+
+
+# Original Sigma Rule:
+```yaml
+title: Potential Lavawall RMM Tool Process Activity
+id: f89889df-8c8f-5605-a592-0405176f9df6
+status: experimental
+description: |
+    Detects potential processes activity of Lavawall RMM tool
+references:
+    - https://github.com/magicsword-io/LOLRMM
+author: LOLRMM Project
+date: 2026-09-22
+tags:
+    - attack.command-and-control
+    - attack.t1219
+logsource:
+    product: windows
+    category: process_creation
+detection:
+    selection_parent:
+        ParentImage|endswith: '\\LavawallWin.exe'
+    selection_image:
+        Image|endswith: '\\LavawallWin.exe'
+    condition: 1 of selection_*
+falsepositives:
+    - Legitimate use of Lavawall
+level: medium
+```

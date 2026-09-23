@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 22-09-2026 02:17:58):
+// Translated content (automatically translated on 23-09-2026 02:18:07):
 (event.category in ("dns","url","ip")) and (endpoint.os="windows" and ((url.address contains "shellhub.io" or url.address contains "cloud.shellhub.io" or url.address contains "www.shellhub.io" or url.address contains ".shellhub.io") or (event.dns.request contains "shellhub.io" or event.dns.request contains "cloud.shellhub.io" or event.dns.request contains "www.shellhub.io" or event.dns.request contains ".shellhub.io")))
 ```
 

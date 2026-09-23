@@ -1,6 +1,6 @@
 ```sql
-// Translated content (automatically translated on 22-09-2026 02:17:58):
-event.category="file" and (endpoint.os="windows" and (tgt.file.path contains "%ProgramData%\\rmmmax\\AgentService\\RMMmaxAgentService.exe" or tgt.file.path contains "%ProgramData%\\RMMmax\\AgentService\\activity.log" or tgt.file.path="*%SystemRoot%\\Temp\\rmmmax_*.ps1" or tgt.file.path contains "/var/rmmmax/agentservice/rmmmax_agent.py" or tgt.file.path contains "/usr/local/bin/rmmmax-agent" or tgt.file.path contains "/etc/systemd/system/rmmmax-agent.service" or tgt.file.path contains "/var/rmmmax/agentservice/config.json" or tgt.file.path contains "/var/rmmmax/agentservice/activity.log" or tgt.file.path contains "/Applications/RMMmax Agent.app/Contents/MacOS/RMMmax Agent" or tgt.file.path contains "/Library/LaunchDaemons/com.rmmmax.agentservice.plist" or tgt.file.path contains "/Library/LaunchAgents/com.rmmmax.agentui.plist" or tgt.file.path contains "/var/rmmmax/agentservice/state.json"))
+// Translated content (automatically translated on 23-09-2026 02:18:07):
+event.category="file" and (endpoint.os="windows" and (tgt.file.path contains "%ProgramData%\\rmmmax\\AgentService\\RMMmaxAgentService.exe" or tgt.file.path contains "%ProgramData%\\RMMmax\\AgentService\\activity.log" or tgt.file.path="*%SystemRoot%\\Temp\\rmmmax_*.ps1"))
 ```
 
 
@@ -15,6 +15,7 @@ references:
     - https://github.com/magicsword-io/LOLRMM
 author: LOLRMM Project
 date: 2026-09-09
+modified: 2026-09-22
 tags:
     - attack.command-and-control
     - attack.t1219
@@ -27,15 +28,6 @@ detection:
             - '%ProgramData%\rmmmax\AgentService\RMMmaxAgentService.exe'
             - '%ProgramData%\RMMmax\AgentService\activity.log'
             - '%SystemRoot%\Temp\rmmmax_*.ps1'
-            - '/var/rmmmax/agentservice/rmmmax_agent.py'
-            - '/usr/local/bin/rmmmax-agent'
-            - '/etc/systemd/system/rmmmax-agent.service'
-            - '/var/rmmmax/agentservice/config.json'
-            - '/var/rmmmax/agentservice/activity.log'
-            - '/Applications/RMMmax Agent.app/Contents/MacOS/RMMmax Agent'
-            - '/Library/LaunchDaemons/com.rmmmax.agentservice.plist'
-            - '/Library/LaunchAgents/com.rmmmax.agentui.plist'
-            - '/var/rmmmax/agentservice/state.json'
     condition: selection
 falsepositives:
     - Legitimate use of RMMmax

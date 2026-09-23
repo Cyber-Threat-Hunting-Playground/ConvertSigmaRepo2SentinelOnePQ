@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 22-09-2026 02:17:58):
+// Translated content (automatically translated on 23-09-2026 02:18:07):
 event.category="file" and (endpoint.os="windows" and (tgt.file.path contains "C:\\Program Files\\OpsBridge\\OpsBridgeAgent.exe" or tgt.file.path contains "C:\\Program Files\\OpsBridge\*.exe" or tgt.file.path contains "C:\\ProgramData\\OpsBridge\\agent_state.json" or tgt.file.path contains "C:\\ProgramData\\OpsBridge\\agent.log" or tgt.file.path contains "C:\\ProgramData\\OpsBridge\\install.log" or tgt.file.path contains "C:\\ProgramData\\OpsBridge\\.persisted_v4" or tgt.file.path="*C:\\ProgramData\\OpsBridge\\task_*.json" or tgt.file.path contains "C:\\Windows\\System32\\Tasks\\OpsBridge Agent"))
 ```
 

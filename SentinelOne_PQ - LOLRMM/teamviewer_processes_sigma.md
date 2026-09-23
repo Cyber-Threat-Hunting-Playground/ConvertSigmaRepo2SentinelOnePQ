@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 22-09-2026 02:17:58):
+// Translated content (automatically translated on 23-09-2026 02:18:07):
 event.type="Process Creation" and (endpoint.os="windows" and ((src.process.image.path contains "\\teamviewer_desktop.exe" or src.process.image.path contains "\\teamviewer_service.exe") or (tgt.process.image.path contains "\\teamviewer_desktop.exe" or tgt.process.image.path contains "\\teamviewer_service.exe")))
 ```
 

@@ -1,6 +1,6 @@
 ```sql
-// Translated content (automatically translated on 22-09-2026 02:17:58):
-event.category="file" and (endpoint.os="windows" and (tgt.file.path contains "C:\\temp\\netlock rmm\\installer\\logs\*" or tgt.file.path contains "C:\\ProgramData\\0x101 Cyber Security\\NetLock RMM\\Comm Agent\\server_config.json" or tgt.file.path contains "/etc/systemd/system/netlock-rmm-agent-comm.service" or tgt.file.path contains "/Library/LaunchDaemons/com.netlock.rmm.agentcomm.plist" or tgt.file.path contains "/var/log/netlock-rmm-agent-comm.log"))
+// Translated content (automatically translated on 23-09-2026 02:18:07):
+event.category="file" and (endpoint.os="windows" and (tgt.file.path contains "C:\\temp\\netlock rmm\\installer\\logs\*" or tgt.file.path contains "C:\\ProgramData\\0x101 Cyber Security\\NetLock RMM\\Comm Agent\\server_config.json"))
 ```
 
 
@@ -15,7 +15,7 @@ references:
     - https://github.com/magicsword-io/LOLRMM
 author: LOLRMM Project
 date: 2025-12-01
-modified: 2026-09-02
+modified: 2026-09-22
 tags:
     - attack.command-and-control
     - attack.t1219
@@ -27,9 +27,6 @@ detection:
         TargetFilename|endswith:
             - 'C:\temp\netlock rmm\installer\logs\*'
             - 'C:\ProgramData\0x101 Cyber Security\NetLock RMM\Comm Agent\server_config.json'
-            - '/etc/systemd/system/netlock-rmm-agent-comm.service'
-            - '/Library/LaunchDaemons/com.netlock.rmm.agentcomm.plist'
-            - '/var/log/netlock-rmm-agent-comm.log'
     condition: selection
 falsepositives:
     - Legitimate use of NetLock RMM

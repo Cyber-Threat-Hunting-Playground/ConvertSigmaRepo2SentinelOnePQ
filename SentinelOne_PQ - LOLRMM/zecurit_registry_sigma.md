@@ -1,0 +1,31 @@
+```sql
+// Translated content (automatically translated on 23-09-2026 02:18:07):
+event.category="registry" and (endpoint.os="windows" and registry.keyPath contains "HKLM\\SOFTWARE\\Zecurit\\Agent")
+```
+
+
+# Original Sigma Rule:
+```yaml
+title: Potential Zecurit RMM Tool Registry Activity
+id: d283c6d4-877e-5290-9346-58b5dec5645c
+status: experimental
+description: |
+    Detects potential registry activity of Zecurit RMM tool
+references:
+    - https://github.com/magicsword-io/LOLRMM
+author: LOLRMM Project
+date: 2026-09-22
+tags:
+    - attack.command-and-control
+    - attack.t1219
+logsource:
+    product: windows
+    category: registry_event
+detection:
+    selection:
+        TargetObject|contains: 'HKLM\SOFTWARE\Zecurit\Agent'
+    condition: selection
+falsepositives:
+    - Legitimate use of Zecurit
+level: medium
+```

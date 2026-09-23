@@ -1,6 +1,6 @@
 ```sql
-// Translated content (automatically translated on 22-09-2026 02:17:58):
-event.category="file" and (endpoint.os="windows" and (tgt.file.path contains "C:\\nezha\\nezha-agent.exe" or tgt.file.path contains "C:\\nezha\\config.yml" or tgt.file.path contains "/opt/nezha/agent/nezha-agent" or tgt.file.path contains "/opt/nezha/agent/config.yml" or tgt.file.path contains "/etc/systemd/system/nezha-agent.service" or tgt.file.path contains "/opt/nezha/dashboard/app"))
+// Translated content (automatically translated on 23-09-2026 02:18:07):
+event.category="file" and (endpoint.os="windows" and (tgt.file.path contains "C:\\nezha\\nezha-agent.exe" or tgt.file.path contains "C:\\nezha\\config.yml"))
 ```
 
 
@@ -15,7 +15,7 @@ references:
     - https://github.com/magicsword-io/LOLRMM
 author: LOLRMM Project
 date: 2026-05-18
-modified: 2026-09-02
+modified: 2026-09-22
 tags:
     - attack.command-and-control
     - attack.t1219
@@ -27,10 +27,6 @@ detection:
         TargetFilename|endswith:
             - 'C:\nezha\nezha-agent.exe'
             - 'C:\nezha\config.yml'
-            - '/opt/nezha/agent/nezha-agent'
-            - '/opt/nezha/agent/config.yml'
-            - '/etc/systemd/system/nezha-agent.service'
-            - '/opt/nezha/dashboard/app'
     condition: selection
 falsepositives:
     - Legitimate use of Nezha

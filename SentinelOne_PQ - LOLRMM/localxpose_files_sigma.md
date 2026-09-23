@@ -1,6 +1,6 @@
 ```sql
-// Translated content (automatically translated on 22-09-2026 02:17:58):
-event.category="file" and (endpoint.os="windows" and (tgt.file.path contains "loclx.exe" or tgt.file.path contains "%APPDATA%\\loclx\\config.yaml" or tgt.file.path contains "~/.loclx/config.yaml"))
+// Translated content (automatically translated on 23-09-2026 02:18:07):
+event.category="file" and (endpoint.os="windows" and (tgt.file.path contains "loclx.exe" or tgt.file.path contains "%APPDATA%\\loclx\\config.yaml"))
 ```
 
 
@@ -15,7 +15,7 @@ references:
     - https://github.com/magicsword-io/LOLRMM
 author: LOLRMM Project
 date: 2026-05-18
-modified: 2026-09-02
+modified: 2026-09-22
 tags:
     - attack.command-and-control
     - attack.t1219
@@ -27,7 +27,6 @@ detection:
         TargetFilename|endswith:
             - 'loclx.exe'
             - '%APPDATA%\loclx\config.yaml'
-            - '~/.loclx/config.yaml'
     condition: selection
 falsepositives:
     - Legitimate use of LocalXpose

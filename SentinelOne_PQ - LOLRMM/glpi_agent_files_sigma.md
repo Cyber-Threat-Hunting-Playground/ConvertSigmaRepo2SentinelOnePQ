@@ -1,6 +1,6 @@
 ```sql
-// Translated content (automatically translated on 22-09-2026 02:17:58):
-event.category="file" and (endpoint.os="windows" and (tgt.file.path contains "C:\\Program Files\\GLPI-Agent\\perl\\bin\\glpi-agent" or tgt.file.path contains "C:\\Program Files\\GLPI-Agent\\perl\\bin\\glpi-win32-service.bat" or tgt.file.path contains "C:\\Program Files\\GLPI-Agent\\perl\\bin\\glpi-inventory" or tgt.file.path contains "C:\\Program Files\\GLPI-Agent\\perl\\bin\\glpi-netdiscovery" or tgt.file.path contains "C:\\Program Files\\GLPI-Agent\\perl\\bin\\glpi-netinventory" or tgt.file.path contains "C:\\Program Files\\GLPI-Agent\\perl\\bin\\glpi-esx" or tgt.file.path contains "C:\\Program Files\\GLPI-Agent\\perl\\bin\\glpi-injector" or tgt.file.path contains "C:\\Program Files\\GLPI-Agent\\perl\\bin\\glpi-remote" or tgt.file.path contains "C:\\Program Files\\GLPI-Agent\\perl\\bin\\perl.exe" or tgt.file.path contains "C:\\Program Files\\GLPI-Agent\\perl\\bin\\wperl.exe" or tgt.file.path contains "C:\\Program Files\\GLPI-Agent\\etc\\agent.cfg" or tgt.file.path contains "C:\\Program Files\\GLPI-Agent\\logs\\glpi-agent.log" or tgt.file.path contains "C:\\Program Files\\GLPI-Agent\\var\*" or tgt.file.path contains "/usr/bin/glpi-agent" or tgt.file.path contains "/usr/local/bin/glpi-agent" or tgt.file.path contains "/etc/glpi-agent/agent.cfg" or tgt.file.path contains "/etc/glpi-agent/conf.d/" or tgt.file.path contains "/var/lib/glpi-agent/" or tgt.file.path contains "/lib/systemd/system/glpi-agent.service" or tgt.file.path contains "/Applications/GLPI-Agent/etc/agent.cfg" or tgt.file.path contains "/Applications/GLPI-Agent/etc/conf.d/"))
+// Translated content (automatically translated on 23-09-2026 02:18:07):
+event.category="file" and (endpoint.os="windows" and (tgt.file.path contains "C:\\Program Files\\GLPI-Agent\\perl\\bin\\glpi-agent" or tgt.file.path contains "C:\\Program Files\\GLPI-Agent\\perl\\bin\\glpi-win32-service.bat" or tgt.file.path contains "C:\\Program Files\\GLPI-Agent\\perl\\bin\\glpi-inventory" or tgt.file.path contains "C:\\Program Files\\GLPI-Agent\\perl\\bin\\glpi-netdiscovery" or tgt.file.path contains "C:\\Program Files\\GLPI-Agent\\perl\\bin\\glpi-netinventory" or tgt.file.path contains "C:\\Program Files\\GLPI-Agent\\perl\\bin\\glpi-esx" or tgt.file.path contains "C:\\Program Files\\GLPI-Agent\\perl\\bin\\glpi-injector" or tgt.file.path contains "C:\\Program Files\\GLPI-Agent\\perl\\bin\\glpi-remote" or tgt.file.path contains "C:\\Program Files\\GLPI-Agent\\perl\\bin\\perl.exe" or tgt.file.path contains "C:\\Program Files\\GLPI-Agent\\perl\\bin\\wperl.exe" or tgt.file.path contains "C:\\Program Files\\GLPI-Agent\\etc\\agent.cfg" or tgt.file.path contains "C:\\Program Files\\GLPI-Agent\\logs\\glpi-agent.log" or tgt.file.path contains "C:\\Program Files\\GLPI-Agent\\var\*"))
 ```
 
 
@@ -15,7 +15,7 @@ references:
     - https://github.com/magicsword-io/LOLRMM
 author: LOLRMM Project
 date: 2026-05-18
-modified: 2026-09-02
+modified: 2026-09-22
 tags:
     - attack.command-and-control
     - attack.t1219
@@ -38,14 +38,6 @@ detection:
             - 'C:\Program Files\GLPI-Agent\etc\agent.cfg'
             - 'C:\Program Files\GLPI-Agent\logs\glpi-agent.log'
             - 'C:\Program Files\GLPI-Agent\var\*'
-            - '/usr/bin/glpi-agent'
-            - '/usr/local/bin/glpi-agent'
-            - '/etc/glpi-agent/agent.cfg'
-            - '/etc/glpi-agent/conf.d/*'
-            - '/var/lib/glpi-agent/*'
-            - '/lib/systemd/system/glpi-agent.service'
-            - '/Applications/GLPI-Agent/etc/agent.cfg'
-            - '/Applications/GLPI-Agent/etc/conf.d/*'
     condition: selection
 falsepositives:
     - Legitimate use of GLPI Agent
