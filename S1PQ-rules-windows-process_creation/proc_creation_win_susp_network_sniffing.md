@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 23-09-2026 04:27:31):
+// Translated content (automatically translated on 24-09-2026 04:24:34):
 event.type="Process Creation" and (endpoint.os="windows" and ((tgt.process.image.path contains "\\tshark.exe" and tgt.process.cmdline contains "-i") or tgt.process.image.path contains "\\windump.exe"))
 ```
 
