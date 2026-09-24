@@ -1,0 +1,31 @@
+```sql
+// Translated content (automatically translated on 24-09-2026 02:05:20):
+(event.category in ("dns","url","ip")) and (endpoint.os="windows" and (url.address contains "api.allocentra.co.za" or event.dns.request contains "api.allocentra.co.za"))
+```
+
+
+# Original Sigma Rule:
+```yaml
+title: Potential Allocentra RMM Tool Network Activity
+id: ca67530e-0abd-5965-acc6-ccc14f3afcc0
+status: experimental
+description: |
+    Detects potential network activity of Allocentra RMM tool
+references:
+    - https://github.com/magicsword-io/LOLRMM
+author: LOLRMM Project
+date: 2026-09-23
+tags:
+    - attack.command-and-control
+    - attack.t1219
+logsource:
+    product: windows
+    category: network_connection
+detection:
+    selection:
+        DestinationHostname|endswith: 'api.allocentra.co.za'
+    condition: selection
+falsepositives:
+    - Legitimate use of Allocentra
+level: medium
+```

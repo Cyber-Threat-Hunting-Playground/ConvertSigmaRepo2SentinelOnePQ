@@ -1,0 +1,33 @@
+```sql
+// Translated content (automatically translated on 24-09-2026 02:05:20):
+event.type="Process Creation" and (endpoint.os="windows" and (src.process.image.path contains "\\allocentra-agent.exe" or tgt.process.image.path contains "\\allocentra-agent.exe"))
+```
+
+
+# Original Sigma Rule:
+```yaml
+title: Potential Allocentra RMM Tool Process Activity
+id: e12b6473-cb5b-55f5-8b87-6a79ce4b51f7
+status: experimental
+description: |
+    Detects potential processes activity of Allocentra RMM tool
+references:
+    - https://github.com/magicsword-io/LOLRMM
+author: LOLRMM Project
+date: 2026-09-23
+tags:
+    - attack.command-and-control
+    - attack.t1219
+logsource:
+    product: windows
+    category: process_creation
+detection:
+    selection_parent:
+        ParentImage|endswith: '\\allocentra-agent.exe'
+    selection_image:
+        Image|endswith: '\\allocentra-agent.exe'
+    condition: 1 of selection_*
+falsepositives:
+    - Legitimate use of Allocentra
+level: medium
+```

@@ -1,0 +1,33 @@
+```sql
+// Translated content (automatically translated on 24-09-2026 02:05:20):
+(event.category in ("dns","url","ip")) and (endpoint.os="windows" and ((url.address contains "www.logistical-software.co.uk" or url.address contains "webserv.logistical-software.co.uk") or (event.dns.request contains "www.logistical-software.co.uk" or event.dns.request contains "webserv.logistical-software.co.uk")))
+```
+
+
+# Original Sigma Rule:
+```yaml
+title: Potential LS RMM RMM Tool Network Activity
+id: 66977005-2faf-5437-b4d3-989e8c99c4c4
+status: experimental
+description: |
+    Detects potential network activity of LS RMM RMM tool
+references:
+    - https://github.com/magicsword-io/LOLRMM
+author: LOLRMM Project
+date: 2026-09-23
+tags:
+    - attack.command-and-control
+    - attack.t1219
+logsource:
+    product: windows
+    category: network_connection
+detection:
+    selection:
+        DestinationHostname|endswith:
+            - 'www.logistical-software.co.uk'
+            - 'webserv.logistical-software.co.uk'
+    condition: selection
+falsepositives:
+    - Legitimate use of LS RMM
+level: medium
+```

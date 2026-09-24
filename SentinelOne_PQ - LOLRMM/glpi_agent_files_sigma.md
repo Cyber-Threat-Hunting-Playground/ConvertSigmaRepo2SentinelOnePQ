@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 23-09-2026 02:18:07):
+// Translated content (automatically translated on 24-09-2026 02:05:20):
 event.category="file" and (endpoint.os="windows" and (tgt.file.path contains "C:\\Program Files\\GLPI-Agent\\perl\\bin\\glpi-agent" or tgt.file.path contains "C:\\Program Files\\GLPI-Agent\\perl\\bin\\glpi-win32-service.bat" or tgt.file.path contains "C:\\Program Files\\GLPI-Agent\\perl\\bin\\glpi-inventory" or tgt.file.path contains "C:\\Program Files\\GLPI-Agent\\perl\\bin\\glpi-netdiscovery" or tgt.file.path contains "C:\\Program Files\\GLPI-Agent\\perl\\bin\\glpi-netinventory" or tgt.file.path contains "C:\\Program Files\\GLPI-Agent\\perl\\bin\\glpi-esx" or tgt.file.path contains "C:\\Program Files\\GLPI-Agent\\perl\\bin\\glpi-injector" or tgt.file.path contains "C:\\Program Files\\GLPI-Agent\\perl\\bin\\glpi-remote" or tgt.file.path contains "C:\\Program Files\\GLPI-Agent\\perl\\bin\\perl.exe" or tgt.file.path contains "C:\\Program Files\\GLPI-Agent\\perl\\bin\\wperl.exe" or tgt.file.path contains "C:\\Program Files\\GLPI-Agent\\etc\\agent.cfg" or tgt.file.path contains "C:\\Program Files\\GLPI-Agent\\logs\\glpi-agent.log" or tgt.file.path contains "C:\\Program Files\\GLPI-Agent\\var\*"))
 ```
 

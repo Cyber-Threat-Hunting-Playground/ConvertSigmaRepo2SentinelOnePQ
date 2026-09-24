@@ -1,0 +1,31 @@
+```sql
+// Translated content (automatically translated on 24-09-2026 02:05:20):
+(event.category in ("dns","url","ip")) and (endpoint.os="windows" and (url.address contains "api.mremote.io" or event.dns.request contains "api.mremote.io"))
+```
+
+
+# Original Sigma Rule:
+```yaml
+title: Potential Mremote RMM Tool Network Activity
+id: b3f18a5e-16c5-58f8-8b8f-3817727cb829
+status: experimental
+description: |
+    Detects potential network activity of Mremote RMM tool
+references:
+    - https://github.com/magicsword-io/LOLRMM
+author: LOLRMM Project
+date: 2026-09-23
+tags:
+    - attack.command-and-control
+    - attack.t1219
+logsource:
+    product: windows
+    category: network_connection
+detection:
+    selection:
+        DestinationHostname|endswith: 'api.mremote.io'
+    condition: selection
+falsepositives:
+    - Legitimate use of Mremote
+level: medium
+```

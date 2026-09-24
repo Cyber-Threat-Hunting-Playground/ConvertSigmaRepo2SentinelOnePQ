@@ -1,0 +1,33 @@
+```sql
+// Translated content (automatically translated on 24-09-2026 02:05:20):
+event.category="file" and (endpoint.os="windows" and (tgt.file.path contains "\\RG-Supervision\\RG_Supervision.exe" or tgt.file.path contains "\\AppData\\Local\\Temp\\rgsupv\\cache\\prepared"))
+```
+
+
+# Original Sigma Rule:
+```yaml
+title: Potential RG System (RG Supervision) RMM Tool File Activity
+id: 0fc9fc87-ebc3-56b6-b6ca-81a6c388e6e7
+status: experimental
+description: |
+    Detects potential files activity of RG System (RG Supervision) RMM tool
+references:
+    - https://github.com/magicsword-io/LOLRMM
+author: LOLRMM Project
+date: 2026-09-23
+tags:
+    - attack.command-and-control
+    - attack.t1219
+logsource:
+    product: windows
+    category: file_event
+detection:
+    selection:
+        TargetFilename|endswith:
+            - '*\RG-Supervision\RG_Supervision.exe'
+            - '*\AppData\Local\Temp\rgsupv\cache\prepared'
+    condition: selection
+falsepositives:
+    - Legitimate use of RG System (RG Supervision)
+level: medium
+```

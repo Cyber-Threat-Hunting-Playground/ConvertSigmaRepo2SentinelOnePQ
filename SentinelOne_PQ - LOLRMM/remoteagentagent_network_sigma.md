@@ -1,0 +1,31 @@
+```sql
+// Translated content (automatically translated on 24-09-2026 02:05:20):
+(event.category in ("dns","url","ip")) and (endpoint.os="windows" and (url.address contains "app-af-agent-prod-009.azurewebsites.net" or event.dns.request contains "app-af-agent-prod-009.azurewebsites.net"))
+```
+
+
+# Original Sigma Rule:
+```yaml
+title: Potential RemoteAgentAgent RMM Tool Network Activity
+id: 66e0017d-e9b4-5f4e-8d85-dc052bd82d95
+status: experimental
+description: |
+    Detects potential network activity of RemoteAgentAgent RMM tool
+references:
+    - https://github.com/magicsword-io/LOLRMM
+author: LOLRMM Project
+date: 2026-09-23
+tags:
+    - attack.command-and-control
+    - attack.t1219
+logsource:
+    product: windows
+    category: network_connection
+detection:
+    selection:
+        DestinationHostname|endswith: 'app-af-agent-prod-009.azurewebsites.net'
+    condition: selection
+falsepositives:
+    - Legitimate use of RemoteAgentAgent
+level: medium
+```

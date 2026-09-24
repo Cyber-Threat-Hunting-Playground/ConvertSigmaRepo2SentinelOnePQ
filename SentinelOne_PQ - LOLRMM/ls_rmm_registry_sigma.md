@@ -1,0 +1,33 @@
+```sql
+// Translated content (automatically translated on 24-09-2026 02:05:20):
+event.category="registry" and (endpoint.os="windows" and (registry.keyPath contains "HKLM\\SOFTWARE\\LS RMM" or registry.keyPath contains "HKLM\\SYSTEM\\CurrentControlSet\\Services\\LSRMMWorker"))
+```
+
+
+# Original Sigma Rule:
+```yaml
+title: Potential LS RMM RMM Tool Registry Activity
+id: da0c185b-765e-568c-927a-d9b56ba5e95b
+status: experimental
+description: |
+    Detects potential registry activity of LS RMM RMM tool
+references:
+    - https://github.com/magicsword-io/LOLRMM
+author: LOLRMM Project
+date: 2026-09-23
+tags:
+    - attack.command-and-control
+    - attack.t1219
+logsource:
+    product: windows
+    category: registry_event
+detection:
+    selection:
+        TargetObject|contains:
+            - 'HKLM\SOFTWARE\LS RMM'
+            - 'HKLM\SYSTEM\CurrentControlSet\Services\LSRMMWorker'
+    condition: selection
+falsepositives:
+    - Legitimate use of LS RMM
+level: medium
+```

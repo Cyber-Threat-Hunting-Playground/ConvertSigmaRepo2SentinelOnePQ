@@ -1,6 +1,6 @@
 ```sql
-// Translated content (automatically translated on 23-09-2026 02:18:07):
-event.category="file" and (endpoint.os="windows" and (tgt.file.path contains "C:\\Program Files\\Breeze\\breeze-agent.exe" or tgt.file.path contains "C:\\Program Files\\Breeze\\breeze-watchdog.exe" or tgt.file.path contains "C:\\Program Files\\Breeze\\breeze-user-helper.exe" or tgt.file.path contains "C:\\Program Files\\Breeze\\breeze-backup.exe" or tgt.file.path contains "C:\\Program Files\\Breeze\\scripts\\install\\install-windows.ps1" or tgt.file.path contains "C:\\ProgramData\\Breeze\\agent.env" or tgt.file.path contains "C:\\ProgramData\\Breeze\\secrets.yaml" or tgt.file.path contains "C:\\ProgramData\\Breeze\\logs\\agent.log"))
+// Translated content (automatically translated on 24-09-2026 02:05:20):
+event.category="file" and (endpoint.os="windows" and (tgt.file.path contains "PixoIT-agent.exe" or tgt.file.path contains "C:\\Program Files\\Breeze\\breeze-agent.exe" or tgt.file.path contains "C:\\Program Files\\Breeze\\breeze-watchdog.exe" or tgt.file.path contains "C:\\Program Files\\Breeze\\breeze-user-helper.exe" or tgt.file.path contains "C:\\Program Files\\Breeze\\breeze-backup.exe" or tgt.file.path contains "C:\\Program Files\\Breeze\\scripts\\install\\install-windows.ps1" or tgt.file.path contains "C:\\ProgramData\\Breeze\\agent.env" or tgt.file.path contains "C:\\ProgramData\\Breeze\\secrets.yaml" or tgt.file.path contains "C:\\ProgramData\\Breeze\\logs\\agent.log"))
 ```
 
 
@@ -15,7 +15,7 @@ references:
     - https://github.com/magicsword-io/LOLRMM
 author: LOLRMM Project
 date: 2026-08-26
-modified: 2026-09-02
+modified: 2026-09-23
 tags:
     - attack.command-and-control
     - attack.t1219
@@ -25,6 +25,7 @@ logsource:
 detection:
     selection:
         TargetFilename|endswith:
+            - 'PixoIT-agent.exe'
             - 'C:\Program Files\Breeze\breeze-agent.exe'
             - 'C:\Program Files\Breeze\breeze-watchdog.exe'
             - 'C:\Program Files\Breeze\breeze-user-helper.exe'
