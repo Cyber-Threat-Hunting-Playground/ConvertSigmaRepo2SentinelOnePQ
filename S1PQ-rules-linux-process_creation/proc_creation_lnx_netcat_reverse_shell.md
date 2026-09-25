@@ -1,6 +1,6 @@
 ```sql
-// Translated content (automatically translated on 24-09-2026 02:14:43):
-event.type="Process Creation" and (endpoint.os="linux" and ((tgt.process.image.path contains "/nc" or tgt.process.image.path contains "/ncat") and (tgt.process.cmdline contains " -c " or tgt.process.cmdline contains " -e ") and (tgt.process.cmdline contains " ash" or tgt.process.cmdline contains " bash" or tgt.process.cmdline contains " bsh" or tgt.process.cmdline contains " csh" or tgt.process.cmdline contains " ksh" or tgt.process.cmdline contains " pdksh" or tgt.process.cmdline contains " sh" or tgt.process.cmdline contains " tcsh" or tgt.process.cmdline contains "/bin/ash" or tgt.process.cmdline contains "/bin/bash" or tgt.process.cmdline contains "/bin/bsh" or tgt.process.cmdline contains "/bin/csh" or tgt.process.cmdline contains "/bin/ksh" or tgt.process.cmdline contains "/bin/pdksh" or tgt.process.cmdline contains "/bin/sh" or tgt.process.cmdline contains "/bin/tcsh" or tgt.process.cmdline contains "/bin/zsh" or tgt.process.cmdline contains "$IFSash" or tgt.process.cmdline contains "$IFSbash" or tgt.process.cmdline contains "$IFSbsh" or tgt.process.cmdline contains "$IFScsh" or tgt.process.cmdline contains "$IFSksh" or tgt.process.cmdline contains "$IFSpdksh" or tgt.process.cmdline contains "$IFSsh" or tgt.process.cmdline contains "$IFStcsh" or tgt.process.cmdline contains "$IFSzsh")))
+// Translated content (automatically translated on 25-09-2026 02:31:33):
+event.type="Process Creation" and (endpoint.os="linux" and ((tgt.process.image.path contains "/nc.openbsd" or tgt.process.image.path contains "/nc.traditional" or tgt.process.image.path contains "/nc" or tgt.process.image.path contains "/ncat" or tgt.process.image.path contains "/netcat.openbsd" or tgt.process.image.path contains "/netcat.traditional" or tgt.process.image.path contains "/netcat") and (tgt.process.cmdline contains " -c " or tgt.process.cmdline contains " -e ") and (tgt.process.cmdline contains " ash" or tgt.process.cmdline contains " bash" or tgt.process.cmdline contains " bsh" or tgt.process.cmdline contains " csh" or tgt.process.cmdline contains " ksh" or tgt.process.cmdline contains " pdksh" or tgt.process.cmdline contains " sh" or tgt.process.cmdline contains " tcsh" or tgt.process.cmdline contains "/bin/ash" or tgt.process.cmdline contains "/bin/bash" or tgt.process.cmdline contains "/bin/bsh" or tgt.process.cmdline contains "/bin/csh" or tgt.process.cmdline contains "/bin/ksh" or tgt.process.cmdline contains "/bin/pdksh" or tgt.process.cmdline contains "/bin/sh" or tgt.process.cmdline contains "/bin/tcsh" or tgt.process.cmdline contains "/bin/zsh" or tgt.process.cmdline contains "$IFSash" or tgt.process.cmdline contains "$IFSbash" or tgt.process.cmdline contains "$IFSbsh" or tgt.process.cmdline contains "$IFScsh" or tgt.process.cmdline contains "$IFSksh" or tgt.process.cmdline contains "$IFSpdksh" or tgt.process.cmdline contains "$IFSsh" or tgt.process.cmdline contains "$IFStcsh" or tgt.process.cmdline contains "$IFSzsh")))
 ```
 
 
@@ -9,7 +9,8 @@ event.type="Process Creation" and (endpoint.os="linux" and ((tgt.process.image.p
 title: Potential Netcat Reverse Shell Execution
 id: 7f734ed0-4f47-46c0-837f-6ee62505abd9
 status: test
-description: Detects execution of netcat with the "-e" flag followed by common shells. This could be a sign of a potential reverse shell setup.
+description: |
+    Detects execution of netcat with the "-e" or "-c" flags followed by common shells, which are commonly used to spawn reverse shells.
 references:
     - https://pentestmonkey.net/cheat-sheet/shells/reverse-shell-cheat-sheet
     - https://www.revshells.com/
@@ -18,6 +19,7 @@ references:
     - https://man7.org/linux/man-pages/man1/ncat.1.html
 author: '@d4ns4n_, Nasreddine Bencherchali (Nextron Systems)'
 date: 2023-04-07
+modified: 2026-09-24
 tags:
     - attack.execution
     - attack.t1059
@@ -27,8 +29,13 @@ logsource:
 detection:
     selection_nc:
         Image|endswith:
+            - '/nc.openbsd'
+            - '/nc.traditional'
             - '/nc'
             - '/ncat'
+            - '/netcat.openbsd'
+            - '/netcat.traditional'
+            - '/netcat'
     selection_flags:
         CommandLine|contains:
             - ' -c '
