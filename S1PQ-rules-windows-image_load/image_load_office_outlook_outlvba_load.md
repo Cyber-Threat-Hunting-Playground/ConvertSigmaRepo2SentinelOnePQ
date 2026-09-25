@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 24-09-2026 03:00:19):
+// Translated content (automatically translated on 25-09-2026 03:17:34):
 event.type="Module Load" and (endpoint.os="windows" and (src.process.image.path contains "\\outlook.exe" and module.path contains "\\outlvba.dll"))
 ```
 
