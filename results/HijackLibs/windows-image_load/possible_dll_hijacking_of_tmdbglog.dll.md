@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 26-09-2026 04:03:47):
+// Translated content (automatically translated on 27-09-2026 04:16:40):
 event.type="Module Load" and (endpoint.os="windows" and (module.path contains "\\tmdbglog.dll" and (not (module.path contains "c:\\program files\\Trend Micro\\Titanium\\" or module.path contains "c:\\program files (x86)\\Trend Micro\\Titanium\\"))))
 ```
 
