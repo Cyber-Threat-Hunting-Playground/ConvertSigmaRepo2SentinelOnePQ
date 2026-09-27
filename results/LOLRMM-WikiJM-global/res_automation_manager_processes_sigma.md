@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 26-09-2026 03:51:34):
+// Translated content (automatically translated on 27-09-2026 04:01:00):
 event.type="Process Creation" and (endpoint.os="windows" and (src.process.image.path="*wisshell*.exe" or src.process.image.path contains "wmc.exe" or src.process.image.path contains "wmc_deployer.exe" or src.process.image.path contains "wmcsvc.exe"))
 ```
 
