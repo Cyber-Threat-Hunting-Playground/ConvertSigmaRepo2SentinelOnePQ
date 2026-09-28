@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 27-09-2026 02:22:51):
+// Translated content (automatically translated on 28-09-2026 02:26:47):
 event.type="Process Creation" and (endpoint.os="windows" and ((src.process.image.path contains "\\ITAgentRMMSender.exe" or src.process.image.path contains "\\ITAgentRMMSenderSL.exe" or src.process.image.path contains "\\ITAgentRMMSenderUpdater.exe") or (tgt.process.image.path contains "\\ITAgentRMMSender.exe" or tgt.process.image.path contains "\\ITAgentRMMSenderSL.exe" or tgt.process.image.path contains "\\ITAgentRMMSenderUpdater.exe")))
 ```
 

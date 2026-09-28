@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 27-09-2026 02:22:51):
+// Translated content (automatically translated on 28-09-2026 02:26:47):
 event.category="file" and (endpoint.os="windows" and (tgt.file.path contains "\\RG-Supervision\\RG_Supervision.exe" or tgt.file.path contains "\\AppData\\Local\\Temp\\rgsupv\\cache\\prepared"))
 ```
 
