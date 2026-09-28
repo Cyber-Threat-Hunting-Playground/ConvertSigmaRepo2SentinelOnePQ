@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 27-09-2026 04:16:40):
+// Translated content (automatically translated on 28-09-2026 04:18:06):
 event.type="Module Load" and (endpoint.os="windows" and (module.path contains "\\crashhandler.dll" and (not (module.path contains "c:\\program files\\Steam\\" or module.path contains "c:\\program files (x86)\\Steam\\"))))
 ```
 
