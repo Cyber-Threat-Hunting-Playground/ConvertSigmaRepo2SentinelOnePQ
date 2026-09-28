@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 27-09-2026 04:59:49):
+// Translated content (automatically translated on 28-09-2026 05:01:23):
 event.type="Process Creation" and (endpoint.os="windows" and (tgt.process.cmdline contains "X509Enrollment.CBinaryConverter" or tgt.process.cmdline contains "884e2002-217d-11da-b2a4-000e7bbb2b09"))
 ```
 
