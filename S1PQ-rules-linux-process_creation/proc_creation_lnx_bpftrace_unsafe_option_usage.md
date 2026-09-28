@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 27-09-2026 02:32:28):
+// Translated content (automatically translated on 28-09-2026 02:35:42):
 event.type="Process Creation" and (endpoint.os="linux" and (tgt.process.image.path contains "bpftrace" and tgt.process.cmdline contains "--unsafe"))
 ```
 
