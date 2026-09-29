@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 28-09-2026 04:18:06):
+// Translated content (automatically translated on 29-09-2026 04:48:58):
 event.type="Module Load" and (endpoint.os="windows" and (module.path contains "\\systemsettings.dll" and (not (module.path contains "C:\\Windows\\ImmersiveControlPanel\\" or module.path contains "C:\\Windows\\WinSxS\\"))))
 ```
 

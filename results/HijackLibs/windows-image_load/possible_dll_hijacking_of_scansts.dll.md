@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 28-09-2026 04:18:06):
+// Translated content (automatically translated on 29-09-2026 04:48:58):
 event.type="Module Load" and (endpoint.os="windows" and (module.path contains "\\scansts.dll" and (not (module.path="c:\\program files\\Quick Heal\\Quick Heal *\\*" or module.path="c:\\program files (x86)\\Quick Heal\\Quick Heal *\\*"))))
 ```
 
