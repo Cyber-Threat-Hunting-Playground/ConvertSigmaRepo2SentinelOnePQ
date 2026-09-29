@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 28-09-2026 03:29:30):
+// Translated content (automatically translated on 29-09-2026 04:05:11):
 event.type="Process Creation" and (endpoint.os="osx" and ((tgt.process.cmdline contains "osascript" and tgt.process.cmdline contains " -e " and tgt.process.cmdline contains "eval" and tgt.process.cmdline contains "NSData.dataWithContentsOfURL") and ((tgt.process.cmdline contains " -l " and tgt.process.cmdline contains "JavaScript") or tgt.process.cmdline contains ".js")))
 ```
 
