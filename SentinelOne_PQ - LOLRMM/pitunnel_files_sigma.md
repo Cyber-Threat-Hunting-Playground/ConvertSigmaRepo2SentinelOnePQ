@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 28-09-2026 02:26:47):
+// Translated content (automatically translated on 29-09-2026 03:10:08):
 event.category="file" and (endpoint.os="windows" and (tgt.file.path contains "/usr/local/bin/pitunnel" or tgt.file.path contains "/etc/systemd/system/pitunnel.service"))
 ```
 

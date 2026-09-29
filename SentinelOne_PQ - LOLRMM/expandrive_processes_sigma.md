@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 28-09-2026 02:26:47):
+// Translated content (automatically translated on 29-09-2026 03:10:08):
 event.type="Process Creation" and (endpoint.os="windows" and (src.process.image.path contains "C:\\Users\*\\ExpanDrive.exe" or src.process.image.path contains "\\ExpanDrive.exe"))
 ```
 
