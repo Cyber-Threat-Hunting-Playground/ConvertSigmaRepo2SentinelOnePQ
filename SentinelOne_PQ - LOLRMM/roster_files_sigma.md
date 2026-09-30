@@ -1,0 +1,34 @@
+```sql
+// Translated content (automatically translated on 30-09-2026 02:52:21):
+event.category="file" and (endpoint.os="windows" and (tgt.file.path contains "C:\\Program Files\\Roster\\agent.exe" or tgt.file.path contains "C:\\ProgramData\\Roster\\agent.yaml" or tgt.file.path contains "C:\\ProgramData\\Roster\\agent-state.json"))
+```
+
+
+# Original Sigma Rule:
+```yaml
+title: Potential Roster RMM Tool File Activity
+id: db70290c-99ca-5c4a-b645-1746f7e6238d
+status: experimental
+description: |
+    Detects potential files activity of Roster RMM tool
+references:
+    - https://github.com/magicsword-io/LOLRMM
+author: LOLRMM Project
+date: 2026-09-29
+tags:
+    - attack.command-and-control
+    - attack.t1219
+logsource:
+    product: windows
+    category: file_event
+detection:
+    selection:
+        TargetFilename|endswith:
+            - 'C:\Program Files\Roster\agent.exe'
+            - 'C:\ProgramData\Roster\agent.yaml'
+            - 'C:\ProgramData\Roster\agent-state.json'
+    condition: selection
+falsepositives:
+    - Legitimate use of Roster
+level: medium
+```

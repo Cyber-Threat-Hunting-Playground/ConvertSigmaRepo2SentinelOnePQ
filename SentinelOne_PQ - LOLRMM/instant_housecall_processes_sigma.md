@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 29-09-2026 03:10:08):
+// Translated content (automatically translated on 30-09-2026 02:52:21):
 event.type="Process Creation" and (endpoint.os="windows" and ((src.process.image.path contains "\\hsloader.exe" or src.process.image.path contains "\\InstantHousecall.exe" or src.process.image.path contains "\\ihcserver.exe") or (tgt.process.image.path contains "\\hsloader.exe" or tgt.process.image.path contains "\\InstantHousecall.exe" or tgt.process.image.path contains "\\ihcserver.exe")))
 ```
 
@@ -15,7 +15,7 @@ references:
     - https://github.com/magicsword-io/LOLRMM
 author: LOLRMM Project
 date: 2025-12-01
-modified: 2026-09-23
+modified: 2026-09-29
 tags:
     - attack.command-and-control
     - attack.t1219

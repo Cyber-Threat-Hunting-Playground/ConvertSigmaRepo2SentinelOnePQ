@@ -1,0 +1,33 @@
+```sql
+// Translated content (automatically translated on 30-09-2026 02:52:21):
+event.category="file" and (endpoint.os="windows" and (tgt.file.path contains "C:\\Program Files\\OpenUEM Agent\\config\\openuem.ini" or tgt.file.path contains "C:\\Program Files\\OpenUEM Agent\\logs\\openuem-log.txt"))
+```
+
+
+# Original Sigma Rule:
+```yaml
+title: Potential OpenUEM RMM Tool File Activity
+id: 720639a7-4934-5c83-b732-012194f0ed70
+status: experimental
+description: |
+    Detects potential files activity of OpenUEM RMM tool
+references:
+    - https://github.com/magicsword-io/LOLRMM
+author: LOLRMM Project
+date: 2026-09-29
+tags:
+    - attack.command-and-control
+    - attack.t1219
+logsource:
+    product: windows
+    category: file_event
+detection:
+    selection:
+        TargetFilename|endswith:
+            - 'C:\Program Files\OpenUEM Agent\config\openuem.ini'
+            - 'C:\Program Files\OpenUEM Agent\logs\openuem-log.txt'
+    condition: selection
+falsepositives:
+    - Legitimate use of OpenUEM
+level: medium
+```

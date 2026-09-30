@@ -1,0 +1,33 @@
+```sql
+// Translated content (automatically translated on 30-09-2026 02:52:21):
+event.type="Process Creation" and (endpoint.os="windows" and (src.process.image.path contains "\\proxiport.exe" or tgt.process.image.path contains "\\proxiport.exe"))
+```
+
+
+# Original Sigma Rule:
+```yaml
+title: Potential ProxiPort RMM Tool Process Activity
+id: a16a680d-8fef-5d31-9962-81c15a9ab725
+status: experimental
+description: |
+    Detects potential processes activity of ProxiPort RMM tool
+references:
+    - https://github.com/magicsword-io/LOLRMM
+author: LOLRMM Project
+date: 2026-09-29
+tags:
+    - attack.command-and-control
+    - attack.t1219
+logsource:
+    product: windows
+    category: process_creation
+detection:
+    selection_parent:
+        ParentImage|endswith: '\\proxiport.exe'
+    selection_image:
+        Image|endswith: '\\proxiport.exe'
+    condition: 1 of selection_*
+falsepositives:
+    - Legitimate use of ProxiPort
+level: medium
+```

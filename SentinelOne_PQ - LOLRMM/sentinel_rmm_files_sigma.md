@@ -1,0 +1,31 @@
+```sql
+// Translated content (automatically translated on 30-09-2026 02:52:21):
+event.category="file" and (endpoint.os="windows" and tgt.file.path contains "C:\\ProgramData\\SentinelAgent\\sentinel-agent.exe")
+```
+
+
+# Original Sigma Rule:
+```yaml
+title: Potential Sentinel RMM RMM Tool File Activity
+id: 49bc7d21-4534-5bf6-90e1-c87f191f7135
+status: experimental
+description: |
+    Detects potential files activity of Sentinel RMM RMM tool
+references:
+    - https://github.com/magicsword-io/LOLRMM
+author: LOLRMM Project
+date: 2026-09-29
+tags:
+    - attack.command-and-control
+    - attack.t1219
+logsource:
+    product: windows
+    category: file_event
+detection:
+    selection:
+        TargetFilename|endswith: 'C:\ProgramData\SentinelAgent\sentinel-agent.exe'
+    condition: selection
+falsepositives:
+    - Legitimate use of Sentinel RMM
+level: medium
+```

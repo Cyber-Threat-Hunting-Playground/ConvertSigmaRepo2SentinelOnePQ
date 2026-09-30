@@ -1,0 +1,31 @@
+```sql
+// Translated content (automatically translated on 30-09-2026 02:52:21):
+event.category="registry" and (endpoint.os="windows" and registry.keyPath contains "HKLM\\SOFTWARE\\Microsoft\\Windows NT\\CurrentVersion\\Schedule\\TaskCache\\Tree\\SentinelAgent")
+```
+
+
+# Original Sigma Rule:
+```yaml
+title: Potential Sentinel RMM RMM Tool Registry Activity
+id: e38005b2-144d-549e-9ea8-d447bc2efc10
+status: experimental
+description: |
+    Detects potential registry activity of Sentinel RMM RMM tool
+references:
+    - https://github.com/magicsword-io/LOLRMM
+author: LOLRMM Project
+date: 2026-09-29
+tags:
+    - attack.command-and-control
+    - attack.t1219
+logsource:
+    product: windows
+    category: registry_event
+detection:
+    selection:
+        TargetObject|contains: 'HKLM\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Schedule\TaskCache\Tree\SentinelAgent'
+    condition: selection
+falsepositives:
+    - Legitimate use of Sentinel RMM
+level: medium
+```

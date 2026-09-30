@@ -1,0 +1,33 @@
+```sql
+// Translated content (automatically translated on 30-09-2026 02:52:21):
+event.type="Process Creation" and (endpoint.os="windows" and (src.process.image.path contains "\\sentinel-agent.exe" or tgt.process.image.path contains "\\sentinel-agent.exe"))
+```
+
+
+# Original Sigma Rule:
+```yaml
+title: Potential Sentinel RMM RMM Tool Process Activity
+id: 7f7c81de-0293-553e-933f-f2732f256d5f
+status: experimental
+description: |
+    Detects potential processes activity of Sentinel RMM RMM tool
+references:
+    - https://github.com/magicsword-io/LOLRMM
+author: LOLRMM Project
+date: 2026-09-29
+tags:
+    - attack.command-and-control
+    - attack.t1219
+logsource:
+    product: windows
+    category: process_creation
+detection:
+    selection_parent:
+        ParentImage|endswith: '\\sentinel-agent.exe'
+    selection_image:
+        Image|endswith: '\\sentinel-agent.exe'
+    condition: 1 of selection_*
+falsepositives:
+    - Legitimate use of Sentinel RMM
+level: medium
+```

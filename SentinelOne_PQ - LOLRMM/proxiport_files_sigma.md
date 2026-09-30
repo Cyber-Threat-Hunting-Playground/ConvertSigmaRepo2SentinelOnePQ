@@ -1,0 +1,33 @@
+```sql
+// Translated content (automatically translated on 30-09-2026 02:52:21):
+event.category="file" and (endpoint.os="windows" and (tgt.file.path contains "C:\\Program Files\\ProxiPort\\proxiport.exe" or tgt.file.path contains "C:\\Program Files\\ProxiPort\\proxiport.conf"))
+```
+
+
+# Original Sigma Rule:
+```yaml
+title: Potential ProxiPort RMM Tool File Activity
+id: 5ee3ccfe-b39d-5f6f-8262-c2e35aa4d9be
+status: experimental
+description: |
+    Detects potential files activity of ProxiPort RMM tool
+references:
+    - https://github.com/magicsword-io/LOLRMM
+author: LOLRMM Project
+date: 2026-09-29
+tags:
+    - attack.command-and-control
+    - attack.t1219
+logsource:
+    product: windows
+    category: file_event
+detection:
+    selection:
+        TargetFilename|endswith:
+            - 'C:\Program Files\ProxiPort\proxiport.exe'
+            - 'C:\Program Files\ProxiPort\proxiport.conf'
+    condition: selection
+falsepositives:
+    - Legitimate use of ProxiPort
+level: medium
+```
