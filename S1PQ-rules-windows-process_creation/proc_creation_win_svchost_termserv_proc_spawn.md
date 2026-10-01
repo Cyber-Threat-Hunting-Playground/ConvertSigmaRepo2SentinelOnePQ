@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 30-09-2026 05:13:53):
+// Translated content (automatically translated on 01-10-2026 05:29:03):
 event.type="Process Creation" and (endpoint.os="windows" and ((src.process.cmdline contains "\\svchost.exe" and src.process.cmdline contains "termsvcs") and (not ((tgt.process.image.path contains "\\rdpclip.exe" or tgt.process.image.path contains ":\\Windows\\System32\\csrss.exe" or tgt.process.image.path contains ":\\Windows\\System32\\wininit.exe" or tgt.process.image.path contains ":\\Windows\\System32\\winlogon.exe") or not (tgt.process.image.path matches "\.*")))))
 ```
 
