@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 30-09-2026 02:52:21):
+// Translated content (automatically translated on 01-10-2026 02:58:32):
 event.category="file" and (endpoint.os="windows" and (tgt.file.path contains "C:\\Program Files\\Teleport Connect\\Teleport Connect.exe" or tgt.file.path contains "C:\\Program Files\\Teleport Connect\\resources\\bin\\tsh.exe" or tgt.file.path contains "C:\\Users\*\\AppData\\Local\\Programs\\Teleport Connect\\Teleport Connect.exe" or tgt.file.path contains "C:\\Users\*\\AppData\\Local\\Programs\\Teleport Connect\\resources\\bin\\tsh.exe" or tgt.file.path contains "C:\\Users\*\\AppData\\Roaming\\Teleport Connect\\app_state.json" or tgt.file.path contains "C:\\Users\*\\AppData\\Roaming\\Teleport Connect\\app_config.json" or tgt.file.path contains "C:\\Users\*\\AppData\\Roaming\\Teleport Connect\\certs\\tshd.crt" or tgt.file.path contains "C:\\Users\*\\AppData\\Roaming\\Teleport Connect\\logs\*" or tgt.file.path contains "C:\\ProgramData\\TeleportConnectUpdater\*"))
 ```
 

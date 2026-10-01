@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 30-09-2026 02:52:21):
+// Translated content (automatically translated on 01-10-2026 02:58:32):
 event.category="file" and (endpoint.os="windows" and (tgt.file.path contains "\\ProgramData\\GxM\\agent\\GxM.Agent.exe" or tgt.file.path contains "\\ProgramData\\GxM\\enrollment.json" or tgt.file.path contains "\\ProgramData\\GxM\\install.log"))
 ```
 

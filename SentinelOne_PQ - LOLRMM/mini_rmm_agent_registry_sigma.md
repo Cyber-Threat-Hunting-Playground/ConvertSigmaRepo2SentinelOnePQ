@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 30-09-2026 02:52:21):
+// Translated content (automatically translated on 01-10-2026 02:58:32):
 event.category="registry" and (endpoint.os="windows" and (registry.keyPath contains "HKLM\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Run\\MiniRMMAgent" or registry.keyPath contains "HKLM\\SYSTEM\\CurrentControlSet\\Services\\MiniRmmAgent"))
 ```
 
