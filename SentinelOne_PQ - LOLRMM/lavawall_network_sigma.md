@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 02-10-2026 03:01:45):
+// Translated content (automatically translated on 03-10-2026 02:47:52):
 (event.category in ("dns","url","ip")) and (endpoint.os="windows" and ((url.address contains "api-ca-1.lavawall.com" or url.address contains "lavawinupdate.lavawall.com" or url.address contains "caremote1.lavawall.com") or (event.dns.request contains "api-ca-1.lavawall.com" or event.dns.request contains "lavawinupdate.lavawall.com" or event.dns.request contains "caremote1.lavawall.com")))
 ```
 
