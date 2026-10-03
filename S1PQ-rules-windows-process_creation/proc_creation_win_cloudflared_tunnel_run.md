@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 02-10-2026 05:16:42):
+// Translated content (automatically translated on 03-10-2026 04:59:44):
 event.type="Process Creation" and (endpoint.os="windows" and ((tgt.process.cmdline contains " tunnel " and tgt.process.cmdline contains " run ") and (tgt.process.cmdline contains "-config " or tgt.process.cmdline contains "-credentials-contents " or tgt.process.cmdline contains "-credentials-file " or tgt.process.cmdline contains "-token ")))
 ```
 
