@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 03-10-2026 02:47:52):
+// Translated content (automatically translated on 04-10-2026 03:17:47):
 event.type="Process Creation" and (endpoint.os="windows" and (src.process.image.path="*\\zabbix_agent*.exe" or tgt.process.image.path="*\\zabbix_agent*.exe"))
 ```
 
