@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 03-10-2026 02:55:55):
+// Translated content (automatically translated on 04-10-2026 03:25:08):
 event.type="Process Creation" and (endpoint.os="linux" and (tgt.process.image.path contains "/rm" or tgt.process.image.path contains "/shred" or tgt.process.image.path contains "/unlink"))
 ```
 
