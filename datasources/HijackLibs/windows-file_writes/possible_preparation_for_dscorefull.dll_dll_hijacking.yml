@@ -1,0 +1,25 @@
+title: Possible preparation for dscorefull.dll DLL Hijacking
+id: 4675682b-5476-48a3-2908-5b9ff8905212
+status: experimental
+description: Detects possible DLL hijacking of dscorefull.dll by looking for suspicious file writes of this DLL, to unexpected locations.
+references:
+    - https://hijacklibs.net/entries/microsoft/built-in/dscorefull.html
+author: "Ivan CF"
+date: 2026-09-18
+tags:
+    - attack.defense_evasion
+    - attack.T1574.001
+logsource:
+    product: windows
+    category: file_event
+detection:
+    selection:
+        TargetFileName: '*\dscorefull.dll'
+    filter:
+        TargetFileName:
+            - 'c:\programdata\Microsoft\Windows Defender\Platform\\*\\*'
+
+    condition: selection and not filter
+falsepositives:
+    - False positives are likely. This rule is more suitable for hunting than for generating detections.
+

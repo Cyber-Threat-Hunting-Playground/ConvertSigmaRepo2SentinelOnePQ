@@ -1,0 +1,25 @@
+title: Possible preparation for defenderaiplatform.dll DLL Hijacking
+id: 9472852b-5476-48a3-2908-5b9ff8738423
+status: experimental
+description: Detects possible DLL hijacking of defenderaiplatform.dll by looking for suspicious file writes of this DLL, to unexpected locations.
+references:
+    - https://hijacklibs.net/entries/microsoft/built-in/defenderaiplatform.html
+author: "Ivan CF"
+date: 2026-09-18
+tags:
+    - attack.defense_evasion
+    - attack.T1574.001
+logsource:
+    product: windows
+    category: file_event
+detection:
+    selection:
+        TargetFileName: '*\defenderaiplatform.dll'
+    filter:
+        TargetFileName:
+            - 'c:\programdata\Microsoft\Windows Defender\Platform\\*\\*'
+
+    condition: selection and not filter
+falsepositives:
+    - False positives are likely. This rule is more suitable for hunting than for generating detections.
+

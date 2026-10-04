@@ -616,6 +616,29 @@ falsepositives:
     - False positives are likely. This rule is more suitable for hunting than for generating detections.
 
 ---
+title: Possible preparation for ceiinfolog.dll DLL Hijacking
+id: 2847262b-3801-48a3-5206-5b9ff8544728
+status: experimental
+description: Detects possible DLL hijacking of ceiinfolog.dll by looking for suspicious file writes of this DLL, to unexpected locations.
+references:
+    - https://hijacklibs.net/entries/3rd_party/canon/ceiinfolog.html
+author: "Liran Ravich"
+date: 2026-10-01
+tags:
+    - attack.defense_evasion
+    - attack.T1574.001
+logsource:
+    product: windows
+    category: file_event
+detection:
+    selection:
+        TargetFileName: '*\ceiinfolog.dll'
+
+    condition: selection 
+falsepositives:
+    - False positives are likely. This rule is more suitable for hunting than for generating detections.
+
+---
 title: Possible preparation for cnmpaui.dll DLL Hijacking
 id: 6937482b-1876-48a3-1767-5b9ff8172694
 status: experimental
@@ -3066,6 +3089,35 @@ falsepositives:
     - False positives are likely. This rule is more suitable for hunting than for generating detections.
 
 ---
+title: Possible preparation for deelevator64.dll DLL Hijacking
+id: 4348502b-3801-48a3-5206-5b9ff8566686
+status: experimental
+description: Detects possible DLL hijacking of deelevator64.dll by looking for suspicious file writes of this DLL, to unexpected locations.
+references:
+    - https://hijacklibs.net/entries/3rd_party/stardock/deelevator64.html
+author: "Liran Ravich"
+date: 2026-10-01
+tags:
+    - attack.defense_evasion
+    - attack.T1574.001
+logsource:
+    product: windows
+    category: file_event
+detection:
+    selection:
+        TargetFileName: '*\deelevator64.dll'
+    filter:
+        TargetFileName:
+            - 'c:\program files\Stardock\Start11\\*'
+            - 'c:\program files (x86)\Stardock\Start11\\*'
+            - 'c:\program files\Stardock\Fences\\*'
+            - 'c:\program files (x86)\Stardock\Fences\\*'
+
+    condition: selection and not filter
+falsepositives:
+    - False positives are likely. This rule is more suitable for hunting than for generating detections.
+
+---
 title: Possible preparation for wblindp2.dll DLL Hijacking
 id: 3394062b-4996-48a3-6789-5b9ff8174260
 status: experimental
@@ -3523,6 +3575,35 @@ falsepositives:
     - False positives are likely. This rule is more suitable for hunting than for generating detections.
 
 ---
+title: Possible preparation for vim64.dll DLL Hijacking
+id: 7261472b-1982-48a3-5760-5b9ff8224953
+status: experimental
+description: Detects possible DLL hijacking of vim64.dll by looking for suspicious file writes of this DLL, to unexpected locations.
+references:
+    - https://hijacklibs.net/entries/3rd_party/vim/vim64.html
+author: "Daniel Koifman"
+date: 2026-09-29
+tags:
+    - attack.defense_evasion
+    - attack.T1574.001
+logsource:
+    product: windows
+    category: file_event
+detection:
+    selection:
+        TargetFileName: '*\vim64.dll'
+    filter:
+        TargetFileName:
+            - 'c:\program files\Vim\\*'
+            - 'c:\program files (x86)\Vim\\*'
+            - 'c:\program files\Vim\vim*\\*'
+            - 'c:\program files (x86)\Vim\vim*\\*'
+
+    condition: selection and not filter
+falsepositives:
+    - False positives are likely. This rule is more suitable for hunting than for generating detections.
+
+---
 title: Possible preparation for vivaldi_elf.dll DLL Hijacking
 id: 5086082b-2523-48a3-4236-5b9ff8819409
 status: experimental
@@ -3751,6 +3832,33 @@ detection:
             - 'c:\program files (x86)\VSO\convertXtoDVD\\*'
             - 'c:\program files\Common Files\Oracle\Java\javapath\\*'
             - 'c:\program files (x86)\Common Files\Oracle\Java\javapath\\*'
+
+    condition: selection and not filter
+falsepositives:
+    - False positives are likely. This rule is more suitable for hunting than for generating detections.
+
+---
+title: Possible preparation for winsparkle.dll DLL Hijacking
+id: 7811742b-1982-48a3-5760-5b9ff8388588
+status: experimental
+description: Detects possible DLL hijacking of winsparkle.dll by looking for suspicious file writes of this DLL, to unexpected locations.
+references:
+    - https://hijacklibs.net/entries/3rd_party/winsparkle/winsparkle.html
+author: "Daniel Koifman"
+date: 2026-09-29
+tags:
+    - attack.defense_evasion
+    - attack.T1574.001
+logsource:
+    product: windows
+    category: file_event
+detection:
+    selection:
+        TargetFileName: '*\winsparkle.dll'
+    filter:
+        TargetFileName:
+            - 'c:\program files\Poedit\\*'
+            - 'c:\program files (x86)\Poedit\\*'
 
     condition: selection and not filter
 falsepositives:
@@ -6192,6 +6300,32 @@ falsepositives:
     - False positives are likely. This rule is more suitable for hunting than for generating detections.
 
 ---
+title: Possible preparation for defenderaiplatform.dll DLL Hijacking
+id: 9472852b-5476-48a3-2908-5b9ff8738423
+status: experimental
+description: Detects possible DLL hijacking of defenderaiplatform.dll by looking for suspicious file writes of this DLL, to unexpected locations.
+references:
+    - https://hijacklibs.net/entries/microsoft/built-in/defenderaiplatform.html
+author: "Ivan CF"
+date: 2026-09-18
+tags:
+    - attack.defense_evasion
+    - attack.T1574.001
+logsource:
+    product: windows
+    category: file_event
+detection:
+    selection:
+        TargetFileName: '*\defenderaiplatform.dll'
+    filter:
+        TargetFileName:
+            - 'c:\programdata\Microsoft\Windows Defender\Platform\\*\\*'
+
+    condition: selection and not filter
+falsepositives:
+    - False positives are likely. This rule is more suitable for hunting than for generating detections.
+
+---
 title: Possible preparation for defragproxy.dll DLL Hijacking
 id: 3280332b-2897-48a3-6541-5b9ff8912656
 status: experimental
@@ -7091,6 +7225,32 @@ falsepositives:
     - False positives are likely. This rule is more suitable for hunting than for generating detections.
 
 ---
+title: Possible preparation for dscorefull.dll DLL Hijacking
+id: 4675682b-5476-48a3-2908-5b9ff8905212
+status: experimental
+description: Detects possible DLL hijacking of dscorefull.dll by looking for suspicious file writes of this DLL, to unexpected locations.
+references:
+    - https://hijacklibs.net/entries/microsoft/built-in/dscorefull.html
+author: "Ivan CF"
+date: 2026-09-18
+tags:
+    - attack.defense_evasion
+    - attack.T1574.001
+logsource:
+    product: windows
+    category: file_event
+detection:
+    selection:
+        TargetFileName: '*\dscorefull.dll'
+    filter:
+        TargetFileName:
+            - 'c:\programdata\Microsoft\Windows Defender\Platform\\*\\*'
+
+    condition: selection and not filter
+falsepositives:
+    - False positives are likely. This rule is more suitable for hunting than for generating detections.
+
+---
 title: Possible preparation for dsparse.dll DLL Hijacking
 id: 6615072b-9395-48a3-4833-5b9ff8465170
 status: experimental
@@ -7742,6 +7902,35 @@ detection:
         TargetFileName:
             - 'c:\windows\system32\\*'
             - 'c:\windows\syswow64\\*'
+            - 'c:\windows\winsxs\*'
+            - 'c:\$windows.~bt\*'
+            - 'c:\windows\softwaredistribution\*'
+
+    condition: selection and not filter
+falsepositives:
+    - False positives are likely. This rule is more suitable for hunting than for generating detections.
+
+---
+title: Possible preparation for esscli.dll DLL Hijacking
+id: 5842142b-5476-48a3-2908-5b9ff8659418
+status: experimental
+description: Detects possible DLL hijacking of esscli.dll by looking for suspicious file writes of this DLL, to unexpected locations.
+references:
+    - https://hijacklibs.net/entries/microsoft/built-in/esscli.html
+author: "Iván Cabrera"
+date: 2026-09-18
+tags:
+    - attack.defense_evasion
+    - attack.T1574.001
+logsource:
+    product: windows
+    category: file_event
+detection:
+    selection:
+        TargetFileName: '*\esscli.dll'
+    filter:
+        TargetFileName:
+            - 'c:\windows\system32\wbem\\*'
             - 'c:\windows\winsxs\*'
             - 'c:\$windows.~bt\*'
             - 'c:\windows\softwaredistribution\*'
@@ -15780,6 +15969,33 @@ detection:
             - 'c:\windows\winsxs\*'
             - 'c:\$windows.~bt\*'
             - 'c:\windows\softwaredistribution\*'
+
+    condition: selection and not filter
+falsepositives:
+    - False positives are likely. This rule is more suitable for hunting than for generating detections.
+
+---
+title: Possible preparation for windowspackagemanager.dll DLL Hijacking
+id: 2593002b-5476-48a3-2908-5b9ff8728377
+status: experimental
+description: Detects possible DLL hijacking of windowspackagemanager.dll by looking for suspicious file writes of this DLL, to unexpected locations.
+references:
+    - https://hijacklibs.net/entries/microsoft/built-in/windowspackagemanager.html
+author: "Iván Cabrera"
+date: 2026-09-18
+tags:
+    - attack.defense_evasion
+    - attack.T1574.001
+logsource:
+    product: windows
+    category: file_event
+detection:
+    selection:
+        TargetFileName: '*\windowspackagemanager.dll'
+    filter:
+        TargetFileName:
+            - 'c:\program files\WindowsApps\Microsoft.DesktopAppInstaller_*_x64__8wekyb3d8bbwe\\*'
+            - 'c:\program files (x86)\WindowsApps\Microsoft.DesktopAppInstaller_*_x64__8wekyb3d8bbwe\\*'
 
     condition: selection and not filter
 falsepositives:
