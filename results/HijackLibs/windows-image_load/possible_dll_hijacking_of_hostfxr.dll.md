@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 04-10-2026 04:51:36):
+// Translated content (automatically translated on 05-10-2026 04:39:29):
 event.type="Module Load" and (endpoint.os="windows" and (module.path contains "\\hostfxr.dll" and (not (module.path="c:\\program files\\dotnet\\host\\fxr\\*\\*" or module.path="c:\\program files (x86)\\dotnet\\host\\fxr\\*\\*"))))
 ```
 
