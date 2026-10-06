@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 05-10-2026 04:39:29):
+// Translated content (automatically translated on 06-10-2026 05:25:36):
 event.type="Module Load" and (endpoint.os="windows" and (module.path contains "\\tedutil.dll" and (not (module.path="c:\\program files\\Microsoft SDKs\\Windows\\*\\Bin\\*" or module.path="c:\\program files (x86)\\Microsoft SDKs\\Windows\\*\\Bin\\*"))))
 ```
 
