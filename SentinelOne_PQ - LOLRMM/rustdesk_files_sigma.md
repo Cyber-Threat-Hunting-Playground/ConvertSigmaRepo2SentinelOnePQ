@@ -1,6 +1,6 @@
 ```sql
-// Translated content (automatically translated on 05-10-2026 02:53:59):
-event.category="file" and (endpoint.os="windows" and tgt.file.path contains "C:\\Windows\\ServiceProfiles\\LocalService\\AppData\\Roaming\\RustDesk\*")
+// Translated content (automatically translated on 06-10-2026 03:43:55):
+event.category="file" and (endpoint.os="windows" and (tgt.file.path contains "C:\\Windows\\ServiceProfiles\\LocalService\\AppData\\Roaming\\RustDesk\*" or tgt.file.path contains "C:\\Windows\\ServiceProfiles\\LocalService\\AppData\\Roaming\\RustDesk\\config\\RustDesk2.toml" or tgt.file.path contains "C:\\Users\*\\AppData\\Roaming\\RustDesk\\config\\RustDesk.toml" or tgt.file.path contains "C:\\Users\*\\AppData\\Roaming\\RustDesk\\config\\RustDesk2.toml" or tgt.file.path contains "C:\\Users\*\\AppData\\Roaming\\RustDesk\\log\*" or tgt.file.path contains "C:\\ProgramData\\Microsoft\\Windows\\Start Menu\\Programs\\Startup\\RustDesk Tray.lnk"))
 ```
 
 
@@ -15,7 +15,7 @@ references:
     - https://github.com/magicsword-io/LOLRMM
 author: LOLRMM Project
 date: 2025-12-01
-modified: 2026-09-02
+modified: 2026-10-05
 tags:
     - attack.command-and-control
     - attack.t1219
@@ -24,7 +24,13 @@ logsource:
     category: file_event
 detection:
     selection:
-        TargetFilename|endswith: 'C:\Windows\ServiceProfiles\LocalService\AppData\Roaming\RustDesk\*'
+        TargetFilename|endswith:
+            - 'C:\Windows\ServiceProfiles\LocalService\AppData\Roaming\RustDesk\*'
+            - 'C:\Windows\ServiceProfiles\LocalService\AppData\Roaming\RustDesk\config\RustDesk2.toml'
+            - 'C:\Users\*\AppData\Roaming\RustDesk\config\RustDesk.toml'
+            - 'C:\Users\*\AppData\Roaming\RustDesk\config\RustDesk2.toml'
+            - 'C:\Users\*\AppData\Roaming\RustDesk\log\*'
+            - 'C:\ProgramData\Microsoft\Windows\Start Menu\Programs\Startup\RustDesk Tray.lnk'
     condition: selection
 falsepositives:
     - Legitimate use of RustDesk

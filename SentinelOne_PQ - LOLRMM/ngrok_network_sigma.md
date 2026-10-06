@@ -1,6 +1,6 @@
 ```sql
-// Translated content (automatically translated on 05-10-2026 02:53:59):
-(event.category in ("dns","url","ip")) and (endpoint.os="windows" and ((url.address contains "connect.ngrok-agent.com" or url.address contains "connect.us.ngrok-agent.com" or url.address contains "connect.eu.ngrok-agent.com" or url.address contains "connect.ap.ngrok-agent.com" or url.address contains "connect.au.ngrok-agent.com" or url.address contains "connect.sa.ngrok-agent.com" or url.address contains "connect.jp.ngrok-agent.com" or url.address contains "connect.in.ngrok-agent.com" or url.address contains "ngrok.com") or (event.dns.request contains "connect.ngrok-agent.com" or event.dns.request contains "connect.us.ngrok-agent.com" or event.dns.request contains "connect.eu.ngrok-agent.com" or event.dns.request contains "connect.ap.ngrok-agent.com" or event.dns.request contains "connect.au.ngrok-agent.com" or event.dns.request contains "connect.sa.ngrok-agent.com" or event.dns.request contains "connect.jp.ngrok-agent.com" or event.dns.request contains "connect.in.ngrok-agent.com" or event.dns.request contains "ngrok.com")))
+// Translated content (automatically translated on 06-10-2026 03:43:55):
+(event.category in ("dns","url","ip")) and (endpoint.os="windows" and ((url.address contains "connect.ngrok-agent.com" or url.address contains "connect.us.ngrok-agent.com" or url.address contains "connect.eu.ngrok-agent.com" or url.address contains "connect.ap.ngrok-agent.com" or url.address contains "connect.au.ngrok-agent.com" or url.address contains "connect.sa.ngrok-agent.com" or url.address contains "connect.jp.ngrok-agent.com" or url.address contains "connect.in.ngrok-agent.com" or url.address contains "ngrok.com" or url.address contains ".ngrok-free.app" or url.address contains ".ngrok.app" or url.address contains ".ngrok.io" or url.address contains ".ngrok.dev" or url.address contains ".ngrok.pro" or url.address contains ".ngrok.pizza") or (event.dns.request contains "connect.ngrok-agent.com" or event.dns.request contains "connect.us.ngrok-agent.com" or event.dns.request contains "connect.eu.ngrok-agent.com" or event.dns.request contains "connect.ap.ngrok-agent.com" or event.dns.request contains "connect.au.ngrok-agent.com" or event.dns.request contains "connect.sa.ngrok-agent.com" or event.dns.request contains "connect.jp.ngrok-agent.com" or event.dns.request contains "connect.in.ngrok-agent.com" or event.dns.request contains "ngrok.com" or event.dns.request contains ".ngrok-free.app" or event.dns.request contains ".ngrok.app" or event.dns.request contains ".ngrok.io" or event.dns.request contains ".ngrok.dev" or event.dns.request contains ".ngrok.pro" or event.dns.request contains ".ngrok.pizza")))
 ```
 
 
@@ -15,7 +15,7 @@ references:
     - https://github.com/magicsword-io/LOLRMM
 author: LOLRMM Project
 date: 2025-12-01
-modified: 2026-09-02
+modified: 2026-10-05
 tags:
     - attack.command-and-control
     - attack.t1219
@@ -34,6 +34,12 @@ detection:
             - 'connect.jp.ngrok-agent.com'
             - 'connect.in.ngrok-agent.com'
             - 'ngrok.com'
+            - '*.ngrok-free.app'
+            - '*.ngrok.app'
+            - '*.ngrok.io'
+            - '*.ngrok.dev'
+            - '*.ngrok.pro'
+            - '*.ngrok.pizza'
     condition: selection
 falsepositives:
     - Legitimate use of ngrok

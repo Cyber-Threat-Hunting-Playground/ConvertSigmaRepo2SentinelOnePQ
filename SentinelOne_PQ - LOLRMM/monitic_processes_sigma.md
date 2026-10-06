@@ -1,6 +1,6 @@
 ```sql
-// Translated content (automatically translated on 05-10-2026 02:53:59):
-event.type="Process Creation" and (endpoint.os="windows" and ((src.process.image.path contains "\\agent.exe" or src.process.image.path contains "\\amon.exe") or (tgt.process.image.path contains "\\agent.exe" or tgt.process.image.path contains "\\amon.exe")))
+// Translated content (automatically translated on 06-10-2026 03:43:55):
+event.type="Process Creation" and (endpoint.os="windows" and ((src.process.image.path contains "C:\\Program Files\\Monitic\\agent.exe" or src.process.image.path contains "\\amon.exe") or (tgt.process.image.path contains "C:\\Program Files\\Monitic\\agent.exe" or tgt.process.image.path contains "\\amon.exe")))
 ```
 
 
@@ -15,7 +15,7 @@ references:
     - https://github.com/magicsword-io/LOLRMM
 author: LOLRMM Project
 date: 2026-05-18
-modified: 2026-09-02
+modified: 2026-10-05
 tags:
     - attack.command-and-control
     - attack.t1219
@@ -25,11 +25,11 @@ logsource:
 detection:
     selection_parent:
         ParentImage|endswith:
-            - '\\agent.exe'
+            - 'C:\\Program Files\\Monitic\\agent.exe'
             - '\\amon.exe'
     selection_image:
         Image|endswith:
-            - '\\agent.exe'
+            - 'C:\\Program Files\\Monitic\\agent.exe'
             - '\\amon.exe'
     condition: 1 of selection_*
 falsepositives:

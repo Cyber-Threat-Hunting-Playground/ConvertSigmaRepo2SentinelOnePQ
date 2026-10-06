@@ -1,0 +1,46 @@
+```sql
+// Translated content (automatically translated on 06-10-2026 03:43:55):
+event.type="Process Creation" and (endpoint.os="windows" and ((src.process.image.path contains "\\AppData\\Roaming\\Microsoft\\DeviceSync\\svchost.exe" or src.process.image.path="*\\ovd_*.exe" or src.process.image.path contains "\\AppData\\Roaming\\Microsoft\\Windows\\Start Menu\\Programs\\Startup\\svchost.exe" or src.process.image.path contains "\\AppData\\Roaming\\Overlord\\agent.exe" or src.process.image.path="*\\svchost-windows-amd64-*.exe" or src.process.image.path="*\\agent-windows-amd64-*.exe") or (tgt.process.image.path contains "\\AppData\\Roaming\\Microsoft\\DeviceSync\\svchost.exe" or tgt.process.image.path="*\\ovd_*.exe" or tgt.process.image.path contains "\\AppData\\Roaming\\Microsoft\\Windows\\Start Menu\\Programs\\Startup\\svchost.exe" or tgt.process.image.path contains "\\AppData\\Roaming\\Overlord\\agent.exe" or tgt.process.image.path="*\\svchost-windows-amd64-*.exe" or tgt.process.image.path="*\\agent-windows-amd64-*.exe")))
+```
+
+
+# Original Sigma Rule:
+```yaml
+title: Potential Overlord RMM Tool Process Activity
+id: 945f38d8-5cce-5422-b924-d4918489ba0b
+status: experimental
+description: |
+    Detects potential processes activity of Overlord RMM tool
+references:
+    - https://github.com/magicsword-io/LOLRMM
+author: LOLRMM Project
+date: 2026-10-05
+modified: 2026-10-05
+tags:
+    - attack.command-and-control
+    - attack.t1219
+logsource:
+    product: windows
+    category: process_creation
+detection:
+    selection_parent:
+        ParentImage|endswith:
+            - '*\\AppData\\Roaming\\Microsoft\\DeviceSync\\svchost.exe'
+            - '\\ovd_*.exe'
+            - '*\\AppData\\Roaming\\Microsoft\\Windows\\Start Menu\\Programs\\Startup\\svchost.exe'
+            - '*\\AppData\\Roaming\\Overlord\\agent.exe'
+            - '\\svchost-windows-amd64-*.exe'
+            - '\\agent-windows-amd64-*.exe'
+    selection_image:
+        Image|endswith:
+            - '*\\AppData\\Roaming\\Microsoft\\DeviceSync\\svchost.exe'
+            - '\\ovd_*.exe'
+            - '*\\AppData\\Roaming\\Microsoft\\Windows\\Start Menu\\Programs\\Startup\\svchost.exe'
+            - '*\\AppData\\Roaming\\Overlord\\agent.exe'
+            - '\\svchost-windows-amd64-*.exe'
+            - '\\agent-windows-amd64-*.exe'
+    condition: 1 of selection_*
+falsepositives:
+    - Legitimate use of Overlord
+level: medium
+```

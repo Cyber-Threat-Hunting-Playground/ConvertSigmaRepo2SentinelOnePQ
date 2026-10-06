@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 05-10-2026 02:53:59):
+// Translated content (automatically translated on 06-10-2026 03:43:55):
 event.type="Process Creation" and (endpoint.os="windows" and ((src.process.image.path contains "\\simplehelpcustomer.exe" or src.process.image.path contains "\\simpleservice.exe" or src.process.image.path contains "\\simplegatewayservice.exe" or src.process.image.path contains "\\remote access.exe" or src.process.image.path contains "\\windowslauncher.exe" or src.process.image.path contains "\\spsrv.exe") or (tgt.process.image.path contains "\\simplehelpcustomer.exe" or tgt.process.image.path contains "\\simpleservice.exe" or tgt.process.image.path contains "\\simplegatewayservice.exe" or tgt.process.image.path contains "\\remote access.exe" or tgt.process.image.path contains "\\windowslauncher.exe" or tgt.process.image.path contains "\\spsrv.exe")))
 ```
 
@@ -15,7 +15,7 @@ references:
     - https://github.com/magicsword-io/LOLRMM
 author: LOLRMM Project
 date: 2025-12-01
-modified: 2026-09-29
+modified: 2026-10-05
 tags:
     - attack.command-and-control
     - attack.t1219

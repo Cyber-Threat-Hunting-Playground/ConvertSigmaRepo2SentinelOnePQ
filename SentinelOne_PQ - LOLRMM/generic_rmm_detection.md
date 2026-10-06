@@ -1,6 +1,6 @@
 ```sql
-// Translated content (automatically translated on 05-10-2026 02:53:59):
-event.type="Process Creation" and (endpoint.os="windows" and (tgt.process.image.path contains "\\%APPDATA%\\GoToMeeting\\G2M.exe" or tgt.process.image.path contains "\\%APPDATA%\\JWrapper-SimpleSetup\*" or tgt.process.image.path contains "\\%APPDATA%\\Mremote\*" or tgt.process.image.path contains "\\%APPDATA%\\loclx\*" or tgt.process.image.path contains "\\%ProgramData%\\Mremote\\<deployment-id>\*" or tgt.process.image.path contains "\\%ProgramData%\\Tiflux\*" or tgt.process.image.path contains "\\%ProgramData%\\rmmmax\\AgentService\\RMMmaxAgentService.exe" or tgt.process.image.path contains "\\%USERPROFILE%\\AppData\\Local\\Temp\\SupremoRemoteDesktop\\" or tgt.process.image.path contains "\\9380CC75B872221A7425D7503565B67580407F60" or tgt.process.image.path contains "\\AEMAgent.exe" or tgt.process.image.path contains "\\AMMYY_Admin.exe" or tgt.process.image.path contains "\\ARDAgent.app" or tgt.process.image.path contains "\\AcronisCyberProtectConnectAgent.exe" or tgt.process.image.path="*\\AcronisCyberProtectConnectQuickAssist*.exe" or tgt.process.image.path contains "\\AeroAdmin.exe" or tgt.process.image.path contains "\\Agent" or tgt.process.image.path="*\\AgentSetup-*.exe" or tgt.process.image.path="*\\Agent_*_RW.exe" or tgt.process.image.path contains "\\AgentlessRC.exe" or tgt.process.image.path contains "\\AnyDesk.app" or tgt.process.image.path contains "\\ArcUI.exe" or tgt.process.image.path contains "\\AweSun.exe" or tgt.process.image.path contains "\\BASEClient.exe" or tgt.process.image.path contains "\\BASupApp.exe" or tgt.process.image.path contains "\\BASupAppElev.exe" or tgt.process.image.path contains "\\BASupAppSrvc.exe" or tgt.process.image.path contains "\\BASupSrvc.exe" or tgt.process.image.path contains "\\BASupSrvcCnfg.exe" or tgt.process.image.path contains "\\BASupSysInf.exe" or tgt.process.image.path contains "\\BASupTSHelper.exe" or tgt.process.image.path="*\\Beinsync*.exe" or tgt.process.image.path contains "\\C:\*\\G2RDesktopConsole-x64.msi" or tgt.process.image.path contains "\\C:\*\\MobaXterm_installer_12.1.msi" or tgt.process.image.path contains "\\C:\*\\SecureCRT.EXE" or tgt.process.image.path contains "\\C:\*\\kitty.exe" or tgt.process.image.path contains "\\C:\*\\ngrok.zip" or tgt.process.image.path contains "\\C:\*\\nxplayer.exe" or tgt.process.image.path contains "\\C:\*\\puttytray.exe" or tgt.process.image.path contains "\\C:\\AlpemixService.exe" or tgt.process.image.path contains "\\C:\\AlpemixSrvc\\" or tgt.process.image.path contains "\\C:\\Borealis\*" or tgt.process.image.path contains "\\C:\\Borealis\\Logs\\Agent\\agent.log" or tgt.process.image.path contains "\\C:\\Borealis\\agent.json" or tgt.process.image.path contains "\\C:\\Downloads\\SuperPuTTY\*" or tgt.process.image.path contains "\\C:\\GxM\\agent" or tgt.process.image.path contains "\\C:\\Lavawall\\LavawallWin.exe" or tgt.process.image.path contains "\\C:\\Program Files (x86)\\Almageste\\DragonDisk\*" or tgt.process.image.path contains "\\C:\\Program Files (x86)\\AnyDesk\*" or tgt.process.image.path contains "\\C:\\Program Files (x86)\\AnyViewer\*" or tgt.process.image.path contains "\\C:\\Program Files (x86)\\Aspia\\" or tgt.process.image.path contains "\\C:\\Program Files (x86)\\Atera Networks" or tgt.process.image.path contains "\\C:\\Program Files (x86)\\Bitvise SSH Client\*" or tgt.process.image.path contains "\\C:\\Program Files (x86)\\Bluetrait Agent\*" or tgt.process.image.path contains "\\C:\\Program Files (x86)\\DesktopCentral_Agent\\bin\*" or tgt.process.image.path contains "\\C:\\Program Files (x86)\\Faronics\\Deep Freeze\*" or tgt.process.image.path contains "\\C:\\Program Files (x86)\\Faronics\\Deep Freeze\\Install C-0\*" or tgt.process.image.path contains "\\C:\\Program Files (x86)\\Faronics\\Deep Freeze\\Install C-1\*" or tgt.process.image.path contains "\\C:\\Program Files (x86)\\Faronics\\Faronics Core\*" or tgt.process.image.path contains "\\C:\\Program Files (x86)\\Faronics\\Faronics Deploy Agent\*" or tgt.process.image.path contains "\\C:\\Program Files (x86)\\Faronics\\Faronics Deploy Agent\\FRCServer.exe" or tgt.process.image.path contains "\\C:\\Program Files (x86)\\Faronics\\Faronics Deploy Agent\\FSSInstaller.exe" or tgt.process.image.path contains "\\C:\\Program Files (x86)\\Faronics\\Faronics Deploy Agent\\FWAService.exe" or tgt.process.image.path contains "\\C:\\Program Files (x86)\\Faronics\\Faronics Deploy Agent\\FWA_UI_Agent.exe" or tgt.process.image.path contains "\\C:\\Program Files (x86)\\Faronics\\Faronics Deploy Agent\\FaronicsDeployAgent.exe" or tgt.process.image.path contains "\\C:\\Program Files (x86)\\Faronics\\Faronics Deploy Agent\\FaronicsSA.exe" or tgt.process.image.path contains "\\C:\\Program Files (x86)\\Faronics\\Faronics Deploy Agent\\MigrationHelper_32.exe" or tgt.process.image.path contains "\\C:\\Program Files (x86)\\Faronics\\Faronics Deploy Agent\\MigrationHelper_64.exe" or tgt.process.image.path contains "\\C:\\Program Files (x86)\\Faronics\\Faronics Deploy Agent\\ModulesUpgradeMgr.exe" or tgt.process.image.path contains "\\C:\\Program Files (x86)\\Faronics\\Faronics Deploy Agent\\NotificationHelper.exe" or tgt.process.image.path contains "\\C:\\Program Files (x86)\\Faronics\\Faronics Deploy Agent\\UserNotificationHelper.exe" or tgt.process.image.path contains "\\C:\\Program Files (x86)\\Faronics\\Insight Student\*" or tgt.process.image.path contains "\\C:\\Program Files (x86)\\Faronics\\Insight Teacher\*" or tgt.process.image.path contains "\\C:\\Program Files (x86)\\FleetDeck Agent\*\\fd_agent.dll" or tgt.process.image.path contains "\\C:\\Program Files (x86)\\FleetDeck Agent\*\\fleetdeck_agent.exe" or tgt.process.image.path contains "\\C:\\Program Files (x86)\\FleetDeck Agent\\fleetdeck_agent_svc.exe" or tgt.process.image.path contains "\\C:\\Program Files (x86)\\Freshdesk\\Freshservice Discovery Agent\*" or tgt.process.image.path contains "\\C:\\Program Files (x86)\\Freshdesk\\Freshservice Discovery Agent\\FSAgentAutoUpdate.exe" or tgt.process.image.path contains "\\C:\\Program Files (x86)\\Freshdesk\\Freshservice Discovery Agent\\FSAgentService.exe" or tgt.process.image.path contains "\\C:\\Program Files (x86)\\Freshdesk\\Freshservice Discovery Agent\\bin\*" or tgt.process.image.path contains "\\C:\\Program Files (x86)\\Freshdesk\\Freshservice Discovery Agent\\conf\*" or tgt.process.image.path contains "\\C:\\Program Files (x86)\\Freshworks\\FreshServiceProbe\*" or tgt.process.image.path contains "\\C:\\Program Files (x86)\\Freshworks\\FreshServiceProbe\\bin\*" or tgt.process.image.path contains "\\C:\\Program Files (x86)\\Freshworks\\FreshServiceProbe\\bin\\Freshservice.DiscoveryProbe.ScanService.exe" or tgt.process.image.path contains "\\C:\\Program Files (x86)\\Freshworks\\FreshServiceProbe\\bin\\Freshservice.DiscoveryProbe.Window.exe" or tgt.process.image.path contains "\\C:\\Program Files (x86)\\Freshworks\\FreshServiceProbe\\bin\\plink.exe" or tgt.process.image.path contains "\\C:\\Program Files (x86)\\Freshworks\\FreshServiceProbe\\conf\*" or tgt.process.image.path contains "\\C:\\Program Files (x86)\\Freshworks\\FreshServiceProbe\\db\*" or tgt.process.image.path contains "\\C:\\Program Files (x86)\\Freshworks\\FreshServiceProbe\\nmap\*" or tgt.process.image.path contains "\\C:\\Program Files (x86)\\Freshworks\\FreshServiceProbe\\tools\\ssh\*" or tgt.process.image.path contains "\\C:\\Program Files (x86)\\GoTo Opener" or tgt.process.image.path contains "\\C:\\Program Files (x86)\\GoTo Resolve Unattended\*" or tgt.process.image.path contains "\\C:\\Program Files (x86)\\GoToMyPC\*" or tgt.process.image.path contains "\\C:\\Program Files (x86)\\Google\\Chrome Remote Desktop\*" or tgt.process.image.path contains "\\C:\\Program Files (x86)\\HeartbeatRM\*" or tgt.process.image.path contains "\\C:\\Program Files (x86)\\HopToDesk\\HopToDesk.exe" or tgt.process.image.path contains "\\C:\\Program Files (x86)\\IDrive\*" or tgt.process.image.path contains "\\C:\\Program Files (x86)\\ISL Online\\ISL Light" or tgt.process.image.path contains "\\C:\\Program Files (x86)\\ImmyBot\\ImmyAgent.exe" or tgt.process.image.path contains "\\C:\\Program Files (x86)\\ImmyBot\\ImmyUpdater.exe" or tgt.process.image.path contains "\\C:\\Program Files (x86)\\Inventec\\InvGate.net Client\*" or tgt.process.image.path contains "\\C:\\Program Files (x86)\\Inventec\\InvGate.net Client\\DepHlp.exe" or tgt.process.image.path contains "\\C:\\Program Files (x86)\\Inventec\\InvGate.net Client\\InvGate-ED.exe" or tgt.process.image.path contains "\\C:\\Program Files (x86)\\Inventec\\InvGate.net Client\\Software Matt.dll" or tgt.process.image.path contains "\\C:\\Program Files (x86)\\Inventec\\InvGate.net Client\\files\\InvGateAssetsRD.exe" or tgt.process.image.path contains "\\C:\\Program Files (x86)\\Inventec\\InvGate.net Client\\files\\InvGateRD.exe" or tgt.process.image.path contains "\\C:\\Program Files (x86)\\Inventec\\InvGate.net Client\\files\\sas.dll" or tgt.process.image.path contains "\\C:\\Program Files (x86)\\Kaseya\\" or tgt.process.image.path contains "\\C:\\Program Files (x86)\\LANDesk\*" or tgt.process.image.path contains "\\C:\\Program Files (x86)\\LS RMM\\LS RMM Worker.exe" or tgt.process.image.path contains "\\C:\\Program Files (x86)\\LS RMM\\LS RMM.exe" or tgt.process.image.path contains "\\C:\\Program Files (x86)\\Lavawall\\LavawallWin.exe" or tgt.process.image.path contains "\\C:\\Program Files (x86)\\ManageEngine\\ServiceDesk\*" or tgt.process.image.path contains "\\C:\\Program Files (x86)\\Microsoft Garage\\Mouse without Borders\*" or tgt.process.image.path contains "\\C:\\Program Files (x86)\\NVDA\\nvda.exe" or tgt.process.image.path contains "\\C:\\Program Files (x86)\\Net Monitor for Employees Pro\*" or tgt.process.image.path contains "\\C:\\Program Files (x86)\\NetSarang\\xShell\*" or tgt.process.image.path contains "\\C:\\Program Files (x86)\\OnionShare\*" or tgt.process.image.path contains "\\C:\\Program Files (x86)\\PJ Technologies\\GOVsrv\*" or tgt.process.image.path contains "\\C:\\Program Files (x86)\\RG-Supervision\*" or tgt.process.image.path contains "\\C:\\Program Files (x86)\\Radmin Viewer 3\\Radmin.exe" or tgt.process.image.path contains "\\C:\\Program Files (x86)\\RdClient\*" or tgt.process.image.path contains "\\C:\\Program Files (x86)\\Remote Ripple\*" or tgt.process.image.path contains "\\C:\\Program Files (x86)\\RemotePC\*" or tgt.process.image.path contains "\\C:\\Program Files (x86)\\RemotePulseAgent\\InstallCore.exe" or tgt.process.image.path contains "\\C:\\Program Files (x86)\\RemotePulseAgent\\agent.ps1" or tgt.process.image.path contains "\\C:\\Program Files (x86)\\RemotePulseAgent\\defender-exclude.ps1" or tgt.process.image.path contains "\\C:\\Program Files (x86)\\RemotePulseAgent\\install.cmd" or tgt.process.image.path contains "\\C:\\Program Files (x86)\\RemotePulseAgent\\install.ps1" or tgt.process.image.path contains "\\C:\\Program Files (x86)\\S3 Browser\*" or tgt.process.image.path contains "\\C:\\Program Files (x86)\\ScreenConnect Client (<string ID>)\*" or tgt.process.image.path contains "\\C:\\Program Files (x86)\\ScreenConnect Client (Random)\\ScreenConnect.ClientService.exe" or tgt.process.image.path contains "\\C:\\Program Files (x86)\\SmartFTP Client\\en-US\\" or tgt.process.image.path contains "\\C:\\Program Files (x86)\\Splashtop\*" or tgt.process.image.path contains "\\C:\\Program Files (x86)\\Techinline Ltd\\SetMe Unattended\\Client\\SetMe_Client.exe" or tgt.process.image.path contains "\\C:\\Program Files (x86)\\Techinline Ltd\\SetMe Unattended\\Module\*\\tinUnattendedModule.exe" or tgt.process.image.path contains "\\C:\\Program Files (x86)\\TiFLUX\*" or tgt.process.image.path contains "\\C:\\Program Files (x86)\\TiFLUX\\TiService.exe" or tgt.process.image.path contains "\\C:\\Program Files (x86)\\TiFLUX\\TiUpdateService.exe" or tgt.process.image.path contains "\\C:\\Program Files (x86)\\TiFLUX\\dependencies\*" or tgt.process.image.path contains "\\C:\\Program Files (x86)\\TiFLUX\\dependencies\\7zip\*" or tgt.process.image.path contains "\\C:\\Program Files (x86)\\TiFLUX\\dependencies\\tar\*" or tgt.process.image.path contains "\\C:\\Program Files (x86)\\TiFLUX\\dependencies\\ultravnc\*" or tgt.process.image.path contains "\\C:\\Program Files (x86)\\TiFLUX\\desktop\*" or tgt.process.image.path contains "\\C:\\Program Files (x86)\\TiFLUX\\desktop\\TiAgent.exe" or tgt.process.image.path contains "\\C:\\Program Files (x86)\\TiFLUX\\si.exe" or tgt.process.image.path contains "\\C:\\Program Files (x86)\\UltraViewer\\UltraViewer_Desktop.exe" or tgt.process.image.path contains "\\C:\\Program Files (x86)\\Vector\\Asset Management Client\*" or tgt.process.image.path contains "\\C:\\Program Files (x86)\\Veyon\*" or tgt.process.image.path contains "\\C:\\Program Files (x86)\\Xpra\*" or tgt.process.image.path contains "\\C:\\Program Files (x86)\\Yandex\*" or tgt.process.image.path contains "\\C:\\Program Files (x86)\\bsag\*" or tgt.process.image.path contains "\\C:\\Program Files (x86)\\bsag\\bma\*" or tgt.process.image.path contains "\\C:\\Program Files (x86)\\mRemoteNG\*" or tgt.process.image.path contains "\\C:\\Program Files\\0x101 Cyber Security\\NetLock RMM\\UserAgent\\NetLock_RMM_User_Process.exe" or tgt.process.image.path contains "\\C:\\Program Files\\0x101 Cyber Security\\NetLock RMM\\UserAgent\\NetLock_RMM_User_UAC.exe" or tgt.process.image.path contains "\\C:\\Program Files\\ATERA Networks\\AteraAgent\*" or tgt.process.image.path contains "\\C:\\Program Files\\Allocentra\\Agent\\allocentra-agent.exe" or tgt.process.image.path contains "\\C:\\Program Files\\AnyDesk\*" or tgt.process.image.path contains "\\C:\\Program Files\\Aspia\\" or tgt.process.image.path contains "\\C:\\Program Files\\Atera Networks" or tgt.process.image.path contains "\\C:\\Program Files\\Beacon\\beacon-agent.exe" or tgt.process.image.path contains "\\C:\\Program Files\\Bitvise SSH Server\*" or tgt.process.image.path contains "\\C:\\Program Files\\Breeze\*" or tgt.process.image.path contains "\\C:\\Program Files\\ControlR\*\\ControlR.Agent.exe" or tgt.process.image.path contains "\\C:\\Program Files\\ControlR\*\\DesktopClient\\ControlR.DesktopClient.dll" or tgt.process.image.path contains "\\C:\\Program Files\\ControlR\*\\DesktopClient\\ControlR.DesktopClient.exe" or tgt.process.image.path contains "\\C:\\Program Files\\Danware Data\\NetOp Packn Deploy\*" or tgt.process.image.path contains "\\C:\\Program Files\\Devolutions\\Remote Desktop Manager" or tgt.process.image.path contains "\\C:\\Program Files\\Faronics Corporation\\Deep Freeze 7.00\*" or tgt.process.image.path contains "\\C:\\Program Files\\Faronics\\Core\\Console\*" or tgt.process.image.path contains "\\C:\\Program Files\\Faronics\\Deep Freeze\*" or tgt.process.image.path contains "\\C:\\Program Files\\Faronics\\Faronics Core\*" or tgt.process.image.path contains "\\C:\\Program Files\\Faronics\\Faronics Core\\Workstation Agent\*" or tgt.process.image.path contains "\\C:\\Program Files\\Faronics\\Insight Student\*" or tgt.process.image.path contains "\\C:\\Program Files\\Faronics\\Insight Teacher\*" or tgt.process.image.path contains "\\C:\\Program Files\\GLPI-Agent\*" or tgt.process.image.path contains "\\C:\\Program Files\\GLPI-Agent\\etc\*" or tgt.process.image.path contains "\\C:\\Program Files\\GLPI-Agent\\logs\*" or tgt.process.image.path contains "\\C:\\Program Files\\GLPI-Agent\\perl\\bin\*" or tgt.process.image.path contains "\\C:\\Program Files\\GLPI-Agent\\var\*" or tgt.process.image.path contains "\\C:\\Program Files\\Getscreen.me\\" or tgt.process.image.path contains "\\C:\\Program Files\\GoTo Resolve Unattended\*" or tgt.process.image.path contains "\\C:\\Program Files\\HeartbeatRM\*" or tgt.process.image.path contains "\\C:\\Program Files\\IDrive\*" or tgt.process.image.path contains "\\C:\\Program Files\\ImmyBot\\ImmyAgent.exe" or tgt.process.image.path contains "\\C:\\Program Files\\ImmyBot\\ImmyUpdater.exe" or tgt.process.image.path contains "\\C:\\Program Files\\Komari\*" or tgt.process.image.path contains "\\C:\\Program Files\\Lavawall\\LavawallWin.exe" or tgt.process.image.path contains "\\C:\\Program Files\\Level\*" or tgt.process.image.path contains "\\C:\\Program Files\\LightRmmAgent\*" or tgt.process.image.path contains "\\C:\\Program Files\\LiteManager Pro – Viewer\*" or tgt.process.image.path contains "\\C:\\Program Files\\Lunixar\*" or tgt.process.image.path contains "\\C:\\Program Files\\ManageEngine\\ManageEngine Free Tools\\Launcher\*" or tgt.process.image.path contains "\\C:\\Program Files\\ManageEngine\\ServiceDesk\*" or tgt.process.image.path contains "\\C:\\Program Files\\MiniRMM\\MiniRmmAgent.exe" or tgt.process.image.path contains "\\C:\\Program Files\\Miradore\\OnlineClient\\bin\*" or tgt.process.image.path contains "\\C:\\Program Files\\Monitic\*" or tgt.process.image.path contains "\\C:\\Program Files\\Monitic\\agent.exe" or tgt.process.image.path contains "\\C:\\Program Files\\Monitic\\amon.exe" or tgt.process.image.path contains "\\C:\\Program Files\\Monitic\\conf.json" or tgt.process.image.path contains "\\C:\\Program Files\\NVDA\\nvda.exe" or tgt.process.image.path contains "\\C:\\Program Files\\Net Monitor for Employees Pro\*" or tgt.process.image.path contains "\\C:\\Program Files\\Netbird\\netbird-ui.exe" or tgt.process.image.path contains "\\C:\\Program Files\\Netbird\\netbird.exe" or tgt.process.image.path contains "\\C:\\Program Files\\OblianceAgent\\obliance-agent.exe" or tgt.process.image.path contains "\\C:\\Program Files\\OblianceAgent\\obliance-tray.exe" or tgt.process.image.path contains "\\C:\\Program Files\\OblianceAgent\\obliance-watchdog.exe" or tgt.process.image.path contains "\\C:\\Program Files\\OpenUEM Agent\*" or tgt.process.image.path contains "\\C:\\Program Files\\OpenUEM Agent\\config\\openuem.ini" or tgt.process.image.path contains "\\C:\\Program Files\\OpenUEM Agent\\logs\\openuem-log.txt" or tgt.process.image.path contains "\\C:\\Program Files\\OpsBridge\\OpsBridgeAgent.exe" or tgt.process.image.path contains "\\C:\\Program Files\\Parsec\*" or tgt.process.image.path contains "\\C:\\Program Files\\ProxiPort\\proxiport.conf" or tgt.process.image.path contains "\\C:\\Program Files\\ProxiPort\\proxiport.exe" or tgt.process.image.path contains "\\C:\\Program Files\\RG-Supervision\*" or tgt.process.image.path contains "\\C:\\Program Files\\RdClient\*" or tgt.process.image.path contains "\\C:\\Program Files\\RealVNC\\VNC Server\*" or tgt.process.image.path contains "\\C:\\Program Files\\Remote Ripple\*" or tgt.process.image.path contains "\\C:\\Program Files\\Remote Utilities\*" or tgt.process.image.path contains "\\C:\\Program Files\\RemoteAgent\\RemoteAgentAgent.exe" or tgt.process.image.path contains "\\C:\\Program Files\\Remotely\\ConnectionInfo.json" or tgt.process.image.path contains "\\C:\\Program Files\\Remotely\\Desktop\\Remotely_Desktop.exe" or tgt.process.image.path contains "\\C:\\Program Files\\Remotely\\Remotely_Agent.exe" or tgt.process.image.path contains "\\C:\\Program Files\\Remotely\\etag.txt" or tgt.process.image.path contains "\\C:\\Program Files\\Rodex\\RodexAgent.exe" or tgt.process.image.path contains "\\C:\\Program Files\\Roster\*" or tgt.process.image.path contains "\\C:\\Program Files\\RustDesk" or tgt.process.image.path contains "\\C:\\Program Files\\Solar-Putty-v4\*" or tgt.process.image.path contains "\\C:\\Program Files\\SolarWinds\\Dameware Mini Remote Control\*" or tgt.process.image.path contains "\\C:\\Program Files\\SysAidServer\*" or tgt.process.image.path contains "\\C:\\Program Files\\TeamViewer\\" or tgt.process.image.path contains "\\C:\\Program Files\\Teleport Connect\*" or tgt.process.image.path contains "\\C:\\Program Files\\TightVNC\*" or tgt.process.image.path contains "\\C:\\Program Files\\TrustConnect Agent\*" or tgt.process.image.path contains "\\C:\\Program Files\\TrustConnect Agent\\TrustConnectAgent.exe" or tgt.process.image.path contains "\\C:\\Program Files\\Vector Networks Limited\\LANutil32 Suite\*" or tgt.process.image.path contains "\\C:\\Program Files\\Vector\\Asset Management Client\*" or tgt.process.image.path contains "\\C:\\Program Files\\Veyon\*" or tgt.process.image.path contains "\\C:\\Program Files\\ZOC8\*" or tgt.process.image.path contains "\\C:\\Program Files\\Zecurit\\Agent\\ZecuritAgentAssetMgr.exe" or tgt.process.image.path contains "\\C:\\Program Files\\Zecurit\\Agent\\ZecuritAgentRegister.exe" or tgt.process.image.path contains "\\C:\\Program Files\\Zecurit\\Agent\\ZecuritAgentService.exe" or tgt.process.image.path contains "\\C:\\Program Files\\Zecurit\\Agent\\ZecuritAgentTray.exe" or tgt.process.image.path contains "\\C:\\Program Files\\Zecurit\\Agent\\ZecuritApplicationControlService.exe" or tgt.process.image.path contains "\\C:\\Program Files\\Zecurit\\Agent\\ZecuritCommandProcessor.exe" or tgt.process.image.path contains "\\C:\\Program Files\\Zecurit\\Agent\\ZecuritLiveNotifier.exe" or tgt.process.image.path contains "\\C:\\Program Files\\Zecurit\\Agent\\ZecuritRemoteTools.exe" or tgt.process.image.path contains "\\C:\\Program Files\\Zecurit\\Agent\\ZecuritScreenReaderApp.exe" or tgt.process.image.path contains "\\C:\\Program Files\\Zecurit\\Agent\\ZecuritScreenReaderAppUI.exe" or tgt.process.image.path contains "\\C:\\Program Files\\Zecurit\\Agent\\ZecuritScreenReaderService.exe" or tgt.process.image.path contains "\\C:\\Program Files\\bsag\*" or tgt.process.image.path contains "\\C:\\Program Files\\bsag\\bma\*" or tgt.process.image.path contains "\\C:\\Program Files\\ehorus_agent\*" or tgt.process.image.path contains "\\C:\\Program Files\\nezha\*" or tgt.process.image.path contains "\\C:\\Program Files\\uvnc bvba\\UltraVNC\*" or tgt.process.image.path contains "\\C:\\ProgramData\\0x101 Cyber Security\\NetLock RMM\\Comm Agent\*" or tgt.process.image.path contains "\\C:\\ProgramData\\Beacon\\agent.log" or tgt.process.image.path contains "\\C:\\ProgramData\\Beacon\\credential.json" or tgt.process.image.path contains "\\C:\\ProgramData\\Breeze\*" or tgt.process.image.path contains "\\C:\\ProgramData\\ControlR\\" or tgt.process.image.path contains "\\C:\\ProgramData\\Faronics\\FCAForStartupMonitor.msi" or tgt.process.image.path contains "\\C:\\ProgramData\\Faronics\\StorageSpace\\FWA\*" or tgt.process.image.path contains "\\C:\\ProgramData\\Getscreen.me\\" or tgt.process.image.path contains "\\C:\\ProgramData\\IDrive\*" or tgt.process.image.path contains "\\C:\\ProgramData\\JWrapper-Remote Access\*" or tgt.process.image.path contains "\\C:\\ProgramData\\Kaseya\\" or tgt.process.image.path contains "\\C:\\ProgramData\\MiniRMM\\Invoke-AVExclusions.ps1" or tgt.process.image.path contains "\\C:\\ProgramData\\MiniRMM\\SmartScreenTest.ps1" or tgt.process.image.path contains "\\C:\\ProgramData\\NetMaster\\NetMaster_Client.exe" or tgt.process.image.path contains "\\C:\\ProgramData\\NetMaster\\config.ini" or tgt.process.image.path contains "\\C:\\ProgramData\\Netbird\*" or tgt.process.image.path contains "\\C:\\ProgramData\\OblianceAgent\\agent.log" or tgt.process.image.path contains "\\C:\\ProgramData\\OblianceAgent\\config.json" or tgt.process.image.path contains "\\C:\\ProgramData\\OblianceAgent\\watchdog.json" or tgt.process.image.path contains "\\C:\\ProgramData\\Opale\\opale-agent.exe" or tgt.process.image.path contains "\\C:\\ProgramData\\OpsBridge\*" or tgt.process.image.path contains "\\C:\\ProgramData\\Package Cache\\.unverified\\agent" or tgt.process.image.path contains "\\C:\\ProgramData\\RMMAgent\*" or tgt.process.image.path contains "\\C:\\ProgramData\\Roster\\agent-state.json" or tgt.process.image.path contains "\\C:\\ProgramData\\Roster\\agent.yaml" or tgt.process.image.path contains "\\C:\\ProgramData\\SentinelAgent\\sentinel-agent.exe" or tgt.process.image.path contains "\\C:\\ProgramData\\Teramind Agent\*" or tgt.process.image.path contains "\\C:\\ProgramData\\Teramind Agent\\<version>\\{6D99445F-F40F-45CB-B433-06302DAE6C70}\*" or tgt.process.image.path contains "\\C:\\ProgramData\\Teramind Agent\\<version>\\{6D99445F-F40F-45CB-B433-06302DAE6C70}\\tmagentsvc.exe" or tgt.process.image.path contains "\\C:\\ProgramData\\Teramind Agent\\config" or tgt.process.image.path contains "\\C:\\ProgramData\\Total Software Deployment\*" or tgt.process.image.path contains "\\C:\\ProgramData\\TrustConnect\*" or tgt.process.image.path contains "\\C:\\ProgramData\\{4CEC2908-5CE4-48F0-A717-8FC833D8017A}\*" or tgt.process.image.path contains "\\C:\\ProgramData\\{4CEC2908-5CE4-48F0-A717-8FC833D8017A}\\config" or tgt.process.image.path contains "\\C:\\ProgramData\\{4CEC2908-5CE4-48F0-A717-8FC833D8017A}\\updates\*" or tgt.process.image.path contains "\\C:\\ProgramData\\{E0E95C6C-F194-4846-928D-E5538022226D}\\" or tgt.process.image.path contains "\\C:\\Users\*\\AppData\\Local\\Getscreen.me\\" or tgt.process.image.path contains "\\C:\\Users\*\\AppData\\Local\\Google\\Chrome\\User Data\\Default\\Extensions\\iodihamcpbpeioajjeobimgagajmlibd" or tgt.process.image.path contains "\\C:\\Users\*\\AppData\\Local\\IDrive\*" or tgt.process.image.path="*\\C:\\Users\*\\AppData\\Local\\LogMeIn Rescue Applet\\LMIR*.tmp\\lmi_rescue.exe" or tgt.process.image.path="*\\C:\\Users\*\\AppData\\Local\\LogMeIn Rescue Applet\\LMIR*.tmp\\lmi_rescue_srv.exe" or tgt.process.image.path contains "\\C:\\Users\*\\AppData\\Local\\MEGAsync\*" or tgt.process.image.path contains "\\C:\\Users\*\\AppData\\Local\\Programs\\RemSupp\\RemSupp.exe" or tgt.process.image.path contains "\\C:\\Users\*\\AppData\\Local\\Programs\\RemSupp\\Uninstall RemSupp.exe" or tgt.process.image.path contains "\\C:\\Users\*\\AppData\\Local\\Programs\\Teleport Connect\*" or tgt.process.image.path contains "\\C:\\Users\*\\AppData\\Local\\Programs\\loclx\\loclx.exe" or tgt.process.image.path="*\\C:\\Users\*\\AppData\\Local\\Temp\\nvda_*\*" or tgt.process.image.path contains "\\C:\\Users\*\\AppData\\Local\\remsupp-updater\\installer.exe" or tgt.process.image.path contains "\\C:\\Users\*\\AppData\\Local\\rustdesk\*" or tgt.process.image.path contains "\\C:\\Users\*\\AppData\\Local\\rustdesk\\rustdesk.exe" or tgt.process.image.path contains "\\C:\\Users\*\\AppData\\Roaming\\Mikogo\*" or tgt.process.image.path contains "\\C:\\Users\*\\AppData\\Roaming\\SyncTrayzor\*" or tgt.process.image.path contains "\\C:\\Users\*\\AppData\\Roaming\\nvda\*" or tgt.process.image.path contains "\\C:\\Users\*\\Downloads\\AMMYY_Admin.exe" or tgt.process.image.path contains "\\C:\\Users\*\\Downloads\\IDriveWinSetup.exe" or tgt.process.image.path contains "\\C:\\Users\*\\Downloads\\getscreen-x86.exe" or tgt.process.image.path contains "\\C:\\Users\*\\Downloads\\getscreen.upd.exe" or tgt.process.image.path contains "\\C:\\Users\*\\ExtraPuTTY-0.30-2016-01-28-installer.exe" or tgt.process.image.path contains "\\C:\\Users\\IEUser\\Downloads\\WinSCP-5.21.6-Portable\*" or tgt.process.image.path contains "\\C:\\Users\\USERNAME\\AppData\\Roaming\\Insync\\App\\Insync.exe" or tgt.process.image.path contains "\\C:\\Windows\\<random>.exe" or tgt.process.image.path contains "\\C:\\Windows\\Action1\*" or tgt.process.image.path contains "\\C:\\Windows\\SysWOW64\\rserver30\\FamItrf2" or tgt.process.image.path contains "\\C:\\Windows\\SysWOW64\\rserver30\\FamItrfc" or tgt.process.image.path contains "\\C:\\Windows\\SysWOW64\\rserver30\\rserver3.exe" or tgt.process.image.path contains "\\C:\\Windows\\System32\\Tasks\\OpsBridge Agent" or tgt.process.image.path contains "\\C:\\Windows\\System32\\mstsc.exe" or tgt.process.image.path contains "\\C:\\Windows\\Temp\\FleetDeck\*" or tgt.process.image.path contains "\\C:\\Windows\\Temp\\ImmyBot\*" or tgt.process.image.path contains "\\C:\\Windows\\Temp\\Zecurit\\ZecuritAgentUpgrader.exe" or tgt.process.image.path contains "\\C:\\Windows\\dwrcs\*" or tgt.process.image.path contains "\\C:\\ProgramData\\AMMYY\\" or tgt.process.image.path contains "\\C:\\ProgramData\\SupremoRemoteDesktop\\" or tgt.process.image.path contains "\\C:\\bin\\OpenSSH.msi" or tgt.process.image.path contains "\\C:\\bin\\cis.vbs" or tgt.process.image.path contains "\\C:\\bin\\netbird.msi" or tgt.process.image.path contains "\\C:\\bin\\trm.zip" or tgt.process.image.path contains "\\C:\\komari\*" or tgt.process.image.path contains "\\C:\\nezha\*" or tgt.process.image.path contains "\\C:\\temper\\trm" or tgt.process.image.path contains "\\CBBackupPlan.exe" or tgt.process.image.path contains "\\CagService.exe" or tgt.process.image.path contains "\\Cloud.Backup.RM.Service.exe" or tgt.process.image.path contains "\\Cloud.Backup.Scheduler.exe" or tgt.process.image.path contains "\\CloudRaCmd.exe" or tgt.process.image.path contains "\\CloudRaSd.exe" or tgt.process.image.path contains "\\CloudRaService.exe" or tgt.process.image.path contains "\\CloudRaUtilities.exe" or tgt.process.image.path contains "\\CloudWksInstall.exe" or tgt.process.image.path contains "\\CommandProcessor" or tgt.process.image.path contains "\\ComodoRemoteControl.exe" or tgt.process.image.path="*\\Connect.Backdrop.cloud*.exe" or tgt.process.image.path contains "\\Connect.exe" or tgt.process.image.path="*\\ConnectAppSetup*.exe" or tgt.process.image.path contains "\\ConnectDetector.exe" or tgt.process.image.path="*\\ConnectShellSetup*.exe" or tgt.process.image.path="*\\ConnectWiseControl*.exe" or tgt.process.image.path contains "\\ConnectionInfo.json" or tgt.process.image.path="*\\ControlR.*.app" or tgt.process.image.path contains "\\ControlR.app" or tgt.process.image.path contains "\\CoreAgentService.exe" or tgt.process.image.path contains "\\CrossLoopConnect.exe" or tgt.process.image.path contains "\\DFC.exe" or tgt.process.image.path contains "\\DFInst.exe" or tgt.process.image.path contains "\\DFServ.exe" or tgt.process.image.path contains "\\DFServEx.exe" or tgt.process.image.path contains "\\DFStd.exe" or tgt.process.image.path contains "\\DFStdInstall.exe" or tgt.process.image.path contains "\\DFWks.exe" or tgt.process.image.path contains "\\DSGuest.exe" or tgt.process.image.path="*\\DameWare Mini Remote Control*.exe" or tgt.process.image.path contains "\\DameWare Remote Support.exe" or tgt.process.image.path contains "\\DeskRollUA.exe" or tgt.process.image.path contains "\\Deskroll.exe" or tgt.process.image.path contains "\\DocConnect.Agent.exe" or tgt.process.image.path="*\\Domotz Pro Desktop App Setup*.exe" or tgt.process.image.path contains "\\Domotz Pro Desktop App.exe" or tgt.process.image.path contains "\\DuetDisp.exe" or tgt.process.image.path contains "\\DuetSetup.exe" or tgt.process.image.path contains "\\ERAAgent.exe" or tgt.process.image.path="*\\EricomConnectRemoteHost*.exe" or tgt.process.image.path contains "\\FIStudentAgent.exe" or tgt.process.image.path contains "\\FIStudentSvc.exe" or tgt.process.image.path contains "\\FIStudentUI.exe" or tgt.process.image.path contains "\\FSAgent.msi" or tgt.process.image.path contains "\\FWAService.exe" or tgt.process.image.path="*\\FWAWebInstaller_*.exe" or tgt.process.image.path contains "\\FWA_UI_Agent.exe" or tgt.process.image.path contains "\\FaronicsCoreAgent.exe" or tgt.process.image.path contains "\\FaronicsDeployAgent.exe" or tgt.process.image.path contains "\\FastViewer.exe" or tgt.process.image.path contains "\\FixMeit Client.exe" or tgt.process.image.path contains "\\FixMeit Expert Setup.exe" or tgt.process.image.path contains "\\FixMeit Unattended Access Setup.exe" or tgt.process.image.path="*\\FixMeitClient*.exe" or tgt.process.image.path contains "\\G2M.exe" or tgt.process.image.path contains "\\GoTo Assist Opener.exe" or tgt.process.image.path contains "\\GoToResolveExternalModuleHandler.exe" or tgt.process.image.path contains "\\GoToResolveFileManager.exe" or tgt.process.image.path contains "\\GoToResolveLoggerProcess.exe" or tgt.process.image.path contains "\\GoToResolveNetworkChecker.exe" or tgt.process.image.path contains "\\GoToResolveProcessChecker.exe" or tgt.process.image.path contains "\\GoToResolveQuickView.exe" or tgt.process.image.path contains "\\GoToResolveRegistryEditor.exe" or tgt.process.image.path contains "\\GoToResolveRemoteControl.exe" or tgt.process.image.path contains "\\GoToResolveService.exe" or tgt.process.image.path contains "\\GoToResolveServiceManager.exe" or tgt.process.image.path contains "\\GoToResolveTerminal.exe" or tgt.process.image.path contains "\\GoToResolveTools32.exe" or tgt.process.image.path contains "\\GoToResolveTools64.exe" or tgt.process.image.path contains "\\GoToResolveUi.exe" or tgt.process.image.path contains "\\GoToResolveUnattended.exe" or tgt.process.image.path contains "\\GoToResolveUnattendedRemover.exe" or tgt.process.image.path contains "\\GoToResolveUnattendedUi.exe" or tgt.process.image.path contains "\\Googlemeet.msi" or tgt.process.image.path="*\\GotoHTTP*.exe" or tgt.process.image.path contains "\\GotoHTTP_x64.exe" or tgt.process.image.path contains "\\GovAgentInstallHelper.exe" or tgt.process.image.path contains "\\GovAgentx64.exe" or tgt.process.image.path contains "\\GovReachClient.exe" or tgt.process.image.path contains "\\HelpWire Operator.app" or tgt.process.image.path contains "\\HelpWire Quick.exe" or tgt.process.image.path contains "\\HelpWire Unattended Access.lnk" or tgt.process.image.path contains "\\HelpWire.lnk" or tgt.process.image.path contains "\\HelpuManager.exe" or tgt.process.image.path contains "\\HelpuUpdater.exe" or tgt.process.image.path contains "\\HopToDesk-Standalone.exe" or tgt.process.image.path contains "\\HopToDesk.exe" or tgt.process.image.path contains "\\I'm InTouch Go Installer.exe" or tgt.process.image.path contains "\\IDComponent.dll" or tgt.process.image.path contains "\\IDriveEClassic.exe" or tgt.process.image.path contains "\\IDriveWinSetup.exe" or tgt.process.image.path contains "\\ISLLight.exe" or tgt.process.image.path contains "\\ISLLightClient.exe" or tgt.process.image.path contains "\\ITAgentRMMSender.exe" or tgt.process.image.path contains "\\ITAgentRMMSenderSL.exe" or tgt.process.image.path contains "\\ITAgentRMMSenderUpdater.exe" or tgt.process.image.path contains "\\ITAgentSender.aiui" or tgt.process.image.path contains "\\ITSMAgent.exe" or tgt.process.image.path contains "\\ITSMService.exe" or tgt.process.image.path contains "\\ITarianRemoteAccessSetup.exe" or tgt.process.image.path contains "\\Idrive.File-Transfer" or tgt.process.image.path contains "\\ImmyAgent.exe" or tgt.process.image.path contains "\\ImmyBot.Agent.Ephemeral.exe" or tgt.process.image.path contains "\\ImmyBot.msi" or tgt.process.image.path contains "\\ImmyUpdater.exe" or tgt.process.image.path contains "\\ImperoClientSVC.exe" or tgt.process.image.path contains "\\ImperoInit.exe" or tgt.process.image.path contains "\\InsightInstaller.exe" or tgt.process.image.path contains "\\InsightInstallerStudent.exe" or tgt.process.image.path contains "\\InsightInstallerTeacher.exe" or tgt.process.image.path contains "\\InsightSetup.msi" or tgt.process.image.path contains "\\InstallShield Setup.exe" or tgt.process.image.path contains "\\Installer" or tgt.process.image.path contains "\\InstantHousecall.exe" or tgt.process.image.path contains "\\ItsmRsp.exe" or tgt.process.image.path contains "\\IvantiRemoteControl.exe" or tgt.process.image.path="*\\JumpCloud*.exe" or tgt.process.image.path contains "\\KHelpDesk.exe" or tgt.process.image.path contains "\\Kabuto.App.Runner.exe" or tgt.process.image.path contains "\\Kabuto.Installer.exe" or tgt.process.image.path contains "\\Kabuto.Service.Runner.exe" or tgt.process.image.path contains "\\KabutoSetup.exe" or tgt.process.image.path contains "\\LANDeskPortalManager.exe" or tgt.process.image.path contains "\\LS RMM Worker.exe" or tgt.process.image.path contains "\\LS RMM.exe" or tgt.process.image.path="*\\LunixarRMM*.msi" or tgt.process.image.path contains "\\MEAgentHelper.exe" or tgt.process.image.path contains "\\ManageEngine_Remote_Access_Plus.exe" or tgt.process.image.path contains "\\ManageEngine_ServiceDesk_Plus.bin" or tgt.process.image.path contains "\\ManageEngine_ServiceDesk_Plus.exe" or tgt.process.image.path contains "\\ManualLauncher.exe" or tgt.process.image.path contains "\\MonitoringAgent.exe" or tgt.process.image.path contains "\\NTRsupportPro_EN.exe" or tgt.process.image.path contains "\\NetBird UI.app" or tgt.process.image.path contains "\\NetLock_RMM_Agent_Installer" or tgt.process.image.path contains "\\NetLock_RMM_Agent_Installer.exe" or tgt.process.image.path contains "\\NetViewer.exe" or tgt.process.image.path contains "\\Netop Ondemand.exe" or tgt.process.image.path contains "\\Ninite.exe" or tgt.process.image.path contains "\\NiniteAgent.exe" or tgt.process.image.path contains "\\NiniteOne.exe" or tgt.process.image.path contains "\\NinitePro.exe" or tgt.process.image.path contains "\\NinjaRMMAgent.exe" or tgt.process.image.path contains "\\NinjaRMMAgentPatcher.exe" or tgt.process.image.path contains "\\OOSysAgent.exe" or tgt.process.image.path contains "\\OTPowerShell.exe" or tgt.process.image.path contains "\\OTService.exe" or tgt.process.image.path="*\\OnionShare-win*.msi" or tgt.process.image.path contains "\\Online Backup.exe" or tgt.process.image.path contains "\\OpenDesk-RMM-Agent.exe" or tgt.process.image.path contains "\\OrayRemoteService.exe" or tgt.process.image.path contains "\\OrayRemoteShell.exe" or tgt.process.image.path="*\\PAExec-*.exe" or tgt.process.image.path contains "\\PCIVIDEO.EXE" or tgt.process.image.path contains "\\PCMonitorManager.exe" or tgt.process.image.path="*\\PDQConnectUpdater-*.msi" or tgt.process.image.path="*\\Pilixo_Installer*.exe" or tgt.process.image.path contains "\\PixoIT-agent.exe" or tgt.process.image.path contains "\\QQProtect.exe" or tgt.process.image.path contains "\\RAccess.exe" or tgt.process.image.path contains "\\RDConsole.exe" or tgt.process.image.path contains "\\RDPCheck.exe" or tgt.process.image.path contains "\\RDPConf.exe" or tgt.process.image.path contains "\\RDPWInst.exe" or tgt.process.image.path contains "\\RDesktop.exe" or tgt.process.image.path contains "\\RHost.exe" or tgt.process.image.path contains "\\RMM.Agent.exe" or tgt.process.image.path contains "\\RMMmax Agent" or tgt.process.image.path contains "\\RMMmaxAgentSetup.exe" or tgt.process.image.path contains "\\ROMFUSClient.exe" or tgt.process.image.path contains "\\ROMServer.exe" or tgt.process.image.path contains "\\RViewer.exe" or tgt.process.image.path contains "\\RdClientInstaller.exe" or tgt.process.image.path contains "\\Remote Desktop.exe" or tgt.process.image.path contains "\\Remote Workforce Client.exe" or tgt.process.image.path contains "\\RemotePC.exe" or tgt.process.image.path contains "\\RemotePCService.exe" or tgt.process.image.path contains "\\RemoteRipple.exe" or tgt.process.image.path contains "\\Remotely_Agent" or tgt.process.image.path contains "\\Remotely_Desktop" or tgt.process.image.path contains "\\RmmService.exe" or tgt.process.image.path contains "\\RocketRemoteDesktop_Setup.exe" or tgt.process.image.path contains "\\RodexAgent.exe" or tgt.process.image.path contains "\\SMPCSetup.exe" or tgt.process.image.path contains "\\SRManager.exe" or tgt.process.image.path contains "\\SRServer.exe" or tgt.process.image.path contains "\\STAHelper.exe" or tgt.process.image.path contains "\\ScreenMeet.Support.exe" or tgt.process.image.path contains "\\ScreenMeetSupport.exe" or tgt.process.image.path contains "\\SensoClient.exe" or tgt.process.image.path contains "\\SensoService.exe" or tgt.process.image.path contains "\\Service" or tgt.process.image.path contains "\\ServiceProxyLocalSys.exe" or tgt.process.image.path contains "\\Site24x7PluginAgent.exe" or tgt.process.image.path contains "\\Site24x7WindowsAgentTrayIcon.exe" or tgt.process.image.path="*\\SolarWinds-Dameware-DRS*.exe" or tgt.process.image.path="*\\SolarWinds-Dameware-MRC*.exe" or tgt.process.image.path contains "\\Sorillus Launcher.exe" or tgt.process.image.path="*\\Sorillus-Launcher*.exe" or tgt.process.image.path contains "\\SplashtopSOS.exe" or tgt.process.image.path="*\\Splashtop_Streamer_Windows*.exe" or tgt.process.image.path contains "\\StudentSvc.exe" or tgt.process.image.path contains "\\SupportTool.exe" or tgt.process.image.path contains "\\SupremoSystem.exe" or tgt.process.image.path contains "\\Syncro.App.Runner.exe" or tgt.process.image.path contains "\\Syncro.Installer.exe" or tgt.process.image.path contains "\\Syncro.Overmind.Service.exe" or tgt.process.image.path contains "\\Syncro.Service.exe" or tgt.process.image.path contains "\\SyncroLive.Agent.exe" or tgt.process.image.path contains "\\SyncroLive.Service.exe" or tgt.process.image.path contains "\\TPowerShell.exe" or tgt.process.image.path contains "\\TSClient.exe" or tgt.process.image.path contains "\\TakeControl.exe" or tgt.process.image.path contains "\\TaniumCX.exe" or tgt.process.image.path contains "\\TaniumClient.exe" or tgt.process.image.path contains "\\TaniumExecWrapper.exe" or tgt.process.image.path contains "\\TaniumFileInfo.exe" or tgt.process.image.path contains "\\TeamTaskManager.exe" or tgt.process.image.path="*\\Teleport Connect Setup-*.exe" or tgt.process.image.path contains "\\Teramind Agent.app" or tgt.process.image.path contains "\\This installs a modified VNC and cannot be blocked by path separate from VNC" or tgt.process.image.path contains "\\TiAgent.app" or tgt.process.image.path contains "\\TiClientCore.exe" or tgt.process.image.path="*\\TiClientHelper*.exe" or tgt.process.image.path contains "\\TiExpertCore.exe" or tgt.process.image.path contains "\\TiExpertStandalone.exe" or tgt.process.image.path="*\\TightVNCViewerPortable*.exe" or tgt.process.image.path contains "\\ToDesk_Service.exe" or tgt.process.image.path contains "\\ToDesk_Setup.exe" or tgt.process.image.path contains "\\TrustConnectAgent.exe" or tgt.process.image.path="*\\UltraVNC*.exe" or tgt.process.image.path contains "\\UltraViewer_Desktop.exe" or tgt.process.image.path contains "\\UltraViewer_Service.exe" or tgt.process.image.path contains "\\UltraViewer_setup" or tgt.process.image.path contains "\\UniRMM.exe" or tgt.process.image.path contains "\\UniRMM.msi" or tgt.process.image.path contains "\\WinVNCStub.exe" or tgt.process.image.path contains "\\XSightService.exe" or tgt.process.image.path contains "\\ZMAgent.exe" or tgt.process.image.path contains "\\ZecuritAccess" or tgt.process.image.path contains "\\ZohoMeeting.exe" or tgt.process.image.path contains "\\ZohoURSService.exe" or tgt.process.image.path contains "\\Zohours.exe" or tgt.process.image.path="*\\aa_v*.exe" or tgt.process.image.path contains "\\aadg.exe" or tgt.process.image.path="*\\accessserver*.exe" or tgt.process.image.path contains "\\accessserver.exe" or tgt.process.image.path="*\\addigy-*.pkg" or tgt.process.image.path contains "\\aeroadmin.exe" or tgt.process.image.path contains "\\agent" or tgt.process.image.path contains "\\agent-installer-any.exe" or tgt.process.image.path contains "\\agent.json" or tgt.process.image.path contains "\\agent.log" or tgt.process.image.path contains "\\agent.yaml" or tgt.process.image.path contains "\\agent32.exe" or tgt.process.image.path contains "\\agent64.exe" or tgt.process.image.path contains "\\agentService" or tgt.process.image.path contains "\\agent_setup_5.exe" or tgt.process.image.path contains "\\agentu.exe" or tgt.process.image.path contains "\\alitask.exe" or tgt.process.image.path contains "\\allocentra-agent.exe" or tgt.process.image.path contains "\\apc_host.exe" or tgt.process.image.path contains "\\atera_agent.exe" or tgt.process.image.path contains "\\ateraagent.exe" or tgt.process.image.path contains "\\auvik.agent.exe" or tgt.process.image.path contains "\\auvik.engine.exe" or tgt.process.image.path="*\\aweray_remote*.exe" or tgt.process.image.path contains "\\awhost32.exe" or tgt.process.image.path contains "\\awrem32.exe" or tgt.process.image.path contains "\\basupsrvc.exe" or tgt.process.image.path contains "\\basupsrvcupdate.exe" or tgt.process.image.path contains "\\basuptshelper.exe" or tgt.process.image.path contains "\\bbl.exe" or tgt.process.image.path contains "\\beacon-agent" or tgt.process.image.path contains "\\beacon-agent.log" or tgt.process.image.path contains "\\beacon-agent.service" or tgt.process.image.path contains "\\beamyourscreen-host.exe" or tgt.process.image.path contains "\\beamyourscreen.exe" or tgt.process.image.path="*\\bomgar-pac-*.exe" or tgt.process.image.path contains "\\bomgar-pac.exe" or tgt.process.image.path contains "\\bomgar-rdp.exe" or tgt.process.image.path="*\\bomgar-scc-*.exe" or tgt.process.image.path contains "\\bomgar-scc.exe" or tgt.process.image.path contains "\\borealis-agent-updater.service" or tgt.process.image.path contains "\\borealis-agent-watchdog.service" or tgt.process.image.path contains "\\borealis-agent.service" or tgt.process.image.path contains "\\breeze-agent" or tgt.process.image.path contains "\\breeze-agent.service" or tgt.process.image.path contains "\\breeze-backup" or tgt.process.image.path contains "\\breeze-desktop-helper" or tgt.process.image.path contains "\\breeze-watchdog" or tgt.process.image.path contains "\\c:\\Program Files (x86)%\\mRemoteNG" or tgt.process.image.path contains "\\c:\\Program Files (x86)\\Sysprogs\\SmarTTY\*" or tgt.process.image.path contains "\\c:\\Program Files\*\\Duplicati.Server.exe" or tgt.process.image.path contains "\\can't find this one" or tgt.process.image.path contains "\\cbb.exe" or tgt.process.image.path contains "\\chrome-remote-desktop" or tgt.process.image.path contains "\\chrome-remote-desktop-host" or tgt.process.image.path contains "\\client32.exe" or tgt.process.image.path contains "\\clientmrinit.exe" or tgt.process.image.path contains "\\cloudflared.exe" or tgt.process.image.path contains "\\com.beacon.agent.plist" or tgt.process.image.path contains "\\com.breeze.agent.plist" or tgt.process.image.path contains "\\com.breeze.desktop-helper-loginwindow.plist" or tgt.process.image.path contains "\\com.breeze.desktop-helper-user.plist" or tgt.process.image.path contains "\\com.breeze.watchdog.plist" or tgt.process.image.path contains "\\com.obliance.agent.plist" or tgt.process.image.path contains "\\com.roster.agent.plist" or tgt.process.image.path contains "\\commandProcessor" or tgt.process.image.path contains "\\config.json" or tgt.process.image.path contains "\\connect.exe" or tgt.process.image.path="*\\connectwise*.exe" or tgt.process.image.path contains "\\connectwisechat-customer.exe" or tgt.process.image.path contains "\\connectwisecontrol.client.exe" or tgt.process.image.path contains "\\credential.json" or tgt.process.image.path contains "\\crossloopservice.exe" or tgt.process.image.path contains "\\csexec.exe" or tgt.process.image.path contains "\\ctes.exe" or tgt.process.image.path contains "\\cteshostsvc.exe" or tgt.process.image.path contains "\\ctespersistence.exe" or tgt.process.image.path contains "\\ctiserv.exe" or tgt.process.image.path contains "\\dashboard" or tgt.process.image.path contains "\\dashboard-windows-amd64.exe" or tgt.process.image.path contains "\\dataplicity" or tgt.process.image.path contains "\\dataplicity.service" or tgt.process.image.path contains "\\dcagentregister.exe" or tgt.process.image.path contains "\\dcagentservice.exe" or tgt.process.image.path contains "\\dd.exe" or tgt.process.image.path contains "\\ddsystem.exe" or tgt.process.image.path contains "\\desktopnow.exe" or tgt.process.image.path contains "\\distant-desktop.exe" or tgt.process.image.path="*\\dntus*.exe" or tgt.process.image.path="*\\domotz*.exe" or tgt.process.image.path="*\\domotz-windows*.exe" or tgt.process.image.path contains "\\domotz.exe" or tgt.process.image.path contains "\\domotz_bash.exe" or tgt.process.image.path contains "\\duet.exe" or tgt.process.image.path contains "\\dwagent.exe" or tgt.process.image.path contains "\\dwaglnc.exe" or tgt.process.image.path contains "\\dwagsvc.exe" or tgt.process.image.path contains "\\dwrcs.exe" or tgt.process.image.path="*\\eDocument-*.msi" or tgt.process.image.path="*\\echoserver*.exe" or tgt.process.image.path contains "\\echoware.dll" or tgt.process.image.path contains "\\ehorus standalone.exe" or tgt.process.image.path contains "\\ehorus_agent.exe" or tgt.process.image.path contains "\\ehorus_cmd.exe" or tgt.process.image.path contains "\\ehorus_launcher.exe" or tgt.process.image.path contains "\\ehorus_uit.exe" or tgt.process.image.path contains "\\einstaller.exe" or tgt.process.image.path contains "\\era.exe" or tgt.process.image.path contains "\\eratool.exe" or tgt.process.image.path contains "\\ericomconnectconfigurationtool.exe" or tgt.process.image.path contains "\\ezHelpManager.exe" or tgt.process.image.path="*\\ezhelp*.exe" or tgt.process.image.path contains "\\ezhelpclient.exe" or tgt.process.image.path contains "\\ezhelpclientmanager.exe" or tgt.process.image.path contains "\\fastclient.exe" or tgt.process.image.path contains "\\fastmaster.exe" or tgt.process.image.path contains "\\fixmeitclient.exe" or tgt.process.image.path contains "\\fleetdeck-agent.exe" or tgt.process.image.path contains "\\fleetdeck-agent.msi" or tgt.process.image.path contains "\\fleetdeck-agent.mst" or tgt.process.image.path contains "\\fleetdeck_agent.exe" or tgt.process.image.path contains "\\fleetdeck_agent_svc.exe" or tgt.process.image.path contains "\\fleetdeck_commander_launcher.exe" or tgt.process.image.path contains "\\fleetdeck_commander_svc.exe" or tgt.process.image.path contains "\\fleetdeck_installer.exe" or tgt.process.image.path="*\\fs-probe-*.msi" or tgt.process.image.path="*\\fs-windows-agent-*.msi" or tgt.process.image.path="*\\g2a*.exe" or tgt.process.image.path contains "\\g2ax_comm_customer.exe" or tgt.process.image.path contains "\\g2mcomm.exe" or tgt.process.image.path contains "\\g2mupdate.com" or tgt.process.image.path contains "\\glpi-agent" or tgt.process.image.path contains "\\goto opener.exe" or tgt.process.image.path contains "\\gotoassist.exe" or tgt.process.image.path contains "\\gotohttp.exe" or tgt.process.image.path contains "\\goverrmc.exe" or tgt.process.image.path="*\\govsrv*.exe" or tgt.process.image.path contains "\\gp3.exe" or tgt.process.image.path contains "\\gp4.exe" or tgt.process.image.path contains "\\gp5.exe" or tgt.process.image.path="*\\grabberEM.*msi" or tgt.process.image.path="*\\grabberTT*.msi" or tgt.process.image.path contains "\\guacd.exe" or tgt.process.image.path contains "\\hbrm-updater-x64.exe" or tgt.process.image.path contains "\\hbrm-x64.exe" or tgt.process.image.path="*\\helpbeam*.exe" or tgt.process.image.path contains "\\helpu_install.exe" or tgt.process.image.path contains "\\helpwire-operator" or tgt.process.image.path contains "\\helpwire-unattended.service" or tgt.process.image.path contains "\\helpwire.exe" or tgt.process.image.path contains "\\hsloader.exe" or tgt.process.image.path contains "\\iadmin.exe" or tgt.process.image.path contains "\\id_tray.exe" or tgt.process.image.path contains "\\idrive.RemotePCAgent" or tgt.process.image.path contains "\\ihcserver.exe" or tgt.process.image.path contains "\\iit.exe" or tgt.process.image.path contains "\\install.conf" or tgt.process.image.path contains "\\installer" or tgt.process.image.path contains "\\instanthousecall.exe" or tgt.process.image.path contains "\\intelliadmin.exe" or tgt.process.image.path contains "\\intouch.exe" or tgt.process.image.path contains "\\iperius.exe" or tgt.process.image.path contains "\\iperiusremote.exe" or tgt.process.image.path contains "\\ir_agent.exe" or tgt.process.image.path contains "\\islalwaysonmonitor.exe" or tgt.process.image.path contains "\\isllight.exe" or tgt.process.image.path contains "\\isllightservice.exe" or tgt.process.image.path contains "\\issuser.exe" or tgt.process.image.path contains "\\itsmagent.exe" or tgt.process.image.path contains "\\jumpclient.exe" or tgt.process.image.path contains "\\jumpconnect.exe" or tgt.process.image.path contains "\\jumpdesktop.exe" or tgt.process.image.path contains "\\jumpservice.exe" or tgt.process.image.path contains "\\jumpupdater.exe" or tgt.process.image.path contains "\\komari-agent.service" or tgt.process.image.path contains "\\komari.service" or tgt.process.image.path contains "\\konea.exe" or tgt.process.image.path contains "\\landeskagentbootstrap.exe" or tgt.process.image.path="*\\laplink-everywhere-setup*.exe" or tgt.process.image.path contains "\\laplink.exe" or tgt.process.image.path contains "\\laplinkeverywhere.exe" or tgt.process.image.path contains "\\ldinv32.exe" or tgt.process.image.path contains "\\ldsensors.exe" or tgt.process.image.path contains "\\level-remote-control-ffmpeg.exe" or tgt.process.image.path contains "\\level-windows-amd64.exe" or tgt.process.image.path contains "\\level.exe" or tgt.process.image.path contains "\\libeay32.dll" or tgt.process.image.path contains "\\llrcservice.exe" or tgt.process.image.path contains "\\lmi_rescue.exe" or tgt.process.image.path contains "\\lmnoipserver.exe" or tgt.process.image.path contains "\\loclx" or tgt.process.image.path contains "\\loclx.exe" or tgt.process.image.path contains "\\ltsvc.exe" or tgt.process.image.path contains "\\ltsvcmon.exe" or tgt.process.image.path contains "\\lttray.exe" or tgt.process.image.path="*\\mRemoteNG-Installer-*.msi" or tgt.process.image.path contains "\\mRemoteNG.exe" or tgt.process.image.path="*\\meshagent*.exe" or tgt.process.image.path="*\\meshcentral*.exe" or tgt.process.image.path contains "\\mgntsvc.exe" or tgt.process.image.path contains "\\mikogo-service.exe" or tgt.process.image.path contains "\\mikogo-starter.exe" or tgt.process.image.path contains "\\mikogo.exe" or tgt.process.image.path contains "\\mikogolauncher.exe" or tgt.process.image.path contains "\\minion.service" or tgt.process.image.path contains "\\mionet.exe" or tgt.process.image.path contains "\\mionetmanager.exe" or tgt.process.image.path contains "\\mwcliun.exe" or tgt.process.image.path contains "\\mygreenpc.exe" or tgt.process.image.path contains "\\myivomanager.exe" or tgt.process.image.path contains "\\myivomgr.exe" or tgt.process.image.path="*\\nateon*.exe" or tgt.process.image.path contains "\\nateon.exe" or tgt.process.image.path contains "\\nateonmain.exe" or tgt.process.image.path contains "\\netbird" or tgt.process.image.path contains "\\netbird-ui.exe" or tgt.process.image.path contains "\\netbird.exe" or tgt.process.image.path="*\\neturo*.exe" or tgt.process.image.path contains "\\neturo.exe" or tgt.process.image.path="*\\netviewer*.exe" or tgt.process.image.path contains "\\netviewer.exe" or tgt.process.image.path contains "\\nexusrmm.exe" or tgt.process.image.path contains "\\nezha-agent" or tgt.process.image.path contains "\\nezha-agent.exe" or tgt.process.image.path contains "\\nezha-agent.service" or tgt.process.image.path contains "\\nezha-dashboard.service" or tgt.process.image.path contains "\\nezha_agent" or tgt.process.image.path contains "\\ngrok.exe" or tgt.process.image.path contains "\\ngstw32.exe" or tgt.process.image.path contains "\\nhostsvc.exe" or tgt.process.image.path contains "\\nhstw32.exe" or tgt.process.image.path contains "\\ninjarmm-cli.exe" or tgt.process.image.path contains "\\nldrw32.exe" or tgt.process.image.path contains "\\nmep_agtconfig.exe" or tgt.process.image.path contains "\\nmep_ctrlagent.exe" or tgt.process.image.path contains "\\nmep_ctrlagentsvc.exe" or tgt.process.image.path="*\\nomachine*.exe" or tgt.process.image.path contains "\\ntrntservice.exe" or tgt.process.image.path contains "\\nvClient.exe" or tgt.process.image.path contains "\\nvConsole.exe" or tgt.process.image.path contains "\\nvda.exe" or tgt.process.image.path="*\\nvda_*.exe" or tgt.process.image.path contains "\\nvda_service.exe" or tgt.process.image.path contains "\\nxd.exe" or tgt.process.image.path="*\\nxservice*.exe" or tgt.process.image.path contains "\\obliance-agent" or tgt.process.image.path contains "\\obliance-agent.log" or tgt.process.image.path contains "\\obliance-agent.service" or tgt.process.image.path contains "\\obliance-watchdog.service" or tgt.process.image.path contains "\\ocsinventory.exe" or tgt.process.image.path contains "\\ocsservice.exe" or tgt.process.image.path contains "\\oolocker.exe" or tgt.process.image.path contains "\\oosyspectr.exe" or tgt.process.image.path contains "\\opendesk-rmm-agent.exe" or tgt.process.image.path contains "\\openuem-agent.log" or tgt.process.image.path contains "\\openuem.ini" or tgt.process.image.path="*\\p9agent*.exe" or tgt.process.image.path contains "\\paexec.exe" or tgt.process.image.path="*\\parallelsaccess-*.exe" or tgt.process.image.path contains "\\parsecd.exe" or tgt.process.image.path contains "\\pcaquickconnect.exe" or tgt.process.image.path contains "\\pcicfgui.exe" or tgt.process.image.path contains "\\pcictlui.exe" or tgt.process.image.path contains "\\pcmonitorsrv.exe" or tgt.process.image.path contains "\\pcnmgr.exe" or tgt.process.image.path contains "\\pcstarter.exe" or tgt.process.image.path contains "\\pcvisit-easysupport.exe" or tgt.process.image.path contains "\\pcvisit.exe" or tgt.process.image.path contains "\\pcvisit_client.exe" or tgt.process.image.path contains "\\pcvisit_service_client.exe" or tgt.process.image.path="*\\pdq-connect*.exe" or tgt.process.image.path contains "\\pitunnel" or tgt.process.image.path contains "\\pitunnel.service" or tgt.process.image.path="*\\pocketcloud*.exe" or tgt.process.image.path contains "\\pocketcloudservice.exe" or tgt.process.image.path contains "\\pocketcontroller.exe" or tgt.process.image.path contains "\\prl_deskctl_agent.exe" or tgt.process.image.path contains "\\prl_deskctl_wizard.exe" or tgt.process.image.path contains "\\prl_pm_service.exe" or tgt.process.image.path contains "\\proxiport" or tgt.process.image.path contains "\\proxiport.conf" or tgt.process.image.path contains "\\proxiport.service" or tgt.process.image.path contains "\\pservice.exe" or tgt.process.image.path contains "\\psexec.exe" or tgt.process.image.path contains "\\psexec64.exe" or tgt.process.image.path contains "\\psexecsvc.exe" or tgt.process.image.path contains "\\pstlaunch.exe" or tgt.process.image.path contains "\\ptdskclient.exe" or tgt.process.image.path contains "\\ptdskhost.exe" or tgt.process.image.path contains "\\qq.exe" or tgt.process.image.path contains "\\qqpcmgr.exe" or tgt.process.image.path contains "\\quickassist.exe" or tgt.process.image.path contains "\\raautoup.exe" or tgt.process.image.path contains "\\rapid7_agent_core.exe" or tgt.process.image.path contains "\\rapid7_endpoint_broker.exe" or tgt.process.image.path contains "\\rcengmgru.exe" or tgt.process.image.path contains "\\rcmgrsvc.exe" or tgt.process.image.path contains "\\rcstartsupport.exe" or tgt.process.image.path contains "\\rd.exe" or tgt.process.image.path contains "\\rdclient.exe" or tgt.process.image.path contains "\\rdp.exe" or tgt.process.image.path contains "\\rdp2tcp.exe" or tgt.process.image.path contains "\\rdp2tcp.py" or tgt.process.image.path contains "\\remcmdstub.exe" or tgt.process.image.path contains "\\remcom.exe" or tgt.process.image.path contains "\\remcomsvc.exe" or tgt.process.image.path="*\\remcos*.exe" or tgt.process.image.path contains "\\remmon.exe" or tgt.process.image.path contains "\\remobo.exe" or tgt.process.image.path contains "\\remobo_client.exe" or tgt.process.image.path contains "\\remobo_tracker.exe" or tgt.process.image.path contains "\\remote access.exe" or tgt.process.image.path contains "\\remote-it-installer.exe" or tgt.process.image.path contains "\\remote.it.exe" or tgt.process.image.path contains "\\remoteconsole.exe" or tgt.process.image.path contains "\\remoteit.exe" or tgt.process.image.path contains "\\remotely-agent.plist" or tgt.process.image.path contains "\\remotely-agent.service" or tgt.process.image.path contains "\\remotepass-access.exe" or tgt.process.image.path contains "\\remotepchost.exe" or tgt.process.image.path contains "\\remotepcservice.exe" or tgt.process.image.path contains "\\remotesupportplayeru.exe" or tgt.process.image.path contains "\\remoteview.exe" or tgt.process.image.path contains "\\remoting_host.exe" or tgt.process.image.path contains "\\remoting_me2me_host" or tgt.process.image.path contains "\\remoting_me2me_host_service" or tgt.process.image.path contains "\\requires sign up" or tgt.process.image.path contains "\\rfusclient.exe" or tgt.process.image.path contains "\\rmmmax-agent" or tgt.process.image.path contains "\\rmmmax_agent.py" or tgt.process.image.path contains "\\rmserverconsolemediator.exe" or tgt.process.image.path contains "\\rodexagent.exe" or tgt.process.image.path contains "\\romfusclient.exe" or tgt.process.image.path contains "\\romserver.exe" or tgt.process.image.path contains "\\romviewer.exe" or tgt.process.image.path contains "\\roster-agent" or tgt.process.image.path contains "\\roster-agent.log" or tgt.process.image.path contains "\\roster-agent.service" or tgt.process.image.path contains "\\routernt.exe" or tgt.process.image.path contains "\\royalserver.exe" or tgt.process.image.path contains "\\royalts.exe" or tgt.process.image.path contains "\\rpaccess.exe" or tgt.process.image.path contains "\\rpcld.exe" or tgt.process.image.path contains "\\rpcnet.exe" or tgt.process.image.path contains "\\rpcsuite.exe" or tgt.process.image.path contains "\\rport.exe" or tgt.process.image.path contains "\\rpwhostscr.exe" or tgt.process.image.path="*\\rudesktop*.exe" or tgt.process.image.path="*\\rustdesk*.exe" or tgt.process.image.path contains "\\rustdesk.exe" or tgt.process.image.path contains "\\rutserv.exe" or tgt.process.image.path contains "\\rutview.exe" or tgt.process.image.path contains "\\rv.exe" or tgt.process.image.path contains "\\rvagent.exe" or tgt.process.image.path contains "\\rvagtray.exe" or tgt.process.image.path contains "\\rviewer.exe" or tgt.process.image.path contains "\\rxstartsupport.exe" or tgt.process.image.path contains "\\saazapsc.exe" or tgt.process.image.path="*\\screenconnect*.exe" or tgt.process.image.path contains "\\screenconnect.clientservice.exe" or tgt.process.image.path contains "\\screenconnect.windowsclient.exe" or tgt.process.image.path contains "\\seetrolcenter.exe" or tgt.process.image.path contains "\\seetrolclient.exe" or tgt.process.image.path contains "\\seetrolmyservice.exe" or tgt.process.image.path contains "\\seetrolremote.exe" or tgt.process.image.path contains "\\seetrolsetting.exe" or tgt.process.image.path contains "\\sentinel-agent" or tgt.process.image.path="*\\servereye*.exe" or tgt.process.image.path contains "\\serverproxyservice.exe" or tgt.process.image.path contains "\\serviceconfig.xml" or tgt.process.image.path contains "\\shellhub-agent" or tgt.process.image.path contains "\\shellhub-agent.service" or tgt.process.image.path="*\\showmypc*.exe" or tgt.process.image.path contains "\\showmypc.exe" or tgt.process.image.path contains "\\simplegatewayservice.exe" or tgt.process.image.path contains "\\simplehelpcustomer.exe" or tgt.process.image.path contains "\\simpleservice.exe" or tgt.process.image.path contains "\\smpcsetup.exe" or tgt.process.image.path contains "\\spsrv.exe" or tgt.process.image.path contains "\\sragent.exe" or tgt.process.image.path contains "\\srmanager.exe" or tgt.process.image.path contains "\\srserver.exe" or tgt.process.image.path contains "\\srservice.exe" or tgt.process.image.path contains "\\ssleay32.dll" or tgt.process.image.path contains "\\strwinclt.exe" or tgt.process.image.path="*\\sunlogin*.exe" or tgt.process.image.path contains "\\superops.exe" or tgt.process.image.path contains "\\superopsticket.exe" or tgt.process.image.path="*\\support-logmeinrescue*.exe" or tgt.process.image.path contains "\\support-logmeinrescue.exe" or tgt.process.image.path contains "\\supporttool.exe" or tgt.process.image.path contains "\\supremo.exe" or tgt.process.image.path contains "\\supremohelper.exe" or tgt.process.image.path contains "\\supremoservice.exe" or tgt.process.image.path contains "\\syncrosetup.exe" or tgt.process.image.path contains "\\sysdiag.exe" or tgt.process.image.path contains "\\syspectr.exe" or tgt.process.image.path contains "\\tacticalrmm.exe" or tgt.process.image.path="*\\tailscale-*.exe" or tgt.process.image.path contains "\\tailscale-ipn.exe" or tgt.process.image.path contains "\\tailscaled.exe" or tgt.process.image.path contains "\\teamviewer_desktop.exe" or tgt.process.image.path contains "\\teamviewer_service.exe" or tgt.process.image.path contains "\\teamviewerhost" or tgt.process.image.path="*\\tigervnc*.exe" or tgt.process.image.path contains "\\tmagent.app" or tgt.process.image.path contains "\\tmate" or tgt.process.image.path contains "\\tmate-ready" or tgt.process.image.path contains "\\tmate.bashrc" or tgt.process.image.path contains "\\tmate.sock" or tgt.process.image.path contains "\\tmsysd" or tgt.process.image.path contains "\\todesk.exe" or tgt.process.image.path contains "\\toolsiq.exe" or tgt.process.image.path contains "\\tsh" or tgt.process.image.path contains "\\tsircusr.exe" or tgt.process.image.path contains "\\turbomeeting.exe" or tgt.process.image.path contains "\\turbomeetingstarter.exe" or tgt.process.image.path contains "\\tvnserver.exe" or tgt.process.image.path contains "\\tvnviewer.exe" or tgt.process.image.path="*\\ultimate_*.exe" or tgt.process.image.path contains "\\ultraviewer.exe" or tgt.process.image.path contains "\\ultraviewer_desktop.exe" or tgt.process.image.path contains "\\ultraviewer_service.exe" or tgt.process.image.path contains "\\veyon-master.exe" or tgt.process.image.path contains "\\veyon-server.exe" or tgt.process.image.path contains "\\veyon-service.exe" or tgt.process.image.path contains "\\veyon-wcli.exe" or tgt.process.image.path contains "\\veyon-worker.exe" or tgt.process.image.path contains "\\vhost.exe" or tgt.process.image.path contains "\\vncserver.exe" or tgt.process.image.path contains "\\vncserverui.exe" or tgt.process.image.path contains "\\vncviewer.exe" or tgt.process.image.path contains "\\weCliboardListener.exe" or tgt.process.image.path contains "\\weInstSvc.exe" or tgt.process.image.path contains "\\webexpcnow.exe" or tgt.process.image.path contains "\\webrdp.exe" or tgt.process.image.path="*\\wec_launcher_[a-Z0-9]*_.exe" or tgt.process.image.path="*\\wec_launcher_[a-Z0-9]*_.pkg" or tgt.process.image.path="*\\weezo setup*.exe" or tgt.process.image.path contains "\\weezo.exe" or tgt.process.image.path contains "\\weezohttpd.exe" or tgt.process.image.path contains "\\wemonc.exe" or tgt.process.image.path contains "\\weprtct.exe" or tgt.process.image.path contains "\\wesvc.exe" or tgt.process.image.path="*\\win-installer-*.msi" or tgt.process.image.path contains "\\winagent.exe" or tgt.process.image.path contains "\\winaw32.exe" or tgt.process.image.path contains "\\windowslauncher.exe" or tgt.process.image.path contains "\\winpty-agent.exe" or tgt.process.image.path contains "\\winpty-agent64.exe" or tgt.process.image.path="*\\winvnc*.exe" or tgt.process.image.path contains "\\winvnc.exe" or tgt.process.image.path contains "\\winvnc4.exe" or tgt.process.image.path contains "\\winvncsc.exe" or tgt.process.image.path contains "\\winwvc.exe" or tgt.process.image.path="*\\wisshell*.exe" or tgt.process.image.path contains "\\wmc.exe" or tgt.process.image.path contains "\\wmc_deployer.exe" or tgt.process.image.path contains "\\wmcsvc.exe" or tgt.process.image.path contains "\\wysebrowser.exe" or tgt.process.image.path contains "\\xcmd.exe" or tgt.process.image.path contains "\\xcmdsvc.exe" or tgt.process.image.path="*\\xeox-agent_*.exe" or tgt.process.image.path contains "\\xeox-agent_x64.exe" or tgt.process.image.path contains "\\xeox-agent_x86.exe" or tgt.process.image.path contains "\\xeox_service_windows.exe" or tgt.process.image.path contains "\\za_connect.exe" or tgt.process.image.path="*\\zabbix_agent*.exe" or tgt.process.image.path contains "\\zaservice.exe" or tgt.process.image.path contains "\\zero-powershell.exe" or tgt.process.image.path="*\\zerotier*.exe" or tgt.process.image.path="*\\zerotier*.msi" or tgt.process.image.path contains "\\zohotray.exe"))
+// Translated content (automatically translated on 06-10-2026 03:43:55):
+event.type="Process Creation" and (endpoint.os="windows" and (tgt.process.image.path contains "\\AppData\\Roaming\\Microsoft\\DeviceSync\\svchost.exe" or tgt.process.image.path contains "\\AppData\\Roaming\\Microsoft\\Windows\\Start Menu\\Programs\\Startup\\svchost.exe" or tgt.process.image.path contains "\\AppData\\Roaming\\Overlord\\agent.exe" or tgt.process.image.path="*\\aa_v*.exe" or tgt.process.image.path contains "\\aadg.exe" or tgt.process.image.path="*\\accessserver*.exe" or tgt.process.image.path contains "\\accessserver.exe" or tgt.process.image.path contains "\\AcronisCyberProtectConnectAgent.exe" or tgt.process.image.path="*\\AcronisCyberProtectConnectQuickAssist*.exe" or tgt.process.image.path contains "\\AEMAgent.exe" or tgt.process.image.path contains "\\AeroAdmin.exe" or tgt.process.image.path contains "\\agent-installer-any.exe" or tgt.process.image.path="*\\agent-windows-amd64-*.exe" or tgt.process.image.path contains "\\agent32.exe" or tgt.process.image.path contains "\\agent64.exe" or tgt.process.image.path="*\\Agent_*_RW.exe" or tgt.process.image.path contains "\\agent_setup_5.exe" or tgt.process.image.path contains "\\AgentlessRC.exe" or tgt.process.image.path contains "\\AgentMaint.exe" or tgt.process.image.path contains "\\AgentMonitor.exe" or tgt.process.image.path contains "\\AgentPackageNetworkDiscovery.exe" or tgt.process.image.path contains "\\AgentPackageTaskScheduler.exe" or tgt.process.image.path="*\\AgentSetup-*.exe" or tgt.process.image.path contains "\\agentu.exe" or tgt.process.image.path contains "\\alitask.exe" or tgt.process.image.path contains "\\allocentra-agent.exe" or tgt.process.image.path contains "\\AlpemixService.exe" or tgt.process.image.path contains "\\AMMYY_Admin.exe" or tgt.process.image.path contains "\\amon.exe" or tgt.process.image.path="*\\AnyDesk-*.exe" or tgt.process.image.path contains "\\AnyDesk.exe" or tgt.process.image.path contains "\\apc_host.exe" or tgt.process.image.path contains "\\ArcUI.exe" or tgt.process.image.path contains "\\aspia_client.exe" or tgt.process.image.path contains "\\atera_agent.exe" or tgt.process.image.path contains "\\AteraAgent.exe" or tgt.process.image.path contains "\\auvik.agent.exe" or tgt.process.image.path contains "\\auvik.engine.exe" or tgt.process.image.path="*\\aweray_remote*.exe" or tgt.process.image.path contains "\\AweSun.exe" or tgt.process.image.path contains "\\awhost32.exe" or tgt.process.image.path contains "\\awrem32.exe" or tgt.process.image.path contains "\\BASEClient.exe" or tgt.process.image.path contains "\\BASupApp.exe" or tgt.process.image.path contains "\\BASupAppElev.exe" or tgt.process.image.path contains "\\BASupAppSrvc.exe" or tgt.process.image.path contains "\\BASupSrvc.exe" or tgt.process.image.path contains "\\BASupSrvcCnfg.exe" or tgt.process.image.path contains "\\basupsrvcupdate.exe" or tgt.process.image.path contains "\\BASupSysInf.exe" or tgt.process.image.path contains "\\BASupTSHelper.exe" or tgt.process.image.path contains "\\bbl.exe" or tgt.process.image.path contains "\\beacon-agent.exe" or tgt.process.image.path contains "\\beamyourscreen-host.exe" or tgt.process.image.path contains "\\beamyourscreen.exe" or tgt.process.image.path="*\\Beinsync*.exe" or tgt.process.image.path="*\\bomgar-pac-*.exe" or tgt.process.image.path contains "\\bomgar-pac.exe" or tgt.process.image.path contains "\\bomgar-rdp.exe" or tgt.process.image.path="*\\bomgar-scc-*.exe" or tgt.process.image.path contains "\\bomgar-scc.exe" or tgt.process.image.path contains "\\BvSshClient-Inst.exe" or tgt.process.image.path contains "\\BvSshServer-Inst.exe" or tgt.process.image.path contains "\\CagService.exe" or tgt.process.image.path contains "\\cbb.exe" or tgt.process.image.path contains "\\CBBackupPlan.exe" or tgt.process.image.path contains "\\client32.exe" or tgt.process.image.path contains "\\clientmrinit.exe" or tgt.process.image.path contains "\\Cloud.Backup.RM.Service.exe" or tgt.process.image.path contains "\\Cloud.Backup.Scheduler.exe" or tgt.process.image.path contains "\\cloudflared.exe" or tgt.process.image.path contains "\\CloudRaCmd.exe" or tgt.process.image.path contains "\\CloudRaSd.exe" or tgt.process.image.path contains "\\CloudRaService.exe" or tgt.process.image.path contains "\\CloudRaUtilities.exe" or tgt.process.image.path contains "\\CloudWksInstall.exe" or tgt.process.image.path contains "\\ComodoRemoteControl.exe" or tgt.process.image.path="*\\Connect.Backdrop.cloud*.exe" or tgt.process.image.path contains "\\Connect.exe" or tgt.process.image.path="*\\ConnectAppSetup*.exe" or tgt.process.image.path contains "\\ConnectDetector.exe" or tgt.process.image.path="*\\ConnectShellSetup*.exe" or tgt.process.image.path="*\\connectwise*.exe" or tgt.process.image.path contains "\\connectwisechat-customer.exe" or tgt.process.image.path="*\\ConnectWiseControl*.exe" or tgt.process.image.path contains "\\connectwisecontrol.client.exe" or tgt.process.image.path contains "\\ControlR.Agent.exe" or tgt.process.image.path contains "\\ControlR.DesktopClient.exe" or tgt.process.image.path contains "\\CoreAgentService.exe" or tgt.process.image.path contains "\\CrossLoopConnect.exe" or tgt.process.image.path contains "\\crossloopservice.exe" or tgt.process.image.path contains "\\csexec.exe" or tgt.process.image.path contains "\\ctes.exe" or tgt.process.image.path contains "\\cteshostsvc.exe" or tgt.process.image.path contains "\\ctespersistence.exe" or tgt.process.image.path contains "\\ctiserv.exe" or tgt.process.image.path="*\\DameWare Mini Remote Control*.exe" or tgt.process.image.path contains "\\DameWare Remote Support.exe" or tgt.process.image.path contains "\\dashboard-windows-amd64.exe" or tgt.process.image.path contains "\\dcagentregister.exe" or tgt.process.image.path contains "\\dcagentservice.exe" or tgt.process.image.path contains "\\dd.exe" or tgt.process.image.path contains "\\ddsystem.exe" or tgt.process.image.path contains "\\DepHlp.exe" or tgt.process.image.path contains "\\Deskroll.exe" or tgt.process.image.path contains "\\DeskRollUA.exe" or tgt.process.image.path contains "\\desktopnow.exe" or tgt.process.image.path contains "\\DFC.exe" or tgt.process.image.path contains "\\DFInst.exe" or tgt.process.image.path contains "\\DFServ.exe" or tgt.process.image.path contains "\\DFServEx.exe" or tgt.process.image.path contains "\\DFStd.exe" or tgt.process.image.path contains "\\DFStdInstall.exe" or tgt.process.image.path contains "\\DFWks.exe" or tgt.process.image.path contains "\\distant-desktop.exe" or tgt.process.image.path="*\\dntus*.exe" or tgt.process.image.path contains "\\DocConnect.Agent.exe" or tgt.process.image.path="*\\Domotz Pro Desktop App Setup*.exe" or tgt.process.image.path contains "\\Domotz Pro Desktop App.exe" or tgt.process.image.path="*\\domotz*.exe" or tgt.process.image.path="*\\domotz-windows*.exe" or tgt.process.image.path contains "\\domotz.exe" or tgt.process.image.path contains "\\domotz_bash.exe" or tgt.process.image.path contains "\\DragonDisk.exe" or tgt.process.image.path contains "\\DSGuest.exe" or tgt.process.image.path contains "\\duet.exe" or tgt.process.image.path contains "\\DuetDisp.exe" or tgt.process.image.path contains "\\DuetSetup.exe" or tgt.process.image.path contains "\\Duplicati.Server.exe" or tgt.process.image.path contains "\\dwagent.exe" or tgt.process.image.path contains "\\dwaglnc.exe" or tgt.process.image.path contains "\\dwagsvc.exe" or tgt.process.image.path contains "\\dwrcs.exe" or tgt.process.image.path contains "\\dwrcst.exe" or tgt.process.image.path="*\\echoserver*.exe" or tgt.process.image.path contains "\\ehorus standalone.exe" or tgt.process.image.path contains "\\ehorus_agent.exe" or tgt.process.image.path contains "\\ehorus_cmd.exe" or tgt.process.image.path contains "\\ehorus_launcher.exe" or tgt.process.image.path contains "\\ehorus_uit.exe" or tgt.process.image.path contains "\\einstaller.exe" or tgt.process.image.path contains "\\era.exe" or tgt.process.image.path contains "\\ERAAgent.exe" or tgt.process.image.path contains "\\eratool.exe" or tgt.process.image.path contains "\\ericomconnectconfigurationtool.exe" or tgt.process.image.path="*\\EricomConnectRemoteHost*.exe" or tgt.process.image.path contains "\\ExtraPuTTY-0.30-2016-01-28-installer.exe" or tgt.process.image.path="*\\ezhelp*.exe" or tgt.process.image.path contains "\\ezhelpclient.exe" or tgt.process.image.path contains "\\ezhelpclientmanager.exe" or tgt.process.image.path contains "\\ezHelpManager.exe" or tgt.process.image.path contains "\\FaronicsCoreAgent.exe" or tgt.process.image.path contains "\\FaronicsDeployAgent.exe" or tgt.process.image.path contains "\\FaronicsSA.exe" or tgt.process.image.path contains "\\fastclient.exe" or tgt.process.image.path contains "\\fastmaster.exe" or tgt.process.image.path contains "\\FastViewer.exe" or tgt.process.image.path contains "\\FIStudentAgent.exe" or tgt.process.image.path contains "\\FIStudentSvc.exe" or tgt.process.image.path contains "\\FIStudentUI.exe" or tgt.process.image.path contains "\\FixMeit Client.exe" or tgt.process.image.path contains "\\FixMeit Expert Setup.exe" or tgt.process.image.path contains "\\FixMeit Unattended Access Setup.exe" or tgt.process.image.path="*\\FixMeitClient*.exe" or tgt.process.image.path contains "\\fixmeitclient.exe" or tgt.process.image.path contains "\\fleetdeck-agent.exe" or tgt.process.image.path contains "\\fleetdeck_agent.exe" or tgt.process.image.path contains "\\fleetdeck_agent_svc.exe" or tgt.process.image.path contains "\\fleetdeck_commander_launcher.exe" or tgt.process.image.path contains "\\fleetdeck_commander_svc.exe" or tgt.process.image.path contains "\\fleetdeck_installer.exe" or tgt.process.image.path contains "\\FRCServer.exe" or tgt.process.image.path contains "\\Freshservice.DiscoveryProbe.ScanService.exe" or tgt.process.image.path contains "\\Freshservice.DiscoveryProbe.Window.exe" or tgt.process.image.path contains "\\FSAgentAutoUpdate.exe" or tgt.process.image.path contains "\\FSAgentService.exe" or tgt.process.image.path contains "\\FSSInstaller.exe" or tgt.process.image.path contains "\\FSWmiScanner.exe" or tgt.process.image.path contains "\\FWA_UI_Agent.exe" or tgt.process.image.path contains "\\FWAService.exe" or tgt.process.image.path="*\\FWAWebInstaller_*.exe" or tgt.process.image.path="*\\g2a*.exe" or tgt.process.image.path contains "\\g2ax_comm_customer.exe" or tgt.process.image.path contains "\\G2M.exe" or tgt.process.image.path contains "\\g2mcomm.exe" or tgt.process.image.path contains "\\getscreen-x86.exe" or tgt.process.image.path contains "\\getscreen.upd.exe" or tgt.process.image.path contains "\\GoTo Assist Opener.exe" or tgt.process.image.path contains "\\goto opener.exe" or tgt.process.image.path contains "\\gotoassist.exe" or tgt.process.image.path="*\\GotoHTTP*.exe" or tgt.process.image.path contains "\\gotohttp.exe" or tgt.process.image.path contains "\\GotoHTTP_x64.exe" or tgt.process.image.path contains "\\GoToResolveExternalModuleHandler.exe" or tgt.process.image.path contains "\\GoToResolveFileManager.exe" or tgt.process.image.path contains "\\GoToResolveLoggerProcess.exe" or tgt.process.image.path contains "\\GoToResolveNetworkChecker.exe" or tgt.process.image.path contains "\\GoToResolveProcessChecker.exe" or tgt.process.image.path contains "\\GoToResolveQuickView.exe" or tgt.process.image.path contains "\\GoToResolveRegistryEditor.exe" or tgt.process.image.path contains "\\GoToResolveRemoteControl.exe" or tgt.process.image.path contains "\\GoToResolveService.exe" or tgt.process.image.path contains "\\GoToResolveServiceManager.exe" or tgt.process.image.path contains "\\GoToResolveTerminal.exe" or tgt.process.image.path contains "\\GoToResolveTools32.exe" or tgt.process.image.path contains "\\GoToResolveTools64.exe" or tgt.process.image.path contains "\\GoToResolveUi.exe" or tgt.process.image.path contains "\\GoToResolveUnattended.exe" or tgt.process.image.path contains "\\GoToResolveUnattendedRemover.exe" or tgt.process.image.path contains "\\GoToResolveUnattendedUi.exe" or tgt.process.image.path contains "\\GovAgentInstallHelper.exe" or tgt.process.image.path contains "\\GovAgentx64.exe" or tgt.process.image.path contains "\\goverrmc.exe" or tgt.process.image.path contains "\\GovReachClient.exe" or tgt.process.image.path="*\\govsrv*.exe" or tgt.process.image.path contains "\\GovSrv.exe" or tgt.process.image.path contains "\\gp3.exe" or tgt.process.image.path contains "\\gp4.exe" or tgt.process.image.path contains "\\gp5.exe" or tgt.process.image.path contains "\\guacd.exe" or tgt.process.image.path contains "\\GxM.Agent.exe" or tgt.process.image.path contains "\\hbrm-updater-x64.exe" or tgt.process.image.path contains "\\hbrm-x64.exe" or tgt.process.image.path="*\\helpbeam*.exe" or tgt.process.image.path contains "\\helpu_install.exe" or tgt.process.image.path contains "\\HelpuManager.exe" or tgt.process.image.path contains "\\HelpuUpdater.exe" or tgt.process.image.path contains "\\HelpWire Quick.exe" or tgt.process.image.path contains "\\helpwire.exe" or tgt.process.image.path contains "\\HopToDesk-Standalone.exe" or tgt.process.image.path contains "\\HopToDesk.exe" or tgt.process.image.path contains "\\hsloader.exe" or tgt.process.image.path contains "\\I'm InTouch Go Installer.exe" or tgt.process.image.path contains "\\iadmin.exe" or tgt.process.image.path contains "\\id_tray.exe" or tgt.process.image.path contains "\\IDriveEClassic.exe" or tgt.process.image.path contains "\\IDriveWinSetup.exe" or tgt.process.image.path contains "\\ihcserver.exe" or tgt.process.image.path contains "\\iit.exe" or tgt.process.image.path contains "\\IliAS.exe" or tgt.process.image.path contains "\\ImmyAgent.exe" or tgt.process.image.path contains "\\ImmyBot.Agent.Ephemeral.exe" or tgt.process.image.path contains "\\ImmyUpdater.exe" or tgt.process.image.path contains "\\ImperoClientSVC.exe" or tgt.process.image.path contains "\\ImperoInit.exe" or tgt.process.image.path contains "\\InsightInstaller.exe" or tgt.process.image.path contains "\\InsightInstallerStudent.exe" or tgt.process.image.path contains "\\InsightInstallerTeacher.exe" or tgt.process.image.path contains "\\InstallCore.exe" or tgt.process.image.path contains "\\InstallShield Setup.exe" or tgt.process.image.path contains "\\InstantHousecall.exe" or tgt.process.image.path contains "\\Insync.exe" or tgt.process.image.path contains "\\intelliadmin.exe" or tgt.process.image.path contains "\\intouch.exe" or tgt.process.image.path contains "\\InvGate-ED.exe" or tgt.process.image.path contains "\\InvGateAssetsRD.exe" or tgt.process.image.path contains "\\InvGateRD.exe" or tgt.process.image.path contains "\\iperius.exe" or tgt.process.image.path contains "\\iperiusremote.exe" or tgt.process.image.path contains "\\ir_agent.exe" or tgt.process.image.path contains "\\islalwaysonmonitor.exe" or tgt.process.image.path contains "\\ISLLight.exe" or tgt.process.image.path contains "\\ISLLightClient.exe" or tgt.process.image.path contains "\\isllightservice.exe" or tgt.process.image.path contains "\\issuser.exe" or tgt.process.image.path contains "\\ITAgentRMMSender.exe" or tgt.process.image.path contains "\\ITAgentRMMSenderSL.exe" or tgt.process.image.path contains "\\ITAgentRMMSenderUpdater.exe" or tgt.process.image.path contains "\\ITarianRemoteAccessSetup.exe" or tgt.process.image.path contains "\\ITSMAgent.exe" or tgt.process.image.path contains "\\ItsmRsp.exe" or tgt.process.image.path contains "\\ITSMService.exe" or tgt.process.image.path contains "\\IvantiRemoteControl.exe" or tgt.process.image.path contains "\\jumpclient.exe" or tgt.process.image.path="*\\JumpCloud*.exe" or tgt.process.image.path contains "\\jumpconnect.exe" or tgt.process.image.path contains "\\jumpdesktop.exe" or tgt.process.image.path contains "\\jumpservice.exe" or tgt.process.image.path contains "\\jumpupdater.exe" or tgt.process.image.path contains "\\Kabuto.App.Runner.exe" or tgt.process.image.path contains "\\Kabuto.Installer.exe" or tgt.process.image.path contains "\\Kabuto.Service.Runner.exe" or tgt.process.image.path contains "\\KabutoSetup.exe" or tgt.process.image.path contains "\\KHelpDesk.exe" or tgt.process.image.path contains "\\kitty.exe" or tgt.process.image.path contains "\\konea.exe" or tgt.process.image.path contains "\\landeskagentbootstrap.exe" or tgt.process.image.path contains "\\LANDeskPortalManager.exe" or tgt.process.image.path="*\\laplink-everywhere-setup*.exe" or tgt.process.image.path contains "\\laplink.exe" or tgt.process.image.path contains "\\laplinkeverywhere.exe" or tgt.process.image.path contains "\\LavawallWin.exe" or tgt.process.image.path contains "\\ldinv32.exe" or tgt.process.image.path contains "\\ldsensors.exe" or tgt.process.image.path contains "\\level-remote-control-ffmpeg.exe" or tgt.process.image.path contains "\\level-windows-amd64.exe" or tgt.process.image.path contains "\\level.exe" or tgt.process.image.path contains "\\llrcservice.exe" or tgt.process.image.path contains "\\lmi_rescue.exe" or tgt.process.image.path contains "\\lmi_rescue_srv.exe" or tgt.process.image.path contains "\\LMNoIpServer.exe" or tgt.process.image.path contains "\\loclx.exe" or tgt.process.image.path contains "\\LS RMM Worker.exe" or tgt.process.image.path contains "\\LS RMM.exe" or tgt.process.image.path contains "\\ltsvc.exe" or tgt.process.image.path contains "\\ltsvcmon.exe" or tgt.process.image.path contains "\\lttray.exe" or tgt.process.image.path contains "\\Lunixar.exe" or tgt.process.image.path contains "\\LunixarRemote.exe" or tgt.process.image.path contains "\\LunixarUpdater.exe" or tgt.process.image.path contains "\\ManageEngine_Remote_Access_Plus.exe" or tgt.process.image.path contains "\\ManageEngine_ServiceDesk_Plus.exe" or tgt.process.image.path contains "\\ManualLauncher.exe" or tgt.process.image.path contains "\\MEAgentHelper.exe" or tgt.process.image.path contains "\\MEGAsyncSetup64.exe" or tgt.process.image.path contains "\\MEGAupdater.exe" or tgt.process.image.path="*\\meshagent*.exe" or tgt.process.image.path="*\\meshcentral*.exe" or tgt.process.image.path contains "\\mgntsvc.exe" or tgt.process.image.path contains "\\MigrationHelper_32.exe" or tgt.process.image.path contains "\\MigrationHelper_64.exe" or tgt.process.image.path contains "\\Mikogo-Screen-Service.exe" or tgt.process.image.path contains "\\Mikogo-Service.exe" or tgt.process.image.path contains "\\mikogo-starter.exe" or tgt.process.image.path contains "\\mikogo.exe" or tgt.process.image.path contains "\\mikogolauncher.exe" or tgt.process.image.path contains "\\MiniRmmAgent.exe" or tgt.process.image.path contains "\\mionet.exe" or tgt.process.image.path contains "\\mionetmanager.exe" or tgt.process.image.path contains "\\ModulesUpgradeMgr.exe" or tgt.process.image.path contains "\\MonitoringAgent.exe" or tgt.process.image.path contains "\\mRemoteNG.exe" or tgt.process.image.path contains "\\msp-agent-core.exe" or tgt.process.image.path contains "\\mstsc.exe" or tgt.process.image.path contains "\\mwcliun.exe" or tgt.process.image.path contains "\\mygreenpc.exe" or tgt.process.image.path contains "\\myivomanager.exe" or tgt.process.image.path contains "\\myivomgr.exe" or tgt.process.image.path="*\\nateon*.exe" or tgt.process.image.path contains "\\nateon.exe" or tgt.process.image.path contains "\\nateonmain.exe" or tgt.process.image.path contains "\\netbird-ui.exe" or tgt.process.image.path contains "\\netbird.exe" or tgt.process.image.path contains "\\NetLock_RMM_Agent_Installer.exe" or tgt.process.image.path contains "\\NetLock_RMM_User_Process.exe" or tgt.process.image.path contains "\\NetLock_RMM_User_UAC.exe" or tgt.process.image.path contains "\\NetMaster_Client.exe" or tgt.process.image.path contains "\\Netop Ondemand.exe" or tgt.process.image.path="*\\neturo*.exe" or tgt.process.image.path contains "\\neturo.exe" or tgt.process.image.path="*\\netviewer*.exe" or tgt.process.image.path contains "\\NetViewer.exe" or tgt.process.image.path contains "\\nexusrmm.exe" or tgt.process.image.path contains "\\nezha-agent.exe" or tgt.process.image.path contains "\\ngrok.exe" or tgt.process.image.path contains "\\ngstw32.exe" or tgt.process.image.path contains "\\nhostsvc.exe" or tgt.process.image.path contains "\\nhstw32.exe" or tgt.process.image.path contains "\\Ninite.exe" or tgt.process.image.path contains "\\NiniteAgent.exe" or tgt.process.image.path contains "\\NiniteOne.exe" or tgt.process.image.path contains "\\NinitePro.exe" or tgt.process.image.path contains "\\ninjarmm-cli.exe" or tgt.process.image.path contains "\\NinjaRMMAgent.exe" or tgt.process.image.path contains "\\NinjaRMMAgentPatcher.exe" or tgt.process.image.path contains "\\nldrw32.exe" or tgt.process.image.path contains "\\nmep_agtconfig.exe" or tgt.process.image.path contains "\\nmep_ctrlagent.exe" or tgt.process.image.path contains "\\nmep_ctrlagentsvc.exe" or tgt.process.image.path="*\\nomachine*.exe" or tgt.process.image.path contains "\\NotificationHelper.exe" or tgt.process.image.path contains "\\ntrntservice.exe" or tgt.process.image.path contains "\\NTRsupportPro_EN.exe" or tgt.process.image.path contains "\\nvClient.exe" or tgt.process.image.path contains "\\nvConsole.exe" or tgt.process.image.path contains "\\nvda.exe" or tgt.process.image.path="*\\nvda_*.exe" or tgt.process.image.path contains "\\nvda_service.exe" or tgt.process.image.path contains "\\nxd.exe" or tgt.process.image.path contains "\\nxplayer.exe" or tgt.process.image.path="*\\nxservice*.exe" or tgt.process.image.path contains "\\obliance-agent.exe" or tgt.process.image.path contains "\\obliance-tray.exe" or tgt.process.image.path contains "\\obliance-watchdog.exe" or tgt.process.image.path contains "\\ocsinventory.exe" or tgt.process.image.path contains "\\ocsservice.exe" or tgt.process.image.path="*\\onionshare*.exe" or tgt.process.image.path contains "\\Online Backup.exe" or tgt.process.image.path contains "\\oolocker.exe" or tgt.process.image.path contains "\\OOSysAgent.exe" or tgt.process.image.path contains "\\oosyspectr.exe" or tgt.process.image.path contains "\\opale-agent.exe" or tgt.process.image.path contains "\\OpenDesk-RMM-Agent.exe" or tgt.process.image.path contains "\\OpsBridgeAgent.exe" or tgt.process.image.path contains "\\OrayRemoteService.exe" or tgt.process.image.path contains "\\OrayRemoteShell.exe" or tgt.process.image.path contains "\\OTPowerShell.exe" or tgt.process.image.path contains "\\OTService.exe" or tgt.process.image.path="*\\ovd_*.exe" or tgt.process.image.path="*\\p9agent*.exe" or tgt.process.image.path="*\\PAExec-*.exe" or tgt.process.image.path contains "\\paexec.exe" or tgt.process.image.path="*\\parallelsaccess-*.exe" or tgt.process.image.path contains "\\parsecd.exe" or tgt.process.image.path contains "\\pcaquickconnect.exe" or tgt.process.image.path contains "\\PcHelpWare_viewer.exe" or tgt.process.image.path contains "\\pcicfgui.exe" or tgt.process.image.path contains "\\pcictlui.exe" or tgt.process.image.path contains "\\PCIVIDEO.EXE" or tgt.process.image.path contains "\\PCMonitorManager.exe" or tgt.process.image.path contains "\\pcmonitorsrv.exe" or tgt.process.image.path contains "\\pcnmgr.exe" or tgt.process.image.path contains "\\pcstarter.exe" or tgt.process.image.path contains "\\pcvisit-easysupport.exe" or tgt.process.image.path contains "\\pcvisit.exe" or tgt.process.image.path contains "\\pcvisit_client.exe" or tgt.process.image.path contains "\\pcvisit_service_client.exe" or tgt.process.image.path="*\\pdq-connect*.exe" or tgt.process.image.path="*\\Pilixo_Installer*.exe" or tgt.process.image.path contains "\\PixoIT-agent.exe" or tgt.process.image.path contains "\\plink.exe" or tgt.process.image.path="*\\pocketcloud*.exe" or tgt.process.image.path contains "\\pocketcloudservice.exe" or tgt.process.image.path contains "\\pocketcontroller.exe" or tgt.process.image.path contains "\\prl_deskctl_agent.exe" or tgt.process.image.path contains "\\prl_deskctl_wizard.exe" or tgt.process.image.path contains "\\prl_pm_service.exe" or tgt.process.image.path contains "\\proxiport.exe" or tgt.process.image.path contains "\\pservice.exe" or tgt.process.image.path contains "\\psexec.exe" or tgt.process.image.path contains "\\psexec64.exe" or tgt.process.image.path contains "\\psexecsvc.exe" or tgt.process.image.path contains "\\pstlaunch.exe" or tgt.process.image.path contains "\\ptdskclient.exe" or tgt.process.image.path contains "\\ptdskhost.exe" or tgt.process.image.path contains "\\putty.exe" or tgt.process.image.path contains "\\puttytray.exe" or tgt.process.image.path contains "\\qq.exe" or tgt.process.image.path contains "\\qqpcmgr.exe" or tgt.process.image.path contains "\\QQProtect.exe" or tgt.process.image.path contains "\\quickassist.exe" or tgt.process.image.path contains "\\raautoup.exe" or tgt.process.image.path contains "\\RAccess.exe" or tgt.process.image.path contains "\\Radmin.exe" or tgt.process.image.path contains "\\rapid7_agent_core.exe" or tgt.process.image.path contains "\\rapid7_endpoint_broker.exe" or tgt.process.image.path contains "\\rcengmgru.exe" or tgt.process.image.path contains "\\rcmgrsvc.exe" or tgt.process.image.path contains "\\rcstartsupport.exe" or tgt.process.image.path contains "\\rd.exe" or tgt.process.image.path contains "\\rdclient.exe" or tgt.process.image.path contains "\\RdClientInstaller.exe" or tgt.process.image.path contains "\\RDCMan-x86.exe" or tgt.process.image.path contains "\\RDCMan.exe" or tgt.process.image.path contains "\\RDConsole.exe" or tgt.process.image.path contains "\\RDesktop.exe" or tgt.process.image.path contains "\\rdp.exe" or tgt.process.image.path contains "\\rdp2tcp.exe" or tgt.process.image.path contains "\\RDPCheck.exe" or tgt.process.image.path contains "\\RDPConf.exe" or tgt.process.image.path contains "\\RDPWInst.exe" or tgt.process.image.path contains "\\remcmdstub.exe" or tgt.process.image.path contains "\\remcom.exe" or tgt.process.image.path contains "\\remcomsvc.exe" or tgt.process.image.path="*\\remcos*.exe" or tgt.process.image.path contains "\\remmon.exe" or tgt.process.image.path contains "\\remobo.exe" or tgt.process.image.path contains "\\remobo_client.exe" or tgt.process.image.path contains "\\remobo_tracker.exe" or tgt.process.image.path contains "\\remote access.exe" or tgt.process.image.path contains "\\Remote Desktop.exe" or tgt.process.image.path contains "\\Remote Workforce Client.exe" or tgt.process.image.path contains "\\remote-it-installer.exe" or tgt.process.image.path contains "\\remote.it.exe" or tgt.process.image.path contains "\\RemoteAgentAgent.exe" or tgt.process.image.path contains "\\remoteconsole.exe" or tgt.process.image.path contains "\\RemoteDesktopManager.exe" or tgt.process.image.path contains "\\remoteit.exe" or tgt.process.image.path contains "\\Remotely_Agent.exe" or tgt.process.image.path contains "\\Remotely_Desktop.exe" or tgt.process.image.path contains "\\remotepass-access.exe" or tgt.process.image.path contains "\\RemotePC.exe" or tgt.process.image.path contains "\\remotepchost.exe" or tgt.process.image.path contains "\\RemotePCService.exe" or tgt.process.image.path contains "\\RemoteRipple.exe" or tgt.process.image.path contains "\\remotesupportplayeru.exe" or tgt.process.image.path contains "\\remoteview.exe" or tgt.process.image.path contains "\\remoting_host.exe" or tgt.process.image.path contains "\\RemSupp.exe" or tgt.process.image.path contains "\\rfusclient.exe" or tgt.process.image.path contains "\\RHost.exe" or tgt.process.image.path contains "\\RMM.Agent.exe" or tgt.process.image.path contains "\\RMMmaxAgentService.exe" or tgt.process.image.path contains "\\RMMmaxAgentSetup.exe" or tgt.process.image.path contains "\\RmmService.exe" or tgt.process.image.path contains "\\rmserverconsolemediator.exe" or tgt.process.image.path contains "\\RocketRemoteDesktop_Setup.exe" or tgt.process.image.path contains "\\RodexAgent.exe" or tgt.process.image.path contains "\\ROMFUSClient.exe" or tgt.process.image.path contains "\\ROMServer.exe" or tgt.process.image.path contains "\\romviewer.exe" or tgt.process.image.path contains "\\routernt.exe" or tgt.process.image.path contains "\\royalserver.exe" or tgt.process.image.path contains "\\royalts.exe" or tgt.process.image.path contains "\\rpaccess.exe" or tgt.process.image.path contains "\\rpcld.exe" or tgt.process.image.path contains "\\rpcnet.exe" or tgt.process.image.path contains "\\rpcsuite.exe" or tgt.process.image.path contains "\\rport.exe" or tgt.process.image.path contains "\\rpwhostscr.exe" or tgt.process.image.path contains "\\rserver3.exe" or tgt.process.image.path="*\\rudesktop*.exe" or tgt.process.image.path="*\\rustdesk*.exe" or tgt.process.image.path contains "\\RustDesk.exe" or tgt.process.image.path contains "\\rutserv.exe" or tgt.process.image.path contains "\\rutview.exe" or tgt.process.image.path contains "\\rv.exe" or tgt.process.image.path contains "\\rvagent.exe" or tgt.process.image.path contains "\\rvagtray.exe" or tgt.process.image.path contains "\\RViewer.exe" or tgt.process.image.path contains "\\rxstartsupport.exe" or tgt.process.image.path="*\\s3browser*.exe" or tgt.process.image.path contains "\\saazapsc.exe" or tgt.process.image.path="*\\screenconnect*.exe" or tgt.process.image.path contains "\\ScreenConnect.ClientService.exe" or tgt.process.image.path contains "\\ScreenConnect.WindowsClient.exe" or tgt.process.image.path contains "\\ScreenMeet.Support.exe" or tgt.process.image.path contains "\\ScreenMeetSupport.exe" or tgt.process.image.path contains "\\SecureCRT.EXE" or tgt.process.image.path contains "\\seetrolcenter.exe" or tgt.process.image.path contains "\\seetrolclient.exe" or tgt.process.image.path contains "\\seetrolmyservice.exe" or tgt.process.image.path contains "\\seetrolremote.exe" or tgt.process.image.path contains "\\seetrolsetting.exe" or tgt.process.image.path contains "\\SensoClient.exe" or tgt.process.image.path contains "\\SensoService.exe" or tgt.process.image.path contains "\\sentinel-agent.exe" or tgt.process.image.path="*\\servereye*.exe" or tgt.process.image.path contains "\\serverproxyservice.exe" or tgt.process.image.path contains "\\ServiceProxyLocalSys.exe" or tgt.process.image.path contains "\\SetMe_Client.exe" or tgt.process.image.path="*\\showmypc*.exe" or tgt.process.image.path contains "\\showmypc.exe" or tgt.process.image.path contains "\\si.exe" or tgt.process.image.path contains "\\simplegatewayservice.exe" or tgt.process.image.path contains "\\simplehelpcustomer.exe" or tgt.process.image.path contains "\\simpleservice.exe" or tgt.process.image.path contains "\\Site24x7PluginAgent.exe" or tgt.process.image.path contains "\\Site24x7WindowsAgentTrayIcon.exe" or tgt.process.image.path contains "\\SmarTTY.exe" or tgt.process.image.path contains "\\SMPCSetup.exe" or tgt.process.image.path contains "\\softmon.exe" or tgt.process.image.path contains "\\Solar-PuTTY.exe" or tgt.process.image.path="*\\SolarWinds-Dameware-DRS*.exe" or tgt.process.image.path="*\\SolarWinds-Dameware-MRC*.exe" or tgt.process.image.path contains "\\Sorillus Launcher.exe" or tgt.process.image.path="*\\Sorillus-Launcher*.exe" or tgt.process.image.path="*\\Splashtop_Streamer_Windows*.exe" or tgt.process.image.path contains "\\SplashtopSOS.exe" or tgt.process.image.path contains "\\spsrv.exe" or tgt.process.image.path contains "\\sragent.exe" or tgt.process.image.path contains "\\SRManager.exe" or tgt.process.image.path contains "\\SRServer.exe" or tgt.process.image.path contains "\\srservice.exe" or tgt.process.image.path contains "\\STAHelper.exe" or tgt.process.image.path contains "\\strwinclt.exe" or tgt.process.image.path contains "\\StudentSvc.exe" or tgt.process.image.path="*\\sunlogin*.exe" or tgt.process.image.path contains "\\superops.exe" or tgt.process.image.path contains "\\superopsticket.exe" or tgt.process.image.path contains "\\superputty.exe" or tgt.process.image.path="*\\support-logmeinrescue*.exe" or tgt.process.image.path contains "\\support-logmeinrescue.exe" or tgt.process.image.path contains "\\SupportTool.exe" or tgt.process.image.path contains "\\supremo.exe" or tgt.process.image.path contains "\\supremohelper.exe" or tgt.process.image.path contains "\\supremoservice.exe" or tgt.process.image.path contains "\\SupremoSystem.exe" or tgt.process.image.path="*\\svchost-windows-amd64-*.exe" or tgt.process.image.path contains "\\Syncro.App.Runner.exe" or tgt.process.image.path contains "\\Syncro.Installer.exe" or tgt.process.image.path contains "\\Syncro.Overmind.Service.exe" or tgt.process.image.path contains "\\Syncro.Service.exe" or tgt.process.image.path contains "\\SyncroLive.Agent.exe" or tgt.process.image.path contains "\\SyncroLive.Service.exe" or tgt.process.image.path contains "\\syncrosetup.exe" or tgt.process.image.path contains "\\Syncthing.exe" or tgt.process.image.path contains "\\sysdiag.exe" or tgt.process.image.path contains "\\syspectr.exe" or tgt.process.image.path contains "\\tacticalrmm.exe" or tgt.process.image.path="*\\tailscale-*.exe" or tgt.process.image.path contains "\\tailscale-ipn.exe" or tgt.process.image.path contains "\\tailscaled.exe" or tgt.process.image.path contains "\\TakeControl.exe" or tgt.process.image.path contains "\\TaniumClient.exe" or tgt.process.image.path contains "\\TaniumCX.exe" or tgt.process.image.path contains "\\TaniumExecWrapper.exe" or tgt.process.image.path contains "\\TaniumFileInfo.exe" or tgt.process.image.path contains "\\TeamTaskManager.exe" or tgt.process.image.path contains "\\teamviewer_desktop.exe" or tgt.process.image.path contains "\\teamviewer_service.exe" or tgt.process.image.path="*\\Teleport Connect Setup-*.exe" or tgt.process.image.path contains "\\TiAgent.exe" or tgt.process.image.path contains "\\TiClientCore.exe" or tgt.process.image.path="*\\TiClientHelper*.exe" or tgt.process.image.path contains "\\TiExpertCore.exe" or tgt.process.image.path contains "\\TiExpertStandalone.exe" or tgt.process.image.path="*\\tigervnc*.exe" or tgt.process.image.path="*\\TightVNCViewerPortable*.exe" or tgt.process.image.path contains "\\tinUnattendedModule.exe" or tgt.process.image.path contains "\\TiService.exe" or tgt.process.image.path contains "\\TiUpdateService.exe" or tgt.process.image.path contains "\\tmagentsvc.exe" or tgt.process.image.path contains "\\tmcsvc.exe" or tgt.process.image.path contains "\\tniwinagent.exe" or tgt.process.image.path contains "\\todesk.exe" or tgt.process.image.path contains "\\ToDesk_Service.exe" or tgt.process.image.path contains "\\ToDesk_Setup.exe" or tgt.process.image.path contains "\\toolsiq.exe" or tgt.process.image.path contains "\\topiad.exe" or tgt.process.image.path contains "\\TPowerShell.exe" or tgt.process.image.path contains "\\TrustConnectAgent.exe" or tgt.process.image.path contains "\\TSClient.exe" or tgt.process.image.path contains "\\Tsdservice.exe" or tgt.process.image.path contains "\\tsircusr.exe" or tgt.process.image.path contains "\\turbomeeting.exe" or tgt.process.image.path contains "\\turbomeetingstarter.exe" or tgt.process.image.path contains "\\tvnserver.exe" or tgt.process.image.path contains "\\tvnviewer.exe" or tgt.process.image.path="*\\ultimate_*.exe" or tgt.process.image.path contains "\\ultraviewer.exe" or tgt.process.image.path contains "\\UltraViewer_Desktop.exe" or tgt.process.image.path contains "\\UltraViewer_Service.exe" or tgt.process.image.path="*\\UltraVNC*.exe" or tgt.process.image.path contains "\\Uninstall RemSupp.exe" or tgt.process.image.path contains "\\UniRMM.exe" or tgt.process.image.path contains "\\UserNotificationHelper.exe" or tgt.process.image.path contains "\\UVNC_Launch.exe" or tgt.process.image.path contains "\\veyon-master.exe" or tgt.process.image.path contains "\\veyon-server.exe" or tgt.process.image.path contains "\\veyon-service.exe" or tgt.process.image.path contains "\\veyon-wcli.exe" or tgt.process.image.path contains "\\veyon-worker.exe" or tgt.process.image.path contains "\\vhost.exe" or tgt.process.image.path contains "\\vncserver.exe" or tgt.process.image.path contains "\\vncserverui.exe" or tgt.process.image.path contains "\\vncviewer.exe" or tgt.process.image.path contains "\\webexpcnow.exe" or tgt.process.image.path contains "\\webrdp.exe" or tgt.process.image.path="*\\wec_launcher_[a-Z0-9]*_.exe" or tgt.process.image.path contains "\\weCliboardListener.exe" or tgt.process.image.path="*\\weezo setup*.exe" or tgt.process.image.path contains "\\weezo.exe" or tgt.process.image.path contains "\\weezohttpd.exe" or tgt.process.image.path contains "\\weInstSvc.exe" or tgt.process.image.path contains "\\wemonc.exe" or tgt.process.image.path contains "\\weprtct.exe" or tgt.process.image.path contains "\\wesvc.exe" or tgt.process.image.path contains "\\winagent.exe" or tgt.process.image.path contains "\\winaw32.exe" or tgt.process.image.path contains "\\windowslauncher.exe" or tgt.process.image.path contains "\\winpty-agent.exe" or tgt.process.image.path contains "\\winpty-agent64.exe" or tgt.process.image.path contains "\\WinSCP.exe" or tgt.process.image.path="*\\winvnc*.exe" or tgt.process.image.path contains "\\winvnc.exe" or tgt.process.image.path contains "\\winvnc4.exe" or tgt.process.image.path contains "\\winvncsc.exe" or tgt.process.image.path contains "\\WinVNCStub.exe" or tgt.process.image.path contains "\\winwvc.exe" or tgt.process.image.path="*\\wisshell*.exe" or tgt.process.image.path contains "\\wmc.exe" or tgt.process.image.path contains "\\wmc_deployer.exe" or tgt.process.image.path contains "\\wmcsvc.exe" or tgt.process.image.path contains "\\wysebrowser.exe" or tgt.process.image.path contains "\\xcmd.exe" or tgt.process.image.path contains "\\xcmdsvc.exe" or tgt.process.image.path="*\\xeox-agent_*.exe" or tgt.process.image.path contains "\\xeox-agent_x64.exe" or tgt.process.image.path contains "\\xeox-agent_x86.exe" or tgt.process.image.path contains "\\xeox_service_windows.exe" or tgt.process.image.path contains "\\Xpra-Launcher.exe" or tgt.process.image.path contains "\\Xpra-x86_64_Setup.exe" or tgt.process.image.path contains "\\xShell.exe" or tgt.process.image.path contains "\\XSightService.exe" or tgt.process.image.path contains "\\YandexDisk2.exe" or tgt.process.image.path contains "\\ZA_Access.exe" or tgt.process.image.path contains "\\za_connect.exe" or tgt.process.image.path="*\\zabbix_agent*.exe" or tgt.process.image.path contains "\\zaservice.exe" or tgt.process.image.path contains "\\ZecuritAgentAssetMgr.exe" or tgt.process.image.path contains "\\ZecuritAgentRegister.exe" or tgt.process.image.path contains "\\ZecuritAgentService.exe" or tgt.process.image.path contains "\\ZecuritAgentTray.exe" or tgt.process.image.path contains "\\ZecuritAgentUpgrader.exe" or tgt.process.image.path contains "\\ZecuritApplicationControlService.exe" or tgt.process.image.path contains "\\ZecuritCommandProcessor.exe" or tgt.process.image.path contains "\\ZecuritLiveNotifier.exe" or tgt.process.image.path contains "\\ZecuritRemoteTools.exe" or tgt.process.image.path contains "\\ZecuritScreenReaderApp.exe" or tgt.process.image.path contains "\\ZecuritScreenReaderAppUI.exe" or tgt.process.image.path contains "\\ZecuritScreenReaderService.exe" or tgt.process.image.path contains "\\zero-powershell.exe" or tgt.process.image.path="*\\zerotier*.exe" or tgt.process.image.path contains "\\ZMAgent.exe" or tgt.process.image.path contains "\\zoc.exe" or tgt.process.image.path contains "\\ZohoMeeting.exe" or tgt.process.image.path contains "\\zohotray.exe" or tgt.process.image.path contains "\\Zohours.exe" or tgt.process.image.path contains "\\ZohoURSService.exe" or tgt.process.image.path contains "C:\\Program Files (x86)\\N-able Technologies\\Windows Agent\\bin\\agent.exe" or tgt.process.image.path contains "C:\\Program Files\\Monitic\\agent.exe" or tgt.process.image.path="*C:\\Users\\*\\AppData\\Local\\remsupp-updater\\installer.exe"))
 ```
 
 
@@ -15,9 +15,9 @@ references:
 - https://github.com/magicsword-io/LOLRMM
 author: LOLRMM Project
 date: '2025-03-18'
-modified: '2026-09-29'
+modified: '2026-10-05'
 tags:
-- attack.lateral-movement
+- attack.command-and-control
 - attack.t1219
 logsource:
   category: process_creation
@@ -25,363 +25,113 @@ logsource:
 detection:
   selection:
     Image|endswith:
-    - \\%APPDATA%\GoToMeeting\G2M.exe
-    - \\%APPDATA%\JWrapper-SimpleSetup\*
-    - \\%APPDATA%\Mremote\*
-    - \\%APPDATA%\loclx\*
-    - \\%ProgramData%\Mremote\<deployment-id>\*
-    - \\%ProgramData%\Tiflux\*
-    - \\%ProgramData%\rmmmax\AgentService\RMMmaxAgentService.exe
-    - \\%USERPROFILE%\\AppData\\Local\\Temp\\SupremoRemoteDesktop\\
-    - \\9380CC75B872221A7425D7503565B67580407F60
-    - \\AEMAgent.exe
-    - \\AMMYY_Admin.exe
-    - \\ARDAgent.app
+    - '*\\AppData\\Roaming\\Microsoft\\DeviceSync\\svchost.exe'
+    - '*\\AppData\\Roaming\\Microsoft\\Windows\\Start Menu\\Programs\\Startup\\svchost.exe'
+    - '*\\AppData\\Roaming\\Overlord\\agent.exe'
+    - \\aa_v*.exe
+    - \\aadg.exe
+    - \\accessserver*.exe
+    - \\accessserver.exe
     - \\AcronisCyberProtectConnectAgent.exe
     - \\AcronisCyberProtectConnectQuickAssist*.exe
+    - \\AEMAgent.exe
     - \\AeroAdmin.exe
-    - \\Agent
-    - \\AgentSetup-*.exe
+    - \\agent-installer-any.exe
+    - \\agent-windows-amd64-*.exe
+    - \\agent32.exe
+    - \\agent64.exe
     - \\Agent_*_RW.exe
+    - \\agent_setup_5.exe
     - \\AgentlessRC.exe
-    - \\AnyDesk.app
+    - \\AgentMaint.exe
+    - \\AgentMonitor.exe
+    - \\AgentPackageNetworkDiscovery.exe
+    - \\AgentPackageTaskScheduler.exe
+    - \\AgentSetup-*.exe
+    - \\agentu.exe
+    - \\alitask.exe
+    - \\allocentra-agent.exe
+    - \\AlpemixService.exe
+    - \\AMMYY_Admin.exe
+    - \\amon.exe
+    - \\AnyDesk-*.exe
+    - \\AnyDesk.exe
+    - \\apc_host.exe
     - \\ArcUI.exe
+    - \\aspia_client.exe
+    - \\atera_agent.exe
+    - \\AteraAgent.exe
+    - \\auvik.agent.exe
+    - \\auvik.engine.exe
+    - \\aweray_remote*.exe
     - \\AweSun.exe
+    - \\awhost32.exe
+    - \\awrem32.exe
     - \\BASEClient.exe
     - \\BASupApp.exe
     - \\BASupAppElev.exe
     - \\BASupAppSrvc.exe
     - \\BASupSrvc.exe
     - \\BASupSrvcCnfg.exe
+    - \\basupsrvcupdate.exe
     - \\BASupSysInf.exe
     - \\BASupTSHelper.exe
+    - \\bbl.exe
+    - \\beacon-agent.exe
+    - \\beamyourscreen-host.exe
+    - \\beamyourscreen.exe
     - \\Beinsync*.exe
-    - \\C:\*\G2RDesktopConsole-x64.msi
-    - \\C:\*\MobaXterm_installer_12.1.msi
-    - \\C:\*\SecureCRT.EXE
-    - \\C:\*\kitty.exe
-    - \\C:\*\ngrok.zip
-    - \\C:\*\nxplayer.exe
-    - \\C:\*\puttytray.exe
-    - \\C:\AlpemixService.exe
-    - \\C:\AlpemixSrvc\
-    - \\C:\Borealis\*
-    - \\C:\Borealis\Logs\Agent\agent.log
-    - \\C:\Borealis\agent.json
-    - \\C:\Downloads\SuperPuTTY\*
-    - \\C:\GxM\agent
-    - \\C:\Lavawall\LavawallWin.exe
-    - \\C:\Program Files (x86)\Almageste\DragonDisk\*
-    - \\C:\Program Files (x86)\AnyDesk\*
-    - \\C:\Program Files (x86)\AnyViewer\*
-    - \\C:\Program Files (x86)\Aspia\
-    - \\C:\Program Files (x86)\Atera Networks
-    - \\C:\Program Files (x86)\Bitvise SSH Client\*
-    - \\C:\Program Files (x86)\Bluetrait Agent\*
-    - \\C:\Program Files (x86)\DesktopCentral_Agent\bin\*
-    - \\C:\Program Files (x86)\Faronics\Deep Freeze\*
-    - \\C:\Program Files (x86)\Faronics\Deep Freeze\Install C-0\*
-    - \\C:\Program Files (x86)\Faronics\Deep Freeze\Install C-1\*
-    - \\C:\Program Files (x86)\Faronics\Faronics Core\*
-    - \\C:\Program Files (x86)\Faronics\Faronics Deploy Agent\*
-    - \\C:\Program Files (x86)\Faronics\Faronics Deploy Agent\FRCServer.exe
-    - \\C:\Program Files (x86)\Faronics\Faronics Deploy Agent\FSSInstaller.exe
-    - \\C:\Program Files (x86)\Faronics\Faronics Deploy Agent\FWAService.exe
-    - \\C:\Program Files (x86)\Faronics\Faronics Deploy Agent\FWA_UI_Agent.exe
-    - \\C:\Program Files (x86)\Faronics\Faronics Deploy Agent\FaronicsDeployAgent.exe
-    - \\C:\Program Files (x86)\Faronics\Faronics Deploy Agent\FaronicsSA.exe
-    - \\C:\Program Files (x86)\Faronics\Faronics Deploy Agent\MigrationHelper_32.exe
-    - \\C:\Program Files (x86)\Faronics\Faronics Deploy Agent\MigrationHelper_64.exe
-    - \\C:\Program Files (x86)\Faronics\Faronics Deploy Agent\ModulesUpgradeMgr.exe
-    - \\C:\Program Files (x86)\Faronics\Faronics Deploy Agent\NotificationHelper.exe
-    - \\C:\Program Files (x86)\Faronics\Faronics Deploy Agent\UserNotificationHelper.exe
-    - \\C:\Program Files (x86)\Faronics\Insight Student\*
-    - \\C:\Program Files (x86)\Faronics\Insight Teacher\*
-    - \\C:\Program Files (x86)\FleetDeck Agent\*\fd_agent.dll
-    - \\C:\Program Files (x86)\FleetDeck Agent\*\fleetdeck_agent.exe
-    - \\C:\Program Files (x86)\FleetDeck Agent\fleetdeck_agent_svc.exe
-    - \\C:\Program Files (x86)\Freshdesk\Freshservice Discovery Agent\*
-    - \\C:\Program Files (x86)\Freshdesk\Freshservice Discovery Agent\FSAgentAutoUpdate.exe
-    - \\C:\Program Files (x86)\Freshdesk\Freshservice Discovery Agent\FSAgentService.exe
-    - \\C:\Program Files (x86)\Freshdesk\Freshservice Discovery Agent\bin\*
-    - \\C:\Program Files (x86)\Freshdesk\Freshservice Discovery Agent\conf\*
-    - \\C:\Program Files (x86)\Freshworks\FreshServiceProbe\*
-    - \\C:\Program Files (x86)\Freshworks\FreshServiceProbe\bin\*
-    - \\C:\Program Files (x86)\Freshworks\FreshServiceProbe\bin\Freshservice.DiscoveryProbe.ScanService.exe
-    - \\C:\Program Files (x86)\Freshworks\FreshServiceProbe\bin\Freshservice.DiscoveryProbe.Window.exe
-    - \\C:\Program Files (x86)\Freshworks\FreshServiceProbe\bin\plink.exe
-    - \\C:\Program Files (x86)\Freshworks\FreshServiceProbe\conf\*
-    - \\C:\Program Files (x86)\Freshworks\FreshServiceProbe\db\*
-    - \\C:\Program Files (x86)\Freshworks\FreshServiceProbe\nmap\*
-    - \\C:\Program Files (x86)\Freshworks\FreshServiceProbe\tools\ssh\*
-    - \\C:\Program Files (x86)\GoTo Opener
-    - \\C:\Program Files (x86)\GoTo Resolve Unattended\*
-    - \\C:\Program Files (x86)\GoToMyPC\*
-    - \\C:\Program Files (x86)\Google\Chrome Remote Desktop\*
-    - \\C:\Program Files (x86)\HeartbeatRM\*
-    - \\C:\Program Files (x86)\HopToDesk\HopToDesk.exe
-    - \\C:\Program Files (x86)\IDrive\*
-    - \\C:\Program Files (x86)\ISL Online\ISL Light*
-    - \\C:\Program Files (x86)\ImmyBot\ImmyAgent.exe
-    - \\C:\Program Files (x86)\ImmyBot\ImmyUpdater.exe
-    - \\C:\Program Files (x86)\Inventec\InvGate.net Client\*
-    - \\C:\Program Files (x86)\Inventec\InvGate.net Client\DepHlp.exe
-    - \\C:\Program Files (x86)\Inventec\InvGate.net Client\InvGate-ED.exe
-    - \\C:\Program Files (x86)\Inventec\InvGate.net Client\Software Matt.dll
-    - \\C:\Program Files (x86)\Inventec\InvGate.net Client\files\InvGateAssetsRD.exe
-    - \\C:\Program Files (x86)\Inventec\InvGate.net Client\files\InvGateRD.exe
-    - \\C:\Program Files (x86)\Inventec\InvGate.net Client\files\sas.dll
-    - \\C:\Program Files (x86)\Kaseya\
-    - \\C:\Program Files (x86)\LANDesk\*
-    - \\C:\Program Files (x86)\LS RMM\LS RMM Worker.exe
-    - \\C:\Program Files (x86)\LS RMM\LS RMM.exe
-    - \\C:\Program Files (x86)\Lavawall\LavawallWin.exe
-    - \\C:\Program Files (x86)\ManageEngine\ServiceDesk\*
-    - \\C:\Program Files (x86)\Microsoft Garage\Mouse without Borders\*
-    - \\C:\Program Files (x86)\NVDA\nvda.exe
-    - \\C:\Program Files (x86)\Net Monitor for Employees Pro\*
-    - \\C:\Program Files (x86)\NetSarang\xShell\*
-    - \\C:\Program Files (x86)\OnionShare\*
-    - \\C:\Program Files (x86)\PJ Technologies\GOVsrv\*
-    - \\C:\Program Files (x86)\RG-Supervision\*
-    - \\C:\Program Files (x86)\Radmin Viewer 3\Radmin.exe
-    - \\C:\Program Files (x86)\RdClient\*
-    - \\C:\Program Files (x86)\Remote Ripple\*
-    - \\C:\Program Files (x86)\RemotePC\*
-    - \\C:\Program Files (x86)\RemotePulseAgent\InstallCore.exe
-    - \\C:\Program Files (x86)\RemotePulseAgent\agent.ps1
-    - \\C:\Program Files (x86)\RemotePulseAgent\defender-exclude.ps1
-    - \\C:\Program Files (x86)\RemotePulseAgent\install.cmd
-    - \\C:\Program Files (x86)\RemotePulseAgent\install.ps1
-    - \\C:\Program Files (x86)\S3 Browser\*
-    - \\C:\Program Files (x86)\ScreenConnect Client (<string ID>)\*
-    - \\C:\Program Files (x86)\ScreenConnect Client (Random)\ScreenConnect.ClientService.exe
-    - \\C:\Program Files (x86)\SmartFTP Client\en-US\
-    - \\C:\Program Files (x86)\Splashtop\*
-    - \\C:\Program Files (x86)\Techinline Ltd\SetMe Unattended\Client\SetMe_Client.exe
-    - \\C:\Program Files (x86)\Techinline Ltd\SetMe Unattended\Module\*\tinUnattendedModule.exe
-    - \\C:\Program Files (x86)\TiFLUX\*
-    - \\C:\Program Files (x86)\TiFLUX\TiService.exe
-    - \\C:\Program Files (x86)\TiFLUX\TiUpdateService.exe
-    - \\C:\Program Files (x86)\TiFLUX\dependencies\*
-    - \\C:\Program Files (x86)\TiFLUX\dependencies\7zip\*
-    - \\C:\Program Files (x86)\TiFLUX\dependencies\tar\*
-    - \\C:\Program Files (x86)\TiFLUX\dependencies\ultravnc\*
-    - \\C:\Program Files (x86)\TiFLUX\desktop\*
-    - \\C:\Program Files (x86)\TiFLUX\desktop\TiAgent.exe
-    - \\C:\Program Files (x86)\TiFLUX\si.exe
-    - \\C:\Program Files (x86)\UltraViewer\UltraViewer_Desktop.exe
-    - \\C:\Program Files (x86)\Vector\Asset Management Client\*
-    - \\C:\Program Files (x86)\Veyon\*
-    - \\C:\Program Files (x86)\Xpra\*
-    - \\C:\Program Files (x86)\Yandex\*
-    - \\C:\Program Files (x86)\bsag\*
-    - \\C:\Program Files (x86)\bsag\bma\*
-    - \\C:\Program Files (x86)\mRemoteNG\*
-    - \\C:\Program Files\0x101 Cyber Security\NetLock RMM\UserAgent\NetLock_RMM_User_Process.exe
-    - \\C:\Program Files\0x101 Cyber Security\NetLock RMM\UserAgent\NetLock_RMM_User_UAC.exe
-    - \\C:\Program Files\ATERA Networks\AteraAgent\*
-    - \\C:\Program Files\Allocentra\Agent\allocentra-agent.exe
-    - \\C:\Program Files\AnyDesk\*
-    - \\C:\Program Files\Aspia\
-    - \\C:\Program Files\Atera Networks
-    - \\C:\Program Files\Beacon\beacon-agent.exe
-    - \\C:\Program Files\Bitvise SSH Server\*
-    - \\C:\Program Files\Breeze\*
-    - \\C:\Program Files\ControlR\*\ControlR.Agent.exe
-    - \\C:\Program Files\ControlR\*\DesktopClient\ControlR.DesktopClient.dll
-    - \\C:\Program Files\ControlR\*\DesktopClient\ControlR.DesktopClient.exe
-    - \\C:\Program Files\Danware Data\NetOp Packn Deploy\*
-    - \\C:\Program Files\Devolutions\Remote Desktop Manager
-    - \\C:\Program Files\Faronics Corporation\Deep Freeze 7.00\*
-    - \\C:\Program Files\Faronics\Core\Console\*
-    - \\C:\Program Files\Faronics\Deep Freeze\*
-    - \\C:\Program Files\Faronics\Faronics Core\*
-    - \\C:\Program Files\Faronics\Faronics Core\Workstation Agent\*
-    - \\C:\Program Files\Faronics\Insight Student\*
-    - \\C:\Program Files\Faronics\Insight Teacher\*
-    - \\C:\Program Files\GLPI-Agent\*
-    - \\C:\Program Files\GLPI-Agent\etc\*
-    - \\C:\Program Files\GLPI-Agent\logs\*
-    - \\C:\Program Files\GLPI-Agent\perl\bin\*
-    - \\C:\Program Files\GLPI-Agent\var\*
-    - \\C:\Program Files\Getscreen.me\
-    - \\C:\Program Files\GoTo Resolve Unattended\*
-    - \\C:\Program Files\HeartbeatRM\*
-    - \\C:\Program Files\IDrive\*
-    - \\C:\Program Files\ImmyBot\ImmyAgent.exe
-    - \\C:\Program Files\ImmyBot\ImmyUpdater.exe
-    - \\C:\Program Files\Komari\*
-    - \\C:\Program Files\Lavawall\LavawallWin.exe
-    - \\C:\Program Files\Level\*
-    - \\C:\Program Files\LightRmmAgent\*
-    - "\\\\C:\\Program Files\\LiteManager Pro \u2013 Viewer\\*"
-    - \\C:\Program Files\Lunixar\*
-    - \\C:\Program Files\ManageEngine\ManageEngine Free Tools\Launcher\*
-    - \\C:\Program Files\ManageEngine\ServiceDesk\*
-    - \\C:\Program Files\MiniRMM\MiniRmmAgent.exe
-    - \\C:\Program Files\Miradore\OnlineClient\bin\*
-    - \\C:\Program Files\Monitic\*
-    - \\C:\Program Files\Monitic\agent.exe
-    - \\C:\Program Files\Monitic\amon.exe
-    - \\C:\Program Files\Monitic\conf.json
-    - \\C:\Program Files\NVDA\nvda.exe
-    - \\C:\Program Files\Net Monitor for Employees Pro\*
-    - \\C:\Program Files\Netbird\netbird-ui.exe
-    - \\C:\Program Files\Netbird\netbird.exe
-    - \\C:\Program Files\OblianceAgent\obliance-agent.exe
-    - \\C:\Program Files\OblianceAgent\obliance-tray.exe
-    - \\C:\Program Files\OblianceAgent\obliance-watchdog.exe
-    - \\C:\Program Files\OpenUEM Agent\*
-    - \\C:\Program Files\OpenUEM Agent\config\openuem.ini
-    - \\C:\Program Files\OpenUEM Agent\logs\openuem-log.txt
-    - \\C:\Program Files\OpsBridge\OpsBridgeAgent.exe
-    - \\C:\Program Files\Parsec\*
-    - \\C:\Program Files\ProxiPort\proxiport.conf
-    - \\C:\Program Files\ProxiPort\proxiport.exe
-    - \\C:\Program Files\RG-Supervision\*
-    - \\C:\Program Files\RdClient\*
-    - \\C:\Program Files\RealVNC\VNC Server\*
-    - \\C:\Program Files\Remote Ripple\*
-    - \\C:\Program Files\Remote Utilities\*
-    - \\C:\Program Files\RemoteAgent\RemoteAgentAgent.exe
-    - \\C:\Program Files\Remotely\ConnectionInfo.json
-    - \\C:\Program Files\Remotely\Desktop\Remotely_Desktop.exe
-    - \\C:\Program Files\Remotely\Remotely_Agent.exe
-    - \\C:\Program Files\Remotely\etag.txt
-    - \\C:\Program Files\Rodex\RodexAgent.exe
-    - \\C:\Program Files\Roster\*
-    - \\C:\Program Files\RustDesk
-    - \\C:\Program Files\Solar-Putty-v4\*
-    - \\C:\Program Files\SolarWinds\Dameware Mini Remote Control\*
-    - \\C:\Program Files\SysAidServer\*
-    - \\C:\Program Files\TeamViewer\
-    - \\C:\Program Files\Teleport Connect\*
-    - \\C:\Program Files\TightVNC\*
-    - \\C:\Program Files\TrustConnect Agent\*
-    - \\C:\Program Files\TrustConnect Agent\TrustConnectAgent.exe
-    - \\C:\Program Files\Vector Networks Limited\LANutil32 Suite\*
-    - \\C:\Program Files\Vector\Asset Management Client\*
-    - \\C:\Program Files\Veyon\*
-    - \\C:\Program Files\ZOC8\*
-    - \\C:\Program Files\Zecurit\Agent\ZecuritAgentAssetMgr.exe
-    - \\C:\Program Files\Zecurit\Agent\ZecuritAgentRegister.exe
-    - \\C:\Program Files\Zecurit\Agent\ZecuritAgentService.exe
-    - \\C:\Program Files\Zecurit\Agent\ZecuritAgentTray.exe
-    - \\C:\Program Files\Zecurit\Agent\ZecuritApplicationControlService.exe
-    - \\C:\Program Files\Zecurit\Agent\ZecuritCommandProcessor.exe
-    - \\C:\Program Files\Zecurit\Agent\ZecuritLiveNotifier.exe
-    - \\C:\Program Files\Zecurit\Agent\ZecuritRemoteTools.exe
-    - \\C:\Program Files\Zecurit\Agent\ZecuritScreenReaderApp.exe
-    - \\C:\Program Files\Zecurit\Agent\ZecuritScreenReaderAppUI.exe
-    - \\C:\Program Files\Zecurit\Agent\ZecuritScreenReaderService.exe
-    - \\C:\Program Files\bsag\*
-    - \\C:\Program Files\bsag\bma\*
-    - \\C:\Program Files\ehorus_agent\*
-    - \\C:\Program Files\nezha\*
-    - \\C:\Program Files\uvnc bvba\UltraVNC\*
-    - \\C:\ProgramData\0x101 Cyber Security\NetLock RMM\Comm Agent\*
-    - \\C:\ProgramData\Beacon\agent.log
-    - \\C:\ProgramData\Beacon\credential.json
-    - \\C:\ProgramData\Breeze\*
-    - \\C:\ProgramData\ControlR\
-    - \\C:\ProgramData\Faronics\FCAForStartupMonitor.msi
-    - \\C:\ProgramData\Faronics\StorageSpace\FWA\*
-    - \\C:\ProgramData\Getscreen.me\
-    - \\C:\ProgramData\IDrive\*
-    - \\C:\ProgramData\JWrapper-Remote Access\*
-    - \\C:\ProgramData\Kaseya\
-    - \\C:\ProgramData\MiniRMM\Invoke-AVExclusions.ps1
-    - \\C:\ProgramData\MiniRMM\SmartScreenTest.ps1
-    - \\C:\ProgramData\NetMaster\NetMaster_Client.exe
-    - \\C:\ProgramData\NetMaster\config.ini
-    - \\C:\ProgramData\Netbird\*
-    - \\C:\ProgramData\OblianceAgent\agent.log
-    - \\C:\ProgramData\OblianceAgent\config.json
-    - \\C:\ProgramData\OblianceAgent\watchdog.json
-    - \\C:\ProgramData\Opale\opale-agent.exe
-    - \\C:\ProgramData\OpsBridge\*
-    - \\C:\ProgramData\Package Cache\.unverified\agent
-    - \\C:\ProgramData\RMMAgent\*
-    - \\C:\ProgramData\Roster\agent-state.json
-    - \\C:\ProgramData\Roster\agent.yaml
-    - \\C:\ProgramData\SentinelAgent\sentinel-agent.exe
-    - \\C:\ProgramData\Teramind Agent\*
-    - \\C:\ProgramData\Teramind Agent\<version>\{6D99445F-F40F-45CB-B433-06302DAE6C70}\*
-    - \\C:\ProgramData\Teramind Agent\<version>\{6D99445F-F40F-45CB-B433-06302DAE6C70}\tmagentsvc.exe
-    - \\C:\ProgramData\Teramind Agent\config
-    - \\C:\ProgramData\Total Software Deployment\*
-    - \\C:\ProgramData\TrustConnect\*
-    - \\C:\ProgramData\{4CEC2908-5CE4-48F0-A717-8FC833D8017A}\*
-    - \\C:\ProgramData\{4CEC2908-5CE4-48F0-A717-8FC833D8017A}\config
-    - \\C:\ProgramData\{4CEC2908-5CE4-48F0-A717-8FC833D8017A}\updates\*
-    - \\C:\ProgramData\{E0E95C6C-F194-4846-928D-E5538022226D}\
-    - \\C:\Users\*\AppData\Local\Getscreen.me\
-    - \\C:\Users\*\AppData\Local\Google\Chrome\User Data\Default\Extensions\iodihamcpbpeioajjeobimgagajmlibd*
-    - \\C:\Users\*\AppData\Local\IDrive\*
-    - \\C:\Users\*\AppData\Local\LogMeIn Rescue Applet\LMIR*.tmp\lmi_rescue.exe
-    - \\C:\Users\*\AppData\Local\LogMeIn Rescue Applet\LMIR*.tmp\lmi_rescue_srv.exe
-    - \\C:\Users\*\AppData\Local\MEGAsync\*
-    - \\C:\Users\*\AppData\Local\Programs\RemSupp\RemSupp.exe
-    - \\C:\Users\*\AppData\Local\Programs\RemSupp\Uninstall RemSupp.exe
-    - \\C:\Users\*\AppData\Local\Programs\Teleport Connect\*
-    - \\C:\Users\*\AppData\Local\Programs\loclx\loclx.exe
-    - \\C:\Users\*\AppData\Local\Temp\nvda_*\*
-    - \\C:\Users\*\AppData\Local\remsupp-updater\installer.exe
-    - \\C:\Users\*\AppData\Local\rustdesk\*
-    - \\C:\Users\*\AppData\Local\rustdesk\rustdesk.exe
-    - \\C:\Users\*\AppData\Roaming\Mikogo\*
-    - \\C:\Users\*\AppData\Roaming\SyncTrayzor\*
-    - \\C:\Users\*\AppData\Roaming\nvda\*
-    - \\C:\Users\*\Downloads\AMMYY_Admin.exe
-    - \\C:\Users\*\Downloads\IDriveWinSetup.exe
-    - \\C:\Users\*\Downloads\getscreen-x86.exe
-    - \\C:\Users\*\Downloads\getscreen.upd.exe
-    - \\C:\Users\*\ExtraPuTTY-0.30-2016-01-28-installer.exe
-    - \\C:\Users\IEUser\Downloads\WinSCP-5.21.6-Portable\*
-    - \\C:\Users\USERNAME\AppData\Roaming\Insync\App\Insync.exe
-    - \\C:\Windows\<random>.exe
-    - \\C:\Windows\Action1\*
-    - \\C:\Windows\SysWOW64\rserver30\FamItrf2
-    - \\C:\Windows\SysWOW64\rserver30\FamItrfc
-    - \\C:\Windows\SysWOW64\rserver30\rserver3.exe
-    - \\C:\Windows\System32\Tasks\OpsBridge Agent
-    - \\C:\Windows\System32\mstsc.exe
-    - \\C:\Windows\Temp\FleetDeck\*
-    - \\C:\Windows\Temp\ImmyBot\*
-    - \\C:\Windows\Temp\Zecurit\ZecuritAgentUpgrader.exe
-    - \\C:\Windows\dwrcs\*
-    - \\C:\\ProgramData\\AMMYY\\*
-    - \\C:\\ProgramData\\SupremoRemoteDesktop\\
-    - \\C:\bin\OpenSSH.msi
-    - \\C:\bin\cis.vbs
-    - \\C:\bin\netbird.msi
-    - \\C:\bin\trm.zip
-    - \\C:\komari\*
-    - \\C:\nezha\*
-    - \\C:\temper\trm
-    - \\CBBackupPlan.exe
+    - \\bomgar-pac-*.exe
+    - \\bomgar-pac.exe
+    - \\bomgar-rdp.exe
+    - \\bomgar-scc-*.exe
+    - \\bomgar-scc.exe
+    - \\BvSshClient-Inst.exe
+    - \\BvSshServer-Inst.exe
     - \\CagService.exe
+    - \\cbb.exe
+    - \\CBBackupPlan.exe
+    - \\client32.exe
+    - \\clientmrinit.exe
     - \\Cloud.Backup.RM.Service.exe
     - \\Cloud.Backup.Scheduler.exe
+    - \\cloudflared.exe
     - \\CloudRaCmd.exe
     - \\CloudRaSd.exe
     - \\CloudRaService.exe
     - \\CloudRaUtilities.exe
     - \\CloudWksInstall.exe
-    - \\CommandProcessor
     - \\ComodoRemoteControl.exe
     - \\Connect.Backdrop.cloud*.exe
     - \\Connect.exe
     - \\ConnectAppSetup*.exe
     - \\ConnectDetector.exe
     - \\ConnectShellSetup*.exe
+    - \\connectwise*.exe
+    - \\connectwisechat-customer.exe
     - \\ConnectWiseControl*.exe
-    - \\ConnectionInfo.json
-    - \\ControlR.*.app
-    - \\ControlR.app
+    - \\connectwisecontrol.client.exe
+    - \\ControlR.Agent.exe
+    - \\ControlR.DesktopClient.exe
     - \\CoreAgentService.exe
     - \\CrossLoopConnect.exe
+    - \\crossloopservice.exe
+    - \\csexec.exe
+    - \\ctes.exe
+    - \\cteshostsvc.exe
+    - \\ctespersistence.exe
+    - \\ctiserv.exe
+    - \\DameWare Mini Remote Control*.exe
+    - \\DameWare Remote Support.exe
+    - \\dashboard-windows-amd64.exe
+    - \\dcagentregister.exe
+    - \\dcagentservice.exe
+    - \\dd.exe
+    - \\ddsystem.exe
+    - \\DepHlp.exe
+    - \\Deskroll.exe
+    - \\DeskRollUA.exe
+    - \\desktopnow.exe
     - \\DFC.exe
     - \\DFInst.exe
     - \\DFServ.exe
@@ -389,34 +139,85 @@ detection:
     - \\DFStd.exe
     - \\DFStdInstall.exe
     - \\DFWks.exe
-    - \\DSGuest.exe
-    - \\DameWare Mini Remote Control*.exe
-    - \\DameWare Remote Support.exe
-    - \\DeskRollUA.exe
-    - \\Deskroll.exe
+    - \\distant-desktop.exe
+    - \\dntus*.exe
     - \\DocConnect.Agent.exe
     - \\Domotz Pro Desktop App Setup*.exe
     - \\Domotz Pro Desktop App.exe
+    - \\domotz*.exe
+    - \\domotz-windows*.exe
+    - \\domotz.exe
+    - \\domotz_bash.exe
+    - \\DragonDisk.exe
+    - \\DSGuest.exe
+    - \\duet.exe
     - \\DuetDisp.exe
     - \\DuetSetup.exe
+    - \\Duplicati.Server.exe
+    - \\dwagent.exe
+    - \\dwaglnc.exe
+    - \\dwagsvc.exe
+    - \\dwrcs.exe
+    - \\dwrcst.exe
+    - \\echoserver*.exe
+    - \\ehorus standalone.exe
+    - \\ehorus_agent.exe
+    - \\ehorus_cmd.exe
+    - \\ehorus_launcher.exe
+    - \\ehorus_uit.exe
+    - \\einstaller.exe
+    - \\era.exe
     - \\ERAAgent.exe
+    - \\eratool.exe
+    - \\ericomconnectconfigurationtool.exe
     - \\EricomConnectRemoteHost*.exe
+    - \\ExtraPuTTY-0.30-2016-01-28-installer.exe
+    - \\ezhelp*.exe
+    - \\ezhelpclient.exe
+    - \\ezhelpclientmanager.exe
+    - \\ezHelpManager.exe
+    - \\FaronicsCoreAgent.exe
+    - \\FaronicsDeployAgent.exe
+    - \\FaronicsSA.exe
+    - \\fastclient.exe
+    - \\fastmaster.exe
+    - \\FastViewer.exe
     - \\FIStudentAgent.exe
     - \\FIStudentSvc.exe
     - \\FIStudentUI.exe
-    - \\FSAgent.msi
-    - \\FWAService.exe
-    - \\FWAWebInstaller_*.exe
-    - \\FWA_UI_Agent.exe
-    - \\FaronicsCoreAgent.exe
-    - \\FaronicsDeployAgent.exe
-    - \\FastViewer.exe
     - \\FixMeit Client.exe
     - \\FixMeit Expert Setup.exe
     - \\FixMeit Unattended Access Setup.exe
     - \\FixMeitClient*.exe
+    - \\fixmeitclient.exe
+    - \\fleetdeck-agent.exe
+    - \\fleetdeck_agent.exe
+    - \\fleetdeck_agent_svc.exe
+    - \\fleetdeck_commander_launcher.exe
+    - \\fleetdeck_commander_svc.exe
+    - \\fleetdeck_installer.exe
+    - \\FRCServer.exe
+    - \\Freshservice.DiscoveryProbe.ScanService.exe
+    - \\Freshservice.DiscoveryProbe.Window.exe
+    - \\FSAgentAutoUpdate.exe
+    - \\FSAgentService.exe
+    - \\FSSInstaller.exe
+    - \\FSWmiScanner.exe
+    - \\FWA_UI_Agent.exe
+    - \\FWAService.exe
+    - \\FWAWebInstaller_*.exe
+    - \\g2a*.exe
+    - \\g2ax_comm_customer.exe
     - \\G2M.exe
+    - \\g2mcomm.exe
+    - \\getscreen-x86.exe
+    - \\getscreen.upd.exe
     - \\GoTo Assist Opener.exe
+    - \\goto opener.exe
+    - \\gotoassist.exe
+    - \\GotoHTTP*.exe
+    - \\gotohttp.exe
+    - \\GotoHTTP_x64.exe
     - \\GoToResolveExternalModuleHandler.exe
     - \\GoToResolveFileManager.exe
     - \\GoToResolveLoggerProcess.exe
@@ -434,383 +235,130 @@ detection:
     - \\GoToResolveUnattended.exe
     - \\GoToResolveUnattendedRemover.exe
     - \\GoToResolveUnattendedUi.exe
-    - \\Googlemeet.msi
-    - \\GotoHTTP*.exe
-    - \\GotoHTTP_x64.exe
     - \\GovAgentInstallHelper.exe
     - \\GovAgentx64.exe
+    - \\goverrmc.exe
     - \\GovReachClient.exe
-    - \\HelpWire Operator.app
-    - \\HelpWire Quick.exe
-    - \\HelpWire Unattended Access.lnk
-    - \\HelpWire.lnk
+    - \\govsrv*.exe
+    - \\GovSrv.exe
+    - \\gp3.exe
+    - \\gp4.exe
+    - \\gp5.exe
+    - \\guacd.exe
+    - \\GxM.Agent.exe
+    - \\hbrm-updater-x64.exe
+    - \\hbrm-x64.exe
+    - \\helpbeam*.exe
+    - \\helpu_install.exe
     - \\HelpuManager.exe
     - \\HelpuUpdater.exe
+    - \\HelpWire Quick.exe
+    - \\helpwire.exe
     - \\HopToDesk-Standalone.exe
     - \\HopToDesk.exe
+    - \\hsloader.exe
     - \\I'm InTouch Go Installer.exe
-    - \\IDComponent.dll
+    - \\iadmin.exe
+    - \\id_tray.exe
     - \\IDriveEClassic.exe
     - \\IDriveWinSetup.exe
-    - \\ISLLight.exe
-    - \\ISLLightClient.exe
-    - \\ITAgentRMMSender.exe
-    - \\ITAgentRMMSenderSL.exe
-    - \\ITAgentRMMSenderUpdater.exe
-    - \\ITAgentSender.aiui
-    - \\ITSMAgent.exe
-    - \\ITSMService.exe
-    - \\ITarianRemoteAccessSetup.exe
-    - \\Idrive.File-Transfer
+    - \\ihcserver.exe
+    - \\iit.exe
+    - \\IliAS.exe
     - \\ImmyAgent.exe
     - \\ImmyBot.Agent.Ephemeral.exe
-    - \\ImmyBot.msi
     - \\ImmyUpdater.exe
     - \\ImperoClientSVC.exe
     - \\ImperoInit.exe
     - \\InsightInstaller.exe
     - \\InsightInstallerStudent.exe
     - \\InsightInstallerTeacher.exe
-    - \\InsightSetup.msi
+    - \\InstallCore.exe
     - \\InstallShield Setup.exe
-    - \\Installer
     - \\InstantHousecall.exe
-    - \\ItsmRsp.exe
-    - \\IvantiRemoteControl.exe
-    - \\JumpCloud*.exe
-    - \\KHelpDesk.exe
-    - \\Kabuto.App.Runner.exe
-    - \\Kabuto.Installer.exe
-    - \\Kabuto.Service.Runner.exe
-    - \\KabutoSetup.exe
-    - \\LANDeskPortalManager.exe
-    - \\LS RMM Worker.exe
-    - \\LS RMM.exe
-    - \\LunixarRMM*.msi
-    - \\MEAgentHelper.exe
-    - \\ManageEngine_Remote_Access_Plus.exe
-    - \\ManageEngine_ServiceDesk_Plus.bin
-    - \\ManageEngine_ServiceDesk_Plus.exe
-    - \\ManualLauncher.exe
-    - \\MonitoringAgent.exe
-    - \\NTRsupportPro_EN.exe
-    - \\NetBird UI.app
-    - \\NetLock_RMM_Agent_Installer
-    - \\NetLock_RMM_Agent_Installer.exe
-    - \\NetViewer.exe
-    - \\Netop Ondemand.exe
-    - \\Ninite.exe
-    - \\NiniteAgent.exe
-    - \\NiniteOne.exe
-    - \\NinitePro.exe
-    - \\NinjaRMMAgent.exe
-    - \\NinjaRMMAgentPatcher.exe
-    - \\OOSysAgent.exe
-    - \\OTPowerShell.exe
-    - \\OTService.exe
-    - \\OnionShare-win*.msi
-    - \\Online Backup.exe
-    - \\OpenDesk-RMM-Agent.exe
-    - \\OrayRemoteService.exe
-    - \\OrayRemoteShell.exe
-    - \\PAExec-*.exe
-    - \\PCIVIDEO.EXE
-    - \\PCMonitorManager.exe
-    - \\PDQConnectUpdater-*.msi
-    - \\Pilixo_Installer*.exe
-    - \\PixoIT-agent.exe
-    - \\QQProtect.exe
-    - \\RAccess.exe
-    - \\RDConsole.exe
-    - \\RDPCheck.exe
-    - \\RDPConf.exe
-    - \\RDPWInst.exe
-    - \\RDesktop.exe
-    - \\RHost.exe
-    - \\RMM.Agent.exe
-    - \\RMMmax Agent
-    - \\RMMmaxAgentSetup.exe
-    - \\ROMFUSClient.exe
-    - \\ROMServer.exe
-    - \\RViewer.exe
-    - \\RdClientInstaller.exe
-    - \\Remote Desktop.exe
-    - \\Remote Workforce Client.exe
-    - \\RemotePC.exe
-    - \\RemotePCService.exe
-    - \\RemoteRipple.exe
-    - \\Remotely_Agent
-    - \\Remotely_Desktop
-    - \\RmmService.exe
-    - \\RocketRemoteDesktop_Setup.exe
-    - \\RodexAgent.exe
-    - \\SMPCSetup.exe
-    - \\SRManager.exe
-    - \\SRServer.exe
-    - \\STAHelper.exe
-    - \\ScreenMeet.Support.exe
-    - \\ScreenMeetSupport.exe
-    - \\SensoClient.exe
-    - \\SensoService.exe
-    - \\Service
-    - \\ServiceProxyLocalSys.exe
-    - \\Site24x7PluginAgent.exe
-    - \\Site24x7WindowsAgentTrayIcon.exe
-    - \\SolarWinds-Dameware-DRS*.exe
-    - \\SolarWinds-Dameware-MRC*.exe
-    - \\Sorillus Launcher.exe
-    - \\Sorillus-Launcher*.exe
-    - \\SplashtopSOS.exe
-    - \\Splashtop_Streamer_Windows*.exe
-    - \\StudentSvc.exe
-    - \\SupportTool.exe
-    - \\SupremoSystem.exe
-    - \\Syncro.App.Runner.exe
-    - \\Syncro.Installer.exe
-    - \\Syncro.Overmind.Service.exe
-    - \\Syncro.Service.exe
-    - \\SyncroLive.Agent.exe
-    - \\SyncroLive.Service.exe
-    - \\TPowerShell.exe
-    - \\TSClient.exe
-    - \\TakeControl.exe
-    - \\TaniumCX.exe
-    - \\TaniumClient.exe
-    - \\TaniumExecWrapper.exe
-    - \\TaniumFileInfo.exe
-    - \\TeamTaskManager.exe
-    - \\Teleport Connect Setup-*.exe
-    - \\Teramind Agent.app
-    - \\This installs a modified VNC and cannot be blocked by path separate from VNC
-    - \\TiAgent.app
-    - \\TiClientCore.exe
-    - \\TiClientHelper*.exe
-    - \\TiExpertCore.exe
-    - \\TiExpertStandalone.exe
-    - \\TightVNCViewerPortable*.exe
-    - \\ToDesk_Service.exe
-    - \\ToDesk_Setup.exe
-    - \\TrustConnectAgent.exe
-    - \\UltraVNC*.exe
-    - \\UltraViewer_Desktop.exe
-    - \\UltraViewer_Service.exe
-    - \\UltraViewer_setup*
-    - \\UniRMM.exe
-    - \\UniRMM.msi
-    - \\WinVNCStub.exe
-    - \\XSightService.exe
-    - \\ZMAgent.exe
-    - \\ZecuritAccess
-    - \\ZohoMeeting.exe
-    - \\ZohoURSService.exe
-    - \\Zohours.exe
-    - \\aa_v*.exe
-    - \\aadg.exe
-    - \\accessserver*.exe
-    - \\accessserver.exe
-    - \\addigy-*.pkg
-    - \\aeroadmin.exe
-    - \\agent
-    - \\agent-installer-any.exe
-    - \\agent.json
-    - \\agent.log
-    - \\agent.yaml
-    - \\agent32.exe
-    - \\agent64.exe
-    - \\agentService
-    - \\agent_setup_5.exe
-    - \\agentu.exe
-    - \\alitask.exe
-    - \\allocentra-agent.exe
-    - \\apc_host.exe
-    - \\atera_agent.exe
-    - \\ateraagent.exe
-    - \\auvik.agent.exe
-    - \\auvik.engine.exe
-    - \\aweray_remote*.exe
-    - \\awhost32.exe
-    - \\awrem32.exe
-    - \\basupsrvc.exe
-    - \\basupsrvcupdate.exe
-    - \\basuptshelper.exe
-    - \\bbl.exe
-    - \\beacon-agent
-    - \\beacon-agent.log
-    - \\beacon-agent.service
-    - \\beamyourscreen-host.exe
-    - \\beamyourscreen.exe
-    - \\bomgar-pac-*.exe
-    - \\bomgar-pac.exe
-    - \\bomgar-rdp.exe
-    - \\bomgar-scc-*.exe
-    - \\bomgar-scc.exe
-    - \\borealis-agent-updater.service
-    - \\borealis-agent-watchdog.service
-    - \\borealis-agent.service
-    - \\breeze-agent
-    - \\breeze-agent.service
-    - \\breeze-backup
-    - \\breeze-desktop-helper
-    - \\breeze-watchdog
-    - \\c:\Program Files (x86)%\mRemoteNG
-    - \\c:\Program Files (x86)\Sysprogs\SmarTTY\*
-    - \\c:\Program Files\*\Duplicati.Server.exe
-    - \\can't find this one
-    - \\cbb.exe
-    - \\chrome-remote-desktop
-    - \\chrome-remote-desktop-host
-    - \\client32.exe
-    - \\clientmrinit.exe
-    - \\cloudflared.exe
-    - \\com.beacon.agent.plist
-    - \\com.breeze.agent.plist
-    - \\com.breeze.desktop-helper-loginwindow.plist
-    - \\com.breeze.desktop-helper-user.plist
-    - \\com.breeze.watchdog.plist
-    - \\com.obliance.agent.plist
-    - \\com.roster.agent.plist
-    - \\commandProcessor
-    - \\config.json
-    - \\connect.exe
-    - \\connectwise*.exe
-    - \\connectwisechat-customer.exe
-    - \\connectwisecontrol.client.exe
-    - \\credential.json
-    - \\crossloopservice.exe
-    - \\csexec.exe
-    - \\ctes.exe
-    - \\cteshostsvc.exe
-    - \\ctespersistence.exe
-    - \\ctiserv.exe
-    - \\dashboard
-    - \\dashboard-windows-amd64.exe
-    - \\dataplicity
-    - \\dataplicity.service
-    - \\dcagentregister.exe
-    - \\dcagentservice.exe
-    - \\dd.exe
-    - \\ddsystem.exe
-    - \\desktopnow.exe
-    - \\distant-desktop.exe
-    - \\dntus*.exe
-    - \\domotz*.exe
-    - \\domotz-windows*.exe
-    - \\domotz.exe
-    - \\domotz_bash.exe
-    - \\duet.exe
-    - \\dwagent.exe
-    - \\dwaglnc.exe
-    - \\dwagsvc.exe
-    - \\dwrcs.exe
-    - \\eDocument-*.msi
-    - \\echoserver*.exe
-    - \\echoware.dll
-    - \\ehorus standalone.exe
-    - \\ehorus_agent.exe
-    - \\ehorus_cmd.exe
-    - \\ehorus_launcher.exe
-    - \\ehorus_uit.exe
-    - \\einstaller.exe
-    - \\era.exe
-    - \\eratool.exe
-    - \\ericomconnectconfigurationtool.exe
-    - \\ezHelpManager.exe
-    - \\ezhelp*.exe
-    - \\ezhelpclient.exe
-    - \\ezhelpclientmanager.exe
-    - \\fastclient.exe
-    - \\fastmaster.exe
-    - \\fixmeitclient.exe
-    - \\fleetdeck-agent.exe
-    - \\fleetdeck-agent.msi
-    - \\fleetdeck-agent.mst
-    - \\fleetdeck_agent.exe
-    - \\fleetdeck_agent_svc.exe
-    - \\fleetdeck_commander_launcher.exe
-    - \\fleetdeck_commander_svc.exe
-    - \\fleetdeck_installer.exe
-    - \\fs-probe-*.msi
-    - \\fs-windows-agent-*.msi
-    - \\g2a*.exe
-    - \\g2ax_comm_customer.exe
-    - \\g2mcomm.exe
-    - \\g2mupdate.com
-    - \\glpi-agent
-    - \\goto opener.exe
-    - \\gotoassist.exe
-    - \\gotohttp.exe
-    - \\goverrmc.exe
-    - \\govsrv*.exe
-    - \\gp3.exe
-    - \\gp4.exe
-    - \\gp5.exe
-    - \\grabberEM.*msi
-    - \\grabberTT*.msi
-    - \\guacd.exe
-    - \\hbrm-updater-x64.exe
-    - \\hbrm-x64.exe
-    - \\helpbeam*.exe
-    - \\helpu_install.exe
-    - \\helpwire-operator
-    - \\helpwire-unattended.service
-    - \\helpwire.exe
-    - \\hsloader.exe
-    - \\iadmin.exe
-    - \\id_tray.exe
-    - \\idrive.RemotePCAgent
-    - \\ihcserver.exe
-    - \\iit.exe
-    - \\install.conf
-    - \\installer
-    - \\instanthousecall.exe
+    - \\Insync.exe
     - \\intelliadmin.exe
     - \\intouch.exe
+    - \\InvGate-ED.exe
+    - \\InvGateAssetsRD.exe
+    - \\InvGateRD.exe
     - \\iperius.exe
     - \\iperiusremote.exe
     - \\ir_agent.exe
     - \\islalwaysonmonitor.exe
-    - \\isllight.exe
+    - \\ISLLight.exe
+    - \\ISLLightClient.exe
     - \\isllightservice.exe
     - \\issuser.exe
-    - \\itsmagent.exe
+    - \\ITAgentRMMSender.exe
+    - \\ITAgentRMMSenderSL.exe
+    - \\ITAgentRMMSenderUpdater.exe
+    - \\ITarianRemoteAccessSetup.exe
+    - \\ITSMAgent.exe
+    - \\ItsmRsp.exe
+    - \\ITSMService.exe
+    - \\IvantiRemoteControl.exe
     - \\jumpclient.exe
+    - \\JumpCloud*.exe
     - \\jumpconnect.exe
     - \\jumpdesktop.exe
     - \\jumpservice.exe
     - \\jumpupdater.exe
-    - \\komari-agent.service
-    - \\komari.service
+    - \\Kabuto.App.Runner.exe
+    - \\Kabuto.Installer.exe
+    - \\Kabuto.Service.Runner.exe
+    - \\KabutoSetup.exe
+    - \\KHelpDesk.exe
+    - \\kitty.exe
     - \\konea.exe
     - \\landeskagentbootstrap.exe
+    - \\LANDeskPortalManager.exe
     - \\laplink-everywhere-setup*.exe
     - \\laplink.exe
     - \\laplinkeverywhere.exe
+    - \\LavawallWin.exe
     - \\ldinv32.exe
     - \\ldsensors.exe
     - \\level-remote-control-ffmpeg.exe
     - \\level-windows-amd64.exe
     - \\level.exe
-    - \\libeay32.dll
     - \\llrcservice.exe
     - \\lmi_rescue.exe
-    - \\lmnoipserver.exe
-    - \\loclx
+    - \\lmi_rescue_srv.exe
+    - \\LMNoIpServer.exe
     - \\loclx.exe
+    - \\LS RMM Worker.exe
+    - \\LS RMM.exe
     - \\ltsvc.exe
     - \\ltsvcmon.exe
     - \\lttray.exe
-    - \\mRemoteNG-Installer-*.msi
-    - \\mRemoteNG.exe
+    - \\Lunixar.exe
+    - \\LunixarRemote.exe
+    - \\LunixarUpdater.exe
+    - \\ManageEngine_Remote_Access_Plus.exe
+    - \\ManageEngine_ServiceDesk_Plus.exe
+    - \\ManualLauncher.exe
+    - \\MEAgentHelper.exe
+    - \\MEGAsyncSetup64.exe
+    - \\MEGAupdater.exe
     - \\meshagent*.exe
     - \\meshcentral*.exe
     - \\mgntsvc.exe
-    - \\mikogo-service.exe
+    - \\MigrationHelper_32.exe
+    - \\MigrationHelper_64.exe
+    - \\Mikogo-Screen-Service.exe
+    - \\Mikogo-Service.exe
     - \\mikogo-starter.exe
     - \\mikogo.exe
     - \\mikogolauncher.exe
-    - \\minion.service
+    - \\MiniRmmAgent.exe
     - \\mionet.exe
     - \\mionetmanager.exe
+    - \\ModulesUpgradeMgr.exe
+    - \\MonitoringAgent.exe
+    - \\mRemoteNG.exe
+    - \\msp-agent-core.exe
+    - \\mstsc.exe
     - \\mwcliun.exe
     - \\mygreenpc.exe
     - \\myivomanager.exe
@@ -818,55 +366,75 @@ detection:
     - \\nateon*.exe
     - \\nateon.exe
     - \\nateonmain.exe
-    - \\netbird
     - \\netbird-ui.exe
     - \\netbird.exe
+    - \\NetLock_RMM_Agent_Installer.exe
+    - \\NetLock_RMM_User_Process.exe
+    - \\NetLock_RMM_User_UAC.exe
+    - \\NetMaster_Client.exe
+    - \\Netop Ondemand.exe
     - \\neturo*.exe
     - \\neturo.exe
     - \\netviewer*.exe
-    - \\netviewer.exe
+    - \\NetViewer.exe
     - \\nexusrmm.exe
-    - \\nezha-agent
     - \\nezha-agent.exe
-    - \\nezha-agent.service
-    - \\nezha-dashboard.service
-    - \\nezha_agent
     - \\ngrok.exe
     - \\ngstw32.exe
     - \\nhostsvc.exe
     - \\nhstw32.exe
+    - \\Ninite.exe
+    - \\NiniteAgent.exe
+    - \\NiniteOne.exe
+    - \\NinitePro.exe
     - \\ninjarmm-cli.exe
+    - \\NinjaRMMAgent.exe
+    - \\NinjaRMMAgentPatcher.exe
     - \\nldrw32.exe
     - \\nmep_agtconfig.exe
     - \\nmep_ctrlagent.exe
     - \\nmep_ctrlagentsvc.exe
     - \\nomachine*.exe
+    - \\NotificationHelper.exe
     - \\ntrntservice.exe
+    - \\NTRsupportPro_EN.exe
     - \\nvClient.exe
     - \\nvConsole.exe
     - \\nvda.exe
     - \\nvda_*.exe
     - \\nvda_service.exe
     - \\nxd.exe
+    - \\nxplayer.exe
     - \\nxservice*.exe
-    - \\obliance-agent
-    - \\obliance-agent.log
-    - \\obliance-agent.service
-    - \\obliance-watchdog.service
+    - \\obliance-agent.exe
+    - \\obliance-tray.exe
+    - \\obliance-watchdog.exe
     - \\ocsinventory.exe
     - \\ocsservice.exe
+    - \\onionshare*.exe
+    - \\Online Backup.exe
     - \\oolocker.exe
+    - \\OOSysAgent.exe
     - \\oosyspectr.exe
-    - \\opendesk-rmm-agent.exe
-    - \\openuem-agent.log
-    - \\openuem.ini
+    - \\opale-agent.exe
+    - \\OpenDesk-RMM-Agent.exe
+    - \\OpsBridgeAgent.exe
+    - \\OrayRemoteService.exe
+    - \\OrayRemoteShell.exe
+    - \\OTPowerShell.exe
+    - \\OTService.exe
+    - \\ovd_*.exe
     - \\p9agent*.exe
+    - \\PAExec-*.exe
     - \\paexec.exe
     - \\parallelsaccess-*.exe
     - \\parsecd.exe
     - \\pcaquickconnect.exe
+    - \\PcHelpWare_viewer.exe
     - \\pcicfgui.exe
     - \\pcictlui.exe
+    - \\PCIVIDEO.EXE
+    - \\PCMonitorManager.exe
     - \\pcmonitorsrv.exe
     - \\pcnmgr.exe
     - \\pcstarter.exe
@@ -875,17 +443,16 @@ detection:
     - \\pcvisit_client.exe
     - \\pcvisit_service_client.exe
     - \\pdq-connect*.exe
-    - \\pitunnel
-    - \\pitunnel.service
+    - \\Pilixo_Installer*.exe
+    - \\PixoIT-agent.exe
+    - \\plink.exe
     - \\pocketcloud*.exe
     - \\pocketcloudservice.exe
     - \\pocketcontroller.exe
     - \\prl_deskctl_agent.exe
     - \\prl_deskctl_wizard.exe
     - \\prl_pm_service.exe
-    - \\proxiport
-    - \\proxiport.conf
-    - \\proxiport.service
+    - \\proxiport.exe
     - \\pservice.exe
     - \\psexec.exe
     - \\psexec64.exe
@@ -893,10 +460,15 @@ detection:
     - \\pstlaunch.exe
     - \\ptdskclient.exe
     - \\ptdskhost.exe
+    - \\putty.exe
+    - \\puttytray.exe
     - \\qq.exe
     - \\qqpcmgr.exe
+    - \\QQProtect.exe
     - \\quickassist.exe
     - \\raautoup.exe
+    - \\RAccess.exe
+    - \\Radmin.exe
     - \\rapid7_agent_core.exe
     - \\rapid7_endpoint_broker.exe
     - \\rcengmgru.exe
@@ -904,9 +476,16 @@ detection:
     - \\rcstartsupport.exe
     - \\rd.exe
     - \\rdclient.exe
+    - \\RdClientInstaller.exe
+    - \\RDCMan-x86.exe
+    - \\RDCMan.exe
+    - \\RDConsole.exe
+    - \\RDesktop.exe
     - \\rdp.exe
     - \\rdp2tcp.exe
-    - \\rdp2tcp.py
+    - \\RDPCheck.exe
+    - \\RDPConf.exe
+    - \\RDPWInst.exe
     - \\remcmdstub.exe
     - \\remcom.exe
     - \\remcomsvc.exe
@@ -916,32 +495,37 @@ detection:
     - \\remobo_client.exe
     - \\remobo_tracker.exe
     - \\remote access.exe
+    - \\Remote Desktop.exe
+    - \\Remote Workforce Client.exe
     - \\remote-it-installer.exe
     - \\remote.it.exe
+    - \\RemoteAgentAgent.exe
     - \\remoteconsole.exe
+    - \\RemoteDesktopManager.exe
     - \\remoteit.exe
-    - \\remotely-agent.plist
-    - \\remotely-agent.service
+    - \\Remotely_Agent.exe
+    - \\Remotely_Desktop.exe
     - \\remotepass-access.exe
+    - \\RemotePC.exe
     - \\remotepchost.exe
-    - \\remotepcservice.exe
+    - \\RemotePCService.exe
+    - \\RemoteRipple.exe
     - \\remotesupportplayeru.exe
     - \\remoteview.exe
     - \\remoting_host.exe
-    - \\remoting_me2me_host
-    - \\remoting_me2me_host_service
-    - \\requires sign up
+    - \\RemSupp.exe
     - \\rfusclient.exe
-    - \\rmmmax-agent
-    - \\rmmmax_agent.py
+    - \\RHost.exe
+    - \\RMM.Agent.exe
+    - \\RMMmaxAgentService.exe
+    - \\RMMmaxAgentSetup.exe
+    - \\RmmService.exe
     - \\rmserverconsolemediator.exe
-    - \\rodexagent.exe
-    - \\romfusclient.exe
-    - \\romserver.exe
+    - \\RocketRemoteDesktop_Setup.exe
+    - \\RodexAgent.exe
+    - \\ROMFUSClient.exe
+    - \\ROMServer.exe
     - \\romviewer.exe
-    - \\roster-agent
-    - \\roster-agent.log
-    - \\roster-agent.service
     - \\routernt.exe
     - \\royalserver.exe
     - \\royalts.exe
@@ -951,73 +535,120 @@ detection:
     - \\rpcsuite.exe
     - \\rport.exe
     - \\rpwhostscr.exe
+    - \\rserver3.exe
     - \\rudesktop*.exe
     - \\rustdesk*.exe
-    - \\rustdesk.exe
+    - \\RustDesk.exe
     - \\rutserv.exe
     - \\rutview.exe
     - \\rv.exe
     - \\rvagent.exe
     - \\rvagtray.exe
-    - \\rviewer.exe
+    - \\RViewer.exe
     - \\rxstartsupport.exe
+    - \\s3browser*.exe
     - \\saazapsc.exe
     - \\screenconnect*.exe
-    - \\screenconnect.clientservice.exe
-    - \\screenconnect.windowsclient.exe
+    - \\ScreenConnect.ClientService.exe
+    - \\ScreenConnect.WindowsClient.exe
+    - \\ScreenMeet.Support.exe
+    - \\ScreenMeetSupport.exe
+    - \\SecureCRT.EXE
     - \\seetrolcenter.exe
     - \\seetrolclient.exe
     - \\seetrolmyservice.exe
     - \\seetrolremote.exe
     - \\seetrolsetting.exe
-    - \\sentinel-agent
+    - \\SensoClient.exe
+    - \\SensoService.exe
+    - \\sentinel-agent.exe
     - \\servereye*.exe
     - \\serverproxyservice.exe
-    - \\serviceconfig.xml
-    - \\shellhub-agent
-    - \\shellhub-agent.service
+    - \\ServiceProxyLocalSys.exe
+    - \\SetMe_Client.exe
     - \\showmypc*.exe
     - \\showmypc.exe
+    - \\si.exe
     - \\simplegatewayservice.exe
     - \\simplehelpcustomer.exe
     - \\simpleservice.exe
-    - \\smpcsetup.exe
+    - \\Site24x7PluginAgent.exe
+    - \\Site24x7WindowsAgentTrayIcon.exe
+    - \\SmarTTY.exe
+    - \\SMPCSetup.exe
+    - \\softmon.exe
+    - \\Solar-PuTTY.exe
+    - \\SolarWinds-Dameware-DRS*.exe
+    - \\SolarWinds-Dameware-MRC*.exe
+    - \\Sorillus Launcher.exe
+    - \\Sorillus-Launcher*.exe
+    - \\Splashtop_Streamer_Windows*.exe
+    - \\SplashtopSOS.exe
     - \\spsrv.exe
     - \\sragent.exe
-    - \\srmanager.exe
-    - \\srserver.exe
+    - \\SRManager.exe
+    - \\SRServer.exe
     - \\srservice.exe
-    - \\ssleay32.dll
+    - \\STAHelper.exe
     - \\strwinclt.exe
+    - \\StudentSvc.exe
     - \\sunlogin*.exe
     - \\superops.exe
     - \\superopsticket.exe
+    - \\superputty.exe
     - \\support-logmeinrescue*.exe
     - \\support-logmeinrescue.exe
-    - \\supporttool.exe
+    - \\SupportTool.exe
     - \\supremo.exe
     - \\supremohelper.exe
     - \\supremoservice.exe
+    - \\SupremoSystem.exe
+    - \\svchost-windows-amd64-*.exe
+    - \\Syncro.App.Runner.exe
+    - \\Syncro.Installer.exe
+    - \\Syncro.Overmind.Service.exe
+    - \\Syncro.Service.exe
+    - \\SyncroLive.Agent.exe
+    - \\SyncroLive.Service.exe
     - \\syncrosetup.exe
+    - \\Syncthing.exe
     - \\sysdiag.exe
     - \\syspectr.exe
     - \\tacticalrmm.exe
     - \\tailscale-*.exe
     - \\tailscale-ipn.exe
     - \\tailscaled.exe
+    - \\TakeControl.exe
+    - \\TaniumClient.exe
+    - \\TaniumCX.exe
+    - \\TaniumExecWrapper.exe
+    - \\TaniumFileInfo.exe
+    - \\TeamTaskManager.exe
     - \\teamviewer_desktop.exe
     - \\teamviewer_service.exe
-    - \\teamviewerhost
+    - \\Teleport Connect Setup-*.exe
+    - \\TiAgent.exe
+    - \\TiClientCore.exe
+    - \\TiClientHelper*.exe
+    - \\TiExpertCore.exe
+    - \\TiExpertStandalone.exe
     - \\tigervnc*.exe
-    - \\tmagent.app
-    - \\tmate
-    - \\tmate-ready
-    - \\tmate.bashrc
-    - \\tmate.sock
-    - \\tmsysd
+    - \\TightVNCViewerPortable*.exe
+    - \\tinUnattendedModule.exe
+    - \\TiService.exe
+    - \\TiUpdateService.exe
+    - \\tmagentsvc.exe
+    - \\tmcsvc.exe
+    - \\tniwinagent.exe
     - \\todesk.exe
+    - \\ToDesk_Service.exe
+    - \\ToDesk_Setup.exe
     - \\toolsiq.exe
-    - \\tsh
+    - \\topiad.exe
+    - \\TPowerShell.exe
+    - \\TrustConnectAgent.exe
+    - \\TSClient.exe
+    - \\Tsdservice.exe
     - \\tsircusr.exe
     - \\turbomeeting.exe
     - \\turbomeetingstarter.exe
@@ -1025,8 +656,13 @@ detection:
     - \\tvnviewer.exe
     - \\ultimate_*.exe
     - \\ultraviewer.exe
-    - \\ultraviewer_desktop.exe
-    - \\ultraviewer_service.exe
+    - \\UltraViewer_Desktop.exe
+    - \\UltraViewer_Service.exe
+    - \\UltraVNC*.exe
+    - \\Uninstall RemSupp.exe
+    - \\UniRMM.exe
+    - \\UserNotificationHelper.exe
+    - \\UVNC_Launch.exe
     - \\veyon-master.exe
     - \\veyon-server.exe
     - \\veyon-service.exe
@@ -1036,28 +672,28 @@ detection:
     - \\vncserver.exe
     - \\vncserverui.exe
     - \\vncviewer.exe
-    - \\weCliboardListener.exe
-    - \\weInstSvc.exe
     - \\webexpcnow.exe
     - \\webrdp.exe
     - \\wec_launcher_[a-Z0-9]*_.exe
-    - \\wec_launcher_[a-Z0-9]*_.pkg
+    - \\weCliboardListener.exe
     - \\weezo setup*.exe
     - \\weezo.exe
     - \\weezohttpd.exe
+    - \\weInstSvc.exe
     - \\wemonc.exe
     - \\weprtct.exe
     - \\wesvc.exe
-    - \\win-installer-*.msi
     - \\winagent.exe
     - \\winaw32.exe
     - \\windowslauncher.exe
     - \\winpty-agent.exe
     - \\winpty-agent64.exe
+    - \\WinSCP.exe
     - \\winvnc*.exe
     - \\winvnc.exe
     - \\winvnc4.exe
     - \\winvncsc.exe
+    - \\WinVNCStub.exe
     - \\winwvc.exe
     - \\wisshell*.exe
     - \\wmc.exe
@@ -1070,13 +706,38 @@ detection:
     - \\xeox-agent_x64.exe
     - \\xeox-agent_x86.exe
     - \\xeox_service_windows.exe
+    - \\Xpra-Launcher.exe
+    - \\Xpra-x86_64_Setup.exe
+    - \\xShell.exe
+    - \\XSightService.exe
+    - \\YandexDisk2.exe
+    - \\ZA_Access.exe
     - \\za_connect.exe
     - \\zabbix_agent*.exe
     - \\zaservice.exe
+    - \\ZecuritAgentAssetMgr.exe
+    - \\ZecuritAgentRegister.exe
+    - \\ZecuritAgentService.exe
+    - \\ZecuritAgentTray.exe
+    - \\ZecuritAgentUpgrader.exe
+    - \\ZecuritApplicationControlService.exe
+    - \\ZecuritCommandProcessor.exe
+    - \\ZecuritLiveNotifier.exe
+    - \\ZecuritRemoteTools.exe
+    - \\ZecuritScreenReaderApp.exe
+    - \\ZecuritScreenReaderAppUI.exe
+    - \\ZecuritScreenReaderService.exe
     - \\zero-powershell.exe
     - \\zerotier*.exe
-    - \\zerotier*.msi
+    - \\ZMAgent.exe
+    - \\zoc.exe
+    - \\ZohoMeeting.exe
     - \\zohotray.exe
+    - \\Zohours.exe
+    - \\ZohoURSService.exe
+    - C:\\Program Files (x86)\\N-able Technologies\\Windows Agent\\bin\\agent.exe
+    - C:\\Program Files\\Monitic\\agent.exe
+    - C:\\Users\\*\\AppData\\Local\\remsupp-updater\\installer.exe
   condition: selection
 falsepositives:
 - Legitimate usage of remote management tools

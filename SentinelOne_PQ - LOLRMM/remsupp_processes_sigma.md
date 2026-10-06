@@ -1,6 +1,6 @@
 ```sql
-// Translated content (automatically translated on 05-10-2026 02:53:59):
-event.type="Process Creation" and (endpoint.os="windows" and ((src.process.image.path contains "\\installer.exe" or src.process.image.path contains "\\RemSupp.exe" or src.process.image.path contains "\\Uninstall RemSupp.exe") or (tgt.process.image.path contains "\\installer.exe" or tgt.process.image.path contains "\\RemSupp.exe" or tgt.process.image.path contains "\\Uninstall RemSupp.exe")))
+// Translated content (automatically translated on 06-10-2026 03:43:55):
+event.type="Process Creation" and (endpoint.os="windows" and ((src.process.image.path="*C:\\Users\\*\\AppData\\Local\\remsupp-updater\\installer.exe" or src.process.image.path contains "\\RemSupp.exe" or src.process.image.path contains "\\Uninstall RemSupp.exe") or (tgt.process.image.path="*C:\\Users\\*\\AppData\\Local\\remsupp-updater\\installer.exe" or tgt.process.image.path contains "\\RemSupp.exe" or tgt.process.image.path contains "\\Uninstall RemSupp.exe")))
 ```
 
 
@@ -15,7 +15,7 @@ references:
     - https://github.com/magicsword-io/LOLRMM
 author: LOLRMM Project
 date: 2026-05-18
-modified: 2026-09-02
+modified: 2026-10-05
 tags:
     - attack.command-and-control
     - attack.t1219
@@ -25,12 +25,12 @@ logsource:
 detection:
     selection_parent:
         ParentImage|endswith:
-            - '\\installer.exe'
+            - 'C:\\Users\\*\\AppData\\Local\\remsupp-updater\\installer.exe'
             - '\\RemSupp.exe'
             - '\\Uninstall RemSupp.exe'
     selection_image:
         Image|endswith:
-            - '\\installer.exe'
+            - 'C:\\Users\\*\\AppData\\Local\\remsupp-updater\\installer.exe'
             - '\\RemSupp.exe'
             - '\\Uninstall RemSupp.exe'
     condition: 1 of selection_*

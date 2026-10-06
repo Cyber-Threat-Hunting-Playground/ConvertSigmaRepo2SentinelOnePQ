@@ -1,6 +1,6 @@
 ```sql
-// Translated content (automatically translated on 05-10-2026 02:53:59):
-(event.category in ("dns","url","ip")) and (endpoint.os="windows" and ((url.address contains "boot.net.anydesk.com" or url.address contains "relay-[a-f0-9]{8}.net.anydesk.com:443" or url.address contains ".anydesk.com") or (event.dns.request contains "boot.net.anydesk.com" or event.dns.request contains "relay-[a-f0-9]{8}.net.anydesk.com:443" or event.dns.request contains ".anydesk.com")))
+// Translated content (automatically translated on 06-10-2026 03:43:55):
+(event.category in ("dns","url","ip")) and (endpoint.os="windows" and ((url.address contains "boot.net.anydesk.com" or url.address="*relay-*.net.anydesk.com" or url.address contains ".net.anydesk.com") or (event.dns.request contains "boot.net.anydesk.com" or event.dns.request="*relay-*.net.anydesk.com" or event.dns.request contains ".net.anydesk.com")))
 ```
 
 
@@ -15,7 +15,7 @@ references:
     - https://github.com/magicsword-io/LOLRMM
 author: LOLRMM Project
 date: 2025-12-01
-modified: 2026-09-02
+modified: 2026-10-05
 tags:
     - attack.command-and-control
     - attack.t1219
@@ -26,8 +26,8 @@ detection:
     selection:
         DestinationHostname|endswith:
             - 'boot.net.anydesk.com'
-            - 'relay-[a-f0-9]{8}.net.anydesk.com:443'
-            - '*.anydesk.com'
+            - 'relay-*.net.anydesk.com'
+            - '*.net.anydesk.com'
     condition: selection
 falsepositives:
     - Legitimate use of AnyDesk

@@ -1,6 +1,6 @@
 ```sql
-// Translated content (automatically translated on 05-10-2026 02:53:59):
-event.category="file" and (endpoint.os="windows" and (tgt.file.path="*C:\\Program Files*\\ScreenConnect\\App_Data\\Session.db" or tgt.file.path="*C:\\Program Files*\\ScreenConnect\\App_Data\\User.xml" or tgt.file.path="*C:\\ProgramData\\ScreenConnect Client*\\user.config"))
+// Translated content (automatically translated on 06-10-2026 03:43:55):
+event.category="file" and (endpoint.os="windows" and (tgt.file.path="*C:\\Program Files*\\ScreenConnect\\App_Data\\Session.db" or tgt.file.path="*C:\\Program Files*\\ScreenConnect\\App_Data\\User.xml" or tgt.file.path="*C:\\ProgramData\\ScreenConnect Client*\\user.config" or tgt.file.path="*C:\\Program Files (x86)\\ScreenConnect Client (*)\\system.config" or tgt.file.path="*C:\\Program Files*\\ScreenConnect Client*\\app.config" or tgt.file.path contains "C:\\Windows\\SystemTemp\\ScreenConnect\*"))
 ```
 
 
@@ -15,7 +15,7 @@ references:
     - https://github.com/magicsword-io/LOLRMM
 author: LOLRMM Project
 date: 2025-12-01
-modified: 2026-09-02
+modified: 2026-10-05
 tags:
     - attack.command-and-control
     - attack.t1219
@@ -28,6 +28,9 @@ detection:
             - 'C:\Program Files*\ScreenConnect\App_Data\Session.db'
             - 'C:\Program Files*\ScreenConnect\App_Data\User.xml'
             - 'C:\ProgramData\ScreenConnect Client*\user.config'
+            - 'C:\Program Files (x86)\ScreenConnect Client (*)\system.config'
+            - 'C:\Program Files*\ScreenConnect Client*\app.config'
+            - 'C:\Windows\SystemTemp\ScreenConnect\*'
     condition: selection
 falsepositives:
     - Legitimate use of ScreenConnect

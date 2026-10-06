@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 05-10-2026 02:53:59):
+// Translated content (automatically translated on 06-10-2026 03:43:55):
 event.category="registry" and (endpoint.os="windows" and registry.keyPath contains "HKCU\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Run\\BlackCryptAgent")
 ```
 

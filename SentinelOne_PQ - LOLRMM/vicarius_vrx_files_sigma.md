@@ -1,0 +1,35 @@
+```sql
+// Translated content (automatically translated on 06-10-2026 03:43:55):
+event.category="file" and (endpoint.os="windows" and (tgt.file.path contains "C:\\Program Files\\Vicarius\\Topia\\Trace\\TopiaTrace.log" or tgt.file.path contains "C:\\Program Files\\Vicarius\\Topia\\Topia.config" or tgt.file.path contains "C:\\Program Files\\Vicarius\\topiaInstaller.log" or tgt.file.path contains "C:\\Program Files\\Vicarius\\Topia\\topiad.exe"))
+```
+
+
+# Original Sigma Rule:
+```yaml
+title: Potential Vicarius vRx RMM Tool File Activity
+id: cca0bcea-887d-5e8b-a08b-4139e8ed7122
+status: experimental
+description: |
+    Detects potential files activity of Vicarius vRx RMM tool
+references:
+    - https://github.com/magicsword-io/LOLRMM
+author: LOLRMM Project
+date: 2026-10-05
+tags:
+    - attack.command-and-control
+    - attack.t1219
+logsource:
+    product: windows
+    category: file_event
+detection:
+    selection:
+        TargetFilename|endswith:
+            - 'C:\Program Files\Vicarius\Topia\Trace\TopiaTrace.log'
+            - 'C:\Program Files\Vicarius\Topia\Topia.config'
+            - 'C:\Program Files\Vicarius\topiaInstaller.log'
+            - 'C:\Program Files\Vicarius\Topia\topiad.exe'
+    condition: selection
+falsepositives:
+    - Legitimate use of Vicarius vRx
+level: medium
+```
