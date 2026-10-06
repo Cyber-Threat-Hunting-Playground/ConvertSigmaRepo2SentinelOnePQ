@@ -1,0 +1,26 @@
+title: Possible preparation for deploy.dll DLL Hijacking
+id: 4710672b-3801-48a3-5206-5b9ff8527656
+status: experimental
+description: Detects possible DLL hijacking of deploy.dll by looking for suspicious file writes of this DLL, to unexpected locations.
+references:
+    - https://hijacklibs.net/entries/3rd_party/oracle/deploy.html
+author: "Liran Ravich"
+date: 2026-10-01
+tags:
+    - attack.defense_evasion
+    - attack.T1574.001
+logsource:
+    product: windows
+    category: file_event
+detection:
+    selection:
+        TargetFileName: '*\deploy.dll'
+    filter:
+        TargetFileName:
+            - 'c:\program files\Java\\*\bin\\*'
+            - 'c:\program files (x86)\Java\\*\bin\\*'
+
+    condition: selection and not filter
+falsepositives:
+    - False positives are likely. This rule is more suitable for hunting than for generating detections.
+
