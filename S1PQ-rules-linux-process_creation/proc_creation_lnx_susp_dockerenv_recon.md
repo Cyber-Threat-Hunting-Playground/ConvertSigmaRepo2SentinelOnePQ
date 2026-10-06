@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 05-10-2026 03:02:56):
+// Translated content (automatically translated on 06-10-2026 03:52:03):
 event.type="Process Creation" and (endpoint.os="linux" and ((tgt.process.image.path contains "/cat" or tgt.process.image.path contains "/dir" or tgt.process.image.path contains "/find" or tgt.process.image.path contains "/ls" or tgt.process.image.path contains "/stat" or tgt.process.image.path contains "/test" or tgt.process.image.path contains "grep") and tgt.process.cmdline contains ".dockerenv"))
 ```
 
