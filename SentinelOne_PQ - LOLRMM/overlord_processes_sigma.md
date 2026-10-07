@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 06-10-2026 03:43:55):
+// Translated content (automatically translated on 07-10-2026 03:11:23):
 event.type="Process Creation" and (endpoint.os="windows" and ((src.process.image.path contains "\\AppData\\Roaming\\Microsoft\\DeviceSync\\svchost.exe" or src.process.image.path="*\\ovd_*.exe" or src.process.image.path contains "\\AppData\\Roaming\\Microsoft\\Windows\\Start Menu\\Programs\\Startup\\svchost.exe" or src.process.image.path contains "\\AppData\\Roaming\\Overlord\\agent.exe" or src.process.image.path="*\\svchost-windows-amd64-*.exe" or src.process.image.path="*\\agent-windows-amd64-*.exe") or (tgt.process.image.path contains "\\AppData\\Roaming\\Microsoft\\DeviceSync\\svchost.exe" or tgt.process.image.path="*\\ovd_*.exe" or tgt.process.image.path contains "\\AppData\\Roaming\\Microsoft\\Windows\\Start Menu\\Programs\\Startup\\svchost.exe" or tgt.process.image.path contains "\\AppData\\Roaming\\Overlord\\agent.exe" or tgt.process.image.path="*\\svchost-windows-amd64-*.exe" or tgt.process.image.path="*\\agent-windows-amd64-*.exe")))
 ```
 
