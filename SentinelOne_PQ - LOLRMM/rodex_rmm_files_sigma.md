@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 07-10-2026 03:11:23):
+// Translated content (automatically translated on 08-10-2026 03:27:06):
 event.category="file" and (endpoint.os="windows" and (tgt.file.path contains "RodexAgent.exe" or tgt.file.path contains "C:\\Windows\\<random-6-9-char>.exe" or tgt.file.path contains "<impersonated-org>Agent.exe"))
 ```
 

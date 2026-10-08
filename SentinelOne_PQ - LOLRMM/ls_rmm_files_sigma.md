@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 07-10-2026 03:11:23):
+// Translated content (automatically translated on 08-10-2026 03:27:06):
 event.category="file" and (endpoint.os="windows" and (tgt.file.path contains "\\LS RMM\\LS RMM.exe" or tgt.file.path contains "\\LS RMM\\LS RMM Worker.exe" or tgt.file.path contains "\\LS RMM\\LS RMM-Update.exe" or tgt.file.path contains "\\LS RMM\\LSRMMupdate.txt" or tgt.file.path contains "\\LS RMM\\SC.exe" or tgt.file.path contains "\\LS RMM\\SC.bmp"))
 ```
 
