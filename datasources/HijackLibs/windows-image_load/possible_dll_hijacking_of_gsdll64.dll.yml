@@ -1,0 +1,26 @@
+title: Possible DLL Hijacking of gsdll64.dll
+id: 4278011b-2030-48a3-9357-5b9ff8936994
+status: experimental
+description: Detects possible DLL hijacking of gsdll64.dll by looking for suspicious image loads, loading this DLL from unexpected locations.
+references:
+    - https://hijacklibs.net/entries/3rd_party/artifex/gsdll64.html
+author: "Liran Ravich"
+date: 2026-10-04
+tags:
+    - attack.defense_evasion
+    - attack.T1574.001
+logsource:
+    product: windows
+    category: image_load
+detection:
+    selection:
+        ImageLoaded: '*\gsdll64.dll'
+    filter:
+        ImageLoaded:
+            - 'c:\program files\gs\gs*\bin\\*'
+            - 'c:\program files (x86)\gs\gs*\bin\\*'
+
+    condition: selection and not filter
+falsepositives:
+    - False positives are likely. This rule is more suitable for hunting than for generating detections.
+

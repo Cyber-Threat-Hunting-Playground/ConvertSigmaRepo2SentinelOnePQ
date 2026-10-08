@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 07-10-2026 04:54:33):
+// Translated content (automatically translated on 08-10-2026 05:04:48):
 event.type="Module Load" and (endpoint.os="windows" and (module.path contains "\\msimg32.dll" and (not (module.path contains "c:\\program files\\Haihaisoft PDF Reader\\" or module.path contains "c:\\program files (x86)\\Haihaisoft PDF Reader\\" or module.path contains "c:\\windows\\system32\\" or module.path contains "c:\\windows\\syswow64\\"))))
 ```
 
@@ -11,7 +11,7 @@ id: 7330221b-4026-48a3-2477-5b9ff8149851
 status: experimental
 description: Detects possible DLL hijacking of msimg32.dll by looking for suspicious image loads, loading this DLL from unexpected locations.
 references:
-    - https://hijacklibs.net/entries/microsoft/external/msimg32.html
+    - https://hijacklibs.net/entries/microsoft/built-in/msimg32.html
 author: "Jai Minton - HuntressLabs"
 date: 2025-04-10
 tags:
