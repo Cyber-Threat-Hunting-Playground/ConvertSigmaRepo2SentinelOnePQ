@@ -330,6 +330,33 @@ falsepositives:
     - False positives are likely. This rule is more suitable for hunting than for generating detections.
 
 ---
+title: Possible preparation for gsdll64.dll DLL Hijacking
+id: 4278012b-2030-48a3-9357-5b9ff8936994
+status: experimental
+description: Detects possible DLL hijacking of gsdll64.dll by looking for suspicious file writes of this DLL, to unexpected locations.
+references:
+    - https://hijacklibs.net/entries/3rd_party/artifex/gsdll64.html
+author: "Liran Ravich"
+date: 2026-10-04
+tags:
+    - attack.defense_evasion
+    - attack.T1574.001
+logsource:
+    product: windows
+    category: file_event
+detection:
+    selection:
+        TargetFileName: '*\gsdll64.dll'
+    filter:
+        TargetFileName:
+            - 'c:\program files\gs\gs*\bin\\*'
+            - 'c:\program files (x86)\gs\gs*\bin\\*'
+
+    condition: selection and not filter
+falsepositives:
+    - False positives are likely. This rule is more suitable for hunting than for generating detections.
+
+---
 title: Possible preparation for asio.dll DLL Hijacking
 id: 9960552b-9521-48a3-3514-5b9ff8250192
 status: experimental
@@ -10820,6 +10847,38 @@ falsepositives:
     - False positives are likely. This rule is more suitable for hunting than for generating detections.
 
 ---
+title: Possible preparation for msimg32.dll DLL Hijacking
+id: 7330222b-4026-48a3-2477-5b9ff8149851
+status: experimental
+description: Detects possible DLL hijacking of msimg32.dll by looking for suspicious file writes of this DLL, to unexpected locations.
+references:
+    - https://hijacklibs.net/entries/microsoft/built-in/msimg32.html
+author: "Jai Minton - HuntressLabs"
+date: 2025-04-10
+tags:
+    - attack.defense_evasion
+    - attack.T1574.001
+logsource:
+    product: windows
+    category: file_event
+detection:
+    selection:
+        TargetFileName: '*\msimg32.dll'
+    filter:
+        TargetFileName:
+            - 'c:\program files\Haihaisoft PDF Reader\\*'
+            - 'c:\program files (x86)\Haihaisoft PDF Reader\\*'
+            - 'c:\windows\system32\\*'
+            - 'c:\windows\syswow64\\*'
+            - 'c:\windows\winsxs\*'
+            - 'c:\$windows.~bt\*'
+            - 'c:\windows\softwaredistribution\*'
+
+    condition: selection and not filter
+falsepositives:
+    - False positives are likely. This rule is more suitable for hunting than for generating detections.
+
+---
 title: Possible preparation for msiso.dll DLL Hijacking
 id: 4875422b-2028-48a3-1241-5b9ff8636274
 status: experimental
@@ -17731,38 +17790,6 @@ detection:
         TargetFileName:
             - 'c:\program files\msn messenger\\*'
             - 'c:\program files (x86)\msn messenger\\*'
-
-    condition: selection and not filter
-falsepositives:
-    - False positives are likely. This rule is more suitable for hunting than for generating detections.
-
----
-title: Possible preparation for msimg32.dll DLL Hijacking
-id: 7330222b-4026-48a3-2477-5b9ff8149851
-status: experimental
-description: Detects possible DLL hijacking of msimg32.dll by looking for suspicious file writes of this DLL, to unexpected locations.
-references:
-    - https://hijacklibs.net/entries/microsoft/external/msimg32.html
-author: "Jai Minton - HuntressLabs"
-date: 2025-04-10
-tags:
-    - attack.defense_evasion
-    - attack.T1574.001
-logsource:
-    product: windows
-    category: file_event
-detection:
-    selection:
-        TargetFileName: '*\msimg32.dll'
-    filter:
-        TargetFileName:
-            - 'c:\program files\Haihaisoft PDF Reader\\*'
-            - 'c:\program files (x86)\Haihaisoft PDF Reader\\*'
-            - 'c:\windows\system32\\*'
-            - 'c:\windows\syswow64\\*'
-            - 'c:\windows\winsxs\*'
-            - 'c:\$windows.~bt\*'
-            - 'c:\windows\softwaredistribution\*'
 
     condition: selection and not filter
 falsepositives:

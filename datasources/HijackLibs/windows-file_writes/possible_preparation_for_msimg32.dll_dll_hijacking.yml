@@ -3,7 +3,7 @@ id: 7330222b-4026-48a3-2477-5b9ff8149851
 status: experimental
 description: Detects possible DLL hijacking of msimg32.dll by looking for suspicious file writes of this DLL, to unexpected locations.
 references:
-    - https://hijacklibs.net/entries/microsoft/external/msimg32.html
+    - https://hijacklibs.net/entries/microsoft/built-in/msimg32.html
 author: "Jai Minton - HuntressLabs"
 date: 2025-04-10
 tags:
