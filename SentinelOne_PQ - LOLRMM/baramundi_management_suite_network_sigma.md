@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 08-10-2026 03:27:06):
+// Translated content (automatically translated on 09-10-2026 03:32:42):
 (event.category in ("dns","url","ip")) and (endpoint.os="windows" and ((url.address contains ".baramundi.com" or url.address contains "www.baramundi.com" or url.address contains "docs.baramundi.com" or url.address contains "isodownload.baramundi.com") or (event.dns.request contains ".baramundi.com" or event.dns.request contains "www.baramundi.com" or event.dns.request contains "docs.baramundi.com" or event.dns.request contains "isodownload.baramundi.com")))
 ```
 
