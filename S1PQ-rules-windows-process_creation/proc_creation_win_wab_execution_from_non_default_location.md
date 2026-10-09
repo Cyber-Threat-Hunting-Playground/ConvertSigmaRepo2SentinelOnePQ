@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 08-10-2026 05:43:16):
+// Translated content (automatically translated on 09-10-2026 05:47:27):
 event.type="Process Creation" and (endpoint.os="windows" and ((tgt.process.image.path contains "\\wab.exe" or tgt.process.image.path contains "\\wabmig.exe") and (not (tgt.process.image.path contains "C:\\Windows\\WinSxS\\" or tgt.process.image.path contains "C:\\Program Files\\Windows Mail\\" or tgt.process.image.path contains "C:\\Program Files (x86)\\Windows Mail\\"))))
 ```
 
