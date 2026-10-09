@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 08-10-2026 05:04:48):
+// Translated content (automatically translated on 09-10-2026 05:07:44):
 event.type="Module Load" and (endpoint.os="windows" and (module.path contains "\\vim64.dll" and (not (module.path contains "c:\\program files\\Vim\\" or module.path contains "c:\\program files (x86)\\Vim\\" or module.path="c:\\program files\\Vim\\vim*\\*" or module.path="c:\\program files (x86)\\Vim\\vim*\\*"))))
 ```
 
