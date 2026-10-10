@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 09-10-2026 03:32:42):
+// Translated content (automatically translated on 10-10-2026 03:12:59):
 (event.category in ("dns","url","ip")) and (endpoint.os="windows" and ((url.address contains "user_managed" or url.address contains "simple-help.com" or url.address contains "51.255.19.178" or url.address contains "51.255.19.179") or (event.dns.request contains "user_managed" or event.dns.request contains "simple-help.com" or event.dns.request contains "51.255.19.178" or event.dns.request contains "51.255.19.179")))
 ```
 
@@ -15,7 +15,7 @@ references:
     - https://github.com/magicsword-io/LOLRMM
 author: LOLRMM Project
 date: 2025-12-01
-modified: 2026-10-05
+modified: 2026-10-09
 tags:
     - attack.command-and-control
     - attack.t1219

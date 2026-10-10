@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 09-10-2026 03:32:42):
+// Translated content (automatically translated on 10-10-2026 03:12:59):
 event.type="Process Creation" and (endpoint.os="windows" and ((src.process.image.path contains "\\BASupSrvc.exe" or src.process.image.path contains "\\winagent.exe" or src.process.image.path contains "\\BASupApp.exe" or src.process.image.path contains "\\BASupTSHelper.exe" or src.process.image.path="*\\Agent_*_RW.exe" or src.process.image.path contains "\\BASEClient.exe" or src.process.image.path contains "\\BASupSrvcCnfg.exe") or (tgt.process.image.path contains "\\BASupSrvc.exe" or tgt.process.image.path contains "\\winagent.exe" or tgt.process.image.path contains "\\BASupApp.exe" or tgt.process.image.path contains "\\BASupTSHelper.exe" or tgt.process.image.path="*\\Agent_*_RW.exe" or tgt.process.image.path contains "\\BASEClient.exe" or tgt.process.image.path contains "\\BASupSrvcCnfg.exe")))
 ```
 
@@ -15,7 +15,7 @@ references:
     - https://github.com/magicsword-io/LOLRMM
 author: LOLRMM Project
 date: 2025-12-01
-modified: 2026-10-05
+modified: 2026-10-09
 tags:
     - attack.command-and-control
     - attack.t1219

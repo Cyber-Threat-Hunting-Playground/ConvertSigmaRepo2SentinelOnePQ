@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 09-10-2026 03:32:42):
+// Translated content (automatically translated on 10-10-2026 03:12:59):
 event.category="file" and (endpoint.os="windows" and (tgt.file.path contains "C:\\Program Files\\Lunixar\\Lunixar.dll" or tgt.file.path contains "C:\\Program Files\\Lunixar\\Lunixar.Agent.Core.dll" or tgt.file.path contains "C:\\Program Files\\Lunixar\\LunixarRemote.exe" or tgt.file.path contains "C:\\Program Files\\Lunixar\\LunixarRemote.dll" or tgt.file.path contains "C:\\Program Files\\Lunixar\\LunixarUpdater.exe" or tgt.file.path contains "C:\\Program Files\\Lunixar\\LunixarUpdater.dll"))
 ```
 

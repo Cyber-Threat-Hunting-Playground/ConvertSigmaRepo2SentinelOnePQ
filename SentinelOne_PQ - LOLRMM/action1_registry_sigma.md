@@ -1,6 +1,6 @@
 ```sql
-// Translated content (automatically translated on 09-10-2026 03:32:42):
-event.category="registry" and (endpoint.os="windows" and (registry.keyPath contains "HKLM\\System\\CurrentControlSet\\Services\\A1Agent" or registry.keyPath contains "HKLM\\SOFTWARE\\WOW6432Node\\Microsoft\\Windows\\Windows Error Reporting\\LocalDumps\\action1_agent.exe" or registry.keyPath contains "HKLM\\SOFTWARE\\WOW6432Node\\Action1"))
+// Translated content (automatically translated on 10-10-2026 03:12:59):
+event.category="registry" and (endpoint.os="windows" and (registry.keyPath contains "HKLM\\System\\CurrentControlSet\\Services\\A1Agent" or registry.keyPath contains "HKLM\\SOFTWARE\\WOW6432Node\\Microsoft\\Windows\\Windows Error Reporting\\LocalDumps\\action1_agent.exe" or registry.keyPath contains "HKLM\\SOFTWARE\\WOW6432Node\\Action1" or registry.keyPath contains "HKLM\\Software\\Action1\\Agent"))
 ```
 
 
@@ -15,7 +15,7 @@ references:
     - https://github.com/magicsword-io/LOLRMM
 author: LOLRMM Project
 date: 2025-12-01
-modified: 2026-09-02
+modified: 2026-10-09
 tags:
     - attack.command-and-control
     - attack.t1219
@@ -28,6 +28,7 @@ detection:
             - 'HKLM\System\CurrentControlSet\Services\A1Agent'
             - 'HKLM\SOFTWARE\WOW6432Node\Microsoft\Windows\Windows Error Reporting\LocalDumps\action1_agent.exe'
             - 'HKLM\SOFTWARE\WOW6432Node\Action1'
+            - 'HKLM\Software\Action1\Agent'
     condition: selection
 falsepositives:
     - Legitimate use of Action1

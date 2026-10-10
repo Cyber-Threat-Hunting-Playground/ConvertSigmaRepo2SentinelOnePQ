@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 09-10-2026 03:32:42):
+// Translated content (automatically translated on 10-10-2026 03:12:59):
 (event.category in ("dns","url","ip")) and (endpoint.os="windows" and ((url.address contains ".ngrok-free.app" or url.address contains ".ngrok.app" or url.address contains ".ngrok.io" or url.address contains ".ngrok.com" or url.address contains "pandoramods.top" or url.address contains "savaliyapriyal874-code.github.io") or (event.dns.request contains ".ngrok-free.app" or event.dns.request contains ".ngrok.app" or event.dns.request contains ".ngrok.io" or event.dns.request contains ".ngrok.com" or event.dns.request contains "pandoramods.top" or event.dns.request contains "savaliyapriyal874-code.github.io")))
 ```
 

@@ -1,6 +1,6 @@
 ```sql
-// Translated content (automatically translated on 09-10-2026 03:32:42):
-event.category="file" and (endpoint.os="windows" and (tgt.file.path="*C:\\Program Files*\\ScreenConnect\\App_Data\\Session.db" or tgt.file.path="*C:\\Program Files*\\ScreenConnect\\App_Data\\User.xml" or tgt.file.path="*C:\\ProgramData\\ScreenConnect Client*\\user.config" or tgt.file.path="*C:\\Program Files (x86)\\ScreenConnect Client (*)\\system.config" or tgt.file.path="*C:\\Program Files*\\ScreenConnect Client*\\app.config" or tgt.file.path contains "C:\\Windows\\SystemTemp\\ScreenConnect\*"))
+// Translated content (automatically translated on 10-10-2026 03:12:59):
+event.category="file" and (endpoint.os="windows" and (tgt.file.path="*C:\\Program Files*\\ScreenConnect\\App_Data\\Session.db" or tgt.file.path="*C:\\Program Files*\\ScreenConnect\\App_Data\\User.xml" or tgt.file.path="*C:\\ProgramData\\ScreenConnect Client*\\user.config" or tgt.file.path="*C:\\Program Files (x86)\\ScreenConnect Client (*)\\system.config" or tgt.file.path="*C:\\Program Files*\\ScreenConnect Client*\\app.config" or tgt.file.path contains "C:\\Windows\\SystemTemp\\ScreenConnect\*" or tgt.file.path="*C:\\Users\*\\Downloads\\ScreenConnect.ClientSetup*.exe" or tgt.file.path contains "C:\\Temp\\ScreenConnect.ClientSetup.msi" or tgt.file.path="*C:\\Users\\ScreenConnect.ClientSetup*.exe"))
 ```
 
 
@@ -15,7 +15,7 @@ references:
     - https://github.com/magicsword-io/LOLRMM
 author: LOLRMM Project
 date: 2025-12-01
-modified: 2026-10-05
+modified: 2026-10-09
 tags:
     - attack.command-and-control
     - attack.t1219
@@ -31,6 +31,9 @@ detection:
             - 'C:\Program Files (x86)\ScreenConnect Client (*)\system.config'
             - 'C:\Program Files*\ScreenConnect Client*\app.config'
             - 'C:\Windows\SystemTemp\ScreenConnect\*'
+            - 'C:\Users\*\Downloads\ScreenConnect.ClientSetup*.exe'
+            - 'C:\Temp\ScreenConnect.ClientSetup.msi'
+            - 'C:\Users\ScreenConnect.ClientSetup*.exe'
     condition: selection
 falsepositives:
     - Legitimate use of ScreenConnect

@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 09-10-2026 03:32:42):
+// Translated content (automatically translated on 10-10-2026 03:12:59):
 event.category="file" and (endpoint.os="windows" and (tgt.file.path contains "C:\\Program Files\\Remotely\\Remotely_Agent.exe" or tgt.file.path contains "C:\\Program Files\\Remotely\\Desktop\\Remotely_Desktop.exe" or tgt.file.path contains "C:\\Program Files\\Remotely\\ConnectionInfo.json" or tgt.file.path contains "C:\\Program Files\\Remotely\\etag.txt" or tgt.file.path contains "%TEMP%\\Remotely_Install.txt"))
 ```
 

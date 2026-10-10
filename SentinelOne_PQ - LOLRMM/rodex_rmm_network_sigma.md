@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 09-10-2026 03:32:42):
+// Translated content (automatically translated on 10-10-2026 03:12:59):
 (event.category in ("dns","url","ip")) and (endpoint.os="windows" and ((url.address contains "rodex.cc" or url.address contains "www.rodex.cc" or url.address contains "<operator-controlled VPS hostname or IP>") or (event.dns.request contains "rodex.cc" or event.dns.request contains "www.rodex.cc" or event.dns.request contains "<operator-controlled VPS hostname or IP>")))
 ```
 
