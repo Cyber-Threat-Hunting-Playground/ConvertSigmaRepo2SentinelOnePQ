@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 09-10-2026 05:47:27):
+// Translated content (automatically translated on 10-10-2026 05:30:25):
 event.type="Process Creation" and (endpoint.os="windows" and (tgt.process.image.path contains "\\gpresult.exe" and (tgt.process.cmdline contains "/z" or tgt.process.cmdline contains "/v")))
 ```
 
