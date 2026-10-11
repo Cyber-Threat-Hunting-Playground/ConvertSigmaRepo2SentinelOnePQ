@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 10-10-2026 03:12:59):
+// Translated content (automatically translated on 11-10-2026 02:45:35):
 event.category="file" and (endpoint.os="windows" and (tgt.file.path contains "C:\\ProgramData\\NetMaster\\NetMaster_Client.exe" or tgt.file.path contains "C:\\ProgramData\\NetMaster\\config.ini" or tgt.file.path contains "C:\\ProgramData\\NetMaster\\log.txt"))
 ```
 

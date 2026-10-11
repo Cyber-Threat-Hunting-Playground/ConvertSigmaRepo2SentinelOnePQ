@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 10-10-2026 03:12:59):
+// Translated content (automatically translated on 11-10-2026 02:45:35):
 event.category="registry" and (endpoint.os="windows" and (registry.keyPath contains "HKLM\\SOFTWARE\\Veyon Solutions" or registry.keyPath contains "HKLM\\SYSTEM\\CurrentControlSet\\Services\\VeyonService"))
 ```
 
