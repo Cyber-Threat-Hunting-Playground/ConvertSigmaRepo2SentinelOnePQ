@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 11-10-2026 02:45:35):
+// Translated content (automatically translated on 12-10-2026 03:08:56):
 event.category="file" and (endpoint.os="windows" and (tgt.file.path contains "C:\\Windows\\Temp\\VeyonServer.log" or tgt.file.path contains "C:\\Windows\\Temp\\VeyonService.log" or tgt.file.path contains "C:\\Users\*\\AppData\\Local\\VeyonCLI.log"))
 ```
 
