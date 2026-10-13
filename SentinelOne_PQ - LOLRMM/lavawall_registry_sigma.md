@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 12-10-2026 03:08:56):
+// Translated content (automatically translated on 13-10-2026 04:24:45):
 event.category="registry" and (endpoint.os="windows" and (registry.keyPath contains "HKLM\\SOFTWARE\\WOW6432Node\\LavaWall\\Agent" or registry.keyPath contains "HKLM\\SYSTEM\\CurrentControlSet\\Services\\Lavawall Support Agent" or registry.keyPath contains "HKLM\\SYSTEM\\CurrentControlSet\\Services\\LavaWallRemoteAgent"))
 ```
 
