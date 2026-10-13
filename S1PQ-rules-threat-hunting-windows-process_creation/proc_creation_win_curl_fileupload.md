@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 12-10-2026 03:02:35):
+// Translated content (automatically translated on 13-10-2026 04:17:59):
 event.type="Process Creation" and (endpoint.os="windows" and (((tgt.process.image.path contains "\\curl.exe" or tgt.process.displayName="The curl executable") and ((tgt.process.cmdline contains " --form" or tgt.process.cmdline contains " --upload-file " or tgt.process.cmdline contains " --data " or tgt.process.cmdline contains " --data-") or tgt.process.cmdline matches "\\s-[FTd]\\s")) and (not (tgt.process.cmdline contains "://localhost" or tgt.process.cmdline contains "://127.0.0.1"))))
 ```
 
