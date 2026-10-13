@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 12-10-2026 05:36:43):
+// Translated content (automatically translated on 13-10-2026 06:32:56):
 event.type="Process Creation" and (endpoint.os="windows" and ((tgt.process.integrityLevel in ("High","System","S-1-16-16384","S-1-16-12288")) and src.process.image.path contains "\\ieinstal.exe" and tgt.process.image.path contains "\\AppData\\Local\\Temp\\" and tgt.process.image.path contains "consent.exe"))
 ```
 
