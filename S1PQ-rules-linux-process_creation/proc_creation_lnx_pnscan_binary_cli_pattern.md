@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 13-10-2026 04:33:46):
+// Translated content (automatically translated on 14-10-2026 02:43:14):
 event.type="Process Creation" and (endpoint.os="linux" and tgt.process.cmdline matches "-(W|R)\\s?(\\s|"|')([0-9a-fA-F]{2}\\s?){2,20}(\\s|"|')")
 ```
 
