@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 14-10-2026 02:34:47):
+// Translated content (automatically translated on 15-10-2026 02:15:07):
 event.category="registry" and (endpoint.os="windows" and registry.keyPath contains "HKLM\\SYSTEM\\CurrentControlSet\\Services\\nezha-agent")
 ```
 

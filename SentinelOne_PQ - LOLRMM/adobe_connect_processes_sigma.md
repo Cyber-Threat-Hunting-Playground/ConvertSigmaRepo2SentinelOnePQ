@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 14-10-2026 02:34:47):
+// Translated content (automatically translated on 15-10-2026 02:15:07):
 event.type="Process Creation" and (endpoint.os="windows" and ((src.process.image.path="*\\ConnectAppSetup*.exe" or src.process.image.path="*\\ConnectShellSetup*.exe" or src.process.image.path contains "\\Connect.exe" or src.process.image.path contains "\\ConnectDetector.exe") or (tgt.process.image.path="*\\ConnectAppSetup*.exe" or tgt.process.image.path="*\\ConnectShellSetup*.exe" or tgt.process.image.path contains "\\Connect.exe" or tgt.process.image.path contains "\\ConnectDetector.exe")))
 ```
 
