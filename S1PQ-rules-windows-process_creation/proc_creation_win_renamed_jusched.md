@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 14-10-2026 04:33:53):
+// Translated content (automatically translated on 15-10-2026 04:16:21):
 event.type="Process Creation" and (endpoint.os="windows" and ((tgt.process.displayName in ("Java Update Scheduler","Java(TM) Update Scheduler")) and (not tgt.process.image.path contains "\\jusched.exe")))
 ```
 
