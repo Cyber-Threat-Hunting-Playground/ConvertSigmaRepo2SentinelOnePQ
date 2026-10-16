@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 15-10-2026 04:16:21):
+// Translated content (automatically translated on 16-10-2026 04:12:23):
 event.type="Process Creation" and (endpoint.os="windows" and ((tgt.process.cmdline contains "\\rundll32.exe" or tgt.process.cmdline contains "\\rundll32.exe\"" or tgt.process.cmdline contains "\\rundll32") and (not (src.process.image.path contains "\\AppData\\Local\\" or src.process.image.path contains "\\Microsoft\\Edge\\"))))
 ```
 
