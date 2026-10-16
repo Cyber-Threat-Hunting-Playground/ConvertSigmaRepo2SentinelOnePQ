@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 15-10-2026 03:02:55):
+// Translated content (automatically translated on 16-10-2026 02:59:54):
 event.type="Module Load" and (endpoint.os="windows" and (src.process.image.path contains "\\coregen.exe" and (not (module.path contains "C:\\Program Files (x86)\\Microsoft Silverlight\\" or module.path contains "C:\\Program Files\\Microsoft Silverlight\\" or module.path contains "C:\\Windows\\System32\\" or module.path contains "C:\\Windows\\SysWOW64\\"))))
 ```
 
