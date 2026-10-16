@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 15-10-2026 02:22:29):
+// Translated content (automatically translated on 16-10-2026 02:15:58):
 event.type="Process Creation" and (endpoint.os="linux" and (tgt.process.image.path contains "/wget" and (tgt.process.cmdline matches "\\s-O\\s" or tgt.process.cmdline contains "--output-document") and tgt.process.cmdline contains "/tmp/"))
 ```
 
