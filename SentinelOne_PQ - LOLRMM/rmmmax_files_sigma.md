@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 16-10-2026 02:06:46):
+// Translated content (automatically translated on 17-10-2026 02:00:31):
 event.category="file" and (endpoint.os="windows" and (tgt.file.path contains "%ProgramData%\\rmmmax\\AgentService\\RMMmaxAgentService.exe" or tgt.file.path contains "%ProgramData%\\RMMmax\\AgentService\\activity.log" or tgt.file.path="*%SystemRoot%\\Temp\\rmmmax_*.ps1"))
 ```
 

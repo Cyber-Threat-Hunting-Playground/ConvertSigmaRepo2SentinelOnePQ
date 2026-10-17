@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 16-10-2026 02:06:46):
+// Translated content (automatically translated on 17-10-2026 02:00:31):
 event.category="file" and (endpoint.os="windows" and (tgt.file.path contains "C:\\Program Files\\RemoteAgent\\RemoteAgentAgent.exe" or tgt.file.path contains "C:\\Program Files\\RemoteAgent\\config.json" or tgt.file.path contains "C:\\Windows\\Temp\\RemoteAgent.msi"))
 ```
 

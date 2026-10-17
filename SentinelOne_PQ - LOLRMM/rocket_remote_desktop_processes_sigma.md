@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 16-10-2026 02:06:46):
+// Translated content (automatically translated on 17-10-2026 02:00:31):
 event.type="Process Creation" and (endpoint.os="windows" and ((src.process.image.path contains "\\RDConsole.exe" or src.process.image.path contains "\\RocketRemoteDesktop_Setup.exe") or (tgt.process.image.path contains "\\RDConsole.exe" or tgt.process.image.path contains "\\RocketRemoteDesktop_Setup.exe")))
 ```
 
