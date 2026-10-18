@@ -1,0 +1,58 @@
+```sql
+// Translated content (automatically translated on 18-10-2026 02:08:21):
+event.type="Process Creation" and (endpoint.os="linux" and (((tgt.process.image.path contains "/ash" or tgt.process.image.path contains "/bash" or tgt.process.image.path contains "/busybox" or tgt.process.image.path contains "/csh" or tgt.process.image.path contains "/dash" or tgt.process.image.path contains "/fish" or tgt.process.image.path contains "/ksh" or tgt.process.image.path contains "/sh" or tgt.process.image.path contains "/tcsh" or tgt.process.image.path contains "/zsh") and src.process.cmdline contains "celery") and ((src.process.image.path contains "/python" or src.process.image.path contains "/python3") or src.process.image.path contains "/python3.")))
+```
+
+
+# Original Sigma Rule:
+```yaml
+title: Shell Spawned by Celery Worker Process
+id: 904f6442-3b57-4b3f-987c-1559f58ce8d8
+status: experimental
+description: |
+    Detects a system shell interpreter being spawned directly by a Celery worker process.
+    This behavior indicates a Python background task execution framework is evaluating raw string input through a shell execution context,
+    which is highly indicative of successful command or prompt injection exploitation against an LLM agent task.
+references:
+    - https://docs.celeryq.dev/en/stable/userguide/tasks.html
+    - https://genai.owasp.org/llmrisk/llm01-prompt-injection/
+    - https://labs.cloudsecurityalliance.org/research/csa-research-note-promptware-c2-agent-exploitation-20260406/
+    - https://nvd.nist.gov/vuln/detail/CVE-2021-23727
+    - https://owasp.org/www-project-top-10-for-large-language-model-applications/
+    - https://security.snyk.io/vuln/SNYK-PYTHON-CELERY-2314953
+    - https://snyk.io/blog/python-rce-vulnerability/
+    - https://unit42.paloaltonetworks.com/ai-agent-prompt-injection/
+    - https://www.microsoft.com/en-us/security/blog/2026/05/07/prompts-become-shells-rce-vulnerabilities-ai-agent-frameworks
+author: Jennifer Batina
+date: 2026-10-17
+tags:
+    - attack.execution
+    - attack.t1059.004
+logsource:
+    category: process_creation
+    product: linux
+detection:
+    selection_img:
+        Image|endswith:
+            - '/ash'
+            - '/bash'
+            - '/busybox'
+            - '/csh'
+            - '/dash'
+            - '/fish'
+            - '/ksh'
+            - '/sh'
+            - '/tcsh'
+            - '/zsh'
+        ParentCommandLine|contains: 'celery'
+    selection_parent:
+        - ParentImage|endswith:
+              - '/python'
+              - '/python3'
+        - ParentImage|contains: '/python3.'
+    condition: all of selection_*
+falsepositives:
+    - Legacy or custom administrative tasks deliberately hardcoded with shell=True or os.system execution inside Celery task functions.
+    - Media processing, deployment, or reporting pipelines that intentionally shell out to external tools (e.g. ffmpeg, git) from within a task.
+level: medium
+```
