@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 18-10-2026 03:34:39):
+// Translated content (automatically translated on 19-10-2026 03:45:12):
 event.type="Module Load" and (endpoint.os="windows" and (module.path contains "\\gsdll64.dll" and (not (module.path="c:\\program files\\gs\\gs*\\bin\\*" or module.path="c:\\program files (x86)\\gs\\gs*\\bin\\*"))))
 ```
 
