@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 18-10-2026 01:59:51):
+// Translated content (automatically translated on 19-10-2026 02:16:59):
 event.category="file" and (endpoint.os="windows" and (tgt.file.path contains "\\Zecurit\\Agent\\ZecuritAgentService.exe" or tgt.file.path contains "\\Zecurit\\Agent\\ZecuritAgentRegister.exe" or tgt.file.path contains "\\Zecurit\\Agent\\ZecuritRemoteTools.exe" or tgt.file.path contains "\\Zecurit\\Agent\\ZecuritScreenReaderService.exe" or tgt.file.path contains "\\Zecurit\\Agent\\Logs\\agent_service.log" or tgt.file.path contains "\\Zecurit\\Agent\\Logs\\agent_cmd_handler.log" or tgt.file.path contains "\\Zecurit\\Agent\\Storage\\AgentSettings.json" or tgt.file.path contains "\\Zecurit\\ZecuritAgentUpgrader.exe" or tgt.file.path contains "\\Zecurit\\zecurit_windows_agent.exe" or tgt.file.path contains "\\ZecuritAgentInstaller.msi"))
 ```
 

@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 18-10-2026 01:59:51):
+// Translated content (automatically translated on 19-10-2026 02:16:59):
 event.category="file" and (endpoint.os="windows" and (tgt.file.path contains "ITAgentRMMSender.exe" or tgt.file.path contains "ITAgentRMMSenderSL.exe" or tgt.file.path contains "ITAgentRMMSenderUpdater.exe" or tgt.file.path contains "ITAgentSender.aiui"))
 ```
 
