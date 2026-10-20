@@ -1,6 +1,6 @@
 ```sql
-// Translated content (automatically translated on 19-10-2026 03:08:18):
-event.type="Process Creation" and (endpoint.os="osx" and (((tgt.process.image.path contains "/nc" or tgt.process.image.path contains "/netcat") and (not tgt.process.cmdline contains "l")) or (tgt.process.image.path contains "/nmap" or tgt.process.image.path contains "/telnet")))
+// Translated content (automatically translated on 20-10-2026 03:16:59):
+event.type="Process Creation" and (endpoint.os="osx" and (((tgt.process.image.path contains "/nc" or tgt.process.image.path contains "/netcat") and (not tgt.process.cmdline matches "\\s(?:--listen\\b|-[46DdknrtuUvz]{0,10}l[46DdknrtuUvz]{0,10})")) or (tgt.process.image.path contains "/nmap" or tgt.process.image.path contains "/telnet")))
 ```
 
 
@@ -14,7 +14,7 @@ references:
     - https://github.com/redcanaryco/atomic-red-team/blob/f339e7da7d05f6057fdfcdd3742bfcf365fee2a9/atomics/T1046/T1046.md
 author: Alejandro Ortuno, oscd.community
 date: 2020-10-21
-modified: 2021-11-27
+modified: 2026-10-19
 tags:
     - attack.discovery
     - attack.t1046
@@ -22,17 +22,17 @@ logsource:
     category: process_creation
     product: macos
 detection:
-    selection_1:
+    selection_netcat:
         Image|endswith:
             - '/nc'
             - '/netcat'
-    selection_2:
+    selection_other:
         Image|endswith:
             - '/nmap'
             - '/telnet'
-    filter:
-        CommandLine|contains: 'l'
-    condition: (selection_1 and not filter) or selection_2
+    filter_main_nc_listen:
+        CommandLine|re: '\s(?:--listen\b|-[46DdknrtuUvz]{0,10}l[46DdknrtuUvz]{0,10})'
+    condition: (selection_netcat and not 1 of filter_main_nc_*) or selection_other
 falsepositives:
     - Legitimate administration activities
 level: low
