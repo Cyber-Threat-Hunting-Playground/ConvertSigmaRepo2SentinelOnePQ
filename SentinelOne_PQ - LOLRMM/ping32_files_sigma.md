@@ -1,0 +1,44 @@
+```sql
+// Translated content (automatically translated on 20-10-2026 02:30:57):
+event.category="file" and (endpoint.os="windows" and (tgt.file.path contains "C:\\Program Files\\Common Files\\NSEC\\NSecRTS.exe" or tgt.file.path contains "C:\\Program Files\\Common Files\\NSEC\\PCinfo.dll" or tgt.file.path contains "C:\\Program Files (x86)\\Common Files\\NSEC\\NSecRTS.exe" or tgt.file.path contains "C:\\Program Files (x86)\\Common Files\\NSEC\\Data\*" or tgt.file.path contains "C:\\SmartSnap\*\*" or tgt.file.path contains "C:\\NSEC\\Debug\\Log\*.log" or tgt.file.path contains "C:\\NSecAgent\\Debug\\Log\*.log" or tgt.file.path contains "C:\\NSEC\\cache.ini" or tgt.file.path contains "C:\\Program Files (x86)\\Common Files\\NSecAgent\\data\\xConfig.db" or tgt.file.path contains "C:\\Program Files (x86)\\Common Files\\NSecAgent\\data\\recordcached.db" or tgt.file.path contains "nFsFlt32.sys" or tgt.file.path contains "NSecDs.exe" or tgt.file.path contains "NSOutlookAddin32.dll"))
+```
+
+
+# Original Sigma Rule:
+```yaml
+title: Potential Ping32 RMM Tool File Activity
+id: 152a5bad-3cae-5164-97d0-42a914cccb05
+status: experimental
+description: |
+    Detects potential files activity of Ping32 RMM tool
+references:
+    - https://github.com/magicsword-io/LOLRMM
+author: LOLRMM Project
+date: 2026-10-19
+tags:
+    - attack.command-and-control
+    - attack.t1219
+logsource:
+    product: windows
+    category: file_event
+detection:
+    selection:
+        TargetFilename|endswith:
+            - 'C:\Program Files\Common Files\NSEC\NSecRTS.exe'
+            - 'C:\Program Files\Common Files\NSEC\PCinfo.dll'
+            - 'C:\Program Files (x86)\Common Files\NSEC\NSecRTS.exe'
+            - 'C:\Program Files (x86)\Common Files\NSEC\Data\*'
+            - 'C:\SmartSnap\*\*'
+            - 'C:\NSEC\Debug\Log\*.log'
+            - 'C:\NSecAgent\Debug\Log\*.log'
+            - 'C:\NSEC\cache.ini'
+            - 'C:\Program Files (x86)\Common Files\NSecAgent\data\xConfig.db*'
+            - 'C:\Program Files (x86)\Common Files\NSecAgent\data\recordcached.db'
+            - 'nFsFlt32.sys'
+            - 'NSecDs.exe'
+            - 'NSOutlookAddin32.dll'
+    condition: selection
+falsepositives:
+    - Legitimate use of Ping32
+level: medium
+```

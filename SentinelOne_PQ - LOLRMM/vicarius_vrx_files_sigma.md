@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 19-10-2026 02:16:59):
+// Translated content (automatically translated on 20-10-2026 02:30:57):
 event.category="file" and (endpoint.os="windows" and (tgt.file.path contains "C:\\Program Files\\Vicarius\\Topia\\Trace\\TopiaTrace.log" or tgt.file.path contains "C:\\Program Files\\Vicarius\\Topia\\Topia.config" or tgt.file.path contains "C:\\Program Files\\Vicarius\\topiaInstaller.log" or tgt.file.path contains "C:\\Program Files\\Vicarius\\Topia\\topiad.exe"))
 ```
 

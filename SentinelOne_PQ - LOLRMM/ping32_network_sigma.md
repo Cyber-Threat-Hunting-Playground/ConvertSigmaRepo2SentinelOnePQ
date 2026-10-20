@@ -1,0 +1,31 @@
+```sql
+// Translated content (automatically translated on 20-10-2026 02:30:57):
+(event.category in ("dns","url","ip")) and (endpoint.os="windows" and (url.address contains "cloud.nsecsoft.com" or event.dns.request contains "cloud.nsecsoft.com"))
+```
+
+
+# Original Sigma Rule:
+```yaml
+title: Potential Ping32 RMM Tool Network Activity
+id: 4bcc3182-14ee-5b02-93cf-bcea33f43cc0
+status: experimental
+description: |
+    Detects potential network activity of Ping32 RMM tool
+references:
+    - https://github.com/magicsword-io/LOLRMM
+author: LOLRMM Project
+date: 2026-10-19
+tags:
+    - attack.command-and-control
+    - attack.t1219
+logsource:
+    product: windows
+    category: network_connection
+detection:
+    selection:
+        DestinationHostname|endswith: 'cloud.nsecsoft.com'
+    condition: selection
+falsepositives:
+    - Legitimate use of Ping32
+level: medium
+```

@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 19-10-2026 02:16:59):
+// Translated content (automatically translated on 20-10-2026 02:30:57):
 (event.category in ("dns","url","ip")) and (endpoint.os="windows" and ((url.address contains "lisa.rg-supervision.com" or url.address contains "api.rg-supervision.com" or url.address contains "dashboard.rg-supervision.com") or (event.dns.request contains "lisa.rg-supervision.com" or event.dns.request contains "api.rg-supervision.com" or event.dns.request contains "dashboard.rg-supervision.com")))
 ```
 
