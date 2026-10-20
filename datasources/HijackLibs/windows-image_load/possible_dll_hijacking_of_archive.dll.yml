@@ -1,0 +1,27 @@
+title: Possible DLL Hijacking of archive.dll
+id: 8775811b-3945-48a3-4754-5b9ff8760891
+status: experimental
+description: Detects possible DLL hijacking of archive.dll by looking for suspicious image loads, loading this DLL from unexpected locations.
+references:
+    - https://hijacklibs.net/entries/3rd_party/siemens/archive.html
+author: "Jose Oregon"
+date: 2026-10-16
+tags:
+    - attack.defense_evasion
+    - attack.T1574.001
+logsource:
+    product: windows
+    category: image_load
+detection:
+    selection:
+        ImageLoaded: '*\archive.dll'
+    filter:
+        ImageLoaded:
+            - 'c:\program files\Siemens\SoftwareCenter\\*'
+            - 'c:\program files (x86)\Siemens\SoftwareCenter\\*'
+            - 'c:\users\\*\appdata\local\Programs\Siemens\SoftwareCenter\\*'
+
+    condition: selection and not filter
+falsepositives:
+    - False positives are likely. This rule is more suitable for hunting than for generating detections.
+
