@@ -1,6 +1,6 @@
 ```sql
-// Translated content (automatically translated on 19-10-2026 03:06:50):
-event.type="Module Load" and (endpoint.os="windows" and ((module.path contains "\\log.dll" and (not ((module.path contains "C:\\Program Files\\Bitdefender Antivirus Free\\" or module.path contains "C:\\Program Files (x86)\\Bitdefender Antivirus Free\\") or (src.process.image.path="C:\\Program Files\\Dell\\SARemediation\\audit\\TelemetryUtility.exe" and (module.path in ("C:\\Program Files\\Dell\\SARemediation\\plugin\\log.dll","C:\\Program Files\\Dell\\SARemediation\\audit\\log.dll"))) or module.path contains "C:\\Program Files\\Canon\\MyPrinter\\" or (module.path in ("C:\\Program Files\\AVAST Software\\Avast\\log.dll","C:\\Program Files (x86)\\AVAST Software\\Avast\\log.dll")) or (module.path in ("C:\\Program Files\\AVG\\Antivirus\\log.dll","C:\\Program Files (x86)\\AVG\\Antivirus\\log.dll"))))) or (module.path contains "\\qrt.dll" and (not (module.path contains "C:\\Program Files\\F-Secure\\Anti-Virus\\" or module.path contains "C:\\Program Files (x86)\\F-Secure\\Anti-Virus\\"))) or ((module.path contains "\\ashldres.dll" or module.path contains "\\lockdown.dll" or module.path contains "\\vsodscpl.dll") and (not (module.path contains "C:\\Program Files\\McAfee\\" or module.path contains "C:\\Program Files (x86)\\McAfee\\"))) or (module.path contains "\\vftrace.dll" and (not (module.path contains "C:\\Program Files\\CyberArk\\Endpoint Privilege Manager\\Agent\\x32\\" or module.path contains "C:\\Program Files (x86)\\CyberArk\\Endpoint Privilege Manager\\Agent\\x32\\"))) or (module.path contains "\\wsc.dll" and (not ((module.path contains "C:\\program Files\\AVAST Software\\Avast\\" or module.path contains "C:\\program Files (x86)\\AVAST Software\\Avast\\") or (module.path contains "C:\\Program Files\\AVG\\Antivirus\\" or module.path contains "C:\\Program Files (x86)\\AVG\\Antivirus\\")))) or (module.path contains "\\tmdbglog.dll" and (not (module.path contains "C:\\program Files\\Trend Micro\\Titanium\\" or module.path contains "C:\\program Files (x86)\\Trend Micro\\Titanium\\"))) or (module.path contains "\\DLPPREM32.dll" and (not (module.path contains "C:\\program Files\\ESET" or module.path contains "C:\\program Files (x86)\\ESET")))))
+// Translated content (automatically translated on 20-10-2026 03:15:46):
+event.type="Module Load" and (endpoint.os="windows" and ((module.path contains "\\log.dll" and (not ((module.path contains "C:\\Program Files\\Bitdefender Antivirus Free\\" or module.path contains "C:\\Program Files (x86)\\Bitdefender Antivirus Free\\") or (src.process.image.path="C:\\Program Files\\Dell\\SARemediation\\audit\\TelemetryUtility.exe" and (module.path in ("C:\\Program Files\\Dell\\SARemediation\\plugin\\log.dll","C:\\Program Files\\Dell\\SARemediation\\audit\\log.dll"))) or module.path contains "C:\\Program Files\\Canon\\MyPrinter\\" or (module.path in ("C:\\Program Files\\AVAST Software\\Avast\\log.dll","C:\\Program Files (x86)\\AVAST Software\\Avast\\log.dll")) or (module.path in ("C:\\Program Files\\AVG\\Antivirus\\log.dll","C:\\Program Files (x86)\\AVG\\Antivirus\\log.dll"))))) or (module.path contains "\\qrt.dll" and (not (module.path contains "C:\\Program Files\\F-Secure\\Anti-Virus\\" or module.path contains "C:\\Program Files (x86)\\F-Secure\\Anti-Virus\\"))) or ((module.path contains "\\ashldres.dll" or module.path contains "\\lockdown.dll" or module.path contains "\\vsodscpl.dll") and (not (module.path contains "C:\\Program Files\\McAfee\\" or module.path contains "C:\\Program Files (x86)\\McAfee\\"))) or (module.path contains "\\vftrace.dll" and (not (module.path contains "C:\\Program Files\\CyberArk\\Endpoint Privilege Manager\\Agent\\x32\\" or module.path contains "C:\\Program Files (x86)\\CyberArk\\Endpoint Privilege Manager\\Agent\\x32\\"))) or (module.path contains "\\wsc.dll" and (not ((module.path contains "C:\\Program Files\\AVAST Software\\Avast\\" or module.path contains "C:\\Program Files (x86)\\AVAST Software\\Avast\\") or (module.path contains "C:\\Program Files\\AVG\\Antivirus\\" or module.path contains "C:\\Program Files (x86)\\AVG\\Antivirus\\")))) or (module.path contains "\\tmdbglog.dll" and (not (module.path contains "C:\\Program Files\\Trend Micro\\Titanium\\" or module.path contains "C:\\Program Files (x86)\\Trend Micro\\Titanium\\"))) or (module.path contains "\\DLPPREM32.dll" and (not (module.path contains "C:\\Program Files\\ESET" or module.path contains "C:\\Program Files (x86)\\ESET"))) or (module.path contains "\\SystemStatus.dll" and (not (module.path contains "C:\\Program Files\\Zillya Antivirus\\" or module.path contains "C:\\Program Files (x86)\\Zillya Antivirus\\" or module.path contains "C:\\Program Files\\Zillya Total Security\\" or module.path contains "C:\\Program Files (x86)\\Zillya Total Security\\" or module.path contains "C:\\Program Files\\Ovron Total Security\\" or module.path contains "C:\\Program Files (x86)\\Ovron Total Security\\")))))
 ```
 
 
@@ -9,12 +9,13 @@ event.type="Module Load" and (endpoint.os="windows" and ((module.path contains "
 title: Potential Antivirus Software DLL Sideloading
 id: 552b6b65-df37-4d3e-a258-f2fc4771ae54
 status: test
-description: Detects potential DLL sideloading of DLLs that are part of antivirus software suchas McAfee, Symantec...etc
+description: Detects potential DLL sideloading of DLLs that are part of antivirus software such as McAfee, Symantec...etc
 references:
     - https://hijacklibs.net/ # For list of DLLs that could be sideloaded (search for dlls mentioned here in there)
+    - https://www.huntress.com/blog/clickfix-matanbuchus-astarionrat-analysis
 author: Nasreddine Bencherchali (Nextron Systems), Wietze Beukema (project and research)
 date: 2022-08-17
-modified: 2025-10-07
+modified: 2026-10-19
 tags:
     - attack.persistence
     - attack.privilege-escalation
@@ -76,8 +77,8 @@ detection:
         ImageLoaded|endswith: '\wsc.dll'
     filter_wsc_dll_avast:
         ImageLoaded|startswith:
-            - 'C:\program Files\AVAST Software\Avast\'
-            - 'C:\program Files (x86)\AVAST Software\Avast\'
+            - 'C:\Program Files\AVAST Software\Avast\'
+            - 'C:\Program Files (x86)\AVAST Software\Avast\'
     filter_wsc_dll_avg:
         ImageLoaded|startswith:
             - 'C:\Program Files\AVG\Antivirus\'
@@ -87,15 +88,26 @@ detection:
         ImageLoaded|endswith: '\DLPPREM32.dll'
     filter_eset_deslock:
         ImageLoaded|startswith:
-            - 'C:\program Files\ESET'
-            - 'C:\program Files (x86)\ESET'
+            - 'C:\Program Files\ESET'
+            - 'C:\Program Files (x86)\ESET'
     # Trend Micro Titanium
     selection_titanium:
         ImageLoaded|endswith: '\tmdbglog.dll'
     filter_titanium:
         ImageLoaded|startswith:
-            - 'C:\program Files\Trend Micro\Titanium\'
-            - 'C:\program Files (x86)\Trend Micro\Titanium\'
+            - 'C:\Program Files\Trend Micro\Titanium\'
+            - 'C:\Program Files (x86)\Trend Micro\Titanium\'
+    # Zillya Antivirus
+    selection_zillya:
+        ImageLoaded|endswith: '\SystemStatus.dll'
+    filter_zillya_ovron:
+        ImageLoaded|startswith:
+            - 'C:\Program Files\Zillya Antivirus\'
+            - 'C:\Program Files (x86)\Zillya Antivirus\'
+            - 'C:\Program Files\Zillya Total Security\'
+            - 'C:\Program Files (x86)\Zillya Total Security\'
+            - 'C:\Program Files\Ovron Total Security\'
+            - 'C:\Program Files (x86)\Ovron Total Security\'
     condition: (selection_bitdefender and not 1 of filter_log_dll_*)
                or (selection_fsecure and not filter_fsecure)
                or (selection_mcafee and not filter_mcafee)
@@ -103,6 +115,7 @@ detection:
                or (selection_avast and not 1 of filter_wsc_dll_*)
                or (selection_titanium and not filter_titanium)
                or (selection_eset_deslock and not filter_eset_deslock)
+               or (selection_zillya and not filter_zillya_ovron)
 falsepositives:
     - Applications that load the same dlls mentioned in the detection section. Investigate them and filter them out if a lot FPs are caused.
     - Dell SARemediation plugin folder (C:\Program Files\Dell\SARemediation\plugin\log.dll) is known to contain the 'log.dll' file.
