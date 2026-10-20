@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 19-10-2026 04:18:57):
+// Translated content (automatically translated on 20-10-2026 04:30:00):
 event.type="Process Creation" and (endpoint.os="windows" and ((tgt.process.cmdline contains "\\Microsoft\\Teams\\Cookies" or tgt.process.cmdline contains "\\Microsoft\\Teams\\Local Storage\\leveldb") and (not tgt.process.image.path contains "\\Microsoft\\Teams\\current\\Teams.exe")))
 ```
 
