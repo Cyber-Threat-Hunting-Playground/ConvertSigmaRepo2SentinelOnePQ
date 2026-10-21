@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 20-10-2026 02:30:57):
+// Translated content (automatically translated on 21-10-2026 02:24:58):
 event.type="Process Creation" and (endpoint.os="windows" and ((src.process.image.path contains "C:\\Program Files (x86)\\N-able Technologies\\Windows Agent\\bin\\agent.exe" or src.process.image.path contains "\\AgentMaint.exe" or src.process.image.path contains "\\AgentMonitor.exe" or src.process.image.path contains "\\BASupTSHelper.exe" or src.process.image.path contains "\\msp-agent-core.exe") or (tgt.process.image.path contains "C:\\Program Files (x86)\\N-able Technologies\\Windows Agent\\bin\\agent.exe" or tgt.process.image.path contains "\\AgentMaint.exe" or tgt.process.image.path contains "\\AgentMonitor.exe" or tgt.process.image.path contains "\\BASupTSHelper.exe" or tgt.process.image.path contains "\\msp-agent-core.exe")))
 ```
 

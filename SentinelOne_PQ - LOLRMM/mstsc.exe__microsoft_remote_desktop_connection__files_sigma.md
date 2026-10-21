@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 20-10-2026 02:30:57):
+// Translated content (automatically translated on 21-10-2026 02:24:58):
 event.category="file" and (endpoint.os="windows" and (tgt.file.path contains "%USERPROFILE%\\Documents\\Default.rdp" or tgt.file.path contains "%SystemRoot%\\System32\\termsrv.exe"))
 ```
 

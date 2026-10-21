@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 20-10-2026 02:30:57):
+// Translated content (automatically translated on 21-10-2026 02:24:58):
 event.category="registry" and (endpoint.os="windows" and (registry.keyPath contains "HKLM\\SOFTWARE\\RMMmax\\AgentService" or registry.keyPath contains "HKLM\\SYSTEM\\CurrentControlSet\\Services\\RMMmaxAgentService" or registry.keyPath contains "HKCU\\Software\\Microsoft\\Windows\\CurrentVersion\\Run\\RMMmaxAgentService"))
 ```
 
