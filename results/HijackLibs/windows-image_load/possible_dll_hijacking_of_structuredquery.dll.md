@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 20-10-2026 03:56:34):
+// Translated content (automatically translated on 21-10-2026 03:46:07):
 event.type="Module Load" and (endpoint.os="windows" and (module.path contains "\\structuredquery.dll" and (not (module.path contains "c:\\windows\\system32\\" or module.path contains "c:\\windows\\syswow64\\"))))
 ```
 
