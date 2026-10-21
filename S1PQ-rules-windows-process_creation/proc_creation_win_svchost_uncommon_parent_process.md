@@ -1,6 +1,6 @@
 ```sql
-// Translated content (automatically translated on 20-10-2026 04:30:00):
-event.type="Process Creation" and (endpoint.os="windows" and (tgt.process.image.path contains "\\svchost.exe" and (not ((src.process.image.path contains "\\Mrt.exe" or src.process.image.path contains "\\MsMpEng.exe" or src.process.image.path contains "\\ngen.exe" or src.process.image.path contains "\\rpcnet.exe" or src.process.image.path contains "\\services.exe" or src.process.image.path contains "\\TiWorker.exe") or not (src.process.image.path=*) or (src.process.image.path in ("-",""))))))
+// Translated content (automatically translated on 21-10-2026 04:22:01):
+event.type="Process Creation" and (endpoint.os="windows" and (tgt.process.image.path contains "\\svchost.exe" and (not ((src.process.image.path contains "\\Mrt.exe" or src.process.image.path contains "\\MsMpEng.exe" or src.process.image.path contains "\\ngen.exe" or src.process.image.path contains "\\rpcnet.exe" or src.process.image.path contains "\\services.exe" or src.process.image.path contains "\\TiWorker.exe") or (src.process.image.path contains "\\svchost.exe" and (tgt.process.cmdline contains "svchost.exe\"" or tgt.process.cmdline contains "svchost.exe" or tgt.process.cmdline contains "-k TSLicensing")) or not (src.process.image.path=*) or (src.process.image.path in ("-",""))))))
 ```
 
 
@@ -14,7 +14,7 @@ references:
     - Internal Research
 author: Florian Roth (Nextron Systems)
 date: 2017-08-15
-modified: 2022-06-28
+modified: 2026-10-19
 tags:
     - attack.stealth
     - attack.t1036.005
@@ -32,6 +32,12 @@ detection:
             - '\rpcnet.exe'
             - '\services.exe'
             - '\TiWorker.exe'
+    filter_main_svchost:
+        ParentImage|endswith: '\svchost.exe'
+        CommandLine|endswith:
+            - 'svchost.exe"'
+            - 'svchost.exe'
+            - '-k TSLicensing'
     filter_main_parent_null:
         ParentImage: null
     filter_main_parent_empty:
