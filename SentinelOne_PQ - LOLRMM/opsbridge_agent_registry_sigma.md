@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 21-10-2026 02:24:58):
+// Translated content (automatically translated on 22-10-2026 02:20:40):
 event.category="registry" and (endpoint.os="windows" and (registry.keyPath contains "HKLM\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Uninstall\\OpsBridgeAgent" or registry.keyPath contains "HKLM\\SOFTWARE\\Microsoft\\Windows NT\\CurrentVersion\\Schedule\\TaskCache\\Tree\\OpsBridge Agent"))
 ```
 
