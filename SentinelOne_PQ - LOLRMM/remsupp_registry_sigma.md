@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 22-10-2026 02:20:40):
+// Translated content (automatically translated on 23-10-2026 02:25:54):
 event.category="registry" and (endpoint.os="windows" and (registry.keyPath contains "HKCU\\Software\\99ac595d-36d0-5122-a860-22a3443073cb" or registry.keyPath contains "HKCU\\Software\\Microsoft\\Windows\\CurrentVersion\\Uninstall\\99ac595d-36d0-5122-a860-22a3443073cb"))
 ```
 

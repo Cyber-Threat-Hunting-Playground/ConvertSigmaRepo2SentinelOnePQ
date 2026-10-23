@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 22-10-2026 02:20:40):
+// Translated content (automatically translated on 23-10-2026 02:25:54):
 event.category="registry" and (endpoint.os="windows" and (registry.keyPath contains "HKLM\\SOFTWARE\\OblianceAgent" or registry.keyPath contains "HKLM\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Run\\OblianceTray" or registry.keyPath contains "HKLM\\SYSTEM\\CurrentControlSet\\Control\\SafeBoot\\Network\\OblianceAgent" or registry.keyPath contains "HKLM\\SYSTEM\\CurrentControlSet\\Services\\OblianceAgent"))
 ```
 

@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 22-10-2026 02:20:40):
+// Translated content (automatically translated on 23-10-2026 02:25:54):
 event.category="file" and (endpoint.os="windows" and (tgt.file.path contains "C:\\Program Files\\Miradore\\OnlineClient\\bin\*" or tgt.file.path contains "C:\\Program Files\\Miradore\\OnlineClient\\bin\\7z.dll"))
 ```
 
