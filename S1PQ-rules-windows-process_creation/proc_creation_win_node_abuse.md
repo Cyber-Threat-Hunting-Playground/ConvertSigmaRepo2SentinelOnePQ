@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 22-10-2026 04:21:03):
+// Translated content (automatically translated on 23-10-2026 04:25:35):
 event.type="Process Creation" and (endpoint.os="windows" and ((tgt.process.image.path contains "\\node.exe" and (tgt.process.cmdline contains " -e " or tgt.process.cmdline contains " --eval ")) and (tgt.process.cmdline contains ".exec(" and tgt.process.cmdline contains "net.socket" and tgt.process.cmdline contains ".connect" and tgt.process.cmdline contains "child_process")))
 ```
 

@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 22-10-2026 04:21:03):
+// Translated content (automatically translated on 23-10-2026 04:25:35):
 event.type="Process Creation" and (endpoint.os="windows" and ((tgt.process.image.path contains ":\\RECYCLER\\" or tgt.process.image.path contains ":\\SystemVolumeInformation\\") or (tgt.process.image.path contains "C:\\Windows\\Tasks\\" or tgt.process.image.path contains "C:\\Windows\\debug\\" or tgt.process.image.path contains "C:\\Windows\\fonts\\" or tgt.process.image.path contains "C:\\Windows\\help\\" or tgt.process.image.path contains "C:\\Windows\\drivers\\" or tgt.process.image.path contains "C:\\Windows\\addins\\" or tgt.process.image.path contains "C:\\Windows\\cursors\\" or tgt.process.image.path contains "C:\\Windows\\system32\\tasks\\")))
 ```
 
