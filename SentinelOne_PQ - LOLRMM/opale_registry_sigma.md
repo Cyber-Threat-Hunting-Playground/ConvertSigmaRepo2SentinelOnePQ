@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 23-10-2026 02:25:54):
+// Translated content (automatically translated on 24-10-2026 02:23:45):
 event.category="registry" and (endpoint.os="windows" and registry.keyPath contains "HKLM\\SYSTEM\\CurrentControlSet\\Services\\Opale-Agent")
 ```
 

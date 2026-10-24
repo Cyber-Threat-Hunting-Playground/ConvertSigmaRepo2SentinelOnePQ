@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 23-10-2026 02:25:54):
+// Translated content (automatically translated on 24-10-2026 02:23:45):
 (event.category in ("dns","url","ip")) and (endpoint.os="windows" and (url.address contains "electric.ai" or event.dns.request contains "electric.ai"))
 ```
 

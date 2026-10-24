@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 23-10-2026 02:25:54):
+// Translated content (automatically translated on 24-10-2026 02:23:45):
 (event.category in ("dns","url","ip")) and (endpoint.os="windows" and ((url.address contains "app.zecurit.com" or url.address contains "dms.zecurit.com" or url.address contains "d1m8kha1zyjal6.cloudfront.net") or (event.dns.request contains "app.zecurit.com" or event.dns.request contains "dms.zecurit.com" or event.dns.request contains "d1m8kha1zyjal6.cloudfront.net")))
 ```
 
