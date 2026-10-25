@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 24-10-2026 02:18:36):
+// Translated content (automatically translated on 25-10-2026 02:05:06):
 event.type="Process Creation" and (endpoint.os="windows" and ((tgt.process.image.path contains "\\wwwroot\\" or tgt.process.image.path contains "\\wmpub\\" or tgt.process.image.path contains "\\htdocs\\") and (not ((tgt.process.image.path contains "bin\\" or tgt.process.image.path contains "\\Tools\\" or tgt.process.image.path contains "\\SMSComponent\\") and src.process.image.path contains "\\services.exe"))))
 ```
 
