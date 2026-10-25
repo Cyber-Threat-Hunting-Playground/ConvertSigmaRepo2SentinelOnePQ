@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 24-10-2026 02:23:45):
+// Translated content (automatically translated on 25-10-2026 02:11:01):
 event.category="file" and (endpoint.os="windows" and (tgt.file.path contains "C:\\Program Files\\Common Files\\NSEC\\NSecRTS.exe" or tgt.file.path contains "C:\\Program Files\\Common Files\\NSEC\\PCinfo.dll" or tgt.file.path contains "C:\\Program Files (x86)\\Common Files\\NSEC\\NSecRTS.exe" or tgt.file.path contains "C:\\Program Files (x86)\\Common Files\\NSEC\\Data\*" or tgt.file.path contains "C:\\SmartSnap\*\*" or tgt.file.path contains "C:\\NSEC\\Debug\\Log\*.log" or tgt.file.path contains "C:\\NSecAgent\\Debug\\Log\*.log" or tgt.file.path contains "C:\\NSEC\\cache.ini" or tgt.file.path contains "C:\\Program Files (x86)\\Common Files\\NSecAgent\\data\\xConfig.db" or tgt.file.path contains "C:\\Program Files (x86)\\Common Files\\NSecAgent\\data\\recordcached.db" or tgt.file.path contains "nFsFlt32.sys" or tgt.file.path contains "NSecDs.exe" or tgt.file.path contains "NSOutlookAddin32.dll"))
 ```
 

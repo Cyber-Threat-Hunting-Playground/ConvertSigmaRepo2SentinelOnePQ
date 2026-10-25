@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 24-10-2026 02:23:45):
+// Translated content (automatically translated on 25-10-2026 02:11:01):
 event.category="file" and (endpoint.os="windows" and (tgt.file.path contains "\\ControlR.Agent.Installer.exe" or tgt.file.path contains "C:\\Program Files\\ControlR\*\\ControlR.Agent.exe" or tgt.file.path contains "C:\\ProgramData\\ControlR\*\\appsettings.json" or tgt.file.path="*C:\\ProgramData\\ControlR\*\\Logs\\ControlR.Agent\\LogFile*.log" or tgt.file.path="*C:\\ProgramData\\ControlR\*\\Logs\\ControlR.DesktopClient\\LogFile*.log"))
 ```
 
