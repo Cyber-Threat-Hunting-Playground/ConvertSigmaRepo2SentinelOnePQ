@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 24-10-2026 03:44:35):
+// Translated content (automatically translated on 25-10-2026 03:42:57):
 event.type="Module Load" and (endpoint.os="windows" and (module.path contains "\\maxkernl.dll" and (not (module.path contains "c:\\program files\\Nuance\\PaperPort\\" or module.path contains "c:\\program files (x86)\\Nuance\\PaperPort\\"))))
 ```
 
