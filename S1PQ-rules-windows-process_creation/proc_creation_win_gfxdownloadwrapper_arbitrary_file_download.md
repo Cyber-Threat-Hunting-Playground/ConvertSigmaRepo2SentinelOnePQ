@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 25-10-2026 04:19:14):
+// Translated content (automatically translated on 26-10-2026 04:22:49):
 event.type="Process Creation" and (endpoint.os="windows" and ((tgt.process.image.path contains "\\GfxDownloadWrapper.exe" and (tgt.process.cmdline contains "http://" or tgt.process.cmdline contains "https://")) and (not tgt.process.cmdline contains "https://gameplayapi.intel.com/")))
 ```
 
