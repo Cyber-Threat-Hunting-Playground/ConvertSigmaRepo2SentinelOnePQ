@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 26-10-2026 03:32:14):
+// Translated content (automatically translated on 27-10-2026 03:57:47):
 event.type="Process Creation" and (endpoint.os="windows" and (src.process.image.path="*parallelsaccess-*.exe" or src.process.image.path contains "TSClient.exe" or src.process.image.path contains "prl_deskctl_agent.exe" or src.process.image.path contains "prl_deskctl_wizard.exe" or src.process.image.path contains "prl_pm_service.exe"))
 ```
 
