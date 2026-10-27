@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 26-10-2026 02:11:30):
+// Translated content (automatically translated on 27-10-2026 02:48:16):
 event.category="registry" and (endpoint.os="windows" and (registry.keyPath contains "HKLM\\SOFTWARE\\LS RMM" or registry.keyPath contains "HKLM\\SYSTEM\\CurrentControlSet\\Services\\LSRMMWorker"))
 ```
 

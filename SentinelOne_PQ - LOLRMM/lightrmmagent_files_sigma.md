@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 26-10-2026 02:11:30):
+// Translated content (automatically translated on 27-10-2026 02:48:16):
 event.category="file" and (endpoint.os="windows" and (tgt.file.path contains "\\LightRmmAgent\\LightRmmAgentService.exe" or tgt.file.path contains "C:\\ProgramData\\LightRmmAgent\\machine.id" or tgt.file.path contains "C:\\Windows\\Temp\\MonitoringPanel.msi"))
 ```
 

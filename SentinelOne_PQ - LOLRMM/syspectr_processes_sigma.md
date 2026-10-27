@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 26-10-2026 02:11:30):
+// Translated content (automatically translated on 27-10-2026 02:48:16):
 event.type="Process Creation" and (endpoint.os="windows" and ((src.process.image.path contains "\\oolocker.exe" or src.process.image.path contains "\\oosyspectr.exe" or src.process.image.path contains "\\syspectr.exe") or (tgt.process.image.path contains "\\oolocker.exe" or tgt.process.image.path contains "\\oosyspectr.exe" or tgt.process.image.path contains "\\syspectr.exe")))
 ```
 
