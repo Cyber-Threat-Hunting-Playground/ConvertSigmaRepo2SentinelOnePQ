@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 27-10-2026 03:57:47):
+// Translated content (automatically translated on 28-10-2026 04:20:56):
 (event.category in ("dns","url","ip")) and (endpoint.os="windows" and ((url.address contains "user_managed" or url.address contains "github.com/V-E-O/rdp2tcp") or (event.dns.request contains "user_managed" or event.dns.request contains "github.com/V-E-O/rdp2tcp")))
 ```
 
