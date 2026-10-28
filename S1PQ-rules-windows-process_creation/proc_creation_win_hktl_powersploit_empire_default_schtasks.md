@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 27-10-2026 04:41:53):
+// Translated content (automatically translated on 28-10-2026 05:15:50):
 event.type="Process Creation" and (endpoint.os="windows" and ((src.process.image.path contains "\\powershell.exe" or src.process.image.path contains "\\pwsh.exe") and tgt.process.image.path contains "\\schtasks.exe" and (tgt.process.cmdline contains "/Create" and tgt.process.cmdline contains "powershell.exe -NonI" and tgt.process.cmdline contains "/TN Updater /TR") and (tgt.process.cmdline contains "/SC ONLOGON" or tgt.process.cmdline contains "/SC DAILY /ST" or tgt.process.cmdline contains "/SC ONIDLE" or tgt.process.cmdline contains "/SC HOURLY")))
 ```
 

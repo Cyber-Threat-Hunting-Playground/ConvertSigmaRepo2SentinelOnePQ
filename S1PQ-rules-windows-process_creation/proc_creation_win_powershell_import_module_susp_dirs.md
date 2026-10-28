@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 27-10-2026 04:41:53):
+// Translated content (automatically translated on 28-10-2026 05:15:50):
 event.type="Process Creation" and (endpoint.os="windows" and (tgt.process.cmdline contains "Import-Module \"$Env:Temp\\" or tgt.process.cmdline contains "Import-Module '$Env:Temp\\" or tgt.process.cmdline contains "Import-Module $Env:Temp\\" or tgt.process.cmdline contains "Import-Module \"$Env:Appdata\\" or tgt.process.cmdline contains "Import-Module '$Env:Appdata\\" or tgt.process.cmdline contains "Import-Module $Env:Appdata\\" or tgt.process.cmdline contains "Import-Module C:\\Users\\Public\\" or tgt.process.cmdline contains "ipmo \"$Env:Temp\\" or tgt.process.cmdline contains "ipmo '$Env:Temp\\" or tgt.process.cmdline contains "ipmo $Env:Temp\\" or tgt.process.cmdline contains "ipmo \"$Env:Appdata\\" or tgt.process.cmdline contains "ipmo '$Env:Appdata\\" or tgt.process.cmdline contains "ipmo $Env:Appdata\\" or tgt.process.cmdline contains "ipmo C:\\Users\\Public\\"))
 ```
 
