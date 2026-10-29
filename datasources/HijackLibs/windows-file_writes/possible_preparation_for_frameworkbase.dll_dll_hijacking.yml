@@ -1,0 +1,28 @@
+title: Possible preparation for frameworkbase.dll DLL Hijacking
+id: 9950932b-9402-48a3-1427-5b9ff8474781
+status: experimental
+description: Detects possible DLL hijacking of frameworkbase.dll by looking for suspicious file writes of this DLL, to unexpected locations.
+references:
+    - https://hijacklibs.net/entries/3rd_party/n-track/frameworkbase.html
+author: "Liran Ravich"
+date: 2026-10-22
+tags:
+    - attack.defense_evasion
+    - attack.T1574.001
+logsource:
+    product: windows
+    category: file_event
+detection:
+    selection:
+        TargetFileName: '*\frameworkbase.dll'
+    filter:
+        TargetFileName:
+            - 'c:\program files\n-Track\n-Track Studio *\\*'
+            - 'c:\program files (x86)\n-Track\n-Track Studio *\\*'
+            - 'c:\program files\n-Track\n-Track Studio *\nBridge32\\*'
+            - 'c:\program files (x86)\n-Track\n-Track Studio *\nBridge32\\*'
+
+    condition: selection and not filter
+falsepositives:
+    - False positives are likely. This rule is more suitable for hunting than for generating detections.
+

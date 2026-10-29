@@ -1,0 +1,28 @@
+title: Possible preparation for blkscrdl.dll DLL Hijacking
+id: 9657002b-9354-48a3-1039-5b9ff8867836
+status: experimental
+description: Detects possible DLL hijacking of blkscrdl.dll by looking for suspicious file writes of this DLL, to unexpected locations.
+references:
+    - https://hijacklibs.net/entries/3rd_party/famatech/blkscrdl.html
+author: "Jose Enrique Hernandez"
+date: 2026-10-17
+tags:
+    - attack.defense_evasion
+    - attack.T1574.001
+logsource:
+    product: windows
+    category: file_event
+detection:
+    selection:
+        TargetFileName: '*\blkscrdl.dll'
+    filter:
+        TargetFileName:
+            - 'c:\windows\system32\rserver*\\*'
+            - 'c:\windows\winsxs\*'
+            - 'c:\$windows.~bt\*'
+            - 'c:\windows\softwaredistribution\*'
+
+    condition: selection and not filter
+falsepositives:
+    - False positives are likely. This rule is more suitable for hunting than for generating detections.
+
