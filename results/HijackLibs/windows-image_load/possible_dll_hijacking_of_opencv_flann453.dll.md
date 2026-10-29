@@ -1,0 +1,31 @@
+```sql
+// Translated content (automatically translated on 29-10-2026 04:51:26):
+event.type="Module Load" and (endpoint.os="windows" and module.path contains "\\opencv_flann453.dll")
+```
+
+
+# Original Sigma Rule:
+```yaml
+title: Possible DLL Hijacking of opencv_flann453.dll
+id: 7730521b-5716-48a3-7286-5b9ff8770141
+status: experimental
+description: Detects possible DLL hijacking of opencv_flann453.dll by looking for suspicious image loads, loading this DLL from unexpected locations.
+references:
+    - https://hijacklibs.net/entries/3rd_party/on1/opencv_flann453.html
+author: "Jose Enrique Hernandez"
+date: 2026-10-13
+tags:
+    - attack.defense_evasion
+    - attack.T1574.001
+logsource:
+    product: windows
+    category: image_load
+detection:
+    selection:
+        ImageLoaded: '*\opencv_flann453.dll'
+
+    condition: selection 
+falsepositives:
+    - False positives are likely. This rule is more suitable for hunting than for generating detections.
+
+```

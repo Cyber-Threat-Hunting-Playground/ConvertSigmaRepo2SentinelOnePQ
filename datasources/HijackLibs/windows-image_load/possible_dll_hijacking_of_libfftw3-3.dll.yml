@@ -1,0 +1,29 @@
+title: Possible DLL Hijacking of libfftw3-3.dll
+id: 6628731b-5716-48a3-7286-5b9ff8986277
+status: experimental
+description: Detects possible DLL hijacking of libfftw3-3.dll by looking for suspicious image loads, loading this DLL from unexpected locations.
+references:
+    - https://hijacklibs.net/entries/3rd_party/fftw/libfftw3-3.html
+author: "Jose Enrique Hernandez"
+date: 2026-10-13
+tags:
+    - attack.defense_evasion
+    - attack.T1574.001
+logsource:
+    product: windows
+    category: image_load
+detection:
+    selection:
+        ImageLoaded: '*\libfftw3-3.dll'
+    filter:
+        ImageLoaded:
+            - 'c:\program files\Blue Iris *\\*'
+            - 'c:\program files (x86)\Blue Iris *\\*'
+            - 'c:\program files\Blue Iris\\*'
+            - 'c:\program files (x86)\Blue Iris\\*'
+            - 'C:\BlueIris\\*'
+
+    condition: selection and not filter
+falsepositives:
+    - False positives are likely. This rule is more suitable for hunting than for generating detections.
+

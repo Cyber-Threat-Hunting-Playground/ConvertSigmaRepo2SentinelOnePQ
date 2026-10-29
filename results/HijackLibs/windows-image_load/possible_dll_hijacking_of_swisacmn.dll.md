@@ -1,0 +1,31 @@
+```sql
+// Translated content (automatically translated on 29-10-2026 04:51:26):
+event.type="Module Load" and (endpoint.os="windows" and module.path contains "\\swisacmn.dll")
+```
+
+
+# Original Sigma Rule:
+```yaml
+title: Possible DLL Hijacking of swisacmn.dll
+id: 8854461b-5716-48a3-7286-5b9ff8614959
+status: experimental
+description: Detects possible DLL hijacking of swisacmn.dll by looking for suspicious image loads, loading this DLL from unexpected locations.
+references:
+    - https://hijacklibs.net/entries/3rd_party/sonicwall/swisacmn.html
+author: "Jose Enrique Hernandez"
+date: 2026-10-13
+tags:
+    - attack.defense_evasion
+    - attack.T1574.001
+logsource:
+    product: windows
+    category: image_load
+detection:
+    selection:
+        ImageLoaded: '*\swisacmn.dll'
+
+    condition: selection 
+falsepositives:
+    - False positives are likely. This rule is more suitable for hunting than for generating detections.
+
+```

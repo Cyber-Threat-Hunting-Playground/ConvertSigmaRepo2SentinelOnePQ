@@ -437,6 +437,35 @@ falsepositives:
     - False positives are likely. This rule is more suitable for hunting than for generating detections.
 
 ---
+title: Possible DLL Hijacking of eztwain4.dll
+id: 6065471b-9354-48a3-1039-5b9ff8146942
+status: experimental
+description: Detects possible DLL hijacking of eztwain4.dll by looking for suspicious image loads, loading this DLL from unexpected locations.
+references:
+    - https://hijacklibs.net/entries/3rd_party/atalasoft/eztwain4.html
+author: "Jose Enrique Hernandez"
+date: 2026-10-17
+tags:
+    - attack.defense_evasion
+    - attack.T1574.001
+logsource:
+    product: windows
+    category: image_load
+detection:
+    selection:
+        ImageLoaded: '*\eztwain4.dll'
+    filter:
+        ImageLoaded:
+            - 'c:\program files\Nitro\PDF Pro\\*\\*'
+            - 'c:\program files (x86)\Nitro\PDF Pro\\*\\*'
+            - 'c:\program files\Nitro\Pro *\\*'
+            - 'c:\program files (x86)\Nitro\Pro *\\*'
+
+    condition: selection and not filter
+falsepositives:
+    - False positives are likely. This rule is more suitable for hunting than for generating detections.
+
+---
 title: Possible DLL Hijacking of dal_keepalives.dll
 id: 3880461b-8907-48a3-9464-5b9ff8429562
 status: experimental
@@ -1053,6 +1082,62 @@ falsepositives:
     - False positives are likely. This rule is more suitable for hunting than for generating detections.
 
 ---
+title: Possible DLL Hijacking of blkscrdl.dll
+id: 9657001b-9354-48a3-1039-5b9ff8867836
+status: experimental
+description: Detects possible DLL hijacking of blkscrdl.dll by looking for suspicious image loads, loading this DLL from unexpected locations.
+references:
+    - https://hijacklibs.net/entries/3rd_party/famatech/blkscrdl.html
+author: "Jose Enrique Hernandez"
+date: 2026-10-17
+tags:
+    - attack.defense_evasion
+    - attack.T1574.001
+logsource:
+    product: windows
+    category: image_load
+detection:
+    selection:
+        ImageLoaded: '*\blkscrdl.dll'
+    filter:
+        ImageLoaded:
+            - 'c:\windows\system32\rserver*\\*'
+
+    condition: selection and not filter
+falsepositives:
+    - False positives are likely. This rule is more suitable for hunting than for generating detections.
+
+---
+title: Possible DLL Hijacking of libfftw3-3.dll
+id: 6628731b-5716-48a3-7286-5b9ff8986277
+status: experimental
+description: Detects possible DLL hijacking of libfftw3-3.dll by looking for suspicious image loads, loading this DLL from unexpected locations.
+references:
+    - https://hijacklibs.net/entries/3rd_party/fftw/libfftw3-3.html
+author: "Jose Enrique Hernandez"
+date: 2026-10-13
+tags:
+    - attack.defense_evasion
+    - attack.T1574.001
+logsource:
+    product: windows
+    category: image_load
+detection:
+    selection:
+        ImageLoaded: '*\libfftw3-3.dll'
+    filter:
+        ImageLoaded:
+            - 'c:\program files\Blue Iris *\\*'
+            - 'c:\program files (x86)\Blue Iris *\\*'
+            - 'c:\program files\Blue Iris\\*'
+            - 'c:\program files (x86)\Blue Iris\\*'
+            - 'C:\BlueIris\\*'
+
+    condition: selection and not filter
+falsepositives:
+    - False positives are likely. This rule is more suitable for hunting than for generating detections.
+
+---
 title: Possible DLL Hijacking of fnp_act_installer.dll
 id: 8169621b-9569-48a3-1936-5b9ff8218064
 status: experimental
@@ -1344,6 +1429,33 @@ detection:
         ImageLoaded:
             - 'c:\program files\HP\\*'
             - 'c:\program files (x86)\HP\\*'
+
+    condition: selection and not filter
+falsepositives:
+    - False positives are likely. This rule is more suitable for hunting than for generating detections.
+
+---
+title: Possible DLL Hijacking of wwide9.dll
+id: 3190461b-5716-48a3-7286-5b9ff8368962
+status: experimental
+description: Detects possible DLL hijacking of wwide9.dll by looking for suspicious image loads, loading this DLL from unexpected locations.
+references:
+    - https://hijacklibs.net/entries/3rd_party/ibm/wwide9.html
+author: "Jose Enrique Hernandez"
+date: 2026-10-13
+tags:
+    - attack.defense_evasion
+    - attack.T1574.001
+logsource:
+    product: windows
+    category: image_load
+detection:
+    selection:
+        ImageLoaded: '*\wwide9.dll'
+    filter:
+        ImageLoaded:
+            - 'c:\program files\IBM\SPSS\Statistics\\*\\*'
+            - 'c:\program files (x86)\IBM\SPSS\Statistics\\*\\*'
 
     condition: selection and not filter
 falsepositives:
@@ -2149,6 +2261,35 @@ falsepositives:
     - False positives are likely. This rule is more suitable for hunting than for generating detections.
 
 ---
+title: Possible DLL Hijacking of frameworkbase.dll
+id: 9950931b-9402-48a3-1427-5b9ff8474781
+status: experimental
+description: Detects possible DLL hijacking of frameworkbase.dll by looking for suspicious image loads, loading this DLL from unexpected locations.
+references:
+    - https://hijacklibs.net/entries/3rd_party/n-track/frameworkbase.html
+author: "Liran Ravich"
+date: 2026-10-22
+tags:
+    - attack.defense_evasion
+    - attack.T1574.001
+logsource:
+    product: windows
+    category: image_load
+detection:
+    selection:
+        ImageLoaded: '*\frameworkbase.dll'
+    filter:
+        ImageLoaded:
+            - 'c:\program files\n-Track\n-Track Studio *\\*'
+            - 'c:\program files (x86)\n-Track\n-Track Studio *\\*'
+            - 'c:\program files\n-Track\n-Track Studio *\nBridge32\\*'
+            - 'c:\program files (x86)\n-Track\n-Track Studio *\nBridge32\\*'
+
+    condition: selection and not filter
+falsepositives:
+    - False positives are likely. This rule is more suitable for hunting than for generating detections.
+
+---
 title: Possible DLL Hijacking of mimetools.dll
 id: 2659501b-9425-48a3-2496-5b9ff8181535
 status: experimental
@@ -2251,6 +2392,29 @@ detection:
             - 'c:\program files (x86)\NVIDIA Corporation\Display\\*'
 
     condition: selection and not filter
+falsepositives:
+    - False positives are likely. This rule is more suitable for hunting than for generating detections.
+
+---
+title: Possible DLL Hijacking of opencv_flann453.dll
+id: 7730521b-5716-48a3-7286-5b9ff8770141
+status: experimental
+description: Detects possible DLL hijacking of opencv_flann453.dll by looking for suspicious image loads, loading this DLL from unexpected locations.
+references:
+    - https://hijacklibs.net/entries/3rd_party/on1/opencv_flann453.html
+author: "Jose Enrique Hernandez"
+date: 2026-10-13
+tags:
+    - attack.defense_evasion
+    - attack.T1574.001
+logsource:
+    product: windows
+    category: image_load
+detection:
+    selection:
+        ImageLoaded: '*\opencv_flann453.dll'
+
+    condition: selection 
 falsepositives:
     - False positives are likely. This rule is more suitable for hunting than for generating detections.
 
@@ -3107,6 +3271,29 @@ detection:
             - 'c:\program files (x86)\SogouInput\\*'
 
     condition: selection and not filter
+falsepositives:
+    - False positives are likely. This rule is more suitable for hunting than for generating detections.
+
+---
+title: Possible DLL Hijacking of swisacmn.dll
+id: 8854461b-5716-48a3-7286-5b9ff8614959
+status: experimental
+description: Detects possible DLL hijacking of swisacmn.dll by looking for suspicious image loads, loading this DLL from unexpected locations.
+references:
+    - https://hijacklibs.net/entries/3rd_party/sonicwall/swisacmn.html
+author: "Jose Enrique Hernandez"
+date: 2026-10-13
+tags:
+    - attack.defense_evasion
+    - attack.T1574.001
+logsource:
+    product: windows
+    category: image_load
+detection:
+    selection:
+        ImageLoaded: '*\swisacmn.dll'
+
+    condition: selection 
 falsepositives:
     - False positives are likely. This rule is more suitable for hunting than for generating detections.
 
@@ -10417,6 +10604,33 @@ detection:
         ImageLoaded:
             - 'c:\windows\system32\\*'
             - 'c:\windows\syswow64\\*'
+
+    condition: selection and not filter
+falsepositives:
+    - False positives are likely. This rule is more suitable for hunting than for generating detections.
+
+---
+title: Possible DLL Hijacking of msvfw32.dll
+id: 6616391b-5812-48a3-7097-5b9ff8750140
+status: experimental
+description: Detects possible DLL hijacking of msvfw32.dll by looking for suspicious image loads, loading this DLL from unexpected locations.
+references:
+    - https://hijacklibs.net/entries/microsoft/built-in/msvfw32.html
+author: "Tim Sword - HuntressLabs"
+date: 2026-10-23
+tags:
+    - attack.defense_evasion
+    - attack.T1574.001
+logsource:
+    product: windows
+    category: image_load
+detection:
+    selection:
+        ImageLoaded: '*\msvfw32.dll'
+    filter:
+        ImageLoaded:
+            - 'c:\windows\syswow64\\*'
+            - 'c:\windows\system32\\*'
 
     condition: selection and not filter
 falsepositives:
