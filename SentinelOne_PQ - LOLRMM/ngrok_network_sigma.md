@@ -1,6 +1,6 @@
 ```sql
-// Translated content (automatically translated on 28-10-2026 02:56:19):
-(event.category in ("dns","url","ip")) and (endpoint.os="windows" and ((url.address contains "connect.ngrok-agent.com" or url.address contains "connect.us.ngrok-agent.com" or url.address contains "connect.eu.ngrok-agent.com" or url.address contains "connect.ap.ngrok-agent.com" or url.address contains "connect.au.ngrok-agent.com" or url.address contains "connect.sa.ngrok-agent.com" or url.address contains "connect.jp.ngrok-agent.com" or url.address contains "connect.in.ngrok-agent.com" or url.address contains "ngrok.com" or url.address contains ".ngrok-free.app" or url.address contains ".ngrok.app" or url.address contains ".ngrok.io" or url.address contains ".ngrok.dev" or url.address contains ".ngrok.pro" or url.address contains ".ngrok.pizza") or (event.dns.request contains "connect.ngrok-agent.com" or event.dns.request contains "connect.us.ngrok-agent.com" or event.dns.request contains "connect.eu.ngrok-agent.com" or event.dns.request contains "connect.ap.ngrok-agent.com" or event.dns.request contains "connect.au.ngrok-agent.com" or event.dns.request contains "connect.sa.ngrok-agent.com" or event.dns.request contains "connect.jp.ngrok-agent.com" or event.dns.request contains "connect.in.ngrok-agent.com" or event.dns.request contains "ngrok.com" or event.dns.request contains ".ngrok-free.app" or event.dns.request contains ".ngrok.app" or event.dns.request contains ".ngrok.io" or event.dns.request contains ".ngrok.dev" or event.dns.request contains ".ngrok.pro" or event.dns.request contains ".ngrok.pizza")))
+// Translated content (automatically translated on 29-10-2026 03:21:48):
+(event.category in ("dns","url","ip")) and (endpoint.os="windows" and ((url.address contains ".connect.ap.ngrok-agent.com" or url.address contains ".connect.ap.ngrok-agent.com." or url.address contains ".connect.au.ngrok-agent.com" or url.address contains ".connect.au.ngrok-agent.com." or url.address contains ".connect.eu.ngrok-agent.com" or url.address contains ".connect.eu.ngrok-agent.com." or url.address contains ".connect.in.ngrok-agent.com" or url.address contains ".connect.in.ngrok-agent.com." or url.address contains ".connect.jp.ngrok-agent.com" or url.address contains ".connect.jp.ngrok-agent.com." or url.address contains ".connect.ngrok-agent.com" or url.address contains ".connect.ngrok-agent.com." or url.address contains ".connect.sa.ngrok-agent.com" or url.address contains ".connect.sa.ngrok-agent.com." or url.address contains ".connect.us.ngrok-agent.com" or url.address contains ".connect.us.ngrok-agent.com." or url.address contains ".ngrok-free.app" or url.address contains ".ngrok-free.app." or url.address contains ".ngrok.app" or url.address contains ".ngrok.app." or url.address contains ".ngrok.com" or url.address contains ".ngrok.com." or url.address contains ".ngrok.dev" or url.address contains ".ngrok.dev." or url.address contains ".ngrok.io" or url.address contains ".ngrok.io." or url.address contains ".ngrok.pizza" or url.address contains ".ngrok.pizza." or url.address contains ".ngrok.pro" or url.address contains ".ngrok.pro." or url.address="connect.ap.ngrok-agent.com" or url.address="connect.ap.ngrok-agent.com." or url.address="connect.au.ngrok-agent.com" or url.address="connect.au.ngrok-agent.com." or url.address="connect.eu.ngrok-agent.com" or url.address="connect.eu.ngrok-agent.com." or url.address="connect.in.ngrok-agent.com" or url.address="connect.in.ngrok-agent.com." or url.address="connect.jp.ngrok-agent.com" or url.address="connect.jp.ngrok-agent.com." or url.address="connect.ngrok-agent.com" or url.address="connect.ngrok-agent.com." or url.address="connect.sa.ngrok-agent.com" or url.address="connect.sa.ngrok-agent.com." or url.address="connect.us.ngrok-agent.com" or url.address="connect.us.ngrok-agent.com." or url.address="ngrok.com" or url.address="ngrok.com.") or (event.dns.request contains ".connect.ap.ngrok-agent.com" or event.dns.request contains ".connect.ap.ngrok-agent.com." or event.dns.request contains ".connect.au.ngrok-agent.com" or event.dns.request contains ".connect.au.ngrok-agent.com." or event.dns.request contains ".connect.eu.ngrok-agent.com" or event.dns.request contains ".connect.eu.ngrok-agent.com." or event.dns.request contains ".connect.in.ngrok-agent.com" or event.dns.request contains ".connect.in.ngrok-agent.com." or event.dns.request contains ".connect.jp.ngrok-agent.com" or event.dns.request contains ".connect.jp.ngrok-agent.com." or event.dns.request contains ".connect.ngrok-agent.com" or event.dns.request contains ".connect.ngrok-agent.com." or event.dns.request contains ".connect.sa.ngrok-agent.com" or event.dns.request contains ".connect.sa.ngrok-agent.com." or event.dns.request contains ".connect.us.ngrok-agent.com" or event.dns.request contains ".connect.us.ngrok-agent.com." or event.dns.request contains ".ngrok-free.app" or event.dns.request contains ".ngrok-free.app." or event.dns.request contains ".ngrok.app" or event.dns.request contains ".ngrok.app." or event.dns.request contains ".ngrok.com" or event.dns.request contains ".ngrok.com." or event.dns.request contains ".ngrok.dev" or event.dns.request contains ".ngrok.dev." or event.dns.request contains ".ngrok.io" or event.dns.request contains ".ngrok.io." or event.dns.request contains ".ngrok.pizza" or event.dns.request contains ".ngrok.pizza." or event.dns.request contains ".ngrok.pro" or event.dns.request contains ".ngrok.pro." or event.dns.request="connect.ap.ngrok-agent.com" or event.dns.request="connect.ap.ngrok-agent.com." or event.dns.request="connect.au.ngrok-agent.com" or event.dns.request="connect.au.ngrok-agent.com." or event.dns.request="connect.eu.ngrok-agent.com" or event.dns.request="connect.eu.ngrok-agent.com." or event.dns.request="connect.in.ngrok-agent.com" or event.dns.request="connect.in.ngrok-agent.com." or event.dns.request="connect.jp.ngrok-agent.com" or event.dns.request="connect.jp.ngrok-agent.com." or event.dns.request="connect.ngrok-agent.com" or event.dns.request="connect.ngrok-agent.com." or event.dns.request="connect.sa.ngrok-agent.com" or event.dns.request="connect.sa.ngrok-agent.com." or event.dns.request="connect.us.ngrok-agent.com" or event.dns.request="connect.us.ngrok-agent.com." or event.dns.request="ngrok.com" or event.dns.request="ngrok.com.")))
 ```
 
 
@@ -15,7 +15,7 @@ references:
     - https://github.com/magicsword-io/LOLRMM
 author: LOLRMM Project
 date: 2025-12-01
-modified: 2026-10-05
+modified: 2026-10-28
 tags:
     - attack.command-and-control
     - attack.t1219
@@ -24,22 +24,55 @@ logsource:
     category: network_connection
 detection:
     selection:
-        DestinationHostname|endswith:
-            - 'connect.ngrok-agent.com'
-            - 'connect.us.ngrok-agent.com'
-            - 'connect.eu.ngrok-agent.com'
-            - 'connect.ap.ngrok-agent.com'
-            - 'connect.au.ngrok-agent.com'
-            - 'connect.sa.ngrok-agent.com'
-            - 'connect.jp.ngrok-agent.com'
-            - 'connect.in.ngrok-agent.com'
-            - 'ngrok.com'
+        DestinationHostname:
+            - '*.connect.ap.ngrok-agent.com'
+            - '*.connect.ap.ngrok-agent.com.'
+            - '*.connect.au.ngrok-agent.com'
+            - '*.connect.au.ngrok-agent.com.'
+            - '*.connect.eu.ngrok-agent.com'
+            - '*.connect.eu.ngrok-agent.com.'
+            - '*.connect.in.ngrok-agent.com'
+            - '*.connect.in.ngrok-agent.com.'
+            - '*.connect.jp.ngrok-agent.com'
+            - '*.connect.jp.ngrok-agent.com.'
+            - '*.connect.ngrok-agent.com'
+            - '*.connect.ngrok-agent.com.'
+            - '*.connect.sa.ngrok-agent.com'
+            - '*.connect.sa.ngrok-agent.com.'
+            - '*.connect.us.ngrok-agent.com'
+            - '*.connect.us.ngrok-agent.com.'
             - '*.ngrok-free.app'
+            - '*.ngrok-free.app.'
             - '*.ngrok.app'
-            - '*.ngrok.io'
+            - '*.ngrok.app.'
+            - '*.ngrok.com'
+            - '*.ngrok.com.'
             - '*.ngrok.dev'
-            - '*.ngrok.pro'
+            - '*.ngrok.dev.'
+            - '*.ngrok.io'
+            - '*.ngrok.io.'
             - '*.ngrok.pizza'
+            - '*.ngrok.pizza.'
+            - '*.ngrok.pro'
+            - '*.ngrok.pro.'
+            - 'connect.ap.ngrok-agent.com'
+            - 'connect.ap.ngrok-agent.com.'
+            - 'connect.au.ngrok-agent.com'
+            - 'connect.au.ngrok-agent.com.'
+            - 'connect.eu.ngrok-agent.com'
+            - 'connect.eu.ngrok-agent.com.'
+            - 'connect.in.ngrok-agent.com'
+            - 'connect.in.ngrok-agent.com.'
+            - 'connect.jp.ngrok-agent.com'
+            - 'connect.jp.ngrok-agent.com.'
+            - 'connect.ngrok-agent.com'
+            - 'connect.ngrok-agent.com.'
+            - 'connect.sa.ngrok-agent.com'
+            - 'connect.sa.ngrok-agent.com.'
+            - 'connect.us.ngrok-agent.com'
+            - 'connect.us.ngrok-agent.com.'
+            - 'ngrok.com'
+            - 'ngrok.com.'
     condition: selection
 falsepositives:
     - Legitimate use of ngrok

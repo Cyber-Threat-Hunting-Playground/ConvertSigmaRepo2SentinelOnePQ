@@ -1,6 +1,6 @@
 ```sql
-// Translated content (automatically translated on 28-10-2026 02:56:19):
-(event.category in ("dns","url","ip")) and (endpoint.os="windows" and ((url.address contains "<operator-configured GLPI server>" or url.address contains "glpi-project.org" or url.address contains "www.glpi-project.org" or url.address contains "nightly.glpi-project.org" or url.address contains "forum.glpi-project.org" or url.address contains "glpi-network.com" or url.address contains "services.glpi-network.com" or url.address contains "github.com" or url.address contains "objects.githubusercontent.com") or (event.dns.request contains "<operator-configured GLPI server>" or event.dns.request contains "glpi-project.org" or event.dns.request contains "www.glpi-project.org" or event.dns.request contains "nightly.glpi-project.org" or event.dns.request contains "forum.glpi-project.org" or event.dns.request contains "glpi-network.com" or event.dns.request contains "services.glpi-network.com" or event.dns.request contains "github.com" or event.dns.request contains "objects.githubusercontent.com")))
+// Translated content (automatically translated on 29-10-2026 03:21:48):
+(event.category in ("dns","url","ip")) and (endpoint.os="windows" and ((url.address contains ".glpi-project.org" or url.address contains ".glpi-project.org." or url.address contains ".www.glpi-project.org" or url.address contains ".www.glpi-project.org." or url.address="glpi-project.org" or url.address="glpi-project.org." or url.address="www.glpi-project.org" or url.address="www.glpi-project.org." or url.address contains ".nightly.glpi-project.org" or url.address contains ".nightly.glpi-project.org." or url.address="nightly.glpi-project.org" or url.address="nightly.glpi-project.org." or url.address contains ".forum.glpi-project.org" or url.address contains ".forum.glpi-project.org." or url.address="forum.glpi-project.org" or url.address="forum.glpi-project.org." or url.address contains ".glpi-network.com" or url.address contains ".glpi-network.com." or url.address contains ".services.glpi-network.com" or url.address contains ".services.glpi-network.com." or url.address="glpi-network.com" or url.address="glpi-network.com." or url.address="services.glpi-network.com" or url.address="services.glpi-network.com.") or (event.dns.request contains ".glpi-project.org" or event.dns.request contains ".glpi-project.org." or event.dns.request contains ".www.glpi-project.org" or event.dns.request contains ".www.glpi-project.org." or event.dns.request="glpi-project.org" or event.dns.request="glpi-project.org." or event.dns.request="www.glpi-project.org" or event.dns.request="www.glpi-project.org." or event.dns.request contains ".nightly.glpi-project.org" or event.dns.request contains ".nightly.glpi-project.org." or event.dns.request="nightly.glpi-project.org" or event.dns.request="nightly.glpi-project.org." or event.dns.request contains ".forum.glpi-project.org" or event.dns.request contains ".forum.glpi-project.org." or event.dns.request="forum.glpi-project.org" or event.dns.request="forum.glpi-project.org." or event.dns.request contains ".glpi-network.com" or event.dns.request contains ".glpi-network.com." or event.dns.request contains ".services.glpi-network.com" or event.dns.request contains ".services.glpi-network.com." or event.dns.request="glpi-network.com" or event.dns.request="glpi-network.com." or event.dns.request="services.glpi-network.com" or event.dns.request="services.glpi-network.com.")))
 ```
 
 
@@ -15,7 +15,7 @@ references:
     - https://github.com/magicsword-io/LOLRMM
 author: LOLRMM Project
 date: 2026-05-18
-modified: 2026-09-02
+modified: 2026-10-28
 tags:
     - attack.command-and-control
     - attack.t1219
@@ -24,16 +24,31 @@ logsource:
     category: network_connection
 detection:
     selection:
-        DestinationHostname|endswith:
-            - '<operator-configured GLPI server>'
+        DestinationHostname:
+            - '*.glpi-project.org'
+            - '*.glpi-project.org.'
+            - '*.www.glpi-project.org'
+            - '*.www.glpi-project.org.'
             - 'glpi-project.org'
+            - 'glpi-project.org.'
             - 'www.glpi-project.org'
+            - 'www.glpi-project.org.'
+            - '*.nightly.glpi-project.org'
+            - '*.nightly.glpi-project.org.'
             - 'nightly.glpi-project.org'
+            - 'nightly.glpi-project.org.'
+            - '*.forum.glpi-project.org'
+            - '*.forum.glpi-project.org.'
             - 'forum.glpi-project.org'
+            - 'forum.glpi-project.org.'
+            - '*.glpi-network.com'
+            - '*.glpi-network.com.'
+            - '*.services.glpi-network.com'
+            - '*.services.glpi-network.com.'
             - 'glpi-network.com'
+            - 'glpi-network.com.'
             - 'services.glpi-network.com'
-            - 'github.com'
-            - 'objects.githubusercontent.com'
+            - 'services.glpi-network.com.'
     condition: selection
 falsepositives:
     - Legitimate use of GLPI Agent

@@ -1,6 +1,6 @@
 ```sql
-// Translated content (automatically translated on 28-10-2026 02:56:19):
-event.type="Process Creation" and (endpoint.os="windows" and ((src.process.image.path contains "\\RMMmaxAgentSetup.exe" or src.process.image.path contains "\\RMMmaxAgentService.exe") or (tgt.process.image.path contains "\\RMMmaxAgentSetup.exe" or tgt.process.image.path contains "\\RMMmaxAgentService.exe")))
+// Translated content (automatically translated on 29-10-2026 03:21:48):
+event.type="Process Creation" and (endpoint.os="windows" and (src.process.image.path contains "\\RMMmaxAgentSetup.exe" or tgt.process.image.path contains "\\RMMmaxAgentSetup.exe"))
 ```
 
 
@@ -15,6 +15,7 @@ references:
     - https://github.com/magicsword-io/LOLRMM
 author: LOLRMM Project
 date: 2026-09-09
+modified: 2026-10-28
 tags:
     - attack.command-and-control
     - attack.t1219
@@ -23,13 +24,9 @@ logsource:
     category: process_creation
 detection:
     selection_parent:
-        ParentImage|endswith:
-            - '\\RMMmaxAgentSetup.exe'
-            - '\\RMMmaxAgentService.exe'
+        ParentImage|endswith: '\\RMMmaxAgentSetup.exe'
     selection_image:
-        Image|endswith:
-            - '\\RMMmaxAgentSetup.exe'
-            - '\\RMMmaxAgentService.exe'
+        Image|endswith: '\\RMMmaxAgentSetup.exe'
     condition: 1 of selection_*
 falsepositives:
     - Legitimate use of RMMmax

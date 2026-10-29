@@ -1,6 +1,6 @@
 ```sql
-// Translated content (automatically translated on 28-10-2026 02:56:19):
-(event.category in ("dns","url","ip")) and (endpoint.os="windows" and ((url.address contains "shellhub.io" or url.address contains "cloud.shellhub.io" or url.address contains "www.shellhub.io" or url.address contains ".shellhub.io") or (event.dns.request contains "shellhub.io" or event.dns.request contains "cloud.shellhub.io" or event.dns.request contains "www.shellhub.io" or event.dns.request contains ".shellhub.io")))
+// Translated content (automatically translated on 29-10-2026 03:21:48):
+(event.category in ("dns","url","ip")) and (endpoint.os="windows" and ((url.address contains ".cloud.shellhub.io" or url.address contains ".cloud.shellhub.io." or url.address contains ".shellhub.io" or url.address contains ".shellhub.io." or url.address contains ".www.shellhub.io" or url.address contains ".www.shellhub.io." or url.address="cloud.shellhub.io" or url.address="cloud.shellhub.io." or url.address="shellhub.io" or url.address="shellhub.io." or url.address="www.shellhub.io" or url.address="www.shellhub.io.") or (event.dns.request contains ".cloud.shellhub.io" or event.dns.request contains ".cloud.shellhub.io." or event.dns.request contains ".shellhub.io" or event.dns.request contains ".shellhub.io." or event.dns.request contains ".www.shellhub.io" or event.dns.request contains ".www.shellhub.io." or event.dns.request="cloud.shellhub.io" or event.dns.request="cloud.shellhub.io." or event.dns.request="shellhub.io" or event.dns.request="shellhub.io." or event.dns.request="www.shellhub.io" or event.dns.request="www.shellhub.io.")))
 ```
 
 
@@ -15,7 +15,7 @@ references:
     - https://github.com/magicsword-io/LOLRMM
 author: LOLRMM Project
 date: 2026-05-18
-modified: 2026-09-02
+modified: 2026-10-28
 tags:
     - attack.command-and-control
     - attack.t1219
@@ -24,11 +24,19 @@ logsource:
     category: network_connection
 detection:
     selection:
-        DestinationHostname|endswith:
-            - 'shellhub.io'
-            - 'cloud.shellhub.io'
-            - 'www.shellhub.io'
+        DestinationHostname:
+            - '*.cloud.shellhub.io'
+            - '*.cloud.shellhub.io.'
             - '*.shellhub.io'
+            - '*.shellhub.io.'
+            - '*.www.shellhub.io'
+            - '*.www.shellhub.io.'
+            - 'cloud.shellhub.io'
+            - 'cloud.shellhub.io.'
+            - 'shellhub.io'
+            - 'shellhub.io.'
+            - 'www.shellhub.io'
+            - 'www.shellhub.io.'
     condition: selection
 falsepositives:
     - Legitimate use of ShellHub

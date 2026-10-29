@@ -1,6 +1,6 @@
 ```sql
-// Translated content (automatically translated on 28-10-2026 02:56:19):
-(event.category in ("dns","url","ip")) and (endpoint.os="windows" and ((url.address contains "github.com" or url.address contains "raw.githubusercontent.com" or url.address contains "ghcr.io" or url.address contains "komari-document.pages.dev" or url.address contains "www.komari.wiki") or (event.dns.request contains "github.com" or event.dns.request contains "raw.githubusercontent.com" or event.dns.request contains "ghcr.io" or event.dns.request contains "komari-document.pages.dev" or event.dns.request contains "www.komari.wiki")))
+// Translated content (automatically translated on 29-10-2026 03:21:48):
+(event.category in ("dns","url","ip")) and (endpoint.os="windows" and ((url.address contains ".komari-document.pages.dev" or url.address contains ".komari-document.pages.dev." or url.address contains ".www.komari.wiki" or url.address contains ".www.komari.wiki." or url.address="komari-document.pages.dev" or url.address="komari-document.pages.dev." or url.address="www.komari.wiki" or url.address="www.komari.wiki.") or (event.dns.request contains ".komari-document.pages.dev" or event.dns.request contains ".komari-document.pages.dev." or event.dns.request contains ".www.komari.wiki" or event.dns.request contains ".www.komari.wiki." or event.dns.request="komari-document.pages.dev" or event.dns.request="komari-document.pages.dev." or event.dns.request="www.komari.wiki" or event.dns.request="www.komari.wiki.")))
 ```
 
 
@@ -15,7 +15,7 @@ references:
     - https://github.com/magicsword-io/LOLRMM
 author: LOLRMM Project
 date: 2026-05-18
-modified: 2026-09-02
+modified: 2026-10-28
 tags:
     - attack.command-and-control
     - attack.t1219
@@ -24,12 +24,15 @@ logsource:
     category: network_connection
 detection:
     selection:
-        DestinationHostname|endswith:
-            - 'github.com'
-            - 'raw.githubusercontent.com'
-            - 'ghcr.io'
+        DestinationHostname:
+            - '*.komari-document.pages.dev'
+            - '*.komari-document.pages.dev.'
+            - '*.www.komari.wiki'
+            - '*.www.komari.wiki.'
             - 'komari-document.pages.dev'
+            - 'komari-document.pages.dev.'
             - 'www.komari.wiki'
+            - 'www.komari.wiki.'
     condition: selection
 falsepositives:
     - Legitimate use of Komari

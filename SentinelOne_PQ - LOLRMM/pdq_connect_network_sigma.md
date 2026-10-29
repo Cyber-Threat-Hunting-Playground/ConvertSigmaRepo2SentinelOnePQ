@@ -1,6 +1,6 @@
 ```sql
-// Translated content (automatically translated on 28-10-2026 02:56:19):
-(event.category in ("dns","url","ip")) and (endpoint.os="windows" and ((url.address contains "app.pdq.com" or url.address contains "cfcdn.pdq.com" or url.address="*pdqinstallers.*.r2.cloudflarestorage.com") or (event.dns.request contains "app.pdq.com" or event.dns.request contains "cfcdn.pdq.com" or event.dns.request="*pdqinstallers.*.r2.cloudflarestorage.com")))
+// Translated content (automatically translated on 29-10-2026 03:21:48):
+(event.category in ("dns","url","ip")) and (endpoint.os="windows" and ((url.address contains ".app.pdq.com" or url.address contains ".app.pdq.com." or url.address contains ".cfcdn.pdq.com" or url.address contains ".cfcdn.pdq.com." or url.address="app.pdq.com" or url.address="app.pdq.com." or url.address="cfcdn.pdq.com" or url.address="cfcdn.pdq.com." or url.address="pdqinstallers.*.r2.cloudflarestorage.com" or url.address="pdqinstallers.*.r2.cloudflarestorage.com.") or (event.dns.request contains ".app.pdq.com" or event.dns.request contains ".app.pdq.com." or event.dns.request contains ".cfcdn.pdq.com" or event.dns.request contains ".cfcdn.pdq.com." or event.dns.request="app.pdq.com" or event.dns.request="app.pdq.com." or event.dns.request="cfcdn.pdq.com" or event.dns.request="cfcdn.pdq.com." or event.dns.request="pdqinstallers.*.r2.cloudflarestorage.com" or event.dns.request="pdqinstallers.*.r2.cloudflarestorage.com.")))
 ```
 
 
@@ -15,7 +15,7 @@ references:
     - https://github.com/magicsword-io/LOLRMM
 author: LOLRMM Project
 date: 2025-12-01
-modified: 2026-09-02
+modified: 2026-10-28
 tags:
     - attack.command-and-control
     - attack.t1219
@@ -24,10 +24,17 @@ logsource:
     category: network_connection
 detection:
     selection:
-        DestinationHostname|endswith:
+        DestinationHostname:
+            - '*.app.pdq.com'
+            - '*.app.pdq.com.'
+            - '*.cfcdn.pdq.com'
+            - '*.cfcdn.pdq.com.'
             - 'app.pdq.com'
+            - 'app.pdq.com.'
             - 'cfcdn.pdq.com'
+            - 'cfcdn.pdq.com.'
             - 'pdqinstallers.*.r2.cloudflarestorage.com'
+            - 'pdqinstallers.*.r2.cloudflarestorage.com.'
     condition: selection
 falsepositives:
     - Legitimate use of PDQ Connect

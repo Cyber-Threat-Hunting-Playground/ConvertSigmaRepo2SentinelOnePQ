@@ -1,6 +1,6 @@
 ```sql
-// Translated content (automatically translated on 28-10-2026 02:56:19):
-(event.category in ("dns","url","ip")) and (endpoint.os="windows" and ((url.address contains ".duetdisplay.com" or url.address contains "rdp.duetdisplay.com" or url.address contains "duetdisplay.com" or url.address contains ".itagent.com" or url.address contains "itagent.com") or (event.dns.request contains ".duetdisplay.com" or event.dns.request contains "rdp.duetdisplay.com" or event.dns.request contains "duetdisplay.com" or event.dns.request contains ".itagent.com" or event.dns.request contains "itagent.com")))
+// Translated content (automatically translated on 29-10-2026 03:21:48):
+(event.category in ("dns","url","ip")) and (endpoint.os="windows" and ((url.address contains ".duetdisplay.com" or url.address contains ".duetdisplay.com." or url.address contains ".itagent.com" or url.address contains ".itagent.com." or url.address contains ".rdp.duetdisplay.com" or url.address contains ".rdp.duetdisplay.com." or url.address="duetdisplay.com" or url.address="duetdisplay.com." or url.address="itagent.com" or url.address="itagent.com." or url.address="rdp.duetdisplay.com" or url.address="rdp.duetdisplay.com.") or (event.dns.request contains ".duetdisplay.com" or event.dns.request contains ".duetdisplay.com." or event.dns.request contains ".itagent.com" or event.dns.request contains ".itagent.com." or event.dns.request contains ".rdp.duetdisplay.com" or event.dns.request contains ".rdp.duetdisplay.com." or event.dns.request="duetdisplay.com" or event.dns.request="duetdisplay.com." or event.dns.request="itagent.com" or event.dns.request="itagent.com." or event.dns.request="rdp.duetdisplay.com" or event.dns.request="rdp.duetdisplay.com.")))
 ```
 
 
@@ -15,7 +15,7 @@ references:
     - https://github.com/magicsword-io/LOLRMM
 author: LOLRMM Project
 date: 2026-05-18
-modified: 2026-09-02
+modified: 2026-10-28
 tags:
     - attack.command-and-control
     - attack.t1219
@@ -24,12 +24,19 @@ logsource:
     category: network_connection
 detection:
     selection:
-        DestinationHostname|endswith:
+        DestinationHostname:
             - '*.duetdisplay.com'
-            - 'rdp.duetdisplay.com'
-            - 'duetdisplay.com'
+            - '*.duetdisplay.com.'
             - '*.itagent.com'
+            - '*.itagent.com.'
+            - '*.rdp.duetdisplay.com'
+            - '*.rdp.duetdisplay.com.'
+            - 'duetdisplay.com'
+            - 'duetdisplay.com.'
             - 'itagent.com'
+            - 'itagent.com.'
+            - 'rdp.duetdisplay.com'
+            - 'rdp.duetdisplay.com.'
     condition: selection
 falsepositives:
     - Legitimate use of Duet Display

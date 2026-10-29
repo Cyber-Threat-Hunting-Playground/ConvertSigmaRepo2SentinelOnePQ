@@ -1,6 +1,6 @@
 ```sql
-// Translated content (automatically translated on 28-10-2026 02:56:19):
-(event.category in ("dns","url","ip")) and (endpoint.os="windows" and ((url.address contains ".superopsbeta.com" or url.address contains "superops.ai" or url.address contains "serv.superopsalpha.com" or url.address contains ".superops.ai" or url.address contains ".superopsalpha.com") or (event.dns.request contains ".superopsbeta.com" or event.dns.request contains "superops.ai" or event.dns.request contains "serv.superopsalpha.com" or event.dns.request contains ".superops.ai" or event.dns.request contains ".superopsalpha.com")))
+// Translated content (automatically translated on 29-10-2026 03:21:48):
+(event.category in ("dns","url","ip")) and (endpoint.os="windows" and ((url.address contains ".serv.superopsalpha.com" or url.address contains ".serv.superopsalpha.com." or url.address contains ".superops.ai" or url.address contains ".superops.ai." or url.address contains ".superopsalpha.com" or url.address contains ".superopsalpha.com." or url.address contains ".superopsbeta.com" or url.address contains ".superopsbeta.com." or url.address="serv.superopsalpha.com" or url.address="serv.superopsalpha.com." or url.address="superops.ai" or url.address="superops.ai.") or (event.dns.request contains ".serv.superopsalpha.com" or event.dns.request contains ".serv.superopsalpha.com." or event.dns.request contains ".superops.ai" or event.dns.request contains ".superops.ai." or event.dns.request contains ".superopsalpha.com" or event.dns.request contains ".superopsalpha.com." or event.dns.request contains ".superopsbeta.com" or event.dns.request contains ".superopsbeta.com." or event.dns.request="serv.superopsalpha.com" or event.dns.request="serv.superopsalpha.com." or event.dns.request="superops.ai" or event.dns.request="superops.ai.")))
 ```
 
 
@@ -15,7 +15,7 @@ references:
     - https://github.com/magicsword-io/LOLRMM
 author: LOLRMM Project
 date: 2025-12-01
-modified: 2026-09-02
+modified: 2026-10-28
 tags:
     - attack.command-and-control
     - attack.t1219
@@ -24,12 +24,19 @@ logsource:
     category: network_connection
 detection:
     selection:
-        DestinationHostname|endswith:
-            - '*.superopsbeta.com'
-            - 'superops.ai'
-            - 'serv.superopsalpha.com'
+        DestinationHostname:
+            - '*.serv.superopsalpha.com'
+            - '*.serv.superopsalpha.com.'
             - '*.superops.ai'
+            - '*.superops.ai.'
             - '*.superopsalpha.com'
+            - '*.superopsalpha.com.'
+            - '*.superopsbeta.com'
+            - '*.superopsbeta.com.'
+            - 'serv.superopsalpha.com'
+            - 'serv.superopsalpha.com.'
+            - 'superops.ai'
+            - 'superops.ai.'
     condition: selection
 falsepositives:
     - Legitimate use of SuperOps

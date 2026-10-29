@@ -1,6 +1,6 @@
 ```sql
-// Translated content (automatically translated on 28-10-2026 02:56:19):
-(event.category in ("dns","url","ip")) and (endpoint.os="windows" and ((url.address contains "gateway.miradore.com" or url.address contains ".miradore.com" or url.address contains "miradore.com" or url.address contains "gerwconline.blob.core.windows.net") or (event.dns.request contains "gateway.miradore.com" or event.dns.request contains ".miradore.com" or event.dns.request contains "miradore.com" or event.dns.request contains "gerwconline.blob.core.windows.net")))
+// Translated content (automatically translated on 29-10-2026 03:21:48):
+(event.category in ("dns","url","ip")) and (endpoint.os="windows" and ((url.address contains ".gateway.miradore.com" or url.address contains ".gateway.miradore.com." or url.address contains ".gerwconline.blob.core.windows.net" or url.address contains ".gerwconline.blob.core.windows.net." or url.address contains ".miradore.com" or url.address contains ".miradore.com." or url.address="gateway.miradore.com" or url.address="gateway.miradore.com." or url.address="gerwconline.blob.core.windows.net" or url.address="gerwconline.blob.core.windows.net." or url.address="miradore.com" or url.address="miradore.com.") or (event.dns.request contains ".gateway.miradore.com" or event.dns.request contains ".gateway.miradore.com." or event.dns.request contains ".gerwconline.blob.core.windows.net" or event.dns.request contains ".gerwconline.blob.core.windows.net." or event.dns.request contains ".miradore.com" or event.dns.request contains ".miradore.com." or event.dns.request="gateway.miradore.com" or event.dns.request="gateway.miradore.com." or event.dns.request="gerwconline.blob.core.windows.net" or event.dns.request="gerwconline.blob.core.windows.net." or event.dns.request="miradore.com" or event.dns.request="miradore.com.")))
 ```
 
 
@@ -15,7 +15,7 @@ references:
     - https://github.com/magicsword-io/LOLRMM
 author: LOLRMM Project
 date: 2026-05-18
-modified: 2026-09-02
+modified: 2026-10-28
 tags:
     - attack.command-and-control
     - attack.t1219
@@ -24,11 +24,19 @@ logsource:
     category: network_connection
 detection:
     selection:
-        DestinationHostname|endswith:
-            - 'gateway.miradore.com'
+        DestinationHostname:
+            - '*.gateway.miradore.com'
+            - '*.gateway.miradore.com.'
+            - '*.gerwconline.blob.core.windows.net'
+            - '*.gerwconline.blob.core.windows.net.'
             - '*.miradore.com'
-            - 'miradore.com'
+            - '*.miradore.com.'
+            - 'gateway.miradore.com'
+            - 'gateway.miradore.com.'
             - 'gerwconline.blob.core.windows.net'
+            - 'gerwconline.blob.core.windows.net.'
+            - 'miradore.com'
+            - 'miradore.com.'
     condition: selection
 falsepositives:
     - Legitimate use of Miradore

@@ -1,6 +1,6 @@
 ```sql
-// Translated content (automatically translated on 28-10-2026 02:56:19):
-(event.category in ("dns","url","ip")) and (endpoint.os="windows" and ((url.address contains "charon.netreo.net" or url.address contains "activation.netreo.net" or url.address contains ".api.netreo.com" or url.address contains "netreo.com") or (event.dns.request contains "charon.netreo.net" or event.dns.request contains "activation.netreo.net" or event.dns.request contains ".api.netreo.com" or event.dns.request contains "netreo.com")))
+// Translated content (automatically translated on 29-10-2026 03:21:48):
+(event.category in ("dns","url","ip")) and (endpoint.os="windows" and ((url.address contains ".activation.netreo.net" or url.address contains ".activation.netreo.net." or url.address contains ".api.netreo.com" or url.address contains ".api.netreo.com." or url.address contains ".charon.netreo.net" or url.address contains ".charon.netreo.net." or url.address contains ".netreo.com" or url.address contains ".netreo.com." or url.address="activation.netreo.net" or url.address="activation.netreo.net." or url.address="charon.netreo.net" or url.address="charon.netreo.net." or url.address="netreo.com" or url.address="netreo.com.") or (event.dns.request contains ".activation.netreo.net" or event.dns.request contains ".activation.netreo.net." or event.dns.request contains ".api.netreo.com" or event.dns.request contains ".api.netreo.com." or event.dns.request contains ".charon.netreo.net" or event.dns.request contains ".charon.netreo.net." or event.dns.request contains ".netreo.com" or event.dns.request contains ".netreo.com." or event.dns.request="activation.netreo.net" or event.dns.request="activation.netreo.net." or event.dns.request="charon.netreo.net" or event.dns.request="charon.netreo.net." or event.dns.request="netreo.com" or event.dns.request="netreo.com.")))
 ```
 
 
@@ -15,7 +15,7 @@ references:
     - https://github.com/magicsword-io/LOLRMM
 author: LOLRMM Project
 date: 2025-12-01
-modified: 2026-09-02
+modified: 2026-10-28
 tags:
     - attack.command-and-control
     - attack.t1219
@@ -24,11 +24,21 @@ logsource:
     category: network_connection
 detection:
     selection:
-        DestinationHostname|endswith:
-            - 'charon.netreo.net'
-            - 'activation.netreo.net'
+        DestinationHostname:
+            - '*.activation.netreo.net'
+            - '*.activation.netreo.net.'
             - '*.api.netreo.com'
+            - '*.api.netreo.com.'
+            - '*.charon.netreo.net'
+            - '*.charon.netreo.net.'
+            - '*.netreo.com'
+            - '*.netreo.com.'
+            - 'activation.netreo.net'
+            - 'activation.netreo.net.'
+            - 'charon.netreo.net'
+            - 'charon.netreo.net.'
             - 'netreo.com'
+            - 'netreo.com.'
     condition: selection
 falsepositives:
     - Legitimate use of Netreo

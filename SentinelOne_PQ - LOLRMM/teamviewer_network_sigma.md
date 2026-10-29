@@ -1,6 +1,6 @@
 ```sql
-// Translated content (automatically translated on 28-10-2026 02:56:19):
-(event.category in ("dns","url","ip")) and (endpoint.os="windows" and ((url.address contains ".teamviewer.com" or url.address contains "router15.teamviewer.com" or url.address contains "client.teamviewer.com" or url.address contains "taf.teamviewer.com") or (event.dns.request contains ".teamviewer.com" or event.dns.request contains "router15.teamviewer.com" or event.dns.request contains "client.teamviewer.com" or event.dns.request contains "taf.teamviewer.com")))
+// Translated content (automatically translated on 29-10-2026 03:21:48):
+(event.category in ("dns","url","ip")) and (endpoint.os="windows" and ((url.address contains ".teamviewer.com" or url.address contains ".teamviewer.com." or url.address contains ".router15.teamviewer.com" or url.address contains ".router15.teamviewer.com." or url.address="router15.teamviewer.com" or url.address="router15.teamviewer.com." or url.address contains ".client.teamviewer.com" or url.address contains ".client.teamviewer.com." or url.address="client.teamviewer.com" or url.address="client.teamviewer.com." or url.address contains ".taf.teamviewer.com" or url.address contains ".taf.teamviewer.com." or url.address="taf.teamviewer.com" or url.address="taf.teamviewer.com.") or (event.dns.request contains ".teamviewer.com" or event.dns.request contains ".teamviewer.com." or event.dns.request contains ".router15.teamviewer.com" or event.dns.request contains ".router15.teamviewer.com." or event.dns.request="router15.teamviewer.com" or event.dns.request="router15.teamviewer.com." or event.dns.request contains ".client.teamviewer.com" or event.dns.request contains ".client.teamviewer.com." or event.dns.request="client.teamviewer.com" or event.dns.request="client.teamviewer.com." or event.dns.request contains ".taf.teamviewer.com" or event.dns.request contains ".taf.teamviewer.com." or event.dns.request="taf.teamviewer.com" or event.dns.request="taf.teamviewer.com.")))
 ```
 
 
@@ -15,7 +15,7 @@ references:
     - https://github.com/magicsword-io/LOLRMM
 author: LOLRMM Project
 date: 2025-12-01
-modified: 2026-09-02
+modified: 2026-10-28
 tags:
     - attack.command-and-control
     - attack.t1219
@@ -24,11 +24,21 @@ logsource:
     category: network_connection
 detection:
     selection:
-        DestinationHostname|endswith:
+        DestinationHostname:
             - '*.teamviewer.com'
+            - '*.teamviewer.com.'
+            - '*.router15.teamviewer.com'
+            - '*.router15.teamviewer.com.'
             - 'router15.teamviewer.com'
+            - 'router15.teamviewer.com.'
+            - '*.client.teamviewer.com'
+            - '*.client.teamviewer.com.'
             - 'client.teamviewer.com'
+            - 'client.teamviewer.com.'
+            - '*.taf.teamviewer.com'
+            - '*.taf.teamviewer.com.'
             - 'taf.teamviewer.com'
+            - 'taf.teamviewer.com.'
     condition: selection
 falsepositives:
     - Legitimate use of TeamViewer

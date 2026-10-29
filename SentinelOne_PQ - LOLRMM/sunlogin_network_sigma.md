@@ -1,6 +1,6 @@
 ```sql
-// Translated content (automatically translated on 28-10-2026 02:56:19):
-(event.category in ("dns","url","ip")) and (endpoint.os="windows" and ((url.address contains "sunlogin.oray.com" or url.address contains "client.oray.net") or (event.dns.request contains "sunlogin.oray.com" or event.dns.request contains "client.oray.net")))
+// Translated content (automatically translated on 29-10-2026 03:21:48):
+(event.category in ("dns","url","ip")) and (endpoint.os="windows" and ((url.address contains ".client.oray.net" or url.address contains ".client.oray.net." or url.address contains ".sunlogin.oray.com" or url.address contains ".sunlogin.oray.com." or url.address="client.oray.net" or url.address="client.oray.net." or url.address="sunlogin.oray.com" or url.address="sunlogin.oray.com.") or (event.dns.request contains ".client.oray.net" or event.dns.request contains ".client.oray.net." or event.dns.request contains ".sunlogin.oray.com" or event.dns.request contains ".sunlogin.oray.com." or event.dns.request="client.oray.net" or event.dns.request="client.oray.net." or event.dns.request="sunlogin.oray.com" or event.dns.request="sunlogin.oray.com.")))
 ```
 
 
@@ -15,7 +15,7 @@ references:
     - https://github.com/magicsword-io/LOLRMM
 author: LOLRMM Project
 date: 2025-12-01
-modified: 2026-09-02
+modified: 2026-10-28
 tags:
     - attack.command-and-control
     - attack.t1219
@@ -24,9 +24,15 @@ logsource:
     category: network_connection
 detection:
     selection:
-        DestinationHostname|endswith:
-            - 'sunlogin.oray.com'
+        DestinationHostname:
+            - '*.client.oray.net'
+            - '*.client.oray.net.'
+            - '*.sunlogin.oray.com'
+            - '*.sunlogin.oray.com.'
             - 'client.oray.net'
+            - 'client.oray.net.'
+            - 'sunlogin.oray.com'
+            - 'sunlogin.oray.com.'
     condition: selection
 falsepositives:
     - Legitimate use of SunLogin

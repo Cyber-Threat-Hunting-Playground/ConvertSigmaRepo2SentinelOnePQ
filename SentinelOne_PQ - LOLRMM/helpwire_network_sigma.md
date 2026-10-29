@@ -1,6 +1,6 @@
 ```sql
-// Translated content (automatically translated on 28-10-2026 02:56:19):
-(event.category in ("dns","url","ip")) and (endpoint.os="windows" and ((url.address contains "helpwire.app" or url.address contains "get.helpwire.app" or url.address contains "api.helpwire.app" or url.address contains "staging.helpwire.app" or url.address contains "account.flexihub.com" or url.address contains "stun.helpwire.app" or url.address contains "stunserver.stunprotocol.org") or (event.dns.request contains "helpwire.app" or event.dns.request contains "get.helpwire.app" or event.dns.request contains "api.helpwire.app" or event.dns.request contains "staging.helpwire.app" or event.dns.request contains "account.flexihub.com" or event.dns.request contains "stun.helpwire.app" or event.dns.request contains "stunserver.stunprotocol.org")))
+// Translated content (automatically translated on 29-10-2026 03:21:48):
+(event.category in ("dns","url","ip")) and (endpoint.os="windows" and ((url.address contains ".account.flexihub.com" or url.address contains ".account.flexihub.com." or url.address contains ".api.helpwire.app" or url.address contains ".api.helpwire.app." or url.address contains ".get.helpwire.app" or url.address contains ".get.helpwire.app." or url.address contains ".helpwire.app" or url.address contains ".helpwire.app." or url.address contains ".staging.helpwire.app" or url.address contains ".staging.helpwire.app." or url.address="account.flexihub.com" or url.address="account.flexihub.com." or url.address="api.helpwire.app" or url.address="api.helpwire.app." or url.address="get.helpwire.app" or url.address="get.helpwire.app." or url.address="helpwire.app" or url.address="helpwire.app." or url.address="staging.helpwire.app" or url.address="staging.helpwire.app." or url.address contains ".stun.helpwire.app" or url.address contains ".stun.helpwire.app." or url.address="stun.helpwire.app" or url.address="stun.helpwire.app.") or (event.dns.request contains ".account.flexihub.com" or event.dns.request contains ".account.flexihub.com." or event.dns.request contains ".api.helpwire.app" or event.dns.request contains ".api.helpwire.app." or event.dns.request contains ".get.helpwire.app" or event.dns.request contains ".get.helpwire.app." or event.dns.request contains ".helpwire.app" or event.dns.request contains ".helpwire.app." or event.dns.request contains ".staging.helpwire.app" or event.dns.request contains ".staging.helpwire.app." or event.dns.request="account.flexihub.com" or event.dns.request="account.flexihub.com." or event.dns.request="api.helpwire.app" or event.dns.request="api.helpwire.app." or event.dns.request="get.helpwire.app" or event.dns.request="get.helpwire.app." or event.dns.request="helpwire.app" or event.dns.request="helpwire.app." or event.dns.request="staging.helpwire.app" or event.dns.request="staging.helpwire.app." or event.dns.request contains ".stun.helpwire.app" or event.dns.request contains ".stun.helpwire.app." or event.dns.request="stun.helpwire.app" or event.dns.request="stun.helpwire.app.")))
 ```
 
 
@@ -15,7 +15,7 @@ references:
     - https://github.com/magicsword-io/LOLRMM
 author: LOLRMM Project
 date: 2026-06-11
-modified: 2026-09-02
+modified: 2026-10-28
 tags:
     - attack.command-and-control
     - attack.t1219
@@ -24,14 +24,31 @@ logsource:
     category: network_connection
 detection:
     selection:
-        DestinationHostname|endswith:
-            - 'helpwire.app'
-            - 'get.helpwire.app'
-            - 'api.helpwire.app'
-            - 'staging.helpwire.app'
+        DestinationHostname:
+            - '*.account.flexihub.com'
+            - '*.account.flexihub.com.'
+            - '*.api.helpwire.app'
+            - '*.api.helpwire.app.'
+            - '*.get.helpwire.app'
+            - '*.get.helpwire.app.'
+            - '*.helpwire.app'
+            - '*.helpwire.app.'
+            - '*.staging.helpwire.app'
+            - '*.staging.helpwire.app.'
             - 'account.flexihub.com'
+            - 'account.flexihub.com.'
+            - 'api.helpwire.app'
+            - 'api.helpwire.app.'
+            - 'get.helpwire.app'
+            - 'get.helpwire.app.'
+            - 'helpwire.app'
+            - 'helpwire.app.'
+            - 'staging.helpwire.app'
+            - 'staging.helpwire.app.'
+            - '*.stun.helpwire.app'
+            - '*.stun.helpwire.app.'
             - 'stun.helpwire.app'
-            - 'stunserver.stunprotocol.org'
+            - 'stun.helpwire.app.'
     condition: selection
 falsepositives:
     - Legitimate use of HelpWire

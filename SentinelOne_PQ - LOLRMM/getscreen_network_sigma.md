@@ -1,6 +1,6 @@
 ```sql
-// Translated content (automatically translated on 28-10-2026 02:56:19):
-(event.category in ("dns","url","ip")) and (endpoint.os="windows" and ((url.address contains "getscreen.me" or url.address contains ".getscreen.me" or url.address contains "go.getscreen.me" or url.address contains "image.getscreen.me" or url.address="*px-*.getscreen.me") or (event.dns.request contains "getscreen.me" or event.dns.request contains ".getscreen.me" or event.dns.request contains "go.getscreen.me" or event.dns.request contains "image.getscreen.me" or event.dns.request="*px-*.getscreen.me")))
+// Translated content (automatically translated on 29-10-2026 03:21:48):
+(event.category in ("dns","url","ip")) and (endpoint.os="windows" and ((url.address contains ".getscreen.me" or url.address contains ".getscreen.me." or url.address contains ".go.getscreen.me" or url.address contains ".go.getscreen.me." or url.address contains ".image.getscreen.me" or url.address contains ".image.getscreen.me." or url.address="getscreen.me" or url.address="getscreen.me." or url.address="go.getscreen.me" or url.address="go.getscreen.me." or url.address="image.getscreen.me" or url.address="image.getscreen.me." or url.address="px-*.getscreen.me" or url.address="px-*.getscreen.me.") or (event.dns.request contains ".getscreen.me" or event.dns.request contains ".getscreen.me." or event.dns.request contains ".go.getscreen.me" or event.dns.request contains ".go.getscreen.me." or event.dns.request contains ".image.getscreen.me" or event.dns.request contains ".image.getscreen.me." or event.dns.request="getscreen.me" or event.dns.request="getscreen.me." or event.dns.request="go.getscreen.me" or event.dns.request="go.getscreen.me." or event.dns.request="image.getscreen.me" or event.dns.request="image.getscreen.me." or event.dns.request="px-*.getscreen.me" or event.dns.request="px-*.getscreen.me.")))
 ```
 
 
@@ -15,7 +15,7 @@ references:
     - https://github.com/magicsword-io/LOLRMM
 author: LOLRMM Project
 date: 2025-12-01
-modified: 2026-09-02
+modified: 2026-10-28
 tags:
     - attack.command-and-control
     - attack.t1219
@@ -24,12 +24,21 @@ logsource:
     category: network_connection
 detection:
     selection:
-        DestinationHostname|endswith:
-            - 'getscreen.me'
+        DestinationHostname:
             - '*.getscreen.me'
+            - '*.getscreen.me.'
+            - '*.go.getscreen.me'
+            - '*.go.getscreen.me.'
+            - '*.image.getscreen.me'
+            - '*.image.getscreen.me.'
+            - 'getscreen.me'
+            - 'getscreen.me.'
             - 'go.getscreen.me'
+            - 'go.getscreen.me.'
             - 'image.getscreen.me'
+            - 'image.getscreen.me.'
             - 'px-*.getscreen.me'
+            - 'px-*.getscreen.me.'
     condition: selection
 falsepositives:
     - Legitimate use of GetScreen

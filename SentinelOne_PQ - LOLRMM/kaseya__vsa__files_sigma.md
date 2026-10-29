@@ -1,6 +1,6 @@
 ```sql
-// Translated content (automatically translated on 28-10-2026 02:56:19):
-event.category="file" and (endpoint.os="windows" and (tgt.file.path contains "%localappdata%\\Kaseya\\Log\\KaseyaLiveConnect\*" or tgt.file.path contains "C:\\ProgramData\\Kaseya\\Log\\Endpoint\*" or tgt.file.path="*C:\\Program Files*\\Kaseya\*\\agentmon.log" or tgt.file.path contains "C:\\Users\*\\AppData\\Local\\Temp\\KASetup.log" or tgt.file.path contains "C:\\Windows\\Temp\\KASetup.log" or tgt.file.path contains "C:\\ProgramData\\Kaseya\\Log\\KaseyaEdgeServices\*" or tgt.file.path contains "C:\\Kaseya\\api\\v1.0\\logs\\" or tgt.file.path contains "C:\\Kaseya\\api\\v1.5\\endpoint\\logs" or tgt.file.path contains "C:\\Kaseya\\api\\v1.5\\endpoints\\logs" or tgt.file.path contains "C:\\Windows\\System32\\config\\systemprofile\\AppData\\Local\\Kaseya\\Log\\MakeSelfSignedCert.exe\\" or tgt.file.path contains "C:\\Kaseya\\WebPages\\install\\makecert.txt" or tgt.file.path="*C:\\ProgramData\\Kaseya\\Log\\Endpoint\\Instance_*\\KaseyaEndpoint*" or tgt.file.path="*C:\\ProgramData\\Kaseya\\Log\\Endpoint\\Instance_*\\Session_*"))
+// Translated content (automatically translated on 29-10-2026 03:21:48):
+event.category="file" and (endpoint.os="windows" and (tgt.file.path contains "C:\\ProgramData\\Kaseya\\Log\\Endpoint\*" or tgt.file.path="*C:\\Program Files*\\Kaseya\*\\agentmon.log" or tgt.file.path contains "C:\\Users\*\\AppData\\Local\\Temp\\KASetup.log" or tgt.file.path contains "C:\\Windows\\Temp\\KASetup.log" or tgt.file.path contains "C:\\ProgramData\\Kaseya\\Log\\KaseyaEdgeServices\*" or tgt.file.path contains "C:\\Kaseya\\api\\v1.0\\logs\\" or tgt.file.path contains "C:\\Kaseya\\api\\v1.5\\endpoint\\logs" or tgt.file.path contains "C:\\Kaseya\\api\\v1.5\\endpoints\\logs" or tgt.file.path contains "C:\\Windows\\System32\\config\\systemprofile\\AppData\\Local\\Kaseya\\Log\\MakeSelfSignedCert.exe\\" or tgt.file.path contains "C:\\Kaseya\\WebPages\\install\\makecert.txt" or tgt.file.path="*C:\\ProgramData\\Kaseya\\Log\\Endpoint\\Instance_*\\KaseyaEndpoint*" or tgt.file.path="*C:\\ProgramData\\Kaseya\\Log\\Endpoint\\Instance_*\\Session_*"))
 ```
 
 
@@ -15,7 +15,7 @@ references:
     - https://github.com/magicsword-io/LOLRMM
 author: LOLRMM Project
 date: 2025-12-01
-modified: 2026-09-22
+modified: 2026-10-28
 tags:
     - attack.command-and-control
     - attack.t1219
@@ -25,7 +25,6 @@ logsource:
 detection:
     selection:
         TargetFilename|endswith:
-            - '%localappdata%\Kaseya\Log\KaseyaLiveConnect\*'
             - 'C:\ProgramData\Kaseya\Log\Endpoint\*'
             - 'C:\Program Files*\Kaseya\*\agentmon.log'
             - 'C:\Users\*\AppData\Local\Temp\KASetup.log'

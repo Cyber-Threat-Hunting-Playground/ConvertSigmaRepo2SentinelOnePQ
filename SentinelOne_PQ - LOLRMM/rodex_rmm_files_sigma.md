@@ -1,6 +1,6 @@
 ```sql
-// Translated content (automatically translated on 28-10-2026 02:56:19):
-event.category="file" and (endpoint.os="windows" and (tgt.file.path contains "RodexAgent.exe" or tgt.file.path contains "C:\\Windows\\<random-6-9-char>.exe" or tgt.file.path contains "<impersonated-org>Agent.exe"))
+// Translated content (automatically translated on 29-10-2026 03:21:48):
+event.category="file" and (endpoint.os="windows" and tgt.file.path contains "RodexAgent.exe")
 ```
 
 
@@ -15,7 +15,7 @@ references:
     - https://github.com/magicsword-io/LOLRMM
 author: LOLRMM Project
 date: 2026-05-18
-modified: 2026-09-02
+modified: 2026-10-28
 tags:
     - attack.command-and-control
     - attack.t1219
@@ -24,10 +24,7 @@ logsource:
     category: file_event
 detection:
     selection:
-        TargetFilename|endswith:
-            - 'RodexAgent.exe'
-            - 'C:\Windows\<random-6-9-char>.exe'
-            - '<impersonated-org>Agent.exe'
+        TargetFilename|endswith: 'RodexAgent.exe'
     condition: selection
 falsepositives:
     - Legitimate use of Rodex RMM

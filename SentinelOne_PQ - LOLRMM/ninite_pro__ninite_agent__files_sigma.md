@@ -1,6 +1,6 @@
 ```sql
-// Translated content (automatically translated on 28-10-2026 02:56:19):
-event.category="file" and (endpoint.os="windows" and (tgt.file.path contains "%TEMP%\\NiniteDownloads\*" or tgt.file.path contains "NiniteUpdateSummary.log"))
+// Translated content (automatically translated on 29-10-2026 03:21:48):
+event.category="file" and (endpoint.os="windows" and tgt.file.path contains "NiniteUpdateSummary.log")
 ```
 
 
@@ -15,7 +15,7 @@ references:
     - https://github.com/magicsword-io/LOLRMM
 author: LOLRMM Project
 date: 2026-07-08
-modified: 2026-09-02
+modified: 2026-10-28
 tags:
     - attack.command-and-control
     - attack.t1219
@@ -24,9 +24,7 @@ logsource:
     category: file_event
 detection:
     selection:
-        TargetFilename|endswith:
-            - '%TEMP%\NiniteDownloads\*'
-            - 'NiniteUpdateSummary.log'
+        TargetFilename|endswith: 'NiniteUpdateSummary.log'
     condition: selection
 falsepositives:
     - Legitimate use of Ninite Pro (Ninite Agent)

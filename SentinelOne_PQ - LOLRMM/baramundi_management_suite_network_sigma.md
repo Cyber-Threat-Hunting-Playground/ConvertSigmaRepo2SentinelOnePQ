@@ -1,6 +1,6 @@
 ```sql
-// Translated content (automatically translated on 28-10-2026 02:56:19):
-(event.category in ("dns","url","ip")) and (endpoint.os="windows" and ((url.address contains ".baramundi.com" or url.address contains "www.baramundi.com" or url.address contains "docs.baramundi.com" or url.address contains "isodownload.baramundi.com") or (event.dns.request contains ".baramundi.com" or event.dns.request contains "www.baramundi.com" or event.dns.request contains "docs.baramundi.com" or event.dns.request contains "isodownload.baramundi.com")))
+// Translated content (automatically translated on 29-10-2026 03:21:48):
+(event.category in ("dns","url","ip")) and (endpoint.os="windows" and ((url.address contains ".baramundi.com" or url.address contains ".baramundi.com." or url.address contains ".docs.baramundi.com" or url.address contains ".docs.baramundi.com." or url.address contains ".isodownload.baramundi.com" or url.address contains ".isodownload.baramundi.com." or url.address contains ".www.baramundi.com" or url.address contains ".www.baramundi.com." or url.address="docs.baramundi.com" or url.address="docs.baramundi.com." or url.address="isodownload.baramundi.com" or url.address="isodownload.baramundi.com." or url.address="www.baramundi.com" or url.address="www.baramundi.com.") or (event.dns.request contains ".baramundi.com" or event.dns.request contains ".baramundi.com." or event.dns.request contains ".docs.baramundi.com" or event.dns.request contains ".docs.baramundi.com." or event.dns.request contains ".isodownload.baramundi.com" or event.dns.request contains ".isodownload.baramundi.com." or event.dns.request contains ".www.baramundi.com" or event.dns.request contains ".www.baramundi.com." or event.dns.request="docs.baramundi.com" or event.dns.request="docs.baramundi.com." or event.dns.request="isodownload.baramundi.com" or event.dns.request="isodownload.baramundi.com." or event.dns.request="www.baramundi.com" or event.dns.request="www.baramundi.com.")))
 ```
 
 
@@ -15,7 +15,7 @@ references:
     - https://github.com/magicsword-io/LOLRMM
 author: LOLRMM Project
 date: 2026-05-18
-modified: 2026-09-02
+modified: 2026-10-28
 tags:
     - attack.command-and-control
     - attack.t1219
@@ -24,11 +24,21 @@ logsource:
     category: network_connection
 detection:
     selection:
-        DestinationHostname|endswith:
+        DestinationHostname:
             - '*.baramundi.com'
-            - 'www.baramundi.com'
+            - '*.baramundi.com.'
+            - '*.docs.baramundi.com'
+            - '*.docs.baramundi.com.'
+            - '*.isodownload.baramundi.com'
+            - '*.isodownload.baramundi.com.'
+            - '*.www.baramundi.com'
+            - '*.www.baramundi.com.'
             - 'docs.baramundi.com'
+            - 'docs.baramundi.com.'
             - 'isodownload.baramundi.com'
+            - 'isodownload.baramundi.com.'
+            - 'www.baramundi.com'
+            - 'www.baramundi.com.'
     condition: selection
 falsepositives:
     - Legitimate use of baramundi Management Suite

@@ -1,6 +1,6 @@
 ```sql
-// Translated content (automatically translated on 28-10-2026 02:56:19):
-(event.category in ("dns","url","ip")) and (endpoint.os="windows" and ((url.address contains "cdn.teleport.dev" or url.address contains "reporting-connect.teleportinfra.sh" or url.address contains "usage.teleport.dev" or url.address contains ".teleport.sh" or url.address contains "user_managed") or (event.dns.request contains "cdn.teleport.dev" or event.dns.request contains "reporting-connect.teleportinfra.sh" or event.dns.request contains "usage.teleport.dev" or event.dns.request contains ".teleport.sh" or event.dns.request contains "user_managed")))
+// Translated content (automatically translated on 29-10-2026 03:21:48):
+(event.category in ("dns","url","ip")) and (endpoint.os="windows" and ((url.address contains ".cdn.teleport.dev" or url.address contains ".cdn.teleport.dev." or url.address contains ".reporting-connect.teleportinfra.sh" or url.address contains ".reporting-connect.teleportinfra.sh." or url.address contains ".usage.teleport.dev" or url.address contains ".usage.teleport.dev." or url.address="cdn.teleport.dev" or url.address="cdn.teleport.dev." or url.address="reporting-connect.teleportinfra.sh" or url.address="reporting-connect.teleportinfra.sh." or url.address="usage.teleport.dev" or url.address="usage.teleport.dev." or url.address contains ".teleport.sh" or url.address contains ".teleport.sh.") or (event.dns.request contains ".cdn.teleport.dev" or event.dns.request contains ".cdn.teleport.dev." or event.dns.request contains ".reporting-connect.teleportinfra.sh" or event.dns.request contains ".reporting-connect.teleportinfra.sh." or event.dns.request contains ".usage.teleport.dev" or event.dns.request contains ".usage.teleport.dev." or event.dns.request="cdn.teleport.dev" or event.dns.request="cdn.teleport.dev." or event.dns.request="reporting-connect.teleportinfra.sh" or event.dns.request="reporting-connect.teleportinfra.sh." or event.dns.request="usage.teleport.dev" or event.dns.request="usage.teleport.dev." or event.dns.request contains ".teleport.sh" or event.dns.request contains ".teleport.sh.")))
 ```
 
 
@@ -15,7 +15,7 @@ references:
     - https://github.com/magicsword-io/LOLRMM
 author: LOLRMM Project
 date: 2026-08-18
-modified: 2026-09-02
+modified: 2026-10-28
 tags:
     - attack.command-and-control
     - attack.t1219
@@ -24,12 +24,21 @@ logsource:
     category: network_connection
 detection:
     selection:
-        DestinationHostname|endswith:
+        DestinationHostname:
+            - '*.cdn.teleport.dev'
+            - '*.cdn.teleport.dev.'
+            - '*.reporting-connect.teleportinfra.sh'
+            - '*.reporting-connect.teleportinfra.sh.'
+            - '*.usage.teleport.dev'
+            - '*.usage.teleport.dev.'
             - 'cdn.teleport.dev'
+            - 'cdn.teleport.dev.'
             - 'reporting-connect.teleportinfra.sh'
+            - 'reporting-connect.teleportinfra.sh.'
             - 'usage.teleport.dev'
+            - 'usage.teleport.dev.'
             - '*.teleport.sh'
-            - 'user_managed'
+            - '*.teleport.sh.'
     condition: selection
 falsepositives:
     - Legitimate use of Teleport Connect

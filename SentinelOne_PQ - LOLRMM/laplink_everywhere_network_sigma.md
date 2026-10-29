@@ -1,6 +1,6 @@
 ```sql
-// Translated content (automatically translated on 28-10-2026 02:56:19):
-(event.category in ("dns","url","ip")) and (endpoint.os="windows" and ((url.address contains "everywhere.laplink.com" or url.address contains "le.laplink.com" or url.address contains "atled.syspectr.com") or (event.dns.request contains "everywhere.laplink.com" or event.dns.request contains "le.laplink.com" or event.dns.request contains "atled.syspectr.com")))
+// Translated content (automatically translated on 29-10-2026 03:21:48):
+(event.category in ("dns","url","ip")) and (endpoint.os="windows" and ((url.address contains ".atled.syspectr.com" or url.address contains ".atled.syspectr.com." or url.address contains ".everywhere.laplink.com" or url.address contains ".everywhere.laplink.com." or url.address contains ".le.laplink.com" or url.address contains ".le.laplink.com." or url.address="atled.syspectr.com" or url.address="atled.syspectr.com." or url.address="everywhere.laplink.com" or url.address="everywhere.laplink.com." or url.address="le.laplink.com" or url.address="le.laplink.com.") or (event.dns.request contains ".atled.syspectr.com" or event.dns.request contains ".atled.syspectr.com." or event.dns.request contains ".everywhere.laplink.com" or event.dns.request contains ".everywhere.laplink.com." or event.dns.request contains ".le.laplink.com" or event.dns.request contains ".le.laplink.com." or event.dns.request="atled.syspectr.com" or event.dns.request="atled.syspectr.com." or event.dns.request="everywhere.laplink.com" or event.dns.request="everywhere.laplink.com." or event.dns.request="le.laplink.com" or event.dns.request="le.laplink.com.")))
 ```
 
 
@@ -15,7 +15,7 @@ references:
     - https://github.com/magicsword-io/LOLRMM
 author: LOLRMM Project
 date: 2025-12-01
-modified: 2026-09-02
+modified: 2026-10-28
 tags:
     - attack.command-and-control
     - attack.t1219
@@ -24,10 +24,19 @@ logsource:
     category: network_connection
 detection:
     selection:
-        DestinationHostname|endswith:
-            - 'everywhere.laplink.com'
-            - 'le.laplink.com'
+        DestinationHostname:
+            - '*.atled.syspectr.com'
+            - '*.atled.syspectr.com.'
+            - '*.everywhere.laplink.com'
+            - '*.everywhere.laplink.com.'
+            - '*.le.laplink.com'
+            - '*.le.laplink.com.'
             - 'atled.syspectr.com'
+            - 'atled.syspectr.com.'
+            - 'everywhere.laplink.com'
+            - 'everywhere.laplink.com.'
+            - 'le.laplink.com'
+            - 'le.laplink.com.'
     condition: selection
 falsepositives:
     - Legitimate use of Laplink Everywhere

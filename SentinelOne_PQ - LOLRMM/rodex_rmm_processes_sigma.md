@@ -1,6 +1,6 @@
 ```sql
-// Translated content (automatically translated on 28-10-2026 02:56:19):
-event.type="Process Creation" and (endpoint.os="windows" and ((src.process.image.path contains "\\RodexAgent.exe" or src.process.image.path contains "\\<random>.exe") or (tgt.process.image.path contains "\\RodexAgent.exe" or tgt.process.image.path contains "\\<random>.exe")))
+// Translated content (automatically translated on 29-10-2026 03:21:48):
+event.type="Process Creation" and (endpoint.os="windows" and (src.process.image.path contains "\\RodexAgent.exe" or tgt.process.image.path contains "\\RodexAgent.exe"))
 ```
 
 
@@ -15,7 +15,7 @@ references:
     - https://github.com/magicsword-io/LOLRMM
 author: LOLRMM Project
 date: 2026-05-18
-modified: 2026-09-02
+modified: 2026-10-28
 tags:
     - attack.command-and-control
     - attack.t1219
@@ -24,13 +24,9 @@ logsource:
     category: process_creation
 detection:
     selection_parent:
-        ParentImage|endswith:
-            - '\\RodexAgent.exe'
-            - '\\<random>.exe'
+        ParentImage|endswith: '\\RodexAgent.exe'
     selection_image:
-        Image|endswith:
-            - '\\RodexAgent.exe'
-            - '\\<random>.exe'
+        Image|endswith: '\\RodexAgent.exe'
     condition: 1 of selection_*
 falsepositives:
     - Legitimate use of Rodex RMM

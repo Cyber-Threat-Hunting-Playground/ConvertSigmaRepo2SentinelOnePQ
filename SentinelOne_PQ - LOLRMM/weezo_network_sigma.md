@@ -1,6 +1,6 @@
 ```sql
-// Translated content (automatically translated on 28-10-2026 02:56:19):
-(event.category in ("dns","url","ip")) and (endpoint.os="windows" and ((url.address contains ".weezo.me" or url.address contains "weezo.net" or url.address contains ".weezo.net" or url.address contains "weezo.en.softonic.com") or (event.dns.request contains ".weezo.me" or event.dns.request contains "weezo.net" or event.dns.request contains ".weezo.net" or event.dns.request contains "weezo.en.softonic.com")))
+// Translated content (automatically translated on 29-10-2026 03:21:48):
+(event.category in ("dns","url","ip")) and (endpoint.os="windows" and ((url.address contains ".weezo.en.softonic.com" or url.address contains ".weezo.en.softonic.com." or url.address contains ".weezo.me" or url.address contains ".weezo.me." or url.address contains ".weezo.net" or url.address contains ".weezo.net." or url.address="weezo.en.softonic.com" or url.address="weezo.en.softonic.com." or url.address="weezo.net" or url.address="weezo.net.") or (event.dns.request contains ".weezo.en.softonic.com" or event.dns.request contains ".weezo.en.softonic.com." or event.dns.request contains ".weezo.me" or event.dns.request contains ".weezo.me." or event.dns.request contains ".weezo.net" or event.dns.request contains ".weezo.net." or event.dns.request="weezo.en.softonic.com" or event.dns.request="weezo.en.softonic.com." or event.dns.request="weezo.net" or event.dns.request="weezo.net.")))
 ```
 
 
@@ -15,7 +15,7 @@ references:
     - https://github.com/magicsword-io/LOLRMM
 author: LOLRMM Project
 date: 2025-12-01
-modified: 2026-09-02
+modified: 2026-10-28
 tags:
     - attack.command-and-control
     - attack.t1219
@@ -24,11 +24,17 @@ logsource:
     category: network_connection
 detection:
     selection:
-        DestinationHostname|endswith:
+        DestinationHostname:
+            - '*.weezo.en.softonic.com'
+            - '*.weezo.en.softonic.com.'
             - '*.weezo.me'
-            - 'weezo.net'
+            - '*.weezo.me.'
             - '*.weezo.net'
+            - '*.weezo.net.'
             - 'weezo.en.softonic.com'
+            - 'weezo.en.softonic.com.'
+            - 'weezo.net'
+            - 'weezo.net.'
     condition: selection
 falsepositives:
     - Legitimate use of Weezo

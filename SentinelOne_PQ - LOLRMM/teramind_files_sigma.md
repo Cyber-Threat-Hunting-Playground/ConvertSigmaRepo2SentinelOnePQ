@@ -1,6 +1,6 @@
 ```sql
-// Translated content (automatically translated on 28-10-2026 02:56:19):
-event.category="file" and (endpoint.os="windows" and (tgt.file.path contains "C:\\ProgramData\\{4CEC2908-5CE4-48F0-A717-8FC833D8017A}\*" or tgt.file.path contains "C:\\ProgramData\\{4CEC2908-5CE4-48F0-A717-8FC833D8017A}\\config" or tgt.file.path contains "C:\\ProgramData\\{4CEC2908-5CE4-48F0-A717-8FC833D8017A}\\updates\\rundll32.exe.config" or tgt.file.path contains "C:\\ProgramData\\Teramind Agent\*" or tgt.file.path contains "C:\\ProgramData\\Teramind Agent\\config" or tgt.file.path contains "C:\\ProgramData\\Teramind Agent\\<version>\\{6D99445F-F40F-45CB-B433-06302DAE6C70}\\tmagentsvc.exe" or tgt.file.path contains "C:\\ProgramData\\Package Cache\\.unverified\\agent" or tgt.file.path="*teramind_agent_*_bundle_noredist_setup.msi" or tgt.file.path="*teramind_agent_*_x64.msi" or tgt.file.path="*teramind_agent_*_ARM64.msi" or tgt.file.path contains "Teramind.Setup.Updater.exe" or tgt.file.path contains "tmdiag.zip"))
+// Translated content (automatically translated on 29-10-2026 03:21:48):
+event.category="file" and (endpoint.os="windows" and (tgt.file.path contains "C:\\ProgramData\\{4CEC2908-5CE4-48F0-A717-8FC833D8017A}\*" or tgt.file.path contains "C:\\ProgramData\\{4CEC2908-5CE4-48F0-A717-8FC833D8017A}\\config" or tgt.file.path contains "C:\\ProgramData\\{4CEC2908-5CE4-48F0-A717-8FC833D8017A}\\updates\\rundll32.exe.config" or tgt.file.path contains "C:\\ProgramData\\Teramind Agent\*" or tgt.file.path contains "C:\\ProgramData\\Teramind Agent\\config" or tgt.file.path contains "C:\\ProgramData\\Package Cache\\.unverified\\agent" or tgt.file.path="*teramind_agent_*_bundle_noredist_setup.msi" or tgt.file.path="*teramind_agent_*_x64.msi" or tgt.file.path="*teramind_agent_*_ARM64.msi" or tgt.file.path contains "Teramind.Setup.Updater.exe" or tgt.file.path contains "tmdiag.zip"))
 ```
 
 
@@ -15,7 +15,7 @@ references:
     - https://github.com/magicsword-io/LOLRMM
 author: LOLRMM Project
 date: 2026-05-18
-modified: 2026-09-22
+modified: 2026-10-28
 tags:
     - attack.command-and-control
     - attack.t1219
@@ -30,7 +30,6 @@ detection:
             - 'C:\ProgramData\{4CEC2908-5CE4-48F0-A717-8FC833D8017A}\updates\rundll32.exe.config'
             - 'C:\ProgramData\Teramind Agent\*'
             - 'C:\ProgramData\Teramind Agent\config'
-            - 'C:\ProgramData\Teramind Agent\<version>\{6D99445F-F40F-45CB-B433-06302DAE6C70}\tmagentsvc.exe'
             - 'C:\ProgramData\Package Cache\.unverified\agent'
             - 'teramind_agent_*_bundle_noredist_setup.msi'
             - 'teramind_agent_*_x64.msi'

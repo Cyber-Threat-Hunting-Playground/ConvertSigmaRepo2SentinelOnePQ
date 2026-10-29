@@ -1,0 +1,31 @@
+```sql
+// Translated content (automatically translated on 29-10-2026 03:21:48):
+event.category="file" and (endpoint.os="windows" and tgt.file.path contains "C:\\Windows\\System32\\QuickAssist.exe")
+```
+
+
+# Original Sigma Rule:
+```yaml
+title: Potential Quick Assist RMM Tool File Activity
+id: e4374d35-2e06-5254-a44f-64810f3e637c
+status: experimental
+description: |
+    Detects potential files activity of Quick Assist RMM tool
+references:
+    - https://github.com/magicsword-io/LOLRMM
+author: LOLRMM Project
+date: 2026-10-28
+tags:
+    - attack.command-and-control
+    - attack.t1219
+logsource:
+    product: windows
+    category: file_event
+detection:
+    selection:
+        TargetFilename|endswith: 'C:\Windows\System32\QuickAssist.exe'
+    condition: selection
+falsepositives:
+    - Legitimate use of Quick Assist
+level: medium
+```

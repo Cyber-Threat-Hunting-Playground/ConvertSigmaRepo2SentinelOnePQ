@@ -1,6 +1,6 @@
 ```sql
-// Translated content (automatically translated on 28-10-2026 02:56:19):
-(event.category in ("dns","url","ip")) and (endpoint.os="windows" and ((url.address contains ".distantdesktop.com" or url.address contains "signalserver.xyz" or url.address contains ".signalserver.xyz") or (event.dns.request contains ".distantdesktop.com" or event.dns.request contains "signalserver.xyz" or event.dns.request contains ".signalserver.xyz")))
+// Translated content (automatically translated on 29-10-2026 03:21:48):
+(event.category in ("dns","url","ip")) and (endpoint.os="windows" and ((url.address contains ".distantdesktop.com" or url.address contains ".distantdesktop.com." or url.address contains ".signalserver.xyz" or url.address contains ".signalserver.xyz." or url.address="signalserver.xyz" or url.address="signalserver.xyz.") or (event.dns.request contains ".distantdesktop.com" or event.dns.request contains ".distantdesktop.com." or event.dns.request contains ".signalserver.xyz" or event.dns.request contains ".signalserver.xyz." or event.dns.request="signalserver.xyz" or event.dns.request="signalserver.xyz.")))
 ```
 
 
@@ -15,7 +15,7 @@ references:
     - https://github.com/magicsword-io/LOLRMM
 author: LOLRMM Project
 date: 2025-12-01
-modified: 2026-09-02
+modified: 2026-10-28
 tags:
     - attack.command-and-control
     - attack.t1219
@@ -24,10 +24,13 @@ logsource:
     category: network_connection
 detection:
     selection:
-        DestinationHostname|endswith:
+        DestinationHostname:
             - '*.distantdesktop.com'
-            - 'signalserver.xyz'
+            - '*.distantdesktop.com.'
             - '*.signalserver.xyz'
+            - '*.signalserver.xyz.'
+            - 'signalserver.xyz'
+            - 'signalserver.xyz.'
     condition: selection
 falsepositives:
     - Legitimate use of Distant Desktop

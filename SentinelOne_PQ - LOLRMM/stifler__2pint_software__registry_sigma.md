@@ -1,0 +1,31 @@
+```sql
+// Translated content (automatically translated on 29-10-2026 03:21:48):
+event.category="registry" and (endpoint.os="windows" and registry.keyPath contains "HKLM\\SYSTEM\\CurrentControlSet\\Services\\StifleRClient")
+```
+
+
+# Original Sigma Rule:
+```yaml
+title: Potential StifleR (2Pint Software) RMM Tool Registry Activity
+id: b61b7029-5436-59eb-9db6-095040965c2a
+status: experimental
+description: |
+    Detects potential registry activity of StifleR (2Pint Software) RMM tool
+references:
+    - https://github.com/magicsword-io/LOLRMM
+author: LOLRMM Project
+date: 2026-10-28
+tags:
+    - attack.command-and-control
+    - attack.t1219
+logsource:
+    product: windows
+    category: registry_event
+detection:
+    selection:
+        TargetObject|contains: 'HKLM\SYSTEM\CurrentControlSet\Services\StifleRClient'
+    condition: selection
+falsepositives:
+    - Legitimate use of StifleR (2Pint Software)
+level: medium
+```

@@ -1,6 +1,6 @@
 ```sql
-// Translated content (automatically translated on 28-10-2026 02:56:19):
-(event.category in ("dns","url","ip")) and (endpoint.os="windows" and ((url.address contains "ammyy.com" or url.address contains ".ammyy.com" or url.address contains "136.243.104.235" or url.address contains "136.243.104.242" or url.address contains "136.243.18.122") or (event.dns.request contains "ammyy.com" or event.dns.request contains ".ammyy.com" or event.dns.request contains "136.243.104.235" or event.dns.request contains "136.243.104.242" or event.dns.request contains "136.243.18.122")))
+// Translated content (automatically translated on 29-10-2026 03:21:48):
+(event.category in ("dns","url","ip")) and (endpoint.os="windows" and ((url.address contains ".ammyy.com" or url.address contains ".ammyy.com." or url.address="ammyy.com" or url.address="ammyy.com.") or (event.dns.request contains ".ammyy.com" or event.dns.request contains ".ammyy.com." or event.dns.request="ammyy.com" or event.dns.request="ammyy.com.")))
 ```
 
 
@@ -15,7 +15,7 @@ references:
     - https://github.com/magicsword-io/LOLRMM
 author: LOLRMM Project
 date: 2025-12-01
-modified: 2026-09-02
+modified: 2026-10-28
 tags:
     - attack.command-and-control
     - attack.t1219
@@ -24,12 +24,11 @@ logsource:
     category: network_connection
 detection:
     selection:
-        DestinationHostname|endswith:
-            - 'ammyy.com'
+        DestinationHostname:
             - '*.ammyy.com'
-            - '136.243.104.235'
-            - '136.243.104.242'
-            - '136.243.18.122'
+            - '*.ammyy.com.'
+            - 'ammyy.com'
+            - 'ammyy.com.'
     condition: selection
 falsepositives:
     - Legitimate use of Ammyy Admin

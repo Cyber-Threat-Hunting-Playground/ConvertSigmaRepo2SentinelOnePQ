@@ -1,0 +1,34 @@
+```sql
+// Translated content (automatically translated on 29-10-2026 03:21:48):
+event.category="file" and (endpoint.os="windows" and (tgt.file.path contains "StifleR.ClientApp.exe" or tgt.file.path contains "StifleR.ClientApp.exe.Config" or tgt.file.path contains "C:\\Program Files\\2Pint Software\\StifleR Client\\TwoPint.ConfigEditor.Wpf\\TwoPint.ConfigEditor.Wpf.exe"))
+```
+
+
+# Original Sigma Rule:
+```yaml
+title: Potential StifleR (2Pint Software) RMM Tool File Activity
+id: 110b4326-5aab-5afc-b5b5-791a7bafdecd
+status: experimental
+description: |
+    Detects potential files activity of StifleR (2Pint Software) RMM tool
+references:
+    - https://github.com/magicsword-io/LOLRMM
+author: LOLRMM Project
+date: 2026-10-28
+tags:
+    - attack.command-and-control
+    - attack.t1219
+logsource:
+    product: windows
+    category: file_event
+detection:
+    selection:
+        TargetFilename|endswith:
+            - 'StifleR.ClientApp.exe'
+            - 'StifleR.ClientApp.exe.Config'
+            - 'C:\Program Files\2Pint Software\StifleR Client\TwoPint.ConfigEditor.Wpf\TwoPint.ConfigEditor.Wpf.exe'
+    condition: selection
+falsepositives:
+    - Legitimate use of StifleR (2Pint Software)
+level: medium
+```

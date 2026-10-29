@@ -1,6 +1,6 @@
 ```sql
-// Translated content (automatically translated on 28-10-2026 02:56:19):
-(event.category in ("dns","url","ip")) and (endpoint.os="windows" and ((url.address contains ".remotedesktop.com" or url.address contains ".remotepc.com" or url.address contains "www.remotepc.com" or url.address contains "remotepc.com") or (event.dns.request contains ".remotedesktop.com" or event.dns.request contains ".remotepc.com" or event.dns.request contains "www.remotepc.com" or event.dns.request contains "remotepc.com")))
+// Translated content (automatically translated on 29-10-2026 03:21:48):
+(event.category in ("dns","url","ip")) and (endpoint.os="windows" and ((url.address contains ".remotedesktop.com" or url.address contains ".remotedesktop.com." or url.address contains ".remotepc.com" or url.address contains ".remotepc.com." or url.address contains ".www.remotepc.com" or url.address contains ".www.remotepc.com." or url.address="remotepc.com" or url.address="remotepc.com." or url.address="www.remotepc.com" or url.address="www.remotepc.com.") or (event.dns.request contains ".remotedesktop.com" or event.dns.request contains ".remotedesktop.com." or event.dns.request contains ".remotepc.com" or event.dns.request contains ".remotepc.com." or event.dns.request contains ".www.remotepc.com" or event.dns.request contains ".www.remotepc.com." or event.dns.request="remotepc.com" or event.dns.request="remotepc.com." or event.dns.request="www.remotepc.com" or event.dns.request="www.remotepc.com.")))
 ```
 
 
@@ -15,7 +15,7 @@ references:
     - https://github.com/magicsword-io/LOLRMM
 author: LOLRMM Project
 date: 2025-12-01
-modified: 2026-09-02
+modified: 2026-10-28
 tags:
     - attack.command-and-control
     - attack.t1219
@@ -24,11 +24,17 @@ logsource:
     category: network_connection
 detection:
     selection:
-        DestinationHostname|endswith:
+        DestinationHostname:
             - '*.remotedesktop.com'
+            - '*.remotedesktop.com.'
             - '*.remotepc.com'
-            - 'www.remotepc.com'
+            - '*.remotepc.com.'
+            - '*.www.remotepc.com'
+            - '*.www.remotepc.com.'
             - 'remotepc.com'
+            - 'remotepc.com.'
+            - 'www.remotepc.com'
+            - 'www.remotepc.com.'
     condition: selection
 falsepositives:
     - Legitimate use of RemotePC

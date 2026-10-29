@@ -1,6 +1,6 @@
 ```sql
-// Translated content (automatically translated on 28-10-2026 02:56:19):
-(event.category in ("dns","url","ip")) and (endpoint.os="windows" and ((url.address contains "user_managed" or url.address contains "github.com" or url.address contains "raw.githubusercontent.com" or url.address contains "nezha.wiki" or url.address contains "nezhahq.github.io" or url.address contains "c.mid.al" or url.address contains "gd.bj2.xyz" or url.address contains "rism.pages.dev") or (event.dns.request contains "user_managed" or event.dns.request contains "github.com" or event.dns.request contains "raw.githubusercontent.com" or event.dns.request contains "nezha.wiki" or event.dns.request contains "nezhahq.github.io" or event.dns.request contains "c.mid.al" or event.dns.request contains "gd.bj2.xyz" or event.dns.request contains "rism.pages.dev")))
+// Translated content (automatically translated on 29-10-2026 03:21:48):
+(event.category in ("dns","url","ip")) and (endpoint.os="windows" and ((url.address contains ".nezha.wiki" or url.address contains ".nezha.wiki." or url.address contains ".nezhahq.github.io" or url.address contains ".nezhahq.github.io." or url.address="nezha.wiki" or url.address="nezha.wiki." or url.address="nezhahq.github.io" or url.address="nezhahq.github.io." or url.address contains ".c.mid.al" or url.address contains ".c.mid.al." or url.address contains ".gd.bj2.xyz" or url.address contains ".gd.bj2.xyz." or url.address contains ".rism.pages.dev" or url.address contains ".rism.pages.dev." or url.address="c.mid.al" or url.address="c.mid.al." or url.address="gd.bj2.xyz" or url.address="gd.bj2.xyz." or url.address="rism.pages.dev" or url.address="rism.pages.dev.") or (event.dns.request contains ".nezha.wiki" or event.dns.request contains ".nezha.wiki." or event.dns.request contains ".nezhahq.github.io" or event.dns.request contains ".nezhahq.github.io." or event.dns.request="nezha.wiki" or event.dns.request="nezha.wiki." or event.dns.request="nezhahq.github.io" or event.dns.request="nezhahq.github.io." or event.dns.request contains ".c.mid.al" or event.dns.request contains ".c.mid.al." or event.dns.request contains ".gd.bj2.xyz" or event.dns.request contains ".gd.bj2.xyz." or event.dns.request contains ".rism.pages.dev" or event.dns.request contains ".rism.pages.dev." or event.dns.request="c.mid.al" or event.dns.request="c.mid.al." or event.dns.request="gd.bj2.xyz" or event.dns.request="gd.bj2.xyz." or event.dns.request="rism.pages.dev" or event.dns.request="rism.pages.dev.")))
 ```
 
 
@@ -15,7 +15,7 @@ references:
     - https://github.com/magicsword-io/LOLRMM
 author: LOLRMM Project
 date: 2026-05-18
-modified: 2026-09-02
+modified: 2026-10-28
 tags:
     - attack.command-and-control
     - attack.t1219
@@ -24,15 +24,27 @@ logsource:
     category: network_connection
 detection:
     selection:
-        DestinationHostname|endswith:
-            - 'user_managed'
-            - 'github.com'
-            - 'raw.githubusercontent.com'
+        DestinationHostname:
+            - '*.nezha.wiki'
+            - '*.nezha.wiki.'
+            - '*.nezhahq.github.io'
+            - '*.nezhahq.github.io.'
             - 'nezha.wiki'
+            - 'nezha.wiki.'
             - 'nezhahq.github.io'
+            - 'nezhahq.github.io.'
+            - '*.c.mid.al'
+            - '*.c.mid.al.'
+            - '*.gd.bj2.xyz'
+            - '*.gd.bj2.xyz.'
+            - '*.rism.pages.dev'
+            - '*.rism.pages.dev.'
             - 'c.mid.al'
+            - 'c.mid.al.'
             - 'gd.bj2.xyz'
+            - 'gd.bj2.xyz.'
             - 'rism.pages.dev'
+            - 'rism.pages.dev.'
     condition: selection
 falsepositives:
     - Legitimate use of Nezha

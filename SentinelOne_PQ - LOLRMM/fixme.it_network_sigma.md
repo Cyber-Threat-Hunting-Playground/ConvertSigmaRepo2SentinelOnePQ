@@ -1,6 +1,6 @@
 ```sql
-// Translated content (automatically translated on 28-10-2026 02:56:19):
-(event.category in ("dns","url","ip")) and (endpoint.os="windows" and ((url.address contains ".fixme.it" or url.address contains ".techinline.net" or url.address contains "fixme.it") or (event.dns.request contains ".fixme.it" or event.dns.request contains ".techinline.net" or event.dns.request contains "fixme.it")))
+// Translated content (automatically translated on 29-10-2026 03:21:48):
+(event.category in ("dns","url","ip")) and (endpoint.os="windows" and ((url.address contains ".fixme.it" or url.address contains ".fixme.it." or url.address contains ".techinline.net" or url.address contains ".techinline.net." or url.address="fixme.it" or url.address="fixme.it.") or (event.dns.request contains ".fixme.it" or event.dns.request contains ".fixme.it." or event.dns.request contains ".techinline.net" or event.dns.request contains ".techinline.net." or event.dns.request="fixme.it" or event.dns.request="fixme.it.")))
 ```
 
 
@@ -15,7 +15,7 @@ references:
     - https://github.com/magicsword-io/LOLRMM
 author: LOLRMM Project
 date: 2025-12-01
-modified: 2026-09-02
+modified: 2026-10-28
 tags:
     - attack.command-and-control
     - attack.t1219
@@ -24,10 +24,13 @@ logsource:
     category: network_connection
 detection:
     selection:
-        DestinationHostname|endswith:
+        DestinationHostname:
             - '*.fixme.it'
+            - '*.fixme.it.'
             - '*.techinline.net'
+            - '*.techinline.net.'
             - 'fixme.it'
+            - 'fixme.it.'
     condition: selection
 falsepositives:
     - Legitimate use of FixMe.it

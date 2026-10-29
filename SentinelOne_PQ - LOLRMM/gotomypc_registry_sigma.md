@@ -1,6 +1,6 @@
 ```sql
-// Translated content (automatically translated on 28-10-2026 02:56:19):
-event.category="registry" and (endpoint.os="windows" and (registry.keyPath contains "HKEY_LOCAL_MACHINE\\WOW6432Node\\Citrix\\GoToMyPc" or registry.keyPath contains "HKEY_LOCAL_MACHINE\\WOW6432Node\\Citrix\\GoToMyPc\\GuestInvite" or registry.keyPath contains "HKEY_CURRENT_USER\\SOFTWARE\\Citrix\\GoToMyPc\\FileTransfer\\history" or registry.keyPath contains "HKEY_USERS\\<SID>\\SOFTWARE\\Citrix\\GoToMyPc\\FileTransfer\\history"))
+// Translated content (automatically translated on 29-10-2026 03:21:48):
+event.category="registry" and (endpoint.os="windows" and (registry.keyPath contains "HKEY_LOCAL_MACHINE\\WOW6432Node\\Citrix\\GoToMyPc" or registry.keyPath contains "HKEY_LOCAL_MACHINE\\WOW6432Node\\Citrix\\GoToMyPc\\GuestInvite" or registry.keyPath contains "HKEY_CURRENT_USER\\SOFTWARE\\Citrix\\GoToMyPc\\FileTransfer\\history"))
 ```
 
 
@@ -15,7 +15,7 @@ references:
     - https://github.com/magicsword-io/LOLRMM
 author: LOLRMM Project
 date: 2025-12-01
-modified: 2026-09-02
+modified: 2026-10-28
 tags:
     - attack.command-and-control
     - attack.t1219
@@ -28,7 +28,6 @@ detection:
             - 'HKEY_LOCAL_MACHINE\WOW6432Node\Citrix\GoToMyPc'
             - 'HKEY_LOCAL_MACHINE\WOW6432Node\Citrix\GoToMyPc\GuestInvite'
             - 'HKEY_CURRENT_USER\SOFTWARE\Citrix\GoToMyPc\FileTransfer\history'
-            - 'HKEY_USERS\<SID>\SOFTWARE\Citrix\GoToMyPc\FileTransfer\history'
     condition: selection
 falsepositives:
     - Legitimate use of GoToMyPC

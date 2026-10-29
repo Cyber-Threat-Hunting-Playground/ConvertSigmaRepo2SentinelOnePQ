@@ -1,6 +1,6 @@
 ```sql
-// Translated content (automatically translated on 28-10-2026 02:56:19):
-(event.category in ("dns","url","ip")) and (endpoint.os="windows" and ((url.address contains ".islonline.net" or url.address contains "rmm.barracudamsp.com" or url.address contains "barracudamsp.com") or (event.dns.request contains ".islonline.net" or event.dns.request contains "rmm.barracudamsp.com" or event.dns.request contains "barracudamsp.com")))
+// Translated content (automatically translated on 29-10-2026 03:21:48):
+(event.category in ("dns","url","ip")) and (endpoint.os="windows" and ((url.address contains ".barracudamsp.com" or url.address contains ".barracudamsp.com." or url.address contains ".islonline.net" or url.address contains ".islonline.net." or url.address contains ".rmm.barracudamsp.com" or url.address contains ".rmm.barracudamsp.com." or url.address="barracudamsp.com" or url.address="barracudamsp.com." or url.address="rmm.barracudamsp.com" or url.address="rmm.barracudamsp.com.") or (event.dns.request contains ".barracudamsp.com" or event.dns.request contains ".barracudamsp.com." or event.dns.request contains ".islonline.net" or event.dns.request contains ".islonline.net." or event.dns.request contains ".rmm.barracudamsp.com" or event.dns.request contains ".rmm.barracudamsp.com." or event.dns.request="barracudamsp.com" or event.dns.request="barracudamsp.com." or event.dns.request="rmm.barracudamsp.com" or event.dns.request="rmm.barracudamsp.com.")))
 ```
 
 
@@ -15,7 +15,7 @@ references:
     - https://github.com/magicsword-io/LOLRMM
 author: LOLRMM Project
 date: 2025-12-01
-modified: 2026-09-02
+modified: 2026-10-28
 tags:
     - attack.command-and-control
     - attack.t1219
@@ -24,10 +24,17 @@ logsource:
     category: network_connection
 detection:
     selection:
-        DestinationHostname|endswith:
+        DestinationHostname:
+            - '*.barracudamsp.com'
+            - '*.barracudamsp.com.'
             - '*.islonline.net'
-            - 'rmm.barracudamsp.com'
+            - '*.islonline.net.'
+            - '*.rmm.barracudamsp.com'
+            - '*.rmm.barracudamsp.com.'
             - 'barracudamsp.com'
+            - 'barracudamsp.com.'
+            - 'rmm.barracudamsp.com'
+            - 'rmm.barracudamsp.com.'
     condition: selection
 falsepositives:
     - Legitimate use of Barracuda

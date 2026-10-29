@@ -1,6 +1,6 @@
 ```sql
-// Translated content (automatically translated on 28-10-2026 02:56:19):
-(event.category in ("dns","url","ip")) and (endpoint.os="windows" and ((url.address contains "deploy01.kaseya.com" or url.address contains "managedsupport.kaseya.net" or url.address contains ".managedsupport.kaseya.net" or url.address contains ".kaseya.net" or url.address contains "kaseya.com") or (event.dns.request contains "deploy01.kaseya.com" or event.dns.request contains "managedsupport.kaseya.net" or event.dns.request contains ".managedsupport.kaseya.net" or event.dns.request contains ".kaseya.net" or event.dns.request contains "kaseya.com")))
+// Translated content (automatically translated on 29-10-2026 03:21:48):
+(event.category in ("dns","url","ip")) and (endpoint.os="windows" and ((url.address contains ".deploy01.kaseya.com" or url.address contains ".deploy01.kaseya.com." or url.address contains ".kaseya.com" or url.address contains ".kaseya.com." or url.address contains ".kaseya.net" or url.address contains ".kaseya.net." or url.address contains ".managedsupport.kaseya.net" or url.address contains ".managedsupport.kaseya.net." or url.address="deploy01.kaseya.com" or url.address="deploy01.kaseya.com." or url.address="kaseya.com" or url.address="kaseya.com." or url.address="managedsupport.kaseya.net" or url.address="managedsupport.kaseya.net.") or (event.dns.request contains ".deploy01.kaseya.com" or event.dns.request contains ".deploy01.kaseya.com." or event.dns.request contains ".kaseya.com" or event.dns.request contains ".kaseya.com." or event.dns.request contains ".kaseya.net" or event.dns.request contains ".kaseya.net." or event.dns.request contains ".managedsupport.kaseya.net" or event.dns.request contains ".managedsupport.kaseya.net." or event.dns.request="deploy01.kaseya.com" or event.dns.request="deploy01.kaseya.com." or event.dns.request="kaseya.com" or event.dns.request="kaseya.com." or event.dns.request="managedsupport.kaseya.net" or event.dns.request="managedsupport.kaseya.net.")))
 ```
 
 
@@ -15,7 +15,7 @@ references:
     - https://github.com/magicsword-io/LOLRMM
 author: LOLRMM Project
 date: 2025-12-01
-modified: 2026-09-02
+modified: 2026-10-28
 tags:
     - attack.command-and-control
     - attack.t1219
@@ -24,12 +24,21 @@ logsource:
     category: network_connection
 detection:
     selection:
-        DestinationHostname|endswith:
-            - 'deploy01.kaseya.com'
-            - 'managedsupport.kaseya.net'
-            - '*.managedsupport.kaseya.net'
+        DestinationHostname:
+            - '*.deploy01.kaseya.com'
+            - '*.deploy01.kaseya.com.'
+            - '*.kaseya.com'
+            - '*.kaseya.com.'
             - '*.kaseya.net'
+            - '*.kaseya.net.'
+            - '*.managedsupport.kaseya.net'
+            - '*.managedsupport.kaseya.net.'
+            - 'deploy01.kaseya.com'
+            - 'deploy01.kaseya.com.'
             - 'kaseya.com'
+            - 'kaseya.com.'
+            - 'managedsupport.kaseya.net'
+            - 'managedsupport.kaseya.net.'
     condition: selection
 falsepositives:
     - Legitimate use of Kaseya (VSA)

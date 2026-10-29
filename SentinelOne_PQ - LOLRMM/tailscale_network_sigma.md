@@ -1,6 +1,6 @@
 ```sql
-// Translated content (automatically translated on 28-10-2026 02:56:19):
-(event.category in ("dns","url","ip")) and (endpoint.os="windows" and ((url.address contains ".tailscale.com" or url.address contains ".tailscale.io" or url.address contains "tailscale.com") or (event.dns.request contains ".tailscale.com" or event.dns.request contains ".tailscale.io" or event.dns.request contains "tailscale.com")))
+// Translated content (automatically translated on 29-10-2026 03:21:48):
+(event.category in ("dns","url","ip")) and (endpoint.os="windows" and ((url.address contains ".tailscale.com" or url.address contains ".tailscale.com." or url.address contains ".tailscale.io" or url.address contains ".tailscale.io." or url.address="tailscale.com" or url.address="tailscale.com.") or (event.dns.request contains ".tailscale.com" or event.dns.request contains ".tailscale.com." or event.dns.request contains ".tailscale.io" or event.dns.request contains ".tailscale.io." or event.dns.request="tailscale.com" or event.dns.request="tailscale.com.")))
 ```
 
 
@@ -15,7 +15,7 @@ references:
     - https://github.com/magicsword-io/LOLRMM
 author: LOLRMM Project
 date: 2025-12-01
-modified: 2026-09-02
+modified: 2026-10-28
 tags:
     - attack.command-and-control
     - attack.t1219
@@ -24,10 +24,13 @@ logsource:
     category: network_connection
 detection:
     selection:
-        DestinationHostname|endswith:
+        DestinationHostname:
             - '*.tailscale.com'
+            - '*.tailscale.com.'
             - '*.tailscale.io'
+            - '*.tailscale.io.'
             - 'tailscale.com'
+            - 'tailscale.com.'
     condition: selection
 falsepositives:
     - Legitimate use of Tailscale

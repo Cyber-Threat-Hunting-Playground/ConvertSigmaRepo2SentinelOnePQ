@@ -1,6 +1,6 @@
 ```sql
-// Translated content (automatically translated on 28-10-2026 02:56:19):
-event.category="file" and (endpoint.os="windows" and (tgt.file.path contains "C:\\windows\\System32\\winevt\\Logs\\Splashtop-Splashtop Streamer-Status%4Operational.evtx" or tgt.file.path contains "C:\\windows\\System32\\winevt\\Logs\\Splashtop-Splashtop Streamer-Remote Session%4Operational.evtx" or tgt.file.path contains "%PROGRAMDATA%\\Splashtop\\Temp\\log\\FTCLog.txt" or tgt.file.path contains "C:\\Program Files (x86)\\Splashtop\\Splashtop Remote\\Server\\log\\agent_log.txt" or tgt.file.path contains "C:\\Program Files (x86)\\Splashtop\\Splashtop Remote\\Server\\log\\SPLog.txt" or tgt.file.path contains "C:\\Program Files (x86)\\Splashtop\\Splashtop Remote\\Server\\log\\svcinfo.txt" or tgt.file.path contains "C:\\Program Files (x86)\\Splashtop\\Splashtop Remote\\Server\\log\\sysinfo.txt" or tgt.file.path contains "C:\\Program Files (x86)\\Splashtop\\Splashtop Remote\\Server\\SRService.exe" or tgt.file.path contains "C:\\Program Files (x86)\\Splashtop\\Splashtop Remote\\Server\\SRAgent.exe" or tgt.file.path contains "C:\\Program Files (x86)\\Splashtop\\Splashtop Software Updater\\SSUAgent.exe" or tgt.file.path contains "C:\\Program Files (x86)\\Splashtop\\Splashtop Remote\\Server\\SRUtility.exe" or tgt.file.path contains "C:\\Program Files (x86)\\Splashtop\\Splashtop Remote\\Server\\SRFeature.exe" or tgt.file.path contains "C:\\Program Files (x86)\\Splashtop\\Splashtop Remote\\Server\\db\\SRAgent.sqlite3"))
+// Translated content (automatically translated on 29-10-2026 03:21:48):
+event.category="file" and (endpoint.os="windows" and (tgt.file.path contains "C:\\windows\\System32\\winevt\\Logs\\Splashtop-Splashtop Streamer-Status%4Operational.evtx" or tgt.file.path contains "C:\\windows\\System32\\winevt\\Logs\\Splashtop-Splashtop Streamer-Remote Session%4Operational.evtx" or tgt.file.path contains "C:\\Program Files (x86)\\Splashtop\\Splashtop Remote\\Server\\log\\agent_log.txt" or tgt.file.path contains "C:\\Program Files (x86)\\Splashtop\\Splashtop Remote\\Server\\log\\SPLog.txt" or tgt.file.path contains "C:\\Program Files (x86)\\Splashtop\\Splashtop Remote\\Server\\log\\svcinfo.txt" or tgt.file.path contains "C:\\Program Files (x86)\\Splashtop\\Splashtop Remote\\Server\\log\\sysinfo.txt" or tgt.file.path contains "C:\\Program Files (x86)\\Splashtop\\Splashtop Remote\\Server\\SRService.exe" or tgt.file.path contains "C:\\Program Files (x86)\\Splashtop\\Splashtop Remote\\Server\\SRAgent.exe" or tgt.file.path contains "C:\\Program Files (x86)\\Splashtop\\Splashtop Software Updater\\SSUAgent.exe" or tgt.file.path contains "C:\\Program Files (x86)\\Splashtop\\Splashtop Remote\\Server\\SRUtility.exe" or tgt.file.path contains "C:\\Program Files (x86)\\Splashtop\\Splashtop Remote\\Server\\SRFeature.exe" or tgt.file.path contains "C:\\Program Files (x86)\\Splashtop\\Splashtop Remote\\Server\\db\\SRAgent.sqlite3"))
 ```
 
 
@@ -15,7 +15,7 @@ references:
     - https://github.com/magicsword-io/LOLRMM
 author: LOLRMM Project
 date: 2025-12-01
-modified: 2026-09-02
+modified: 2026-10-28
 tags:
     - attack.command-and-control
     - attack.t1219
@@ -27,7 +27,6 @@ detection:
         TargetFilename|endswith:
             - 'C:\windows\System32\winevt\Logs\Splashtop-Splashtop Streamer-Status%4Operational.evtx'
             - 'C:\windows\System32\winevt\Logs\Splashtop-Splashtop Streamer-Remote Session%4Operational.evtx'
-            - '%PROGRAMDATA%\Splashtop\Temp\log\FTCLog.txt'
             - 'C:\Program Files (x86)\Splashtop\Splashtop Remote\Server\log\agent_log.txt'
             - 'C:\Program Files (x86)\Splashtop\Splashtop Remote\Server\log\SPLog.txt'
             - 'C:\Program Files (x86)\Splashtop\Splashtop Remote\Server\log\svcinfo.txt'

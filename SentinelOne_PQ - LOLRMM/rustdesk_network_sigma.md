@@ -1,6 +1,6 @@
 ```sql
-// Translated content (automatically translated on 28-10-2026 02:56:19):
-(event.category in ("dns","url","ip")) and (endpoint.os="windows" and ((url.address contains "rustdesk.com" or url.address contains "user_managed" or url.address contains "web.rustdesk.com" or url.address contains "api.rustdesk.com" or url.address contains "rs-ny.rustdesk.com") or (event.dns.request contains "rustdesk.com" or event.dns.request contains "user_managed" or event.dns.request contains "web.rustdesk.com" or event.dns.request contains "api.rustdesk.com" or event.dns.request contains "rs-ny.rustdesk.com")))
+// Translated content (automatically translated on 29-10-2026 03:21:48):
+(event.category in ("dns","url","ip")) and (endpoint.os="windows" and ((url.address contains ".api.rustdesk.com" or url.address contains ".api.rustdesk.com." or url.address contains ".rs-ny.rustdesk.com" or url.address contains ".rs-ny.rustdesk.com." or url.address contains ".rustdesk.com" or url.address contains ".rustdesk.com." or url.address contains ".web.rustdesk.com" or url.address contains ".web.rustdesk.com." or url.address="api.rustdesk.com" or url.address="api.rustdesk.com." or url.address="rs-ny.rustdesk.com" or url.address="rs-ny.rustdesk.com." or url.address="rustdesk.com" or url.address="rustdesk.com." or url.address="web.rustdesk.com" or url.address="web.rustdesk.com.") or (event.dns.request contains ".api.rustdesk.com" or event.dns.request contains ".api.rustdesk.com." or event.dns.request contains ".rs-ny.rustdesk.com" or event.dns.request contains ".rs-ny.rustdesk.com." or event.dns.request contains ".rustdesk.com" or event.dns.request contains ".rustdesk.com." or event.dns.request contains ".web.rustdesk.com" or event.dns.request contains ".web.rustdesk.com." or event.dns.request="api.rustdesk.com" or event.dns.request="api.rustdesk.com." or event.dns.request="rs-ny.rustdesk.com" or event.dns.request="rs-ny.rustdesk.com." or event.dns.request="rustdesk.com" or event.dns.request="rustdesk.com." or event.dns.request="web.rustdesk.com" or event.dns.request="web.rustdesk.com.")))
 ```
 
 
@@ -15,7 +15,7 @@ references:
     - https://github.com/magicsword-io/LOLRMM
 author: LOLRMM Project
 date: 2025-12-01
-modified: 2026-09-02
+modified: 2026-10-28
 tags:
     - attack.command-and-control
     - attack.t1219
@@ -24,12 +24,23 @@ logsource:
     category: network_connection
 detection:
     selection:
-        DestinationHostname|endswith:
-            - 'rustdesk.com'
-            - 'user_managed'
-            - 'web.rustdesk.com'
+        DestinationHostname:
+            - '*.api.rustdesk.com'
+            - '*.api.rustdesk.com.'
+            - '*.rs-ny.rustdesk.com'
+            - '*.rs-ny.rustdesk.com.'
+            - '*.rustdesk.com'
+            - '*.rustdesk.com.'
+            - '*.web.rustdesk.com'
+            - '*.web.rustdesk.com.'
             - 'api.rustdesk.com'
+            - 'api.rustdesk.com.'
             - 'rs-ny.rustdesk.com'
+            - 'rs-ny.rustdesk.com.'
+            - 'rustdesk.com'
+            - 'rustdesk.com.'
+            - 'web.rustdesk.com'
+            - 'web.rustdesk.com.'
     condition: selection
 falsepositives:
     - Legitimate use of RustDesk

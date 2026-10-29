@@ -1,6 +1,6 @@
 ```sql
-// Translated content (automatically translated on 28-10-2026 02:56:19):
-(event.category in ("dns","url","ip")) and (endpoint.os="windows" and ((url.address contains "logmein-gateway.com" or url.address contains ".logmein.com" or url.address contains ".logmein.eu" or url.address contains "logmeinrescue.com" or url.address contains ".logmeininc.com") or (event.dns.request contains "logmein-gateway.com" or event.dns.request contains ".logmein.com" or event.dns.request contains ".logmein.eu" or event.dns.request contains "logmeinrescue.com" or event.dns.request contains ".logmeininc.com")))
+// Translated content (automatically translated on 29-10-2026 03:21:48):
+(event.category in ("dns","url","ip")) and (endpoint.os="windows" and ((url.address contains ".logmein-gateway.com" or url.address contains ".logmein-gateway.com." or url.address="logmein-gateway.com" or url.address="logmein-gateway.com." or url.address contains ".logmein.com" or url.address contains ".logmein.com." or url.address contains ".logmein.eu" or url.address contains ".logmein.eu." or url.address contains ".logmeinrescue.com" or url.address contains ".logmeinrescue.com." or url.address="logmeinrescue.com" or url.address="logmeinrescue.com." or url.address contains ".logmeininc.com" or url.address contains ".logmeininc.com.") or (event.dns.request contains ".logmein-gateway.com" or event.dns.request contains ".logmein-gateway.com." or event.dns.request="logmein-gateway.com" or event.dns.request="logmein-gateway.com." or event.dns.request contains ".logmein.com" or event.dns.request contains ".logmein.com." or event.dns.request contains ".logmein.eu" or event.dns.request contains ".logmein.eu." or event.dns.request contains ".logmeinrescue.com" or event.dns.request contains ".logmeinrescue.com." or event.dns.request="logmeinrescue.com" or event.dns.request="logmeinrescue.com." or event.dns.request contains ".logmeininc.com" or event.dns.request contains ".logmeininc.com.")))
 ```
 
 
@@ -15,7 +15,7 @@ references:
     - https://github.com/magicsword-io/LOLRMM
 author: LOLRMM Project
 date: 2025-12-01
-modified: 2026-09-02
+modified: 2026-10-28
 tags:
     - attack.command-and-control
     - attack.t1219
@@ -24,12 +24,21 @@ logsource:
     category: network_connection
 detection:
     selection:
-        DestinationHostname|endswith:
+        DestinationHostname:
+            - '*.logmein-gateway.com'
+            - '*.logmein-gateway.com.'
             - 'logmein-gateway.com'
+            - 'logmein-gateway.com.'
             - '*.logmein.com'
+            - '*.logmein.com.'
             - '*.logmein.eu'
+            - '*.logmein.eu.'
+            - '*.logmeinrescue.com'
+            - '*.logmeinrescue.com.'
             - 'logmeinrescue.com'
+            - 'logmeinrescue.com.'
             - '*.logmeininc.com'
+            - '*.logmeininc.com.'
     condition: selection
 falsepositives:
     - Legitimate use of LogMeIn

@@ -1,6 +1,6 @@
 ```sql
-// Translated content (automatically translated on 28-10-2026 02:56:19):
-(event.category in ("dns","url","ip")) and (endpoint.os="windows" and ((url.address contains "level.io" or url.address contains "builds.level.io" or url.address contains "agents.level.io" or url.address contains "online.level.io" or url.address contains "downloads.level.io") or (event.dns.request contains "level.io" or event.dns.request contains "builds.level.io" or event.dns.request contains "agents.level.io" or event.dns.request contains "online.level.io" or event.dns.request contains "downloads.level.io")))
+// Translated content (automatically translated on 29-10-2026 03:21:48):
+(event.category in ("dns","url","ip")) and (endpoint.os="windows" and ((url.address contains ".agents.level.io" or url.address contains ".agents.level.io." or url.address contains ".builds.level.io" or url.address contains ".builds.level.io." or url.address contains ".downloads.level.io" or url.address contains ".downloads.level.io." or url.address contains ".level.io" or url.address contains ".level.io." or url.address contains ".online.level.io" or url.address contains ".online.level.io." or url.address="agents.level.io" or url.address="agents.level.io." or url.address="builds.level.io" or url.address="builds.level.io." or url.address="downloads.level.io" or url.address="downloads.level.io." or url.address="level.io" or url.address="level.io." or url.address="online.level.io" or url.address="online.level.io.") or (event.dns.request contains ".agents.level.io" or event.dns.request contains ".agents.level.io." or event.dns.request contains ".builds.level.io" or event.dns.request contains ".builds.level.io." or event.dns.request contains ".downloads.level.io" or event.dns.request contains ".downloads.level.io." or event.dns.request contains ".level.io" or event.dns.request contains ".level.io." or event.dns.request contains ".online.level.io" or event.dns.request contains ".online.level.io." or event.dns.request="agents.level.io" or event.dns.request="agents.level.io." or event.dns.request="builds.level.io" or event.dns.request="builds.level.io." or event.dns.request="downloads.level.io" or event.dns.request="downloads.level.io." or event.dns.request="level.io" or event.dns.request="level.io." or event.dns.request="online.level.io" or event.dns.request="online.level.io.")))
 ```
 
 
@@ -15,7 +15,7 @@ references:
     - https://github.com/magicsword-io/LOLRMM
 author: LOLRMM Project
 date: 2025-12-01
-modified: 2026-09-23
+modified: 2026-10-28
 tags:
     - attack.command-and-control
     - attack.t1219
@@ -24,12 +24,27 @@ logsource:
     category: network_connection
 detection:
     selection:
-        DestinationHostname|endswith:
-            - 'level.io'
-            - 'builds.level.io'
+        DestinationHostname:
+            - '*.agents.level.io'
+            - '*.agents.level.io.'
+            - '*.builds.level.io'
+            - '*.builds.level.io.'
+            - '*.downloads.level.io'
+            - '*.downloads.level.io.'
+            - '*.level.io'
+            - '*.level.io.'
+            - '*.online.level.io'
+            - '*.online.level.io.'
             - 'agents.level.io'
-            - 'online.level.io'
+            - 'agents.level.io.'
+            - 'builds.level.io'
+            - 'builds.level.io.'
             - 'downloads.level.io'
+            - 'downloads.level.io.'
+            - 'level.io'
+            - 'level.io.'
+            - 'online.level.io'
+            - 'online.level.io.'
     condition: selection
 falsepositives:
     - Legitimate use of Level

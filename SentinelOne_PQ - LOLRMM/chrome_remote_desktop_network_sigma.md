@@ -1,6 +1,6 @@
 ```sql
-// Translated content (automatically translated on 28-10-2026 02:56:19):
-(event.category in ("dns","url","ip")) and (endpoint.os="windows" and ((url.address contains ".remotedesktop.google.com" or url.address contains "remotedesktop-pa.googleapis.com" or url.address contains ".remotedesktop-pa.googleapis.com" or url.address contains "remotedesktop.google.com" or url.address contains "chromoting-client.talkgadget.google.com" or url.address contains "chromoting-host.talkgadget.google.com" or url.address contains "chromoting-oauth.talkgadget.google.com") or (event.dns.request contains ".remotedesktop.google.com" or event.dns.request contains "remotedesktop-pa.googleapis.com" or event.dns.request contains ".remotedesktop-pa.googleapis.com" or event.dns.request contains "remotedesktop.google.com" or event.dns.request contains "chromoting-client.talkgadget.google.com" or event.dns.request contains "chromoting-host.talkgadget.google.com" or event.dns.request contains "chromoting-oauth.talkgadget.google.com")))
+// Translated content (automatically translated on 29-10-2026 03:21:48):
+(event.category in ("dns","url","ip")) and (endpoint.os="windows" and ((url.address contains ".chromoting-client.talkgadget.google.com" or url.address contains ".chromoting-client.talkgadget.google.com." or url.address contains ".chromoting-host.talkgadget.google.com" or url.address contains ".chromoting-host.talkgadget.google.com." or url.address contains ".chromoting-oauth.talkgadget.google.com" or url.address contains ".chromoting-oauth.talkgadget.google.com." or url.address contains ".remotedesktop-pa.googleapis.com" or url.address contains ".remotedesktop-pa.googleapis.com." or url.address contains ".remotedesktop.google.com" or url.address contains ".remotedesktop.google.com." or url.address="chromoting-client.talkgadget.google.com" or url.address="chromoting-client.talkgadget.google.com." or url.address="chromoting-host.talkgadget.google.com" or url.address="chromoting-host.talkgadget.google.com." or url.address="chromoting-oauth.talkgadget.google.com" or url.address="chromoting-oauth.talkgadget.google.com." or url.address="remotedesktop-pa.googleapis.com" or url.address="remotedesktop-pa.googleapis.com." or url.address="remotedesktop.google.com" or url.address="remotedesktop.google.com.") or (event.dns.request contains ".chromoting-client.talkgadget.google.com" or event.dns.request contains ".chromoting-client.talkgadget.google.com." or event.dns.request contains ".chromoting-host.talkgadget.google.com" or event.dns.request contains ".chromoting-host.talkgadget.google.com." or event.dns.request contains ".chromoting-oauth.talkgadget.google.com" or event.dns.request contains ".chromoting-oauth.talkgadget.google.com." or event.dns.request contains ".remotedesktop-pa.googleapis.com" or event.dns.request contains ".remotedesktop-pa.googleapis.com." or event.dns.request contains ".remotedesktop.google.com" or event.dns.request contains ".remotedesktop.google.com." or event.dns.request="chromoting-client.talkgadget.google.com" or event.dns.request="chromoting-client.talkgadget.google.com." or event.dns.request="chromoting-host.talkgadget.google.com" or event.dns.request="chromoting-host.talkgadget.google.com." or event.dns.request="chromoting-oauth.talkgadget.google.com" or event.dns.request="chromoting-oauth.talkgadget.google.com." or event.dns.request="remotedesktop-pa.googleapis.com" or event.dns.request="remotedesktop-pa.googleapis.com." or event.dns.request="remotedesktop.google.com" or event.dns.request="remotedesktop.google.com.")))
 ```
 
 
@@ -15,7 +15,7 @@ references:
     - https://github.com/magicsword-io/LOLRMM
 author: LOLRMM Project
 date: 2025-12-01
-modified: 2026-09-02
+modified: 2026-10-28
 tags:
     - attack.command-and-control
     - attack.t1219
@@ -24,14 +24,27 @@ logsource:
     category: network_connection
 detection:
     selection:
-        DestinationHostname|endswith:
-            - '*.remotedesktop.google.com'
-            - 'remotedesktop-pa.googleapis.com'
+        DestinationHostname:
+            - '*.chromoting-client.talkgadget.google.com'
+            - '*.chromoting-client.talkgadget.google.com.'
+            - '*.chromoting-host.talkgadget.google.com'
+            - '*.chromoting-host.talkgadget.google.com.'
+            - '*.chromoting-oauth.talkgadget.google.com'
+            - '*.chromoting-oauth.talkgadget.google.com.'
             - '*.remotedesktop-pa.googleapis.com'
-            - 'remotedesktop.google.com'
+            - '*.remotedesktop-pa.googleapis.com.'
+            - '*.remotedesktop.google.com'
+            - '*.remotedesktop.google.com.'
             - 'chromoting-client.talkgadget.google.com'
+            - 'chromoting-client.talkgadget.google.com.'
             - 'chromoting-host.talkgadget.google.com'
+            - 'chromoting-host.talkgadget.google.com.'
             - 'chromoting-oauth.talkgadget.google.com'
+            - 'chromoting-oauth.talkgadget.google.com.'
+            - 'remotedesktop-pa.googleapis.com'
+            - 'remotedesktop-pa.googleapis.com.'
+            - 'remotedesktop.google.com'
+            - 'remotedesktop.google.com.'
     condition: selection
 falsepositives:
     - Legitimate use of Chrome Remote Desktop

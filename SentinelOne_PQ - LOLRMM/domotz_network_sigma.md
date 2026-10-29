@@ -1,6 +1,6 @@
 ```sql
-// Translated content (automatically translated on 28-10-2026 02:56:19):
-(event.category in ("dns","url","ip")) and (endpoint.os="windows" and ((url.address contains ".domotz.co" or url.address contains "domotz.com" or url.address contains "cell-1.domotz.com" or url.address contains ".cell-1.domotz.com") or (event.dns.request contains ".domotz.co" or event.dns.request contains "domotz.com" or event.dns.request contains "cell-1.domotz.com" or event.dns.request contains ".cell-1.domotz.com")))
+// Translated content (automatically translated on 29-10-2026 03:21:48):
+(event.category in ("dns","url","ip")) and (endpoint.os="windows" and ((url.address contains ".cell-1.domotz.com" or url.address contains ".cell-1.domotz.com." or url.address contains ".domotz.co" or url.address contains ".domotz.co." or url.address contains ".domotz.com" or url.address contains ".domotz.com." or url.address="cell-1.domotz.com" or url.address="cell-1.domotz.com." or url.address="domotz.com" or url.address="domotz.com.") or (event.dns.request contains ".cell-1.domotz.com" or event.dns.request contains ".cell-1.domotz.com." or event.dns.request contains ".domotz.co" or event.dns.request contains ".domotz.co." or event.dns.request contains ".domotz.com" or event.dns.request contains ".domotz.com." or event.dns.request="cell-1.domotz.com" or event.dns.request="cell-1.domotz.com." or event.dns.request="domotz.com" or event.dns.request="domotz.com.")))
 ```
 
 
@@ -15,7 +15,7 @@ references:
     - https://github.com/magicsword-io/LOLRMM
 author: LOLRMM Project
 date: 2025-12-01
-modified: 2026-09-02
+modified: 2026-10-28
 tags:
     - attack.command-and-control
     - attack.t1219
@@ -24,11 +24,17 @@ logsource:
     category: network_connection
 detection:
     selection:
-        DestinationHostname|endswith:
-            - '*.domotz.co'
-            - 'domotz.com'
-            - 'cell-1.domotz.com'
+        DestinationHostname:
             - '*.cell-1.domotz.com'
+            - '*.cell-1.domotz.com.'
+            - '*.domotz.co'
+            - '*.domotz.co.'
+            - '*.domotz.com'
+            - '*.domotz.com.'
+            - 'cell-1.domotz.com'
+            - 'cell-1.domotz.com.'
+            - 'domotz.com'
+            - 'domotz.com.'
     condition: selection
 falsepositives:
     - Legitimate use of Domotz

@@ -1,6 +1,6 @@
 ```sql
-// Translated content (automatically translated on 28-10-2026 02:56:19):
-(event.category in ("dns","url","ip")) and (endpoint.os="windows" and ((url.address contains "login.tailscale.com" or url.address contains "docs.tacticalrmm.com") or (event.dns.request contains "login.tailscale.com" or event.dns.request contains "docs.tacticalrmm.com")))
+// Translated content (automatically translated on 29-10-2026 03:21:48):
+(event.category in ("dns","url","ip")) and (endpoint.os="windows" and ((url.address contains ".docs.tacticalrmm.com" or url.address contains ".docs.tacticalrmm.com." or url.address contains ".login.tailscale.com" or url.address contains ".login.tailscale.com." or url.address="docs.tacticalrmm.com" or url.address="docs.tacticalrmm.com." or url.address="login.tailscale.com" or url.address="login.tailscale.com.") or (event.dns.request contains ".docs.tacticalrmm.com" or event.dns.request contains ".docs.tacticalrmm.com." or event.dns.request contains ".login.tailscale.com" or event.dns.request contains ".login.tailscale.com." or event.dns.request="docs.tacticalrmm.com" or event.dns.request="docs.tacticalrmm.com." or event.dns.request="login.tailscale.com" or event.dns.request="login.tailscale.com.")))
 ```
 
 
@@ -15,7 +15,7 @@ references:
     - https://github.com/magicsword-io/LOLRMM
 author: LOLRMM Project
 date: 2025-12-01
-modified: 2026-09-02
+modified: 2026-10-28
 tags:
     - attack.command-and-control
     - attack.t1219
@@ -24,9 +24,15 @@ logsource:
     category: network_connection
 detection:
     selection:
-        DestinationHostname|endswith:
-            - 'login.tailscale.com'
+        DestinationHostname:
+            - '*.docs.tacticalrmm.com'
+            - '*.docs.tacticalrmm.com.'
+            - '*.login.tailscale.com'
+            - '*.login.tailscale.com.'
             - 'docs.tacticalrmm.com'
+            - 'docs.tacticalrmm.com.'
+            - 'login.tailscale.com'
+            - 'login.tailscale.com.'
     condition: selection
 falsepositives:
     - Legitimate use of Tactical RMM

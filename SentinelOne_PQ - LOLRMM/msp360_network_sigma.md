@@ -1,6 +1,6 @@
 ```sql
-// Translated content (automatically translated on 28-10-2026 02:56:19):
-(event.category in ("dns","url","ip")) and (endpoint.os="windows" and ((url.address contains ".cloudberrylab.com" or url.address contains ".msp360.com" or url.address contains ".mspbackups.com" or url.address contains "msp360.com") or (event.dns.request contains ".cloudberrylab.com" or event.dns.request contains ".msp360.com" or event.dns.request contains ".mspbackups.com" or event.dns.request contains "msp360.com")))
+// Translated content (automatically translated on 29-10-2026 03:21:48):
+(event.category in ("dns","url","ip")) and (endpoint.os="windows" and ((url.address contains ".cloudberrylab.com" or url.address contains ".cloudberrylab.com." or url.address contains ".msp360.com" or url.address contains ".msp360.com." or url.address contains ".mspbackups.com" or url.address contains ".mspbackups.com." or url.address="msp360.com" or url.address="msp360.com.") or (event.dns.request contains ".cloudberrylab.com" or event.dns.request contains ".cloudberrylab.com." or event.dns.request contains ".msp360.com" or event.dns.request contains ".msp360.com." or event.dns.request contains ".mspbackups.com" or event.dns.request contains ".mspbackups.com." or event.dns.request="msp360.com" or event.dns.request="msp360.com.")))
 ```
 
 
@@ -15,7 +15,7 @@ references:
     - https://github.com/magicsword-io/LOLRMM
 author: LOLRMM Project
 date: 2025-12-01
-modified: 2026-09-02
+modified: 2026-10-28
 tags:
     - attack.command-and-control
     - attack.t1219
@@ -24,11 +24,15 @@ logsource:
     category: network_connection
 detection:
     selection:
-        DestinationHostname|endswith:
+        DestinationHostname:
             - '*.cloudberrylab.com'
+            - '*.cloudberrylab.com.'
             - '*.msp360.com'
+            - '*.msp360.com.'
             - '*.mspbackups.com'
+            - '*.mspbackups.com.'
             - 'msp360.com'
+            - 'msp360.com.'
     condition: selection
 falsepositives:
     - Legitimate use of MSP360

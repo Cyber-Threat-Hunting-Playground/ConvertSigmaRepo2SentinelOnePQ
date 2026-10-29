@@ -1,6 +1,6 @@
 ```sql
-// Translated content (automatically translated on 28-10-2026 02:56:19):
-(event.category in ("dns","url","ip")) and (endpoint.os="windows" and ((url.address contains ".instanthousecall.com" or url.address contains "secure.instanthousecall.com" or url.address contains ".instanthousecall.net" or url.address contains "instanthousecall.com") or (event.dns.request contains ".instanthousecall.com" or event.dns.request contains "secure.instanthousecall.com" or event.dns.request contains ".instanthousecall.net" or event.dns.request contains "instanthousecall.com")))
+// Translated content (automatically translated on 29-10-2026 03:21:48):
+(event.category in ("dns","url","ip")) and (endpoint.os="windows" and ((url.address contains ".instanthousecall.com" or url.address contains ".instanthousecall.com." or url.address contains ".instanthousecall.net" or url.address contains ".instanthousecall.net." or url.address contains ".secure.instanthousecall.com" or url.address contains ".secure.instanthousecall.com." or url.address="instanthousecall.com" or url.address="instanthousecall.com." or url.address="secure.instanthousecall.com" or url.address="secure.instanthousecall.com.") or (event.dns.request contains ".instanthousecall.com" or event.dns.request contains ".instanthousecall.com." or event.dns.request contains ".instanthousecall.net" or event.dns.request contains ".instanthousecall.net." or event.dns.request contains ".secure.instanthousecall.com" or event.dns.request contains ".secure.instanthousecall.com." or event.dns.request="instanthousecall.com" or event.dns.request="instanthousecall.com." or event.dns.request="secure.instanthousecall.com" or event.dns.request="secure.instanthousecall.com.")))
 ```
 
 
@@ -15,7 +15,7 @@ references:
     - https://github.com/magicsword-io/LOLRMM
 author: LOLRMM Project
 date: 2025-12-01
-modified: 2026-10-20
+modified: 2026-10-28
 tags:
     - attack.command-and-control
     - attack.t1219
@@ -24,11 +24,17 @@ logsource:
     category: network_connection
 detection:
     selection:
-        DestinationHostname|endswith:
+        DestinationHostname:
             - '*.instanthousecall.com'
-            - 'secure.instanthousecall.com'
+            - '*.instanthousecall.com.'
             - '*.instanthousecall.net'
+            - '*.instanthousecall.net.'
+            - '*.secure.instanthousecall.com'
+            - '*.secure.instanthousecall.com.'
             - 'instanthousecall.com'
+            - 'instanthousecall.com.'
+            - 'secure.instanthousecall.com'
+            - 'secure.instanthousecall.com.'
     condition: selection
 falsepositives:
     - Legitimate use of Instant Housecall

@@ -1,6 +1,6 @@
 ```sql
-// Translated content (automatically translated on 28-10-2026 02:56:19):
-(event.category in ("dns","url","ip")) and (endpoint.os="windows" and ((url.address contains "app.gorelo.io" or url.address contains "gorelo-rmm.azurewebsites.net" or url.address contains "gw.usw.gorelo.tech" or url.address contains "lr.rmm.pod1.usw.gorelo.tech" or url.address contains "public.rmm.pod1.usw.gorelo.tech" or url.address contains "r1.rmm.uw.gorelo.tech" or url.address contains "sr.rmm.pod1.usw.gorelo.tech") or (event.dns.request contains "app.gorelo.io" or event.dns.request contains "gorelo-rmm.azurewebsites.net" or event.dns.request contains "gw.usw.gorelo.tech" or event.dns.request contains "lr.rmm.pod1.usw.gorelo.tech" or event.dns.request contains "public.rmm.pod1.usw.gorelo.tech" or event.dns.request contains "r1.rmm.uw.gorelo.tech" or event.dns.request contains "sr.rmm.pod1.usw.gorelo.tech")))
+// Translated content (automatically translated on 29-10-2026 03:21:48):
+(event.category in ("dns","url","ip")) and (endpoint.os="windows" and ((url.address contains ".app.gorelo.io" or url.address contains ".app.gorelo.io." or url.address="app.gorelo.io" or url.address="app.gorelo.io." or url.address contains ".gorelo-rmm.azurewebsites.net" or url.address contains ".gorelo-rmm.azurewebsites.net." or url.address="gorelo-rmm.azurewebsites.net" or url.address="gorelo-rmm.azurewebsites.net." or url.address contains ".gw.usw.gorelo.tech" or url.address contains ".gw.usw.gorelo.tech." or url.address="gw.usw.gorelo.tech" or url.address="gw.usw.gorelo.tech." or url.address contains ".lr.rmm.pod1.usw.gorelo.tech" or url.address contains ".lr.rmm.pod1.usw.gorelo.tech." or url.address="lr.rmm.pod1.usw.gorelo.tech" or url.address="lr.rmm.pod1.usw.gorelo.tech." or url.address contains ".public.rmm.pod1.usw.gorelo.tech" or url.address contains ".public.rmm.pod1.usw.gorelo.tech." or url.address="public.rmm.pod1.usw.gorelo.tech" or url.address="public.rmm.pod1.usw.gorelo.tech." or url.address contains ".r1.rmm.uw.gorelo.tech" or url.address contains ".r1.rmm.uw.gorelo.tech." or url.address="r1.rmm.uw.gorelo.tech" or url.address="r1.rmm.uw.gorelo.tech." or url.address contains ".sr.rmm.pod1.usw.gorelo.tech" or url.address contains ".sr.rmm.pod1.usw.gorelo.tech." or url.address="sr.rmm.pod1.usw.gorelo.tech" or url.address="sr.rmm.pod1.usw.gorelo.tech.") or (event.dns.request contains ".app.gorelo.io" or event.dns.request contains ".app.gorelo.io." or event.dns.request="app.gorelo.io" or event.dns.request="app.gorelo.io." or event.dns.request contains ".gorelo-rmm.azurewebsites.net" or event.dns.request contains ".gorelo-rmm.azurewebsites.net." or event.dns.request="gorelo-rmm.azurewebsites.net" or event.dns.request="gorelo-rmm.azurewebsites.net." or event.dns.request contains ".gw.usw.gorelo.tech" or event.dns.request contains ".gw.usw.gorelo.tech." or event.dns.request="gw.usw.gorelo.tech" or event.dns.request="gw.usw.gorelo.tech." or event.dns.request contains ".lr.rmm.pod1.usw.gorelo.tech" or event.dns.request contains ".lr.rmm.pod1.usw.gorelo.tech." or event.dns.request="lr.rmm.pod1.usw.gorelo.tech" or event.dns.request="lr.rmm.pod1.usw.gorelo.tech." or event.dns.request contains ".public.rmm.pod1.usw.gorelo.tech" or event.dns.request contains ".public.rmm.pod1.usw.gorelo.tech." or event.dns.request="public.rmm.pod1.usw.gorelo.tech" or event.dns.request="public.rmm.pod1.usw.gorelo.tech." or event.dns.request contains ".r1.rmm.uw.gorelo.tech" or event.dns.request contains ".r1.rmm.uw.gorelo.tech." or event.dns.request="r1.rmm.uw.gorelo.tech" or event.dns.request="r1.rmm.uw.gorelo.tech." or event.dns.request contains ".sr.rmm.pod1.usw.gorelo.tech" or event.dns.request contains ".sr.rmm.pod1.usw.gorelo.tech." or event.dns.request="sr.rmm.pod1.usw.gorelo.tech" or event.dns.request="sr.rmm.pod1.usw.gorelo.tech.")))
 ```
 
 
@@ -15,7 +15,7 @@ references:
     - https://github.com/magicsword-io/LOLRMM
 author: LOLRMM Project
 date: 2025-12-01
-modified: 2026-09-02
+modified: 2026-10-28
 tags:
     - attack.command-and-control
     - attack.t1219
@@ -24,14 +24,35 @@ logsource:
     category: network_connection
 detection:
     selection:
-        DestinationHostname|endswith:
+        DestinationHostname:
+            - '*.app.gorelo.io'
+            - '*.app.gorelo.io.'
             - 'app.gorelo.io'
+            - 'app.gorelo.io.'
+            - '*.gorelo-rmm.azurewebsites.net'
+            - '*.gorelo-rmm.azurewebsites.net.'
             - 'gorelo-rmm.azurewebsites.net'
+            - 'gorelo-rmm.azurewebsites.net.'
+            - '*.gw.usw.gorelo.tech'
+            - '*.gw.usw.gorelo.tech.'
             - 'gw.usw.gorelo.tech'
+            - 'gw.usw.gorelo.tech.'
+            - '*.lr.rmm.pod1.usw.gorelo.tech'
+            - '*.lr.rmm.pod1.usw.gorelo.tech.'
             - 'lr.rmm.pod1.usw.gorelo.tech'
+            - 'lr.rmm.pod1.usw.gorelo.tech.'
+            - '*.public.rmm.pod1.usw.gorelo.tech'
+            - '*.public.rmm.pod1.usw.gorelo.tech.'
             - 'public.rmm.pod1.usw.gorelo.tech'
+            - 'public.rmm.pod1.usw.gorelo.tech.'
+            - '*.r1.rmm.uw.gorelo.tech'
+            - '*.r1.rmm.uw.gorelo.tech.'
             - 'r1.rmm.uw.gorelo.tech'
+            - 'r1.rmm.uw.gorelo.tech.'
+            - '*.sr.rmm.pod1.usw.gorelo.tech'
+            - '*.sr.rmm.pod1.usw.gorelo.tech.'
             - 'sr.rmm.pod1.usw.gorelo.tech'
+            - 'sr.rmm.pod1.usw.gorelo.tech.'
     condition: selection
 falsepositives:
     - Legitimate use of Gorelo RMM

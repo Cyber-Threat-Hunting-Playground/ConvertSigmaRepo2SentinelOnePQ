@@ -1,6 +1,6 @@
 ```sql
-// Translated content (automatically translated on 28-10-2026 02:56:19):
-(event.category in ("dns","url","ip")) and (endpoint.os="windows" and ((url.address="*plus*.site24x7.com" or url.address="*plus*.site24x7.eu" or url.address="*plus*.site24x7.in" or url.address="*plus*.site24x7.cn" or url.address="*plus*.site24x7.net.au") or (event.dns.request="*plus*.site24x7.com" or event.dns.request="*plus*.site24x7.eu" or event.dns.request="*plus*.site24x7.in" or event.dns.request="*plus*.site24x7.cn" or event.dns.request="*plus*.site24x7.net.au")))
+// Translated content (automatically translated on 29-10-2026 03:21:48):
+(event.category in ("dns","url","ip")) and (endpoint.os="windows" and ((url.address="plus*.site24x7.cn" or url.address="plus*.site24x7.cn." or url.address="plus*.site24x7.com" or url.address="plus*.site24x7.com." or url.address="plus*.site24x7.eu" or url.address="plus*.site24x7.eu." or url.address="plus*.site24x7.in" or url.address="plus*.site24x7.in." or url.address="plus*.site24x7.net.au" or url.address="plus*.site24x7.net.au.") or (event.dns.request="plus*.site24x7.cn" or event.dns.request="plus*.site24x7.cn." or event.dns.request="plus*.site24x7.com" or event.dns.request="plus*.site24x7.com." or event.dns.request="plus*.site24x7.eu" or event.dns.request="plus*.site24x7.eu." or event.dns.request="plus*.site24x7.in" or event.dns.request="plus*.site24x7.in." or event.dns.request="plus*.site24x7.net.au" or event.dns.request="plus*.site24x7.net.au.")))
 ```
 
 
@@ -15,7 +15,7 @@ references:
     - https://github.com/magicsword-io/LOLRMM
 author: LOLRMM Project
 date: 2025-12-01
-modified: 2026-09-02
+modified: 2026-10-28
 tags:
     - attack.command-and-control
     - attack.t1219
@@ -24,12 +24,17 @@ logsource:
     category: network_connection
 detection:
     selection:
-        DestinationHostname|endswith:
-            - 'plus*.site24x7.com'
-            - 'plus*.site24x7.eu'
-            - 'plus*.site24x7.in'
+        DestinationHostname:
             - 'plus*.site24x7.cn'
+            - 'plus*.site24x7.cn.'
+            - 'plus*.site24x7.com'
+            - 'plus*.site24x7.com.'
+            - 'plus*.site24x7.eu'
+            - 'plus*.site24x7.eu.'
+            - 'plus*.site24x7.in'
+            - 'plus*.site24x7.in.'
             - 'plus*.site24x7.net.au'
+            - 'plus*.site24x7.net.au.'
     condition: selection
 falsepositives:
     - Legitimate use of Site24x7

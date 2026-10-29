@@ -1,6 +1,6 @@
 ```sql
-// Translated content (automatically translated on 28-10-2026 02:56:19):
-(event.category in ("dns","url","ip")) and (endpoint.os="windows" and ((url.address contains "dataplicity.com" or url.address contains "www.dataplicity.com" or url.address contains ".dataplicity.com" or url.address contains ".wormhole.dataplicity.com") or (event.dns.request contains "dataplicity.com" or event.dns.request contains "www.dataplicity.com" or event.dns.request contains ".dataplicity.com" or event.dns.request contains ".wormhole.dataplicity.com")))
+// Translated content (automatically translated on 29-10-2026 03:21:48):
+(event.category in ("dns","url","ip")) and (endpoint.os="windows" and ((url.address contains ".dataplicity.com" or url.address contains ".dataplicity.com." or url.address contains ".wormhole.dataplicity.com" or url.address contains ".wormhole.dataplicity.com." or url.address contains ".www.dataplicity.com" or url.address contains ".www.dataplicity.com." or url.address="dataplicity.com" or url.address="dataplicity.com." or url.address="www.dataplicity.com" or url.address="www.dataplicity.com.") or (event.dns.request contains ".dataplicity.com" or event.dns.request contains ".dataplicity.com." or event.dns.request contains ".wormhole.dataplicity.com" or event.dns.request contains ".wormhole.dataplicity.com." or event.dns.request contains ".www.dataplicity.com" or event.dns.request contains ".www.dataplicity.com." or event.dns.request="dataplicity.com" or event.dns.request="dataplicity.com." or event.dns.request="www.dataplicity.com" or event.dns.request="www.dataplicity.com.")))
 ```
 
 
@@ -15,7 +15,7 @@ references:
     - https://github.com/magicsword-io/LOLRMM
 author: LOLRMM Project
 date: 2026-05-18
-modified: 2026-09-02
+modified: 2026-10-28
 tags:
     - attack.command-and-control
     - attack.t1219
@@ -24,11 +24,17 @@ logsource:
     category: network_connection
 detection:
     selection:
-        DestinationHostname|endswith:
-            - 'dataplicity.com'
-            - 'www.dataplicity.com'
+        DestinationHostname:
             - '*.dataplicity.com'
+            - '*.dataplicity.com.'
             - '*.wormhole.dataplicity.com'
+            - '*.wormhole.dataplicity.com.'
+            - '*.www.dataplicity.com'
+            - '*.www.dataplicity.com.'
+            - 'dataplicity.com'
+            - 'dataplicity.com.'
+            - 'www.dataplicity.com'
+            - 'www.dataplicity.com.'
     condition: selection
 falsepositives:
     - Legitimate use of Dataplicity
