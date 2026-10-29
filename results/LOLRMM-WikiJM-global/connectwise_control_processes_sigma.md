@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 28-10-2026 04:20:56):
+// Translated content (automatically translated on 29-10-2026 04:40:39):
 event.type="Process Creation" and (endpoint.os="windows" and (src.process.image.path contains "screenconnect.clientservice.exe" or src.process.image.path contains "connectwisecontrol.client.exe" or src.process.image.path contains "screenconnect.windowsclient.exe" or src.process.image.path contains "connectwisechat-customer.exe"))
 ```
 
