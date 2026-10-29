@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 28-10-2026 05:15:50):
+// Translated content (automatically translated on 29-10-2026 05:26:44):
 event.type="Process Creation" and (endpoint.os="windows" and ((src.process.image.path="C:\\Windows\\SysWOW64\\setup16.exe" and src.process.cmdline contains " -m ") and (not tgt.process.image.path contains "C:\\~MSSETUP.T\\")))
 ```
 

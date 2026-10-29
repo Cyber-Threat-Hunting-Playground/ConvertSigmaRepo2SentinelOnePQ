@@ -1,6 +1,6 @@
 ```sql
-// Translated content (automatically translated on 28-10-2026 05:15:50):
-event.type="Process Creation" and (endpoint.os="windows" and ((src.process.image.path contains "\\gup.exe" and tgt.process.image.path contains "\\explorer.exe") and (not ((tgt.process.image.path contains "\\explorer.exe" and tgt.process.cmdline contains "\\Notepad++\\notepad++.exe") or src.process.image.path contains "\\Notepad++\\updater\\" or not (tgt.process.cmdline=*)))))
+// Translated content (automatically translated on 29-10-2026 05:26:44):
+event.type="Process Creation" and (endpoint.os="windows" and ((src.process.image.path contains "\\gup.exe" and tgt.process.image.path contains "\\explorer.exe") and (not ((tgt.process.image.path contains "\\explorer.exe" and tgt.process.cmdline contains "\\Notepad++\\notepad++.exe") or src.process.image.path contains "\\Notepad++\\updater\\" or not (tgt.process.cmdline matches "\.*")))))
 ```
 
 
