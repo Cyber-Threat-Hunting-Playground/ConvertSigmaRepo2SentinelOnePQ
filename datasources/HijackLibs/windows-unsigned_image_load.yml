@@ -6628,6 +6628,35 @@ falsepositives:
     - False positives are likely. This rule is more suitable for hunting than for generating detections.
 
 ---
+title: Possibly malicious versions of msvfw32.dll
+id: 6616393b-5812-48a3-7097-5b9ff8750140
+status: experimental
+description: Detects possible DLL hijacking of msvfw32.dll by looking for versions not meeting the known signature data.
+references:
+    - https://hijacklibs.net/entries/microsoft/built-in/msvfw32.html
+author: "Tim Sword - HuntressLabs"
+date: 2026-10-23
+tags:
+    - attack.defense_evasion
+    - attack.T1574.001
+logsource:
+    product: windows
+    category: image_load
+detection:
+    selection:
+        ImageLoaded: '*\msvfw32.dll'
+    filter:
+        ImageLoaded:
+            - Signed: 'true'
+            - SignatureStatus: 'signed'
+            - Signature|contains:
+                - 'CN=Microsoft Windows, O=Microsoft Corporation, L=Redmond, S=Washington, C=US'
+
+    condition: selection and not filter
+falsepositives:
+    - False positives are likely. This rule is more suitable for hunting than for generating detections.
+
+---
 title: Possibly malicious versions of mswb7.dll
 id: 7172103b-2897-48a3-6541-5b9ff8659678
 status: experimental
