@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 29-10-2026 03:21:48):
+// Translated content (automatically translated on 30-10-2026 03:23:35):
 (event.category in ("dns","url","ip")) and (endpoint.os="windows" and ((url.address contains ".content.rview.com" or url.address contains ".content.rview.com." or url.address contains ".rview.com" or url.address contains ".rview.com." or url.address="content.rview.com" or url.address="content.rview.com.") or (event.dns.request contains ".content.rview.com" or event.dns.request contains ".content.rview.com." or event.dns.request contains ".rview.com" or event.dns.request contains ".rview.com." or event.dns.request="content.rview.com" or event.dns.request="content.rview.com.")))
 ```
 

@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 29-10-2026 03:21:48):
+// Translated content (automatically translated on 30-10-2026 03:23:35):
 event.category="file" and (endpoint.os="windows" and (tgt.file.path contains "C:\\ProgramData\\{4CEC2908-5CE4-48F0-A717-8FC833D8017A}\*" or tgt.file.path contains "C:\\ProgramData\\{4CEC2908-5CE4-48F0-A717-8FC833D8017A}\\config" or tgt.file.path contains "C:\\ProgramData\\{4CEC2908-5CE4-48F0-A717-8FC833D8017A}\\updates\\rundll32.exe.config" or tgt.file.path contains "C:\\ProgramData\\Teramind Agent\*" or tgt.file.path contains "C:\\ProgramData\\Teramind Agent\\config" or tgt.file.path contains "C:\\ProgramData\\Package Cache\\.unverified\\agent" or tgt.file.path="*teramind_agent_*_bundle_noredist_setup.msi" or tgt.file.path="*teramind_agent_*_x64.msi" or tgt.file.path="*teramind_agent_*_ARM64.msi" or tgt.file.path contains "Teramind.Setup.Updater.exe" or tgt.file.path contains "tmdiag.zip"))
 ```
 

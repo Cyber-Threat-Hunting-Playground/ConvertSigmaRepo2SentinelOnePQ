@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 29-10-2026 03:21:48):
+// Translated content (automatically translated on 30-10-2026 03:23:35):
 event.category="file" and (endpoint.os="windows" and (tgt.file.path contains "\\Lavawall\\LavawallWin.exe" or tgt.file.path contains "\\Lavawall\\remote-agent\\remote-agent.exe" or tgt.file.path contains "\\Lavawall\\remote-agent\\uihelper.exe" or tgt.file.path contains "\\Lavawall\\LavawallCheckAndStartService.ps1" or tgt.file.path contains "\\Lavawall\\Storage\\UserAgentData.db" or tgt.file.path contains "\\LavawallWin.dll" or tgt.file.path contains "\\LavawallWin.runtimeconfig.json"))
 ```
 

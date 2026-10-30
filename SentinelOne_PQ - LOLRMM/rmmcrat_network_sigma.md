@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 29-10-2026 03:21:48):
+// Translated content (automatically translated on 30-10-2026 03:23:35):
 (event.category in ("dns","url","ip")) and (endpoint.os="windows" and ((url.address contains ".softbymade.top" or url.address contains ".softbymade.top." or url.address="softbymade.top" or url.address="softbymade.top.") or (event.dns.request contains ".softbymade.top" or event.dns.request contains ".softbymade.top." or event.dns.request="softbymade.top" or event.dns.request="softbymade.top.")))
 ```
 
