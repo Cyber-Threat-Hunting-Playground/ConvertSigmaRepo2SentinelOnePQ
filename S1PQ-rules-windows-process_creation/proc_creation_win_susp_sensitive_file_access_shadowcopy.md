@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 29-10-2026 05:26:44):
+// Translated content (automatically translated on 30-10-2026 05:26:30):
 event.type="Process Creation" and (endpoint.os="windows" and (tgt.process.cmdline contains "\\\\?\\GLOBALROOT\\Device\\HarddiskVolumeShadowCopy" and (tgt.process.cmdline contains "\\NTDS.dit" or tgt.process.cmdline contains "\\SYSTEM" or tgt.process.cmdline contains "\\SECURITY")))
 ```
 
