@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 29-10-2026 04:51:26):
+// Translated content (automatically translated on 30-10-2026 04:51:08):
 event.type="Module Load" and (endpoint.os="windows" and (module.path contains "\\eztwain4.dll" and (not (module.path="c:\\program files\\Nitro\\PDF Pro\\*\\*" or module.path="c:\\program files (x86)\\Nitro\\PDF Pro\\*\\*" or module.path="c:\\program files\\Nitro\\Pro *\\*" or module.path="c:\\program files (x86)\\Nitro\\Pro *\\*"))))
 ```
 

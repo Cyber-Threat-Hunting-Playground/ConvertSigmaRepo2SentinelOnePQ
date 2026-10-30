@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 29-10-2026 04:51:26):
+// Translated content (automatically translated on 30-10-2026 04:51:08):
 event.type="Module Load" and (endpoint.os="windows" and (module.path contains "\\frameworkbase.dll" and (not (module.path="c:\\program files\\n-Track\\n-Track Studio *\\*" or module.path="c:\\program files (x86)\\n-Track\\n-Track Studio *\\*" or module.path="c:\\program files\\n-Track\\n-Track Studio *\\nBridge32\\*" or module.path="c:\\program files (x86)\\n-Track\\n-Track Studio *\\nBridge32\\*"))))
 ```
 
