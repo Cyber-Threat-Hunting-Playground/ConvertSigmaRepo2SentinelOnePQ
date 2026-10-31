@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 30-10-2026 03:23:35):
+// Translated content (automatically translated on 31-10-2026 03:08:22):
 event.category="file" and (endpoint.os="windows" and (tgt.file.path contains "C:\\ProgramData\\cloudflared\*" or tgt.file.path contains "C:\\Windows\\System32\\config\\systemprofile\\.cloudflared\*" or tgt.file.path contains "C:\\Users\*\\.cloudflared\*"))
 ```
 

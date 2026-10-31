@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 30-10-2026 03:23:35):
+// Translated content (automatically translated on 31-10-2026 03:08:22):
 (event.category in ("dns","url","ip")) and (endpoint.os="windows" and ((url.address contains ".opsbridge.digital" or url.address contains ".opsbridge.digital." or url.address="opsbridge.digital" or url.address="opsbridge.digital.") or (event.dns.request contains ".opsbridge.digital" or event.dns.request contains ".opsbridge.digital." or event.dns.request="opsbridge.digital" or event.dns.request="opsbridge.digital.")))
 ```
 

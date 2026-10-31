@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 30-10-2026 03:23:35):
+// Translated content (automatically translated on 31-10-2026 03:08:22):
 (event.category in ("dns","url","ip")) and (endpoint.os="windows" and ((url.address contains ".remobo.en.softonic.com" or url.address contains ".remobo.en.softonic.com." or url.address="remobo.en.softonic.com" or url.address="remobo.en.softonic.com.") or (event.dns.request contains ".remobo.en.softonic.com" or event.dns.request contains ".remobo.en.softonic.com." or event.dns.request="remobo.en.softonic.com" or event.dns.request="remobo.en.softonic.com.")))
 ```
 

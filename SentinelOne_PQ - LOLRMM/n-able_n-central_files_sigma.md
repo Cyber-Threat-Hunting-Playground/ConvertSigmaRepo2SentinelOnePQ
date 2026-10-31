@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 30-10-2026 03:23:35):
+// Translated content (automatically translated on 31-10-2026 03:08:22):
 event.category="file" and (endpoint.os="windows" and (tgt.file.path contains "C:\\Program Files (x86)\\N-able Technologies\\Windows Agent\\bin\\agent.exe" or tgt.file.path contains "C:\\Program Files (x86)\\Msp Agent\\msp-agent-core.exe"))
 ```
 

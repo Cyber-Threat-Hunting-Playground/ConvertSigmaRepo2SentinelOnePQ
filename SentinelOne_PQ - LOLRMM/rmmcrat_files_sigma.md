@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 30-10-2026 03:23:35):
+// Translated content (automatically translated on 31-10-2026 03:08:22):
 event.category="file" and (endpoint.os="windows" and (tgt.file.path contains "\\AppData\\Roaming\\rmm.exe" or tgt.file.path contains "C:\\ProgramData\\RMMAgent\\client_id.bin" or tgt.file.path contains "C:\\ProgramData\\RMMAgent\\credentials.dat" or tgt.file.path contains "C:\\ProgramData\\RMMAgent\\packages\\Notepad++.exe"))
 ```
 

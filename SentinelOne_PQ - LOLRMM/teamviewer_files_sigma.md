@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 30-10-2026 03:23:35):
+// Translated content (automatically translated on 31-10-2026 03:08:22):
 event.category="file" and (endpoint.os="windows" and (tgt.file.path contains "TeamViewer\\d\\d_Logfile\\.log" or tgt.file.path contains "C:\\Program Files\\TeamViewer\\Connections_incoming.txt" or tgt.file.path contains "C:\\Program Files\\TeamViewer\\TVNetwork.log" or tgt.file.path contains "teamviewerqs.exe" or tgt.file.path contains "tv_w32.exe" or tgt.file.path contains "tv_w64.exe" or tgt.file.path contains "tv_x64.exe" or tgt.file.path contains "teamviewer.exe" or tgt.file.path contains "teamviewer_service.exe" or tgt.file.path="*C:\\Program Files*\\TeamViewer\\connections*.txt" or tgt.file.path contains "C:\\Users\*\\AppData\\Roaming\\TeamViewer\\MRU\\RemoteSupport\*tvc"))
 ```
 
