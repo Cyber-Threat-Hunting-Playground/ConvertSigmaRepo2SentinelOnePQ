@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 30-10-2026 04:51:08):
+// Translated content (automatically translated on 31-10-2026 04:36:54):
 event.type="Module Load" and (endpoint.os="windows" and (module.path contains "\\deelevator64.dll" and (not (module.path contains "c:\\program files\\Stardock\\Start11\\" or module.path contains "c:\\program files (x86)\\Stardock\\Start11\\" or module.path contains "c:\\program files\\Stardock\\Fences\\" or module.path contains "c:\\program files (x86)\\Stardock\\Fences\\"))))
 ```
 

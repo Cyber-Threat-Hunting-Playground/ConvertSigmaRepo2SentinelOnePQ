@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 30-10-2026 04:51:08):
+// Translated content (automatically translated on 31-10-2026 04:36:54):
 event.type="Module Load" and (endpoint.os="windows" and (module.path contains "\\flutter_gpu_texture_renderer_plugin.dll" and (not (module.path="c:\\users\\*\\appdata\\local\\rustdesk\\*" or module.path contains "c:\\program files\\RustDesk\\" or module.path contains "c:\\program files (x86)\\RustDesk\\"))))
 ```
 
