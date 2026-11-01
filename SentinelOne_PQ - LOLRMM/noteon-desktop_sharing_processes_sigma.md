@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 31-10-2026 03:08:22):
+// Translated content (automatically translated on 01-11-2026 03:03:17):
 event.type="Process Creation" and (endpoint.os="windows" and ((src.process.image.path="*\\nateon*.exe" or src.process.image.path contains "\\nateon.exe" or src.process.image.path contains "\\nateonmain.exe") or (tgt.process.image.path="*\\nateon*.exe" or tgt.process.image.path contains "\\nateon.exe" or tgt.process.image.path contains "\\nateonmain.exe")))
 ```
 

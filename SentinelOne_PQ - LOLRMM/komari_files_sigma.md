@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 31-10-2026 03:08:22):
+// Translated content (automatically translated on 01-11-2026 03:03:17):
 event.category="file" and (endpoint.os="windows" and (tgt.file.path contains "C:\\Program Files\\Komari\\komari-agent.exe" or tgt.file.path contains "C:\\Program Files\\Komari\\nssm.exe" or tgt.file.path contains "C:\\komari\\agent"))
 ```
 
