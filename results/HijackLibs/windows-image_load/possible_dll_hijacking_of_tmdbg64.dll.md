@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 31-10-2026 04:36:54):
+// Translated content (automatically translated on 01-11-2026 04:56:27):
 event.type="Module Load" and (endpoint.os="windows" and (module.path contains "\\tmdbg64.dll" and (not (module.path="c:\\users\\*\\appdata\\local\\Temp\\ClnExtor\\PCCNT\\*" or module.path contains "c:\\program files\\Trend Micro\\Security Agent\\" or module.path contains "c:\\program files (x86)\\Trend Micro\\Security Agent\\"))))
 ```
 
