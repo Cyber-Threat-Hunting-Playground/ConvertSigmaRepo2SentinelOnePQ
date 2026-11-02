@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 01-11-2026 03:03:17):
+// Translated content (automatically translated on 02-11-2026 03:13:44):
 event.type="Process Creation" and (endpoint.os="windows" and ((src.process.image.path="*C:\\Users\\*\\AppData\\Local\\remsupp-updater\\installer.exe" or src.process.image.path contains "\\RemSupp.exe" or src.process.image.path contains "\\Uninstall RemSupp.exe") or (tgt.process.image.path="*C:\\Users\\*\\AppData\\Local\\remsupp-updater\\installer.exe" or tgt.process.image.path contains "\\RemSupp.exe" or tgt.process.image.path contains "\\Uninstall RemSupp.exe")))
 ```
 

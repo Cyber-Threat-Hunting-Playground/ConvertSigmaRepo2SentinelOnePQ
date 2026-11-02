@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 01-11-2026 03:03:17):
+// Translated content (automatically translated on 02-11-2026 03:13:44):
 event.type="Process Creation" and (endpoint.os="windows" and ((src.process.image.path contains "\\DFServ.exe" or src.process.image.path contains "\\DFServEx.exe" or src.process.image.path contains "\\DFWks.exe" or src.process.image.path contains "\\DFC.exe" or src.process.image.path contains "\\DFStd.exe" or src.process.image.path contains "\\DFStdInstall.exe" or src.process.image.path contains "\\CloudWksInstall.exe" or src.process.image.path contains "\\DFInst.exe") or (tgt.process.image.path contains "\\DFServ.exe" or tgt.process.image.path contains "\\DFServEx.exe" or tgt.process.image.path contains "\\DFWks.exe" or tgt.process.image.path contains "\\DFC.exe" or tgt.process.image.path contains "\\DFStd.exe" or tgt.process.image.path contains "\\DFStdInstall.exe" or tgt.process.image.path contains "\\CloudWksInstall.exe" or tgt.process.image.path contains "\\DFInst.exe")))
 ```
 

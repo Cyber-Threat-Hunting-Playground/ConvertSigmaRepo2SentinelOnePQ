@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 01-11-2026 03:03:17):
+// Translated content (automatically translated on 02-11-2026 03:13:44):
 event.category="file" and (endpoint.os="windows" and (tgt.file.path contains "\\allocentra\\agent\\allocentra-agent.exe" or tgt.file.path contains "\\allocentra-update.bat"))
 ```
 

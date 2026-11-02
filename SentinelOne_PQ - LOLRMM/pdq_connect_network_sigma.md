@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 01-11-2026 03:03:17):
+// Translated content (automatically translated on 02-11-2026 03:13:44):
 (event.category in ("dns","url","ip")) and (endpoint.os="windows" and ((url.address contains ".app.pdq.com" or url.address contains ".app.pdq.com." or url.address contains ".cfcdn.pdq.com" or url.address contains ".cfcdn.pdq.com." or url.address="app.pdq.com" or url.address="app.pdq.com." or url.address="cfcdn.pdq.com" or url.address="cfcdn.pdq.com." or url.address="pdqinstallers.*.r2.cloudflarestorage.com" or url.address="pdqinstallers.*.r2.cloudflarestorage.com.") or (event.dns.request contains ".app.pdq.com" or event.dns.request contains ".app.pdq.com." or event.dns.request contains ".cfcdn.pdq.com" or event.dns.request contains ".cfcdn.pdq.com." or event.dns.request="app.pdq.com" or event.dns.request="app.pdq.com." or event.dns.request="cfcdn.pdq.com" or event.dns.request="cfcdn.pdq.com." or event.dns.request="pdqinstallers.*.r2.cloudflarestorage.com" or event.dns.request="pdqinstallers.*.r2.cloudflarestorage.com.")))
 ```
 

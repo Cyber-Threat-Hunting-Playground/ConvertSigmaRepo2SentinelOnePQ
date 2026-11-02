@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 01-11-2026 03:03:17):
+// Translated content (automatically translated on 02-11-2026 03:13:44):
 event.type="Process Creation" and (endpoint.os="windows" and ((src.process.image.path contains "\\nvda.exe" or src.process.image.path contains "\\nvda_service.exe" or src.process.image.path="*\\nvda_*.exe") or (tgt.process.image.path contains "\\nvda.exe" or tgt.process.image.path contains "\\nvda_service.exe" or tgt.process.image.path="*\\nvda_*.exe")))
 ```
 

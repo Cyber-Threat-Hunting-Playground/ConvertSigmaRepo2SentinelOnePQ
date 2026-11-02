@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 01-11-2026 03:03:17):
+// Translated content (automatically translated on 02-11-2026 03:13:44):
 event.category="file" and (endpoint.os="windows" and (tgt.file.path contains "StifleR.ClientApp.exe" or tgt.file.path contains "StifleR.ClientApp.exe.Config" or tgt.file.path contains "C:\\Program Files\\2Pint Software\\StifleR Client\\TwoPint.ConfigEditor.Wpf\\TwoPint.ConfigEditor.Wpf.exe"))
 ```
 

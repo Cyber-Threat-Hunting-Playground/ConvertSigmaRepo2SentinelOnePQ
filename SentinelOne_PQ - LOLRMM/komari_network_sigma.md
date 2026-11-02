@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 01-11-2026 03:03:17):
+// Translated content (automatically translated on 02-11-2026 03:13:44):
 (event.category in ("dns","url","ip")) and (endpoint.os="windows" and ((url.address contains ".komari-document.pages.dev" or url.address contains ".komari-document.pages.dev." or url.address contains ".www.komari.wiki" or url.address contains ".www.komari.wiki." or url.address="komari-document.pages.dev" or url.address="komari-document.pages.dev." or url.address="www.komari.wiki" or url.address="www.komari.wiki.") or (event.dns.request contains ".komari-document.pages.dev" or event.dns.request contains ".komari-document.pages.dev." or event.dns.request contains ".www.komari.wiki" or event.dns.request contains ".www.komari.wiki." or event.dns.request="komari-document.pages.dev" or event.dns.request="komari-document.pages.dev." or event.dns.request="www.komari.wiki" or event.dns.request="www.komari.wiki.")))
 ```
 
