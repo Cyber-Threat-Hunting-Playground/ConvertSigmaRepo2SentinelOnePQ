@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 01-11-2026 04:56:27):
+// Translated content (automatically translated on 02-11-2026 04:57:28):
 event.type="Module Load" and (endpoint.os="windows" and (module.path contains "\\winsparkle.dll" and (not (module.path contains "c:\\program files\\Poedit\\" or module.path contains "c:\\program files (x86)\\Poedit\\"))))
 ```
 
