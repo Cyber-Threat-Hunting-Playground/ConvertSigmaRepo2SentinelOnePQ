@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 01-11-2026 05:41:03):
+// Translated content (automatically translated on 02-11-2026 05:39:40):
 event.type="Process Creation" and (endpoint.os="windows" and (tgt.process.image.path contains "\\ssh.exe" and tgt.process.cmdline contains ":3389"))
 ```
 
