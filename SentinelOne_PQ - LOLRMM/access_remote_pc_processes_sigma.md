@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 02-11-2026 03:13:44):
+// Translated content (automatically translated on 03-11-2026 04:28:45):
 event.type="Process Creation" and (endpoint.os="windows" and (src.process.image.path contains "rpcgrab.exe" or src.process.image.path contains "rpcsetup.exe"))
 ```
 

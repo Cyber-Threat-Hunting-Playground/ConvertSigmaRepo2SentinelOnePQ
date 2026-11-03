@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 02-11-2026 03:13:44):
+// Translated content (automatically translated on 03-11-2026 04:28:45):
 event.category="file" and (endpoint.os="windows" and (tgt.file.path contains "\\AppData\\Roaming\\Mremote\\agent.exe" or tgt.file.path contains "\\AppData\\Roaming\\Mremote\\agent.log" or tgt.file.path contains "\\AppData\\Roaming\\Mremote\\enrolled.json" or tgt.file.path contains "\\AppData\\Roaming\\Mremote\\consent.ok"))
 ```
 

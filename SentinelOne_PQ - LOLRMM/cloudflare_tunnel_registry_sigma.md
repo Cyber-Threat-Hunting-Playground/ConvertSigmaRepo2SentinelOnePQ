@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 02-11-2026 03:13:44):
+// Translated content (automatically translated on 03-11-2026 04:28:45):
 event.category="registry" and (endpoint.os="windows" and (registry.keyPath contains "HKLM\\SYSTEM\\CurrentControlSet\\Services\\Cloudflared" or registry.keyPath contains "HKLM\\SYSTEM\\CurrentControlSet\\Services\\EventLog\\Application\\Cloudflared"))
 ```
 

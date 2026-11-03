@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 02-11-2026 03:13:44):
+// Translated content (automatically translated on 03-11-2026 04:28:45):
 event.category="file" and (endpoint.os="windows" and (tgt.file.path contains "C:\\Users\*\\AppData\\Roaming\\Microsoft\\DeviceSync\\svchost.exe" or tgt.file.path="*C:\\Users\*\\AppData\\Roaming\\Microsoft\\DeviceSync\\ovd_*.exe" or tgt.file.path contains "C:\\Users\*\\AppData\\Roaming\\Microsoft\\Windows\\Start Menu\\Programs\\Startup\\svchost.exe" or tgt.file.path="*C:\\Users\*\\AppData\\Roaming\\Microsoft\\Windows\\Start Menu\\Programs\\Startup\\ovd_*.exe" or tgt.file.path="*C:\\Users\*\\AppData\\Local\\Temp\\svchost-windows-amd64-*.exe" or tgt.file.path contains "C:\\Users\*\\AppData\\Roaming\\Overlord\\agent.exe"))
 ```
 
