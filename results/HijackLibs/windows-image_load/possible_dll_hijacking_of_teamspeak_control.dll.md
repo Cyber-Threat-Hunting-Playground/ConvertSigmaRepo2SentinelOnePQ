@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 02-11-2026 04:57:28):
+// Translated content (automatically translated on 03-11-2026 05:46:02):
 event.type="Module Load" and (endpoint.os="windows" and (module.path contains "\\teamspeak_control.dll" and (not (module.path contains "c:\\program files\\Common Files\\Overwolf\\Teamspeak\\" or module.path contains "c:\\program files (x86)\\Common Files\\Overwolf\\Teamspeak\\"))))
 ```
 
