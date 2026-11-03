@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 02-11-2026 03:05:19):
+// Translated content (automatically translated on 03-11-2026 04:23:38):
 event.type="Process Creation" and (endpoint.os="windows" and (src.process.image.path contains "\\dfsvc.exe" and tgt.process.image.path contains "\\AppData\\Local\\Apps\\2.0\\"))
 ```
 
@@ -14,6 +14,7 @@ references:
     - https://posts.specterops.io/less-smartscreen-more-caffeine-ab-using-clickonce-for-trusted-code-execution-1446ea8051c5
 author: Nasreddine Bencherchali (Nextron Systems)
 date: 2023-06-12
+modified: 2026-11-01
 tags:
     - attack.execution
     - detection.threat-hunting
@@ -24,7 +25,7 @@ logsource:
 detection:
     selection:
         ParentImage|endswith: '\dfsvc.exe'
-        Image|endswith: '\AppData\Local\Apps\2.0\'
+        Image|contains: '\AppData\Local\Apps\2.0\'
     condition: selection
 falsepositives:
     - False positives are expected in environement leveraging ClickOnce deployments. An initial baselining is required before using this rule in production.
