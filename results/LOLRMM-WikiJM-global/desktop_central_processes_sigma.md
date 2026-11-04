@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 03-11-2026 05:36:35):
+// Translated content (automatically translated on 04-11-2026 05:04:56):
 event.type="Process Creation" and (endpoint.os="windows" and src.process.image.path contains "dcagentservice.exe")
 ```
 
