@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 03-11-2026 04:28:45):
+// Translated content (automatically translated on 04-11-2026 03:47:55):
 (event.category in ("dns","url","ip")) and (endpoint.os="windows" and ((url.address contains ".royalapps.com" or url.address contains ".royalapps.com." or url.address="royalapps.com" or url.address="royalapps.com.") or (event.dns.request contains ".royalapps.com" or event.dns.request contains ".royalapps.com." or event.dns.request="royalapps.com" or event.dns.request="royalapps.com.")))
 ```
 
