@@ -1,6 +1,6 @@
 ```sql
-// Translated content (automatically translated on 03-11-2026 04:36:00):
-event.type="Process Creation" and (endpoint.os="linux" and ((tgt.process.image.path contains "/who" or tgt.process.image.path contains "/w" or tgt.process.image.path contains "/last" or tgt.process.image.path contains "/lsof" or tgt.process.image.path contains "/netstat") and (not (src.process.cmdline contains "/usr/bin/landscape-sysinfo" and tgt.process.image.path contains "/who"))))
+// Translated content (automatically translated on 04-11-2026 03:55:44):
+event.type="Process Creation" and (endpoint.os="linux" and (tgt.process.image.path contains "/lsof" or tgt.process.image.path contains "/netstat" or tgt.process.image.path contains "/sockstat" or tgt.process.image.path contains "/ss"))
 ```
 
 
@@ -9,12 +9,18 @@ event.type="Process Creation" and (endpoint.os="linux" and ((tgt.process.image.p
 title: System Network Connections Discovery - Linux
 id: 4c519226-f0cd-4471-bd2f-6fbb2bb68a79
 status: test
-description: Detects usage of system utilities to discover system network connections
+description: |
+    Detects attempts to discover system network connections via common Linux utilities.
+    Adversaries may use tools such as netstat, ss, or lsof to enumerate active connections,
+    open ports, and listening services on a compromised system.
 references:
     - https://github.com/redcanaryco/atomic-red-team/blob/f339e7da7d05f6057fdfcdd3742bfcf365fee2a9/atomics/T1049/T1049.md
+    - https://man7.org/linux/man-pages/man8/netstat.8.html
+    - https://man7.org/linux/man-pages/man8/ss.8.html
+    - https://man7.org/linux/man-pages/man8/lsof.8.html
 author: Daniil Yugoslavskiy, oscd.community
 date: 2020-10-19
-modified: 2023-01-17
+modified: 2026-11-03
 tags:
     - attack.discovery
     - attack.t1049
@@ -24,16 +30,12 @@ logsource:
 detection:
     selection:
         Image|endswith:
-            - '/who'
-            - '/w'
-            - '/last'
             - '/lsof'
             - '/netstat'
-    filter_landscape_sysinfo:
-        ParentCommandLine|contains: '/usr/bin/landscape-sysinfo'
-        Image|endswith: '/who'
-    condition: selection and not 1 of filter_*
+            - '/sockstat'
+            - '/ss'
+    condition: selection
 falsepositives:
-    - Legitimate activities
+    - Legitimate administration activities
 level: low
 ```
