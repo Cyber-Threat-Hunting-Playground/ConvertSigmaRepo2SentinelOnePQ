@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 04-11-2026 04:43:43):
+// Translated content (automatically translated on 05-11-2026 04:58:47):
 event.type="Process Creation" and (endpoint.os="osx" and (tgt.process.image.path contains "/tcpdump" or tgt.process.image.path contains "/tshark"))
 ```
 
