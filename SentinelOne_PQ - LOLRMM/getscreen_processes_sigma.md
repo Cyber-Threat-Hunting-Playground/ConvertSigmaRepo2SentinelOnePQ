@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 04-11-2026 03:47:55):
+// Translated content (automatically translated on 05-11-2026 04:05:39):
 event.type="Process Creation" and (endpoint.os="windows" and ((src.process.image.path contains "\\getscreen-x86.exe" or src.process.image.path contains "\\getscreen.upd.exe") or (tgt.process.image.path contains "\\getscreen-x86.exe" or tgt.process.image.path contains "\\getscreen.upd.exe")))
 ```
 

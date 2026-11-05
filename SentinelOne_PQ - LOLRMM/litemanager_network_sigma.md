@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 04-11-2026 03:47:55):
+// Translated content (automatically translated on 05-11-2026 04:05:39):
 (event.category in ("dns","url","ip")) and (endpoint.os="windows" and ((url.address contains ".litemanager.com" or url.address contains ".litemanager.com." or url.address contains ".litemanager.ru" or url.address contains ".litemanager.ru." or url.address="litemanager.com" or url.address="litemanager.com.") or (event.dns.request contains ".litemanager.com" or event.dns.request contains ".litemanager.com." or event.dns.request contains ".litemanager.ru" or event.dns.request contains ".litemanager.ru." or event.dns.request="litemanager.com" or event.dns.request="litemanager.com.")))
 ```
 
