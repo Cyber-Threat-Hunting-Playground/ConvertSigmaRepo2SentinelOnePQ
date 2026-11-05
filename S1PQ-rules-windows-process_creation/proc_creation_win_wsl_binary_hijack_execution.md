@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 04-11-2026 05:54:29):
+// Translated content (automatically translated on 05-11-2026 06:16:24):
 event.type="Process Creation" and (endpoint.os="windows" and ((src.process.image.path="C:\\Windows\\System32\\wsl.exe" and tgt.process.image.path contains "\\wsl.exe") and (not ((tgt.process.image.path in ("C:\\Windows\\System32\\wsl.exe","C:\\Program Files\\WSL\\wsl.exe")) or (tgt.process.image.path contains "C:\\Windows\\WinSxS\\amd64_microsoft-windows-lxss-wsl_" or tgt.process.image.path contains "C:\\Windows\\WinSxS\\arm64_microsoft-windows-lxss-wsl_" or tgt.process.image.path contains "C:\\Program Files\\WindowsApps\\MicrosoftCorporationII.WindowsSubsystemForLinux") or (tgt.process.image.path contains "C:\\Users\\" and tgt.process.image.path contains "\\AppData\\Local\\Microsoft\\WindowsApps\\")))))
 ```
 
