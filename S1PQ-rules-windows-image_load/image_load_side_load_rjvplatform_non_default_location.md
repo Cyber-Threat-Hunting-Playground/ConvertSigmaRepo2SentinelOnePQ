@@ -1,6 +1,6 @@
 ```sql
-// Translated content (automatically translated on 05-11-2026 04:57:43):
-event.type="Module Load" and (endpoint.os="windows" and ((module.path contains "\\RjvPlatform.dll" and src.process.image.path="\\SystemResetPlatform.exe") and (not src.process.image.path contains "C:\\Windows\\System32\\SystemResetPlatform\\")))
+// Translated content (automatically translated on 06-11-2026 04:57:26):
+event.type="Module Load" and (endpoint.os="windows" and ((module.path contains "\\RjvPlatform.dll" and src.process.image.path contains "\\SystemResetPlatform.exe") and (not src.process.image.path contains "C:\\Windows\\System32\\SystemResetPlatform\\")))
 ```
 
 
@@ -14,6 +14,7 @@ references:
     - https://twitter.com/0gtweet/status/1666716511988330499
 author: X__Junior (Nextron Systems)
 date: 2023-06-09
+modified: 2026-11-05
 tags:
     - attack.persistence
     - attack.privilege-escalation
@@ -26,7 +27,7 @@ logsource:
 detection:
     selection:
         ImageLoaded|endswith: '\RjvPlatform.dll'
-        Image: '\SystemResetPlatform.exe'
+        Image|endswith: '\SystemResetPlatform.exe'
     filter_main_legit_path:
         Image|startswith: 'C:\Windows\System32\SystemResetPlatform\'
     condition: selection and not 1 of filter_main_*

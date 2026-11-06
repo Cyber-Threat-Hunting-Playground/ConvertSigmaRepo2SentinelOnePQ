@@ -1,6 +1,6 @@
 ```sql
-// Translated content (automatically translated on 05-11-2026 04:57:43):
-event.type="Module Load" and (endpoint.os="windows" and ((module.path contains "\\roboform.dll" or module.path contains "\\roboform-x64.dll") and (not ((src.process.image.path contains " C:\\Program Files (x86)\\Siber Systems\\AI RoboForm\\" or src.process.image.path contains " C:\\Program Files\\Siber Systems\\AI RoboForm\\") and (src.process.image.path contains "\\robotaskbaricon.exe" or src.process.image.path contains "\\robotaskbaricon-x64.exe")))))
+// Translated content (automatically translated on 06-11-2026 04:57:26):
+event.type="Module Load" and (endpoint.os="windows" and ((module.path contains "\\roboform.dll" or module.path contains "\\roboform-x64.dll") and (not ((src.process.image.path contains "C:\\Program Files (x86)\\Siber Systems\\AI RoboForm\\" or src.process.image.path contains "C:\\Program Files\\Siber Systems\\AI RoboForm\\") and (src.process.image.path contains "\\robotaskbaricon.exe" or src.process.image.path contains "\\robotaskbaricon-x64.exe")))))
 ```
 
 
@@ -16,6 +16,7 @@ references:
     - https://www.roboform.com/
 author: X__Junior (Nextron Systems), Nasreddine Bencherchali (Nextron Systems)
 date: 2023-05-14
+modified: 2026-11-05
 tags:
     - attack.persistence
     - attack.privilege-escalation
@@ -32,8 +33,8 @@ detection:
             - '\roboform-x64.dll'
     filter_main_path:
         Image|startswith:
-            - ' C:\Program Files (x86)\Siber Systems\AI RoboForm\'
-            - ' C:\Program Files\Siber Systems\AI RoboForm\'
+            - 'C:\Program Files (x86)\Siber Systems\AI RoboForm\'
+            - 'C:\Program Files\Siber Systems\AI RoboForm\'
         Image|endswith:
             - '\robotaskbaricon.exe'
             - '\robotaskbaricon-x64.exe'

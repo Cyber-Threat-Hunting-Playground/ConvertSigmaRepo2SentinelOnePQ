@@ -1,6 +1,6 @@
 ```sql
-// Translated content (automatically translated on 05-11-2026 04:57:43):
-event.type="Module Load" and (endpoint.os="windows" and (module.path contains "\\edputil.dll" and (not (module.path contains "C:\\Windows\\System32\\" or module.path contains "C:\\Windows\\SysWOW64\\" or module.path contains "C\\Windows\\WinSxS\\"))))
+// Translated content (automatically translated on 06-11-2026 04:57:26):
+event.type="Module Load" and (endpoint.os="windows" and (module.path contains "\\edputil.dll" and (not (module.path contains "C:\\Windows\\System32\\" or module.path contains "C:\\Windows\\SysWOW64\\" or module.path contains "C:\\Windows\\WinSxS\\"))))
 ```
 
 
@@ -14,6 +14,7 @@ references:
     - https://alternativeto.net/news/2023/5/cybercriminals-use-wordpad-vulnerability-to-spread-qbot-malware/
 author: X__Junior (Nextron Systems)
 date: 2023-06-09
+modified: 2026-11-05
 tags:
     - attack.persistence
     - attack.privilege-escalation
@@ -30,7 +31,7 @@ detection:
         ImageLoaded|startswith:
             - 'C:\Windows\System32\'
             - 'C:\Windows\SysWOW64\'
-            - 'C\Windows\WinSxS\'
+            - 'C:\Windows\WinSxS\'
     condition: selection and not 1 of filter_main_*
 falsepositives:
     - Unlikely
