@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 05-11-2026 04:05:39):
+// Translated content (automatically translated on 06-11-2026 04:03:06):
 (event.category in ("dns","url","ip")) and (endpoint.os="windows" and ((url.address contains ".aeroadmin.com" or url.address contains ".aeroadmin.com." or url.address="aeroadmin.com" or url.address="aeroadmin.com." or url.address="auth*.aeroadmin.com" or url.address="auth*.aeroadmin.com.") or (event.dns.request contains ".aeroadmin.com" or event.dns.request contains ".aeroadmin.com." or event.dns.request="aeroadmin.com" or event.dns.request="aeroadmin.com." or event.dns.request="auth*.aeroadmin.com" or event.dns.request="auth*.aeroadmin.com.")))
 ```
 

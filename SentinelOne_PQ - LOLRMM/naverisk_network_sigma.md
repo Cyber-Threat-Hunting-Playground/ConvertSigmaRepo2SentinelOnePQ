@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 05-11-2026 04:05:39):
+// Translated content (automatically translated on 06-11-2026 04:03:06):
 (event.category in ("dns","url","ip")) and (endpoint.os="windows" and ((url.address contains ".naverisk.com" or url.address contains ".naverisk.com." or url.address="naverisk.com" or url.address="naverisk.com.") or (event.dns.request contains ".naverisk.com" or event.dns.request contains ".naverisk.com." or event.dns.request="naverisk.com" or event.dns.request="naverisk.com.")))
 ```
 

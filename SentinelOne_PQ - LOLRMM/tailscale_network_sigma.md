@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 05-11-2026 04:05:39):
+// Translated content (automatically translated on 06-11-2026 04:03:06):
 (event.category in ("dns","url","ip")) and (endpoint.os="windows" and ((url.address contains ".tailscale.com" or url.address contains ".tailscale.com." or url.address contains ".tailscale.io" or url.address contains ".tailscale.io." or url.address="tailscale.com" or url.address="tailscale.com.") or (event.dns.request contains ".tailscale.com" or event.dns.request contains ".tailscale.com." or event.dns.request contains ".tailscale.io" or event.dns.request contains ".tailscale.io." or event.dns.request="tailscale.com" or event.dns.request="tailscale.com.")))
 ```
 
