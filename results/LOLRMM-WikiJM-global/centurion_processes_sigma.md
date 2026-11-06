@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 05-11-2026 05:27:01):
+// Translated content (automatically translated on 06-11-2026 05:25:54):
 event.type="Process Creation" and (endpoint.os="windows" and src.process.image.path contains "ctiserv.exe")
 ```
 
