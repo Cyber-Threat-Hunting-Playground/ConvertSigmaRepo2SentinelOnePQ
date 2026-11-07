@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 06-11-2026 05:37:51):
+// Translated content (automatically translated on 07-11-2026 05:06:07):
 event.type="Module Load" and (endpoint.os="windows" and (module.path contains "\\archive.dll" and (not (module.path contains "c:\\program files\\Siemens\\SoftwareCenter\\" or module.path contains "c:\\program files (x86)\\Siemens\\SoftwareCenter\\" or module.path="c:\\users\\*\\appdata\\local\\Programs\\Siemens\\SoftwareCenter\\*"))))
 ```
 
