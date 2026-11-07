@@ -1,6 +1,6 @@
 ```sql
-// Translated content (automatically translated on 06-11-2026 06:11:08):
-event.type="Process Creation" and (endpoint.os="windows" and (((tgt.process.image.path contains "\\powershell.exe" or tgt.process.image.path contains "\\pwsh.exe") and (tgt.process.cmdline contains "\\Windows\\Temp" or tgt.process.cmdline contains "\\Temporary Internet" or tgt.process.cmdline contains "\\AppData\\Local\\Temp" or tgt.process.cmdline contains "\\AppData\\Roaming\\Temp" or tgt.process.cmdline contains "%TEMP%" or tgt.process.cmdline contains "%TMP%" or tgt.process.cmdline contains "%LocalAppData%\\Temp")) and (not (tgt.process.cmdline contains "-WindowStyle hidden -Verb runAs" or tgt.process.cmdline contains "\\Windows\\system32\\config\\systemprofile\\AppData\\Local\\Temp\\Amazon\\EC2-Windows\\" or (tgt.process.cmdline contains " >" or tgt.process.cmdline contains "Out-File" or tgt.process.cmdline contains "ConvertTo-Json") or ((src.process.image.path in ("C:\\Windows\\System32\\Msiexec.exe","C:\\Windows\\SysWOW64\\Msiexec.exe")) and tgt.process.image.path contains "\\powershell.exe" and (tgt.process.cmdline contains "-NoProfile -ExecutionPolicy Bypass -Command" and tgt.process.cmdline contains "AppData\\Local\\Temp\\" and tgt.process.cmdline contains "Install-Chocolatey.ps1"))))))
+// Translated content (automatically translated on 07-11-2026 05:39:54):
+event.type="Process Creation" and (endpoint.os="windows" and (((tgt.process.image.path contains "\\powershell.exe" or tgt.process.image.path contains "\\pwsh.exe") and (tgt.process.cmdline contains "\\Windows\\Temp" or tgt.process.cmdline contains "\\Temporary Internet" or tgt.process.cmdline contains "\\AppData\\Local\\Temp" or tgt.process.cmdline contains "\\AppData\\Roaming\\Temp" or tgt.process.cmdline contains "%TEMP%" or tgt.process.cmdline contains "%TMP%" or tgt.process.cmdline contains "%LocalAppData%\\Temp")) and (not (tgt.process.cmdline contains "-WindowStyle hidden -Verb runAs" or tgt.process.cmdline contains "\\Windows\\system32\\config\\systemprofile\\AppData\\Local\\Temp\\Amazon\\EC2-Windows\\" or (tgt.process.cmdline contains " >" or tgt.process.cmdline contains "Out-File" or tgt.process.cmdline contains "ConvertTo-Json") or ((src.process.image.path in ("C:\\Windows\\System32\\Msiexec.exe","C:\\Windows\\SysWOW64\\Msiexec.exe")) and tgt.process.image.path contains "\\powershell.exe" and (tgt.process.cmdline contains "-NoProfile -ExecutionPolicy Bypass -Command" and tgt.process.cmdline contains "AppData\\Local\\Temp\\" and tgt.process.cmdline contains "Install-Chocolatey.ps1")) or (src.process.image.path contains "\\Amazon\\EC2Launch\\EC2Launch.exe" and (tgt.process.cmdline contains "\\config\\systemprofile\\AppData\\Local\\Temp\\EC2Launch" and tgt.process.cmdline contains "\\UserScript.ps1"))))))
 ```
 
 
@@ -14,7 +14,7 @@ references:
     - https://www.microsoft.com/security/blog/2021/07/13/microsoft-discovers-threat-actor-targeting-solarwinds-serv-u-software-with-0-day-exploit/
 author: Florian Roth (Nextron Systems), Max Altgelt (Nextron Systems), Tim Shelton
 date: 2021-07-14
-modified: 2026-02-17
+modified: 2026-11-04
 tags:
     - attack.execution
     - attack.t1059.001
@@ -52,6 +52,11 @@ detection:
             - '-NoProfile -ExecutionPolicy Bypass -Command'
             - 'AppData\Local\Temp\'
             - 'Install-Chocolatey.ps1'
+    filter_optional_ec2launch:
+        ParentImage|endswith: '\Amazon\EC2Launch\EC2Launch.exe'
+        CommandLine|contains|all:
+            - '\config\systemprofile\AppData\Local\Temp\EC2Launch'
+            - '\UserScript.ps1'
     condition: selection and not 1 of filter_optional_*
 falsepositives:
     - Administrative scripts

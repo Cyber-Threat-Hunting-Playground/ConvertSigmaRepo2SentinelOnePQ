@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 06-11-2026 06:11:08):
+// Translated content (automatically translated on 07-11-2026 05:39:54):
 event.type="Process Creation" and (endpoint.os="windows" and ((tgt.process.cmdline contains "find " or tgt.process.cmdline contains "find.exe" or tgt.process.cmdline contains "findstr" or tgt.process.cmdline contains "select-string " or tgt.process.cmdline contains "strings") and (tgt.process.cmdline contains "eyJ0eXAiOi" or tgt.process.cmdline contains "eyJhbGciOi" or tgt.process.cmdline contains " eyJ0eX" or tgt.process.cmdline contains " \"eyJ0eX\"" or tgt.process.cmdline contains " 'eyJ0eX'" or tgt.process.cmdline contains " eyJhbG" or tgt.process.cmdline contains " \"eyJhbG\"" or tgt.process.cmdline contains " 'eyJhbG'")))
 ```
 

@@ -1,6 +1,6 @@
 ```sql
-// Translated content (automatically translated on 06-11-2026 06:11:08):
-event.type="Process Creation" and (endpoint.os="windows" and (tgt.process.image.path="TeamViewer_Desktop.exe" and src.process.image.path="TeamViewer_Service.exe" and tgt.process.cmdline contains "TeamViewer_Desktop.exe --IPCport 5939 --Module 1"))
+// Translated content (automatically translated on 07-11-2026 05:39:54):
+event.type="Process Creation" and (endpoint.os="windows" and (tgt.process.image.path contains "\\TeamViewer_Desktop.exe" and src.process.image.path contains "\\TeamViewer_Service.exe" and tgt.process.cmdline contains "TeamViewer_Desktop.exe --IPCport 5939 --Module 1"))
 ```
 
 
@@ -21,6 +21,7 @@ references:
     - Internal Research
 author: Josh Nickels, Qi Nan
 date: 2024-03-11
+modified: 2026-11-05
 tags:
     - attack.persistence
     - attack.initial-access
@@ -30,8 +31,8 @@ logsource:
     product: windows
 detection:
     selection:
-        Image: 'TeamViewer_Desktop.exe'
-        ParentImage: 'TeamViewer_Service.exe'
+        Image|endswith: '\TeamViewer_Desktop.exe'
+        ParentImage|endswith: '\TeamViewer_Service.exe'
         CommandLine|endswith: 'TeamViewer_Desktop.exe --IPCport 5939 --Module 1'
     condition: selection
 falsepositives:
