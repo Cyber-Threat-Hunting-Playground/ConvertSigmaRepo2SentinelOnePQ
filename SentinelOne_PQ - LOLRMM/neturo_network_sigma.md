@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 07-11-2026 03:39:07):
+// Translated content (automatically translated on 08-11-2026 03:11:45):
 (event.category in ("dns","url","ip")) and (endpoint.os="windows" and ((url.address contains ".neturo.uplus.co.kr" or url.address contains ".neturo.uplus.co.kr." or url.address="neturo.uplus.co.kr" or url.address="neturo.uplus.co.kr.") or (event.dns.request contains ".neturo.uplus.co.kr" or event.dns.request contains ".neturo.uplus.co.kr." or event.dns.request="neturo.uplus.co.kr" or event.dns.request="neturo.uplus.co.kr.")))
 ```
 

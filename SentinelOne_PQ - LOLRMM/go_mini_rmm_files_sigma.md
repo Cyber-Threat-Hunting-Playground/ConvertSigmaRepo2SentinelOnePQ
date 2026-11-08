@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 07-11-2026 03:39:07):
+// Translated content (automatically translated on 08-11-2026 03:11:45):
 event.category="file" and (endpoint.os="windows" and (tgt.file.path contains "C:\\rmm\\agent.exe" or tgt.file.path contains "C:\\rmm\\config.json"))
 ```
 

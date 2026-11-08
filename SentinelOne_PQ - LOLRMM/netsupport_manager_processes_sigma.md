@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 07-11-2026 03:39:07):
+// Translated content (automatically translated on 08-11-2026 03:11:45):
 event.type="Process Creation" and (endpoint.os="windows" and ((src.process.image.path contains "\\pcictlui.exe" or src.process.image.path contains "\\pcicfgui.exe" or src.process.image.path contains "\\client32.exe" or src.process.image.path contains "\\remcmdstub.exe") or (tgt.process.image.path contains "\\pcictlui.exe" or tgt.process.image.path contains "\\pcicfgui.exe" or tgt.process.image.path contains "\\client32.exe" or tgt.process.image.path contains "\\remcmdstub.exe")))
 ```
 

@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 07-11-2026 03:39:07):
+// Translated content (automatically translated on 08-11-2026 03:11:45):
 (event.category in ("dns","url","ip")) and (endpoint.os="windows" and ((url.address contains ".docs.tacticalrmm.com" or url.address contains ".docs.tacticalrmm.com." or url.address contains ".login.tailscale.com" or url.address contains ".login.tailscale.com." or url.address="docs.tacticalrmm.com" or url.address="docs.tacticalrmm.com." or url.address="login.tailscale.com" or url.address="login.tailscale.com.") or (event.dns.request contains ".docs.tacticalrmm.com" or event.dns.request contains ".docs.tacticalrmm.com." or event.dns.request contains ".login.tailscale.com" or event.dns.request contains ".login.tailscale.com." or event.dns.request="docs.tacticalrmm.com" or event.dns.request="docs.tacticalrmm.com." or event.dns.request="login.tailscale.com" or event.dns.request="login.tailscale.com.")))
 ```
 

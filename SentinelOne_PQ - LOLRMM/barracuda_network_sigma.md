@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 07-11-2026 03:39:07):
+// Translated content (automatically translated on 08-11-2026 03:11:45):
 (event.category in ("dns","url","ip")) and (endpoint.os="windows" and ((url.address contains ".barracudamsp.com" or url.address contains ".barracudamsp.com." or url.address contains ".islonline.net" or url.address contains ".islonline.net." or url.address contains ".rmm.barracudamsp.com" or url.address contains ".rmm.barracudamsp.com." or url.address="barracudamsp.com" or url.address="barracudamsp.com." or url.address="rmm.barracudamsp.com" or url.address="rmm.barracudamsp.com.") or (event.dns.request contains ".barracudamsp.com" or event.dns.request contains ".barracudamsp.com." or event.dns.request contains ".islonline.net" or event.dns.request contains ".islonline.net." or event.dns.request contains ".rmm.barracudamsp.com" or event.dns.request contains ".rmm.barracudamsp.com." or event.dns.request="barracudamsp.com" or event.dns.request="barracudamsp.com." or event.dns.request="rmm.barracudamsp.com" or event.dns.request="rmm.barracudamsp.com.")))
 ```
 
