@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 07-11-2026 05:39:54):
+// Translated content (automatically translated on 08-11-2026 05:42:26):
 event.type="Process Creation" and (endpoint.os="windows" and ((tgt.process.cmdline contains "\\Microsoft\\Office\\" and tgt.process.cmdline contains "\\Excel\\Security" and tgt.process.cmdline contains "PythonFunctionWarnings") and tgt.process.cmdline contains " 0"))
 ```
 

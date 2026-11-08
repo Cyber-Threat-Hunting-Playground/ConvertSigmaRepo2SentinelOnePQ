@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 07-11-2026 05:39:54):
+// Translated content (automatically translated on 08-11-2026 05:42:26):
 event.type="Process Creation" and (endpoint.os="windows" and ((tgt.process.image.path contains "\\schtasks.exe" and (tgt.process.cmdline contains " -create " or tgt.process.cmdline contains " /create " or tgt.process.cmdline contains " –create " or tgt.process.cmdline contains " —create " or tgt.process.cmdline contains " ―create ")) and (tgt.process.cmdline contains "curl " and tgt.process.cmdline contains "http" and tgt.process.cmdline contains "-o") and tgt.process.cmdline contains "powershell"))
 ```
 
