@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 08-11-2026 03:11:45):
+// Translated content (automatically translated on 09-11-2026 03:32:55):
 (event.category in ("dns","url","ip")) and (endpoint.os="windows" and ((url.address contains ".tmate.io" or url.address contains ".tmate.io." or url.address="tmate.io" or url.address="tmate.io.") or (event.dns.request contains ".tmate.io" or event.dns.request contains ".tmate.io." or event.dns.request="tmate.io" or event.dns.request="tmate.io.")))
 ```
 
