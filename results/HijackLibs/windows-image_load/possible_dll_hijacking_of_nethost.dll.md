@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 08-11-2026 05:00:08):
+// Translated content (automatically translated on 09-11-2026 05:10:01):
 event.type="Module Load" and (endpoint.os="windows" and (module.path contains "\\nethost.dll" and (not (module.path="c:\\program files\\dotnet\\packs\\Microsoft.NETCore.App.Host.win-x64\\*\\runtimes\\win-x64\\native\\*" or module.path="c:\\program files (x86)\\dotnet\\packs\\Microsoft.NETCore.App.Host.win-x64\\*\\runtimes\\win-x64\\native\\*" or module.path="c:\\program files\\dotnet\\packs\\Microsoft.NETCore.App.Host.win-x86\\*\\runtimes\\win-x86\\native\\*" or module.path="c:\\program files (x86)\\dotnet\\packs\\Microsoft.NETCore.App.Host.win-x86\\*\\runtimes\\win-x86\\native\\*"))))
 ```
 
