@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 08-11-2026 05:42:26):
+// Translated content (automatically translated on 09-11-2026 05:52:21):
 event.type="Process Creation" and (endpoint.os="windows" and (((tgt.process.cmdline contains "rundll32" and tgt.process.cmdline contains "apphelp.dll") and (tgt.process.cmdline contains "ShimFlushCache" or tgt.process.cmdline contains "#250")) or ((tgt.process.cmdline contains "rundll32" and tgt.process.cmdline contains "kernel32.dll") and (tgt.process.cmdline contains "BaseFlushAppcompatCache" or tgt.process.cmdline contains "#46"))))
 ```
 
