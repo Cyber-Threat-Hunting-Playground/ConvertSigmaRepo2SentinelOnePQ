@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 09-11-2026 05:49:51):
+// Translated content (automatically translated on 10-11-2026 06:56:03):
 event.category="dns" and (endpoint.os="windows" and (event.dns.request contains ".hiddenservice.net" or event.dns.request contains ".onion.ca" or event.dns.request contains ".onion.cab" or event.dns.request contains ".onion.casa" or event.dns.request contains ".onion.city" or event.dns.request contains ".onion.direct" or event.dns.request contains ".onion.dog" or event.dns.request contains ".onion.glass" or event.dns.request contains ".onion.gq" or event.dns.request contains ".onion.ink" or event.dns.request contains ".onion.it" or event.dns.request contains ".onion.link" or event.dns.request contains ".onion.lt" or event.dns.request contains ".onion.lu" or event.dns.request contains ".onion.nu" or event.dns.request contains ".onion.pet" or event.dns.request contains ".onion.plus" or event.dns.request contains ".onion.rip" or event.dns.request contains ".onion.sh" or event.dns.request contains ".onion.to" or event.dns.request contains ".onion.top" or event.dns.request contains ".onion" or event.dns.request contains ".s1.tor-gateways.de" or event.dns.request contains ".s2.tor-gateways.de" or event.dns.request contains ".s3.tor-gateways.de" or event.dns.request contains ".s4.tor-gateways.de" or event.dns.request contains ".s5.tor-gateways.de" or event.dns.request contains ".t2w.pw" or event.dns.request contains ".tor2web.ae.org" or event.dns.request contains ".tor2web.blutmagie.de" or event.dns.request contains ".tor2web.com" or event.dns.request contains ".tor2web.fi" or event.dns.request contains ".tor2web.io" or event.dns.request contains ".tor2web.org" or event.dns.request contains ".tor2web.xyz" or event.dns.request contains ".torlink.co"))
 ```
 
@@ -16,7 +16,7 @@ related:
 status: test
 description: Detects DNS queries to an ".onion" address related to Tor routing networks
 references:
-    - https://www.logpoint.com/en/blog/detecting-tor-use-with-logpoint/
+    - https://web.archive.org/web/20260310035047/https://www.logpoint.com/en/blog/detecting-tor-use-with-logpoint/
     - https://github.com/Azure/Azure-Sentinel/blob/f99542b94afe0ad2f19a82cc08262e7ac8e1428e/Detections/ASimDNS/imDNS_TorProxies.yaml
 author: frack113
 date: 2022-02-20

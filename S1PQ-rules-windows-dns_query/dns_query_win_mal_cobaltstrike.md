@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 09-11-2026 05:49:51):
+// Translated content (automatically translated on 10-11-2026 06:56:03):
 event.category="dns" and (endpoint.os="windows" and ((event.dns.request contains "aaa.stage." or event.dns.request contains "post.1") or event.dns.request contains ".stage.123456."))
 ```
 
@@ -15,7 +15,7 @@ status: test
 description: Detects a program that invoked suspicious DNS queries known from Cobalt Strike beacons
 references:
     - https://www.icebrg.io/blog/footprints-of-fin7-tracking-actor-patterns
-    - https://www.sekoia.io/en/hunting-and-detecting-cobalt-strike/
+    - https://web.archive.org/web/20211022162145/https://www.sekoia.io/en/hunting-and-detecting-cobalt-strike/
 author: Florian Roth (Nextron Systems)
 date: 2021-11-09
 modified: 2023-01-16

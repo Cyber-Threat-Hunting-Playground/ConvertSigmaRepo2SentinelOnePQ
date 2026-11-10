@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 09-11-2026 05:49:51):
+// Translated content (automatically translated on 10-11-2026 06:56:03):
 event.category="dns" and (endpoint.os="windows" and (event.dns.request contains "UWhRCA" and event.dns.request contains "BAAAA"))
 ```
 
@@ -21,7 +21,7 @@ description: |
     It is one of the strong indicators of a Kerberos coercion attack, where adversaries manipulate DNS records
     to spoof Service Principal Names (SPNs) and redirect authentication requests like CVE-2025-33073.
 references:
-    - https://www.synacktiv.com/publications/ntlm-reflection-is-dead-long-live-ntlm-reflection-an-in-depth-analysis-of-cve-2025
+    - https://www.synacktiv.com/en/publications/ntlm-reflection-is-dead-long-live-ntlm-reflection-an-in-depth-analysis-of-cve-2025
     - https://googleprojectzero.blogspot.com/2021/10/using-kerberos-for-authentication-relay.html
 author: Swachchhanda Shrawan Poudel (Nextron Systems)
 date: 2025-06-20
