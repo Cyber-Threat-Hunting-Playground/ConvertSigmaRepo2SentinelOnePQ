@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 09-11-2026 05:10:01):
+// Translated content (automatically translated on 10-11-2026 06:25:33):
 event.type="Module Load" and (endpoint.os="windows" and (module.path contains "\\magnification.dll" and (not (module.path contains "c:\\windows\\system32\\" or module.path contains "c:\\windows\\syswow64\\"))))
 ```
 
