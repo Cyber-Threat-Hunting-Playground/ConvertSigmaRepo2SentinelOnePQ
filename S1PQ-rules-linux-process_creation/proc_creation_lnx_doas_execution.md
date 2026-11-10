@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 09-11-2026 03:41:38):
+// Translated content (automatically translated on 10-11-2026 05:13:54):
 event.type="Process Creation" and (endpoint.os="linux" and tgt.process.image.path contains "/doas")
 ```
 
@@ -11,7 +11,7 @@ id: 067d8238-7127-451c-a9ec-fa78045b618b
 status: stable
 description: Detects the doas tool execution in linux host platform. This utility tool allow standard users to perform tasks as root, the same way sudo does.
 references:
-    - https://research.splunk.com/endpoint/linux_doas_tool_execution/
+    - https://research.splunk.com/endpoint/d5a62490-6e09-11ec-884e-acde48001122/
     - https://www.makeuseof.com/how-to-install-and-use-doas/
 author: Sittikorn S, Teoderick Contreras
 date: 2022-01-20

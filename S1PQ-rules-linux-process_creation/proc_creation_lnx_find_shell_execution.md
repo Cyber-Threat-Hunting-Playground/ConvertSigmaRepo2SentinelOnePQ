@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 09-11-2026 03:41:38):
+// Translated content (automatically translated on 10-11-2026 05:13:54):
 event.type="Process Creation" and (endpoint.os="linux" and ((tgt.process.image.path contains "/find" and (tgt.process.cmdline contains " . " and tgt.process.cmdline contains "-exec")) and (tgt.process.cmdline contains "/bin/bash" or tgt.process.cmdline contains "/bin/dash" or tgt.process.cmdline contains "/bin/fish" or tgt.process.cmdline contains "/bin/sh" or tgt.process.cmdline contains "/bin/zsh")))
 ```
 
@@ -13,7 +13,7 @@ description: |
     Detects the use of the find command to execute a shell. Such behavior may be associated with privilege escalation, unauthorized command execution, or exploitation attempt.
 references:
     - https://gtfobins.github.io/gtfobins/find/#shell
-    - https://www.elastic.co/guide/en/security/current/linux-restricted-shell-breakout-via-linux-binary-s.html
+    - https://github.com/elastic/detection-rules/blob/0aacc5e19292f764a002ea2093b2a076db35b589/rules/_deprecated/execution_shell_evasion_linux_binary.toml
 author: Li Ling, Andy Parkidomo, Robert Rakowski, Blake Hartstein (Bloomberg L.P.)
 date: 2024-09-02
 tags:
