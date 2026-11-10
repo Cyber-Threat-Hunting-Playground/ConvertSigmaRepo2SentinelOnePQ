@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 09-11-2026 05:52:21):
+// Translated content (automatically translated on 10-11-2026 06:57:22):
 event.type="Process Creation" and (endpoint.os="windows" and ((tgt.process.image.path contains "\\rundll32.exe" or tgt.process.image.path contains "\\cmd.exe") and (tgt.process.cmdline contains "gthread-3.6.dll" or tgt.process.cmdline contains "\\Windows\\Temp\\tmp.bat" or tgt.process.cmdline contains "sigcmm-2.4.dll")))
 ```
 
@@ -11,7 +11,7 @@ id: 95022b85-ff2a-49fa-939a-d7b8f56eeb9b
 status: test
 description: Detects actions caused by the RedMimicry Winnti playbook a automated breach emulations utility
 references:
-    - https://redmimicry.com/posts/redmimicry-winnti/
+    - https://web.archive.org/web/20240222070028/https://redmimicry.com/posts/redmimicry-winnti/
 author: Alexander Rausch
 date: 2020-06-24
 modified: 2023-03-01

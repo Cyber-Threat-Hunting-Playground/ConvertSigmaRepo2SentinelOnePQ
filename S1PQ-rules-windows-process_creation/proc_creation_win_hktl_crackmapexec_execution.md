@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 09-11-2026 05:52:21):
+// Translated content (automatically translated on 10-11-2026 06:57:22):
 event.type="Process Creation" and (endpoint.os="windows" and ((tgt.process.image.path contains "\\crackmapexec.exe" or tgt.process.cmdline contains " -M pe_inject " or (tgt.process.cmdline contains " --local-auth" and tgt.process.cmdline contains " -u " and tgt.process.cmdline contains " -x ") or (tgt.process.cmdline contains " --local-auth" and tgt.process.cmdline contains " -u " and tgt.process.cmdline contains " -p " and tgt.process.cmdline contains " -H 'NTHASH'") or (tgt.process.cmdline contains " mssql " and tgt.process.cmdline contains " -u " and tgt.process.cmdline contains " -p " and tgt.process.cmdline contains " -M " and tgt.process.cmdline contains " -d ") or (tgt.process.cmdline contains " smb " and tgt.process.cmdline contains " -u " and tgt.process.cmdline contains " -H " and tgt.process.cmdline contains " -M " and tgt.process.cmdline contains " -o ") or (tgt.process.cmdline contains " smb " and tgt.process.cmdline contains " -u " and tgt.process.cmdline contains " -p " and tgt.process.cmdline contains " --local-auth")) or ((tgt.process.cmdline contains " --local-auth" and tgt.process.cmdline contains " -u " and tgt.process.cmdline contains " -p ") and (tgt.process.cmdline contains " 10." and tgt.process.cmdline contains " 192.168." and tgt.process.cmdline contains "/24 "))))
 ```
 
@@ -11,7 +11,7 @@ id: 42a993dd-bb3e-48c8-b372-4d6684c4106c
 status: test
 description: This rule detect common flag combinations used by CrackMapExec in order to detect its use even if the binary has been replaced.
 references:
-    - https://mpgn.gitbook.io/crackmapexec/smb-protocol/authentication/checking-credentials-local
+    - https://web.archive.org/web/20220625234519/https://mpgn.gitbook.io/crackmapexec/smb-protocol/authentication/checking-credentials-local
     - https://www.mandiant.com/resources/telegram-malware-iranian-espionage
     - https://www.infosecmatter.com/crackmapexec-module-library/?cmem=mssql-mimikatz
     - https://www.infosecmatter.com/crackmapexec-module-library/?cmem=smb-pe_inject

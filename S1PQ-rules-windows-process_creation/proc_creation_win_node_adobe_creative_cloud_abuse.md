@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 09-11-2026 05:52:21):
+// Translated content (automatically translated on 10-11-2026 06:57:22):
 event.type="Process Creation" and (endpoint.os="windows" and (tgt.process.image.path contains "\\Adobe Creative Cloud Experience\\libs\\node.exe" and (not tgt.process.cmdline contains "Adobe Creative Cloud Experience\\js")))
 ```
 
@@ -11,7 +11,7 @@ id: df1f26d3-bea7-4700-9ea2-ad3e990cf90e
 status: test
 description: Detects the execution of other scripts using the Node executable packaged with Adobe Creative Cloud
 references:
-    - https://twitter.com/mttaggart/status/1511804863293784064
+    - https://web.archive.org/web/20220406203641/https://twitter.com/mttaggart/status/1511804863293784064
 author: Max Altgelt (Nextron Systems)
 date: 2022-04-06
 tags:

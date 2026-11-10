@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 09-11-2026 05:52:21):
+// Translated content (automatically translated on 10-11-2026 06:57:22):
 event.type="Process Creation" and (endpoint.os="windows" and (tgt.process.cmdline contains "UWhRCA" and tgt.process.cmdline contains "BAAAA"))
 ```
 
@@ -21,7 +21,7 @@ description: |
     If you see this pattern in the command line, it is likely an attempt to add spoofed Service Principal Names (SPNs) to DNS records,
     or checking for the presence of such records through the `nslookup` command.
 references:
-    - https://www.synacktiv.com/publications/ntlm-reflection-is-dead-long-live-ntlm-reflection-an-in-depth-analysis-of-cve-2025
+    - https://www.synacktiv.com/en/publications/ntlm-reflection-is-dead-long-live-ntlm-reflection-an-in-depth-analysis-of-cve-2025
     - https://googleprojectzero.blogspot.com/2021/10/using-kerberos-for-authentication-relay.html
 author: Swachchhanda Shrawan Poudel (Nextron Systems)
 date: 2025-06-20

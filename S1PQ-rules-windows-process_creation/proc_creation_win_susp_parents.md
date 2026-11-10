@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 09-11-2026 05:52:21):
+// Translated content (automatically translated on 10-11-2026 06:57:22):
 event.type="Process Creation" and (endpoint.os="windows" and ((src.process.image.path contains "\\minesweeper.exe" or src.process.image.path contains "\\winver.exe" or src.process.image.path contains "\\bitsadmin.exe") or ((src.process.image.path contains "\\csrss.exe" or src.process.image.path contains "\\certutil.exe" or src.process.image.path contains "\\eventvwr.exe" or src.process.image.path contains "\\calc.exe" or src.process.image.path contains "\\notepad.exe") and (not ((tgt.process.image.path contains "\\WerFault.exe" or tgt.process.image.path contains "\\wermgr.exe" or tgt.process.image.path contains "\\conhost.exe" or tgt.process.image.path contains "\\mmc.exe" or tgt.process.image.path contains "\\win32calc.exe" or tgt.process.image.path contains "\\notepad.exe") or not (tgt.process.image.path matches "\.*"))))))
 ```
 
@@ -11,7 +11,7 @@ id: cbec226f-63d9-4eca-9f52-dfb6652f24df
 status: test
 description: Detects suspicious parent processes that should not have any children or should only have a single possible child program
 references:
-    - https://twitter.com/x86matthew/status/1505476263464607744?s=12
+    - https://web.archive.org/web/20220731153253/https://twitter.com/x86matthew/status/1505476263464607744
     - https://svch0st.medium.com/stats-from-hunting-cobalt-strike-beacons-c17e56255f9b
 author: Florian Roth (Nextron Systems)
 date: 2022-03-21

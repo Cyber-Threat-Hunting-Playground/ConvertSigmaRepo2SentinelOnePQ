@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 09-11-2026 05:52:21):
+// Translated content (automatically translated on 10-11-2026 06:57:22):
 event.type="Process Creation" and (endpoint.os="windows" and ((src.process.image.path contains "\\powershell.exe" or src.process.image.path contains "\\pwsh.exe") and tgt.process.image.path contains "\\schtasks.exe" and (tgt.process.cmdline contains "/Create" and tgt.process.cmdline contains "powershell.exe -NonI" and tgt.process.cmdline contains "/TN Updater /TR") and (tgt.process.cmdline contains "/SC ONLOGON" or tgt.process.cmdline contains "/SC DAILY /ST" or tgt.process.cmdline contains "/SC ONIDLE" or tgt.process.cmdline contains "/SC HOURLY")))
 ```
 
@@ -11,7 +11,7 @@ id: 56c217c3-2de2-479b-990f-5c109ba8458f
 status: test
 description: Detects the creation of a schtask via PowerSploit or Empire Default Configuration.
 references:
-    - https://github.com/0xdeadbeefJERKY/PowerSploit/blob/8690399ef70d2cad10213575ac67e8fa90ddf7c3/Persistence/Persistence.psm1
+    - https://github.com/PowerShellMafia/PowerSploit/blob/8690399ef70d2cad10213575ac67e8fa90ddf7c3/Persistence/Persistence.psm1
     - https://github.com/EmpireProject/Empire/blob/08cbd274bef78243d7a8ed6443b8364acd1fc48b/lib/modules/powershell/persistence/userland/schtasks.py
 author: Markus Neis, @Karneades
 date: 2018-03-06

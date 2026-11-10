@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 09-11-2026 05:52:21):
+// Translated content (automatically translated on 10-11-2026 06:57:22):
 event.type="Process Creation" and (endpoint.os="windows" and ((tgt.process.cmdline contains "lsass.dmp" or tgt.process.cmdline contains "lsass.zip" or tgt.process.cmdline contains "lsass.rar" or tgt.process.cmdline contains "Andrew.dmp" or tgt.process.cmdline contains "Coredump.dmp" or tgt.process.cmdline contains "NotLSASS.zip" or tgt.process.cmdline contains "lsass_2" or tgt.process.cmdline contains "lsassdump" or tgt.process.cmdline contains "lsassdmp") or (tgt.process.cmdline contains "lsass" and tgt.process.cmdline contains ".dmp") or (tgt.process.cmdline contains "SQLDmpr" and tgt.process.cmdline contains ".mdmp") or (tgt.process.cmdline contains "nanodump" and tgt.process.cmdline contains ".dmp")))
 ```
 
@@ -18,7 +18,7 @@ references:
     - https://github.com/Hackndo/lsassy
     - https://medium.com/@markmotig/some-ways-to-dump-lsass-exe-c4a75fdc49bf
     - https://github.com/elastic/detection-rules/blob/c76a39796972ecde44cb1da6df47f1b6562c9770/rules/windows/credential_access_lsass_memdump_file_created.toml
-    - https://www.whiteoaksecurity.com/blog/attacks-defenses-dumping-lsass-no-mimikatz/
+    - https://web.archive.org/web/20240825073514/https://www.whiteoaksecurity.com/blog/attacks-defenses-dumping-lsass-no-mimikatz/
     - https://github.com/helpsystems/nanodump
     - https://github.com/CCob/MirrorDump
 author: E.M. Anhaus, Tony Lambert, oscd.community, Nasreddine Bencherchali (Nextron Systems)

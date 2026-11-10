@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 09-11-2026 05:52:21):
+// Translated content (automatically translated on 10-11-2026 06:57:22):
 event.type="Process Creation" and (endpoint.os="windows" and ((tgt.process.cmdline contains "echo " or tgt.process.cmdline contains "copy " or tgt.process.cmdline contains "type " or tgt.process.cmdline contains "file createnew") and (tgt.process.cmdline contains " C:\\Windows\\System32\\Tasks\\" or tgt.process.cmdline contains " C:\\Windows\\SysWow64\\Tasks\\")))
 ```
 
@@ -14,7 +14,7 @@ description: |
     Adversaries can take advantage of this and load or influence any script hosts or ANY .NET Application
     in Tasks to load and execute a custom assembly into cscript, wscript, regsvr32, mshta, eventvwr
 references:
-    - https://twitter.com/subTee/status/1216465628946563073
+    - https://web.archive.org/web/20200116124158/https://twitter.com/subTee/status/1216465628946563073
     - https://gist.github.com/am0nsec/8378da08f848424e4ab0cc5b317fdd26
 author: Sreeman
 date: 2020-01-13

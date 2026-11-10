@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 09-11-2026 05:52:21):
+// Translated content (automatically translated on 10-11-2026 06:57:22):
 event.type="Process Creation" and (endpoint.os="windows" and (tgt.process.cmdline contains "Offline_Winpwn" or tgt.process.cmdline contains "WinPwn " or tgt.process.cmdline contains "WinPwn.exe" or tgt.process.cmdline contains "WinPwn.ps1"))
 ```
 
@@ -19,7 +19,7 @@ date: 2023-12-04
 references:
     - https://github.com/S3cur3Th1sSh1t/WinPwn
     - https://www.publicnow.com/view/EB87DB49C654D9B63995FAD4C9DE3D3CC4F6C3ED?1671634841
-    - https://reconshell.com/winpwn-tool-for-internal-windows-pentesting-and-ad-security/
+    - https://web.archive.org/web/20250117201210/https://reconshell.com/winpwn-tool-for-internal-windows-pentesting-and-ad-security/
     - https://github.com/redcanaryco/atomic-red-team/blob/4d6c4e8e23d465af7a2388620cfe3f8c76e16cf0/atomics/T1082/T1082.md
     - https://grep.app/search?q=winpwn&filter[repo][0]=redcanaryco/atomic-red-team
 tags:

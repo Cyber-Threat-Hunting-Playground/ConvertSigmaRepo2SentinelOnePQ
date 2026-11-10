@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 09-11-2026 05:52:21):
+// Translated content (automatically translated on 10-11-2026 06:57:22):
 event.type="Process Creation" and (endpoint.os="windows" and ((tgt.process.image.path contains "\\dllhost.exe" and (tgt.process.cmdline in ("dllhost.exe","dllhost"))) and (not not (tgt.process.cmdline matches "\.*"))))
 ```
 
@@ -13,7 +13,7 @@ description: Detects a "dllhost" process spawning with no commandline arguments 
 references:
     - https://redcanary.com/blog/child-processes/
     - https://nasbench.medium.com/what-is-the-dllhost-exe-process-actually-running-ef9fe4c19c08
-    - https://www.ncsc.gov.uk/static-assets/documents/malware-analysis-reports/goofy-guineapig/NCSC-MAR-Goofy-Guineapig.pdf
+    - https://www.ncsc.gov.uk/files/NCSC-MAR-Goofy-Guineapig.pdf
 author: Nasreddine Bencherchali (Nextron Systems)
 date: 2022-06-27
 modified: 2023-05-15

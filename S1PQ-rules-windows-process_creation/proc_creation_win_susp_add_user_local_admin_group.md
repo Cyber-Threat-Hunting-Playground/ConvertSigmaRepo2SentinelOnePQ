@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 09-11-2026 05:52:21):
+// Translated content (automatically translated on 10-11-2026 06:57:22):
 event.type="Process Creation" and (endpoint.os="windows" and (((tgt.process.cmdline contains "localgroup " and tgt.process.cmdline contains " /add") or (tgt.process.cmdline contains "Add-LocalGroupMember " and tgt.process.cmdline contains " -Group ")) and (tgt.process.cmdline contains " administrators " or tgt.process.cmdline contains " administrateur")))
 ```
 
@@ -16,7 +16,7 @@ related:
 status: test
 description: Detects addition of users to the local administrator group via "Net" or "Add-LocalGroupMember".
 references:
-    - https://blog.talosintelligence.com/2022/08/recent-cyber-attack.html?m=1
+    - https://blog.talosintelligence.com/recent-cyber-attack/
 author: Florian Roth (Nextron Systems), Nasreddine Bencherchali (Nextron Systems)
 date: 2022-08-12
 modified: 2023-03-02

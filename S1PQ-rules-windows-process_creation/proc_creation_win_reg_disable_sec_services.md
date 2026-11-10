@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 09-11-2026 05:52:21):
+// Translated content (automatically translated on 10-11-2026 06:57:22):
 event.type="Process Creation" and (endpoint.os="windows" and ((tgt.process.cmdline contains "reg" and tgt.process.cmdline contains "add") and ((tgt.process.cmdline contains "d 4" and tgt.process.cmdline contains "v Start") and (tgt.process.cmdline contains "\\AppIDSvc" or tgt.process.cmdline contains "\\MsMpSvc" or tgt.process.cmdline contains "\\NisSrv" or tgt.process.cmdline contains "\\SecurityHealthService" or tgt.process.cmdline contains "\\Sense" or tgt.process.cmdline contains "\\UsoSvc" or tgt.process.cmdline contains "\\WdBoot" or tgt.process.cmdline contains "\\WdFilter" or tgt.process.cmdline contains "\\WdNisDrv" or tgt.process.cmdline contains "\\WdNisSvc" or tgt.process.cmdline contains "\\WinDefend" or tgt.process.cmdline contains "\\wscsvc" or tgt.process.cmdline contains "\\wuauserv"))))
 ```
 
@@ -14,7 +14,7 @@ references:
     - https://twitter.com/JohnLaTwC/status/1415295021041979392
     - https://github.com/gordonbay/Windows-On-Reins/blob/e587ac7a0407847865926d575e3c46f68cf7c68d/wor.ps1
     - https://vms.drweb.fr/virus/?i=24144899
-    - https://bidouillesecurity.com/disable-windows-defender-in-powershell/
+    - https://web.archive.org/web/20221222070510/https://bidouillesecurity.com/disable-windows-defender-in-powershell/
 author: Florian Roth (Nextron Systems), John Lambert (idea), elhoim
 date: 2021-07-14
 modified: 2023-06-05

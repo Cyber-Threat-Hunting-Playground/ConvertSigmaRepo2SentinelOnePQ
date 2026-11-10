@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 09-11-2026 05:52:21):
+// Translated content (automatically translated on 10-11-2026 06:57:22):
 event.type="Process Creation" and (endpoint.os="windows" and ((tgt.process.image.path contains "\\GfxDownloadWrapper.exe" and (tgt.process.cmdline contains "http://" or tgt.process.cmdline contains "https://")) and (not tgt.process.cmdline contains "https://gameplayapi.intel.com/")))
 ```
 
@@ -11,7 +11,7 @@ id: eee00933-a761-4cd0-be70-c42fe91731e7
 status: test
 description: Detects execution of GfxDownloadWrapper.exe with a URL as an argument to download file.
 references:
-    - https://lolbas-project.github.io/lolbas/HonorableMentions/GfxDownloadWrapper/
+    - https://github.com/LOLBAS-Project/LOLBAS/blob/2056cb7662509dc998fc6ce79636aec4e6c0397f/yml/HonorableMentions/GfxDownloadWrapper.yml
 author: Victor Sergeev, oscd.community
 date: 2020-10-09
 modified: 2023-10-18

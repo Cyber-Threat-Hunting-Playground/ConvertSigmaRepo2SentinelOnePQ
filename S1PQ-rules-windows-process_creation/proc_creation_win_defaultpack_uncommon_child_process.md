@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 09-11-2026 05:52:21):
+// Translated content (automatically translated on 10-11-2026 06:57:22):
 event.type="Process Creation" and (endpoint.os="windows" and src.process.image.path contains "\\DefaultPack.exe")
 ```
 
@@ -12,7 +12,7 @@ status: test
 description: Detects uncommon child processes of "DefaultPack.EXE" binary as a proxy to launch other programs
 references:
     - https://lolbas-project.github.io/lolbas/OtherMSBinaries/DefaultPack/
-    - https://www.echotrail.io/insights/search/defaultpack.exe
+    - https://web.archive.org/web/20231017001226/https://www.echotrail.io/insights/search/defaultpack.exe
 author: frack113
 date: 2022-12-31
 modified: 2024-04-22

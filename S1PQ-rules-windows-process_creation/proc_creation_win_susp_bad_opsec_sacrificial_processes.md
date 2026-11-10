@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 09-11-2026 05:52:21):
+// Translated content (automatically translated on 10-11-2026 06:57:22):
 event.type="Process Creation" and (endpoint.os="windows" and (((tgt.process.image.path contains "\\WerFault.exe" and tgt.process.cmdline contains "WerFault.exe") or (tgt.process.image.path contains "\\rundll32.exe" and tgt.process.cmdline contains "rundll32.exe") or (tgt.process.image.path contains "\\regsvcs.exe" and tgt.process.cmdline contains "regsvcs.exe") or (tgt.process.image.path contains "\\regasm.exe" and tgt.process.cmdline contains "regasm.exe") or (tgt.process.image.path contains "\\regsvr32.exe" and tgt.process.cmdline contains "regsvr32.exe")) and (not ((src.process.image.path contains "\\AppData\\Local\\Microsoft\\EdgeUpdate\\Install\\{" and tgt.process.image.path contains "\\rundll32.exe" and tgt.process.cmdline contains "rundll32.exe") or ((src.process.image.path contains "\\AppData\\Local\\BraveSoftware\\Brave-Browser\\Application\\" or src.process.image.path contains "\\AppData\\Local\\Google\\Chrome\\Application\\") and src.process.image.path contains "\\Installer\\setup.exe" and src.process.cmdline contains "--uninstall " and tgt.process.image.path contains "\\rundll32.exe" and tgt.process.cmdline contains "rundll32.exe")))))
 ```
 
@@ -17,7 +17,7 @@ description: |
     E.g. spawning a sacrificial process to inject a capability into the process without taking into account how the process is normally run.
     One trivial example of this is using rundll32.exe without arguments as a sacrificial process (default in CS, now highlighted by c2lint), running WerFault without arguments (Kraken - credit am0nsec), and other examples.
 references:
-    - https://blog.malwarebytes.com/malwarebytes-news/2020/10/kraken-attack-abuses-wer-service/
+    - https://www.threatdown.com/blog/kraken-attack-abuses-wer-service/
     - https://www.cobaltstrike.com/help-opsec
     - https://twitter.com/CyberRaiju/status/1251492025678983169
     - https://learn.microsoft.com/en-us/windows-server/administration/windows-commands/regsvr32

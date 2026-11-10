@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 09-11-2026 05:52:21):
+// Translated content (automatically translated on 10-11-2026 06:57:22):
 event.type="Process Creation" and (endpoint.os="windows" and ((tgt.process.image.path contains "\\format.com" and tgt.process.cmdline contains "/fs:") and (not (tgt.process.cmdline contains "/fs:exFAT" or tgt.process.cmdline contains "/fs:FAT" or tgt.process.cmdline contains "/fs:NTFS" or tgt.process.cmdline contains "/fs:ReFS" or tgt.process.cmdline contains "/fs:UDF"))))
 ```
 
@@ -13,7 +13,7 @@ description: |
     Detects the execution of format.com with an uncommon filesystem selection that could indicate a defense evasion activity in which "format.com" is used to load malicious DLL files or other programs.
 references:
     - https://twitter.com/0gtweet/status/1477925112561209344
-    - https://twitter.com/wdormann/status/1478011052130459653?s=20
+    - https://web.archive.org/web/20220103143620/https://twitter.com/wdormann/status/1478011052130459653
 author: Florian Roth (Nextron Systems)
 date: 2022-01-04
 modified: 2024-05-13

@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 09-11-2026 05:52:21):
+// Translated content (automatically translated on 10-11-2026 06:57:22):
 event.type="Process Creation" and (endpoint.os="windows" and (tgt.process.cmdline contains " --remote-debugging-" or (tgt.process.image.path contains "\\firefox.exe" and tgt.process.cmdline contains " -start-debugger-server")))
 ```
 
@@ -14,7 +14,7 @@ related:
 status: test
 description: Detects browsers starting with the remote debugging flags. Which is a technique often used to perform browser injection attacks
 references:
-    - https://yoroi.company/wp-content/uploads/2022/05/EternityGroup_report_compressed.pdf
+    - https://web.archive.org/web/20230420012250/https://yoroi.company/wp-content/uploads/2022/05/EternityGroup_report_compressed.pdf
     - https://www.mdsec.co.uk/2022/10/analysing-lastpass-part-1/
     - https://github.com/defaultnamehere/cookie_crimes/
     - https://github.com/wunderwuzzi23/firefox-cookiemonster

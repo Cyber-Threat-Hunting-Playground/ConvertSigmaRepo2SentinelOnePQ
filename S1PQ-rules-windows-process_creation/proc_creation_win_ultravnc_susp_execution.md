@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 09-11-2026 05:52:21):
+// Translated content (automatically translated on 10-11-2026 06:57:22):
 event.type="Process Creation" and (endpoint.os="windows" and (tgt.process.cmdline contains "-autoreconnect " and tgt.process.cmdline contains "-connect " and tgt.process.cmdline contains "-id:"))
 ```
 
@@ -14,7 +14,7 @@ references:
     - https://web.archive.org/web/20220224045756/https://www.ria.ee/sites/default/files/content-editors/kuberturve/tale_of_gamaredon_infection.pdf
     - https://symantec-enterprise-blogs.security.com/blogs/threat-intelligence/shuckworm-gamaredon-espionage-ukraine
     - https://unit42.paloaltonetworks.com/unit-42-title-gamaredon-group-toolset-evolution
-    - https://uvnc.com/docs/uvnc-viewer/52-ultravnc-viewer-commandline-parameters.html
+    - https://web.archive.org/web/20240528223522/https://uvnc.com/docs/uvnc-viewer/52-ultravnc-viewer-commandline-parameters.html
 author: Bhabesh Raj
 date: 2022-03-04
 modified: 2022-03-09

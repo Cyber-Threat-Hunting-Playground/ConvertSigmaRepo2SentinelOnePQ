@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 09-11-2026 05:52:21):
+// Translated content (automatically translated on 10-11-2026 06:57:22):
 event.type="Process Creation" and (endpoint.os="windows" and (tgt.process.image.path contains "\\cmd.exe" and (src.process.image.path contains "\\csrss.exe" or src.process.image.path contains "\\ctfmon.exe" or src.process.image.path contains "\\dllhost.exe" or src.process.image.path contains "\\epad.exe" or src.process.image.path contains "\\FlashPlayerUpdateService.exe" or src.process.image.path contains "\\GoogleUpdate.exe" or src.process.image.path contains "\\jucheck.exe" or src.process.image.path contains "\\jusched.exe" or src.process.image.path contains "\\LogonUI.exe" or src.process.image.path contains "\\lsass.exe" or src.process.image.path contains "\\regsvr32.exe" or src.process.image.path contains "\\SearchIndexer.exe" or src.process.image.path contains "\\SearchProtocolHost.exe" or src.process.image.path contains "\\SIHClient.exe" or src.process.image.path contains "\\sihost.exe" or src.process.image.path contains "\\slui.exe" or src.process.image.path contains "\\spoolsv.exe" or src.process.image.path contains "\\sppsvc.exe" or src.process.image.path contains "\\taskhostw.exe" or src.process.image.path contains "\\unsecapp.exe" or src.process.image.path contains "\\WerFault.exe" or src.process.image.path contains "\\wermgr.exe" or src.process.image.path contains "\\wlanext.exe" or src.process.image.path contains "\\WUDFHost.exe")))
 ```
 
@@ -11,7 +11,7 @@ id: 4b991083-3d0e-44ce-8fc4-b254025d8d4b
 status: test
 description: Detects suspicious parent process for cmd.exe
 references:
-    - https://www.elastic.co/guide/en/security/current/unusual-parent-process-for-cmd.exe.html
+    - https://github.com/elastic/detection-rules/blob/0aacc5e19292f764a002ea2093b2a076db35b589/rules/windows/execution_command_shell_started_by_unusual_process.toml
 author: Tim Rauch, Elastic (idea)
 date: 2022-09-21
 modified: 2023-12-05

@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 09-11-2026 05:52:21):
+// Translated content (automatically translated on 10-11-2026 06:57:22):
 event.type="Process Creation" and (endpoint.os="windows" and (tgt.process.displayName="Tor Browser" or tgt.process.displayName="Tor Browser" or (tgt.process.image.path contains "\\tor.exe" or tgt.process.image.path contains "\\Tor Browser\\Browser\\firefox.exe")))
 ```
 
@@ -11,7 +11,7 @@ id: 62f7c9bf-9135-49b2-8aeb-1e54a6ecc13c
 status: test
 description: Detects the use of Tor or Tor-Browser to connect to onion routing networks
 references:
-    - https://www.logpoint.com/en/blog/detecting-tor-use-with-logpoint/
+    - https://web.archive.org/web/20260310035047/https://www.logpoint.com/en/blog/detecting-tor-use-with-logpoint/
 author: frack113
 date: 2022-02-20
 modified: 2025-10-27

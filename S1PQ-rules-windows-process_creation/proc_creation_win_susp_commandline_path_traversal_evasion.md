@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 09-11-2026 05:52:21):
+// Translated content (automatically translated on 10-11-2026 06:57:22):
 event.type="Process Creation" and (endpoint.os="windows" and (((tgt.process.image.path contains "\\Windows\\" and (tgt.process.cmdline contains "\\..\\Windows\\" or tgt.process.cmdline contains "\\..\\System32\\" or tgt.process.cmdline contains "\\..\\..\\")) or tgt.process.cmdline contains ".exe\\..\\") and (not (tgt.process.cmdline contains "\\Google\\Drive\\googledrivesync.exe\\..\\" or tgt.process.cmdline contains "\\Citrix\\Virtual Smart Card\\Citrix.Authentication.VirtualSmartcard.Launcher.exe\\..\\"))))
 ```
 
@@ -11,7 +11,7 @@ id: 1327381e-6ab0-4f38-b583-4c1b8346a56b
 status: test
 description: Detects potential evasion or obfuscation attempts using bogus path traversal via the commandline
 references:
-    - https://twitter.com/hexacorn/status/1448037865435320323
+    - https://web.archive.org/web/20211012220242/https://twitter.com/Hexacorn/status/1448037865435320323
     - https://twitter.com/Gal_B1t/status/1062971006078345217
 author: Christian Burkard (Nextron Systems)
 date: 2021-10-26

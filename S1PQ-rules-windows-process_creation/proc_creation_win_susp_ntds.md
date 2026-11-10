@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 09-11-2026 05:52:21):
+// Translated content (automatically translated on 10-11-2026 06:57:22):
 event.type="Process Creation" and (endpoint.os="windows" and ((((tgt.process.image.path contains "\\NTDSDump.exe" or tgt.process.image.path contains "\\NTDSDumpEx.exe") or (tgt.process.cmdline contains "ntds.dit" and tgt.process.cmdline contains "system.hiv") or tgt.process.cmdline contains "NTDSgrab.ps1") or (tgt.process.cmdline contains "ac i ntds" and tgt.process.cmdline contains "create full") or (tgt.process.cmdline contains "/c copy " and tgt.process.cmdline contains "\\windows\\ntds\\ntds.dit") or (tgt.process.cmdline contains "activate instance ntds" and tgt.process.cmdline contains "create full") or (tgt.process.cmdline contains "powershell" and tgt.process.cmdline contains "ntds.dit")) or (tgt.process.cmdline contains "ntds.dit" and ((src.process.image.path contains "\\apache" or src.process.image.path contains "\\tomcat" or src.process.image.path contains "\\AppData\\" or src.process.image.path contains "\\Temp\\" or src.process.image.path contains "\\Public\\" or src.process.image.path contains "\\PerfLogs\\") or (tgt.process.image.path contains "\\apache" or tgt.process.image.path contains "\\tomcat" or tgt.process.image.path contains "\\AppData\\" or tgt.process.image.path contains "\\Temp\\" or tgt.process.image.path contains "\\Public\\" or tgt.process.image.path contains "\\PerfLogs\\")))))
 ```
 
@@ -17,7 +17,7 @@ references:
     - https://github.com/samratashok/nishang/blob/414ee1104526d7057f9adaeee196d91ae447283e/Gather/Copy-VSS.ps1
     - https://github.com/zcgonvh/NTDSDumpEx
     - https://github.com/rapid7/metasploit-framework/blob/d297adcebb5c1df6fe30b12ca79b161deb71571c/data/post/powershell/NTDSgrab.ps1
-    - https://blog.talosintelligence.com/2022/08/recent-cyber-attack.html?m=1
+    - https://blog.talosintelligence.com/recent-cyber-attack/
 author: Florian Roth (Nextron Systems)
 date: 2022-03-11
 modified: 2022-11-10

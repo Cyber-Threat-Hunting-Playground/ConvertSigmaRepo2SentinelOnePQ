@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 09-11-2026 05:52:21):
+// Translated content (automatically translated on 10-11-2026 06:57:22):
 event.type="Process Creation" and (endpoint.os="windows" and (tgt.process.image.path="C:\\WINDOWS\\system32\\wbem\\scrcons.exe" and src.process.image.path="C:\\Windows\\System32\\svchost.exe"))
 ```
 
@@ -18,7 +18,7 @@ description: |
     by executing a malicious script whenever a specific event occurs.
 references:
     - https://redcanary.com/blog/threat-detection/child-processes/
-    - https://www.eideon.com/2018-03-02-THL03-WMIBackdoors/
+    - https://web.archive.org/web/20250427230247/https://www.eideon.com/2018-03-02-THL03-WMIBackdoors/
 author: Thomas Patzke
 date: 2018-03-07
 modified: 2022-10-11
