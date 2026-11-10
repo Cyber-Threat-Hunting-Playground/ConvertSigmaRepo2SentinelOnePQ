@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 09-11-2026 04:31:34):
+// Translated content (automatically translated on 10-11-2026 05:51:22):
 event.type="Process Creation" and (endpoint.os="osx" and ((tgt.process.image.path contains "/sysctl" or tgt.process.cmdline contains "sysctl") and (tgt.process.cmdline contains "hw." or tgt.process.cmdline contains "kern." or tgt.process.cmdline contains "machdep.")))
 ```
 
@@ -14,7 +14,7 @@ description: |
     This process is primarily used to detect and avoid virtualization and analysis environments.
 references:
     - https://www.loobins.io/binaries/sysctl/#
-    - https://evasions.checkpoint.com/techniques/macos.html
+    - https://web.archive.org/web/20240309235614/https://evasions.checkpoint.com/techniques/macos.html
     - https://www.welivesecurity.com/2019/04/09/oceanlotus-macos-malware-update/
     - https://www.sentinelone.com/labs/20-common-tools-techniques-used-by-macos-threat-actors-malware/
     - https://objective-see.org/blog/blog_0x1E.html
