@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 09-11-2026 03:32:55):
+// Translated content (automatically translated on 10-11-2026 05:05:21):
 event.category="file" and (endpoint.os="windows" and (tgt.file.path contains "C:\\Program Files\\OblianceAgent\\obliance-agent.exe" or tgt.file.path contains "C:\\Program Files\\OblianceAgent\\obliance-tray.exe" or tgt.file.path contains "C:\\Program Files\\OblianceAgent\\obliance-watchdog.exe" or tgt.file.path contains "C:\\ProgramData\\OblianceAgent\\config.json" or tgt.file.path contains "C:\\ProgramData\\OblianceAgent\\agent.log" or tgt.file.path contains "C:\\ProgramData\\OblianceAgent\\watchdog.json"))
 ```
 

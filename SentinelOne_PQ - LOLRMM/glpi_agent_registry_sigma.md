@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 09-11-2026 03:32:55):
+// Translated content (automatically translated on 10-11-2026 05:05:21):
 event.category="registry" and (endpoint.os="windows" and (registry.keyPath contains "HKLM\\SOFTWARE\\GLPI-Agent" or registry.keyPath contains "HKLM\\SOFTWARE\\WOW6432Node\\GLPI-Agent" or registry.keyPath contains "HKLM\\SOFTWARE\\GLPI-Agent\\Installer" or registry.keyPath contains "HKLM\\SOFTWARE\\GLPI-Agent\\Installer\\Version" or registry.keyPath contains "HKLM\\SOFTWARE\\WOW6432Node\\GLPI-Agent\\Installer\\Version" or registry.keyPath contains "HKLM\\SOFTWARE\\GLPI-Agent\\Monitor" or registry.keyPath contains "HKLM\\SOFTWARE\\GLPI-Agent\\server" or registry.keyPath contains "HKLM\\SOFTWARE\\GLPI-Agent\\httpd-port" or registry.keyPath contains "HKLM\\SOFTWARE\\GLPI-Agent\\httpd-ip" or registry.keyPath contains "HKLM\\SOFTWARE\\GLPI-Agent\\httpd-trust" or registry.keyPath contains "HKLM\\SOFTWARE\\GLPI-Agent\\tag" or registry.keyPath contains "HKLM\\SOFTWARE\\GLPI-Agent\\tasks"))
 ```
 

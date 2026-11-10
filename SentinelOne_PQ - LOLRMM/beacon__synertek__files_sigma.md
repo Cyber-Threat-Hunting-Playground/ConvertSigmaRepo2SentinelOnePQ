@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 09-11-2026 03:32:55):
+// Translated content (automatically translated on 10-11-2026 05:05:21):
 event.category="file" and (endpoint.os="windows" and (tgt.file.path contains "C:\\Program Files\\Beacon\\beacon-agent.exe" or tgt.file.path contains "C:\\ProgramData\\Beacon\\credential.json" or tgt.file.path contains "C:\\ProgramData\\Beacon\\agent.log"))
 ```
 

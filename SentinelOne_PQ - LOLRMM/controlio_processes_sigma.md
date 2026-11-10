@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 09-11-2026 03:32:55):
+// Translated content (automatically translated on 10-11-2026 05:05:21):
 event.type="Process Creation" and (endpoint.os="windows" and ((src.process.image.path contains "\\weCliboardListener.exe" or src.process.image.path contains "\\bbl.exe" or src.process.image.path contains "\\weprtct.exe" or src.process.image.path contains "\\wemonc.exe" or src.process.image.path contains "\\wesvc.exe" or src.process.image.path="*\\wec_launcher_[a-Z0-9]*_.exe" or src.process.image.path contains "\\weInstSvc.exe") or (tgt.process.image.path contains "\\weCliboardListener.exe" or tgt.process.image.path contains "\\bbl.exe" or tgt.process.image.path contains "\\weprtct.exe" or tgt.process.image.path contains "\\wemonc.exe" or tgt.process.image.path contains "\\wesvc.exe" or tgt.process.image.path="*\\wec_launcher_[a-Z0-9]*_.exe" or tgt.process.image.path contains "\\weInstSvc.exe")))
 ```
 

@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 09-11-2026 03:32:55):
+// Translated content (automatically translated on 10-11-2026 05:05:21):
 event.category="registry" and (endpoint.os="windows" and (registry.keyPath contains "HKCU\\Software\\Microsoft\\Terminal Server Client\\Default" or registry.keyPath contains "HKCU\\Software\\Microsoft\\Terminal Server Client\\Servers"))
 ```
 

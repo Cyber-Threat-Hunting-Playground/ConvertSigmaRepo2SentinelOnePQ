@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 09-11-2026 03:32:55):
+// Translated content (automatically translated on 10-11-2026 05:05:21):
 (event.category in ("dns","url","ip")) and (endpoint.os="windows" and ((url.address contains ".screenmeet.com" or url.address contains ".screenmeet.com." or url.address contains ".scrn.mt" or url.address contains ".scrn.mt.") or (event.dns.request contains ".screenmeet.com" or event.dns.request contains ".screenmeet.com." or event.dns.request contains ".scrn.mt" or event.dns.request contains ".scrn.mt.")))
 ```
 
