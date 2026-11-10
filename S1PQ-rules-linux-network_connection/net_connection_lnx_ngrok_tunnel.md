@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 09-11-2026 04:42:10):
+// Translated content (automatically translated on 10-11-2026 05:57:39):
 (event.category in ("dns","url","ip")) and (endpoint.os="linux" and ((url.address contains "tunnel.us.ngrok.com" or url.address contains "tunnel.eu.ngrok.com" or url.address contains "tunnel.ap.ngrok.com" or url.address contains "tunnel.au.ngrok.com" or url.address contains "tunnel.sa.ngrok.com" or url.address contains "tunnel.jp.ngrok.com" or url.address contains "tunnel.in.ngrok.com") or (event.dns.request contains "tunnel.us.ngrok.com" or event.dns.request contains "tunnel.eu.ngrok.com" or event.dns.request contains "tunnel.ap.ngrok.com" or event.dns.request contains "tunnel.au.ngrok.com" or event.dns.request contains "tunnel.sa.ngrok.com" or event.dns.request contains "tunnel.jp.ngrok.com" or event.dns.request contains "tunnel.in.ngrok.com")))
 ```
 
@@ -12,7 +12,7 @@ status: test
 description: Detects an executable accessing an ngrok tunneling endpoint, which could be a sign of forbidden exfiltration of data exfiltration by malicious actors
 references:
     - https://twitter.com/hakluke/status/1587733971814977537/photo/1
-    - https://ngrok.com/docs/secure-tunnels/tunnels/ssh-reverse-tunnel-agent
+    - https://ngrok.com/docs/gateway/agent/ssh-reverse-tunnel-agent
 author: Florian Roth (Nextron Systems)
 date: 2022-11-03
 tags:
