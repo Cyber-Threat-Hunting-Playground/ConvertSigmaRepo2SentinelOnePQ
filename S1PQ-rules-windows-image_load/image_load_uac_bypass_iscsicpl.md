@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 09-11-2026 04:30:05):
+// Translated content (automatically translated on 10-11-2026 05:50:39):
 event.type="Module Load" and (endpoint.os="windows" and ((src.process.image.path="C:\\Windows\\SysWOW64\\iscsicpl.exe" and module.path contains "\\iscsiexe.dll") and (not (module.path contains "C:\\Windows\\" and module.path contains "iscsiexe.dll"))))
 ```
 
@@ -12,7 +12,7 @@ status: test
 description: Detects the "iscsicpl.exe" UAC bypass technique that leverages a DLL Search Order hijacking technique to load a custom DLL's from temp or a any user controlled location in the users %PATH%
 references:
     - https://github.com/hackerhouse-opensource/iscsicpl_bypassUAC
-    - https://twitter.com/wdormann/status/1547583317410607110
+    - https://web.archive.org/web/20220715014753/https://twitter.com/wdormann/status/1547583317410607110
 author: Nasreddine Bencherchali (Nextron Systems)
 date: 2022-07-17
 modified: 2022-07-25

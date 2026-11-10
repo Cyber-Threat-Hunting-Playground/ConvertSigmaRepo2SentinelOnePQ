@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 09-11-2026 04:30:05):
+// Translated content (automatically translated on 10-11-2026 05:50:39):
 event.type="Module Load" and (endpoint.os="windows" and (module.path contains "\\goopdate.dll" and (not (module.path contains "C:\\Program Files (x86)\\" or module.path contains "C:\\Program Files\\")) and (not (((src.process.image.path contains "\\AppData\\Local\\Temp\\GUM" and src.process.image.path contains ".tmp\\Dropbox") and (module.path contains "\\AppData\\Local\\Temp\\GUM" and module.path contains ".tmp\\goopdate.dll")) or ((src.process.image.path contains "\\AppData\\Local\\Temp\\GUM" or src.process.image.path contains ":\\Windows\\SystemTemp\\GUM") and src.process.image.path contains ".tmp\\GoogleUpdate.exe" and (module.path contains "\\AppData\\Local\\Temp\\GUM" or module.path contains ":\\Windows\\SystemTemp\\GUM"))))))
 ```
 
@@ -11,7 +11,7 @@ id: b6188d2f-b3c4-4d2c-a17d-9706e0851af0
 status: test
 description: Detects potential DLL sideloading of "goopdate.dll", a DLL used by googleupdate.exe
 references:
-    - https://www.ncsc.gov.uk/static-assets/documents/malware-analysis-reports/goofy-guineapig/NCSC-MAR-Goofy-Guineapig.pdf
+    - https://www.ncsc.gov.uk/files/NCSC-MAR-Goofy-Guineapig.pdf
 author: X__Junior (Nextron Systems), Nasreddine Bencherchali (Nextron Systems)
 date: 2023-05-15
 modified: 2025-10-07

@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 09-11-2026 04:30:05):
+// Translated content (automatically translated on 10-11-2026 05:50:39):
 event.type="Module Load" and (endpoint.os="windows" and (module.path contains "\\ttdrecord.dll" or module.path contains "\\ttdwriter.dll" or module.path contains "\\ttdloader.dll"))
 ```
 
@@ -12,7 +12,7 @@ status: test
 description: Detects usage of Time Travel Debugging Utility. Adversaries can execute malicious processes and dump processes, such as lsass.exe, via tttracer.exe.
 references:
     - https://lolbas-project.github.io/lolbas/Binaries/Tttracer/
-    - https://twitter.com/mattifestation/status/1196390321783025666
+    - https://web.archive.org/web/20191118131013/https://twitter.com/mattifestation/status/1196390321783025666
     - https://twitter.com/oulusoyum/status/1191329746069655553
 author: 'Ensar Şamil, @sblmsrsn, @oscd_initiative'
 date: 2020-10-06

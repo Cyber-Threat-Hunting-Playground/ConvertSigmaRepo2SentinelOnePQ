@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 09-11-2026 04:30:05):
+// Translated content (automatically translated on 10-11-2026 05:50:39):
 event.type="Module Load" and (endpoint.os="windows" and (src.process.image.path="C:\\Windows\\System32\\wbem\\WmiPrvSE.exe" and module.path contains "\\wbemcons.dll"))
 ```
 
@@ -11,7 +11,7 @@ id: 05936ce2-ee05-4dae-9d03-9a391cf2d2c6
 status: test
 description: Detects WMI command line event consumers
 references:
-    - https://www.eideon.com/2018-03-02-THL03-WMIBackdoors/
+    - https://web.archive.org/web/20250427230247/https://www.eideon.com/2018-03-02-THL03-WMIBackdoors/
 author: Thomas Patzke
 date: 2018-03-07
 modified: 2021-11-27
