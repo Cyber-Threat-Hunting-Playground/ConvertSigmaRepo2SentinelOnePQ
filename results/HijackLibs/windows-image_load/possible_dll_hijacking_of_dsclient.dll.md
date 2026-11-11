@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 10-11-2026 06:25:33):
+// Translated content (automatically translated on 11-11-2026 05:11:22):
 event.type="Module Load" and (endpoint.os="windows" and (module.path contains "\\dsclient.dll" and (not (module.path contains "c:\\windows\\system32\\" or module.path contains "c:\\windows\\syswow64\\"))))
 ```
 

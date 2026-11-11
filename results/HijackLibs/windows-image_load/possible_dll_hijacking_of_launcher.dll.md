@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 10-11-2026 06:25:33):
+// Translated content (automatically translated on 11-11-2026 05:11:22):
 event.type="Module Load" and (endpoint.os="windows" and (module.path contains "\\launcher.dll" and (not (module.path contains "c:\\program files\\SQL Developer\\ide\\bin\\" or module.path contains "c:\\program files (x86)\\SQL Developer\\ide\\bin\\" or module.path contains "c:\\program files\\sqldeveloper\\ide\\bin\\" or module.path contains "c:\\program files (x86)\\sqldeveloper\\ide\\bin\\"))))
 ```
 
