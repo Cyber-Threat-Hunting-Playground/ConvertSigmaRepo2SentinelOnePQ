@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 10-11-2026 06:11:34):
+// Translated content (automatically translated on 11-11-2026 04:57:38):
 event.type="Process Creation" and (endpoint.os="windows" and src.process.image.path contains "NTRsupportPro_EN.exe")
 ```
 
