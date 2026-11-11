@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 10-11-2026 05:05:21):
+// Translated content (automatically translated on 11-11-2026 03:39:38):
 (event.category in ("dns","url","ip")) and (endpoint.os="windows" and ((url.address contains ".anyviewer.com" or url.address contains ".anyviewer.com." or url.address contains ".aomeisoftware.com" or url.address contains ".aomeisoftware.com.") or (event.dns.request contains ".anyviewer.com" or event.dns.request contains ".anyviewer.com." or event.dns.request contains ".aomeisoftware.com" or event.dns.request contains ".aomeisoftware.com.")))
 ```
 

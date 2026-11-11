@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 10-11-2026 05:05:21):
+// Translated content (automatically translated on 11-11-2026 03:39:38):
 (event.category in ("dns","url","ip")) and (endpoint.os="windows" and ((url.address contains ".nvaccess.org" or url.address contains ".nvaccess.org." or url.address="nvaccess.org" or url.address="nvaccess.org.") or (event.dns.request contains ".nvaccess.org" or event.dns.request contains ".nvaccess.org." or event.dns.request="nvaccess.org" or event.dns.request="nvaccess.org.")))
 ```
 

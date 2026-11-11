@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 10-11-2026 05:05:21):
+// Translated content (automatically translated on 11-11-2026 03:39:38):
 event.category="file" and (endpoint.os="windows" and (tgt.file.path contains "\\AppData\\Roaming\\AnyDesk\\file_transfer_trace.txt" or tgt.file.path contains "\\ProgramData\\AnyDesk\\file_transfer_trace.txt" or tgt.file.path="*\\ProgramData\\AnyDesk\\ad_*\\ad_*_svc.trace" or tgt.file.path="*\\AppData\\Roaming\\AnyDesk\\ad_*\\ad_*.trace" or tgt.file.path="*\\AppData\\Roaming\\AnyDesk\\ad_*\\chat\*.txt" or tgt.file.path="*\\AppData\\Roaming\\AnyDesk\\ad_*\\user.conf" or tgt.file.path="*\\AppData\\Roaming\\AnyDesk\\ad_*\\service.conf" or tgt.file.path="*\\ProgramData\\AnyDesk\\ad_*\\service.conf" or tgt.file.path="*\\ProgramData\\AnyDesk\\ad_*\\system.conf" or tgt.file.path="*\\ProgramData\\Microsoft\\Windows\\Start Menu\\Programs\\StartUp\\AnyDesk *.lnk" or tgt.file.path contains "C:\\Users\*\\Videos\\AnyDesk\*.anydesk" or tgt.file.path contains "C:\\Windows\\SysWOW64\\config\\systemprofile\\AppData\\Roaming\\AnyDesk\*"))
 ```
 
