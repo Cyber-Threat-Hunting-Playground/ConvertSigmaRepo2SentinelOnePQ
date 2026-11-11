@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 10-11-2026 06:56:03):
+// Translated content (automatically translated on 11-11-2026 05:46:03):
 event.category="dns" and (endpoint.os="windows" and (event.dns.request contains ".1u.ms" or event.dns.request contains ".backname.io" or event.dns.request contains ".nip.io" or event.dns.request contains ".sslip.io" or event.dns.request contains ".traefik.me" or event.dns.request contains ".xip.io"))
 ```
 
