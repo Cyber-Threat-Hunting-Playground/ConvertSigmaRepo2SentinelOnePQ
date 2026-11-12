@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 11-11-2026 03:39:38):
+// Translated content (automatically translated on 12-11-2026 04:47:53):
 event.type="Process Creation" and (endpoint.os="windows" and (src.process.image.path contains "\\sentinel-agent.exe" or tgt.process.image.path contains "\\sentinel-agent.exe"))
 ```
 

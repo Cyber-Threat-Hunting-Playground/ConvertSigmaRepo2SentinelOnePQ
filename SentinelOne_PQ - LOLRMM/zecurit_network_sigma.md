@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 11-11-2026 03:39:38):
+// Translated content (automatically translated on 12-11-2026 04:47:53):
 (event.category in ("dns","url","ip")) and (endpoint.os="windows" and ((url.address contains ".app.zecurit.com" or url.address contains ".app.zecurit.com." or url.address="app.zecurit.com" or url.address="app.zecurit.com." or url.address contains ".dms.zecurit.com" or url.address contains ".dms.zecurit.com." or url.address="dms.zecurit.com" or url.address="dms.zecurit.com." or url.address contains ".d1m8kha1zyjal6.cloudfront.net" or url.address contains ".d1m8kha1zyjal6.cloudfront.net." or url.address="d1m8kha1zyjal6.cloudfront.net" or url.address="d1m8kha1zyjal6.cloudfront.net.") or (event.dns.request contains ".app.zecurit.com" or event.dns.request contains ".app.zecurit.com." or event.dns.request="app.zecurit.com" or event.dns.request="app.zecurit.com." or event.dns.request contains ".dms.zecurit.com" or event.dns.request contains ".dms.zecurit.com." or event.dns.request="dms.zecurit.com" or event.dns.request="dms.zecurit.com." or event.dns.request contains ".d1m8kha1zyjal6.cloudfront.net" or event.dns.request contains ".d1m8kha1zyjal6.cloudfront.net." or event.dns.request="d1m8kha1zyjal6.cloudfront.net" or event.dns.request="d1m8kha1zyjal6.cloudfront.net.")))
 ```
 
