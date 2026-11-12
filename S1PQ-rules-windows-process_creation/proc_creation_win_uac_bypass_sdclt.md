@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 11-11-2026 05:48:38):
+// Translated content (automatically translated on 12-11-2026 06:53:59):
 event.type="Process Creation" and (endpoint.os="windows" and (tgt.process.image.path contains "sdclt.exe" and (tgt.process.integrityLevel in ("High","S-1-16-12288"))))
 ```
 
