@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 12-11-2026 06:16:00):
+// Translated content (automatically translated on 13-11-2026 05:37:14):
 event.type="Module Load" and (endpoint.os="windows" and (module.path contains "\\libcrypto-3-x64.dll" and (not (module.path contains "c:\\program files\\VMware\\VMware Workstation\\x64\\" or module.path contains "c:\\program files (x86)\\VMware\\VMware Workstation\\x64\\" or module.path contains "c:\\program files\\VMware\\VMware Workstation\\" or module.path contains "c:\\program files (x86)\\VMware\\VMware Workstation\\"))))
 ```
 
