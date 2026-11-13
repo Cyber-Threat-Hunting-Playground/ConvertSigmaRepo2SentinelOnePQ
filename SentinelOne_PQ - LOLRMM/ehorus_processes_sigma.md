@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 12-11-2026 04:47:53):
+// Translated content (automatically translated on 13-11-2026 03:58:51):
 event.type="Process Creation" and (endpoint.os="windows" and ((src.process.image.path contains "\\ehorus standalone.exe" or src.process.image.path contains "\\ehorus_agent.exe" or src.process.image.path contains "\\ehorus_cmd.exe" or src.process.image.path contains "\\ehorus_launcher.exe" or src.process.image.path contains "\\ehorus_uit.exe") or (tgt.process.image.path contains "\\ehorus standalone.exe" or tgt.process.image.path contains "\\ehorus_agent.exe" or tgt.process.image.path contains "\\ehorus_cmd.exe" or tgt.process.image.path contains "\\ehorus_launcher.exe" or tgt.process.image.path contains "\\ehorus_uit.exe")))
 ```
 
