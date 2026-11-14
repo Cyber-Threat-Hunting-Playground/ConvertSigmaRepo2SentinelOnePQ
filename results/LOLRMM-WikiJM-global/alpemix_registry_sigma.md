@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 13-11-2026 05:24:23):
+// Translated content (automatically translated on 14-11-2026 05:14:10):
 event.category="registry" and (endpoint.os="windows" and registry.keyPath contains "HKLM\\SYSTEM\\CurrentControlSet\\Services\\AlpemixSrvcx")
 ```
 
