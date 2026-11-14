@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 13-11-2026 03:58:51):
+// Translated content (automatically translated on 14-11-2026 03:57:08):
 event.type="Process Creation" and (endpoint.os="windows" and ((src.process.image.path contains "\\jumpclient.exe" or src.process.image.path contains "\\jumpdesktop.exe" or src.process.image.path contains "\\jumpservice.exe" or src.process.image.path contains "\\jumpconnect.exe" or src.process.image.path contains "\\jumpupdater.exe") or (tgt.process.image.path contains "\\jumpclient.exe" or tgt.process.image.path contains "\\jumpdesktop.exe" or tgt.process.image.path contains "\\jumpservice.exe" or tgt.process.image.path contains "\\jumpconnect.exe" or tgt.process.image.path contains "\\jumpupdater.exe")))
 ```
 

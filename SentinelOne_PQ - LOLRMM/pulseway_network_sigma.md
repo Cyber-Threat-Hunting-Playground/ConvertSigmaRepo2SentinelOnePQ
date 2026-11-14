@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 13-11-2026 03:58:51):
+// Translated content (automatically translated on 14-11-2026 03:57:08):
 (event.category in ("dns","url","ip")) and (endpoint.os="windows" and ((url.address contains ".pulseway.com" or url.address contains ".pulseway.com." or url.address="pulseway.com" or url.address="pulseway.com.") or (event.dns.request contains ".pulseway.com" or event.dns.request contains ".pulseway.com." or event.dns.request="pulseway.com" or event.dns.request="pulseway.com.")))
 ```
 

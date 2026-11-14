@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 13-11-2026 03:58:51):
+// Translated content (automatically translated on 14-11-2026 03:57:08):
 event.category="file" and (endpoint.os="windows" and (tgt.file.path contains "C:\\Program Files (x86)\\rdviewer\\rdclient\*" or tgt.file.path contains "\\rdpro\\RdClient.exe" or tgt.file.path contains "\\rdpro\\rdService.exe" or tgt.file.path contains "\\rdpro\\rdlibw.dll" or tgt.file.path contains "\\rdpro\\cfg.ini" or tgt.file.path contains "\\rdpro\\host.dat" or tgt.file.path contains "C:\\ProgramData\\host\\dmservice.exe" or tgt.file.path contains "C:\\ProgramData\\host\\diskmgr.exe" or tgt.file.path contains "C:\\ProgramData\\host\\cfg.ini" or tgt.file.path contains "C:\\ProgramData\\host\\host.dat" or tgt.file.path contains "\\RdViewerPro\\RdServer.exe"))
 ```
 
