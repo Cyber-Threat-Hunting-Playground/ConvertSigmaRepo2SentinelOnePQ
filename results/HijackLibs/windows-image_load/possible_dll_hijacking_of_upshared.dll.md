@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 13-11-2026 05:37:14):
+// Translated content (automatically translated on 14-11-2026 05:27:36):
 event.type="Module Load" and (endpoint.os="windows" and (module.path contains "\\upshared.dll" and (not module.path contains "c:\\windows\\system32\\")))
 ```
 
