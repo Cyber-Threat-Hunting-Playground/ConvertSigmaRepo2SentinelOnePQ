@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 14-11-2026 05:14:10):
+// Translated content (automatically translated on 15-11-2026 05:07:02):
 event.type="Process Creation" and (endpoint.os="windows" and (src.process.image.path contains "PCMonitorManager.exe" or src.process.image.path contains "pcmonitorsrv.exe"))
 ```
 
