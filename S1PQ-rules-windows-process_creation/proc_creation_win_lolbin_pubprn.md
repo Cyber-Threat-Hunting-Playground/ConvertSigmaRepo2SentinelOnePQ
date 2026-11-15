@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 14-11-2026 05:57:47):
+// Translated content (automatically translated on 15-11-2026 05:59:57):
 event.type="Process Creation" and (endpoint.os="windows" and (tgt.process.cmdline contains "\\pubprn.vbs" and tgt.process.cmdline contains "script:"))
 ```
 
