@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 14-11-2026 05:27:36):
+// Translated content (automatically translated on 15-11-2026 05:25:40):
 event.type="Module Load" and (endpoint.os="windows" and (module.path contains "\\dnx.onecore.dll" and (not (module.path contains "c:\\program files\\Microsoft Web Tools\\DNX\\" or module.path contains "c:\\program files (x86)\\Microsoft Web Tools\\DNX\\" or module.path="C:\\Users\\*\\.dnx\\runtimes\\*\\bin\\*"))))
 ```
 
