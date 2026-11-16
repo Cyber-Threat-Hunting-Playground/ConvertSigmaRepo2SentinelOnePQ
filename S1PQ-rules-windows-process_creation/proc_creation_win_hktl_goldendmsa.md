@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 15-11-2026 05:59:57):
+// Translated content (automatically translated on 16-11-2026 05:59:32):
 event.type="Process Creation" and (endpoint.os="windows" and (tgt.process.image.path contains "\\GoldenDMSA.exe" or ((tgt.process.cmdline contains "wordlist" or tgt.process.cmdline contains "bruteforce") and (tgt.process.cmdline contains " -s " and tgt.process.cmdline contains "S-1-5-21-" and tgt.process.cmdline contains " -d " and tgt.process.cmdline contains " -k "))))
 ```
 

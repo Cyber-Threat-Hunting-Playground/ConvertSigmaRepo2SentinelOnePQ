@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 15-11-2026 05:59:57):
+// Translated content (automatically translated on 16-11-2026 05:59:32):
 event.type="Process Creation" and (endpoint.os="windows" and (src.process.image.path contains "\\xbootmgrsleep.exe" and (not tgt.process.image.path="C:\\Program Files (x86)\\Windows Kits\\10\\Windows Performance Toolkit\\xbootmgr.exe")))
 ```
 

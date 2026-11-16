@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 15-11-2026 05:59:57):
+// Translated content (automatically translated on 16-11-2026 05:59:32):
 event.type="Process Creation" and (endpoint.os="windows" and tgt.process.cmdline contains " /dest:rdp-tcp#")
 ```
 
