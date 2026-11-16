@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 15-11-2026 05:25:40):
+// Translated content (automatically translated on 16-11-2026 05:23:23):
 event.type="Module Load" and (endpoint.os="windows" and (module.path contains "\\wwide9.dll" and (not (module.path="c:\\program files\\IBM\\SPSS\\Statistics\\*\\*" or module.path="c:\\program files (x86)\\IBM\\SPSS\\Statistics\\*\\*"))))
 ```
 
