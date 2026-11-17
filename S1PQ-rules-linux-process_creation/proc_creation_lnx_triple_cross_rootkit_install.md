@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 16-11-2026 03:50:37):
+// Translated content (automatically translated on 17-11-2026 05:43:38):
 event.type="Process Creation" and (endpoint.os="linux" and (tgt.process.image.path contains "/sudo" and (tgt.process.cmdline contains " tc " and tgt.process.cmdline contains " enp0s3 ") and (tgt.process.cmdline contains " qdisc " or tgt.process.cmdline contains " filter ")))
 ```
 

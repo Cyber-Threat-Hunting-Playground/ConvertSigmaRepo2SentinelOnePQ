@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 16-11-2026 03:50:37):
+// Translated content (automatically translated on 17-11-2026 05:43:38):
 event.type="Process Creation" and (endpoint.os="linux" and ((tgt.process.cmdline contains "sh -c " or tgt.process.cmdline contains "bash -c ") and ((tgt.process.cmdline contains "| bash " or tgt.process.cmdline contains "| sh " or tgt.process.cmdline contains "|bash " or tgt.process.cmdline contains "|sh ") or (tgt.process.cmdline contains "| bash" or tgt.process.cmdline contains "| sh" or tgt.process.cmdline contains "|bash" or tgt.process.cmdline contains " |sh"))))
 ```
 

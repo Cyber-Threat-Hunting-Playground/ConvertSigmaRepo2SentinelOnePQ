@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 16-11-2026 03:50:37):
+// Translated content (automatically translated on 17-11-2026 05:43:38):
 event.type="Process Creation" and (endpoint.os="linux" and (tgt.process.image.path contains "xclip" and (tgt.process.cmdline contains "-sel" and tgt.process.cmdline contains "clip" and tgt.process.cmdline contains "-o")))
 ```
 
