@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 15-11-2026 03:41:20):
+// Translated content (automatically translated on 17-11-2026 05:37:46):
 (event.category in ("dns","url","ip")) and (endpoint.os="windows" and ((url.address contains ".parsec.app" or url.address contains ".parsec.app." or url.address contains ".parsec.gg" or url.address contains ".parsec.gg." or url.address="parsec.app" or url.address="parsec.app." or url.address="parsec.gg" or url.address="parsec.gg.") or (event.dns.request contains ".parsec.app" or event.dns.request contains ".parsec.app." or event.dns.request contains ".parsec.gg" or event.dns.request contains ".parsec.gg." or event.dns.request="parsec.app" or event.dns.request="parsec.app." or event.dns.request="parsec.gg" or event.dns.request="parsec.gg.")))
 ```
 
