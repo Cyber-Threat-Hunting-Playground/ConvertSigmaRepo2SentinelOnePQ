@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 17-11-2026 07:37:24):
+// Translated content (automatically translated on 18-11-2026 06:59:30):
 event.type="Process Creation" and (endpoint.os="windows" and (tgt.process.cmdline contains "CreateObject" and tgt.process.cmdline contains "Wscript.shell" and tgt.process.cmdline contains ".RegWrite"))
 ```
 
