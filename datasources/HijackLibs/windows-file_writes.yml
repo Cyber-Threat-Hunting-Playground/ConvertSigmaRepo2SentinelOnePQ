@@ -973,6 +973,32 @@ falsepositives:
     - False positives are likely. This rule is more suitable for hunting than for generating detections.
 
 ---
+title: Possible preparation for cygwin1.dll DLL Hijacking
+id: 3964862b-2270-48a3-6472-5b9ff8124220
+status: experimental
+description: Detects possible DLL hijacking of cygwin1.dll by looking for suspicious file writes of this DLL, to unexpected locations.
+references:
+    - https://hijacklibs.net/entries/3rd_party/cygwin/cygwin1.html
+author: "Liran Ravich"
+date: 2026-10-29
+tags:
+    - attack.defense_evasion
+    - attack.T1574.001
+logsource:
+    product: windows
+    category: file_event
+detection:
+    selection:
+        TargetFileName: '*\cygwin1.dll'
+    filter:
+        TargetFileName:
+            - 'C:\cygwin\bin\\*'
+
+    condition: selection and not filter
+falsepositives:
+    - False positives are likely. This rule is more suitable for hunting than for generating detections.
+
+---
 title: Possible preparation for ci.dll DLL Hijacking
 id: 3188552b-6171-48a3-7472-5b9ff8356391
 status: experimental
