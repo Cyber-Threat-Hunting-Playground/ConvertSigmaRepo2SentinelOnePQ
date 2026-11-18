@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 17-11-2026 05:37:46):
+// Translated content (automatically translated on 18-11-2026 05:00:50):
 event.category="file" and (endpoint.os="windows" and (tgt.file.path contains "C:\\Program Files\\OpenUEM Agent\\config\\openuem.ini" or tgt.file.path contains "C:\\Program Files\\OpenUEM Agent\\logs\\openuem-log.txt"))
 ```
 

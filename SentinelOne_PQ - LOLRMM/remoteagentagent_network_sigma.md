@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 17-11-2026 05:37:46):
+// Translated content (automatically translated on 18-11-2026 05:00:50):
 (event.category in ("dns","url","ip")) and (endpoint.os="windows" and ((url.address contains ".app-af-agent-prod-009.azurewebsites.net" or url.address contains ".app-af-agent-prod-009.azurewebsites.net." or url.address="app-af-agent-prod-009.azurewebsites.net" or url.address="app-af-agent-prod-009.azurewebsites.net.") or (event.dns.request contains ".app-af-agent-prod-009.azurewebsites.net" or event.dns.request contains ".app-af-agent-prod-009.azurewebsites.net." or event.dns.request="app-af-agent-prod-009.azurewebsites.net" or event.dns.request="app-af-agent-prod-009.azurewebsites.net.")))
 ```
 
