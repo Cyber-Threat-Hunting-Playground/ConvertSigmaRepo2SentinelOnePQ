@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 17-11-2026 06:52:03):
+// Translated content (automatically translated on 18-11-2026 06:11:22):
 event.type="Process Creation" and (endpoint.os="windows" and (src.process.image.path contains "ezhelpclientmanager.exe" or src.process.image.path contains "ezHelpManager.exe" or src.process.image.path contains "ezhelpclient.exe"))
 ```
 
