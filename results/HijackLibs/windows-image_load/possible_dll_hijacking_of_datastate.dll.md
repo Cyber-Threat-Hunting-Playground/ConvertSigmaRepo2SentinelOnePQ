@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 17-11-2026 07:01:22):
+// Translated content (automatically translated on 18-11-2026 06:25:53):
 event.type="Module Load" and (endpoint.os="windows" and (module.path contains "\\datastate.dll" and (not module.path contains "C:\\Program Files (x86)\\IObit\\AdvancedSystemCare\\")))
 ```
 
