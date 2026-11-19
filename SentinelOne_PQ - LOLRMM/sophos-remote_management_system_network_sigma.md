@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 18-11-2026 05:00:50):
+// Translated content (automatically translated on 19-11-2026 04:55:59):
 (event.category in ("dns","url","ip")) and (endpoint.os="windows" and ((url.address contains ".sophos.com" or url.address contains ".sophos.com." or url.address contains ".sophosupd.com" or url.address contains ".sophosupd.com." or url.address contains ".sophosupd.net" or url.address contains ".sophosupd.net.") or (event.dns.request contains ".sophos.com" or event.dns.request contains ".sophos.com." or event.dns.request contains ".sophosupd.com" or event.dns.request contains ".sophosupd.com." or event.dns.request contains ".sophosupd.net" or event.dns.request contains ".sophosupd.net.")))
 ```
 
