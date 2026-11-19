@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 18-11-2026 06:59:30):
+// Translated content (automatically translated on 19-11-2026 06:59:52):
 event.type="Process Creation" and (endpoint.os="windows" and ((src.process.image.path contains "\\Winrar.exe" or src.process.image.path contains "\\7zFM.exe" or src.process.image.path contains "\\peazip.exe") and (tgt.process.image.path contains "\\isoburn.exe" or tgt.process.image.path contains "\\PowerISO.exe" or tgt.process.image.path contains "\\ImgBurn.exe")))
 ```
 
@@ -9,7 +9,7 @@ event.type="Process Creation" and (endpoint.os="windows" and ((src.process.image
 title: Phishing Pattern ISO in Archive
 id: fcdf69e5-a3d3-452a-9724-26f2308bf2b1
 status: test
-description: Detects cases in which an ISO files is opend within an archiver like 7Zip or Winrar, which is a sign of phishing as threat actors put small ISO files in archives as email attachments to bypass certain filters and protective measures (mark of web)
+description: Detects cases in which an ISO files is opened within an archiver like 7Zip or Winrar, which is a sign of phishing as threat actors put small ISO files in archives as email attachments to bypass certain filters and protective measures (mark of web)
 references:
     - https://twitter.com/1ZRR4H/status/1534259727059787783
     - https://app.any.run/tasks/e1fe6a62-bce8-4323-a49a-63795d9afd5d/

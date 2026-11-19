@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 18-11-2026 06:59:30):
+// Translated content (automatically translated on 19-11-2026 06:59:52):
 event.type="Process Creation" and (endpoint.os="windows" and (tgt.process.cmdline="*ms-appinstaller://*source=*" and tgt.process.cmdline contains "http"))
 ```
 
@@ -14,7 +14,7 @@ related:
 status: test
 description: |
     Detects usage of the "ms-appinstaller" protocol handler via command line to potentially download arbitrary files via AppInstaller.EXE
-    The downloaded files are temporarly stored in ":\Users\%username%\AppData\Local\Packages\Microsoft.DesktopAppInstaller_8wekyb3d8bbwe\AC\INetCache\<RANDOM-8-CHAR-DIRECTORY>"
+    The downloaded files are temporarily stored in ":\Users\%username%\AppData\Local\Packages\Microsoft.DesktopAppInstaller_8wekyb3d8bbwe\AC\INetCache\<RANDOM-8-CHAR-DIRECTORY>"
 references:
     - https://lolbas-project.github.io/lolbas/Binaries/AppInstaller/
 author: Nasreddine Bencherchali (Nextron Systems), Swachchhanda Shrawan Poudel
