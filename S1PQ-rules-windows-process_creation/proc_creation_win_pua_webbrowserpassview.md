@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 19-11-2026 06:59:52):
+// Translated content (automatically translated on 20-11-2026 06:53:01):
 event.type="Process Creation" and (endpoint.os="windows" and (tgt.process.displayName="Web Browser Password Viewer" or tgt.process.image.path contains "\\WebBrowserPassView.exe"))
 ```
 
