@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 19-11-2026 06:27:06):
+// Translated content (automatically translated on 20-11-2026 06:13:31):
 event.type="Module Load" and (endpoint.os="windows" and (module.path contains "\\dsp_ippv2_x64.dll" and (not (module.path="c:\\program files\\ABBYY FineReader *\\*" or module.path="c:\\program files (x86)\\ABBYY FineReader *\\*" or module.path="c:\\program files\\Image-Line\\FL Studio *\\Shared\\*" or module.path="c:\\program files (x86)\\Image-Line\\FL Studio *\\Shared\\*"))))
 ```
 
