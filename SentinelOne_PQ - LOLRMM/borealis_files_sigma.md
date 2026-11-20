@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 19-11-2026 04:55:59):
+// Translated content (automatically translated on 20-11-2026 04:46:22):
 event.category="file" and (endpoint.os="windows" and (tgt.file.path contains "C:\\Borealis\\Agent.exe" or tgt.file.path contains "C:\\Borealis\\agent.json" or tgt.file.path contains "C:\\Borealis\\Logs\\Agent\\agent.log"))
 ```
 

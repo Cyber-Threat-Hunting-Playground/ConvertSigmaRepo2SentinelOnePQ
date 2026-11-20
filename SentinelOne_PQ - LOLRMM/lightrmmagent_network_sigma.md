@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 19-11-2026 04:55:59):
+// Translated content (automatically translated on 20-11-2026 04:46:22):
 (event.category in ("dns","url","ip")) and (endpoint.os="windows" and ((url.address contains ".light-rmm-monitor-20260825.azurewebsites.net" or url.address contains ".light-rmm-monitor-20260825.azurewebsites.net." or url.address="light-rmm-monitor-20260825.azurewebsites.net" or url.address="light-rmm-monitor-20260825.azurewebsites.net.") or (event.dns.request contains ".light-rmm-monitor-20260825.azurewebsites.net" or event.dns.request contains ".light-rmm-monitor-20260825.azurewebsites.net." or event.dns.request="light-rmm-monitor-20260825.azurewebsites.net" or event.dns.request="light-rmm-monitor-20260825.azurewebsites.net.")))
 ```
 

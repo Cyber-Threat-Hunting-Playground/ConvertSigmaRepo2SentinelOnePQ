@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 19-11-2026 04:55:59):
+// Translated content (automatically translated on 20-11-2026 04:46:22):
 event.category="file" and (endpoint.os="windows" and (tgt.file.path contains "C:\\Program Files\\MiniRMM\\MiniRmmAgent.exe" or tgt.file.path contains "C:\\ProgramData\\MiniRMM\\SmartScreenTest.ps1" or tgt.file.path contains "C:\\ProgramData\\MiniRMM\\Invoke-AVExclusions.ps1"))
 ```
 
