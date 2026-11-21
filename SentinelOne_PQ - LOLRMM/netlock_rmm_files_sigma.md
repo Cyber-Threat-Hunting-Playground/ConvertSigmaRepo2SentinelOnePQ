@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 20-11-2026 04:46:22):
+// Translated content (automatically translated on 21-11-2026 04:41:38):
 event.category="file" and (endpoint.os="windows" and (tgt.file.path contains "C:\\temp\\netlock rmm\\installer\\logs\*" or tgt.file.path contains "C:\\ProgramData\\0x101 Cyber Security\\NetLock RMM\\Comm Agent\\server_config.json"))
 ```
 

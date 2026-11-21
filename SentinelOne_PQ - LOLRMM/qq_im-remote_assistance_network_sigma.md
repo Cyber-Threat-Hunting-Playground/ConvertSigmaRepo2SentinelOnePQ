@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 20-11-2026 04:46:22):
+// Translated content (automatically translated on 21-11-2026 04:41:38):
 (event.category in ("dns","url","ip")) and (endpoint.os="windows" and ((url.address contains ".desktop.qq.com" or url.address contains ".desktop.qq.com." or url.address contains ".mdt.qq.com" or url.address contains ".mdt.qq.com." or url.address contains ".qq-messenger.en.softonic.com" or url.address contains ".qq-messenger.en.softonic.com." or url.address contains ".upload_data.qq.com" or url.address contains ".upload_data.qq.com." or url.address="qq-messenger.en.softonic.com" or url.address="qq-messenger.en.softonic.com." or url.address="upload_data.qq.com" or url.address="upload_data.qq.com.") or (event.dns.request contains ".desktop.qq.com" or event.dns.request contains ".desktop.qq.com." or event.dns.request contains ".mdt.qq.com" or event.dns.request contains ".mdt.qq.com." or event.dns.request contains ".qq-messenger.en.softonic.com" or event.dns.request contains ".qq-messenger.en.softonic.com." or event.dns.request contains ".upload_data.qq.com" or event.dns.request contains ".upload_data.qq.com." or event.dns.request="qq-messenger.en.softonic.com" or event.dns.request="qq-messenger.en.softonic.com." or event.dns.request="upload_data.qq.com" or event.dns.request="upload_data.qq.com.")))
 ```
 

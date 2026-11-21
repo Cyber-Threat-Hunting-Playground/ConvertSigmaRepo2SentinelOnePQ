@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 20-11-2026 04:46:22):
+// Translated content (automatically translated on 21-11-2026 04:41:38):
 (event.category in ("dns","url","ip")) and (endpoint.os="windows" and ((url.address contains ".pitunnel.com" or url.address contains ".pitunnel.com." or url.address contains ".www.pitunnel.com" or url.address contains ".www.pitunnel.com." or url.address="pitunnel.com" or url.address="pitunnel.com." or url.address="www.pitunnel.com" or url.address="www.pitunnel.com.") or (event.dns.request contains ".pitunnel.com" or event.dns.request contains ".pitunnel.com." or event.dns.request contains ".www.pitunnel.com" or event.dns.request contains ".www.pitunnel.com." or event.dns.request="pitunnel.com" or event.dns.request="pitunnel.com." or event.dns.request="www.pitunnel.com" or event.dns.request="www.pitunnel.com.")))
 ```
 

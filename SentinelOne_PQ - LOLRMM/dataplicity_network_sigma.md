@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 20-11-2026 04:46:22):
+// Translated content (automatically translated on 21-11-2026 04:41:38):
 (event.category in ("dns","url","ip")) and (endpoint.os="windows" and ((url.address contains ".dataplicity.com" or url.address contains ".dataplicity.com." or url.address contains ".wormhole.dataplicity.com" or url.address contains ".wormhole.dataplicity.com." or url.address contains ".www.dataplicity.com" or url.address contains ".www.dataplicity.com." or url.address="dataplicity.com" or url.address="dataplicity.com." or url.address="www.dataplicity.com" or url.address="www.dataplicity.com.") or (event.dns.request contains ".dataplicity.com" or event.dns.request contains ".dataplicity.com." or event.dns.request contains ".wormhole.dataplicity.com" or event.dns.request contains ".wormhole.dataplicity.com." or event.dns.request contains ".www.dataplicity.com" or event.dns.request contains ".www.dataplicity.com." or event.dns.request="dataplicity.com" or event.dns.request="dataplicity.com." or event.dns.request="www.dataplicity.com" or event.dns.request="www.dataplicity.com.")))
 ```
 

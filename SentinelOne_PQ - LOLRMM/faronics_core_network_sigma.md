@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 20-11-2026 04:46:22):
+// Translated content (automatically translated on 21-11-2026 04:41:38):
 (event.category in ("dns","url","ip")) and (endpoint.os="windows" and ((url.address contains ".faronics.com" or url.address contains ".faronics.com." or url.address contains ".upd.faronicslabs.com" or url.address contains ".upd.faronicslabs.com." or url.address contains ".www.faronics.com" or url.address contains ".www.faronics.com." or url.address="faronics.com" or url.address="faronics.com." or url.address="upd.faronicslabs.com" or url.address="upd.faronicslabs.com." or url.address="www.faronics.com" or url.address="www.faronics.com.") or (event.dns.request contains ".faronics.com" or event.dns.request contains ".faronics.com." or event.dns.request contains ".upd.faronicslabs.com" or event.dns.request contains ".upd.faronicslabs.com." or event.dns.request contains ".www.faronics.com" or event.dns.request contains ".www.faronics.com." or event.dns.request="faronics.com" or event.dns.request="faronics.com." or event.dns.request="upd.faronicslabs.com" or event.dns.request="upd.faronicslabs.com." or event.dns.request="www.faronics.com" or event.dns.request="www.faronics.com.")))
 ```
 

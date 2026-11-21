@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 20-11-2026 04:46:22):
+// Translated content (automatically translated on 21-11-2026 04:41:38):
 event.category="registry" and (endpoint.os="windows" and (registry.keyPath contains "HKU\\{SID}\\Software\\GetScreen" or registry.keyPath contains "HKU\\{SID}\\Software\\GetScreen\\Getscreen.me" or registry.keyPath contains "HKLM\\System\\CurrentControlSet\\Services\\GetscreenSV"))
 ```
 

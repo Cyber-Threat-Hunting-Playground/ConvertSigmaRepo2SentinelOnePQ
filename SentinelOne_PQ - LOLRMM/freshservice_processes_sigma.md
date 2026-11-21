@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 20-11-2026 04:46:22):
+// Translated content (automatically translated on 21-11-2026 04:41:38):
 event.type="Process Creation" and (endpoint.os="windows" and ((src.process.image.path contains "\\Freshservice.DiscoveryProbe.ScanService.exe" or src.process.image.path contains "\\Freshservice.DiscoveryProbe.Window.exe" or src.process.image.path contains "\\plink.exe" or src.process.image.path contains "\\FSAgentService.exe" or src.process.image.path contains "\\FSAgentAutoUpdate.exe" or src.process.image.path contains "\\FSWmiScanner.exe") or (tgt.process.image.path contains "\\Freshservice.DiscoveryProbe.ScanService.exe" or tgt.process.image.path contains "\\Freshservice.DiscoveryProbe.Window.exe" or tgt.process.image.path contains "\\plink.exe" or tgt.process.image.path contains "\\FSAgentService.exe" or tgt.process.image.path contains "\\FSAgentAutoUpdate.exe" or tgt.process.image.path contains "\\FSWmiScanner.exe")))
 ```
 

@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 20-11-2026 04:46:22):
+// Translated content (automatically translated on 21-11-2026 04:41:38):
 (event.category in ("dns","url","ip")) and (endpoint.os="windows" and ((url.address contains ".mikogo.com" or url.address contains ".mikogo.com." or url.address contains ".mikogo4.com" or url.address contains ".mikogo4.com." or url.address contains ".real-time-collaboration.com" or url.address contains ".real-time-collaboration.com." or url.address="mikogo.com" or url.address="mikogo.com.") or (event.dns.request contains ".mikogo.com" or event.dns.request contains ".mikogo.com." or event.dns.request contains ".mikogo4.com" or event.dns.request contains ".mikogo4.com." or event.dns.request contains ".real-time-collaboration.com" or event.dns.request contains ".real-time-collaboration.com." or event.dns.request="mikogo.com" or event.dns.request="mikogo.com.")))
 ```
 

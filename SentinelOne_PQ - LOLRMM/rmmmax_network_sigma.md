@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 20-11-2026 04:46:22):
+// Translated content (automatically translated on 21-11-2026 04:41:38):
 (event.category in ("dns","url","ip")) and (endpoint.os="windows" and ((url.address contains ".api.rmmmax.com" or url.address contains ".api.rmmmax.com." or url.address="api.rmmmax.com" or url.address="api.rmmmax.com.") or (event.dns.request contains ".api.rmmmax.com" or event.dns.request contains ".api.rmmmax.com." or event.dns.request="api.rmmmax.com" or event.dns.request="api.rmmmax.com.")))
 ```
 

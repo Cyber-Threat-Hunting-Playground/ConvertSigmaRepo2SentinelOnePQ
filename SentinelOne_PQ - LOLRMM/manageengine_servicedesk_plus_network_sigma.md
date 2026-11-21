@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 20-11-2026 04:46:22):
+// Translated content (automatically translated on 21-11-2026 04:41:38):
 (event.category in ("dns","url","ip")) and (endpoint.os="windows" and ((url.address contains ".manageengine.com" or url.address contains ".manageengine.com." or url.address="manageengine.com" or url.address="manageengine.com.") or (event.dns.request contains ".manageengine.com" or event.dns.request contains ".manageengine.com." or event.dns.request="manageengine.com" or event.dns.request="manageengine.com.")))
 ```
 

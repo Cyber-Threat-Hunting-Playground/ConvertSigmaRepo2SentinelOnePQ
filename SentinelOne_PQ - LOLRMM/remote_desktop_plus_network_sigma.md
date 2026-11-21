@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 20-11-2026 04:46:22):
+// Translated content (automatically translated on 21-11-2026 04:41:38):
 (event.category in ("dns","url","ip")) and (endpoint.os="windows" and ((url.address contains ".donkz.nl" or url.address contains ".donkz.nl." or url.address="donkz.nl" or url.address="donkz.nl.") or (event.dns.request contains ".donkz.nl" or event.dns.request contains ".donkz.nl." or event.dns.request="donkz.nl" or event.dns.request="donkz.nl.")))
 ```
 
