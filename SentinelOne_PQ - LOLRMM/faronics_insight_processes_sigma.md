@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 21-11-2026 04:41:38):
+// Translated content (automatically translated on 22-11-2026 03:56:08):
 event.type="Process Creation" and (endpoint.os="windows" and ((src.process.image.path contains "\\STAHelper.exe" or src.process.image.path contains "\\FIStudentSvc.exe" or src.process.image.path contains "\\FIStudentAgent.exe" or src.process.image.path contains "\\FIStudentUI.exe" or src.process.image.path contains "\\StudentSvc.exe" or src.process.image.path contains "\\InsightInstaller.exe" or src.process.image.path contains "\\InsightInstallerStudent.exe" or src.process.image.path contains "\\InsightInstallerTeacher.exe") or (tgt.process.image.path contains "\\STAHelper.exe" or tgt.process.image.path contains "\\FIStudentSvc.exe" or tgt.process.image.path contains "\\FIStudentAgent.exe" or tgt.process.image.path contains "\\FIStudentUI.exe" or tgt.process.image.path contains "\\StudentSvc.exe" or tgt.process.image.path contains "\\InsightInstaller.exe" or tgt.process.image.path contains "\\InsightInstallerStudent.exe" or tgt.process.image.path contains "\\InsightInstallerTeacher.exe")))
 ```
 

@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 21-11-2026 04:41:38):
+// Translated content (automatically translated on 22-11-2026 03:56:08):
 event.category="registry" and (endpoint.os="windows" and (registry.keyPath="*HKLM\\System\\CurrentControlSet\\Services\\ScreenConnect Client (*)\\ImagePath*" or registry.keyPath contains "HKLM\\SYSTEM\\CurrentControlSet\\Control\\Lsa\\Authentication Packages" or registry.keyPath contains "HKLM\\SOFTWARE\\Classes\\CLSID\\{6FF59A85-BC37-4CD4-C175-070CC4814204}" or registry.keyPath="*HKLM\\SYSTEM\\CurrentControlSet\\Control\\SafeBoot\\Network\\ScreenConnect Client (*)*"))
 ```
 
