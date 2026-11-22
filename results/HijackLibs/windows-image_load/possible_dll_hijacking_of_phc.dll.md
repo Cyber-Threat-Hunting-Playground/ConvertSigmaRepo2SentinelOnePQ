@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 21-11-2026 06:03:22):
+// Translated content (automatically translated on 22-11-2026 05:39:45):
 event.type="Module Load" and (endpoint.os="windows" and (module.path contains "\\phc.dll" and (not module.path="c:\\users\\*\\appdata\\roaming\\Foxit Software\\Classic\\Addon\\Foxit PDF Editor\\plugins\\*")))
 ```
 
