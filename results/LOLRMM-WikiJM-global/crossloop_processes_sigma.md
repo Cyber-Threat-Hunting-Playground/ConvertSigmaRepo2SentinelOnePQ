@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 23-11-2026 06:02:54):
+// Translated content (automatically translated on 24-11-2026 08:42:46):
 event.type="Process Creation" and (endpoint.os="windows" and (src.process.image.path contains "crossloopservice.exe" or src.process.image.path contains "CrossLoopConnect.exe" or src.process.image.path contains "WinVNCStub.exe"))
 ```
 

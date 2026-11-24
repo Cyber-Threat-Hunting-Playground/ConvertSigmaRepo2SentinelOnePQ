@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 23-11-2026 06:02:54):
+// Translated content (automatically translated on 24-11-2026 08:42:46):
 (event.category in ("dns","url","ip")) and (endpoint.os="windows" and ((url.address contains "sunlogin.oray.com" or url.address contains "client.oray.net") or (event.dns.request contains "sunlogin.oray.com" or event.dns.request contains "client.oray.net")))
 ```
 
