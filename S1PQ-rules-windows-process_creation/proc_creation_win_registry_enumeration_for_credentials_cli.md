@@ -1,6 +1,6 @@
 ```sql
-// Translated content (automatically translated on 23-11-2026 07:10:01):
-event.type="Process Creation" and (endpoint.os="windows" and ((tgt.process.cmdline contains "\\Software\\Aerofox\\Foxmail\\V3.1" or tgt.process.cmdline contains "\\Software\\Aerofox\\FoxmailPreview" or tgt.process.cmdline contains "\\Software\\DownloadManager\\Passwords" or tgt.process.cmdline contains "\\Software\\FTPWare\\COREFTP\\Sites" or tgt.process.cmdline contains "\\Software\\IncrediMail\\Identities" or tgt.process.cmdline contains "\\Software\\Martin Prikryl\\WinSCP 2\\Sessions" or tgt.process.cmdline contains "\\Software\\Mobatek\\MobaXterm\\" or tgt.process.cmdline contains "\\Software\\OpenSSH\\Agent\\Keys" or tgt.process.cmdline contains "\\Software\\OpenVPN-GUI\\configs" or tgt.process.cmdline contains "\\Software\\ORL\\WinVNC3\\Password" or tgt.process.cmdline contains "\\Software\\Qualcomm\\Eudora\\CommandLine" or tgt.process.cmdline contains "\\Software\\RealVNC\\WinVNC4" or tgt.process.cmdline contains "\\Software\\RimArts\\B2\\Settings" or tgt.process.cmdline contains "\\Software\\SimonTatham\\PuTTY\\Sessions" or tgt.process.cmdline contains "\\Software\\SimonTatham\\PuTTY\\SshHostKeys\\" or tgt.process.cmdline contains "\\Software\\Sota\\FFFTP" or tgt.process.cmdline contains "\\Software\\TightVNC\\Server" or tgt.process.cmdline contains "\\Software\\WOW6432Node\\Radmin\\v3.0\\Server\\Parameters\\Radmin") and (not (tgt.process.image.path contains "reg.exe" and (tgt.process.cmdline contains "export" or tgt.process.cmdline contains "save")))))
+// Translated content (automatically translated on 24-11-2026 09:33:57):
+event.type="Process Creation" and (endpoint.os="windows" and ((tgt.process.cmdline contains "\\Software\\Aerofox\\Foxmail\\V3.1" or tgt.process.cmdline contains "\\Software\\Aerofox\\FoxmailPreview" or tgt.process.cmdline contains "\\Software\\DownloadManager\\Passwords" or tgt.process.cmdline contains "\\Software\\FTPWare\\COREFTP\\Sites" or tgt.process.cmdline contains "\\Software\\IncrediMail\\Identities" or tgt.process.cmdline contains "\\Software\\Martin Prikryl\\WinSCP 2\\Sessions" or tgt.process.cmdline contains "\\Software\\Mobatek\\MobaXterm\\" or tgt.process.cmdline contains "\\Software\\OpenSSH\\Agent\\Keys" or tgt.process.cmdline contains "\\Software\\OpenVPN-GUI\\configs" or tgt.process.cmdline contains "\\Software\\ORL\\WinVNC3\\Password" or tgt.process.cmdline contains "\\Software\\Qualcomm\\Eudora\\CommandLine" or tgt.process.cmdline contains "\\Software\\RealVNC\\WinVNC4" or tgt.process.cmdline contains "\\Software\\RimArts\\B2\\Settings" or tgt.process.cmdline contains "\\Software\\SimonTatham\\PuTTY\\Sessions" or tgt.process.cmdline contains "\\Software\\SimonTatham\\PuTTY\\SshHostKeys\\" or tgt.process.cmdline contains "\\Software\\Sota\\FFFTP" or tgt.process.cmdline contains "\\Software\\TightVNC\\Server" or tgt.process.cmdline contains "\\Software\\WOW6432Node\\Radmin\\v3.0\\Server\\Parameters\\Radmin") and (not (tgt.process.image.path contains "\\reg.exe" and (tgt.process.cmdline contains "export" or tgt.process.cmdline contains "save")))))
 ```
 
 
@@ -22,7 +22,7 @@ references:
     - https://book.hacktricks.xyz/windows-hardening/windows-local-privilege-escalation#inside-the-registry
 author: Nasreddine Bencherchali (Nextron Systems)
 date: 2022-06-20
-modified: 2025-05-22
+modified: 2026-11-22
 tags:
     - attack.credential-access
     - attack.t1552.002
@@ -51,7 +51,7 @@ detection:
             - '\Software\TightVNC\Server'
             - '\Software\WOW6432Node\Radmin\v3.0\Server\Parameters\Radmin'
     filter_main_other_rule:  # matched by cc1abf27-78a3-4ac5-a51c-f3070b1d8e40
-        Image|endswith: 'reg.exe'
+        Image|endswith: '\reg.exe'
         CommandLine|contains:
             - 'export'
             - 'save'
