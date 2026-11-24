@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 23-11-2026 05:38:18):
+// Translated content (automatically translated on 24-11-2026 08:15:51):
 event.type="Process Creation" and (endpoint.os="osx" and (((tgt.process.image.path contains "/nc" or tgt.process.image.path contains "/netcat") and (not tgt.process.cmdline matches "\\s(?:--listen\\b|-[46DdknrtuUvz]{0,10}l[46DdknrtuUvz]{0,10})")) or (tgt.process.image.path contains "/nmap" or tgt.process.image.path contains "/telnet")))
 ```
 
