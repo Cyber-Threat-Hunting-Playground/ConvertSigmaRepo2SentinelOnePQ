@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 23-11-2026 04:37:06):
+// Translated content (automatically translated on 24-11-2026 07:29:49):
 (event.category in ("dns","url","ip")) and (endpoint.os="windows" and ((url.address contains ".iperius-rs.com" or url.address contains ".iperius-rs.com." or url.address contains ".iperius.com" or url.address contains ".iperius.com." or url.address contains ".iperiusremote.com" or url.address contains ".iperiusremote.com." or url.address="iperiusremote.com" or url.address="iperiusremote.com.") or (event.dns.request contains ".iperius-rs.com" or event.dns.request contains ".iperius-rs.com." or event.dns.request contains ".iperius.com" or event.dns.request contains ".iperius.com." or event.dns.request contains ".iperiusremote.com" or event.dns.request contains ".iperiusremote.com." or event.dns.request="iperiusremote.com" or event.dns.request="iperiusremote.com.")))
 ```
 

@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 23-11-2026 04:37:06):
+// Translated content (automatically translated on 24-11-2026 07:29:49):
 event.type="Process Creation" and (endpoint.os="windows" and ((src.process.image.path contains "\\RDPWInst.exe" or src.process.image.path contains "\\RDPCheck.exe" or src.process.image.path contains "\\RDPConf.exe") or (tgt.process.image.path contains "\\RDPWInst.exe" or tgt.process.image.path contains "\\RDPCheck.exe" or tgt.process.image.path contains "\\RDPConf.exe")))
 ```
 

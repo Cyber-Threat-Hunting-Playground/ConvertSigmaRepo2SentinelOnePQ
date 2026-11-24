@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 23-11-2026 04:37:06):
+// Translated content (automatically translated on 24-11-2026 07:29:49):
 event.category="file" and (endpoint.os="windows" and (tgt.file.path contains "C:\\Program Files\\Roster\\agent.exe" or tgt.file.path contains "C:\\ProgramData\\Roster\\agent.yaml" or tgt.file.path contains "C:\\ProgramData\\Roster\\agent-state.json"))
 ```
 
