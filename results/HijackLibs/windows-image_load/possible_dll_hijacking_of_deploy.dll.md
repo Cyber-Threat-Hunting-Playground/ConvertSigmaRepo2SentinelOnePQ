@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 23-11-2026 06:22:32):
+// Translated content (automatically translated on 24-11-2026 08:55:21):
 event.type="Module Load" and (endpoint.os="windows" and (module.path contains "\\deploy.dll" and (not (module.path="c:\\program files\\Java\\*\\bin\\*" or module.path="c:\\program files (x86)\\Java\\*\\bin\\*"))))
 ```
 
