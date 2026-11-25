@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 24-11-2026 07:29:49):
+// Translated content (automatically translated on 25-11-2026 05:58:42):
 event.category="registry" and (endpoint.os="windows" and (registry.keyPath contains "HKLM\\SOFTWARE\\Allocentra\\Agent" or registry.keyPath contains "HKLM\\SYSTEM\\CurrentControlSet\\Services\\AllocentraAgent"))
 ```
 

@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 24-11-2026 07:29:49):
+// Translated content (automatically translated on 25-11-2026 05:58:42):
 (event.category in ("dns","url","ip")) and (endpoint.os="windows" and ((url.address contains ".agents.addigy.com" or url.address contains ".agents.addigy.com." or url.address contains ".grtmprod.addigy.com" or url.address contains ".grtmprod.addigy.com." or url.address contains ".prod.addigy.com" or url.address contains ".prod.addigy.com." or url.address="agents.addigy.com" or url.address="agents.addigy.com." or url.address="grtmprod.addigy.com" or url.address="grtmprod.addigy.com." or url.address="prod.addigy.com" or url.address="prod.addigy.com.") or (event.dns.request contains ".agents.addigy.com" or event.dns.request contains ".agents.addigy.com." or event.dns.request contains ".grtmprod.addigy.com" or event.dns.request contains ".grtmprod.addigy.com." or event.dns.request contains ".prod.addigy.com" or event.dns.request contains ".prod.addigy.com." or event.dns.request="agents.addigy.com" or event.dns.request="agents.addigy.com." or event.dns.request="grtmprod.addigy.com" or event.dns.request="grtmprod.addigy.com." or event.dns.request="prod.addigy.com" or event.dns.request="prod.addigy.com.")))
 ```
 

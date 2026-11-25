@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 24-11-2026 07:29:49):
+// Translated content (automatically translated on 25-11-2026 05:58:42):
 (event.category in ("dns","url","ip")) and (endpoint.os="windows" and ((url.address contains ".api.remote.it" or url.address contains ".api.remote.it." or url.address contains ".auth.api.remote.it" or url.address contains ".auth.api.remote.it." or url.address contains ".remote.it" or url.address contains ".remote.it." or url.address="api.remote.it" or url.address="api.remote.it." or url.address="auth.api.remote.it" or url.address="auth.api.remote.it." or url.address="remote.it" or url.address="remote.it.") or (event.dns.request contains ".api.remote.it" or event.dns.request contains ".api.remote.it." or event.dns.request contains ".auth.api.remote.it" or event.dns.request contains ".auth.api.remote.it." or event.dns.request contains ".remote.it" or event.dns.request contains ".remote.it." or event.dns.request="api.remote.it" or event.dns.request="api.remote.it." or event.dns.request="auth.api.remote.it" or event.dns.request="auth.api.remote.it." or event.dns.request="remote.it" or event.dns.request="remote.it.")))
 ```
 
