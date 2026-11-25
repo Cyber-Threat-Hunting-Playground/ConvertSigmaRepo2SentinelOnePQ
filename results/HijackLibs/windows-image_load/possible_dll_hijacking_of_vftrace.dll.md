@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 24-11-2026 08:55:21):
+// Translated content (automatically translated on 25-11-2026 07:31:45):
 event.type="Module Load" and (endpoint.os="windows" and (module.path contains "\\vftrace.dll" and (not (module.path contains "c:\\program files\\CyberArk\\Endpoint Privilege Manager\\Agent\\x32\\" or module.path contains "c:\\program files (x86)\\CyberArk\\Endpoint Privilege Manager\\Agent\\x32\\" or module.path contains "c:\\program files\\CyberArk\\Endpoint Privilege Manager\\Agent\\x64\\" or module.path contains "c:\\program files (x86)\\CyberArk\\Endpoint Privilege Manager\\Agent\\x64\\" or module.path contains "c:\\program files\\CyberArk\\Endpoint Privilege Manager\\Agent\\" or module.path contains "c:\\program files (x86)\\CyberArk\\Endpoint Privilege Manager\\Agent\\"))))
 ```
 

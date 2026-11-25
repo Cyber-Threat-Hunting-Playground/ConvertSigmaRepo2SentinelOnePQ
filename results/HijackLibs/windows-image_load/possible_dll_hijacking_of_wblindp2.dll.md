@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 24-11-2026 08:55:21):
+// Translated content (automatically translated on 25-11-2026 07:31:45):
 event.type="Module Load" and (endpoint.os="windows" and (module.path contains "\\wblindp2.dll" and (not (module.path contains "c:\\program files\\Stardock\\WindowBlinds\\" or module.path contains "c:\\program files (x86)\\Stardock\\WindowBlinds\\"))))
 ```
 
