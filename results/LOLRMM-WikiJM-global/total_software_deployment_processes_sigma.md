@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 25-11-2026 07:17:15):
+// Translated content (automatically translated on 26-11-2026 07:05:25):
 event.type="Process Creation" and (endpoint.os="windows" and (src.process.image.path contains "\\tniwinagent.exe" or src.process.image.path contains "\\Tsdservice.exe"))
 ```
 
