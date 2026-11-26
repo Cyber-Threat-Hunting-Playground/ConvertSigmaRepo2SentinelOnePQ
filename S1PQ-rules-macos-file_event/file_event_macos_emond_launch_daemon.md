@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 25-11-2026 07:01:21):
+// Translated content (automatically translated on 26-11-2026 06:54:25):
 event.category="file" and (endpoint.os="osx" and ((tgt.file.path contains "/etc/emond.d/rules/" and tgt.file.path contains ".plist") or tgt.file.path contains "/private/var/db/emondClients/"))
 ```
 
@@ -12,7 +12,7 @@ status: test
 description: Detects additions to the Emond Launch Daemon that adversaries may use to gain persistence and elevate privileges.
 references:
     - https://github.com/redcanaryco/atomic-red-team/blob/f339e7da7d05f6057fdfcdd3742bfcf365fee2a9/atomics/T1546.014/T1546.014.md
-    - https://posts.specterops.io/leveraging-emond-on-macos-for-persistence-a040a2785124
+    - https://web.archive.org/web/20221206163749/https://posts.specterops.io/leveraging-emond-on-macos-for-persistence-a040a2785124?gi=f6f6733909bd
 author: Alejandro Ortuno, oscd.community
 date: 2020-10-23
 modified: 2021-11-27
