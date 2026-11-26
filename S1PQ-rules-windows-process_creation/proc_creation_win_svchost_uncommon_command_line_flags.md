@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 25-11-2026 08:05:02):
+// Translated content (automatically translated on 26-11-2026 07:55:24):
 event.type="Process Creation" and (endpoint.os="windows" and (tgt.process.image.path contains "\\svchost.exe" and (not (tgt.process.cmdline matches "-k\\s\\w{1,64}(?:\\s?(?:-p|-s))?" or tgt.process.cmdline="" or not (tgt.process.cmdline matches "\.*"))) and (not ((src.process.image.path contains "\\MsMpEng.exe" and tgt.process.cmdline contains "svchost.exe") or (src.process.image.path contains "\\MRT.exe" and tgt.process.cmdline="svchost.exe")))))
 ```
 
@@ -13,7 +13,7 @@ description: |
     Detects instances of svchost.exe running with an unusual or uncommon command line parameter by excluding known legitimate or common patterns.
     This could point at a file masquerading as svchost, a process injection, or hollowing of a legitimate svchost instance.
 references:
-    - https://cardinalops.com/blog/the-art-of-anomaly-hunting-patterns-detection/
+    - https://web.archive.org/web/20260518091146/https://cardinalops.com/blog/the-art-of-anomaly-hunting-patterns-detection/
     - https://www.security.com/threat-intelligence/blackbyte-exbyte-ransomware
     - https://cloud.google.com/blog/topics/threat-intelligence/apt41-initiates-global-intrusion-campaign-using-multiple-exploits/
     - https://media.kasperskycontenthub.com/wp-content/uploads/sites/43/2018/03/08064518/Carbanak_APT_eng.pdf

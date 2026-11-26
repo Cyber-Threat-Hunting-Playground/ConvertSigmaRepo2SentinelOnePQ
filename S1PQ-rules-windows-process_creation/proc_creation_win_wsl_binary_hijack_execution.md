@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 25-11-2026 08:05:02):
+// Translated content (automatically translated on 26-11-2026 07:55:24):
 event.type="Process Creation" and (endpoint.os="windows" and ((src.process.image.path="C:\\Windows\\System32\\wsl.exe" and tgt.process.image.path contains "\\wsl.exe") and (not ((tgt.process.image.path in ("C:\\Windows\\System32\\wsl.exe","C:\\Program Files\\WSL\\wsl.exe")) or (tgt.process.image.path contains "C:\\Windows\\WinSxS\\amd64_microsoft-windows-lxss-wsl_" or tgt.process.image.path contains "C:\\Windows\\WinSxS\\arm64_microsoft-windows-lxss-wsl_" or tgt.process.image.path contains "C:\\Program Files\\WindowsApps\\MicrosoftCorporationII.WindowsSubsystemForLinux") or (tgt.process.image.path contains "C:\\Users\\" and tgt.process.image.path contains "\\AppData\\Local\\Microsoft\\WindowsApps\\")))))
 ```
 
@@ -15,7 +15,7 @@ description: |
     An attacker who modifies InstallLocation to a controlled path causes the stub to transparently proxy execution to a malicious payload,
     which then appears as a wsl.exe child of the legitimate System32 stub.
 references:
-    - https://cardinalops.com/blog/bash-and-switch-hijacking-via-windows-subsystem-for-linux/
+    - https://web.archive.org/web/20260718025639/https://cardinalops.com/blog/bash-and-switch-hijacking-via-windows-subsystem-for-linux/
     - https://blog.qualys.com/vulnerabilities-threat-research/2022/04/20/implications-of-windows-subsystem-for-linux-for-adversaries-defenders-part-2
     - https://www.bleepingcomputer.com/news/security/new-malware-uses-windows-subsystem-for-linux-for-stealthy-attacks/
     - https://thehackernews.com/2021/09/new-malware-targets-windows-subsystem.html

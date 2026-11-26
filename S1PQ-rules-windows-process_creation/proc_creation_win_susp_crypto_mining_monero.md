@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 25-11-2026 08:05:02):
+// Translated content (automatically translated on 26-11-2026 07:55:24):
 event.type="Process Creation" and (endpoint.os="windows" and ((tgt.process.cmdline contains " --cpu-priority=" or tgt.process.cmdline contains "--donate-level=0" or tgt.process.cmdline contains " -o pool." or tgt.process.cmdline contains " --nicehash" or tgt.process.cmdline contains " --algo=rx/0 " or tgt.process.cmdline contains "stratum+tcp://" or tgt.process.cmdline contains "stratum+udp://" or tgt.process.cmdline contains "LS1kb25hdGUtbGV2ZWw9" or tgt.process.cmdline contains "0tZG9uYXRlLWxldmVsP" or tgt.process.cmdline contains "tLWRvbmF0ZS1sZXZlbD" or tgt.process.cmdline contains "c3RyYXR1bSt0Y3A6Ly" or tgt.process.cmdline contains "N0cmF0dW0rdGNwOi8v" or tgt.process.cmdline contains "zdHJhdHVtK3RjcDovL" or tgt.process.cmdline contains "c3RyYXR1bSt1ZHA6Ly" or tgt.process.cmdline contains "N0cmF0dW0rdWRwOi8v" or tgt.process.cmdline contains "zdHJhdHVtK3VkcDovL") and (not (tgt.process.cmdline contains " pool.c " or tgt.process.cmdline contains " pool.o " or tgt.process.cmdline contains "gcc -"))))
 ```
 
@@ -11,7 +11,7 @@ id: 66c3b204-9f88-4d0a-a7f7-8a57d521ca55
 status: stable
 description: Detects command line parameters or strings often used by crypto miners
 references:
-    - https://www.poolwatch.io/coin/monero
+    - https://web.archive.org/web/20220816044708/https://www.poolwatch.io/coin/monero
 author: Florian Roth (Nextron Systems)
 date: 2021-10-26
 modified: 2023-02-13

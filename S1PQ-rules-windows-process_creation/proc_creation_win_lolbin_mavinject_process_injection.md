@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 25-11-2026 08:05:02):
+// Translated content (automatically translated on 26-11-2026 07:55:24):
 event.type="Process Creation" and (endpoint.os="windows" and (tgt.process.cmdline contains " /INJECTRUNNING " and (not src.process.image.path="C:\\Windows\\System32\\AppVClient.exe")))
 ```
 
@@ -18,7 +18,7 @@ references:
     - https://github.com/redcanaryco/atomic-red-team/blob/f339e7da7d05f6057fdfcdd3742bfcf365fee2a9/atomics/T1056.004/T1056.004.md
     - https://posts.specterops.io/mavinject-exe-functionality-deconstructed-c29ab2cf5c0e
     - https://twitter.com/gN3mes1s/status/941315826107510784
-    - https://reaqta.com/2017/12/mavinject-microsoft-injector/
+    - https://web.archive.org/web/20220809230651/https://reaqta.com/2017/12/mavinject-microsoft-injector/
     - https://twitter.com/Hexacorn/status/776122138063409152  # Deleted tweet
     - https://github.com/SigmaHQ/sigma/issues/3742
     - https://github.com/keyboardcrunch/SentinelOne-ATTACK-Queries/blob/6a228d23eefe963ca81f2d52f94b815f61ef5ee0/Tactics/DefenseEvasion.md#t1055-process-injection

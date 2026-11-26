@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 25-11-2026 08:05:02):
+// Translated content (automatically translated on 26-11-2026 07:55:24):
 event.type="Process Creation" and (endpoint.os="windows" and (src.process.image.path contains "\\scrcons.exe" and (tgt.process.image.path contains "\\svchost.exe" or tgt.process.image.path contains "\\dllhost.exe" or tgt.process.image.path contains "\\powershell.exe" or tgt.process.image.path contains "\\pwsh.exe" or tgt.process.image.path contains "\\wscript.exe" or tgt.process.image.path contains "\\cscript.exe" or tgt.process.image.path contains "\\schtasks.exe" or tgt.process.image.path contains "\\regsvr32.exe" or tgt.process.image.path contains "\\mshta.exe" or tgt.process.image.path contains "\\rundll32.exe" or tgt.process.image.path contains "\\msiexec.exe" or tgt.process.image.path contains "\\msbuild.exe")))
 ```
 
@@ -12,7 +12,7 @@ status: test
 description: Detects a suspicious child process of Script Event Consumer (scrcons.exe).
 references:
     - https://redcanary.com/blog/child-processes/
-    - https://docs.paloaltonetworks.com/cortex/cortex-xdr/cortex-xdr-analytics-alert-reference/cortex-xdr-analytics-alert-reference/scrcons-exe-rare-child-process.html
+    - https://cortex-docs.paloaltonetworks.com/analytics-alerts/alerts-by-name/scrcons-exe-rare-child-process
 author: Sittikorn S
 date: 2021-06-21
 modified: 2022-07-14

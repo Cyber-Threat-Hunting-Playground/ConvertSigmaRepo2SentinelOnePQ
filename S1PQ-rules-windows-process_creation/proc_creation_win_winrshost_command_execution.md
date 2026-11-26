@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 25-11-2026 08:05:02):
+// Translated content (automatically translated on 26-11-2026 07:55:24):
 event.type="Process Creation" and (endpoint.os="windows" and (src.process.image.path contains "\\winrshost.exe" and (not tgt.process.image.path="C:\\Windows\\System32\\conhost.exe")))
 ```
 
@@ -12,7 +12,7 @@ status: experimental
 description: |
     Detects a child process spawned by 'winrshost.exe', which suggests remote command execution through Windows Remote Shell (WinRs) and may indicate potential lateral movement activity.
 references:
-    - https://cardinalops.com/blog/living-off-winrm-abusing-complexity-in-remote-management/
+    - https://web.archive.org/web/20260615052554/https://cardinalops.com/blog/living-off-winrm-abusing-complexity-in-remote-management/
     - https://www.ired.team/offensive-security/lateral-movement/winrs-for-lateral-movement
 author: Liran Ravich
 date: 2025-10-22

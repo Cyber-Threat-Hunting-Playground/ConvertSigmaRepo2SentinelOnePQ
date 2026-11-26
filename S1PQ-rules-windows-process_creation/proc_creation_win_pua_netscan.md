@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 25-11-2026 08:05:02):
+// Translated content (automatically translated on 26-11-2026 07:55:24):
 event.type="Process Creation" and (endpoint.os="windows" and (tgt.process.image.path contains "\\netscan.exe" or tgt.process.displayName="Network Scanner" or tgt.process.displayName="Application for scanning networks"))
 ```
 
@@ -17,7 +17,7 @@ references:
     - https://secjoes-reports.s3.eu-central-1.amazonaws.com/Sockbot%2Bin%2BGoLand.pdf
     - https://www.sentinelone.com/labs/black-basta-ransomware-attacks-deploy-custom-edr-evasion-tools-tied-to-fin7-threat-actor/
     - https://symantec-enterprise-blogs.security.com/blogs/threat-intelligence/yanluowang-ransomware-attacks-continue
-    - https://research.nccgroup.com/2022/07/13/climbing-mount-everest-black-byte-bytes-back/
+    - https://www.nccgroup.com/research/climbing-mount-everest-black-byte-bytes-back/
     - https://www.bleepingcomputer.com/news/security/microsoft-exchange-servers-hacked-to-deploy-hive-ransomware/
     - https://www.softperfect.com/products/networkscanner/
 author: '@d4ns4n_ (Wuerth-Phoenix)'

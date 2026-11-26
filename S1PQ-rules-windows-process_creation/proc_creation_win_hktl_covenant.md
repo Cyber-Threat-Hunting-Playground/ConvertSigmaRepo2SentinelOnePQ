@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 25-11-2026 08:05:02):
+// Translated content (automatically translated on 26-11-2026 07:55:24):
 event.type="Process Creation" and (endpoint.os="windows" and (((tgt.process.cmdline contains "-Sta" and tgt.process.cmdline contains "-Nop" and tgt.process.cmdline contains "-Window" and tgt.process.cmdline contains "Hidden") and (tgt.process.cmdline contains "-Command" or tgt.process.cmdline contains "-EncodedCommand")) or (tgt.process.cmdline contains "sv o (New-Object IO.MemorySteam);sv d " or tgt.process.cmdline contains "mshta file.hta" or tgt.process.cmdline contains "GruntHTTP" or tgt.process.cmdline contains "-EncodedCommand cwB2ACAAbwAgA")))
 ```
 
@@ -11,7 +11,7 @@ id: c260b6db-48ba-4b4a-a76f-2f67644e99d2
 status: test
 description: Detects suspicious command lines used in Covenant luanchers
 references:
-    - https://posts.specterops.io/covenant-v0-5-eee0507b85ba
+    - https://specterops.io/blog/2020/06/04/covenant-v0-5/
 author: Florian Roth (Nextron Systems), Jonhnathan Ribeiro, oscd.community
 date: 2020-06-04
 modified: 2023-02-21

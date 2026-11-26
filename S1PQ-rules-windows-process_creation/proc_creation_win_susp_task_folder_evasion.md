@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 25-11-2026 08:05:02):
+// Translated content (automatically translated on 26-11-2026 07:55:24):
 event.type="Process Creation" and (endpoint.os="windows" and ((tgt.process.cmdline contains "echo " or tgt.process.cmdline contains "copy " or tgt.process.cmdline contains "type " or tgt.process.cmdline contains "file createnew") and (tgt.process.cmdline contains " C:\\Windows\\System32\\Tasks\\" or tgt.process.cmdline contains " C:\\Windows\\SysWow64\\Tasks\\")))
 ```
 
@@ -15,7 +15,7 @@ description: |
     in Tasks to load and execute a custom assembly into cscript, wscript, regsvr32, mshta, eventvwr
 references:
     - https://web.archive.org/web/20200116124158/https://twitter.com/subTee/status/1216465628946563073
-    - https://gist.github.com/am0nsec/8378da08f848424e4ab0cc5b317fdd26
+    - https://web.archive.org/web/20201030210421/https://gist.github.com/am0nsec/8378da08f848424e4ab0cc5b317fdd26
 author: Sreeman
 date: 2020-01-13
 modified: 2022-12-25

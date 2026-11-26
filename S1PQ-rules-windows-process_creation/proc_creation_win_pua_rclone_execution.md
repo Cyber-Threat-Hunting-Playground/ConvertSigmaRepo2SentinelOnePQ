@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 25-11-2026 08:05:02):
+// Translated content (automatically translated on 26-11-2026 07:55:24):
 event.type="Process Creation" and (endpoint.os="windows" and ((tgt.process.cmdline contains "--config " and tgt.process.cmdline contains "--no-check-certificate " and tgt.process.cmdline contains " copy ") or ((tgt.process.image.path contains "\\rclone.exe" or tgt.process.displayName="Rsync for cloud storage") and (tgt.process.cmdline contains "pass" or tgt.process.cmdline contains "user" or tgt.process.cmdline contains "copy" or tgt.process.cmdline contains "sync" or tgt.process.cmdline contains "config" or tgt.process.cmdline contains "lsd" or tgt.process.cmdline contains "remote" or tgt.process.cmdline contains "ls" or tgt.process.cmdline contains "mega" or tgt.process.cmdline contains "pcloud" or tgt.process.cmdline contains "ftp" or tgt.process.cmdline contains "ignore-existing" or tgt.process.cmdline contains "auto-confirm" or tgt.process.cmdline contains "transfers" or tgt.process.cmdline contains "multi-thread-streams" or tgt.process.cmdline contains "no-check-certificate "))))
 ```
 
@@ -16,7 +16,7 @@ related:
 status: test
 description: Detects execution of RClone utility for exfiltration as used by various ransomwares strains like REvil, Conti, FiveHands, etc
 references:
-    - https://research.nccgroup.com/2021/05/27/detecting-rclone-an-effective-tool-for-exfiltration/
+    - https://www.nccgroup.com/research/detecting-rclone-an-effective-tool-for-exfiltration/
     - https://thedfirreport.com/2021/03/29/sodinokibi-aka-revil-ransomware
     - https://us-cert.cisa.gov/ncas/analysis-reports/ar21-126a
     - https://labs.sentinelone.com/egregor-raas-continues-the-chaos-with-cobalt-strike-and-rclone

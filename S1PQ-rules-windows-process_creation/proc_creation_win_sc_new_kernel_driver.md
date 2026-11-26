@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 25-11-2026 08:05:02):
+// Translated content (automatically translated on 26-11-2026 07:55:24):
 event.type="Process Creation" and (endpoint.os="windows" and ((tgt.process.image.path contains "\\sc.exe" and (tgt.process.cmdline contains "create" or tgt.process.cmdline contains "config") and (tgt.process.cmdline contains "binPath" and tgt.process.cmdline contains "type" and tgt.process.cmdline contains "kernel")) and (not ((tgt.process.cmdline contains "create netprotection_network_filter" and tgt.process.cmdline contains "type= kernel start= " and tgt.process.cmdline contains "binPath= System32\\drivers\\netprotection_network_filter" and tgt.process.cmdline contains "DisplayName= netprotection_network_filter" and tgt.process.cmdline contains "group= PNP_TDI tag= yes") or (tgt.process.cmdline contains "create avelam binpath=C:\\Windows\\system32\\drivers\\avelam.sys" and tgt.process.cmdline contains "type=kernel start=boot error=critical group=Early-Launch")))))
 ```
 
@@ -11,7 +11,7 @@ id: 431a1fdb-4799-4f3b-91c3-a683b003fc49
 status: test
 description: Detects creation of a new service (kernel driver) with the type "kernel"
 references:
-    - https://www.aon.com/cyber-solutions/aon_cyber_labs/yours-truly-signed-av-driver-weaponizing-an-antivirus-driver/
+    - https://www.levelblue.com/blogs/spiderlabs-blog/yours-truly-signed-av-driver-weaponizing-an-antivirus-driver/
 author: Nasreddine Bencherchali (Nextron Systems)
 date: 2022-07-14
 modified: 2025-10-07

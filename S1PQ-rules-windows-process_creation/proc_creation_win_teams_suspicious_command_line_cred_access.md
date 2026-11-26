@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 25-11-2026 08:05:02):
+// Translated content (automatically translated on 26-11-2026 07:55:24):
 event.type="Process Creation" and (endpoint.os="windows" and ((tgt.process.cmdline contains "\\Microsoft\\Teams\\Cookies" or tgt.process.cmdline contains "\\Microsoft\\Teams\\Local Storage\\leveldb") and (not tgt.process.image.path contains "\\Microsoft\\Teams\\current\\Teams.exe")))
 ```
 
@@ -14,7 +14,7 @@ description: |
     The database might contain authentication tokens and other sensitive information about the logged in accounts.
 references:
     - https://www.bleepingcomputer.com/news/security/microsoft-teams-stores-auth-tokens-as-cleartext-in-windows-linux-macs/
-    - https://www.vectra.ai/blogpost/undermining-microsoft-teams-security-by-mining-tokens
+    - https://web.archive.org/web/20230726144455/https://www.vectra.ai/blogpost/undermining-microsoft-teams-security-by-mining-tokens
 author: '@SerkinValery'
 date: 2022-09-16
 modified: 2023-12-18
