@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 25-11-2026 06:05:26):
+// Translated content (automatically translated on 26-11-2026 05:57:53):
 event.type="Process Creation" and (endpoint.os="linux" and (tgt.process.cmdline contains "/update-ca-certificates" or tgt.process.cmdline contains "/update-ca-trust"))
 ```
 
@@ -11,7 +11,7 @@ id: 78a80655-a51e-4669-bc6b-e9d206a462ee
 status: test
 description: Detects installation of new certificate on the system which attackers may use to avoid warnings when connecting to controlled web servers or C2s
 references:
-    - https://www.trendmicro.com/en_us/research/14/h/finding-holes-operation-emmental.html
+    - https://web.archive.org/web/20211206180016/https://blog.trendmicro.com/trendlabs-security-intelligence/finding-holes-operation-emmental/
     - https://www.kaspersky.com/blog/lenovo-pc-with-adware-superfish-preinstalled/
     - https://www.cisa.gov/news-events/alerts/2015/02/20/lenovo-superfish-adware-vulnerable-https-spoofing
     - https://capec.mitre.org/data/definitions/479.html

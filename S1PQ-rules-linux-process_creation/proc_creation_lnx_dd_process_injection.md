@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 25-11-2026 06:05:26):
+// Translated content (automatically translated on 26-11-2026 05:57:53):
 event.type="Process Creation" and (endpoint.os="linux" and (tgt.process.image.path contains "/dd" and (tgt.process.cmdline contains "of=" and tgt.process.cmdline contains "/proc/" and tgt.process.cmdline contains "/mem")))
 ```
 
@@ -11,7 +11,7 @@ id: 4cad6c64-d6df-42d6-8dae-eb78defdc415
 status: test
 description: Detects the injection of code by overwriting the memory map of a Linux process using the "dd" Linux command.
 references:
-    - https://www.aon.com/cyber-solutions/aon_cyber_labs/linux-based-inter-process-code-injection-without-ptrace2/
+    - https://www.levelblue.com/blogs/spiderlabs-blog/linux-based-inter-process-code-injection-without-ptrace-2/
     - https://github.com/AonCyberLabs/Cexigua/blob/34d338620afae4c6335ba8d8d499e1d7d3d5d7b5/overwrite.sh
 author: Joseph Kamau
 date: 2023-12-01
