@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 25-11-2026 08:01:16):
+// Translated content (automatically translated on 26-11-2026 07:53:26):
 event.category="dns" and (endpoint.os="windows" and event.dns.request contains "userstorage.mega.co.nz")
 ```
 
@@ -14,7 +14,7 @@ related:
 status: test
 description: Detects DNS queries for subdomains related to MEGA sharing website
 references:
-    - https://research.nccgroup.com/2021/05/27/detecting-rclone-an-effective-tool-for-exfiltration/
+    - https://www.nccgroup.com/research/detecting-rclone-an-effective-tool-for-exfiltration/
 author: Aaron Greetham (@beardofbinary) - NCC Group
 date: 2021-05-26
 modified: 2023-09-18
