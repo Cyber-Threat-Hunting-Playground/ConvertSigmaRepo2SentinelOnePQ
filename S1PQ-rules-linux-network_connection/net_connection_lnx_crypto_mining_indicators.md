@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 25-11-2026 07:00:55):
+// Translated content (automatically translated on 26-11-2026 06:53:37):
 (event.category in ("dns","url","ip")) and (endpoint.os="linux" and ((url.address in ("pool.minexmr.com","fr.minexmr.com","de.minexmr.com","sg.minexmr.com","ca.minexmr.com","us-west.minexmr.com","pool.supportxmr.com","mine.c3pool.com","xmr-eu1.nanopool.org","xmr-eu2.nanopool.org","xmr-us-east1.nanopool.org","xmr-us-west1.nanopool.org","xmr-asia1.nanopool.org","xmr-jp1.nanopool.org","xmr-au1.nanopool.org","xmr.2miners.com","xmr.hashcity.org","xmr.f2pool.com","xmrpool.eu","pool.hashvault.pro","moneroocean.stream","monerocean.stream")) or (event.dns.request in ("pool.minexmr.com","fr.minexmr.com","de.minexmr.com","sg.minexmr.com","ca.minexmr.com","us-west.minexmr.com","pool.supportxmr.com","mine.c3pool.com","xmr-eu1.nanopool.org","xmr-eu2.nanopool.org","xmr-us-east1.nanopool.org","xmr-us-west1.nanopool.org","xmr-asia1.nanopool.org","xmr-jp1.nanopool.org","xmr-au1.nanopool.org","xmr.2miners.com","xmr.hashcity.org","xmr.f2pool.com","xmrpool.eu","pool.hashvault.pro","moneroocean.stream","monerocean.stream"))))
 ```
 
@@ -11,7 +11,7 @@ id: a46c93b7-55ed-4d27-a41b-c259456c4746
 status: stable
 description: Detects process connections to a Monero crypto mining pool
 references:
-    - https://www.poolwatch.io/coin/monero
+    - https://web.archive.org/web/20220816044708/https://www.poolwatch.io/coin/monero
 author: Florian Roth (Nextron Systems)
 date: 2021-10-26
 tags:
