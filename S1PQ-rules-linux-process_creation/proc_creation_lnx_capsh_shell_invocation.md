@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 26-11-2026 05:57:53):
+// Translated content (automatically translated on 27-11-2026 05:51:51):
 event.type="Process Creation" and (endpoint.os="linux" and (tgt.process.image.path contains "/capsh" and tgt.process.cmdline contains " --"))
 ```
 
