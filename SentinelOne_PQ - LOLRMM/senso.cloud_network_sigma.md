@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 27-11-2026 05:45:06):
+// Translated content (automatically translated on 28-11-2026 05:25:37):
 (event.category in ("dns","url","ip")) and (endpoint.os="windows" and ((url.address contains ".senso.cloud" or url.address contains ".senso.cloud." or url.address="senso.cloud" or url.address="senso.cloud.") or (event.dns.request contains ".senso.cloud" or event.dns.request contains ".senso.cloud." or event.dns.request="senso.cloud" or event.dns.request="senso.cloud.")))
 ```
 

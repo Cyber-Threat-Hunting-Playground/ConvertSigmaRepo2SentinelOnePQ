@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 27-11-2026 05:45:06):
+// Translated content (automatically translated on 28-11-2026 05:25:37):
 (event.category in ("dns","url","ip")) and (endpoint.os="windows" and ((url.address contains ".jumpdesktop.com" or url.address contains ".jumpdesktop.com." or url.address contains ".jumpto.me" or url.address contains ".jumpto.me." or url.address="jumpdesktop.com" or url.address="jumpdesktop.com." or url.address="jumpto.me" or url.address="jumpto.me.") or (event.dns.request contains ".jumpdesktop.com" or event.dns.request contains ".jumpdesktop.com." or event.dns.request contains ".jumpto.me" or event.dns.request contains ".jumpto.me." or event.dns.request="jumpdesktop.com" or event.dns.request="jumpdesktop.com." or event.dns.request="jumpto.me" or event.dns.request="jumpto.me.")))
 ```
 

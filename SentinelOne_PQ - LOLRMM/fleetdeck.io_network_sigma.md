@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 27-11-2026 05:45:06):
+// Translated content (automatically translated on 28-11-2026 05:25:37):
 (event.category in ("dns","url","ip")) and (endpoint.os="windows" and ((url.address contains ".agentmqtt.fleetdeck.io" or url.address contains ".agentmqtt.fleetdeck.io." or url.address contains ".checkip.zmazonaws.com" or url.address contains ".checkip.zmazonaws.com." or url.address contains ".fleetdeck.io" or url.address contains ".fleetdeck.io." or url.address="agentmqtt.fleetdeck.io" or url.address="agentmqtt.fleetdeck.io." or url.address="checkip.zmazonaws.com" or url.address="checkip.zmazonaws.com." or url.address="fleetdeck.io" or url.address="fleetdeck.io.") or (event.dns.request contains ".agentmqtt.fleetdeck.io" or event.dns.request contains ".agentmqtt.fleetdeck.io." or event.dns.request contains ".checkip.zmazonaws.com" or event.dns.request contains ".checkip.zmazonaws.com." or event.dns.request contains ".fleetdeck.io" or event.dns.request contains ".fleetdeck.io." or event.dns.request="agentmqtt.fleetdeck.io" or event.dns.request="agentmqtt.fleetdeck.io." or event.dns.request="checkip.zmazonaws.com" or event.dns.request="checkip.zmazonaws.com." or event.dns.request="fleetdeck.io" or event.dns.request="fleetdeck.io.")))
 ```
 

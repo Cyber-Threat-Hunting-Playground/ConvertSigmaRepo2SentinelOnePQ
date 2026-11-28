@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 27-11-2026 05:45:06):
+// Translated content (automatically translated on 28-11-2026 05:25:37):
 (event.category in ("dns","url","ip")) and (endpoint.os="windows" and ((url.address contains ".api.allocentra.co.za" or url.address contains ".api.allocentra.co.za." or url.address="api.allocentra.co.za" or url.address="api.allocentra.co.za.") or (event.dns.request contains ".api.allocentra.co.za" or event.dns.request contains ".api.allocentra.co.za." or event.dns.request="api.allocentra.co.za" or event.dns.request="api.allocentra.co.za.")))
 ```
 

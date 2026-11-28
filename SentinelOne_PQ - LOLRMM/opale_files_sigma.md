@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 27-11-2026 05:45:06):
+// Translated content (automatically translated on 28-11-2026 05:25:37):
 event.category="file" and (endpoint.os="windows" and (tgt.file.path contains "C:\\ProgramData\\Opale\\opale-agent.exe" or tgt.file.path contains "C:\\ProgramData\\Opale\\config.json" or tgt.file.path contains "C:\\ProgramData\\Opale\\state.json" or tgt.file.path contains "C:\\ProgramData\\Opale\\agent.log"))
 ```
 

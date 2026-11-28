@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 27-11-2026 05:45:06):
+// Translated content (automatically translated on 28-11-2026 05:25:37):
 (event.category in ("dns","url","ip")) and (endpoint.os="windows" and ((url.address contains ".control.connectwise.com" or url.address contains ".control.connectwise.com." or url.address contains ".live.screenconnect.com" or url.address contains ".live.screenconnect.com." or url.address="control.connectwise.com" or url.address="control.connectwise.com." or url.address="live.screenconnect.com" or url.address="live.screenconnect.com.") or (event.dns.request contains ".control.connectwise.com" or event.dns.request contains ".control.connectwise.com." or event.dns.request contains ".live.screenconnect.com" or event.dns.request contains ".live.screenconnect.com." or event.dns.request="control.connectwise.com" or event.dns.request="control.connectwise.com." or event.dns.request="live.screenconnect.com" or event.dns.request="live.screenconnect.com.")))
 ```
 
